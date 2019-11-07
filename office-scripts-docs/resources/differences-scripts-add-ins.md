@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 11/05/2019
+ms.date: 11/07/2019
 localization_priority: Normal
 ---
 
@@ -28,3 +28,8 @@ Office Scripts support most of the Excel APIs. This means there is a lot of func
 
 Office Scripts do not support events. Every script runs the code in a single `main` method, then ends. It does not reactivate when events are triggered, and thus, cannot register events.
 All of the Common APIs are excluded from Office Scripts. If you need authentication, dialog windows, or other such features, you likely require an Office Add-in instead of a script.
+
+## See also
+
+- [Overview: Office Scripts in Excel on the web](../overview/overview.md)
+- [Troubleshooting Office Scripts](../testing/troubleshooting.md)
