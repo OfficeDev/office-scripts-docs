@@ -9,10 +9,6 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
@@ -28,11 +24,7 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "**/includes/**"
         ]
       }
     ],
@@ -41,9 +33,20 @@
     "globalMetadata": {
       "breadcrumb_path": "/office-scripts-docs/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "ms.suite": "office",
+      "ms.author": "o365devx",
+      "author": "o365devx",
+      "ms.topic": "conceptual",
+      "ms.technology": "scripts",
+      "ms.prod": "excel",
+      "titleSuffix": "Office Scripts"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.topic": {
+        "tutorials/*.md": "tutorial"
+      }
+    },
     "template": [],
     "dest": "office-scripts-docs",
     "markdownEngineName": "markdig"
