@@ -1,5 +1,5 @@
 <!---
-Welcome to the Office Scripts fpr Excel on the web documentation repository.
+Welcome to the Office Scripts for Excel on the web documentation repository.
 
 To report an issue with the Office Scripts documentation, please provide the article URL and describe the issue below. Alternatively, if you want to submit a pull request with your recommended documentation changes, we will review your contributions and update our documentation accordingly.
 
