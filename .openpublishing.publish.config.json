@@ -11,7 +11,7 @@
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "office-scripts-docs",
       "template_folder": "_themes"
     }
   ],
