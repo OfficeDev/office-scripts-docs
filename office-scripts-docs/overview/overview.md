@@ -10,10 +10,10 @@ localization_priority: Normal
 > [!NOTE]
 > Office Scripts in Excel on the web is in preview. The functionality described here is subject to change as the feature develops. To learn how to use this feature, see this page. You can submit feedback on Office Scripts through the Excel feedback button. You can submit feedback on the documentation here.
 
-Office Scripts in Excel on the web lets you automate common tasks. You can record your Excel actions with the [Script Recorder](https://aka.ms/makersdogfood), which creates a script. This script can be attached to any workbook you own and shared with colleagues. This script can also be edited by you with the [Script Editor](https://aka.ms/makersdogfood). This series of documents will teach you the fundamentals of Office Script coding.
+Office Scripts in Excel on the web lets you automate common tasks. You can record your Excel actions with the [Script Recorder](https://aka.ms/makersdogfood), which creates a script. You can also create and edit scripts with the [Script Editor](https://aka.ms/makersdogfood). Scripts can be attached to any workbook you own and shared with colleagues. This series of documents teaches you the fundamentals of Office Script coding.
 
 > [!NOTE]
-> If you are looking to develop an Office Add-In for Excel, please visit our [quick start](/office/dev/add-ins/quickstarts/excel-quickstart-jquery) or [tutorial](/office/dev/add-ins/tutorials/excel-tutorial). You can learn more about the differences between Office Scripts and Office Add-ins in [the Differences between Office Scripts and Office Add-ins article](../resources/differences-scripts-add-ins.md).
+> If you're looking to develop an Office Add-In for Excel, please visit our [quick start](/office/dev/add-ins/quickstarts/excel-quickstart-jquery) or [tutorial](/office/dev/add-ins/tutorials/excel-tutorial). Learn more about the differences between Office Scripts and Office Add-ins in [the Differences between Office Scripts and Office Add-ins article](../resources/differences-scripts-add-ins.md).
 
 ## Script Environment
 
@@ -24,7 +24,7 @@ There are two frameworks to be aware of for an Office Script:
 
 ### TypeScript/JavaScript
 
-Office Scripts can be written in TypeScript or JavaScript. All the code created by the Script Recorder is TypeScript (which is a superset of JavaScript). Office Scripts documentation uses TypeScript, but if you are more comfortable with JavaScript, you may use that instead.
+Office Scripts are written in TypeScript or JavaScript. All the code created by the Script Recorder is TypeScript (which is a superset of JavaScript). Office Scripts documentation uses TypeScript, but if you're more comfortable with JavaScript, use that instead.
 
 If you are new to programming, we recommend two steps before proceeding with Office Scripts:
 

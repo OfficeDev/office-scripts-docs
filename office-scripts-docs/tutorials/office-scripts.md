@@ -11,7 +11,7 @@ This tutorial will teach you the basics of editing and writing an Office Script 
 
 ## Prerequisites
 
-Before starting this tutorial, you will need access to Office Scripts. That requires the following:
+Before starting this tutorial, you'll need access to Office Scripts. That requires the following:
 
 - Excel for the web.
 - [Opt-in to the Excel Scripting preview](https://aka.ms/makersdogfood).
@@ -112,7 +112,7 @@ async function main(context: Excel.RequestContext) {
 > [!NOTE]
 > If you re-run the script, you’ll get an error. This is because you cannot create a table on top of another table. However, you can run the script on a different worksheet or workbook.
 
-### Rerunning the script
+### Rerun the script
 
 1. Open a new worksheet in the current workbook.
 2. Copy the fruit data from the beginning of the tutorial into **A1**.

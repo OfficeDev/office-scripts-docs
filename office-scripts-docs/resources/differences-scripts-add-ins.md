@@ -9,13 +9,13 @@ localization_priority: Normal
 
 Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through the Excel namespace of the Office JavaScript API. However, Office Scripts are more limited in their scope.
 
-Scripts run to completion with a manual button press, whereas Add-ins rely on user-interaction and persist while the workbook is being used. If you find your Excel extension needs exceed the Scripting platform’s capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more.
+Scripts run to completion with a manual button press, whereas Add-ins rely on user-interaction and persist while the workbook is in use. If you find your Excel extension needs exceed the Scripting platform’s capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more.
 
 This rest of this article focuses on the programmatic differences between Office Add-ins and Excel Scripts.
 
 ## Platform Support
 
-Add-ins are cross-platform. They are intended to work across Windows desktop, Mac, iOS, and web platforms and provide the same experience on each. Any exception to this is noted in the documentation of the individual API.
+Add-ins are cross-platform. They work across Windows desktop, Mac, iOS, and web platforms and provide the same experience on each. Any exception to this is noted in the documentation of the individual API.
 
 Excel Scripts are only available for Excel on the web. All recording, editing, and running is done on the web platform.
 

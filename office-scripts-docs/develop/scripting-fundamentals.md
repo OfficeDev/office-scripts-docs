@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Scripting Fundamentals for Office Scripts in Excel on the web
 
-This section presents the areas of Office Scripts in Excel on the web you’ll need to better understand how the script code is working with Excel. For a more in-depth description on this topic, visit [Fundamental programming concepts with the Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts).
+This section presents the areas of Office Scripts in Excel on the web where you’ll need a better understanding of how the script code works with Excel. For a more in-depth description on this topic, visit [Fundamental programming concepts with the Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts).
 
 ## Object Model
 
@@ -73,11 +73,11 @@ async function main(context: Excel.RequestContext) {
 
 ### Charts, tables, and other data objects
 
-Scripts can create and manipulate the data tools within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, Shapes, Images, and other such constructs.
+Scripts can create and manipulate the data tools within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, Shapes, Images, and more.
 
 #### Creating a table
 
-You can create a table using a data-filled range. The table controls (such as filters) and formatting are automatically layered on top on the range.
+Create tables by using data-filled ranges. The table controls (such as filters) and formatting are automatically layered on top on the range.
 
 The following script creates a table using the ranges from the previous sample.
 
@@ -92,7 +92,7 @@ async function main(context: Excel.RequestContext) {
 
 #### Creating a chart
 
-You can create a chart to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
+Create charts to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
 
 The following script creates a simple column chart for three items and places it 100 pixels below the top of the worksheet.
 
@@ -160,8 +160,8 @@ There are three ways to load data. The following examples use a `Range` object t
 - Load multiple properties: `myRange.load("values, rowCount, columnCount");` - This loads are the properties from a comma-delimited list.
 - Load everything: `myRange.load();` - This loads all the properties on the range. It is not a recommended solution, since it will slow down your script by getting unnecessary data. You should only use this while testing your script or if you need every property from the object.
 
-> [!NOTE]
-> You can also load properties along a hierarchy. `range.load(“format/fill/color”)` and `range.format.fill.load(“color”)` have the same behavior.
+> [!TIP]
+> Scripts can also load properties along hierarchies. For example, `range.load(“format/fill/color”)` and `range.format.fill.load(“color”)` have the same behavior.
 
 You must call `context.sync()` before reading any loaded values.
 

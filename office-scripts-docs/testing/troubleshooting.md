@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Troubleshooting Office Scripts
 
-As you develop Office Scripts, you may make mistakes. It’s okay. We have tools for you to use that help find problems and get your scripts working perfectly.
+As you develop Office Scripts, you may make mistakes. It’s okay. We have tools that help find the problems and get your scripts working perfectly.
 
 ## Console logs
 
@@ -29,7 +29,7 @@ Logs do not affect the workbook.
 
 ## Error messages
 
-When your Excel Script encounters a problem running, it produces an error. You’ll see a prompt pop-up asking if you want to **View Logs**. Pressing that button opens the console and displays any errors.
+When your Excel Script encounters a problem running, it produces an error. You’ll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
 ## Help resources
 
