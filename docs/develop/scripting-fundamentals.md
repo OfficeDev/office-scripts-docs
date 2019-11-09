@@ -104,7 +104,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample/png)
+![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
 ## `main` function
 
