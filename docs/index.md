@@ -118,20 +118,4 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
             </div>
         </div>
     </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="https://github.com/officedev/office-js/issues" target="_blank"><img src="images/index-landing-page/i_bug.svg" alt="Report API issues" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="https://github.com/officedev/office-js/issues" target="_blank"><h3>Report API issues</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
 </ul>
