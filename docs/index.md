@@ -63,6 +63,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
             </div>
         </div>
     </li>
+</ul>
 
 ---
 
