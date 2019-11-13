@@ -68,7 +68,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
 ---
 
 <h2>Other resources</h2>
-<p>Use the following resources to learn about the APIs that Office Scripts use to interact with workbooks in Excel on the web, ask questions about Office Scripts in Excel on the web, or report issues with the APIs.</p>
+<p>Use the following resources to learn about the APIs that Office Scripts use to interact with workbooks in Excel on the web, ask questions about Office Scripts in Excel on the web, or request features for Office Scripts in Excel on the web.</p>
 <ul class="panelContent cardsF cols cols4" style="display:flex!important;">
     <li>
         <div class="cardSize">
