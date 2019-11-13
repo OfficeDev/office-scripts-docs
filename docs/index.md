@@ -92,7 +92,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><img src="../images/index/i_support.svg" alt="API questions" /></a>
+                            <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><img src="../images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
@@ -108,7 +108,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="../images/index/i_feedback.svg" alt="Office Scripts in Excel on the web feature requests" /></a>
+                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="../images/index-landing-page/i_feedback.svg" alt="Office Scripts in Excel on the web feature requests" /></a>
                         </div>
                     </div>
                     <div class="cardText">
