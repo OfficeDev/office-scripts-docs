@@ -166,7 +166,7 @@ The `load` method is available on every Excel object. Your script must load an o
 
 The following examples use a `Range` object to show the three ways the `load` method can be used to load data.
 
-|Intent |Command | Effect |
+|Intent |Example Command | Effect |
 |:--|:--|:--|
 |Load one property |`myRange.load("values");` | Loads a single property, in this case the two-dimensional array of values in this range. |
 |Load multiple properties |`myRange.load("values, rowCount, columnCount");`| Loads all the properties from a comma-delimited list, in this example the values, row count, and column count. |
