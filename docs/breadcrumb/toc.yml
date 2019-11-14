@@ -1,0 +1,7 @@
+- name: Office
+  tocHref: /office/
+  topicHref: /office/index
+  items:
+  - name: Scripts
+    tocHref: /office/dev/scripts
+    topicHref: /office/dev/scripts
