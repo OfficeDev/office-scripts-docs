@@ -16,7 +16,7 @@ Office Scripts in Excel on the web let you automate common tasks. You can record
 
 ## Script environment
 
-Office Scripts are written in either [TypeScript or JavaScript](#scripting-language-typescript-or-javascript) and use the [Office JavaScript APIs](office-javascript-api) to interact with an Excel workbook.
+Office Scripts are written in either [TypeScript or JavaScript](#scripting-language-typescript-or-javascript) and use the [Office JavaScript APIs](#office-javascript-api) to interact with an Excel workbook.
 
 ### Scripting language: TypeScript or JavaScript
 

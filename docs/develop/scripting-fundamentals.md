@@ -112,7 +112,7 @@ async function main(context: Excel.RequestContext) {
 
 Running this script on the worksheet with the previous table creates the following chart:
 
-![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample/png)
+![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
 ## `main` function
 
