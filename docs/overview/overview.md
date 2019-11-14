@@ -9,7 +9,7 @@ localization_priority: Normal
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-Office Scripts in Excel on the web lets you automate common tasks. You can record your Excel actions with the [Action Recorder](https://aka.ms/makersdogfood), which creates a script. You can also create and edit scripts with the [Code Editor](https://aka.ms/makersdogfood). Scripts can be attached to any workbook you own and shared with colleagues. This series of documents teaches you the fundamentals of Office Script coding.
+Office Scripts in Excel on the web let you automate common tasks. You can record your Excel actions with the [Action Recorder](https://aka.ms/makersdogfood), which creates a script. You can also create and edit scripts with the Code Editor. Scripts can be attached to any workbook you own and shared with colleagues. This series of documents teaches you to use the Code Editor to make your own scripts by learning the fundamentals of Office Scripts.
 
 > [!NOTE]
 > If you're looking to develop an Office Add-In for Excel, please visit our [quick start](/office/dev/add-ins/quickstarts/excel-quickstart-jquery) or [tutorial](/office/dev/add-ins/tutorials/excel-tutorial). Learn more about the differences between Office Scripts and Office Add-ins in [the Differences between Office Scripts and Office Add-ins article](../resources/differences-scripts-add-ins.md).
