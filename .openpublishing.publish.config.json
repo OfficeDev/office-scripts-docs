@@ -25,9 +25,7 @@
       ]
     }
   ],
-  "notification_subscribers": [
-    "aljerabe@microsoft.com"
-  ],
+  "notification_subscribers": [],
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "docs/toc.yml",
