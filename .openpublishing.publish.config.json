@@ -20,6 +20,12 @@
   "notification_subscribers": [
     "aljerabe@microsoft.com"
   ],
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "docs/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/office_ref_toc/toc.json"
+    }
+  ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
