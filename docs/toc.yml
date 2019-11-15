@@ -1,2 +1,16 @@
-- name: Index
+- name: Office Scripts documentation
   href: index.md
+
+- name: Office Scripts in Excel on the web
+  items:
+  - name: Overview
+    href: overview/overview.md
+  - name: Tutorial
+    href: tutorials/excel-office-scripts-tutorial.md
+  - name: Scripting fundamentals
+    href: develop/scripting-fundamentals.md
+  - name: Differences between Office Scripts and Office Add-ins
+    href: resources/differences-scripts-add-ins.md
+  - name: Troubleshooting
+    href: testing/troubleshooting.md
+
