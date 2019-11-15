@@ -1,15 +1,17 @@
 ---
-title: 'Scripting Fundamentals for Office Scripts in Excel on the web'
+title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 11/07/2019
+ms.date: 11/14/2019
 localization_priority: Normal
 ---
 
-# Scripting Fundamentals for Office Scripts in Excel on the web
+# Scripting fundamentals for Office Scripts in Excel on the web
 
-This section presents the areas of Office Scripts in Excel on the web where you’ll need a better understanding of how the script code works with Excel. For a more in-depth description on this topic, visit [Fundamental programming concepts with the Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts).
+[!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## Object Model
+This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel. For a more in-depth description on this topic, visit [Fundamental programming concepts with the Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts).
+
+## Object model
 
 To understand the Excel APIs, you must understand how the components of a workbook are related to one another.
 
@@ -22,13 +24,13 @@ To understand the Excel APIs, you must understand how the components of a workbo
 
 ### Ranges
 
-A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. “B3” for the single cell in row **B** and column **3** or “C2:F4” for the cells from rows **C** through **F** and columns **2** through **4**) to define ranges.
+A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in row **B** and column **3** or **C2:F4** for the cells from rows **C** through **F** and columns **2** through **4**) to define ranges.
 
-Ranges have three core properties: `values`, `formulas`, and `format`. These get or set the cell values, and formulas to be evaluated, and the visual formatting of the cells.
+Ranges have three core properties: `values`, `formulas`, and `format`. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells.
 
 #### Range sample
 
-The following sample shows how to create sales records. This uses Range objects to set the values, formulas, and formats.
+The following sample shows how to create sales records. This script uses `Range` objects to set the values, formulas, and formats.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -69,15 +71,17 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
+Running this script creates the following data in the current worksheet:
+
 ![A sales record showing value rows, a formula column, and formatted headers.](../images/range-sample.png)
 
 ### Charts, tables, and other data objects
 
-Scripts can create and manipulate the data tools within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, Shapes, Images, and more.
+Scripts can create and manipulate the data structures and visualizations within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more.
 
 #### Creating a table
 
-Create tables by using data-filled ranges. The table controls (such as filters) and formatting are automatically layered on top on the range.
+Create tables by using data-filled ranges. Formatting and table controls (such as filters) are automatically applied to the range.
 
 The following script creates a table using the ranges from the previous sample.
 
@@ -87,6 +91,8 @@ async function main(context: Excel.RequestContext) {
    sheet.tables.add("B2:E5", true);
 }
 ```
+
+Running this script on the worksheet with the previous data creates the following table:
 
 ![A table made from the previous sales record.](../images/table-sample.png)
 
@@ -104,11 +110,13 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
+Running this script on the worksheet with the previous table creates the following chart:
+
 ![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
 ## `main` function
 
-Every Excel Script is contained within a `main` function.
+Every Office Script is contained within a `main` function.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -116,26 +124,28 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-The code inside that `main` function is executed when the script is run. Any code outside of that function is ignored.
+The code inside the `main` function runs when the script is run. Any code outside of the `main` function is ignored.
 
 ## Context
 
-The `main` function is given an `Excel.RequestContext` parameter, named `context`. Think of it as the bridge between your script and the workbook. Your script accesses the workbook from the context object and uses that context to send data back and forth.
+The `main` function accepts an `Excel.RequestContext` parameter, named `context`. Think of `context` as the bridge between your script and the workbook. Your script accesses the workbook with the `context` object and uses that `context` to send data back and forth.
 
-The context object is necessary because the script and Excel are running in different processes and locations. The script running on your local machine will need to make changes to or query data from the workbook in the cloud. The context manages those transactions.
+The `context` object is necessary because the script and Excel are running in different processes and locations. The script will need to make changes to or query data from the workbook in the cloud. The `context` object manages those transactions.
 
 ## Sync and Load
 
-Your script and workbook run in different locations. This means any data transfer takes time. To help increase performance of the script, commands are queued up until the script explicitly calls the workbook to synchronize the two entities. Your script can work independently until it needs to change or access the workbook. This can happen for the following reasons:
+Because your script and workbook run in different locations, any data transfer between the two takes time. To improve script performance, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Data needs to be read from the workbook (following a `load` operation).
-- Data needs to be written to the workbook (usually because the script has finished).
+- Read data from the workbook (following a `load` operation).
+- Write data to the workbook (usually because the script has finished).
+
+The following image shows an example control flow between the script and workbook:
 
 ![A diagram showing read and write operations going to the workbook from the script.](../images/load-sync.png)
 
 ### Sync
 
-This synchronization is done through the `RequestContext.sync` method. Whenever your script needs to do this, make the following call on the `context` object:
+Whenever your script needs to read data from or write data to the workbook, call the `RequestContext.sync` method as shown here:
 
 ```TypeScript
 await context.sync();
@@ -144,34 +154,33 @@ await context.sync();
 > [!NOTE]
 > `context.sync()` is implicitly called when a script ends.
 
-After `sync` completes, the workbook updates with any write operations the script has called. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = “red”`) or calling a method that results in a property changing (e.g. `range.format.autoFitColumns()`). `sync` also reads any values requested from a `load` operation (as discussed in the next section).
+After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation (as discussed in the next section).
 
 Synchronizing your script with the workbook can take time, depending on your network. You should minimize the number of `sync` calls to help your script run fast.  
 
 ### Load
 
-A script must load data from the workbook before reading it. However, loading the entire workbook every time would greatly reduce the script’s speed. Instead, the `load` method lets your script selectively return data.
+A script must load data from the workbook before reading it. However, frequently loading data from the entire workbook would greatly reduce the script's speed. Instead, the `load` method lets your script state specifically which data should be retrieved from the workbook.
 
-Every Excel object has this `load` method. You must load an object’s properties before you can read them. Not doing so will result in an error.
+The `load` method is available on every Excel object. Your script must load an object's properties before it can read them. Not doing so will result in an error.
 
-There are three ways to load data. The following examples use a `Range` object to demonstrate them.
+The following examples use a `Range` object to show the three ways the `load` method can be used to load data.
 
-- Load one property: `myRange.load(“values”);` - This loads a single property, in this case the two-dimensional array of values in this range.
-- Load multiple properties: `myRange.load("values, rowCount, columnCount");` - This loads are the properties from a comma-delimited list.
-- Load everything: `myRange.load();` - This loads all the properties on the range. It is not a recommended solution, since it will slow down your script by getting unnecessary data. You should only use this while testing your script or if you need every property from the object.
+|Intent |Example Command | Effect |
+|:--|:--|:--|
+|Load one property |`myRange.load("values");` | Loads a single property, in this case the two-dimensional array of values in this range. |
+|Load multiple properties |`myRange.load("values, rowCount, columnCount");`| Loads all the properties from a comma-delimited list, in this example the values, row count, and column count. |
+|Load everything | `myRange.load();`|Loads all the properties on the range. This is not a recommended solution, since it will slow down your script by getting unnecessary data. You should only use this while testing your script or if you need every property from the object. |
 
-> [!TIP]
-> Scripts can also load properties along hierarchies. For example, `range.load(“format/fill/color”)` and `range.format.fill.load(“color”)` have the same behavior.
-
-You must call `context.sync()` before reading any loaded values.
+Your script must call `context.sync()` before reading any loaded values.
 
 ```TypeScript
 let range = selectedSheet.getRange("A1:B3");
 range.load ("rowCount"); // Load the property.
 await context.sync(); // Synchronize with the workbook to get the property.
-console.log(range.rowCount); // Will display “3”.
+console.log(range.rowCount); // Read and log the property value (3).
 ```
 
 ## See also
 
-- [Overview: Office Scripts in Excel on the web](../overview/overview.md)
+- [Office Scripts in Excel on the web](../overview/overview.md)

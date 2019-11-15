@@ -6,7 +6,7 @@
   - name: Overview
     href: overview/overview.md
   - name: Tutorial
-    href: tutorials/office-scripts.md
+    href: tutorials/excel-office-scripts-tutorial.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Differences between Office Scripts and Office Add-ins
