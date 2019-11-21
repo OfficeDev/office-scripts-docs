@@ -23,7 +23,7 @@ We also encourage you to fork, make the fix, and do a pull request of your propo
 
 If your issue is not related to the Office Scripts documentation, please post it to one of the following channels instead:
 
-- To ask a question about designing Office Scripts or the Office.js API that runs Office Scripts, post your question to Stack Overflow and tag it with the "office-js" tag (http://stackoverflow.com/questions/tagged/office-js).
+- To ask a question about designing Office Scripts or the Office.js API that runs Office Scripts, post your question to Stack Overflow and tag it with the "office-scripts" tag (https://stackoverflow.com/questions/tagged/office-scripts).
 - To report an issue with the Office.js API, create the issue in the OfficeDev/office-js repository (https://github.com/OfficeDev/office-js), which members of the product team monitor for customer-reported issues.
 - To submit a feature request for Office Scripts, post your idea to our [User Voice page](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439), or if the feature request already exists there, add your vote for it.
 
