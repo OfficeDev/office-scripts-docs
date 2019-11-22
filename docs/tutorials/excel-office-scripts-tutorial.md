@@ -86,7 +86,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
     let table = selectedSheet.tables.add("A1:C5", true);
     ```
 
-2. That call returns a `Table` object. Let's use that table to change the style. Changing the table style won't chagne the formatting we've already added. Instead, it will format the cell borders and other rows. Add the following line after the table creation:
+2. That call returns a `Table` object. Let's use that table to change the style. Changing the table style won't change the formatting we've already added. Instead, it will format the cell borders and other rows. Add the following line after the table creation:
 
     ```TypeScript
     table.style = "TableStyleLight21";
