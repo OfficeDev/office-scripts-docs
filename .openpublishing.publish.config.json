@@ -11,7 +11,7 @@
       "build_output_subfolder": "office-scripts-docs",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": ["excel-js-online"],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -29,7 +29,7 @@
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "docs/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/office_ref_script_toc/toc.json"
+      "ReferenceTOCUrl": "/javascript/api/office_ref_toc/toc.json"
     }
   ],
   "sync_notification_subscribers": [],
