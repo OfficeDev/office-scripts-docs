@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 11/14/2019
+ms.date: 11/19/2019
 localization_priority: Normal
 ---
 
@@ -16,7 +16,7 @@ This tutorial will teach you the basics of recording, editing, and writing an Of
 Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
 
 - Excel on the web.
-- [Opt-in to the Excel Scripting preview](https://aka.ms/makersdogfood).
+- [Opt-in to the Office Scripts preview (admin-enabled)](https://aka.ms/office-scripts-admin).
 
 > [!IMPORTANT]
 > This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/overview.md) to learn more about the script environment.
