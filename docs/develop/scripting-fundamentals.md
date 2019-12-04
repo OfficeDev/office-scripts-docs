@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 11/14/2019
+ms.date: 12/04/2019
 localization_priority: Normal
 ---
 
@@ -179,6 +179,14 @@ let range = selectedSheet.getRange("A1:B3");
 range.load ("rowCount"); // Load the property.
 await context.sync(); // Synchronize with the workbook to get the property.
 console.log(range.rowCount); // Read and log the property value (3).
+```
+
+You can also load properties across an entire collection. Every collection object has an `items` property that is an array containing the objects in that collection. Using `items` as the start of a hierarchical call (`items\myProperty`) to `load` loads the specified properties on each of those items. The following example loads the `resolved` property on every `Comment` object in the `CommentCollection` object of a worksheet.
+
+```TypeScript
+let comments = selectedSheet.comments;
+comments.load("items/resolved"); // Load the `resolved` property from every comment in this collection.
+await context.sync(); // // Synchronize with the workbook to get the properties.
 ```
 
 ## See also
