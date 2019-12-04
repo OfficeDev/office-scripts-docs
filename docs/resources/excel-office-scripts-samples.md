@@ -13,8 +13,9 @@ The following samples are simple scripts for you to try on your own workbooks. T
 
 1. Open the **Automate** tab.
 2. Press **Code Editor**.
-3. Press **New Script**.
+3. Press **New Script** in the Code Editor's task pane.
 4. Replace the entire script with the sample of your choice.
+5. Press **Run** in the Code Editor's task pane.
 
 ## Create sorted table
 
