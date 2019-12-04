@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning about Office Scripts.
-ms.date: 11/08/2019
+ms.date: 12/03/2019
 localization_priority: Priority
 ---
 
@@ -80,7 +80,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/javascript/api/excel" target="_blank"><h3>Office Scripts<br/>API Reference</h3></a>
+                        <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><h3>Office Scripts<br/>API Reference</h3></a>
                     </div>
                 </div>
             </div>
