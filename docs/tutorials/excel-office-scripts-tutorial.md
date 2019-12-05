@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 11/19/2019
+ms.date: 12/05/2019
 localization_priority: Normal
 ---
 
@@ -16,7 +16,7 @@ This tutorial will teach you the basics of recording, editing, and writing an Of
 Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
 
 - Excel on the web.
-- [Opt-in to the Office Scripts preview (admin-enabled)](https://aka.ms/office-scripts-admin).
+- [Opt-in to the Office Scripts preview (admin-enabled)](https://aka.ms/office-scripts-admin). This adds the **Automate** tab to the ribbon.
 
 > [!IMPORTANT]
 > This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/overview.md) to learn more about the script environment.
@@ -35,11 +35,17 @@ First, we'll need some data and a small starting script.
     |Limes |600 |500 |
     |Grapefruits |900 |700 |
 
-3. Open the **Automate** tab and press **Record Actions**.
-4. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
-5. Stop the recording by pressing the **Stop** button.
-6. Fill out the **Script Name** field with a memorable name. The **Description** field can be used to provide context as to what the script does. You can leave the **Description** blank for the tutorial.
-7. Save the script by pressing the **Save** button.
+3. Open the **Automate** tab. If you do not see the **Automate** tab, check the ribbon overflow by pressing the drop-down arrow.
+4. Press the **Record Actions** button.
+5. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
+6. Stop the recording by pressing the **Stop** button.
+7. Fill in the **Script Name** field with a memorable name.
+8. *Optional:* Fill in the **Description** field with a meaningful description. This is used to provide context as to what the script does. For the tutorial, you can use "Color-codes rows of a table".
+
+   > [!TIP]
+   > You can edit a script's description later from the **Script Details** pane, which is located under the Code Editor's **...** menu.
+
+9. Save the script by pressing the **Save** button.
 
     Your worksheet should look like this (don't worry if the color is different):
 
@@ -49,8 +55,9 @@ First, we'll need some data and a small starting script.
 
 The previous script colored the "Oranges" row to be orange. Let's add a yellow row for the "Lemons".
 
-1. Open the **Automate** tab and press **Code Editor**.
-2. Open the script you recorded in the previous section. You should see something similar to this code:
+1. Open the **Automate** tab.
+2. Press the **Code Editor** button.
+3. Open the script you recorded in the previous section. You should see something similar to this code:
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
@@ -66,13 +73,13 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
     Ranges are a fundamental part of Office Scripts in Excel on the web. A range is a contiguous, rectangular block of cells that contains values, formula, and formatting. They are the basic structure of cells through which you'll perform most of your scripting tasks.
 
-3. Add the following line to the end of the script (between where the `color` is set and the closing `}`):
+4. Add the following line to the end of the script (between where the `color` is set and the closing `}`):
 
     ```TypeScript
     selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
     ```
 
-4. Test the script by pressing **Run**. Your workbook should now look like this:
+5. Test the script by pressing **Run**. Your workbook should now look like this:
 
     ![A fruit sales data row with the "Oranges" row highlighted orange and the "Lemons" row highlighted yellow.](../images/tutorial-2.png)
 
@@ -122,7 +129,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 
 ## Read a cell
 
-The Action Recorder records your changes to the workbook. Any workbook change is recorded as one or more write operations in the script. Scripts can also read data from a workbook.
+Scripts made with the Action Recorder can only write information to the workbook. With the Code Editor, you can edit and make scripts that also read data from a workbook.
 
 Let's make a script that reads data and acts based on what was read. We're going to work with a sample banking statement. This statement is a combined checking and credit statement. Unfortunately, they report balance changes differently. The checking statement gives income as positive credit and costs as negative debit. The credit statement does the opposite.
 
