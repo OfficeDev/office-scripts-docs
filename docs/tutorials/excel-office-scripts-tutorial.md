@@ -40,10 +40,10 @@ First, we'll need some data and a small starting script.
 5. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
 6. Stop the recording by pressing the **Stop** button.
 7. Fill in the **Script Name** field with a memorable name.
-8. *Optional:* Fill in the **Description** field with a meaningful description. This is used to provide context as to what the script does. For the tutorial, you can use "Color-codes rows of a script".
+8. *Optional:* Fill in the **Description** field with a meaningful description. This is used to provide context as to what the script does. For the tutorial, you can use "Color-codes rows of a table".
 
    > [!TIP]
-   > You can edit a script's description later by going the **Script Details** pane, found under the Code Editor's **...** menu.
+   > You can edit a script's description later from the **Script Details** pane, which is located under the Code Editor's **...** menu.
 
 9. Save the script by pressing the **Save** button.
 
@@ -129,7 +129,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 
 ## Read a cell
 
-The Action Recorder records your changes to the workbook. These changes are recorded for and later performed by the script to write into the workbook. Scripts can also read data from a workbook.
+Scripts made with the Action Recorder can only write information to the workbook. With the Code Editor, you can edit and make scripts that also read data from a workbook.
 
 Let's make a script that reads data and acts based on what was read. We're going to work with a sample banking statement. This statement is a combined checking and credit statement. Unfortunately, they report balance changes differently. The checking statement gives income as positive credit and costs as negative debit. The credit statement does the opposite.
 
