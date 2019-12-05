@@ -17,7 +17,7 @@ The following samples are simple scripts for you to try on your own workbooks. T
 4. Replace the entire script with the sample of your choice.
 5. Press **Run** in the Code Editor's task pane.
 
-## Create sorted table
+## Create a sorted table
 
 This sample creates a table from the current worksheet's used range, then sorts it based on the first column.
 
