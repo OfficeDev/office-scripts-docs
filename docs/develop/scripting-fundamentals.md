@@ -116,7 +116,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 ## `main` function
 
-Every Office Script is contained within a `main` function. This function must have the following signature, including the `Excel.RequestContext` type definition:
+Every Office Script must contain a `main` function with the following signature, including the `Excel.RequestContext` type definition:
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -124,7 +124,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but any stray code outside of a function will not be ran.
+The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
 
 ## Context
 
