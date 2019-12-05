@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of samples to use with Office Scripts in Excel on the web.'
-ms.date: 12/04/2019
+ms.date: 12/05/2019
 localization_priority: Normal
 ---
 
@@ -53,6 +53,7 @@ async function main(context: Excel.RequestContext) {
     comments.load("items/resolved");
     await context.sync();
 
+    // Delete the resolved comments.
     comments.items.forEach((comment) => {
         if (comment.resolved) {
             comment.delete();
