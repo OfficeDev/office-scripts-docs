@@ -78,11 +78,11 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><img src="images/index-landing-page/api-ref.svg" alt="Office Scripts API Reference" /></a>
+                            <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><img src="images/index-landing-page/api-ref.svg" alt="Office Scripts API reference" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><h3>Office Scripts<br/>API Reference</h3></a>
+                        <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><h3>Office Scripts<br/>API reference</h3></a>
                     </div>
                 </div>
             </div>
@@ -94,11 +94,11 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="resources/excel-office-scripts-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample Scripts" /></a>
+                            <a href="resources/excel-office-scripts-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-office-scripts-samples.md" target="_blank"><h3>Sample Scripts</h3></a>
+                        <a href="resources/excel-office-scripts-samples.md" target="_blank"><h3>Sample scripts</h3></a>
                     </div>
                 </div>
             </div>
