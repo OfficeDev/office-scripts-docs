@@ -35,34 +35,34 @@ The following sample shows how to create sales records. This script uses `Range`
 ```TypeScript
 async function main(context: Excel.RequestContext) {
   // Get the active worksheet.
-  const sheet = context.workbook.worksheets.getActiveWorksheet();
+  let sheet = context.workbook.worksheets.getActiveWorksheet();
 
   // Create the headers and format them to stand out.
-  const headers = [
+  let headers = [
     ["Product", "Quantity", "Unit Price", "Totals"]
   ];
-  const headerRange = sheet.getRange("B2:E2");
+  let headerRange = sheet.getRange("B2:E2");
   headerRange.values = headers;
   headerRange.format.fill.color = "#4472C4";
   headerRange.format.font.color = "white";
 
   // Create the product data rows.
-  const productData = [
+  let productData = [
     ["Almonds", 6, 7.5],
     ["Coffee", 20, 34.5],
     ["Chocolate", 10, 9.56],
   ];
-  const dataRange = sheet.getRange("B3:D5");
+  let dataRange = sheet.getRange("B3:D5");
   dataRange.values = productData;
 
   // Create the formulas to total the amounts sold.
-  const totalFormulas = [
+  let totalFormulas = [
     ["=C3 * D3"],
     ["=C4 * D4"],
     ["=C5 * D5"],
     ["=SUM(E3:E5)"]
   ];
-  const totalRange = sheet.getRange("E3:E6");
+  let totalRange = sheet.getRange("E3:E6");
   totalRange.formulas = totalFormulas;
   totalRange.format.font.bold = true;
 
@@ -87,7 +87,7 @@ The following script creates a table using the ranges from the previous sample.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
-   const sheet = context.workbook.worksheets.getActiveWorksheet();
+   let sheet = context.workbook.worksheets.getActiveWorksheet();
    sheet.tables.add("B2:E5", true);
 }
 ```
@@ -104,8 +104,8 @@ The following script creates a simple column chart for three items and places it
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
-  const sheet = context.workbook.worksheets.getActiveWorksheet();
-  const chart = sheet.charts.add(Excel.ChartType.columnStacked, sheet.getRange("B3:C5"));
+  let sheet = context.workbook.worksheets.getActiveWorksheet();
+  let chart = sheet.charts.add(Excel.ChartType.columnStacked, sheet.getRange("B3:C5"));
   chart.top = 100;
 }
 ```
