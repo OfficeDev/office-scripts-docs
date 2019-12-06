@@ -98,7 +98,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-office-scripts-samples.md" target="_blank"><h3>Ask questions</h3></a>
+                        <a href="resources/excel-office-scripts-samples.md" target="_blank"><h3>Sample Scripts</h3></a>
                     </div>
                 </div>
             </div>
