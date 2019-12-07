@@ -78,7 +78,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><img src="images/index-landing-page/i-reference.svg" alt="Office Scripts API reference" /></a>
+                            <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><img src="images/index-landing-page/i_reference.svg" alt="Office Scripts API reference" /></a>
                         </div>
                     </div>
                     <div class="cardText">
