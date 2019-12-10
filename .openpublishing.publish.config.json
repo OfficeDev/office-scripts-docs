@@ -1,6 +1,11 @@
 {
   "docsets_to_publish": [
     {
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
       "docset_name": "office-scripts-docs",
       "build_source_folder": "docs",
       "build_output_subfolder": "office-scripts-docs",
@@ -14,7 +19,10 @@
         "LandingPage": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "customized_template_paths": [
+        "_dependentPackages/uref.plugins/content"
+      ]
     }
   ],
   "notification_subscribers": [],
@@ -41,5 +49,11 @@
     "pdf": {
       "template_folder": "_themes.pdf"
     }
-  }
+  },
+  "JoinTOCPlugin": [
+   {
+     "ReferenceTOC": "docs/toc.yml",
+     "ConceptualTOCUrl": "/javascript/api/office-scripts/office-scripts-docs-reference/toc.json"
+   }
+ ]
 }
