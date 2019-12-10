@@ -53,7 +53,7 @@
   "JoinTOCPlugin": [
    {
      "ConceptualTOC": "docs/toc.yml",
-     "ReferenceTOCUrl": "/javascript/api/office-scripts/office-scripts-docs-reference/toc.json"
+     "ReferenceTOCUrl": "/javascript/api/office-scripts/office_ref_toc/toc.json"
    }
  ],
  
