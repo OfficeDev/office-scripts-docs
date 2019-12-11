@@ -9,7 +9,7 @@ localization_priority: Normal
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel. For a more in-depth description on this topic, visit [Fundamental programming concepts with the Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts).
+This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel. 
 
 ## Object model
 
