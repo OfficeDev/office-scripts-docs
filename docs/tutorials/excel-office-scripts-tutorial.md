@@ -190,9 +190,9 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
     ![The console log displaying the the output "-20.05", nested under two arrays.](../images/tutorial-4.png)
 
-## Adjust the value of a cell
+## Modify the value of a cell
 
-Now that we can read data, let's use it to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access.
+Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access.
 
 1. Add the following code to the end of the script:
 
@@ -203,7 +203,7 @@ Now that we can read data, let's use it to modify the workbook. We'll make the v
 
 2. The value of cell **D2** should now be positive.
 
-## Adjust the values of a column
+## Modify the values of a column
 
 Now that we know how to read and write to a single cell, let's generalize the script to work on the entire **Debit** and **Credit** columns.
 
