@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 12/05/2019
+ms.date: 12/11/2019
 localization_priority: Normal
 ---
 
@@ -190,27 +190,20 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
     ![The console log displaying the the output "-20.05", nested under two arrays.](../images/tutorial-4.png)
 
-## Apply the absolute value function to a cell
+## Modify the value of a cell
 
-Now that we can read data, let's use it to modify the workbook. We'll make the value of the cell **D2** positive by using Excel's built-in absolute value function.
+Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access.
 
 1. Add the following code to the end of the script:
 
     ```TypeScript
-      // Apply the ABS function to the value at D2 and get the result from the worksheet.
-      let newValue = workbook.functions.abs(range.values[0][0]);
-      newValue.load("value");
-      await context.sync();
-
-      // Set the value of D2 to its absolute value.
-      range.values = [[newValue.value]];
+      // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+      range.values = [[Math.abs(range.values[0][0])]];
     ```
 
 2. The value of cell **D2** should now be positive.
 
-You may have noticed we're now calling `context.sync()` twice. We need to read the values in the cell first. Then, we need to read the result of the absolute value function. We could skip that second `load` and `sync` if we calculated the absolute value locally.
-
-## Apply the absolute value function to a column
+## Modify the values of a column
 
 Now that we know how to read and write to a single cell, let's generalize the script to work on the entire **Debit** and **Credit** columns.
 
@@ -231,7 +224,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     }
     ```
 
-2. Add a loop that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value. We'll use the `Math.abs` function instead of Excel's functions (which will prevent us from having to do a `load` and `sync`). The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access.
+2. Add a loop that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value.
 
     Note that the array defining cell locations is zero-based. That means cell **A1** is `range[0][0]`.
 
