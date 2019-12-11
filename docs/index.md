@@ -82,7 +82,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><h3>Office Scripts<br/>API reference</h3></a>
+                        <a href="/javascript/api/office-scripts/overview" target="_blank"><h3>Office Scripts<br/>API reference</h3></a>
                     </div>
                 </div>
             </div>
