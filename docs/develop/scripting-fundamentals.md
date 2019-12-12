@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 12/04/2019
+ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
@@ -191,4 +191,4 @@ await context.sync(); // // Synchronize with the workbook to get the properties.
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/overview.md)
+- [Office Scripts API reference](/javascript/api/office-scripts/overview)
