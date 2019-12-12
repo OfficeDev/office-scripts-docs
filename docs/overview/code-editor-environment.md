@@ -18,9 +18,9 @@ Office Scripts are largely self-contained pieces of code. Only a small part of T
 - Learn the basics of JavaScript. You should feel comfortable with concepts like variables, control flow, functions, and data types. [Mozilla offers a good, comprehensive tutorial on JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 - Learn about types in TypeScript. TypeScript builds on JavaScript by ensuring at compile-time the right types are used for method calls and assignments. The TypeScript documentation on [interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html), [classes](https://www.typescriptlang.org/docs/handbook/classes.html), [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html), and [type compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) will be the most useful.
 
-## Office JavaScript API
+## Office Scripts JavaScript API
 
-Office Scripts uses the Office JavaScript API. Specifically, they use the APIs available in the [ExcelApi Online requirement set](/javascript/api/excel). Your scripts have access to most of the features in the Excel namespace. The exceptions are listed in the [Differences between Office Scripts and Office Add-ins](../resources/differences-scripts-add-ins.md#apis) article.
+Office Scripts use a specialized version the Office JavaScript APIs that are used by [Office Add-ins](/office/dev/add-ins/overview/index). The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/differences-scripts-add-ins.md#apis) article. You can view all the APIs available to your script in the [Office Scripts API reference documentation](/javascript/api/office-scripts/overview).
 
 ## IntelliSense
 
