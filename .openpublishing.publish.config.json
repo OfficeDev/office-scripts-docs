@@ -1,11 +1,6 @@
 {
   "docsets_to_publish": [
     {
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
       "docset_name": "office-scripts-docs",
       "build_source_folder": "docs",
       "build_output_subfolder": "office-scripts-docs",
@@ -22,36 +17,40 @@
       "template_folder": "_themes"
     }
   ],
-  "JoinTOCPlugin": [
-   {
-     "ConceptualTOC": "docs/toc.yml",
-     "ReferenceTOCUrl": "/javascript/api/office-scripts/toc.json"
-   }
- ],
- "notification_subscribers": [],
- "branches_to_filter": [],
- "git_repository_url_open_to_public_contributors": "https://github.com/OfficeDev/office-scripts-docs",
- "git_repository_branch_open_to_public_contributors": "master",
- "skip_source_output_uploading": false,
- "need_preview_pull_request": false,
- "contribution_branch_mappings": {},
- "dependent_repositories": [
-   {
-     "path_to_root": "_themes",
-     "url": "https://github.com/Microsoft/templates.docs.msft",
-     "branch": "master",
-     "branch_mapping": {}
-   }
- ],
- "branch_target_mapping": {},
- "need_generate_pdf_url_template": false,
- "dependent_packages": [
-   {
-     "id": "Microsoft.OpenPublishing.CommonPlugins",
-     "nuget_feed": "https://www.myget.org/F/op/api/v2",
-     "path_to_root": "_dependentPackages/CommonPlugins",
-     "target_framework": "net45",
-     "version": "latest"
-   }
- ]
+  "notification_subscribers": [
+    "aljerabe@microsoft.com"
+  ],
+  "sync_notification_subscribers": [],
+  "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/OfficeDev/office-scripts-docs",
+  "git_repository_branch_open_to_public_contributors": "master",
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "contribution_branch_mappings": {},
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "targets": {
+    "pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
