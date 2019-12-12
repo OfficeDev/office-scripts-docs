@@ -7,8 +7,6 @@ localization_priority: Normal
 
 # Differences between Office Scripts and Office Add-ins
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through the `Excel` namespace of the Office JavaScript API. However, Office Scripts are more limited in their scope.
 
 Office Scripts run to completion with a manual button press, whereas Office Add-ins rely on user interaction and persist while the workbook is in use. If you find that your Excel extension needs to exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.

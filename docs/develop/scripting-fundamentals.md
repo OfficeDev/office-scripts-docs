@@ -7,9 +7,9 @@ localization_priority: Normal
 
 # Scripting fundamentals for Office Scripts in Excel on the web
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
+This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel.
 
-This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel. 
+[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## Object model
 

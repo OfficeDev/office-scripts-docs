@@ -9,8 +9,6 @@ localization_priority: Priority
 
 # Office Scripts documentation
 
-[!INCLUDE [Preview note](./includes/preview-note.md)]
-
 Office Scripts in Excel on the web lets you automate common tasks. Learn how to create and edit scripts in Excel on the web.
 
 <ul class="panelContent cardsF cols cols3">

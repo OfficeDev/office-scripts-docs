@@ -1,13 +1,11 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of samples to use with Office Scripts in Excel on the web.'
-ms.date: 12/05/2019
+ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
 # Sample scripts for Office Scripts in Excel on the web
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 The following samples are simple scripts for you to try on your own workbooks. To use them:
 
@@ -16,6 +14,8 @@ The following samples are simple scripts for you to try on your own workbooks. T
 3. Press **New Script** in the Code Editor's task pane.
 4. Replace the entire script with the sample of your choice.
 5. Press **Run** in the Code Editor's task pane.
+
+[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## Create a sorted table
 
