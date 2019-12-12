@@ -12,7 +12,7 @@ localization_priority: Normal
 Office Scripts in Excel on the web let you automate tasks. You can record your Excel actions with the [Action Recorder](https://aka.ms/makersdogfood), which creates a script. You can also create and edit scripts with the Code Editor. This series of documents teaches you to use the Code Editor to make or update your own scripts by learning the fundamentals of Office Scripts.
 
 > [!NOTE]
-> If you're looking to develop an Office Add-In for Excel, please visit our [quick start](/office/dev/add-ins/quickstarts/excel-quickstart-jquery) or [tutorial](/office/dev/add-ins/tutorials/excel-tutorial). Learn more about the differences between Office Scripts and Office Add-ins in [the Differences between Office Scripts and Office Add-ins article](../resources/differences-scripts-add-ins.md).
+> If you're looking to develop an Office Add-In for Excel, please visit our [quick start](/office/dev/add-ins/quickstarts/excel-quickstart-jquery) or [tutorial](/office/dev/add-ins/tutorials/excel-tutorial). Learn more about the differences between Office Scripts and Office Add-ins in [the Differences between Office Scripts and Office Add-ins article](../resources/add-ins-differences.md).
 
 ## Script environment
 
@@ -29,7 +29,7 @@ Office Scripts are largely self-contained pieces of code. Only a small part of T
 
 ### Office JavaScript API
 
-Office Scripts uses the Office JavaScript API. Specifically, they use the APIs available in the [ExcelApi Online requirement set](/javascript/api/excel). Your scripts have access to most of the features in the Excel namespace. The exceptions are listed in the [Differences between Office Scripts and Office Add-ins](../resources/differences-scripts-add-ins.md#apis) article.
+Office Scripts uses the Office JavaScript API. Specifically, they use the APIs available in the [ExcelApi Online requirement set](/javascript/api/excel). Your scripts have access to most of the features in the Excel namespace. The exceptions are listed in the [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md#apis) article.
 
 ## IntelliSense
 
@@ -39,16 +39,16 @@ The Excel Code Editor uses the same IntelliSense engine as Visual Studio Code. T
 
 ## Action Recorder
 
-All scripts recorded with the Action Recorder can be edited through the Code Editor. One easy way to learn the capabilities of Office Scripts is to record scripts in Excel on the web and view the resulting code. Another option is to follow our [tutorial](../tutorials/excel-office-scripts-tutorial.md) to learn in a more guided and structured way. For more information about the Action Recorder, visit [Office Scripts in Excel for the web](https://aka.ms/makersdogfood).
+All scripts recorded with the Action Recorder can be edited through the Code Editor. One easy way to learn the capabilities of Office Scripts is to record scripts in Excel on the web and view the resulting code. Another option is to follow our [tutorial](../tutorials/excel-tutorial.md) to learn in a more guided and structured way. For more information about the Action Recorder, visit [Office Scripts in Excel for the web](https://aka.ms/makersdogfood).
 
 ## Next steps
 
-Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-office-scripts-tutorial.md) to learn how to create your first Office Scripts.
+Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tutorial.md) to learn how to create your first Office Scripts.
 
 ## See also
 
 - [Scripting fundamentals for Office Script in Excel on the web](../develop/scripting-fundamentals.md)
-- [Differences between Office Scripts and Office Add-ins](../resources/differences-scripts-add-ins.md)
+- [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts API reference](/javascript/api/excel)
 - [Office Add-ins documentation](/office/dev/add-ins)

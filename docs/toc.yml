@@ -6,12 +6,12 @@
   - name: Overview
     href: overview/overview.md
   - name: Tutorial
-    href: tutorials/excel-office-scripts-tutorial.md
+    href: tutorials/excel-tutorial.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Troubleshooting
     href: testing/troubleshooting.md
   - name: Samples
-    href: resources/excel-office-scripts-samples.md
+    href: resources/excel-samples.md
   - name: Differences between Office Scripts and Office Add-ins
-    href: resources/differences-scripts-add-ins.md
+    href: resources/add-ins-differences.md
