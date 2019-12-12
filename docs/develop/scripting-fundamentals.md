@@ -114,6 +114,8 @@ Running this script on the worksheet with the previous table creates the followi
 
 ![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
+### 
+
 ## `main` function
 
 Every Office Script must contain a `main` function with the following signature, including the `Excel.RequestContext` type definition:
@@ -186,7 +188,7 @@ You can also load properties across an entire collection. Every collection objec
 ```TypeScript
 let comments = selectedSheet.comments;
 comments.load("items/resolved"); // Load the `resolved` property from every comment in this collection.
-await context.sync(); // // Synchronize with the workbook to get the properties.
+await context.sync(); // Synchronize with the workbook to get the properties.
 ```
 
 ## See also
