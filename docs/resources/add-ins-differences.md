@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
@@ -37,3 +37,4 @@ Office Scripts cannot use [Common APIs](/javascript/api/office). If you need aut
 
 - [Office Scripts in Excel on the web](../overview/overview.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
+- [Build an Excel task pane add-in](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)
