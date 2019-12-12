@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Office Scripts Code Editor environment
 
-Office Scripts are written in either [TypeScript or JavaScript](#scripting-language-typescript-or-javascript) and use the [Office JavaScript APIs](#office-javascript-api) to interact with an Excel workbook.
+Office Scripts are written in either [TypeScript or JavaScript](#scripting-language-typescript-or-javascript) and use the [Office Scripts JavaScript APIs](#office-scripts-javascript-api) to interact with an Excel workbook.
 
 ## Scripting language: TypeScript or JavaScript
 
@@ -20,7 +20,7 @@ Office Scripts are largely self-contained pieces of code. Only a small part of T
 
 ## Office Scripts JavaScript API
 
-Office Scripts use a specialized version the Office JavaScript APIs that are used by [Office Add-ins](/office/dev/add-ins/overview/index). The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/differences-scripts-add-ins.md#apis) article. You can view all the APIs available to your script in the [Office Scripts API reference documentation](/javascript/api/office-scripts/overview).
+Office Scripts use a specialized version the Office JavaScript APIs that are used by [Office Add-ins](/office/dev/add-ins/overview/index). The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md#apis) article. You can view all the APIs available to your script in the [Office Scripts API reference documentation](/javascript/api/office-scripts/overview).
 
 ## IntelliSense
 

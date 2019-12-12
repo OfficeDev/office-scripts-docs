@@ -11,7 +11,7 @@ localization_priority: Normal
 
 Office Scripts in Excel on the web let you automate tasks. You can record your Excel actions with the Action Recorder, which creates a script. You can also create and edit scripts with the Code Editor. This series of documents teaches you how to use these tools. You'll be introduced to the Action Recorder and see how to record your frequent Excel actions. You'll also learn how to make or update your own scripts with the Code Editor.
 
-<img alt="A gif showing a script being recorded and replayed on different worksheets." src="../images/overview.gif" />
+!["A gif showing a script being recorded and replayed on different worksheets.](../images/overview.gif)
 
 ## Action Recorder
 
@@ -25,7 +25,7 @@ The Action Recorder records actions you take in Excel and translates them into a
 
 All scripts recorded with the Action Recorder can be edited through the Code Editor. This lets you tweak and customize the script to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
-One easy way to start learning the capabilities of Office Scripts is to record scripts in Excel on the web and view the resulting code. Another option is to follow our [tutorial](../tutorials/excel-office-scripts-tutorial.md) to learn in a more guided and structured way.
+One easy way to start learning the capabilities of Office Scripts is to record scripts in Excel on the web and view the resulting code. Another option is to follow our [tutorial](../tutorials/excel-tutorial.md) to learn in a more guided and structured way.
 
 ## Next steps
 
