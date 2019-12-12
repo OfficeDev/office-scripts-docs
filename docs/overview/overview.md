@@ -29,7 +29,7 @@ One easy way to start learning the capabilities of Office Scripts is to record s
 
 ## Next steps
 
-Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-office-scripts-tutorial.md) to learn how to create your first Office Scripts.
+Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tutorial.md) to learn how to create your first Office Scripts.
 
 ## See also
 
