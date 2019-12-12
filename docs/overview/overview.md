@@ -17,7 +17,7 @@ Office Scripts in Excel on the web let you automate tasks. You can record your E
 
 ![The Action Recorder after recording several actions.](../images/action-recorder-intro.png)
 
-The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel action as you edit cells, change formatting, and create tables. This resulting script can be run on other worksheets and workbooks to recreate your original actions with a single button press.
+The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions with a single button press.
 
 ## Code Editor
 
