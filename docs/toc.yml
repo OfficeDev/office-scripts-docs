@@ -13,5 +13,9 @@
     href: testing/troubleshooting.md
   - name: Samples
     href: resources/excel-office-scripts-samples.md
-  - name: Differences between Office Scripts and Office Add-ins
-    href: resources/differences-scripts-add-ins.md
+  - name: Concepts
+    items:
+    - name: Code Editor Environment
+      href: overview/code-editor-environment.md 
+    - name: Differences between Office Scripts and Office Add-ins
+      href: resources/differences-scripts-add-ins.md
