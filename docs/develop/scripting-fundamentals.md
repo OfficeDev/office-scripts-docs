@@ -116,7 +116,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 ### Further reading on the object model
 
-The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. Here are some commonly viewed pages:
+The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
 
 - [Chart](/javascript/api/office-scripts/excel-scripts/excel.chart)
 - [Comment](/javascript/api/office-scripts/excel-scripts/excel.comment)
