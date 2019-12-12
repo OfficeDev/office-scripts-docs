@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 12/04/2019
+ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
@@ -114,6 +114,20 @@ Running this script on the worksheet with the previous table creates the followi
 
 ![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
+### Further reading on the object model
+
+The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
+
+- [Chart](/javascript/api/office-scripts/excel-scripts/excel.chart)
+- [Comment](/javascript/api/office-scripts/excel-scripts/excel.comment)
+- [PivotTable](/javascript/api/office-scripts/excel-scripts/excel.pivottable)
+- [Range](/javascript/api/office-scripts/excel-scripts/excel.range)
+- [RangeFormat](/javascript/api/office-scripts/excel-scripts/excel.rangeformat)
+- [Shape](/javascript/api/office-scripts/excel-scripts/excel.shape)
+- [Table](/javascript/api/office-scripts/excel-scripts/excel.table)
+- [Workbook](/javascript/api/office-scripts/excel-scripts/excel.workbook)
+- [Worksheet](/javascript/api/office-scripts/excel-scripts/excel.worksheet)
+
 ## `main` function
 
 Every Office Script must contain a `main` function with the following signature, including the `Excel.RequestContext` type definition:
@@ -186,9 +200,9 @@ You can also load properties across an entire collection. Every collection objec
 ```TypeScript
 let comments = selectedSheet.comments;
 comments.load("items/resolved"); // Load the `resolved` property from every comment in this collection.
-await context.sync(); // // Synchronize with the workbook to get the properties.
+await context.sync(); // Synchronize with the workbook to get the properties.
 ```
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/overview.md)
+- [Office Scripts API reference](/javascript/api/office-scripts/overview)
