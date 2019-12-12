@@ -5,7 +5,7 @@ ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
-# Office Scripts in Excel on the web
+# Office Scripts in Excel on the web (preview)
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
