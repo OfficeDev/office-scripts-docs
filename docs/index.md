@@ -42,7 +42,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                     </div>
                     <div class="cardText">
                         <h3>Getting started</h3>
-                        <p><a href="tutorials/excel-office-scripts-tutorial.md">Complete the tutorial to learn how to record, edit, and create Office Scripts in Excel on the web.</a></p>
+                        <p><a href="tutorials/excel-tutorial.md">Complete the tutorial to learn how to record, edit, and create Office Scripts in Excel on the web.</a></p>
                     </div>
                 </div>
             </div>
@@ -94,11 +94,11 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="resources/excel-office-scripts-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
+                            <a href="resources/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-office-scripts-samples.md" target="_blank"><h3>Sample scripts</h3></a>
+                        <a href="resources/excel-samples.md" target="_blank"><h3>Sample scripts</h3></a>
                     </div>
                 </div>
             </div>
