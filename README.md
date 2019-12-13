@@ -1,4 +1,4 @@
-# Office Scripts for Excel on the web documentation
+# Office Scripts in Excel on the web documentation
 
 Welcome to the Office Scripts documentation repo. In this repository, you can find the documentation source files for Office Scripts tutorials and how-to guides. For the best experience, we recommend you view this content on [docs.microsoft.com](https://docs.microsoft.com/office-scripts-docs).
 

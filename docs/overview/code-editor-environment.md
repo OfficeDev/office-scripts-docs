@@ -1,6 +1,6 @@
 ---
 title: 'Office Scripts Code Editor environment'
-description: 'The prerequisites and environment information for Office Scripts for Excel on the web.'
+description: 'The prerequisites and environment information for Office Scripts in Excel on the web.'
 ms.date: 12/12/2019
 localization_priority: Normal
 ---

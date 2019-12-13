@@ -1,24 +1,29 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 12/12/2019
+ms.date: 12/13/2019
 localization_priority: Normal
 ---
 
 # Office Scripts in Excel on the web (preview)
 
-Office Scripts in Excel on the web let you automate tasks. You can record your Excel actions with the Action Recorder, which creates a script. You can also create and edit scripts with the Code Editor. This series of documents teaches you how to use these tools. You'll be introduced to the Action Recorder and see how to record your frequent Excel actions. You'll also learn how to make or update your own scripts with the Code Editor.
+Office Scripts in Excel on the web let you automate your day-to-day tasks. You can record your Excel actions with the Action Recorder, which creates a script. You can also create and edit scripts with the Code Editor. This series of documents teaches you how to use these tools. You'll be introduced to the Action Recorder and see how to record your frequent Excel actions. You'll also learn how to make or update your own scripts with the Code Editor.
 
 ![A gif showing a script being recorded and replayed on different worksheets](../images/teaser-animation.gif)
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## Action Recorder
+## When to use Office Scripts
 
+Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, an Office Script can help you by reducing your whole workflow to a single button press.
+
+As an example, say you start your work day by opening a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formating a table, adding formulas, and creating a PivotTable in a new worksheet. Those action you repeat daily can be recorded once with the Action Recorder. For then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts automate your common tasks so you and your workplace can be more efficient and productive.
+
+## Action Recorder
 
 ![The Action Recorder after recording several actions.](../images/action-recorder-intro.png)
 
-The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions with a single button press.
+The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
 ## Code Editor
 
