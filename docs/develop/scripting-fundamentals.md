@@ -118,15 +118,15 @@ Running this script on the worksheet with the previous table creates the followi
 
 The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
 
-- [Chart](/javascript/api/office-scripts/excel-scripts/excel.chart)
-- [Comment](/javascript/api/office-scripts/excel-scripts/excel.comment)
-- [PivotTable](/javascript/api/office-scripts/excel-scripts/excel.pivottable)
-- [Range](/javascript/api/office-scripts/excel-scripts/excel.range)
-- [RangeFormat](/javascript/api/office-scripts/excel-scripts/excel.rangeformat)
-- [Shape](/javascript/api/office-scripts/excel-scripts/excel.shape)
-- [Table](/javascript/api/office-scripts/excel-scripts/excel.table)
-- [Workbook](/javascript/api/office-scripts/excel-scripts/excel.workbook)
-- [Worksheet](/javascript/api/office-scripts/excel-scripts/excel.worksheet)
+- [Chart](/javascript/api/office-scripts/excel/excel.chart)
+- [Comment](/javascript/api/office-scripts/excel/excel.comment)
+- [PivotTable](/javascript/api/office-scripts/excel/excel.pivottable)
+- [Range](/javascript/api/office-scripts/excel/excel.range)
+- [RangeFormat](/javascript/api/office-scripts/excel/excel.rangeformat)
+- [Shape](/javascript/api/office-scripts/excel/excel.shape)
+- [Table](/javascript/api/office-scripts/excel/excel.table)
+- [Workbook](/javascript/api/office-scripts/excel/excel.workbook)
+- [Worksheet](/javascript/api/office-scripts/excel/excel.worksheet)
 
 ## `main` function
 
