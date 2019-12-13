@@ -61,11 +61,11 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-        // Set fill color to FFC000 for range Sheet1!A2:C2
-        let workbook = context.workbook;
-        let worksheets = workbook.worksheets;
-        let selectedSheet = worksheets.getActiveWorksheet();
-        selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+      // Set fill color to FFC000 for range Sheet1!A2:C2
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
+      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
     }
     ```
 
@@ -103,14 +103,14 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-          // Set fill color to FFC000 for range Sheet1!A2:C2
-          let workbook = context.workbook;
-          let worksheets = workbook.worksheets;
-          let selectedSheet = worksheets.getActiveWorksheet();
-          selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
-          selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
-          let table = selectedSheet.tables.add("A1:C5", true);
-          table.sort.apply([{ key: 0, ascending: true }]);
+      // Set fill color to FFC000 for range Sheet1!A2:C2
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
+      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+      selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
+      let table = selectedSheet.tables.add("A1:C5", true);
+      table.sort.apply([{ key: 0, ascending: true }]);
     }
     ```
 
@@ -157,16 +157,16 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-        // Get the current worksheet.
-        let workbook = context.workbook;
-        let worksheets = workbook.worksheets;
-        let selectedSheet = worksheets.getActiveWorksheet();
+      // Get the current worksheet.
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
 
-        // Format the range to display numerical dollar amounts.
-        selectedSheet.getRange("D2:E8").numberFormat = [["$##.##"]]
+      // Format the range to display numerical dollar amounts.
+      selectedSheet.getRange("D2:E8").numberFormat = [["$##.##"]]
 
-        // Fit the width of all the used columns to the data.
-        selectedSheet.getUsedRange().format.autofitColumns();
+      // Fit the width of all the used columns to the data.
+      selectedSheet.getUsedRange().format.autofitColumns();
     }
     ```
 
@@ -199,8 +199,8 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 1. Add the following code to the end of the script:
 
     ```TypeScript
-        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-        range.values = [[Math.abs(range.values[0][0])]];
+    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    range.values = [[Math.abs(range.values[0][0])]];
     ```
 
 2. The value of cell **D2** should now be positive.
@@ -213,16 +213,16 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-        // Get the current worksheet.
-        let workbook = context.workbook;
-        let worksheets = workbook.worksheets;
-        let selectedSheet = worksheets.getActiveWorksheet();
+      // Get the current worksheet.
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
 
-        // Format the range to display numerical dollar amounts.
-        selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]]
+      // Format the range to display numerical dollar amounts.
+      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]]
 
-        // Fit the width of all the used columns to the data.
-        selectedSheet.getUsedRange().format.autofitColumns();
+      // Fit the width of all the used columns to the data.
+      selectedSheet.getUsedRange().format.autofitColumns();
     }
     ```
 
@@ -238,15 +238,15 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
     for (let i = 1; i < range.rowCount; i++) {
-          // The column at index 3 is column "4" in the worksheet.
-          if (range.values[i][3] != 0) {
-            selectedSheet.getCell(i,3).values = [[Math.abs(range.values[i][3])]];
-          }
+      // The column at index 3 is column "4" in the worksheet.
+      if (range.values[i][3] != 0) {
+        selectedSheet.getCell(i,3).values = [[Math.abs(range.values[i][3])]];
+      }
 
-          // The column at index 4 is column "5" in the worksheet.
-          if (range.values[i][4] != 0) {
-            selectedSheet.getCell(i,4).values = [[Math.abs(range.values[i][4])]];
-          }
+      // The column at index 4 is column "5" in the worksheet.
+      if (range.values[i][4] != 0) {
+        selectedSheet.getCell(i,4).values = [[Math.abs(range.values[i][4])]];
+      }
     }
     ```
 
