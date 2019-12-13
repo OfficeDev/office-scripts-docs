@@ -41,5 +41,5 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/overview.md)
+- [Office Scripts in Excel on the web](../overview/excel.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
