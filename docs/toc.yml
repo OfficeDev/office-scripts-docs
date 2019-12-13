@@ -4,7 +4,7 @@
 - name: Office Scripts in Excel on the web
   items:
   - name: Overview
-    href: overview/overview.md
+    href: overview/excel.md
   - name: Tutorial
     href: tutorials/excel-tutorial.md
   - name: Scripting fundamentals

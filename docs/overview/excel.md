@@ -36,4 +36,4 @@ Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tu
 
 - [Scripting fundamentals for Office Script in Excel on the web](../develop/scripting-fundamentals.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
-- [Office Scripts API reference](/javascript/api/office-scripts)
+- [Office Scripts API reference](/javascript/api/office-scripts/overview)
