@@ -23,7 +23,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                     </div>
                     <div class="cardText">
                         <h3>Overview</h3>
-                        <p><a href="overview/overview.md">Learn about the script environment, Intellisense, and Script Recorder for Office Scripts in Excel on the web.</a></p>
+                        <p><a href="overview/excel.md">Learn about the script environment, Intellisense, and Script Recorder for Office Scripts in Excel on the web.</a></p>
                     </div>
                 </div>
             </div>

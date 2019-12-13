@@ -19,7 +19,7 @@ Before starting this tutorial, you'll need access to Office Scripts, which requi
 - [Opt-in to the Office Scripts preview (admin-enabled)](https://aka.ms/office-scripts-admin). This adds the **Automate** tab to the ribbon.
 
 > [!IMPORTANT]
-> This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/overview.md) to learn more about the script environment.
+> This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/excel.md) to learn more about the script environment.
 
 ## Add data and record a basic script
 
