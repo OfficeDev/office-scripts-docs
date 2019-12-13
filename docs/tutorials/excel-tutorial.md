@@ -1,17 +1,17 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 12/11/2019
+ms.date: 12/12/2019
 localization_priority: Normal
 ---
 
 # Record, edit, and create Office Scripts in Excel on the web
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 This tutorial will teach you the basics of recording, editing, and writing an Office Script for Excel on the web.
 
 ## Prerequisites
+
+[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
 

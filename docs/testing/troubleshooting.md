@@ -7,8 +7,6 @@ localization_priority: Normal
 
 # Troubleshooting Office Scripts
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 As you develop Office Scripts, you may make mistakes. It's okay. We have tools that help find the problems and get your scripts working perfectly.
 
 ## Console logs
