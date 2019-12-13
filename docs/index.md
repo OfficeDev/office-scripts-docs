@@ -3,13 +3,13 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning about Office Scripts.
-ms.date: 12/06/2019
+ms.date: 12/13/2019
 localization_priority: Priority
 ---
 
 # Office Scripts documentation
 
-Office Scripts in Excel on the web lets you automate common tasks. Learn how to create and edit scripts in Excel on the web.
+Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
 <ul class="panelContent cardsF cols cols3">
     <li>
@@ -23,7 +23,7 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                     </div>
                     <div class="cardText">
                         <h3>Overview</h3>
-                        <p><a href="overview/excel.md">Learn about the script environment, Intellisense, and Script Recorder for Office Scripts in Excel on the web.</a></p>
+                        <p><a href="overview/excel.md">Learn about the components of Office Scripts in Excel on the web: the Action Recorder and the Code Editor.</a></p>
                     </div>
                 </div>
             </div>
@@ -108,11 +108,11 @@ Office Scripts in Excel on the web lets you automate common tasks. Learn how to 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://stackoverflow.microsoft.com/questions/tagged/office-scripts" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://stackoverflow.microsoft.com/questions/tagged/office-scripts" target="_blank"><h3>Ask questions</h3></a>
+                        <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><h3>Ask questions</h3></a>
                     </div>
                 </div>
             </div>

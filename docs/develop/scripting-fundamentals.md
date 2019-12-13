@@ -1,13 +1,13 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 12/12/2019
+ms.date: 12/13/2019
 localization_priority: Normal
 ---
 
 # Scripting fundamentals for Office Scripts in Excel on the web
 
-This article describes the areas of Office Scripts in Excel on the web that require you to have a better understanding of how the script code works with Excel.
+This article will introduce you to the technical aspects of Office Scripts. You'll learn how the Excel objects work together and how the Code Editor synchronizes with a workbook.
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
