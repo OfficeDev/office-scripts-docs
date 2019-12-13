@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 12/12/2019
+ms.date: 12/13/2019
 localization_priority: Normal
 ---
 
@@ -61,11 +61,11 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-      // Set fill color to FFC000 for range Sheet1!A2:C2
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
-      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+        // Set fill color to FFC000 for range Sheet1!A2:C2
+        let workbook = context.workbook;
+        let worksheets = workbook.worksheets;
+        let selectedSheet = worksheets.getActiveWorksheet();
+        selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
     }
     ```
 
@@ -93,30 +93,32 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
     let table = selectedSheet.tables.add("A1:C5", true);
     ```
 
-2. That call returns a `Table` object. Let's use that table to change the style. Changing the table style won't change the formatting we've already added. Instead, it will format the cell borders and other rows. Add the following line after the table creation:
+2. That call returns a `Table` object. Let's use that table to sort the data. We'll sort the data in ascending order based on the values in the "Fruit" column. Add the following line after the table creation:
 
     ```TypeScript
-    table.style = "TableStyleLight21";
+    table.sort.apply([{ key: 0, ascending: true }]);
     ```
 
     Your script should look like this:
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-      // Set fill color to FFC000 for range Sheet1!A2:C2
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
-      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
-      selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
-      let table = selectedSheet.tables.add("A1:C5", true);
-      table.style = "TableStyleLight21";
+          // Set fill color to FFC000 for range Sheet1!A2:C2
+          let workbook = context.workbook;
+          let worksheets = workbook.worksheets;
+          let selectedSheet = worksheets.getActiveWorksheet();
+          selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+          selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
+          let table = selectedSheet.tables.add("A1:C5", true);
+          table.sort.apply([{ key: 0, ascending: true }]);
     }
     ```
 
+    Tables have a `TableSort` object, accessed through the `Table.sort` property. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, we only have one sorting criteria, so we only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
+
 3. Run the script. You should see a table like this:
 
-    ![A fruit sales table using the light-21 table style.](../images/tutorial-3.png)
+    ![A sorted fruit sales table.](../images/tutorial-3.png)
 
     > [!NOTE]
     > If you re-run the script, you'll get an error. This is because you cannot create a table on top of another table. However, you can run the script on a different worksheet or workbook.
@@ -155,29 +157,29 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+        // Get the current worksheet.
+        let workbook = context.workbook;
+        let worksheets = workbook.worksheets;
+        let selectedSheet = worksheets.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$##.##"]]
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").numberFormat = [["$##.##"]]
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().format.autofitColumns();
     }
     ```
 
 5. Now let's read a value from one of the number columns. Add the following code to the end of the script:
 
     ```TypeScript
-      // Get the value of cell D2.
-      let range = selectedSheet.getRange("D2");
-      range.load("values");
-      await context.sync();
+    // Get the value of cell D2.
+    let range = selectedSheet.getRange("D2");
+    range.load("values");
+    await context.sync();
   
-      // Print the value of D2.
-      console.log(range.values);
+    // Print the value of D2.
+    console.log(range.values);
     ```
 
     Note the calls to `load` and `sync`. You can learn the details of those methods in [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md#sync-and-load). For now, know that you must request data to be read and then sync your script with the workbook to read that data.
@@ -197,8 +199,8 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 1. Add the following code to the end of the script:
 
     ```TypeScript
-      // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-      range.values = [[Math.abs(range.values[0][0])]];
+        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+        range.values = [[Math.abs(range.values[0][0])]];
     ```
 
 2. The value of cell **D2** should now be positive.
@@ -211,16 +213,16 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+        // Get the current worksheet.
+        let workbook = context.workbook;
+        let worksheets = workbook.worksheets;
+        let selectedSheet = worksheets.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]]
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]]
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().format.autofitColumns();
     }
     ```
 
@@ -229,23 +231,23 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     Note that the array defining cell locations is zero-based. That means cell **A1** is `range[0][0]`.
 
     ```TypeScript
-      // Get the values of the used range.
-      let range = selectedSheet.getUsedRange();
-      range.load("rowCount,values");
-      await context.sync();
+    // Get the values of the used range.
+    let range = selectedSheet.getUsedRange();
+    range.load("rowCount,values");
+    await context.sync();
 
-      // Iterate over the fourth and fifth columns and set their values to their absolute value.
-      for (let i = 1; i < range.rowCount; i++) {
-        // The column at index 3 is column "4" in the worksheet.
-        if (range.values[i][3] != 0) {
-          selectedSheet.getCell(i,3).values = [[Math.abs(range.values[i][3])]];
-        }
+    // Iterate over the fourth and fifth columns and set their values to their absolute value.
+    for (let i = 1; i < range.rowCount; i++) {
+          // The column at index 3 is column "4" in the worksheet.
+          if (range.values[i][3] != 0) {
+            selectedSheet.getCell(i,3).values = [[Math.abs(range.values[i][3])]];
+          }
 
-        // The column at index 4 is column "5" in the worksheet.
-        if (range.values[i][4] != 0) {
-          selectedSheet.getCell(i,4).values = [[Math.abs(range.values[i][4])]];
-        }
-      }
+          // The column at index 4 is column "5" in the worksheet.
+          if (range.values[i][4] != 0) {
+            selectedSheet.getCell(i,4).values = [[Math.abs(range.values[i][4])]];
+          }
+    }
     ```
 
     This portion of the script does several important tasks. First, it loads the values and row count of the used range. This lets us look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. We're avoiding zeroes so we can leave the blank cells as they were.
