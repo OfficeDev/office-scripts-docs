@@ -9,13 +9,15 @@
     href: tutorials/excel-tutorial.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
-  - name: Troubleshooting
-    href: testing/troubleshooting.md
-  - name: Samples
-    href: resources/excel-samples.md
   - name: Concepts
     items:
     - name: Code Editor Environment
       href: overview/code-editor-environment.md 
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
+    - name: Undo the effects of an Office Script
+      href: testing/undo.md
+  - name: Troubleshooting
+    href: testing/troubleshooting.md
+  - name: Samples
+    href: resources/excel-samples.md
