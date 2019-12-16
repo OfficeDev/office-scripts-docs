@@ -16,7 +16,7 @@ This tutorial will teach you the basics of recording, editing, and writing an Of
 Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
 
 - Excel on the web.
-- Have your [admin enable the Office Scripts for your account](https://support.office.com/article/office-scripting-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf). This adds the **Automate** tab to the ribbon.
+- Have your [admin enable Office Scripts on your account](https://support.office.com/article/office-scripting-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf). This adds the **Automate** tab to the ribbon.
 
 > [!IMPORTANT]
 > This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/excel.md) to learn more about the script environment.
