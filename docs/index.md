@@ -3,11 +3,11 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning about Office Scripts.
-ms.date: 12/13/2019
+ms.date: 12/16/2019
 localization_priority: Priority
 ---
 
-# Office Scripts documentation
+# Office Scripts documentation (coming soon)
 
 Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
@@ -129,6 +129,22 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                     </div>
                     <div class="cardText">
                         <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>Request features</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Licensing information</h3></a>
                     </div>
                 </div>
             </div>
