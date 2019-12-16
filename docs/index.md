@@ -134,4 +134,20 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Licensing information</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
 </ul>
