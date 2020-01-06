@@ -3,11 +3,11 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning about Office Scripts.
-ms.date: 12/16/2019
+ms.date: 01/06/2020
 localization_priority: Priority
 ---
 
-# Office Scripts documentation (coming soon)
+# Office Scripts documentation (preview)
 
 Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
