@@ -1,6 +1,6 @@
 ---
 title: 'Undo the effects of an Office Script'
-description: 'Use the version history of Excel on the web to undo a script.'
+description: 'Use the version history of Excel on the web to undo the effects of running a script.'
 ms.date: 12/13/2019
 localization_priority: Normal
 ---

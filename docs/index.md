@@ -2,7 +2,7 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
-description: Resources for learning about Office Scripts.
+description: 'Resources for learning about Office Scripts, including tutorials conceptual articles, and samples.'
 ms.date: 01/07/2020
 localization_priority: Priority
 ---

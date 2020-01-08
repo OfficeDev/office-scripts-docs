@@ -1,6 +1,6 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
-description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
+description: 'A tutorial teaching the basics of writing and editing Office Scripts, including reading data from and and writing data to a workbook.'
 ms.date: 01/07/2020
 localization_priority: Normal
 ---
