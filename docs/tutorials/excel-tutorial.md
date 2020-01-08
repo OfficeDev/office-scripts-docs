@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial teaching the basics of writing and editing Office Scripts.'
-ms.date: 01/07/2020
+ms.date: 01/08/2020
 localization_priority: Normal
 ---
 
@@ -163,7 +163,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
       let selectedSheet = worksheets.getActiveWorksheet();
 
       // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$##.##"]]
+      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
 
       // Fit the width of all the used columns to the data.
       selectedSheet.getUsedRange().format.autofitColumns();
@@ -200,7 +200,8 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    range.values = [[Math.abs(range.values[0][0])]];
+    let positiveValue = Math.abs(range.values[0][0]);
+    range.values = [[positiveValue]];
     ```
 
 2. The value of cell **D2** should now be positive.
@@ -240,12 +241,14 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     for (let i = 1; i < range.rowCount; i++) {
       // The column at index 3 is column "4" in the worksheet.
       if (range.values[i][3] != 0) {
-        selectedSheet.getCell(i,3).values = [[Math.abs(range.values[i][3])]];
+        let positiveValue = Math.abs(range.values[i][3]);
+        selectedSheet.getCell(i, 3).values = [[positiveValue]];
       }
 
       // The column at index 4 is column "5" in the worksheet.
       if (range.values[i][4] != 0) {
-        selectedSheet.getCell(i,4).values = [[Math.abs(range.values[i][4])]];
+        let positiveValue = Math.abs(range.values[i][4]);
+        selectedSheet.getCell(i, 4).values = [[positiveValue]];
       }
     }
     ```
