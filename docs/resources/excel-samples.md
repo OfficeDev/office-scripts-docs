@@ -1,6 +1,6 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
-description: 'A collection of examples and samples to use with Office Scripts in Excel on the web.'
+description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
 ms.date: 01/07/2020
 localization_priority: Normal
 ---

@@ -1,11 +1,11 @@
 ---
-title: 'Undo the effects of an Office Script'
-description: 'Use the version history of Excel on the web to undo the effects of running a script.'
-ms.date: 12/13/2019
+title: 'Undo the changes made by running an Office Script'
+description: 'Use the version history of Excel on the web to undo the changes made by running a script.'
+ms.date: 01/08/2019
 localization_priority: Normal
 ---
 
-# Undo the effects of an Office Script
+# Undo the changes made by running an Office Script
 
 You cannot undo a script using the **Undo** command. Instead, you must restore a previous version of the workbook from your cloud storage.
 
