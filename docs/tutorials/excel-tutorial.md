@@ -220,7 +220,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
       let selectedSheet = worksheets.getActiveWorksheet();
 
       // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]]
+      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
 
       // Fit the width of all the used columns to the data.
       selectedSheet.getUsedRange().format.autofitColumns();
