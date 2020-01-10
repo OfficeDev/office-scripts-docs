@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Sample scripts for Office Scripts in Excel on the web (preview)
 
-The following samples are simple scripts for you to try on your own workbooks. To use them:
+The following samples are simple scripts for you to try on your own workbooks. To use them in Excel on the web:
 
 1. Open the **Automate** tab.
 2. Press **Code Editor**.
@@ -46,7 +46,7 @@ These samples demonstrate how to work with worksheet data and provide users with
 
 ### Apply conditional formatting
 
-This sample applies a conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
+This sample applies conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -86,7 +86,7 @@ async function main(context: Excel.RequestContext) {
 
 ## Collaboration
 
-These samples help your script use the collaboration tools in Excel, such as comments.
+These samples demonstrate how to work with collaboration-related features of Excel, such as comments.
 
 ### Delete resolved comments
 
