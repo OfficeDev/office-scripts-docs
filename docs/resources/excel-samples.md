@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of samples to use with Office Scripts in Excel on the web.'
-ms.date: 01/09/2020
+ms.date: 01/10/2020
 localization_priority: Normal
 ---
 
@@ -17,7 +17,11 @@ The following samples are simple scripts for you to try on your own workbooks. T
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## Read and log one cell
+## Scripting basics
+
+These samples demonstrate fundamental building blocks for Office Scripts. Add these to your scripts to extend your solution and solve common problems.
+
+### Read and log one cell
 
 This sample reads the value of **A1** and prints it to the console.
 
@@ -36,49 +40,77 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## Create a sorted table
+## Display data
+
+These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
+
+### Apply conditional formatting
+
+This sample applies a conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Get the current worksheet.
+  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+
+  // Get the used range in the worksheet.
+  let range = selectedSheet.getUsedRange();
+
+  // Set the fill color to green for the top 10% of values in the range.
+  let conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.topBottom);
+  conditionalFormat.topBottom.format.fill.color = "green";
+  conditionalFormat.topBottom.rule = { 
+    rank: 10, // The percentage threshold.
+    type: Excel.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
+  };
+}
+```
+
+### Create a sorted table
 
 This sample creates a table from the current worksheet's used range, then sorts it based on the first column.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
-    // Get the current worksheet.
-    let workbook = context.workbook;
-    let worksheets = workbook.worksheets;
-    let selectedSheet = worksheets.getActiveWorksheet();
+  // Get the current worksheet.
+  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
 
-    // Create a table with the used cells.
-    let usedRange = selectedSheet.getUsedRange();
-    let newTable = selectedSheet.tables.add(usedRange, true);
+  // Create a table with the used cells.
+  let usedRange = selectedSheet.getUsedRange();
+  let newTable = selectedSheet.tables.add(usedRange, true);
 
-    // Sort the table using the first column.
-    newTable.sort.apply([{ key: 0, ascending: true }]);
+  // Sort the table using the first column.
+  newTable.sort.apply([{ key: 0, ascending: true }]);
 }
 ```
 
-## Delete resolved comments
+## Collaboration
+
+These samples help your script use the collaboration tools in Excel, such as comments.
+
+### Delete resolved comments
 
 This sample deletes all resolved comments from the current worksheet.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
-    // Get the current worksheet.
-    let workbook = context.workbook;
-    let worksheets = workbook.worksheets;
-    let selectedSheet = worksheets.getActiveWorksheet();
+  // Get the current worksheet.
+  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
 
-    // Get the comments on this worksheet.
-    let comments = selectedSheet.comments;
-    comments.load("items/resolved");
-    await context.sync();
+  // Get the comments on this worksheet.
+  let comments = selectedSheet.comments;
+  comments.load("items/resolved");
+  await context.sync();
 
-    // Delete the resolved comments.
-    comments.items.forEach((comment) => {
-        if (comment.resolved) {
-            comment.delete();
-        }
-    });
+  // Delete the resolved comments.
+  comments.items.forEach((comment) => {
+      if (comment.resolved) {
+          comment.delete();
+      }
+  });
 }
 ```
 
-## Apply conditional formatting
+## Suggest new samples
+
+We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section below.
