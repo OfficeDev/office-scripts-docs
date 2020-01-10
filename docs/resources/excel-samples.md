@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of samples to use with Office Scripts in Excel on the web.'
-ms.date: 01/07/2020
+ms.date: 01/09/2020
 localization_priority: Normal
 ---
 
@@ -16,6 +16,25 @@ The following samples are simple scripts for you to try on your own workbooks. T
 5. Press **Run** in the Code Editor's task pane.
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
+
+## Read and log one cell
+
+This sample reads the value of **A1** and prints it to the console.
+
+``` TypeScript
+async function main(context: Excel.RequestContext) {
+  // Get the current worksheet.
+  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+
+  // Get the value of cell A1.
+  let range = selectedSheet.getRange("A1");
+  range.load("values");
+  await context.sync();
+
+  // Print the value of A1.
+  console.log(range.values);
+}
+```
 
 ## Create a sorted table
 
@@ -61,3 +80,5 @@ async function main(context: Excel.RequestContext) {
     });
 }
 ```
+
+## Apply conditional formatting
