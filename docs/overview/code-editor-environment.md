@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts Code Editor environment'
 description: 'The prerequisites and environment information for Office Scripts in Excel on the web.'
-ms.date: 12/12/2019
+ms.date: 01/14/2020
 localization_priority: Normal
 ---
 
@@ -11,7 +11,7 @@ Office Scripts are written in either [TypeScript or JavaScript](#scripting-langu
 
 ## Scripting language: TypeScript or JavaScript
 
-Office Scripts are written in TypeScript or JavaScript. The Action Recorder generates code in TypeScript (which is a superset of JavaScript). Office Scripts documentation uses TypeScript, but if you're more comfortable with JavaScript, you can use that instead.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html) or [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). The Action Recorder generates code in TypeScript (which is a superset of JavaScript). Office Scripts documentation uses TypeScript, but if you're more comfortable with JavaScript, you can use that instead.
 
 Office Scripts are largely self-contained pieces of code. Only a small part of TypeScript's functionality is used. Therefore, you can edit scripts without having to learn the intricacies of TypeScript. The Code Editor also handles the installation, compilation, and execution of code, so you don't need to worry about anything but the script itself. It's possible to learn the language and create scripts without previous programming knowledge. However, if you're new to programming, we recommend learning some fundamentals before proceeding with Office Scripts:
 
