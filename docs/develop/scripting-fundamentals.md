@@ -203,6 +203,8 @@ comments.load("items/resolved"); // Load the `resolved` property from every comm
 await context.sync(); // Synchronize with the workbook to get the properties.
 ```
 
+You can be learn about working with collections in Office Scripts in the [Array section of the Using built-in JavaScript libraries in Office Scripts](javascript-libraries.md#array) article.
+
 ## See also
 
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)

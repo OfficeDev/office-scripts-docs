@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 01/10/2020
+ms.date: 01/15/2020
 localization_priority: Normal
 ---
 
@@ -80,7 +80,7 @@ async function main(context: Excel.RequestContext) {
   // Set the fill color to green for the top 10% of values in the range.
   let conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.topBottom);
   conditionalFormat.topBottom.format.fill.color = "green";
-  conditionalFormat.topBottom.rule = { 
+  conditionalFormat.topBottom.rule = {
     rank: 10, // The percentage threshold.
     type: Excel.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
   };
