@@ -15,8 +15,6 @@ The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_O
 
 Ranges contain several two-dimensional arrays that map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before traversing any array, for example `myRange.load("values")`.
 
-...
-
 Many Excel objects are contained in a collection. For example, all shapes in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). These `*Collection` objects all contain an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
 
 The following script logs the type of every shape in the current worksheet.
@@ -38,7 +36,26 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-You can load individual objects from a collection using the `getItem` or `getItemAt` methods.
+You can load individual objects from a collection using the `getItem` or `getItemAt` methods. `getItem` gets an object by using a unique identifier like a name (such names are often specified by your script). `getItemAt` gets an object by using its index in the collection. Either call must be followed by a `await context.sync();` command before hte object can be used.
+
+The following script deletes the oldest shape in the current worksheet.
+
+```Typescript
+async function main(context: Excel.RequestContext) {
+  // Get the current worksheet.
+  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+
+  // Get the first (oldest) shape in the worksheet.
+  // Note that this script will thrown an error if there are no shapes.
+  let shape = selectedSheet.shapes.getItemAt(0);
+
+  // Sync to load `shape` from the collection.
+  await context.sync();
+
+  // Remove the shape from the worksheet.
+  shape.delete();
+}
+```
 
 ## Date
 
