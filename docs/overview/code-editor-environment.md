@@ -32,4 +32,4 @@ The Excel Code Editor uses the same IntelliSense engine as Visual Studio Code. T
 
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
-- [Using built-in JavaScript libraries in Office Scripts](../develop/javascript-libraries.md)
+- [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md)

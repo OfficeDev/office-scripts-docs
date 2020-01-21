@@ -1,19 +1,24 @@
 ---
-title: 'Using built-in JavaScript libraries in Office Scripts'
+title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
 ms.date: 01/21/2020
 localization_priority: Normal
 ---
 
-# Using built-in JavaScript libraries in Office Scripts
+# Using built-in JavaScript objects in Office Scripts
 
-JavaScript has several built-in objects any JavaScript code can use. The [TypeScript](../overview/code-editor-environment.md) of Office Scripts is a superset of JavaScript, so it also includes these objects. This article focuses on a few select objects and how they can be used by a script to integrate with your Excel workbook. Mozilla's [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) contains a complete list of these objects.
+JavaScript provides several built-in objects that you can use in your Office Scripts, regardless of whether you're scripting in JavaScript or [TypeScript](../overview/code-editor-environment.md) (a superset of JavaScript). This article describes how you can use some of the built-in JavaScript objects in Office Scripts for Excel on the web.
+
+> [!NOTE]
+> For a complete list of all built-in JavaScript objects, see Mozilla's [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) article.
 
 ## Array
 
-The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object gives your script functions to work with array types. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
+The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object provides a standardized way to work with arrays in your script. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
 
-Ranges contain several two-dimensional arrays that directly map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before reading any cell in that array, for example `myRange.load("values")` (as well as `await context.sync();` to complete the `load` operation).
+### Working with ranges
+
+Ranges contain several two-dimensional arrays that directly map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Array-type properties must be [loaded](scripting-fundamentals.md#sync-and-load) like any other properties.
 
 The following script searches the **A1:D4** range for any number format containing a "$". The script sets the fill color in those cells to "yellow".
 
@@ -26,7 +31,7 @@ async function main(context: Excel.RequestContext) {
   range.load("numberFormat");
   await context.sync();
 
-  // Iterate over the entire range.
+  // Iterate through the arrays of rows and columns corresponding to those in the range.
   range.numberFormat.forEach((rowItem, rowIndex) => {
     range.numberFormat[rowIndex].forEach((columnItem, columnIndex) => {
       // Treat the numberFormat as a string so we can do text comparisons.
@@ -40,7 +45,9 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-Many Excel objects are contained in a collection. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). These `*Collection` objects all contain an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
+### Working with collections
+
+Many Excel objects are contained in a collection. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). Each `*Collection` object contains an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
 
 The following script logs the type of every shape in the current worksheet.
 
@@ -54,7 +61,7 @@ async function main(context: Excel.RequestContext) {
   shapes.load("items/type");
   await context.sync();
 
-  // Log the type of every shape.
+  // Log the type of every shape in the collection.
   shapes.items.forEach((shape) => {
     console.log(shape.type);
   });

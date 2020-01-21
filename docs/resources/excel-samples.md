@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 ### Work with dates
 
-This sample uses the [standard Date APIs](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) to store the current date and time in two worksheet cells.
+This sample uses the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object to get the current date and time and then writes those values to two cells in the active worksheet.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -50,13 +50,13 @@ async function main(context: Excel.RequestContext) {
   let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
   let timeRange = context.workbook.worksheets.getActiveWorksheet().getRange("B1");
 
-  // Get the current date and time using the Date APIs.
+  // Get the current date and time with the JavaScript Date object.
   let date = new Date(Date.now());
 
-  // Add the date string to A1
+  // Add the date string to A1.
   dateRange.values = [[date.toLocaleDateString()]];
   
-  // Add the time string to B1
+  // Add the time string to B1.
   timeRange.values = [[date.toLocaleTimeString()]];
 }
 ```
