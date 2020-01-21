@@ -1,7 +1,7 @@
 ---
 title: 'Using built-in JavaScript libraries in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 01/15/2020
+ms.date: 01/21/2020
 localization_priority: Normal
 ---
 
@@ -13,7 +13,32 @@ JavaScript has several built-in objects any JavaScript code can use. The [TypeSc
 
 The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object gives your script more tools to work with array types. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
 
-Ranges contain several two-dimensional arrays that map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before traversing any array, for example `myRange.load("values")`.
+Ranges contain several two-dimensional arrays that map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before any cell in the array, for example `myRange.load("values")`.
+
+The following script searches the range **A1** to **D4** for any number format containing a "$". The script sets the fill color in those cells to "yellow".
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Get the range From A1 to D4.
+  let range = context.workbook.worksheets.getActiveWorksheet().getRange("A1:D4");
+
+  // Load the numberFormat property on the range.
+  range.load("numberFormat");
+  await context.sync();
+
+  // Iterate over the entire range.
+  range.numberFormat.forEach((rowItem, rowIndex) => {
+    range.numberFormat[rowIndex].forEach((columnItem, columnIndex) => {
+      // Treat the numberFormat as a string so we can do text comparisons.
+      let columnItemText = columnItem as string;
+      if (columnItemText.indexOf("$") >= 0) {
+        // Set the cell's fill to yellow.
+        range.getCell(rowIndex, columnIndex).format.fill.color = "yellow";
+      }
+    });
+  });
+}
+```
 
 Many Excel objects are contained in a collection. For example, all shapes in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). These `*Collection` objects all contain an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
 
@@ -36,7 +61,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-You can load individual objects from a collection using the `getItem` or `getItemAt` methods. `getItem` gets an object by using a unique identifier like a name (such names are often specified by your script). `getItemAt` gets an object by using its index in the collection. Either call must be followed by a `await context.sync();` command before hte object can be used.
+You can load individual objects from a collection using the `getItem` or `getItemAt` methods. `getItem` gets an object by using a unique identifier like a name (such names are often specified by your script). `getItemAt` gets an object by using its index in the collection. Either call must be followed by a `await context.sync();` command before the object can be used.
 
 The following script deletes the oldest shape in the current worksheet.
 
