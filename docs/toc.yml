@@ -5,8 +5,12 @@
   items:
   - name: Overview
     href: overview/excel.md
-  - name: Tutorial
-    href: tutorials/excel-tutorial.md
+  - name: Tutorials
+    items:
+    - name: Office Scripts Basics
+      href: tutorials/excel-tutorial.md
+    - name: Integrate with Power Automate
+      href: tutorials/excel-power-automate-manual.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts
