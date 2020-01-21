@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial about the basics of Office Scripts, including reading data from and and writing data to a workbook.'
-ms.date: 01/08/2020
+ms.date: 01/21/2020
 localization_priority: Normal
 ---
 
@@ -194,7 +194,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 ## Modify the value of a cell
 
-Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access.
+Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
 1. Add the following code to the end of the script:
 
