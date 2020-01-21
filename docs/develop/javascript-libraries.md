@@ -7,15 +7,15 @@ localization_priority: Normal
 
 # Using built-in JavaScript libraries in Office Scripts
 
-JavaScript has several built-in objects any JavaScript code can use. The [TypeScript](../overview/code-editor-environment.md) of Office Scripts is a superset of JavaScript and also includes these objects. This article focuses on a few select objects and how they integrate with an Excel workbook through a script. Mozilla's [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) contains a complete list of these objects.
+JavaScript has several built-in objects any JavaScript code can use. The [TypeScript](../overview/code-editor-environment.md) of Office Scripts is a superset of JavaScript, so it also includes these objects. This article focuses on a few select objects and how they can be used by a script to integrate with your Excel workbook. Mozilla's [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) contains a complete list of these objects.
 
 ## Array
 
-The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object gives your script more tools to work with array types. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
+The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object gives your script functions to work with array types. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
 
-Ranges contain several two-dimensional arrays that map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before any cell in the array, for example `myRange.load("values")`.
+Ranges contain several two-dimensional arrays that directly map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Your script needs to load the related property before reading any cell in that array, for example `myRange.load("values")` (as well as `await context.sync();` to complete the `load` operation).
 
-The following script searches the range **A1** to **D4** for any number format containing a "$". The script sets the fill color in those cells to "yellow".
+The following script searches the **A1:D4** range for any number format containing a "$". The script sets the fill color in those cells to "yellow".
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -40,7 +40,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-Many Excel objects are contained in a collection. For example, all shapes in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). These `*Collection` objects all contain an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
+Many Excel objects are contained in a collection. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). These `*Collection` objects all contain an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
 
 The following script logs the type of every shape in the current worksheet.
 
@@ -118,6 +118,7 @@ async function main(context: Excel.RequestContext) {
 
   // Set the minimum values as the first value.
   let minimum = comparisonRange.values[0][0];
+
   // Iterate over each row looking for the smallest value.
   comparisonRange.values.forEach((rowItem, rowIndex) => {
     // Iterate over each column looking for the smallest value.
@@ -131,3 +132,8 @@ async function main(context: Excel.RequestContext) {
 }
 
 ```
+
+## See also
+
+- [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
+- [Office Scripts Code Editor environment](../overview/code-editor-environment.md)
