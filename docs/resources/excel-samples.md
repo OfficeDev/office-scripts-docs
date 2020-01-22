@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 01/10/2020
+ms.date: 01/21/2020
 localization_priority: Normal
 ---
 
@@ -40,6 +40,27 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
+### Work with dates
+
+This sample uses the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object to get the current date and time and then writes those values to two cells in the active worksheet.
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Get the cells at A1 and B1.
+  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
+  let timeRange = context.workbook.worksheets.getActiveWorksheet().getRange("B1");
+
+  // Get the current date and time with the JavaScript Date object.
+  let date = new Date(Date.now());
+
+  // Add the date string to A1.
+  dateRange.values = [[date.toLocaleDateString()]];
+  
+  // Add the time string to B1.
+  timeRange.values = [[date.toLocaleTimeString()]];
+}
+```
+
 ## Display data
 
 These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
@@ -59,7 +80,7 @@ async function main(context: Excel.RequestContext) {
   // Set the fill color to green for the top 10% of values in the range.
   let conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.topBottom);
   conditionalFormat.topBottom.format.fill.color = "green";
-  conditionalFormat.topBottom.rule = { 
+  conditionalFormat.topBottom.rule = {
     rank: 10, // The percentage threshold.
     type: Excel.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
   };

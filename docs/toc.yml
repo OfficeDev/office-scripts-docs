@@ -15,6 +15,8 @@
     href: develop/scripting-fundamentals.md
   - name: Concepts
     items:
+    - name: Built-in JavaScript objects
+      href: develop/javascript-objects.md
     - name: Code Editor Environment
       href: overview/code-editor-environment.md 
     - name: Differences between Office Scripts and Office Add-ins
