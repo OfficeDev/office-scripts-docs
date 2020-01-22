@@ -78,32 +78,38 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 5. Press **New step**.
 
-6. Select the **Standard** tab. Under **Actions**, select **Run script (preview)**.
+6. Select the **Standard** tab, then select **Excel Online (Business)**.
 
-7. Specify the following settings for the **Run script** connector:
+    ![The Power Automate option for Excel Online (Business).](../images/power-automate-tutorial-4.png)
+
+7. Under **Actions**, select **Run script (preview)**.
+
+    ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
+
+8. Specify the following settings for the **Run script** connector:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
     - **File**: MyWorkbook.xlsx
     - **Script**: Set date and time
 
-    ![The connector settings for running a script in Power Automate.](../images/power-automate-tutorial-4.png)
+    ![The connector settings for running a script in Power Automate.](../images/power-automate-tutorial-6.png)
 
-8. Press **Save**.
+9. Press **Save**.
 
-Your flow is now ready to be run through Power Automate.
+Your flow is now ready to be run through Power Automate. You can test it using the **Test** button in the flow editor or follow the remaining tutorial steps to run the flow from your flow collection.
 
 ## Run the script through Power Automate
 
 1. From the main Power Automate page, select **My flows**.
 
-    ![The My flows button in Power Automate.](../images/power-automate-tutorial-5.png)
+    ![The My flows button in Power Automate.](../images/power-automate-tutorial-7.png)
 
 2. Select **My tutorial flow** from the list of flows displayed in the **My flows** tab. This shows the details of the flow we previously created.
 
 3. Press **Run**.
 
-    ![The Run button in Power Automate.](../images/power-automate-tutorial-6.png)
+    ![The Run button in Power Automate.](../images/power-automate-tutorial-8.png)
 
 4. A task pane will appear for running the flow. If you are asked to **Sign in** to Excel Online, do so by pressing **Continue**.
 
@@ -112,6 +118,8 @@ Your flow is now ready to be run through Power Automate.
 6. Press **Done**. You should see the **Runs** section update accordingly.
 
 7. Refresh the page to see the results of the Power Automate. If it succeeded, go to the workbook to see the updated cells. If it failed, verify the flow's settings and run it a second time.
+
+    ![Power Automate output showing a successful flow run.](../images/power-automate-tutorial-9.png)
 
 ## Next steps
 
