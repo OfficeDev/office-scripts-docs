@@ -78,7 +78,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 5. Press **New step**.
 
-6. Select the **Custom** tab. Under **Actions**, select **Run script (preview)**.
+6. Select the **Standard** tab. Under **Actions**, select **Run script (preview)**.
 
 7. Specify the following settings for the **Run script** connector:
 
