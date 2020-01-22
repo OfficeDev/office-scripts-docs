@@ -113,7 +113,7 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 4. A task pane will appear for running the flow. If you are asked to **Sign in** to Excel Online, do so by pressing **Continue**.
 
-5. Press **Run flow**. This runs the flows, which runs the related Office Script.
+5. Press **Run flow**. This runs the flow, which runs the related Office Script.
 
 6. Press **Done**. You should see the **Runs** section update accordingly.
 
