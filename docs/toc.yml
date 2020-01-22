@@ -7,7 +7,7 @@
     href: overview/excel.md
   - name: Tutorials
     items:
-    - name: Office Scripts Basics
+    - name: Learn the basics of Office Scripts
       href: tutorials/excel-tutorial.md
     - name: Integrate with Power Automate
       href: tutorials/excel-power-automate-manual.md
