@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: 'Resources for learning Office Scripts in Excel on the web, including tutorials, conceptual articles, and code samples.'
-ms.date: 01/07/2020
+ms.date: 01/22/2020
 localization_priority: Priority
 ---
 
@@ -18,7 +18,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="images/index-landing-page/i_article.svg" alt="Overview" />
+                            <a href="overview/excel.md" target="_blank"><img src="images/index-landing-page/i_article.svg" alt="Overview" /></a>
                         </div>
                     </div>
                     <div class="cardText">
@@ -35,7 +35,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="images/index-landing-page/i_get-started.svg" alt="Getting started" />
+                            <a href="tutorials/excel-tutorial.md" target="_blank"><img src="images/index-landing-page/i_get-started.svg" alt="Getting started" /></a>
                         </div>
                     </div>
                     <div class="cardText">
@@ -52,7 +52,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="images/index-landing-page/i_code-blocks.svg" alt="Scripting fundamentals" />
+                            <a href="develop/scripting-fundamentals.md" target="_blank"><img src="images/index-landing-page/i_code-blocks.svg" alt="Scripting fundamentals" /></a>
                         </div>
                     </div>
                     <div class="cardText">
@@ -92,7 +92,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/javascript/api/excel?view=excel-js-online" target="_blank"><img src="images/index-landing-page/i_reference.svg" alt="Office Scripts API reference" /></a>
+                            <a href="/javascript/api/office-scripts/overview" target="_blank"><img src="images/index-landing-page/i_reference.svg" alt="Office Scripts API reference" /></a>
                         </div>
                     </div>
                     <div class="cardText">
