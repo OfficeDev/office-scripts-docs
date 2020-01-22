@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 01/07/2020
+ms.date: 01/21/2020
 localization_priority: Normal
 ---
 
@@ -203,6 +203,10 @@ comments.load("items/resolved"); // Load the `resolved` property from every comm
 await context.sync(); // Synchronize with the workbook to get the properties.
 ```
 
+> [!TIP]
+> To learn more about working with collections in Office Scripts, see the [Array section of the Using built-in JavaScript objects in Office Scripts](javascript-objects.md#array) article.
+
 ## See also
 
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
+- [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
