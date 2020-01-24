@@ -17,7 +17,7 @@ Before starting this tutorial, you'll need access to Office Scripts, which requi
 
 - [Excel on the web](https://www.office.com/launch/excel).
 - Ask your administrator to [enable Office Scripts for your organization](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf), which adds the **Automate** tab to the ribbon in Excel on the web.
-- [Preview access to Power Automate](https://preview.flow.microsoft.com).
+- [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
 > This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
@@ -64,7 +64,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to [Power Automate](https://preview.flow.microsoft.com).
+1. Sign in to the [Power Automate preview site](https://preview.flow.microsoft.com).
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
