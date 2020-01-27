@@ -158,4 +158,4 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
 ## Next steps
 
-The [Code Editor](https://aka.ms/office-scripting-overview) has more samples for you to explore as you learn Office Scripts. Visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the platform.
+Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel on the web](../resources/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
