@@ -9,6 +9,8 @@
     items:
     - name: Learn the basics of Office Scripts
       href: tutorials/excel-tutorial.md
+    - name: Read workbook data with a script
+      href: tutorials/excel-read-tutorial.md
     - name: Integrate with Power Automate
       href: tutorials/excel-power-automate-manual.md
   - name: Scripting fundamentals
