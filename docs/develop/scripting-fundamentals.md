@@ -130,7 +130,7 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 
 ## `main` function
 
-Every Office Script must contain a `main` function with the following signature, including the `Excel.RequestContext` type definition:
+Every Office Script must contain a `main` function with an `Excel.RequestContext` as the first parameter.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -139,6 +139,12 @@ async function main(context: Excel.RequestContext) {
 ```
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
+
+TODO: Finish
+
+### Additional input parameters
+
+Your script can take additional input. When using Power Automate, other components can pass returned information to your script. All script input is specified as additional parameters for the `main` function.
 
 ## Context
 
