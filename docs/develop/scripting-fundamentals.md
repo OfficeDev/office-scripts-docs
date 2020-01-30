@@ -140,11 +140,7 @@ async function main(context: Excel.RequestContext) {
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
 
-TODO: Finish
-
-### Additional input parameters
-
-Your script can take additional input. When using Power Automate, other components can pass returned information to your script. All script input is specified as additional parameters for the `main` function.
+When integrating with [Power Automate](https://flow.microsoft.com), you may need to add parameters and a return value to the `main` function. See [Integrate Office Scripts with Power Automate](power-automate-integration.md) for more information.
 
 ## Context
 
