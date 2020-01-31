@@ -13,6 +13,8 @@
       href: tutorials/excel-read-tutorial.md
     - name: Integrate with Power Automate
       href: tutorials/excel-power-automate-manual.md
+    - name: Automatically run Office Scripts with Power Automate
+      href: tutorials/excel-power-automate-trigger.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts

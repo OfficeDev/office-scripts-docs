@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts in Excel on the web with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
-ms.date: 01/21/2020
+ms.date: 01/31/2020
 localization_priority: Normal
 ---
 
@@ -125,4 +125,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Visit the [Power Automate Documentation](https://docs.microsoft.com/power-automate) to learn ways to automate your Office Scripts.
+Complete the [Integrate Office Scripts into automated Power Automate flows](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script.
