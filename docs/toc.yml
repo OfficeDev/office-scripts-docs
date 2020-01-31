@@ -5,8 +5,12 @@
   items:
   - name: Overview
     href: overview/excel.md
-  - name: Tutorial
-    href: tutorials/excel-tutorial.md
+  - name: Tutorials
+    items:
+    - name: Office Scripts basics
+      href: tutorials/excel-tutorial.md
+    - name: Read workbook data with a script
+      href: tutorials/excel-read-tutorial.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts
