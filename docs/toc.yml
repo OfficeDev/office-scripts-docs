@@ -11,7 +11,7 @@
       href: tutorials/excel-tutorial.md
     - name: Read workbook data with a script
       href: tutorials/excel-read-tutorial.md
-    - name: Basics of Power Automate for Office Scripts
+    - name: Start using scripts with Power Automate
       href: tutorials/excel-power-automate-manual.md
     - name: Automatically run scripts with Power Automate
       href: tutorials/excel-power-automate-trigger.md

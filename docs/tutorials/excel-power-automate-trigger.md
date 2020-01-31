@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Integrate Office Scripts into automated Power Automate flows (preview)
 
-This tutorial teaches you use an Office Script for Excel on the web in an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will be ran every time you receive an email. It will also record information from that email.
+This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will be ran every time you receive an email. It will also record information from that email in an Excel workbook.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before starting this tutorial, you'll need access to Office Scripts, which requi
 
 ## Prepare the workbook
 
-Power Automate can't use relative references like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names that Power Automate can reference.
+Power Automate can't use [relative references](../develop/power-automate-integration.md#absolute-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
 
 1. Create a new workbook named **MyWorkbook**.
 
@@ -32,7 +32,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 3. Select **New Script**.
 
-4. Run the following script to setup the workbook with consistent worksheet, table, and PivotTable names.
+4. Replace the existing code with the following script and press **Run**. This will setup the workbook with consistent worksheet, table, and PivotTable names.
 
     ```TypeScript
     async function main(context: Excel.RequestContext) {
@@ -64,7 +64,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 ## Create an Office Script for your automated workflow
 
-Let's create a script that logs information from an email. We want to know how which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with columns for **Date**, **Day of the week**, **Email address**, and **Subject**. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
+Let's create a script that logs information from an email. We want to know how which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
 
 1. From within the **Code Editor**, select **New Script**.
 
@@ -125,7 +125,7 @@ Let's create a script that logs information from an email. We want to know how w
     }
     ```
 
-5. The `subject` string will include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject in the table. Add the following code to the end of your script (before the closing `}`):
+5. The `subject` string will include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script (before the closing `}`):
 
     ```TypeScript
     // Remove the reply tag from the email subject to group emails on the same thread.
@@ -218,7 +218,7 @@ async function main(
 
     ![The Automated flow option in Power Automate.](../images/power-automate-params-tutorial-1.png)
 
-4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Then select **When a new email arrives** from the list of options under Choose your flow's trigger. You may need to search for the option using the search box. Finally, press **Create**.
+4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Then select **When a new email arrives** from the list of options under **Choose your flow's trigger**. You may need to search for the option using the search box. Finally, press **Create**.
 
     ![Part of the Build an automated flow window in Power Automate that shows the "new email arrives" option.](../images/power-automate-params-tutorial-2.png)
 

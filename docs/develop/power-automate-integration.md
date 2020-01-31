@@ -7,33 +7,13 @@ localization_priority: Normal
 
 # Integrate Office Scripts with Power Automate
 
-[Power Automate](https://flow.microsoft.com) integrates your script into a larger workflow. You can run scripts after receiving emails or push the results of a script from your workbook into Planner. To do this. the `main` function needs to be customized for your workflow's input and output needs.
-
-If you are new to Power Automate, we recommend visiting [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
-
-## Absolute references
-
-Power Automate runs your script in the chosen Excel workbook on your behalf. When this happens, the workbook can still be closed. Any API that relies on the user's current state, such as `WorksheetCollection.getActiveWorksheet`, will fail when ran through Power Automate. When designing your scripts, be sure to absolute references to worksheets and ranges.
-
-The following functions will throw and error and fail when called from a script in a Power Automate flow.
-
-- `Chart.activate`
-- `Range.select`
-- `Workbook.getActiveCell`
-- `Workbook.getActiveChart`
-- `Workbook.getActiveChartOrNullObject`
-- `Workbook.getActiveSlicer`
-- `Workbook.getActiveSlicerOrNullObject`
-- `Workbook.getSelectedRange`
-- `Workbook.getSelectedRanges`
-- `Worksheet.activate`
-- `WorksheetCollection.getActiveWorksheet`
+[Power Automate](https://flow.microsoft.com) integrates your script into a larger workflow. You can add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
 
 ## Script input
 
 All script input is specified as additional parameters for the `main` function. For example, if you wanted to have a script take a `string` representing a name as input, you would change the `main` signature to `async function main(context: Excel.RequestContext, name?: string)`.
 
-Input is provided in Power Automate either as static values, [expressions](https://docs.microsoft.com/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](https://docs.microsoft.com/connectors/).
+Input is provided through Power Automate as static values, [expressions](https://docs.microsoft.com/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](https://docs.microsoft.com/connectors/).
 
 When adding script parameters, consider the following allowances and restrictions.
 
@@ -68,6 +48,7 @@ When adding script parameters, consider the following allowances and restriction
 
     ```TypeScript
     async function main(context: Excel.RequestContext): Promise<{name: string, email: string}>
+    ```
 
 9. The optional modifier is allowed (for example, `async function main(context: Excel.RequestContext, Name?: string)`).
 
@@ -92,9 +73,27 @@ Scripts can return data from the workbook to be used as dynamic content in Power
 
 6. Implicit typing is supported, though it must follow the same rules as a defined type.
 
+## Absolute references
+
+Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `WorksheetCollection.getActiveWorksheet`, will fail when ran through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
+
+The following functions will throw an error and fail when called from a script in a Power Automate flow.
+
+- `Chart.activate`
+- `Range.select`
+- `Workbook.getActiveCell`
+- `Workbook.getActiveChart`
+- `Workbook.getActiveChartOrNullObject`
+- `Workbook.getActiveSlicer`
+- `Workbook.getActiveSlicerOrNullObject`
+- `Workbook.getSelectedRange`
+- `Workbook.getSelectedRanges`
+- `Worksheet.activate`
+- `WorksheetCollection.getActiveWorksheet`
+
 ## Example
 
-Our example flow is triggered whenever a GitHub issue is assigned to you. The issue is recorded in a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
+Our example flow is triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The issue is recorded in a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
 
 ![The example flow as shown in the Power Automate flow editor.](../images/power-automate-parameter-return-sample.png)
 
@@ -121,6 +120,7 @@ async function main(
 ```
 
 ## See also
+
 - [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md)
 - [Integrate Office Scripts into automated Power Automate flows](../tutorials/excel-power-automate-trigger.md)
 - [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
