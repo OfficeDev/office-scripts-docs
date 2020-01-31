@@ -25,6 +25,8 @@
       href: overview/code-editor-environment.md 
     - name: Differences between scripts and add-ins
       href: resources/add-ins-differences.md
+    - name: Integrate with Power Automate
+      href: develop/power-automate-integration.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
   - name: Troubleshooting

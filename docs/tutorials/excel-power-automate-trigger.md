@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Integrate Office Scripts into automated Power Automate flows (preview)
 
-This tutorial will teach you use an Office Script for Excel on the web in an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will be ran every time you receive an email. It will also record information from that email.
+This tutorial teaches you use an Office Script for Excel on the web in an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will be ran every time you receive an email. It will also record information from that email.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Before starting this tutorial, you'll need access to Office Scripts, which requi
 - [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
-> This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+> This tutorial assumes you have completed the [Run Office Scripts in Excel on the web with Power Automate](excel-power-automate-manual.md) tutorial.
 
 ## Prepare the workbook
 

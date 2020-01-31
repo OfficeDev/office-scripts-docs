@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Record, edit, and create Office Scripts in Excel on the web
 
-This tutorial will teach you the basics of recording, editing, and writing an Office Script for Excel on the web.
+This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web.
 
 ## Prerequisites
 

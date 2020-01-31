@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Run Office Scripts in Excel on the web with Power Automate (preview)
 
-This tutorial will teach you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
+This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
 
 ## Prerequisites
 

@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Read workbook data with Office Scripts in Excel on the web
 
-This tutorial will teach you how to read data from a workbook with an Office Script for Excel on the web. You'll then edit the data you read and put it back in the workbook.
+This tutorial teaches you how to read data from a workbook with an Office Script for Excel on the web. You'll then edit the data you read and put it back in the workbook.
 
 > [!TIP]
 > If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
