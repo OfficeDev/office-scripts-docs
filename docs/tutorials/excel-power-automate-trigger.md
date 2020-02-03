@@ -1,22 +1,17 @@
 ---
-title: 'Integrate Office Scripts into automated Power Automate flows'
+title: 'Automatically run scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts for Excel on the web using automatic external triggers, such as receiving mail through Outlook.'
 ms.date: 01/31/2020
 localization_priority: Normal
 ---
 
-# Integrate Office Scripts into automated Power Automate flows (preview)
+# Automatically run scripts with Power Automate (preview)
 
-This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will be ran every time you receive an email. It will also record information from that email in an Excel workbook.
+This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook.
 
 ## Prerequisites
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
-Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
-
-- [Excel on the web](https://www.office.com/launch/excel).
-- Ask your administrator to [enable Office Scripts for your organization](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf), which adds the **Automate** tab to the ribbon in Excel on the web.
+[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
 - [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
@@ -24,7 +19,7 @@ Before starting this tutorial, you'll need access to Office Scripts, which requi
 
 ## Prepare the workbook
 
-Power Automate can't use [relative references](../develop/power-automate-integration.md#absolute-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
+Power Automate can't use [relative references](../develop/power-automate-integration.md#avoid-using-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
 
 1. Create a new workbook named **MyWorkbook**.
 
@@ -68,19 +63,19 @@ Let's create a script that logs information from an email. We want to know how w
 
 1. From within the **Code Editor**, select **New Script**.
 
-2. We need to get some information from the email. That will be provided as dynamic content in the flow later in the tutorial. Our script needs to accept that input through parameters in `main`. Replace the default script with the following script:
+2. The flow that we'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script:
 
     ```TypeScript
     async function main(
       context: Excel.RequestContext,
-      from?: string,
-      dateReceived?: string,
-      subject?: string): Promise<void> {
+      from: string,
+      dateReceived: string,
+      subject: string): Promise<void> {
 
     }
     ```
 
-3. The script needs access to the workbook's table and PivotTable. Add the following code to the body of the script, after the `{`:
+3. The script needs access to the workbook's table and PivotTable. Add the following code to the body of the script, after the opening `{`:
 
     ```TypeScript
     // Get the email table.
@@ -92,7 +87,7 @@ Let's create a script that logs information from an email. We want to know how w
     let pivotTable = pivotTableWorksheet.pivotTables.getItem("SubjectPivot");
     ```
 
-4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script (before the closing `}`):
+4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
     // Parse the received date string.
@@ -125,7 +120,7 @@ Let's create a script that logs information from an email. We want to know how w
     }
     ```
 
-5. The `subject` string will include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script (before the closing `}`):
+5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
     // Remove the reply tag from the email subject to group emails on the same thread.
@@ -133,14 +128,14 @@ Let's create a script that logs information from an email. We want to know how w
     subjectText = subjectText.replace("RE: ", "");
     ```
 
-6. Now that the email data has been formatted to our liking, let's add a row to the email table. Add the following code to the end of your script (before the closing `}`):
+6. Now that the email data has been formatted to our liking, let's add a row to the email table. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
     // Add the parsed text to the table.
     table.rows.add(-1, [[dateReceived, dayText, from, subjectText]]);
     ```
 
-7. Finally, let's make sure the PivotTable is refreshed. Add the following code to the end of your script (before the closing `}`):
+7. Finally, let's make sure the PivotTable is refreshed. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
     // Refresh the PivotTable to include the new row.
@@ -240,7 +235,7 @@ async function main(
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
     - **File**: MyWorkbook.xlsx
-    - **Script**: Set date and time
+    - **Script**: Record Email
     - **from**: From *(dynamic content from Outlook)*
     - **dateReceived**: Received Time *(dynamic content from Outlook)*
     - **subject**: Subject *(dynamic content from Outlook)*
@@ -251,9 +246,9 @@ async function main(
 
 9. Press **Save**.
 
-Your flow is now ready. It will start any time you receive an email through Outlook.
+Your flow is now enabled. It will automatically run your script each time you receive an email through Outlook.
 
-## View the script in Power Automate
+## Manage the script in Power Automate
 
 1. From the main Power Automate page, select **My flows**.
 
@@ -261,7 +256,7 @@ Your flow is now ready. It will start any time you receive an email through Outl
 
 2. Select your flow. Here you can see the run history. You can refresh the page or press the refresh **All runs** button to update the history. The flow will trigger shortly after an email is received. Test the flow by sending yourself mail.
 
-After a script has successfully run, you should see the workbook's table and PivotTable update.
+When the flow is triggered and successfully runs your script, you should see the workbook's table and PivotTable update.
 
 ![The email table after the flow has run a couple times.](../images/power-automate-params-tutorial-4.png)
 

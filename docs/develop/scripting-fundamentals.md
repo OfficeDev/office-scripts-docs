@@ -130,7 +130,7 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 
 ## `main` function
 
-Every Office Script must contain a `main` function with an `Excel.RequestContext` as the first parameter.
+Every Office Script must contain a `main` function with an `Excel.RequestContext` object as the first parameter.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {

@@ -7,15 +7,15 @@ localization_priority: Normal
 
 # Integrate Office Scripts with Power Automate
 
-[Power Automate](https://flow.microsoft.com) integrates your script into a larger workflow. You can add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
+[Power Automate](https://flow.microsoft.com) integrates your script into a larger workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
 
-## Script input
+## Passing data from Power Automate into a script
 
-All script input is specified as additional parameters for the `main` function. For example, if you wanted to have a script take a `string` representing a name as input, you would change the `main` signature to `async function main(context: Excel.RequestContext, name?: string)`.
+All script input is specified as additional parameters for the `main` function. For example, if you wanted a script to accept a `string` that represents a name as input, you would change the `main` signature to `async function main(context: Excel.RequestContext, name?: string)`.
 
-Input is provided through Power Automate as static values, [expressions](https://docs.microsoft.com/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](https://docs.microsoft.com/connectors/).
+When you're configuring a flow in Power Automate, you can specify script input as static values, [expressions](https://docs.microsoft.com/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](https://docs.microsoft.com/connectors/).
 
-When adding script parameters, consider the following allowances and restrictions.
+When adding input parameters to a script's `main` function, consider the following allowances and restrictions.
 
 1. The first parameter must be of type `Excel.RequestContext`. Its parameter name does not matter.
 
@@ -29,7 +29,7 @@ When adding script parameters, consider the following allowances and restriction
 
 6. Union types are allowed if they are a union of literals belonging to a single type (`string`, `number`, or `boolean`). Unions of a supported type with undefined are also supported.
 
-7. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example showed nested objects that are supported as parameter types:
+7. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
 
     ```TypeScript
     // Office Scripts can return an Employee object because Position only contains strings and numbers.
@@ -50,16 +50,16 @@ When adding script parameters, consider the following allowances and restriction
     async function main(context: Excel.RequestContext): Promise<{name: string, email: string}>
     ```
 
-9. The optional modifier is allowed (for example, `async function main(context: Excel.RequestContext, Name?: string)`).
+9. Optional parameters are allowed and can be denoted as such by using the optional modifier `?` (for example, `async function main(context: Excel.RequestContext, Name?: string)`).
 
-10. Default parameters are allowed (for example `async function main(context: Excel.RequestContext, Name: string = 'Jane Doe')`.
+10. Default parameter values are allowed (for example `async function main(context: Excel.RequestContext, Name: string = 'Jane Doe')`.
 
 > [!IMPORTANT]
-> Currently, scripts must return a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise) for Power Automate to allow either output from the script or input into the script. If your script does not return anything, but needs input parameters, add `: Promise<void>` to the end of your `main` function signature (before the first `{`) to enable data flow through your script in Power Automate. We working to allow scripts that take input parameters and do not return anything.
+> Currently, scripts must return a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise) for Power Automate to allow either output from the script or input into the script. If your script does not return anything, but needs input parameters, add `: Promise<void>` to the end of your `main` function signature (`async function main(context: Excel.RequestContext, myParameter?: string): Promise<void>`) to enable data flow through your script in Power Automate. We working to allow scripts that take input parameters and do not return anything.
 
-## Script output
+## Returning data from a script back to Power Automate
 
-Scripts can return data from the workbook to be used as dynamic content in Power Automate. As with input parameters, there are some restrictions Power Automate places on the return type.
+Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, there are some restrictions Power Automate places on the return type.
 
 1. A [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise)-wrapped type is required (such as `Promise<string>`). This is because `main` is an asynchronous (`async`) function.
 
@@ -73,7 +73,7 @@ Scripts can return data from the workbook to be used as dynamic content in Power
 
 6. Implicit typing is supported, though it must follow the same rules as a defined type.
 
-## Absolute references
+## Avoid using relative references
 
 Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `WorksheetCollection.getActiveWorksheet`, will fail when ran through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
 
@@ -93,11 +93,11 @@ The following functions will throw an error and fail when called from a script i
 
 ## Example
 
-Our example flow is triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The issue is recorded in a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
+The following screenshot shows a Power Automate flow that's triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The flow runs a script that adds the issue to a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
 
 ![The example flow as shown in the Power Automate flow editor.](../images/power-automate-parameter-return-sample.png)
 
-The script takes in the issue ID and issue title as parameters. It returns the number of rows in the issue table.
+The `main` function of the script specifies the issue ID and issue title as input parameters, and the script returns the number of rows in the issue table.
 
 ```TypeScript
 async function main(
@@ -122,6 +122,6 @@ async function main(
 ## See also
 
 - [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md)
-- [Integrate Office Scripts into automated Power Automate flows](../tutorials/excel-power-automate-trigger.md)
+- [Automatically run scripts with Power Automate](../tutorials/excel-power-automate-trigger.md)
 - [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
-- [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started)
+- [Get started with Power Automate](/power-automate/getting-started)
