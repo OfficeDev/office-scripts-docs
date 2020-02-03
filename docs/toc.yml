@@ -11,8 +11,10 @@
       href: tutorials/excel-tutorial.md
     - name: Read workbook data with a script
       href: tutorials/excel-read-tutorial.md
-    - name: Integrate with Power Automate
+    - name: Start using scripts with Power Automate
       href: tutorials/excel-power-automate-manual.md
+    - name: Automatically run scripts with Power Automate
+      href: tutorials/excel-power-automate-trigger.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts
@@ -21,8 +23,10 @@
       href: develop/javascript-objects.md
     - name: Code Editor Environment
       href: overview/code-editor-environment.md 
-    - name: Differences between Office Scripts and Office Add-ins
+    - name: Differences between scripts and add-ins
       href: resources/add-ins-differences.md
+    - name: Integrate with Power Automate
+      href: develop/power-automate-integration.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
   - name: Troubleshooting

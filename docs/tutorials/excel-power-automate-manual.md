@@ -1,22 +1,18 @@
 ---
 title: 'Run Office Scripts in Excel on the web with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
-ms.date: 01/21/2020
+ms.date: 01/31/2020
 localization_priority: Normal
 ---
 
 # Run Office Scripts in Excel on the web with Power Automate (preview)
 
-This tutorial will teach you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
+This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
 
 ## Prerequisites
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
+[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
 
-Before starting this tutorial, you'll need access to Office Scripts, which requires the following:
-
-- [Excel on the web](https://www.office.com/launch/excel).
-- Ask your administrator to [enable Office Scripts for your organization](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf), which adds the **Automate** tab to the ribbon in Excel on the web.
 - [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
@@ -125,4 +121,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Visit the [Power Automate Documentation](https://docs.microsoft.com/power-automate) to learn ways to automate your Office Scripts.
+Complete the [Automatically run scripts with Power Automate](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script.
