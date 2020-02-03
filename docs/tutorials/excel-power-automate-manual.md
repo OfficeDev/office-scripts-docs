@@ -12,6 +12,7 @@ This tutorial teaches you how to run an Office Script for Excel on the web throu
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
+
 - [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
