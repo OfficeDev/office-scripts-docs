@@ -2,7 +2,7 @@
 title: 'Run Office Scripts in Excel on the web with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
 ms.date: 01/31/2020
-localization_priority: Normal
+localization_priority: Priority
 ---
 
 # Run Office Scripts in Excel on the web with Power Automate (preview)
