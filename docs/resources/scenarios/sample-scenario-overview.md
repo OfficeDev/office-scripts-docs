@@ -14,3 +14,7 @@ Office Scripts help automate parts of your daily routine. These day-to-day tasks
 ### [Analyze web downloads](analyze-web-downloads.md)
 
 This scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables.
+
+## See also
+
+- [Sample scripts for Office Scripts in Excel on the web](../excel-samples.md)
