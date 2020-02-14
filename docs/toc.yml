@@ -34,4 +34,4 @@
       - name: Overview
         href: resources/scenarios/sample-scenario-overview.md
       - name: Internet Traffic Analysis
-        href: resources/scenarios/internet-traffic-analysis.md
+        href: resources/scenarios/analyze-web-downloads.md
