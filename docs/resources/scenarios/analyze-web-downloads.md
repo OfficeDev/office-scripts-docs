@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Office Scripts sample scenario: Analyze web downloads
 
-Is this scenario, you are tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
+In this scenario, you are tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
 
 Your colleagues upload the raw data to your workbook. Each week has its own worksheet. There is also the **Summary** worksheet with a table and chart that show week-over-week trends.
 
