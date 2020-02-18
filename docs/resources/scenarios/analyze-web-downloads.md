@@ -28,7 +28,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
 
 ## Setup instructions
 
-1. Download [analyze-web-downloads.xlsx] to your OneDrive.
+1. Download [analyze-web-downloads.xlsx](analyze-web-downloads.xlsx) to your OneDrive.
 
 2. Open the workbook with Excel for the web.
 
