@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Internet Traffic Analysis'
 description: 'A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.'
-ms.date: 02/13/2020
+ms.date: 02/18/2020
 localization_priority: Normal
 ---
 
@@ -19,6 +19,12 @@ The script you've developed in this scenario runs on one of these weekly workshe
 - Subfunctions in scripts
 - Conditional formatting
 - Tables
+
+## Demo video
+
+This sample was demoed as part of the Office Add-ins developer community call for February 2020.
+
+[!VIDEO https://www.youtube.com/embed/eRJ71vQ8BaU?start=318]
 
 ## Setup instructions
 
