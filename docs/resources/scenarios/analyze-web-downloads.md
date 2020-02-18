@@ -24,7 +24,7 @@ The script you've developed in this scenario runs on one of these weekly workshe
 
 This sample was demoed as part of the Office Add-ins developer community call for February 2020.
 
-[!VIDEO https://www.youtube.com/embed/eRJ71vQ8BaU?start=318]
+> [!VIDEO https://www.youtube.com/embed/eRJ71vQ8BaU?start=318]
 
 ## Setup instructions
 
