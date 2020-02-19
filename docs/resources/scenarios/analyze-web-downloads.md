@@ -9,9 +9,9 @@ localization_priority: Normal
 
 In this scenario, you are tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
 
-Your colleagues upload the raw data to your workbook. Each week has its own worksheet. There is also the **Summary** worksheet with a table and chart that show week-over-week trends.
+Your colleagues upload the raw data to your workbook. Each week's set of data has its own worksheet. There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.
 
-The script you've developed in this scenario runs on one of these weekly worksheets. It parses each IP address associated with a download and determines whether or not it came from the US. The answer is inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting is applied to those cells. The IP address location results are totaled on the worksheet and copied to the summary table.
+The script you've developed in this scenario helps analyze one of these weekly worksheets. It parses each IP address associated with a download and determines whether or not it came from the US. The answer is inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting is applied to those cells. The IP address location results are totaled on the worksheet and copied to the summary table.
 
 ## Scripting skills covered
 

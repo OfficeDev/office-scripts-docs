@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Sample Scenarios for Office Scripts
 
-Office Scripts help automate parts of your daily routine. These day-to-day tasks often exist in unique ecosystems, wherein the Excel workbooks are set up in particular ways. Our scenarios here mimic these real-world use-cases. They include both the Office Scripts and the workbooks, so you can see the scenario from end to end.
+Office Scripts help automate parts of your daily routine. These day-to-day tasks often exist in unique ecosystems, with Excel workbooks that are set up in particular ways. These larger scenario samples demonstrate such real-world use-cases. They include both the Office Scripts and the workbooks, so you can see the scenario from end to end.
 
 ## Scenarios
 
