@@ -1,5 +1,5 @@
 ---
-title: 'Office Scripts sample scenario: Internet Traffic Analysis'
+title: 'Office Scripts sample scenario: Analyze web downloads'
 description: 'A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.'
 ms.date: 02/18/2020
 localization_priority: Normal
@@ -7,11 +7,11 @@ localization_priority: Normal
 
 # Office Scripts sample scenario: Analyze web downloads
 
-In this scenario, you are tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
+In this scenario, you're tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
 
 Your colleagues upload the raw data to your workbook. Each week's set of data has its own worksheet. There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.
 
-The script you've developed in this scenario helps analyze one of these weekly worksheets. It parses each IP address associated with a download and determines whether or not it came from the US. The answer is inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting is applied to those cells. The IP address location results are totaled on the worksheet and copied to the summary table.
+In this scenario, you'll develop a script that analyzes weekly downloads data in the active worksheet. It will parse the IP address associated with each download and determine whether or not it came from the US. The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells. The IP address location results will be totaled on the worksheet and copied to the summary table.
 
 ## Scripting skills covered
 
@@ -48,7 +48,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
       const summaryWorksheet = context.workbook.worksheets.getItem("Summary");
       const summaryTable = context.workbook.tables.getItem("Table1");
 
-      // Get the range that will contain TRUE/FALSE if the IP address is from the US.
+      // Get the range that will contain TRUE/FALSE if the IP address is from the United States (US).
       const isUSColumn = logRange
         .getLastColumn()
         .getOffsetRange(0, 1)
@@ -91,7 +91,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
       // Get the calculated summary data.
       const summaryRange = context.workbook.worksheets
         .getActiveWorksheet()
-        .getRange("H2:K2")
+        .getRange("J2:M2")
         .load("values");
       await context.sync();
 
@@ -139,10 +139,10 @@ This sample was demoed as part of the Office Add-ins developer community call fo
         ];
         let summaryHeaderRow = context.workbook.worksheets
           .getActiveWorksheet()
-          .getRange("H1:K1");
+          .getRange("J1:M1");
         let summaryContentRow = context.workbook.worksheets
           .getActiveWorksheet()
-          .getRange("H2:K2");
+          .getRange("J2:M2");
         summaryHeaderRow.values = summaryHeader;
         summaryContentRow.values = summaryContent;
         let formats = [[".000", ".000"]];
@@ -182,7 +182,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
 
 ## Running the script
 
-Run the **Analyze Web Downloads** script on one of the **Week\*\*** worksheets. This will apply the conditional formatting and location labelling on the current sheet. It also updates the **Summary** worksheet.
+Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script. The script will apply the conditional formatting and location labelling on the current sheet. It will also update the **Summary** worksheet.
 
 ### Before running the script
 
