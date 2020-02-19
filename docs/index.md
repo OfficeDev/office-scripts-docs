@@ -76,11 +76,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Enable Office Scripts" /></a>
+                            <a href="admin/m365-settings.md" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Enable Office Scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf" target="_blank"><h3>Enable Office Scripts</h3></a>
+                        <a href="admin/m365-settings.md" target="_blank"><h3>Enable Office Scripts</h3></a>
                     </div>
                 </div>
             </div>
