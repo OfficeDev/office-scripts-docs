@@ -27,3 +27,5 @@
     href: testing/troubleshooting.md
   - name: Samples
     href: resources/excel-samples.md
+  - name: For Office admins
+    href: admin/m365-settings.md
