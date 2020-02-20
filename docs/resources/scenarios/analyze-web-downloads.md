@@ -11,7 +11,7 @@ In this scenario, you're tasked with analyzing download reports from your compan
 
 Your colleagues upload the raw data to your workbook. Each week's set of data has its own worksheet. There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.
 
-In this scenario, you'll develop a script that analyzes weekly downloads data in the active worksheet. It will parse the IP address associated with each download and determine whether or not it came from the US. The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells. The IP address location results will be totaled on the worksheet and copied to the summary table.
+You'll develop a script that analyzes weekly downloads data in the active worksheet. It will parse the IP address associated with each download and determine whether or not it came from the US. The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells. The IP address location results will be totaled on the worksheet and copied to the summary table.
 
 ## Scripting skills covered
 
@@ -41,20 +41,20 @@ This sample was demoed as part of the Office Add-ins developer community call fo
         let currentWorksheet = context.workbook.worksheets
           .getActiveWorksheet();
         // Get the values of the active range of the active worksheet.
-        const logRange = currentWorksheet.getUsedRange().load("values");
+        let logRange = currentWorksheet.getUsedRange().load("values");
 
         // Get the Summary worksheet and table.
-        const summaryWorksheet = context.workbook.worksheets.getItem("Summary");
-        const summaryTable = context.workbook.tables.getItem("Table1");
+        let summaryWorksheet = context.workbook.worksheets.getItem("Summary");
+        let summaryTable = context.workbook.tables.getItem("Table1");
 
         // Get the range that will contain TRUE/FALSE if the IP address is from the United States (US).
-        const isUSColumn = logRange
+        let isUSColumn = logRange
           .getLastColumn()
           .getOffsetRange(0, 1)
           .load("address");
 
         // Get the values of all the US IP addresses.
-        const ipRange = context.workbook.worksheets
+        let ipRange = context.workbook.worksheets
           .getItem("USIPAddresses")
           .getUsedRange()
           .load("values");
@@ -87,7 +87,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
         currentWorksheet.getUsedRange().format.autofitColumns();
 
         // Get the calculated summary data.
-        const summaryRange = currentWorksheet.getRange("J2:M2").load("values");
+        let summaryRange = currentWorksheet.getRange("J2:M2").load("values");
         await context.sync();
 
         // Add the corresponding row to the summary table.

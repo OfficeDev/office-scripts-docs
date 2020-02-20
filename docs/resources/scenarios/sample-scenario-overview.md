@@ -1,7 +1,7 @@
 ---
 title: 'Sample scenarios for Office Scripts'
 description: 'An explanation for the larger, scenario-driven samples for Office Scripts in Excel on the web.'
-ms.date: 02/19/2020
+ms.date: 02/20/2020
 localization_priority: Normal
 ---
 
@@ -14,6 +14,10 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 ### Analyze web downloads
 
 The [Analyze web downloads](analyze-web-downloads.md) scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables.
+
+### Grade calculator
+
+The [Grade calculator](grade-calculator.md) scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions.
 
 ## See also
 
