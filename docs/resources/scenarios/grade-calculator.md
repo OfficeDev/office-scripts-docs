@@ -119,4 +119,4 @@ Run the **Grade Calculator** script on the only worksheet. The script will total
 
 ### After running the script
 
-![A worksheet that shows the student score data with invalid cells in red totals for valid student rows.](../../images/scenario-grade=calculator-after.png)
+![A worksheet that shows the student score data with invalid cells in red totals for valid student rows.](../../images/scenario-grade-calculator-after.png)
