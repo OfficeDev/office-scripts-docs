@@ -11,7 +11,7 @@ Office Scripts in Excel on the web let you automate your day-to-day tasks. You c
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
+> [!VIDEO A video describing the benefits of automation through Office Scripts. https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
