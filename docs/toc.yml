@@ -17,7 +17,7 @@
     items:
     - name: Built-in JavaScript objects
       href: develop/javascript-objects.md
-    - name: Code Editor Environment
+    - name: Code Editor environment
       href: overview/code-editor-environment.md 
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
@@ -26,4 +26,14 @@
   - name: Troubleshooting
     href: testing/troubleshooting.md
   - name: Samples
-    href: resources/excel-samples.md
+    items:
+    - name: Sample scripts
+      href: resources/excel-samples.md
+    - name: Scenarios
+      items:
+      - name: Overview
+        href: resources/scenarios/sample-scenario-overview.md
+      - name: Analyze web downloads
+        href: resources/scenarios/analyze-web-downloads.md
+      - name: Grade calculator
+        href: resources/scenarios/grade-calculator.md
