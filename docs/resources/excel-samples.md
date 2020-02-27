@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 01/21/2020
+ms.date: 02/19/2020
 localization_priority: Normal
 ---
 
@@ -131,6 +131,10 @@ async function main(context: Excel.RequestContext) {
   });
 }
 ```
+
+## Scenario samples
+
+For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](scenarios/sample-scenario-overview.md).
 
 ## Suggest new samples
 
