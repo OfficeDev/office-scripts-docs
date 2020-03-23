@@ -1,14 +1,14 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 03/20/2020
+ms.date: 03/23/2020
 localization_priority: Normal
 ---
 
 # Differences between Office Scripts and VBA macros
 
 Office Scripts and VBA macros have a lot in common. They both allow users to automate solutions through an easy-to-use action recorder and allow edits of those recordings. Both frameworks are designed to empower people who may not consider themselves programmers to create small programs in Excel.
-The fundamental difference is that Office Scripts are designed for Excel on the web and VBA macros are designed for desktop solutions.
+The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed with cross-platform support and security as the guiding principles. Currently, Office Scripts, are only supported for Excel on the web.
 
 ![A four-quadrant diagram showing the areas of focus for different Office extensibility solutions. Both Office Scripts and VBA macros are designed to help end-users create solution, but Office Scripts are built for the web and collaboration (whereas VBA is for the desktop).)](../images/office-programmability-diagram.png)
 
@@ -16,7 +16,7 @@ This article describes the main differences between VBA macros (as well as VBA i
 
 ## Platform and ecosystem
 
-VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop. This let it integrate with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
+VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop. This lets it integrate with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
 
 Office Scripts use a universal runtime or JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
 
