@@ -9,7 +9,7 @@ localization_priority: Normal
 
 Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through the `Excel` namespace of the Office JavaScript API. However, Office Scripts are more limited in their scope.
 
-![A four-quadrant diagram showing the areas of focus for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on web and collaboration, but Office Scripts are more end-user approachable (whereas Office Web Add-ins are targeted at a professional developer audience).)](../images/office-programmability-diagram.png)
+![A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers).)](../images/office-programmability-diagram.png)
 
 Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins persist while their task panes are open. This means the add-ins can maintain state during a session, whereas Office Scripts do not maintain an internal state between runs. If you find that your Excel extension needs to exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
 
