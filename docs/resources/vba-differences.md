@@ -8,7 +8,7 @@ localization_priority: Normal
 # Differences between Office Scripts and VBA macros
 
 Office Scripts and VBA macros have a lot in common. They both allow users to automate solutions through an easy-to-use action recorder and allow edits of those recordings. Both frameworks are designed to empower people who may not consider themselves programmers to create small programs in Excel.
-The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed with cross-platform support and security as the guiding principles. Currently, Office Scripts, are only supported for Excel on the web.
+The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed with cross-platform support and security as the guiding principles. Currently, Office Scripts are only supported in Excel on the web.
 
 ![A four-quadrant diagram showing the areas of focus for different Office extensibility solutions. Both Office Scripts and VBA macros are designed to help end-users create solution, but Office Scripts are built for the web and collaboration (whereas VBA is for the desktop).)](../images/office-programmability-diagram.png)
 
