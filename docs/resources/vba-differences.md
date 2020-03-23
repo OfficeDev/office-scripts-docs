@@ -32,7 +32,7 @@ Currently, VBA offers a more complete coverage of Excel features, particularly t
 
 ## Power Automate
 
-Office Scripts can be run through Power Automate. Your workbook can be updated though scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's desktop, Mac, or web client.
+Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's desktop, Mac, or web client.
 
 VBA has no integration with Power Automate. All supported VBA scenarios involved a user attending to the macro's execution.
 
