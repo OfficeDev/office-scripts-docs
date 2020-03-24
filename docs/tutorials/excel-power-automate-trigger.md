@@ -1,7 +1,7 @@
 ---
 title: 'Automatically run scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts for Excel on the web using automatic external triggers, such as receiving mail through Outlook.'
-ms.date: 01/31/2020
+ms.date: 03/24/2020
 localization_priority: Priority
 ---
 

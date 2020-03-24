@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 12/12/2019
+ms.date: 03/23/2020
 localization_priority: Normal
 ---
 
@@ -9,7 +9,9 @@ localization_priority: Normal
 
 Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through the `Excel` namespace of the Office JavaScript API. However, Office Scripts are more limited in their scope.
 
-Office Scripts run to completion with a manual button press, whereas Office Add-ins rely on user interaction and persist while the workbook is in use. If you find that your Excel extension needs to exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
+![A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers).)](../images/office-programmability-diagram.png)
+
+Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins persist while their task panes are open. This means the add-ins can maintain state during a session, whereas Office Scripts do not maintain an internal state between runs. If you find that your Excel extension needs to exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
 
 The rest of this article describes on the main differences between Office Add-ins and Office Scripts.
 
@@ -34,5 +36,6 @@ Office Scripts cannot use [Common APIs](/javascript/api/office). If you need aut
 ## See also
 
 - [Office Scripts in Excel on the web](../overview/excel.md)
+- [Differences between Office Scripts and VBA macros](vba-differences.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Build an Excel task pane add-in](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)

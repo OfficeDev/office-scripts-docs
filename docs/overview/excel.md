@@ -1,15 +1,17 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 01/31/2020
-localization_priority: Normal
+ms.date: 02/24/2020
+localization_priority: Priority
 ---
 
 # Office Scripts in Excel on the web (preview)
 
 Office Scripts in Excel on the web let you automate your day-to-day tasks. You can record your Excel actions with the Action Recorder, which creates a script. You can also create and edit scripts with the Code Editor. This series of documents teaches you how to use these tools. You'll be introduced to the Action Recorder and see how to record your frequent Excel actions. You'll also learn how to make or update your own scripts with the Code Editor.
 
-![A gif showing a script being recorded and replayed on different worksheets](../images/teaser-animation.gif)
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
@@ -17,7 +19,7 @@ Office Scripts in Excel on the web let you automate your day-to-day tasks. You c
 
 Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, an Office Script can help you by reducing your whole workflow to a single button press.
 
-As an example, say you start your work day by opening a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formatting a table, adding formulas, and creating a PivotTable in a new worksheet. Those actions you repeat daily can be recorded once with the Action Recorder. For then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts automate your common tasks so you and your workplace can be more efficient and productive.
+As an example, say you start your work day by opening a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formatting a table, adding formulas, and creating a PivotTable in a new worksheet. Those actions you repeat daily can be recorded once with the Action Recorder. From then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts automate your common tasks so you and your workplace can be more efficient and productive.
 
 ## Action Recorder
 
