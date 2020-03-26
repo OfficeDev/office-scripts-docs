@@ -9,8 +9,8 @@ localization_priority: Normal
 
 [Power Automate](https://flow.microsoft.com) integrates your script into a larger workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
 
-> [!NOTE]
-> Currently, Office Scripts can't be run from a [shared flow](https://docs.microsoft.com/power-automate/share-buttons). Scripts can only be run by the user who created the script, even through Power Automate.
+> [!IMPORTANT]
+> Currently, you can't run Office Scripts from a [shared flow](/power-automate/share-buttons). Only the user who created a script can run it, even through Power Automate.
 
 ## Passing data from Power Automate into a script
 
