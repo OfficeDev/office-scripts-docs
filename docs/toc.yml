@@ -19,6 +19,8 @@
       href: develop/javascript-objects.md
     - name: Code Editor environment
       href: overview/code-editor-environment.md 
+    - name: Differences between Office Scripts and VBA Macros
+      href: resources/vba-differences.md
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
     - name: Undo the effects of an Office Script
