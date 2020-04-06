@@ -42,7 +42,9 @@ async function main(context: Excel.RequestContext) {
 
 ### Work with dates
 
-These samples use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object. The first sample gets the current date and time and then writes those values to two cells in the active worksheet.
+The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.
+
+The following sample gets the current date and time and then writes those values to two cells in the active worksheet.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
