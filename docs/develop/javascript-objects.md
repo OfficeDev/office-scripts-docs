@@ -1,7 +1,7 @@
 ---
 title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 04/06/2020
+ms.date: 04/08/2020
 localization_priority: Normal
 ---
 
@@ -141,6 +141,10 @@ async function main(context: Excel.RequestContext) {
 }
 
 ```
+
+## Use of external JavaScript libraries is not supported
+
+Office Scripts don't support the use of external, third-party libraries. Your script can only use the built-in JavaScript objects and the Office Scripts APIs.
 
 ## See also
 
