@@ -142,9 +142,9 @@ async function main(context: Excel.RequestContext) {
 
 ```
 
-## Using external JavaScript libraries
+## Use of external JavaScript libraries is not supported
 
-Office Script don't support the use of external, third-party libraries. Your script can only use the built-in JavaScript objects and the Office Scripts APIs.
+Office Scripts don't support the use of external, third-party libraries. Your script can only use the built-in JavaScript objects and the Office Scripts APIs.
 
 ## See also
 
