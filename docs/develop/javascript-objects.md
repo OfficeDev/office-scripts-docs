@@ -1,7 +1,7 @@
 ---
 title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 01/21/2020
+ms.date: 04/06/2020
 localization_priority: Normal
 ---
 
@@ -107,6 +107,8 @@ async function main(context: Excel.RequestContext) {
   range.values = [[date.toLocaleDateString()]];
 }
 ```
+
+The [Work with dates](../resources/excel-samples.md#work-with-dates) section of the samples has more Date-related scripts.
 
 ## Math
 
