@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 01/27/2020
+ms.date: 04/13/2020
 localization_priority: Priority
 ---
 
@@ -24,7 +24,7 @@ To understand the Excel APIs, you must understand how the components of a workbo
 
 ### Ranges
 
-A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in row **B** and column **3** or **C2:F4** for the cells from rows **C** through **F** and columns **2** through **4**) to define ranges.
+A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
 
 Ranges have three core properties: `values`, `formulas`, and `format`. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells.
 
