@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 04/06/2020
+ms.date: 04/17/2020
 localization_priority: Normal
 ---
 
@@ -127,7 +127,7 @@ async function main(context: Excel.RequestContext) {
 
 This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 
-![A fruit sales PivotTable with the Grand Total row highlighted green.](../images/sample-pivotable-grand-total-row.png)
+![A fruit sales PivotTable with the Grand Total row highlighted green.](../images/sample-pivottable-grand-total-row.png)
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
