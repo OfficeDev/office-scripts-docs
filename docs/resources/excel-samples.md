@@ -123,6 +123,40 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
+### Log the "Grand Total" values from a PivotTable
+
+This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
+
+![A fruit sales PivotTable with the Grand Total row highlighted green.](../images/sample-pivotable-grand-total-row.png)
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Get the first PivotTable in the workbook.
+  let pivotTableCollection = context.workbook.pivotTables;
+  pivotTableCollection.load("items");
+  await context.sync();
+
+  let pivotTable = pivotTableCollection.items[0];
+  
+  // Get the names of each data column in the PivotTable.
+  let pivotColumnLabelRange = pivotTable.layout.getColumnLabelRange();
+  pivotColumnLabelRange.load("values");
+
+  // Get the range displaying the pivoted data.
+  let pivotDataRange = pivotTable.layout.getDataBodyRange();
+
+  // Get the range with the "grand totals" for the PivotTable columns.
+  let grandTotalRange = pivotDataRange.getLastRow();
+  grandTotalRange.load("values");
+  await context.sync();
+  
+  // Print each of the "Grand Totals" to the console.
+  grandTotalRange.values[0].forEach((column, columnIndex) => {
+    console.log(`Grand total of ${pivotColumnLabelRange.values[0][columnIndex]}: ${grandTotalRange.values[0][columnIndex]}`);
+  });
+}
+```
+
 ## Collaboration
 
 These samples demonstrate how to work with collaboration-related features of Excel, such as comments.
