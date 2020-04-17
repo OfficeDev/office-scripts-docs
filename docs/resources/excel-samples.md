@@ -153,6 +153,7 @@ async function main(context: Excel.RequestContext) {
   // Print each of the "Grand Totals" to the console.
   grandTotalRange.values[0].forEach((column, columnIndex) => {
     console.log(`Grand total of ${pivotColumnLabelRange.values[0][columnIndex]}: ${grandTotalRange.values[0][columnIndex]}`);
+    // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
 }
 ```
