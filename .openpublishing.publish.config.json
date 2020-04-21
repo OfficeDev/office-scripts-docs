@@ -11,7 +11,7 @@
       "build_output_subfolder": "office-scripts-docs",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": ["office-scripts", "office-scripts-async"],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
