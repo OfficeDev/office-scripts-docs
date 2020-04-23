@@ -1,7 +1,7 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 localization_priority: Priority
 ---
 
