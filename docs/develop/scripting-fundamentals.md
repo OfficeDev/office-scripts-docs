@@ -229,25 +229,6 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 - [Workbook](/javascript/api/office-scripts/excel/excelscript.workbook)
 - [Worksheet](/javascript/api/office-scripts/excel/excelscript.worksheet)
 
-### ClientResult
-
-Methods that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the return `ClientResult` is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
-
-The following script gets the total number of tables in the workbook and logs that number to the console.
-
-```TypeScript
-async function main(context: Excel.RequestContext) {
-  let tableCount = context.workbook.tables.getCount();
-
-  // This sync call implicitly loads tableCount.value.
-  // Any other ClientResult values are loaded too.
-  await context.sync();
-
-  // Trying to log the value before calling sync would throw an error.
-  console.log(tableCount.value);
-}
-```
-
 ## See also
 
 - [Record, edit, and create Office Scripts in Excel on the web](../tutorials/excel-tutorial.md)
