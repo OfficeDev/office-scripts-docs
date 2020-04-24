@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts Code Editor environment'
 description: 'The prerequisites and environment information for Office Scripts in Excel on the web.'
-ms.date: 01/21/2020
+ms.date: 04/24/2020
 localization_priority: Normal
 ---
 
@@ -20,13 +20,17 @@ Office Scripts are largely self-contained pieces of code. Only a small part of T
 
 ## Office Scripts JavaScript API
 
-Office Scripts use a specialized version the Office JavaScript APIs that are used by [Office Add-ins](/office/dev/add-ins/overview/index). The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md#apis) article. You can view all the APIs available to your script in the [Office Scripts API reference documentation](/javascript/api/office-scripts/overview).
+Office Scripts use a specialized version the Office JavaScript APIs for [Office Add-ins](/office/dev/add-ins/overview/index). While there are similarities in the two APIs, you should not assume code can be ported between the two platforms. The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md#apis) article. You can view all the APIs available to your script in the [Office Scripts API reference documentation](/javascript/api/office-scripts/overview).
 
 ## IntelliSense
 
 IntelliSense is a Code Editor feature that helps prevent typos and syntax errors as you edit your script. It displays possible object and field names as you type, as well as inline documentation for every API.
 
 The Excel Code Editor uses the same IntelliSense engine as Visual Studio Code. To learn more about the feature, visit [Visual Studio Code's IntelliSense Features](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
+
+## External library support
+
+Office Scripts do not support the usage of external, third-party JavaScript libraries. You are currently unable to call any library other than the Office Scripts APIs from a script. You do still have access to any [built-in JavaScript object](../develop/javascript-objects.md), such as [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
 ## See also
 
