@@ -1,7 +1,7 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 localization_priority: Priority
 ---
 
@@ -51,33 +51,25 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     Replace the script contents with the following code:
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-5. Now let's read a value from one of the number columns. Add the following code to the end of the script:
+5. Now let's read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`):
 
     ```TypeScript
     // Get the value of cell D2.
     let range = selectedSheet.getRange("D2");
-    range.load("values");
-    await context.sync();
-  
-    // Print the value of D2.
-    console.log(range.values);
+    console.log(range.getValues());
     ```
-
-    Note the calls to `load` and `sync`. You can learn the details of those methods in [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md#sync-and-load). For now, know that you must request data to be read and then sync your script with the workbook to read that data.
 
 6. Run the script.
 7. Open the console. Go to the **Ellipses** menu and press **Logs...**.
@@ -94,10 +86,12 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 1. Add the following code to the end of the script:
 
     ```TypeScript
-    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.values[0][0]);
-    range.values = [[positiveValue]];
+        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    let positiveValue = Math.abs(range.getValue());
+    range.setValue(positiveValue);
     ```
+
+    Note that we're using `getValue` and `setValue`. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`.
 
 2. The value of cell **D2** should now be positive.
 
@@ -108,47 +102,44 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 1. Remove the code that affects only a single cell (the previous absolute value code), such that your script now looks like this:
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-2. Add a loop that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value.
+2. Add a loop to the end of the script that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value.
 
     Note that the array defining cell locations is zero-based. That means cell **A1** is `range[0][0]`.
 
     ```TypeScript
     // Get the values of the used range.
     let range = selectedSheet.getUsedRange();
-    range.load("rowCount,values");
-    await context.sync();
+    let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.rowCount; i++) {
-      // The column at index 3 is column "4" in the worksheet.
-      if (range.values[i][3] != 0) {
-        let positiveValue = Math.abs(range.values[i][3]);
-        selectedSheet.getCell(i, 3).values = [[positiveValue]];
-      }
+    for (let i = 1; i < range.getRowCount(); i++) {
+        // The column at index 3 is column "4" in the worksheet.
+        if (rangeValues[i][3] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][3]);
+            selectedSheet.getCell(i, 3).setValue(positiveValue);
+        }
 
-      // The column at index 4 is column "5" in the worksheet.
-      if (range.values[i][4] != 0) {
-        let positiveValue = Math.abs(range.values[i][4]);
-        selectedSheet.getCell(i, 4).values = [[positiveValue]];
-      }
+        // The column at index 4 is column "5" in the worksheet.
+        if (rangeValues[i][4] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][4]);
+            selectedSheet.getCell(i, 4).setValue(positiveValue);
+        }
     }
     ```
 
-    This portion of the script does several important tasks. First, it loads the values and row count of the used range. This lets us look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. We're avoiding zeroes so we can leave the blank cells as they were.
+    This portion of the script does several important tasks. First, it gets the values and row count of the used range. This lets us look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. We're avoiding zeroes so we can leave the blank cells as they were.
 
 3. Run the script.
 
