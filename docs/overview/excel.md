@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 02/24/2020
+ms.date: 04/24/2020
 localization_priority: Priority
 ---
 

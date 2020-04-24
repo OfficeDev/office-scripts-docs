@@ -1,7 +1,7 @@
 ---
 title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 04/08/2020
+ms.date: 04/24/2020
 localization_priority: Normal
 ---
 
@@ -18,27 +18,25 @@ The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_O
 
 ### Working with ranges
 
-Ranges contain several two-dimensional arrays that directly map to the cells in that range. These include properties such as `values`, `formulas`, and `numberFormat`. Array-type properties must be [loaded](scripting-fundamentals.md#sync-and-load) like any other properties.
+Ranges contain several two-dimensional arrays that directly map to the cells in that range. These arrays contain specific information about each cell in that range. For example, `Range.getValues` returns all the values in those cells (with the rows and columns of the two-dimensional array mapping to the rows and columns of that worksheet subsection). `Range.getFormulas` and `Range.getNumberFormats` are other frequently used methods that return arrays like `Range.getValues`.
 
 The following script searches the **A1:D4** range for any number format containing a "$". The script sets the fill color in those cells to "yellow".
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range From A1 to D4.
-  let range = context.workbook.worksheets.getActiveWorksheet().getRange("A1:D4");
+  let range = workbook.getActiveWorksheet().getRange("A1:D4");
 
-  // Load the numberFormat property on the range.
-  range.load("numberFormat");
-  await context.sync();
-
+  // Get the number formats for each cell in the range.
+  let rangeNumberFormats = range.getNumberFormats();
   // Iterate through the arrays of rows and columns corresponding to those in the range.
-  range.numberFormat.forEach((rowItem, rowIndex) => {
-    range.numberFormat[rowIndex].forEach((columnItem, columnIndex) => {
+  rangeNumberFormats.forEach((rowItem, rowIndex) => {
+    rangeNumberFormats[rowIndex].forEach((columnItem, columnIndex) => {
       // Treat the numberFormat as a string so we can do text comparisons.
       let columnItemText = columnItem as string;
       if (columnItemText.indexOf("$") >= 0) {
         // Set the cell's fill to yellow.
-        range.getCell(rowIndex, columnIndex).format.fill.color = "yellow";
+        range.getCell(rowIndex, columnIndex).getFormat().getFill().setColor("yellow");
       }
     });
   });
@@ -47,42 +45,38 @@ async function main(context: Excel.RequestContext) {
 
 ### Working with collections
 
-Many Excel objects are contained in a collection. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a [ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection) (as the `Worksheet.shapes` property). Each `*Collection` object contains an `items` property, which is an array that stores the objects inside that collection. This can be treated like a normal JavaScript array, but the items in the collection have to first be loaded. If you need to work with a property on every object in the collection, use a hierarchal load statement (`items/propertyName`).
+Many Excel objects are contained in a collection. The collection is managed by the Office Scripts API and exposed as an array. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a `Shape[]` that is returned by the `Worksheet.getShapes` method. You can use this array to read values from the collection, or you can access specific objects from the parent object's `get*` methods.
+
+> [!NOTE]
+> Do not manually add or remove objects from these collection arrays. Use the `add` methods on the parent objects and the `delete` methods on the collection-type objects. For example, add a [Table](/javascript/api/office-scripts/excel/excel.table) to a [Worksheet](/javascript/api/office-scripts/excel/excel.worksheet) with the `Worksheet.addTable` method and remove the `Table` using `Table.delete`.
 
 The following script logs the type of every shape in the current worksheet.
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the shapes in this worksheet.
-  let shapes = selectedSheet.shapes;
-  shapes.load("items/type");
-  await context.sync();
+  let shapes = selectedSheet.getShapes();
 
   // Log the type of every shape in the collection.
-  shapes.items.forEach((shape) => {
-    console.log(shape.type);
+  shapes.forEach((shape) => {
+    console.log(shape.getType());
   });
 }
 ```
 
-You can load individual objects from a collection using the `getItem` or `getItemAt` methods. `getItem` gets an object by using a unique identifier like a name (such names are often specified by your script). `getItemAt` gets an object by using its index in the collection. Either call must be followed by a `await context.sync();` command before the object can be used.
-
 The following script deletes the oldest shape in the current worksheet.
 
 ```Typescript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the first (oldest) shape in the worksheet.
   // Note that this script will thrown an error if there are no shapes.
-  let shape = selectedSheet.shapes.getItemAt(0);
-
-  // Sync to load `shape` from the collection.
-  await context.sync();
+  let shape = selectedSheet.getShapes()[0];
 
   // Remove the shape from the worksheet.
   shape.delete();
@@ -96,15 +90,15 @@ The [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Ob
 The following script adds the current date to the worksheet. Note that by using the `toLocaleDateString` method, Excel recognizes the value as a date and changes the number format of the cell automatically.
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range for cell A1.
-  let range = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
+  let range = workbook.getActiveWorksheet().getRange("A1");
 
   // Get the current date and time.
   let date = new Date(Date.now());
 
   // Set the value at A1 to the current date, using a localized string.
-  range.values = [[date.toLocaleDateString()]];
+  range.setValue(date.toLocaleDateString());
 }
 ```
 
@@ -117,26 +111,25 @@ The [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Ob
 The following script uses `Math.min` to find and log the smallest number in the **A1:D4** range. Note that this sample assumes the entire range contains only numbers, not strings.
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range from A1 to D4.
-  let comparisonRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1:D4");
-  
+  let comparisonRange = workbook.getActiveWorksheet().getRange("A1:D4");
+
   // Load the range's values.
-  comparisonRange.load("values");
-  await context.sync();
+  let comparisonRangeValues = comparisonRange.getValues();
 
   // Set the minimum values as the first value.
-  let minimum = comparisonRange.values[0][0];
+  let minimum = comparisonRangeValues[0][0];
 
   // Iterate over each row looking for the smallest value.
-  comparisonRange.values.forEach((rowItem, rowIndex) => {
+  comparisonRangeValues.forEach((rowItem, rowIndex) => {
     // Iterate over each column looking for the smallest value.
-    comparisonRange.values[rowIndex].forEach((columnItem) => {
+    comparisonRangeValues[rowIndex].forEach((columnItem) => {
       // Use `Math.min` to set the smallest value as either the current cell's value or the previous minimum.
       minimum = Math.min(minimum, columnItem);
     });
   });
-  
+
   console.log(minimum);
 }
 

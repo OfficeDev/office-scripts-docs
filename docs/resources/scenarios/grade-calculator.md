@@ -1,9 +1,12 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: 'A sample that determines the percentage and letter grades for a class of students.'
-ms.date: 02/20/2020
+ms.date: 04/24/2020
 localization_priority: Normal
 ---
+
+> [!IMPORTANT]
+> This is a legacy sample that uses the Office Scripts Async APIs. These APIs are only recommended when script performance is critical. This sample is in the process of being converted to the new Office Scripts APIs.
 
 # Office Scripts sample scenario: Grade calculator
 
