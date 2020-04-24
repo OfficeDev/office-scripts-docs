@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 Many Excel objects are contained in a collection. The collection is managed by the Office Scripts API and exposed as an array. For example, all [Shapes](/javascript/api/office-scripts/excel/excel.shape) in a worksheet are contained in a `Shape[]` that is returned by the `Worksheet.getShapes` method. You can use this array to read values from the collection, or you can access specific objects from the parent object's `get*` methods.
 
 > [!NOTE]
-> Do not manually add or remove object from these collection arrays. Use the `add` methods on the parent objects and the `delete` methods on the collection-type objects. For example, add a [Table](/javascript/api/office-scripts/excel/excel.table) to a [Worksheet](/javascript/api/office-scripts/excel/excel.worksheet) with the `Worksheet.addTable` method and remove the `Table` using `Table.delete`.
+> Do not manually add or remove objects from these collection arrays. Use the `add` methods on the parent objects and the `delete` methods on the collection-type objects. For example, add a [Table](/javascript/api/office-scripts/excel/excel.table) to a [Worksheet](/javascript/api/office-scripts/excel/excel.worksheet) with the `Worksheet.addTable` method and remove the `Table` using `Table.delete`.
 
 The following script logs the type of every shape in the current worksheet.
 
