@@ -190,7 +190,7 @@ The `context` object is necessary because the script and Excel are running in di
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. To improve script performance, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult)).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excelscript.clientresult)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
@@ -245,15 +245,15 @@ function main(workbook: ExcelScript.Workbook) {
 
 The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
 
-- [Chart](/javascript/api/office-scripts/excel/excel.chart)
-- [Comment](/javascript/api/office-scripts/excel/excel.comment)
-- [PivotTable](/javascript/api/office-scripts/excel/excel.pivottable)
-- [Range](/javascript/api/office-scripts/excel/excel.range)
-- [RangeFormat](/javascript/api/office-scripts/excel/excel.rangeformat)
-- [Shape](/javascript/api/office-scripts/excel/excel.shape)
-- [Table](/javascript/api/office-scripts/excel/excel.table)
-- [Workbook](/javascript/api/office-scripts/excel/excel.workbook)
-- [Worksheet](/javascript/api/office-scripts/excel/excel.worksheet)
+- [Chart](/javascript/api/office-scripts/excel/excelscript.chart)
+- [Comment](/javascript/api/office-scripts/excel/excelscript.comment)
+- [PivotTable](/javascript/api/office-scripts/excel/excelscript.pivottable)
+- [Range](/javascript/api/office-scripts/excel/excelscript.range)
+- [RangeFormat](/javascript/api/office-scripts/excel/excelscript.rangeformat)
+- [Shape](/javascript/api/office-scripts/excel/excelscript.shape)
+- [Table](/javascript/api/office-scripts/excel/excelscript.table)
+- [Workbook](/javascript/api/office-scripts/excel/excelscript.workbook)
+- [Worksheet](/javascript/api/office-scripts/excel/excelscript.worksheet)
 
 ### ClientResult
 
