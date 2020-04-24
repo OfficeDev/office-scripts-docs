@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 03/23/2020
+ms.date: 04/24/2020
 localization_priority: Normal
 ---
 
@@ -23,7 +23,9 @@ Office Scripts are currently only supported by for Excel on the web. All recordi
 
 ## APIs
 
-Office Scripts support most of the Excel JavaScript APIs, which means there's  a lot of functionality overlap between the two platforms. There are two exceptions: events and Common APIs.
+There is no synchronous version of the Office JavaScript APIs for Office Add-ins. The standard Office Scripts APIs are unique to the platform and have numerous optimizations and alterations to avoid the usage of the `load`/`sync` paradigm.
+
+The Office Scripts Async APIs has a lot of overlap with the Excel JavaScript APIs. While the two platforms share some functionality, there are two exceptions: events and Common APIs.
 
 ### Events
 
