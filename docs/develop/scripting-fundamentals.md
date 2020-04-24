@@ -53,11 +53,8 @@ function main(workbook: ExcelScript.Workbook) {
 ### Ranges
 
 A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
-<<<<<<< HEAD
-=======
 
 Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object that's comprised of several smaller objects that are individually set.
->>>>>>> f65c588a8e6eed29cafa0a64c0d4a41771494aac
 
 Ranges use two-dimensional arrays to manage information. Read the [Working with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-ranges) for more information on handling those arrays in the Office Scripts framework.
 
@@ -177,37 +174,14 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-<<<<<<< HEAD
-The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
-
-## Context
-
-The `main` function accepts an `Excel.RequestContext` parameter, named `context`. Think of `context` as the bridge between your script and the workbook. Your script accesses the workbook with the `context` object and uses that `context` to send data back and forth.
-
-The `context` object is necessary because the script and Excel are running in different processes and locations. The script will need to make changes to or query data from the workbook in the cloud. The `context` object manages those transactions.
-
-## Sync and Load
-
-Because your script and workbook run in different locations, any data transfer between the two takes time. To improve script performance, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
-
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excelscript.clientresult)).
-- Write data to the workbook (usually because the script has finished).
-
-The following image shows an example control flow between the script and workbook:
-=======
 #### Adding Excel objects with a script
->>>>>>> f65c588a8e6eed29cafa0a64c0d4a41771494aac
 
 You can programmatically add document objects, such as tables or charts, by calling the corresponding `add` method available on the parent object.
 
 > [!NOTE]
 > Do not manually add objects to collection arrays. Use the `add` methods on the parent objects For example, add a `Table` to a `Worksheet` with the `Worksheet.addTable` method.
 
-<<<<<<< HEAD
-After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation or a method that returns a `ClientResult` (as discussed in the next sections).
-=======
 The following script creates a table in Excel on the first worksheet in the workbook. Note that the created table is returned by the `addTable` method.
->>>>>>> f65c588a8e6eed29cafa0a64c0d4a41771494aac
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
