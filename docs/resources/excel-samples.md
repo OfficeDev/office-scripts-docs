@@ -75,22 +75,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object. It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.
-
-```TypeScript
-async function main(context: Excel.RequestContext) {
-  // Read a date at cell A1 from Excel.
-  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
-  dateRange.load("values");
-  await context.sync();
-
-  // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.values[0][0];
-  let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
-  console.log(javaScriptDate);
-}
-```
-
 ## Display data
 
 These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
