@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 04/24/2020
+ms.date: 05/08/2020
 localization_priority: Priority
 ---
 
@@ -203,7 +203,7 @@ To delete an object, call the object's `delete` method.
 > [!NOTE]
 > As with adding objects, do not manually remove objects from collection arrays. Use the `delete` methods on the collection-type objects. For example, remove a `Table` from a `Worksheet` using `Table.delete`.
 
-The following scripts removes the first worksheet in the workbook.
+The following script removes the first worksheet in the workbook.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
