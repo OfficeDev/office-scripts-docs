@@ -185,7 +185,7 @@ The following script creates a table in Excel on the first worksheet in the work
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
-    // Get first worksheet.
+    // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
 
     // Add a table that uses the data in C3:G10.
