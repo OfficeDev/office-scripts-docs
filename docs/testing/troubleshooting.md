@@ -39,4 +39,4 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Office Scripts in Excel on the web](../overview/excel.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
 - [Undo the effects of an Office Script](undo.md)
-- [Improve the performance of your Office Scripts](web-client-performance.md)
+- [Improve the performance of your Office Scripts](../web-client-performance.md)
