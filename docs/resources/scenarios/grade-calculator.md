@@ -5,10 +5,10 @@ ms.date: 04/24/2020
 localization_priority: Normal
 ---
 
+# Office Scripts sample scenario: Grade calculator
+
 > [!IMPORTANT]
 > This is a legacy sample that uses the Office Scripts Async APIs. These APIs are only recommended when script performance is critical. This sample is in the process of being converted to the new Office Scripts APIs.
-
-# Office Scripts sample scenario: Grade calculator
 
 In this scenario, you're an instructor tallying every student's end-of-term grades. You've been entering the scores for their assignments and tests as you go. Now, it is time to determine the students' fates.
 
