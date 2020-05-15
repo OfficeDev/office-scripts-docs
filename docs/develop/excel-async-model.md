@@ -13,13 +13,36 @@ This article will teach you how to write scripts using the async APIs. These API
 > [!IMPORTANT]
 > The async model is significantly more complicated than the standard Office Scripts APIs. We highly recommend following the guidance in [Improve the performance of your Office Scripts](web-client-performance.md) before switching to the async APIs.
 
+To use the async APIs, you need to add additional syntax to parts of your script. This tells the editor which code blocks are calling the async APIs. You need to add `async` to your `main` function and surround async commands in a function passed to `Excel.run`.
+
 ## `main` function
 
-To use the async APIs, your script's `main` function needs to be `async`. It also must take am `Excel.RequestContext` as the first parameter:
+To use the async APIs, your script's `main` function needs to be an `async` function, as shown in the following code:
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+async function main(workbook: ExcelScript.Workbook) {
     // Your Office Script
+}
+```
+
+## `Excel.run` blocks for async code
+
+`Excel.run` is a function that runs async Office Scripts code. The following script shows how we recommend using `Excel.run`. Note the following:
+
+- We use `await` before `Excel.run`. This ensures the async block of code completes before proceeding. Otherwise, we might have conflicts with our own script.
+- The function passed to `Excel.run` is also async. This allows it to run without explicitly returning a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise). In the `Excel.run` block, you can set any variables that were declared earlier in the script, which may be easier than returning a `Promise`. Be aware that the Excel objects are different in API sets are not the same and cannot be translated to and from async in your script.
+- Additional `Excel.run` calls could be made later in the script. You could also pull them into separate functions called by `main`.
+
+```TypeScript
+async function main(workbook: ExcelScript.Workbook) {
+
+    // Standard scripting code...
+
+    await Excel.run(async (context: Excel.RequestContext) => {
+        // Async API code...
+    });
+
+    // More standard scripting code...
 }
 ```
 
@@ -74,18 +97,46 @@ The following examples use a `Range` object to show the three ways the `load` me
 Your script must call `context.sync()` before reading any loaded values.
 
 ```TypeScript
-let range = selectedSheet.getRange("A1:B3");
-range.load ("rowCount"); // Load the property.
-await context.sync(); // Synchronize with the workbook to get the property.
-console.log(range.rowCount); // Read and log the property value (3).
+/**
+ * This script uses the async API to get the row count for a range.
+ * It shows how to load a property in the async model.
+ */
+async function main(workbook: ExcelScript.Workbook) {
+  await Excel.run(async (context: Excel.RequestContext) => {
+    let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = selectedSheet.getRange("A1:B3");
+
+    // Load the property.
+    range.load("rowCount");
+
+    // Synchronize with the workbook to get the property.
+    await context.sync();
+
+    // Read and log the property value (3).
+    console.log(range.rowCount);
+  });
+}
 ```
 
 You can also load properties across an entire collection. Every collection object in the async API has an `items` property that is an array containing the objects in that collection. Using `items` as the start of a hierarchical call (`items\myProperty`) to `load` loads the specified properties on each of those items. The following example loads the `resolved` property on every `Comment` object in the `CommentCollection` object of a worksheet.
 
 ```TypeScript
-let comments = selectedSheet.comments;
-comments.load("items/resolved"); // Load the `resolved` property from every comment in this collection.
-await context.sync(); // Synchronize with the workbook to get the properties.
+/**
+ * This script uses the async API to get resolved property on every comment in the worksheet.
+ * It shows how to load a property from every object in a collection.
+ */
+async function main(workbook: ExcelScript.Workbook) {
+  await Excel.run(async (context: Excel.RequestContext) => {
+    let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+    let comments = selectedSheet.comments;
+
+    // Load the `resolved` property from every comment in this collection.
+    comments.load("items/resolved");
+
+    // Synchronize with the workbook to get the properties.
+    await context.sync();
+  });
+}
 ```
 
 ### ClientResult
@@ -95,15 +146,21 @@ Methods in the async API that return information from the workbook have a simila
 The following script gets the total number of tables in the workbook and logs that number to the console.
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
-  let tableCount = context.workbook.tables.getCount();
+/**
+ * This script uses the async API to get the table count of the workbook.
+ * It shows how ClientResult objects return workbook information.
+ */
+async function main(workbook: ExcelScript.Workbook) {
+  await Excel.run(async (context: Excel.RequestContext) => {
+    let tableCount = context.workbook.tables.getCount();
 
-  // This sync call implicitly loads tableCount.value.
-  // Any other ClientResult values are loaded too.
-  await context.sync();
+    // This sync call implicitly loads tableCount.value.
+    // Any other ClientResult values are loaded too.
+    await context.sync();
 
-  // Trying to log the value before calling sync would throw an error.
-  console.log(tableCount.value);
+    // Trying to log the value before calling sync would throw an error.
+    console.log(tableCount.value);
+  });
 }
 ```
 
