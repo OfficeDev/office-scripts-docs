@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 01/27/2020
+ms.date: 04/24/2020
 localization_priority: Priority
 ---
 
@@ -24,7 +24,7 @@ To understand the Excel APIs, you must understand how the components of a workbo
 
 ### Ranges
 
-A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in row **B** and column **3** or **C2:F4** for the cells from rows **C** through **F** and columns **2** through **4**) to define ranges.
+A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
 
 Ranges have three core properties: `values`, `formulas`, and `format`. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells.
 
@@ -152,7 +152,7 @@ The `context` object is necessary because the script and Excel are running in di
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. To improve script performance, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
@@ -170,7 +170,7 @@ await context.sync();
 > [!NOTE]
 > `context.sync()` is implicitly called when a script ends.
 
-After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation (as discussed in the next section).
+After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation or a method that returns a `ClientResult` (as discussed in the next sections).
 
 Synchronizing your script with the workbook can take time, depending on your network. You should minimize the number of `sync` calls to help your script run fast.  
 
@@ -207,6 +207,25 @@ await context.sync(); // Synchronize with the workbook to get the properties.
 
 > [!TIP]
 > To learn more about working with collections in Office Scripts, see the [Array section of the Using built-in JavaScript objects in Office Scripts](javascript-objects.md#array) article.
+
+### ClientResult
+
+Methods that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the return `ClientResult` is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
+
+The following script gets the total number of tables in the workbook and logs that number to the console.
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  let tableCount = context.workbook.tables.getCount();
+
+  // This sync call implicitly loads tableCount.value.
+  // Any other ClientResult values are loaded too.
+  await context.sync();
+
+  // Trying to log the value before calling sync would throw an error.
+  console.log(tableCount.value);
+}
+```
 
 ## See also
 
