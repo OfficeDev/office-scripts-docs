@@ -42,6 +42,7 @@ Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tu
 ## See also
 
 - [Scripting fundamentals for Office Script in Excel on the web](../develop/scripting-fundamentals.md)
+- [Sharing Office Scripts in Excel for the Web](https://support.office.com/article/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
