@@ -5,10 +5,10 @@ ms.date: 04/24/2020
 localization_priority: Normal
 ---
 
+# Office Scripts sample scenario: Analyze web downloads
+
 > [!IMPORTANT]
 > This is a legacy sample that uses the Office Scripts Async APIs. These APIs are only recommended when script performance is critical. This sample is in the process of being converted to the new Office Scripts APIs.
-
-# Office Scripts sample scenario: Analyze web downloads
 
 In this scenario, you're tasked with analyzing download reports from your company's website. The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.
 
