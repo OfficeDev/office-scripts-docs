@@ -1,7 +1,7 @@
 ---
 title: 'Using the async Office Scripts APIs in performance-critical scenarios'
 description: 'A primer on the Office Scripts async APIs and how to use the load/sync pattern to maximize script performance.'
-ms.date: 05/14/2020
+ms.date: 05/22/2020
 localization_priority: Normal
 ---
 
@@ -30,7 +30,7 @@ async function main(workbook: ExcelScript.Workbook) {
 `Excel.run` is a function that runs async Office Scripts code. The following script shows how we recommend using `Excel.run`. Note the following:
 
 - We use `await` before `Excel.run`. This ensures the async block of code completes before proceeding. Otherwise, we might have conflicts with our own script.
-- The function passed to `Excel.run` is also async. This allows it to run without explicitly returning a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise). In the `Excel.run` block, you can set any variables that were declared earlier in the script, which may be easier than returning a `Promise`. Be aware that the Excel objects are different in API sets are not the same and cannot be translated to and from async in your script.
+- The function passed to `Excel.run` is also async. This allows it to run without explicitly returning a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise). In the `Excel.run` block, you can set any variables that were declared earlier in the script. You can also return a value from the function from `await`ed `run` block. Be aware that the Excel objects are different in API sets are not the same and cannot be translated to and from async in your script.
 - Additional `Excel.run` calls could be made later in the script. You could also pull them into separate functions called by `main`.
 
 ```TypeScript
@@ -38,11 +38,18 @@ async function main(workbook: ExcelScript.Workbook) {
 
     // Standard scripting code...
 
+    // A standard async API block.
     await Excel.run(async (context: Excel.RequestContext) => {
         // Async API code...
     });
 
     // More standard scripting code...
+
+    // An async API block with a returned value.
+    let x = await Excel.run(async (context: Excel.RequestContext) => {
+        // Async API code...
+        return myValue;
+    });
 }
 ```
 
