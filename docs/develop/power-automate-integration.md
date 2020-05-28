@@ -57,9 +57,6 @@ When adding input parameters to a script's `main` function, consider the followi
 
 10. Default parameter values are allowed (for example `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
 
-> [!IMPORTANT]
-> Currently, scripts must return a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise) for Power Automate to allow either output from the script or input into the script. If your script does not return anything, but needs input parameters, add `: Promise<void>` to the end of your `main` function signature (`async function main(workbook: ExcelScript.Workbook, myParameter?: string): Promise<void>`) to enable data flow through your script in Power Automate. We working to allow scripts that take input parameters and do not return anything.
-
 ## Returning data from a script back to Power Automate
 
 Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, there are some restrictions Power Automate places on the return type.
