@@ -1,13 +1,13 @@
 ---
 title: 'Improve the performance of your Office Scripts'
-description: 'How to create faster scripts through understanding how the script communicates with the Excel workbook.'
+description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
 ms.date: 05/14/2020
 localization_priority: Normal
 ---
 
 # Improve the performance of your Office Scripts
 
-The promise of Office Scripts is to automate commonly performed series of tasks to save time. A slow script can feel like it invalidates this promise. Most of the time, your script will be perfectly fine and run as expected. However, there are a few, avoidable scenarios that can affect performance.
+The purpose of Office Scripts is to automate commonly performed series of tasks to save you time. A slow script can feel like it doesn't speed up your workflow. Most of the time, your script will be perfectly fine and run as expected. However, there are a few, avoidable scenarios that can affect performance.
 
 The most common reason for a slow script is excessive communication with the workbook. Your script runs on your local machine, while the workbook exists in the cloud. At certain times, your script synchronizes its local data with that of the workbook. This means that any write operations (such as `workbook.addWorksheet()`) are only applied to the workbook when this behind-the-scenes synchronization happens. Likewise, any read operations (such as `myRange.getValues()`) only get data from the workbook for the script at those times. In either case, the script fetches information before it acts on the data. For example, the following code will accurately log the number of rows in the used range.
 
@@ -101,7 +101,7 @@ If your script has a critical performance need that is not solved by applying th
 
 ## Case-by-case help
 
-Excel and Office Scripts are consistently evolving. As the platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](https://docs.microsoft.com/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). Be sure to tag your question with "office-scripts" so experts can find it and help.
+As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](https://docs.microsoft.com/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). Be sure to tag your question with "office-scripts" so experts can find it and help.
 
 ## See also
 

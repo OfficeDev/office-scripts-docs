@@ -1,17 +1,17 @@
 ---
-title: 'Using the async Office Scripts APIs in performance-critical scenarios'
-description: 'A primer on the Office Scripts async APIs and how to use the load/sync pattern to maximize script performance.'
+title: 'Using the Office Scripts Async APIs in performance-critical scenarios'
+description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern to maximize script performance.'
 ms.date: 05/22/2020
 localization_priority: Normal
 ---
 
 
-# Using the async Office Scripts APIs in performance-critical scenarios
+# Using the Office Scripts Async APIs in performance-critical scenarios
 
-This article will teach you how to write scripts using the async APIs. These APIs let your script control the data synchronization between the script and the workbook. This gives you maximum control over the network calls to and from the workbook, which are the primary cause of performance issues.
+This article will teach you how to write scripts using the async APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they let your script control the data synchronization between the script and the workbook. This gives you maximum control over the network calls to and from the workbook, which are the primary cause of performance issues.
 
 > [!IMPORTANT]
-> The async model is significantly more complicated than the standard Office Scripts APIs. We highly recommend following the guidance in [Improve the performance of your Office Scripts](web-client-performance.md) before switching to the async APIs.
+> The async model is significantly more complicated than the standard Office Scripts APIs. We highly recommend following the guidance in [Improve the performance of your Office Scripts](web-client-performance.md) before switching to the Office Scripts Async APIs.
 
 To use the async APIs, you need to add additional syntax to parts of your script. This tells the editor which code blocks are calling the async APIs. You need to add `async` to your `main` function and surround async commands in a function passed to `Excel.run`.
 
@@ -27,9 +27,9 @@ async function main(workbook: ExcelScript.Workbook) {
 
 ## `Excel.run` blocks for async code
 
-`Excel.run` is a function that runs async Office Scripts code. The following script shows how we recommend using `Excel.run`. Note the following:
+`Excel.run` is a function that runs async Office Scripts code. The following script shows the recommended way to use `Excel.run`. Note the following:
 
-- We use `await` before `Excel.run`. This ensures the async block of code completes before proceeding. Otherwise, we might have conflicts with our own script.
+- Use `await` before `Excel.run`. This ensures the async block of code completes before proceeding. Otherwise, you might have conflicts with your own script.
 - The function passed to `Excel.run` is also async. This allows it to run without explicitly returning a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise). In the `Excel.run` block, you can set any variables that were declared earlier in the script. You can also return a value from the function from `await`ed `run` block. Be aware that the Excel objects are different in API sets are not the same and cannot be translated to and from async in your script.
 - Additional `Excel.run` calls could be made later in the script. You could also pull them into separate functions called by `main`.
 
@@ -59,13 +59,13 @@ The `main` function accepts an `Excel.RequestContext` parameter, named `context`
 
 The `context` object is necessary because the script and Excel are running in different processes and locations. The script will need to make changes to or query data from the workbook in the cloud. The `context` object manages those transactions.
 
-By default, Office Scripts handle the interactions between your script and the workbook automatically. While the process is optimized, the standard Office Scripts APIs may synchronize the workbook with your script more than necessary, such as during looped read operations. You may be able to manage these workbook-script data transactions more efficiently with the async APIs, since you know when it is necessary to update data.
+By default, Office Scripts handle the interactions between your script and the workbook automatically. If your code doesn't have performance-related issues with synchronization, such as a looped read operations, then we recommend using [the synchronous API instead](/javascript/api/office-scripts/excel?view=office-scripts).
 
 ## Sync and Load
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. In the async API, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult)).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult?view=office-scripts-async)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
@@ -85,13 +85,13 @@ await context.sync();
 
 After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation or a method that returns a `ClientResult` (as discussed in the next sections).
 
-Synchronizing your script with the workbook can take time, depending on your network. You should minimize the number of `sync` calls to help your script run fast. Otherwise, you may as well use the standard, synchronous APIs.
+Synchronizing your script with the workbook can take time, depending on your network. Minimize the number of `sync` calls to help your script run fast. Otherwise, the async APIs are not faster the standard, synchronous APIs.
 
 ### Load
 
 An async script must load data from the workbook before reading it. However, loading data from the entire workbook would greatly reduce the script's speed. The `load` method lets your script specifically state what data should be retrieved from the workbook.
 
-The `load` method is available on every Excel object. Your script must load an object's properties before it can read them. Not doing so will result in an error.
+The `load` method is available on every Excel object. Your script must load an object's properties before it can read them. Not doing so results in an error.
 
 The following examples use a `Range` object to show the three ways the `load` method can be used to load data.
 
@@ -99,7 +99,7 @@ The following examples use a `Range` object to show the three ways the `load` me
 |:--|:--|:--|
 |Load one property |`myRange.load("values");` | Loads a single property, in this case the two-dimensional array of values in this range. |
 |Load multiple properties |`myRange.load("values, rowCount, columnCount");`| Loads all the properties from a comma-delimited list, in this example the values, row count, and column count. |
-|Load everything | `myRange.load();`|Loads all the properties on the range. This is not a recommended solution, since it will slow down your script by getting unnecessary data. You should only use this while testing your script or if you need every property from the object. |
+|Load everything | `myRange.load();`|Loads all the properties on the range. This isn't a recommended solution, since it will slow down your script by getting unnecessary data. Only use this while testing your script or if you need every property from the object. |
 
 Your script must call `context.sync()` before reading any loaded values.
 
