@@ -36,7 +36,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Get the worksheet and validate the data.
       let studentsRange = workbook.getActiveWorksheet().getUsedRange();
       if (studentsRange.getColumnCount() !== 6) {
-        throw new Error(`The required columns are not present. Expected headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade" columns.`);
+        throw new Error(`The required columns are not present. Expected column headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade"`);
       }
 
       let studentData = studentsRange.getValues();
@@ -47,7 +47,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Clear all conditional formatting.
       workbook.getActiveWorksheet().getUsedRange().clearAllConditionalFormats();
 
-      // Use regular expressions to read the max score from the assignment, mid-term, and final score columns.
+      // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
       const assignmentMaxMatches = studentData[0][1].match(/\d+/);
       const midtermMaxMatches = studentData[0][2].match(/\d+/);
@@ -55,13 +55,13 @@ You'll develop a script that totals the grades for each point category. It will 
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
-        throw new Error(`The scores are not present in the column headers. Expected format: "|Assignments (n)|Mid-term (n)|Final (n)"`);
+        throw new Error(`The scores are not present in the column headers. Expected format: "Assignments (n)|Mid-term (n)|Final (n)"`);
       }
 
       // Use the first (and only) match from the regular expressions as the max scores.
       maxScores = [assignmentMaxMatches[0], midtermMaxMatches[0], finalMaxMatches[0]];
 
-      // Set conditional formatting for each of the assignment, mid-term and final scores columns.
+      // Set conditional formatting for each of the assignment, mid-term, and final scores columns.
       maxScores.forEach((score, i) => {
         let range = studentsRange.getColumn(i + 1).getCell(0, 0).getRowsBelow(studentData.length - 1);
         setCellValueConditionalFormatting(
@@ -78,7 +78,7 @@ You'll develop a script that totals the grades for each point category. It will 
       let studentsRangeValues = studentsRange.getColumn(5).getValues();
 
       /* Iterate over each of the student rows and compute the total score and letter grade.
-      * Note that iterator starts at index 1 (skip first row).
+      * Note that iterator starts at index 1 to skip first (header) row.
       */
       for (let i = 1; i < studentData.length; i++) {
         // If any of the scores are invalid, skip processing it.
