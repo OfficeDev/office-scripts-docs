@@ -36,7 +36,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Get the worksheet and validate the data.
       let studentsRange = workbook.getActiveWorksheet().getUsedRange();
       if (studentsRange.getColumnCount() !== 6) {
-        throw new Error(`The required columns are not present. Expected headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade" columns.`);
+        throw new Error(`The required columns are not present. Expected column headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade"`);
       }
 
       let studentData = studentsRange.getValues();
