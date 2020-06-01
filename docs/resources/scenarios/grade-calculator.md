@@ -78,7 +78,7 @@ You'll develop a script that totals the grades for each point category. It will 
       let studentsRangeValues = studentsRange.getColumn(5).getValues();
 
       /* Iterate over each of the student rows and compute the total score and letter grade.
-      * Note that iterator starts at index 1 (skip first row).
+      * Note that iterator starts at index 1 to skip first (header) row.
       */
       for (let i = 1; i < studentData.length; i++) {
         // If any of the scores are invalid, skip processing it.
