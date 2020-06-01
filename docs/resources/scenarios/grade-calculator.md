@@ -61,7 +61,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Use the first (and only) match from the regular expressions as the max scores.
       maxScores = [assignmentMaxMatches[0], midtermMaxMatches[0], finalMaxMatches[0]];
 
-      // Set conditional formatting for each of the assignment, mid-term and final scores columns.
+      // Set conditional formatting for each of the assignment, mid-term, and final scores columns.
       maxScores.forEach((score, i) => {
         let range = studentsRange.getColumn(i + 1).getCell(0, 0).getRowsBelow(studentData.length - 1);
         setCellValueConditionalFormatting(
