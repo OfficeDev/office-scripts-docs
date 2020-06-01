@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Differences between Office Scripts and Office Add-ins
 
-Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook a JavaScript API. However, Office Scripts use a specialized, synchronous version of the Office JavaScript API.
+Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook a JavaScript API. However, the Office Scripts APIs are a specialized, synchronous version of the Office JavaScript API.
 
 ![A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers).)](../images/office-programmability-diagram.png)
 
