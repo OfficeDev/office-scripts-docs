@@ -7,9 +7,6 @@ localization_priority: Normal
 
 # Office Scripts sample scenario: Grade calculator
 
-> [!IMPORTANT]
-> This is a legacy sample that uses the Office Scripts Async APIs. These APIs are only recommended when script performance is critical. This sample is in the process of being converted to the new Office Scripts APIs.
-
 In this scenario, you're an instructor tallying every student's end-of-term grades. You've been entering the scores for their assignments and tests as you go. Now, it is time to determine the students' fates.
 
 You'll develop a script that totals the grades for each point category. It will then assign a letter grade to each student based on the total. To help ensure accuracy, you'll add a couple checks to see if any individual scores are too low or high. If a student's score is less than zero or more than the possible point value, the script will flag the cell with a red fill and not total that student's points. This will be a clear indication of which records you need to double-check. You'll also add some basic formatting to the grades so you can quickly view the top and bottom of the class.
