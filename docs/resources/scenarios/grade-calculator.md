@@ -55,7 +55,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
-        throw new Error(`The scores are not present in the column headers. Expected format: "|Assignments (n)|Mid-term (n)|Final (n)"`);
+        throw new Error(`The scores are not present in the column headers. Expected format: "Assignments (n)|Mid-term (n)|Final (n)"`);
       }
 
       // Use the first (and only) match from the regular expressions as the max scores.
