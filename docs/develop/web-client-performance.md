@@ -1,7 +1,7 @@
 ---
 title: 'Improve the performance of your Office Scripts'
 description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
-ms.date: 05/14/2020
+ms.date: 06/01/2020
 localization_priority: Normal
 ---
 

@@ -91,7 +91,7 @@ You'll develop a script that totals the grades for each point category. It will 
         let grade: string;
         switch (true) {
           case total < 60:
-            grade = "E";
+            grade = "F";
             break;
           case total < 70:
             grade = "D";
@@ -126,7 +126,7 @@ You'll develop a script that totals the grades for each point category. It will 
         "#C6EFCE",
         ExcelScript.ConditionalCellValueOperator.equalTo
       );
-      ["D", "E"].forEach((grade) => {
+      ["D", "F"].forEach((grade) => {
         setCellValueConditionalFormatting(
           grade,
           totalRange,
@@ -168,14 +168,7 @@ You'll develop a script that totals the grades for each point category. It will 
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
-      try {
-        conditionalFormatting.getCellValue().setRule({
-          formula1,
-          operator
-        });
-      } catch (e) {
-        throw new Error(`Error while applying conditional formatting. ${value}, ${range.getAddress()}, ${operator}`);
-      };
+      conditionalFormatting.getCellValue().setRule({formula1, operator});
     }
     ```
 
