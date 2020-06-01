@@ -1,7 +1,7 @@
 ---
 title: 'Improve the performance of your Office Scripts'
 description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
-ms.date: 05/14/2020
+ms.date: 06/01/2020
 localization_priority: Normal
 ---
 
@@ -73,7 +73,7 @@ Console logging is a vital tool for [debugging your scripts](../testing/troubles
 
 ### Avoid using try/catch blocks
 
-We don't recommend using [`try`/`catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) in an Office Script. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
+We don't recommend using [`try`/`catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) as part of a script's expected control flow. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
 
 ```TypeScript
 /**
