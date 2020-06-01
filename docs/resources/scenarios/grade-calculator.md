@@ -47,7 +47,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Clear all conditional formatting.
       workbook.getActiveWorksheet().getUsedRange().clearAllConditionalFormats();
 
-      // Use regular expressions to read the max score from the assignment, mid-term, and final score columns.
+      // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
       const assignmentMaxMatches = studentData[0][1].match(/\d+/);
       const midtermMaxMatches = studentData[0][2].match(/\d+/);
