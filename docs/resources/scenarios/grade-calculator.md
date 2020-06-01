@@ -34,18 +34,12 @@ You'll develop a script that totals the grades for each point category. It will 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
       // Get the worksheet and validate the data.
-      const SHEET_NAME = "PHIL 103";
-      const studentSheet = workbook.getWorksheet(SHEET_NAME);
-      if (!studentSheet) {
-        throw new Error(`The required sheet name is not present. ${SHEET_NAME}. Ending script.`);
-      }
-
-      const studentsRange = studentSheet.getUsedRange();
+      let studentsRange = workbook.getActiveWorksheet().getUsedRange();
       if (studentsRange.getColumnCount() !== 6) {
         throw new Error(`The required columns are not present. Expected headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade" columns.`);
       }
 
-      const studentData = studentsRange.getValues();
+      let studentData = studentsRange.getValues();
 
       // Clear the total and grade columns.
       studentsRange.getColumn(4).getCell(1, 0).getAbsoluteResizedRange(studentData.length - 1, 2).clear();
@@ -53,16 +47,19 @@ You'll develop a script that totals the grades for each point category. It will 
       // Clear all conditional formatting.
       workbook.getActiveWorksheet().getUsedRange().clearAllConditionalFormats();
 
-      // Read the max score from the assignment, mid-term, and final score columns.
+      // Use regular expressions to read the max score from the assignment, mid-term, and final score columns.
       let maxScores: string[] = [];
-      try {
-        const assignmentMax = studentData[0][1].match(/\d+/)[0];
-        const midtermMax = studentData[0][2].match(/\d+/)[0];
-        const finalMax = studentData[0][3].match(/\d+/)[0];
-        maxScores = [assignmentMax, midtermMax, finalMax];
-      } catch (e) {
+      const assignmentMaxMatches = studentData[0][1].match(/\d+/);
+      const midtermMaxMatches = studentData[0][2].match(/\d+/);
+      const finalMaxMatches = studentData[0][3].match(/\d+/);
+
+      // Check the matches happened before proceeding.
+      if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
         throw new Error(`The scores are not present in the column headers. Expected format: "|Assignments (n)|Mid-term (n)|Final (n)"`);
       }
+
+      // Use the first (and only) match from the regular expressions as the max scores.
+      maxScores = [assignmentMaxMatches[0], midtermMaxMatches[0], finalMaxMatches[0]];
 
       // Set conditional formatting for each of the assignment, mid-term and final scores columns.
       maxScores.forEach((score, i) => {
@@ -81,7 +78,7 @@ You'll develop a script that totals the grades for each point category. It will 
       let studentsRangeValues = studentsRange.getColumn(5).getValues();
 
       /* Iterate over each of the student rows and compute the total score and letter grade.
-      *  Note that iterator starts at index 1 (skip first row).
+      * Note that iterator starts at index 1 (skip first row).
       */
       for (let i = 1; i < studentData.length; i++) {
         // If any of the scores are invalid, skip processing it.
@@ -162,21 +159,19 @@ You'll develop a script that totals the grades for each point category. It will 
         // For cell value equalTo rule, use this format: formula1: "=\"A\"",
         formula1 = `=\"${value}\"`;
       } else {
-        // For number input (greater than less than rules), just append '='.
+        // For number input (greater-than or less-than rules), just append '='.
         formula1 = `=${value}`;
       }
 
-      // Apply conditional formatting (copied from recorded script).
-      let conditionalFormatting = undefined as ExcelScript.ConditionalFormat | undefined;
+      // Apply conditional formatting.
+      let conditionalFormatting : ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
-
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
       try {
         conditionalFormatting.getCellValue().setRule({
           formula1,
-          formula2: undefined,
-          operator,
+          operator
         });
       } catch (e) {
         throw new Error(`Error while applying conditional formatting. ${value}, ${range.getAddress()}, ${operator}`);

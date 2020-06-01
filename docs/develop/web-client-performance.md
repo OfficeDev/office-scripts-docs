@@ -73,7 +73,7 @@ Console logging is a vital tool for [debugging your scripts](../testing/troubles
 
 ### Avoid using try/catch blocks
 
-We don't recommend using [`try`/`catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) in an Office Script. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
+We don't recommend using [`try`/`catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) as part of a script's expected control flow. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
 
 ```TypeScript
 /**
