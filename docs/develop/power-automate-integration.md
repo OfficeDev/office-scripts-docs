@@ -61,7 +61,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, Power Automate places some restrictions on the return type.
 
-1. The basic types of `string`, `number`, `boolean`, `void`, and `undefined` are supported.
+1. The basic types `string`, `number`, `boolean`, `void`, and `undefined` are supported.
 
 2. Union types used as return types follow the same restrictions as they do when used as script parameters.
 
