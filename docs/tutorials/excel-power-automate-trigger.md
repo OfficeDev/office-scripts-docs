@@ -1,7 +1,7 @@
 ---
 title: 'Automatically run scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts for Excel on the web using automatic external triggers, such as receiving mail through Outlook.'
-ms.date: 03/24/2020
+ms.date: 05/28/2020
 localization_priority: Priority
 ---
 
@@ -31,30 +31,25 @@ Power Automate can't use [relative references](../develop/power-automate-integra
 4. Replace the existing code with the following script and press **Run**. This will setup the workbook with consistent worksheet, table, and PivotTable names.
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
+    function main(workbook: ExcelScript.Workbook) {
       // Add a new worksheet to store our email table
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let emailsSheet = worksheets.add("Emails");
+      let emailsSheet = workbook.addWorksheet("Emails");
 
       // Add data and create a table
-      emailsSheet.getRange("A1:D1").values = [
+      emailsSheet.getRange("A1:D1").setValues([
         ["Date", "Day of the week", "Email address", "Subject"]
-      ];
-      let tables = workbook.tables;
-      let newTable = tables.add(emailsSheet.getRange("A1:D2"), true);
-      newTable.name = "EmailTable";
+      ]);
+      let newTable = workbook.addTable(emailsSheet.getRange("A1:D2"), true);
+      newTable.setName("EmailTable");
 
-      // Add a new pivot table to a new worksheet
-      let pivotWorksheet = worksheets.add();
-      let pivotTables = workbook.pivotTables;
-      let newPivotTable = pivotTables.add("Pivot", "EmailTable", pivotWorksheet.getRange("A3:C20"));
-      pivotWorksheet.name = "SubjectPivot";
+      // Add a new PivotTable to a new worksheet
+      let pivotWorksheet = workbook.addWorksheet("SubjectPivot");
+      let newPivotTable = workbook.addPivotTable("Pivot", "EmailTable", pivotWorksheet.getRange("A3:C20"));
 
       // Setup the pivot hierarchies
-      newPivotTable.rowHierarchies.add(newPivotTable.hierarchies.getItem("Day of the week"));
-      newPivotTable.rowHierarchies.add(newPivotTable.hierarchies.getItem("Email address"));
-      newPivotTable.dataHierarchies.add(newPivotTable.hierarchies.getItem("Subject"));
+      newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Day of the week"));
+      newPivotTable.addRowHierarchy(newPivotTable.getHierarchy("Email address"));
+      newPivotTable.addDataHierarchy(newPivotTable.getHierarchy("Subject"));
     }
     ```
 
@@ -67,11 +62,11 @@ Let's create a script that logs information from an email. We want to know how w
 2. The flow that we'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script:
 
     ```TypeScript
-    async function main(
-      context: Excel.RequestContext,
+    function main(
+      workbook: ExcelScript.Workbook,
       from: string,
       dateReceived: string,
-      subject: string): Promise<void> {
+      subject: string) {
 
     }
     ```
@@ -80,12 +75,12 @@ Let's create a script that logs information from an email. We want to know how w
 
     ```TypeScript
     // Get the email table.
-    let emailWorksheet = context.workbook.worksheets.getItem("Emails");
-    let table = emailWorksheet.tables.getItem("EmailTable");
-
+    let emailWorksheet = workbook.getWorksheet("Emails");
+    let table = emailWorksheet.getTable("EmailTable");
+  
     // Get the PivotTable.
-    let pivotTableWorksheet = context.workbook.worksheets.getItem("Pivot");
-    let pivotTable = pivotTableWorksheet.pivotTables.getItem("SubjectPivot");
+    let pivotTableWorksheet = workbook.getWorksheet("SubjectPivot");
+    let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
 4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`:
@@ -133,7 +128,7 @@ Let's create a script that logs information from an email. We want to know how w
 
     ```TypeScript
     // Add the parsed text to the table.
-    table.rows.add(-1, [[dateReceived, dayText, from, subjectText]]);
+    table.addRow(-1, [dateReceived, dayText, from, subjectText]);
     ```
 
 7. Finally, let's make sure the PivotTable is refreshed. Add the following code to the end of your script, before the closing `}`:
@@ -148,24 +143,24 @@ Let's create a script that logs information from an email. We want to know how w
 Your script is now ready for a Power Automate workflow. It should look like the following script:
 
 ```TypeScript
-async function main(
-  context: Excel.RequestContext,
+function main(
+  workbook: ExcelScript.Workbook,
   from: string,
   dateReceived: string,
-  subject: string): Promise<void> {
+  subject: string) {
   // Get the email table.
-  let emailWorksheet = context.workbook.worksheets.getItem("Emails");
-  let table = emailWorksheet.tables.getItem("EmailTable");
+  let emailWorksheet = workbook.getWorksheet("Emails");
+  let table = emailWorksheet.getTable("EmailTable");
 
   // Get the PivotTable.
-  let pivotTableWorksheet = context.workbook.worksheets.getItem("Pivot");
-  let pivotTable = pivotTableWorksheet.pivotTables.getItem("SubjectPivot");
+  let pivotTableWorksheet = workbook.getWorksheet("Pivot");
+  let pivotTable = pivotTableWorksheet.getPivotTable("SubjectPivot");
 
   // Parse the received date string.
   let date = new Date(dateReceived);
 
   // Convert number representing the day of the week into the name of the day.
-  let dayText : string;
+  let dayText: string;
   switch (date.getDay()) {
     case 0:
       dayText = "Sunday";
@@ -195,7 +190,7 @@ async function main(
   subjectText = subjectText.replace("RE: ", "");
 
   // Add the parsed text to the table.
-  table.rows.add(-1, [[dateReceived, dayText, from, subjectText]]);
+  table.addRow(-1, [dateReceived, dayText, from, subjectText]);
 
   // Refresh the PivotTable to include the new row.
   pivotTable.refresh();

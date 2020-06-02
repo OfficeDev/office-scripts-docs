@@ -1,7 +1,7 @@
 ---
 title: 'Start using scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
-ms.date: 03/24/2020
+ms.date: 05/28/2020
 localization_priority: Priority
 ---
 
@@ -35,9 +35,9 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 3. Replace the default script with the following script. This script adds the current date and time to the first two cells of the **TutorialWorksheet** worksheet.
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
+    function main(workbook: ExcelScript.Workbook) {
       // Get the "TutorialWorksheet" worksheet from the workbook.
-      let worksheet = context.workbook.worksheets.getItem("TutorialWorksheet")
+      let worksheet = workbook.getWorksheet("TutorialWorksheet");
 
       // Get the cells at A1 and B1.
       let dateRange = worksheet.getRange("A1");
@@ -47,10 +47,10 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
       let date = new Date(Date.now());
 
       // Add the date string to A1.
-      dateRange.values = [[date.toLocaleDateString()]];
+      dateRange.setValue(date.toLocaleDateString());
 
       // Add the time string to B1.
-      timeRange.values = [[date.toLocaleTimeString()]];
+      timeRange.setValue(date.toLocaleTimeString());
     }
     ```
 
