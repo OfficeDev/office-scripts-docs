@@ -59,7 +59,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 ## Returning data from a script back to Power Automate
 
-Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, there are some restrictions Power Automate places on the return type.
+Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, Power Automate places some restrictions on the return type.
 
 1. The basic types of `string`, `number`, `boolean`, `void`, and `undefined` are supported.
 
