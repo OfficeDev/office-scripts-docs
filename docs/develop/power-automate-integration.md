@@ -73,7 +73,7 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 ## Avoid using relative references
 
-Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, will fail when ran through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
+Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, will fail when run through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
 
 The following functions will throw an error and fail when called from a script in a Power Automate flow.
 
