@@ -1,7 +1,7 @@
 ---
 title: 'Automatically run scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts for Excel on the web using automatic external triggers, such as receiving mail through Outlook.'
-ms.date: 05/28/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -261,3 +261,5 @@ When the flow is triggered and successfully runs your script, you should see the
 ## Next steps
 
 Visit [Integrate Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn more about connecting Office Scripts with Power Automate.
+
+You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.

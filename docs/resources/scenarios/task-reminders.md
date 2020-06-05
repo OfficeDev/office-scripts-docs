@@ -5,7 +5,7 @@ ms.date: 06/05/2020
 localization_priority: Normal
 ---
 
-# Office Scripts sample scenario: Analyze web downloads
+# Office Scripts sample scenario: Automated task reminders
 
 In this scenario you're managing a project and use an Excel worksheet to track your employees' status. Some people forget to put an entry in the spreadsheet and need to be reminded. Rather than emailing them individually, you want to do this as one action. You also want to use a Teams Adaptive Card to get their statuses, so that people don't have to find the correct spreadsheet for this month.
 
