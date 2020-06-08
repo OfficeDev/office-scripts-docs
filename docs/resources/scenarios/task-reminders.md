@@ -66,7 +66,7 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
       console.log(people);
 
       // Return the array of Employees.
-      return [];
+      return people;
     }
 
     /**
@@ -140,7 +140,8 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
 
 8. Now, we need to create the flow. Open [Power Automate](https://preview.flow.microsoft.com/).
 
-    > [!TIP] If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.
+    > [!TIP]
+    > If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.
 
 9. Create a new **Instant flow**.
 
