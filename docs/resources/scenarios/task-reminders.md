@@ -19,13 +19,13 @@ In this scenario you're managing a project and use an Excel worksheet to track y
 
 ## Prerequisites
 
-This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
 
 ## Setup instructions
 
 1. Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.
 
-2. Open the workbook with Excel for the web.
+2. Open the workbook in Excel on the web.
 
 3. Under the **Automate** tab, open the **Code Editor**.
 
