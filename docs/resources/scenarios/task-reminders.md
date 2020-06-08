@@ -229,7 +229,7 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
 
 To test the flow, make sure any table rows with blank status use an email address tied to a Teams account (you should probably use your own email address while testing).
 
-You can either select **Test** from the flow designer, or run the flow from the **My flows** page. After starting the flow and accepting the use of the  required connections, you should receive an Adaptive Card from Power Automate through Teams. Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.
+You can either select **Test** from the flow designer, or run the flow from the **My flows** page. After starting the flow and accepting the use of the required connections, you should receive an Adaptive Card from Power Automate through Teams. Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.
 
 ### Before running the flow
 
