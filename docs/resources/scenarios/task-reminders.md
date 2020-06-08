@@ -25,7 +25,7 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
 
 1. Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.
 
-2. Open the workbook with Excel for the web.
+2. Open the workbook in Excel on the web.
 
 3. Under the **Automate** tab, open the **Code Editor**.
 
