@@ -7,7 +7,9 @@ localization_priority: Normal
 
 # Office Scripts sample scenario: Automated task reminders
 
-In this scenario you're managing a project and use an Excel worksheet to track your employees' status. Some people forget to put an entry in the spreadsheet and need to be reminded. Rather than emailing them individually, you want to do this as one action. You also want to use a Teams Adaptive Card to get their statuses, so that people don't have to find the correct spreadsheet for this month.
+In this scenario you're managing a project. You use an Excel worksheet to track your employees' status every month. You often need to remind people to fill out their status, so you've decided to automate that reminder process.
+
+You'll create a Power Automate flow to message people with missing status fields and apply their responses to the spreadsheet. To do this, you'll develop a pair of scripts to handle the working with the workbook. The first script gets a list of people with blank statuses and the second script adds a status string to the right row. You'll also make use of [Teams Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/what-are-cards) to have employees enter their status directly from the notification.
 
 ## Scripting skills covered
 
