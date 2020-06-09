@@ -198,12 +198,6 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
           "type": "Action.Submit",
           "title": "Submit",
           "id": "submit"
-        },
-        {
-          "type": "Action.OpenUrl",
-          "title": "Open Spreadsheet",
-          "url": "https://microsoft.sharepoint.com/:x:/t/OfficePlatform/EZS8IHK8HV5FiQIp4IyiD-4BCZ0FR0r0oSkL4f3jQJBP4g?e=OQRrlZ",
-          "id": "open-spreadsheet"
         }
       ]
     }
