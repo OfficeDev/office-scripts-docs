@@ -1,7 +1,7 @@
 ---
 title: 'Start using scripts with Power Automate'
 description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
-ms.date: 05/28/2020
+ms.date: 06/09/2020
 localization_priority: Priority
 ---
 
@@ -12,8 +12,6 @@ This tutorial teaches you how to run an Office Script for Excel on the web throu
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
-
-- [Preview access to Power Automate](https://flow.microsoft.com/blog/flow-preview-program/).
 
 > [!IMPORTANT]
 > This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
@@ -60,7 +58,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to the [Power Automate preview site](https://preview.flow.microsoft.com).
+1. Sign in to the [Power Automate preview site](https://flow.microsoft.com).
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: 'A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.'
-ms.date: 06/05/2020
+ms.date: 06/09/2020
 localization_priority: Normal
 ---
 
@@ -21,7 +21,7 @@ You'll create a Power Automate flow to message people with missing status fields
 
 ## Prerequisites
 
-This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
 
 ## Setup instructions
 
@@ -140,7 +140,7 @@ This scenario uses [Power Automate](https://preview.flow.microsoft.com) and [Mic
 
 7. Save the script with the name **Save Status**.
 
-8. Now, we need to create the flow. Open [Power Automate](https://preview.flow.microsoft.com/).
+8. Now, we need to create the flow. Open [Power Automate](https://flow.microsoft.com/).
 
     > [!TIP]
     > If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.
