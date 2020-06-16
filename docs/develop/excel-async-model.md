@@ -1,55 +1,25 @@
 ---
-title: 'Using the Office Scripts Async APIs in performance-critical scenarios'
-description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern to maximize script performance.'
-ms.date: 05/22/2020
+title: 'Using the Office Scripts Async APIs for '
+description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for legacy scripts.'
+ms.date: 06/15/2020
 localization_priority: Normal
 ---
 
 
-# Using the Office Scripts Async APIs in performance-critical scenarios
+# Using the Office Scripts Async APIs to support legacy scripts
 
-This article will teach you how to write scripts using the async APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they let your script control the data synchronization between the script and the workbook. This gives you maximum control over the network calls to and from the workbook, which are the primary cause of performance issues.
+This article will teach you how to write scripts using the legacy, async, APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they require that your script control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model is significantly more complicated than the standard Office Scripts APIs. We highly recommend following the guidance in [Improve the performance of your Office Scripts](web-client-performance.md) before switching to the Office Scripts Async APIs.
-
-To use the async APIs, you need to add additional syntax to parts of your script. This tells the editor which code blocks are calling the async APIs. You need to add `async` to your `main` function and surround async commands in a function passed to `Excel.run`.
+> The async model is significantly more complicated than the standard Office Scripts APIs. Unless you're working with code that uses this older model, we highly recommend using the [standard API model](scripting-fundamentals.md) instead of the Office Scripts Async APIs.
 
 ## `main` function
 
-To use the async APIs, your script's `main` function needs to be an `async` function, as shown in the following code:
+To use the async APIs, your script's `main` function needs to be an `async` function. You also need to change the first parameter that `main` takes from an `ExcelScript.Workbook` to an `Excel.RequestContext`.
 
 ```TypeScript
-async function main(workbook: ExcelScript.Workbook) {
-    // Your Office Script
-}
-```
-
-## `Excel.run` blocks for async code
-
-`Excel.run` is a function that runs async Office Scripts code. The following script shows the recommended way to use `Excel.run`. Note the following:
-
-- Use `await` before `Excel.run`. This ensures the async block of code completes before proceeding. Otherwise, you might have conflicts with your own script.
-- The function passed to `Excel.run` is also async. This allows it to run without explicitly returning a [Promise](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/promise). In the `Excel.run` block, you can set any variables that were declared earlier in the script. You can also return a value from the function from `await`ed `run` block. Be aware that the Excel objects are different in API sets are not the same and cannot be translated to and from async in your script.
-- Additional `Excel.run` calls could be made later in the script. You could also pull them into separate functions called by `main`.
-
-```TypeScript
-async function main(workbook: ExcelScript.Workbook) {
-
-    // Standard scripting code...
-
-    // A standard async API block.
-    await Excel.run(async (context: Excel.RequestContext) => {
-        // Async API code...
-    });
-
-    // More standard scripting code...
-
-    // An async API block with a returned value.
-    let x = await Excel.run(async (context: Excel.RequestContext) => {
-        // Async API code...
-        return myValue;
-    });
+async function main(context: Excel.RequestContext) {
+    // Your async Office Script
 }
 ```
 
@@ -58,8 +28,6 @@ async function main(workbook: ExcelScript.Workbook) {
 The `main` function accepts an `Excel.RequestContext` parameter, named `context`. Think of `context` as the bridge between your script and the workbook. Your script accesses the workbook with the `context` object and uses that `context` to send data back and forth.
 
 The `context` object is necessary because the script and Excel are running in different processes and locations. The script will need to make changes to or query data from the workbook in the cloud. The `context` object manages those transactions.
-
-By default, Office Scripts handle the interactions between your script and the workbook automatically. If your code doesn't have performance-related issues with synchronization, such as a looped read operations, then we recommend using [the synchronous API instead](/javascript/api/office-scripts/excel?view=office-scripts).
 
 ## Sync and Load
 
@@ -108,8 +76,7 @@ Your script must call `context.sync()` before reading any loaded values.
  * This script uses the async API to get the row count for a range.
  * It shows how to load a property in the async model.
  */
-async function main(workbook: ExcelScript.Workbook) {
-  await Excel.run(async (context: Excel.RequestContext) => {
+async function main(context: Excel.RequestContext) {
     let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
     let range = selectedSheet.getRange("A1:B3");
 
@@ -121,7 +88,6 @@ async function main(workbook: ExcelScript.Workbook) {
 
     // Read and log the property value (3).
     console.log(range.rowCount);
-  });
 }
 ```
 
@@ -132,8 +98,7 @@ You can also load properties across an entire collection. Every collection objec
  * This script uses the async API to get resolved property on every comment in the worksheet.
  * It shows how to load a property from every object in a collection.
  */
-async function main(workbook: ExcelScript.Workbook) {
-  await Excel.run(async (context: Excel.RequestContext) => {
+async function main(context: Excel.RequestContext){
     let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
     let comments = selectedSheet.comments;
 
@@ -142,7 +107,6 @@ async function main(workbook: ExcelScript.Workbook) {
 
     // Synchronize with the workbook to get the properties.
     await context.sync();
-  });
 }
 ```
 
@@ -157,8 +121,7 @@ The following script gets the total number of tables in the workbook and logs th
  * This script uses the async API to get the table count of the workbook.
  * It shows how ClientResult objects return workbook information.
  */
-async function main(workbook: ExcelScript.Workbook) {
-  await Excel.run(async (context: Excel.RequestContext) => {
+async function main(context: Excel.RequestContext) {
     let tableCount = context.workbook.tables.getCount();
 
     // This sync call implicitly loads tableCount.value.
@@ -167,7 +130,6 @@ async function main(workbook: ExcelScript.Workbook) {
 
     // Trying to log the value before calling sync would throw an error.
     console.log(tableCount.value);
-  });
 }
 ```
 

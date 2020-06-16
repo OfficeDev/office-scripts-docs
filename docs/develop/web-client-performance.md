@@ -1,7 +1,7 @@
 ---
 title: 'Improve the performance of your Office Scripts'
 description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 localization_priority: Normal
 ---
 
@@ -92,12 +92,6 @@ function main(workbook: ExcelScript.Workbook) {
   }
 }
 ```
-
-## Control the workbook-script synchronization
-
-If your script has a critical performance need that is not solved by applying these techniques, you can manually control the workbook synchronization. Use the Office Scripts Async APIs to do this. These APIs let you batch together read and write calls in a way that is most optimal for your script. [Here's a primer on the Office Scripts Async APIs](excel-async-model.md).
-
-[!INCLUDE [Async reference documentation](../includes/async-reference-documentation-link.md)]
 
 ## Case-by-case help
 
