@@ -1,7 +1,7 @@
 ---
 title: 'Integrate Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 05/28/2020
+ms.date: 06/16/2020
 localization_priority: Normal
 ---
 
@@ -11,6 +11,17 @@ localization_priority: Normal
 
 > [!IMPORTANT]
 > Currently, you can't run Office Scripts from a [shared flow](/power-automate/share-buttons). Only the user who created a script can run it, even through Power Automate.
+
+## Getting started
+
+To begin combining Power Automate and Office Scripts, follow the tutorial [Start using scripts with Power Automate](../tutorials/excel-power-automate-manual.md). This will teach you how to create a flow that calls a simple script. After you've completed that tutorial and the [Automatically run scripts with Power Automate](../tutorials/excel-power-automate-trigger.md) tutorial, return here to learn details about the platform integrations.
+
+## Excel Online (Business) connector
+
+[Connectors](/connectors/connectors) are the bridges between Power Automate and applications. The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. The "Run script" action lets you call any Office Script accessible through the selected workbook. Not only can you run scripts through a flow, you can pass data to and from the workbook with the flow through the scripts.
+
+> [!IMPORTANT]
+> The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Only people in your organization who are trusted with Power Automate flows can use this connector. However, your administrator should be aware about this increase in workbook exposure. They cannot control individual actions on the Excel controller and would have to restrict access through the [Office Scripts administrator controls](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf).  
 
 ## Passing data from Power Automate into a script
 
@@ -122,3 +133,4 @@ function main(
 - [Automatically run scripts with Power Automate](../tutorials/excel-power-automate-trigger.md)
 - [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
 - [Get started with Power Automate](/power-automate/getting-started)
+- [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)
