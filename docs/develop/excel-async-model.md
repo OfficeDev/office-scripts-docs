@@ -1,5 +1,5 @@
 ---
-title: 'Using the Office Scripts Async APIs for '
+title: 'Using the Office Scripts Async APIs to support legacy scripts'
 description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for legacy scripts.'
 ms.date: 06/15/2020
 localization_priority: Normal
