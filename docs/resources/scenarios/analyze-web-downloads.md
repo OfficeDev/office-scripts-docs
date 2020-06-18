@@ -39,22 +39,22 @@ This sample was demoed as part of the Office Add-ins developer community call fo
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
       // Get the Summary worksheet and table.
-      const summaryWorksheet = workbook.getWorksheet("Summary");
-      const summaryTable = summaryWorksheet?.getTable("Table1");
+      let summaryWorksheet = workbook.getWorksheet("Summary");
+      let summaryTable = summaryWorksheet?.getTable("Table1");
       if (!summaryWorksheet || !summaryTable) {
           console.log("The script expects the Summary worksheet with a summary table named Table1. Please download the correct template and try again.");
           return;
       }
   
       // Get the current worksheet.
-      const currentWorksheet = workbook.getActiveWorksheet();
+      let currentWorksheet = workbook.getActiveWorksheet();
       if (!currentWorksheet.getName().toLocaleLowerCase().startsWith("week")) {
           console.log("Please switch worksheet to one of the weekly data sheets and try again.")
           return;
       }
   
       // Get the values of the active range of the active worksheet.
-      const logRange = currentWorksheet.getUsedRange();
+      let logRange = currentWorksheet.getUsedRange();
   
         if (logRange.getColumnCount() !== 8) {
         console.log(`Verify that you are on the correct worksheet. Either the week's data has been already processed or the content is incorrect. The following columns are expected: ${[
@@ -63,16 +63,16 @@ This sample was demoed as part of the Office Add-ins developer community call fo
         return;
       }
       // Get the range that will contain TRUE/FALSE if the IP address is from the United States (US).
-      const isUSColumn = logRange
+      let isUSColumn = logRange
           .getLastColumn()
           .getOffsetRange(0, 1);
   
       // Get the values of all the US IP addresses.
-      const ipRange = workbook.getWorksheet("USIPAddresses").getUsedRange();
-      const ipRangeValues = ipRange.getValues();
-      const logRangeValues = logRange.getValues();
+      let ipRange = workbook.getWorksheet("USIPAddresses").getUsedRange();
+      let ipRangeValues = ipRange.getValues();
+      let logRangeValues = logRange.getValues();
       // Remove the first row.
-      const topRow = logRangeValues.shift();
+      let topRow = logRangeValues.shift();
       console.log(`Analyzing ${logRangeValues.length} entries.`);
   
       // Create a new array to contain the boolean representing if this is a US IP address.
@@ -80,7 +80,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
   
       // Go through each row in worksheet and add Boolean.
       for (let i = 0; i < logRangeValues.length; i++) {
-          const curRowIP = logRangeValues[i][1];
+          let curRowIP = logRangeValues[i][1];
           if (findIP(ipRangeValues, ipAddressToInteger(curRowIP)) > 0) {
               newCol.push([true]);
           } else {
@@ -108,7 +108,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
       currentWorksheet.getUsedRange().getFormat().autofitColumns();
   
       // Get the calculated summary data.
-      const summaryRangeValues = currentWorksheet.getRange("J2:M2").getValues();
+      let summaryRangeValues = currentWorksheet.getRange("J2:M2").getValues();
   
       // Add the corresponding row to the summary table.
       summaryTable.addRow(null, summaryRangeValues[0]);
@@ -120,13 +120,13 @@ This sample was demoed as part of the Office Add-ins developer community call fo
      */
     function addSummaryData() {
         // Add a summary row and table.
-        const summaryHeader = [["Year", "Week", "US", "Other"]];
-        const countTrueFormula =
+        let summaryHeader = [["Year", "Week", "US", "Other"]];
+        let countTrueFormula =
             "=COUNTIF(" + isUSColumn.getAddress() + ', "=TRUE")/' + (newCol.length - 1);
-        const countFalseFormula =
+        let countFalseFormula =
             "=COUNTIF(" + isUSColumn.getAddress() + ', "=FALSE")/' + (newCol.length - 1);
 
-        const summaryContent = [
+        let summaryContent = [
             [
                 '=TEXT(A2,"YYYY")',
                 '=TEXTJOIN(" ", FALSE, "Wk", WEEKNUM(A2))',
@@ -134,9 +134,9 @@ This sample was demoed as part of the Office Add-ins developer community call fo
                 countFalseFormula
             ]
         ];
-        const summaryHeaderRow = currentWorksheet
+        let summaryHeaderRow = currentWorksheet
             .getRange("J1:M1");
-        const summaryContentRow = currentWorksheet
+        let summaryContentRow = currentWorksheet
             .getRange("J2:M2");
         console.log("2");
 
@@ -146,7 +146,7 @@ This sample was demoed as part of the Office Add-ins developer community call fo
         summaryContentRow.setValues(summaryContent);
         console.log("4");
 
-        const formats = [[".000", ".000"]];
+        let formats = [[".000", ".000"]];
         summaryContentRow
             .getOffsetRange(0, 2)
             .getResizedRange(0, -2).setNumberFormats(formats);
@@ -157,10 +157,10 @@ This sample was demoed as part of the Office Add-ins developer community call fo
      */
     function applyConditionalFormatting(isUSColumn: ExcelScript.Range) {
         // Add conditional formatting to the new column.
-        const conditionalFormatTrue = isUSColumn.addConditionalFormat(
+        let conditionalFormatTrue = isUSColumn.addConditionalFormat(
             ExcelScript.ConditionalFormatType.cellValue
         );
-        const conditionalFormatFalse = isUSColumn.addConditionalFormat(
+        let conditionalFormatFalse = isUSColumn.addConditionalFormat(
             ExcelScript.ConditionalFormatType.cellValue
         );
         // Set TRUE to light blue and FALSE to light orange.
@@ -181,10 +181,10 @@ This sample was demoed as part of the Office Add-ins developer community call fo
      */
     function ipAddressToInteger(ipAddress: string): number {
         // Split the IP address into octets.
-        const octets = ipAddress.split(".");
+        let octets = ipAddress.split(".");
 
         // Create a number for each octet and do the math to create the integer value of the IP address.
-        const fullNum =
+        let fullNum =
             // Define an arbitrary number for the last octet.
             111 +
             parseInt(octets[2]) * 256 +
