@@ -54,7 +54,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Change an adjacent cell
 
-This script gets adjacent cells by using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
+This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
