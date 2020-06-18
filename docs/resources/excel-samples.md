@@ -81,7 +81,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Change all adjacent cells
 
-This script copies the formatting in the active cell to the neighboring cells. Note that this script only works when the active cell is not on an edge of the worksheet.
+This script copies the formatting in the active cell to the neighboring cells. Note that this script only works when the active cell isn't on an edge of the worksheet.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
