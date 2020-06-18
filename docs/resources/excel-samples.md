@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 04/24/2020
+ms.date: 06/18/2020
 localization_priority: Normal
 ---
 
@@ -25,7 +25,7 @@ These samples demonstrate fundamental building blocks for Office Scripts. Add th
 
 This sample reads the value of **A1** and prints it to the console.
 
-``` TypeScript
+```typescript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
   let selectedSheet = workbook.getActiveWorksheet();
@@ -35,6 +35,70 @@ function main(workbook: ExcelScript.Workbook) {
   
   // Print the value of A1.
   console.log(range.getValue());
+}
+```
+
+### Read the active cell
+
+This script logs the value of the current active cell. If multiple cells are selected, the top-leftmost cell will be logged.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the current active cell in the workbook.
+  let cell = workbook.getActiveCell();
+
+  // Log that cell's value.
+  console.log(`The current cell's value is ${cell.getValue()}`);
+}
+```
+
+### Change an adjacent cell
+
+This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the currently active cell in the workbook.
+  let activeCell = workbook.getActiveCell();
+  console.log(`The active cell's address is: ${activeCell.getAddress()}`);
+
+  // Get the cell to the right of the active cell and set its value and color.
+  let rightCell = activeCell.getOffsetRange(0,1);
+  rightCell.setValue("Right cell");
+  console.log(`The right cell's address is: ${rightCell.getAddress()}`);
+  rightCell.getFormat().getFont().setColor("Magenta");
+  rightCell.getFormat().getFill().setColor("Cyan");
+
+  // Get the cell to the above of the active cell and set its value and color.
+  // Note that this operation will fail if the active cell is in the top row.
+  let aboveCell = activeCell.getOffsetRange(-1, 0);
+  aboveCell.setValue("Above cell");
+  console.log(`The above cell's address is: ${aboveCell.getAddress()}`);
+  aboveCell.getFormat().getFont().setColor("White");
+  aboveCell.getFormat().getFill().setColor("Black");
+}
+```
+
+### Change all adjacent cells
+
+This script copies the formatting in the active cell to the neighboring cells. Note that this script only works when the active cell isn't on an edge of the worksheet.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active cell.
+  let activeCell = workbook.getActiveCell();
+
+  // Get the cell that's one row above and one column to the left of the active cell.
+  let cornerCell = activeCell.getOffsetRange(-1,-1);
+
+  // Get a range that includes all the cells surrounding the active cell.
+  let surroundingRange = cornerCell.getResizedRange(2, 2)
+
+  // Copy the formatting from the active cell to the new range.
+  surroundingRange.copyFrom(
+    activeCell, /* The source range. */
+    ExcelScript.RangeCopyType.formats /* What to copy. */
+    );
 }
 ```
 
