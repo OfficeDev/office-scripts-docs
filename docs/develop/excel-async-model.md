@@ -1,7 +1,7 @@
 ---
 title: 'Using the Office Scripts Async APIs to support legacy scripts'
 description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for legacy scripts.'
-ms.date: 06/15/2020
+ms.date: 06/22/2020
 localization_priority: Normal
 ---
 
@@ -11,11 +11,11 @@ localization_priority: Normal
 This article will teach you how to write scripts using the legacy, async, APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they require that your script control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model is significantly more complicated than the standard Office Scripts APIs. Unless you're working with code that uses this older model, we highly recommend using the [standard API model](scripting-fundamentals.md) instead of the Office Scripts Async APIs.
+> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert a legacy script to the new model, you must use a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting legacy async scripts to the current model](#converting-legacy-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
 ## `main` function
 
-To use the async APIs, your script's `main` function needs to be an `async` function. You also need to change the first parameter that `main` takes from an `ExcelScript.Workbook` to an `Excel.RequestContext`.
+Scripts that use the async APIs have a different `main` function. It's an `async` function that has an `Excel.RequestContext` as the first parameter.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -133,10 +133,20 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
+## Converting legacy async scripts to the current model
+
+The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
+
+1. Create a new script and copy the old async code into it. Be sure not to include the old `main` method signature, using the current `function main(workbook: ExcelScript.Workbook)` instead.
+
+2. Remove all the `load` and `sync` calls. They are no longer necessary.
+
+3. All properties have been removed. You now access those objects through `get` and `set` methods, so you'll need to switch those property references to method calls. For example, instead of setting a cell's fill color through property access like this: `mySheet.getRange("A2:C2").format.fill.color = "blue";`, you'll now use methods like this: `mySheet.getRange("A2:C2").getFormat().getFill().setColor("blue");`
+
+4. Collection classes have been replaced by arrays. The `add` and `get` methods of those collection classes were moved to the object that owned the collection, so your references must be updated accordingly. For example, to get a chart named "MyChart" from the first worksheet in the workbook, use the following code: `workbook.getWorksheets()[0].getChart("MyChart");`. Note the `[0]` to access the first value of the `Worksheet[]` returned by `getWorksheets()`.
+
+5. Some methods have been renamed for clarity and added for convenience. Please consult the [Office Scripts API reference](/javascript/api/office-scripts/overview?view=office-scripts) for more details.
+
 ## Office Scripts Async API reference documentation
 
 [!INCLUDE [Async reference documentation](../includes/async-reference-documentation-link.md)]
-
-## See also
-
-- [Improve the performance of your Office Scripts](web-client-performance.md)
