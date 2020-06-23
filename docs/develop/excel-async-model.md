@@ -141,7 +141,7 @@ The current API model doesn't use `load`, `sync`, or a `RequestContext`. This ma
 
 2. Remove all the `load` and `sync` calls. They are no longer necessary.
 
-3. All properties have been removed. You now access those objects through `get` and `set` methods. For example, instead of setting a cell's fill color through property access like this: `mySheet.getRange("A2:C2").format.fill.color = "blue";`, you'll now use methods like this: `mySheet.getRange("A2:C2").getFormat().getFill().setColor("blue");`
+3. All properties have been removed. You now access those objects through `get` and `set` methods, so you'll need to switch those property references to method calls. For example, instead of setting a cell's fill color through property access like this: `mySheet.getRange("A2:C2").format.fill.color = "blue";`, you'll now use methods like this: `mySheet.getRange("A2:C2").getFormat().getFill().setColor("blue");`
 
 4. Collection classes have been replaced by arrays. The `add` and `get` methods of those collection classes were moved to the object that owned the collection, so your references must be updated accordingly. For example, to get a chart named "MyChart" from the first worksheet in the workbook, use the following code: `workbook.getWorksheets()[0].getChart("MyChart");`. Note the `[0]` to access the first value of the `Worksheet[]` returned by `getWorksheets()`.
 
