@@ -11,7 +11,7 @@ localization_priority: Normal
 This article will teach you how to write scripts using the legacy, async, APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they require that your script control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert a legacy script to the new model, you must use a brand new script.
+> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert a legacy script to the new model, you must use a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting legacy async scripts to the current model](#converting-legacy-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
 ## `main` function
 
