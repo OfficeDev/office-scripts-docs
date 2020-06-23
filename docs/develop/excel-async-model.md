@@ -15,7 +15,7 @@ This article will teach you how to write scripts using the legacy, async, APIs. 
 
 ## `main` function
 
-Scripts that use the async APIs have a different `main` function. It is an `async` function that has an `Excel.RequestContext` as the first parameter.
+Scripts that use the async APIs have a different `main` function. It's an `async` function that has an `Excel.RequestContext` as the first parameter.
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
