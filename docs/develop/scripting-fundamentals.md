@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 05/08/2020
+ms.date: 06/24/2020
 localization_priority: Priority
 ---
 
@@ -22,6 +22,9 @@ function main(workbook: ExcelScript.Workbook) {
 ```
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
+
+> [!CAUTION]
+> If your `main` function looks like `async function main(context: Excel.RequestContext)`, then your script is using the legacy, async API model. Please refer to [Using the Office Scripts Async APIs to support legacy scripts](excel-async-model.md) for more information, including how to convert your older script to the current API model.
 
 ## Object model
 
