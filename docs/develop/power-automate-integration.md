@@ -1,7 +1,7 @@
 ---
 title: 'Integrate Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 localization_priority: Normal
 ---
 
