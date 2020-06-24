@@ -1,7 +1,7 @@
 ---
 title: 'Integrate Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 06/22/2020
+ms.date: 06/24/2020
 localization_priority: Normal
 ---
 
@@ -21,7 +21,7 @@ To begin combining Power Automate and Office Scripts, follow the tutorial [Start
 [Connectors](/connectors/connectors) are the bridges between Power Automate and applications. The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. The "Run script" action lets you call any Office Script accessible through the selected workbook. Not only can you run scripts through a flow, you can pass data to and from the workbook with the flow through the scripts.
 
 > [!IMPORTANT]
-> The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Only people in your organization who are trusted with Power Automate flows can use this connector. However, your administrator should be aware about this increase in workbook exposure. Existing data loss prevention policies set in place before the expansion of the Excel Online connector may no longer be sufficient. Your admin cannot control individual actions on the Excel controller and has to restrict access through the [Office Scripts administrator controls](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+> The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf).
 
 ## Passing data from Power Automate into a script
 
