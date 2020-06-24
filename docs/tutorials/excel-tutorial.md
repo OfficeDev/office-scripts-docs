@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.'
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 localization_priority: Priority
 ---
 
@@ -50,31 +50,28 @@ First, we'll need some data and a small starting script.
 
 The previous script colored the "Oranges" row to be orange. Let's add a yellow row for the "Lemons".
 
-1. Open the **Automate** tab.
-2. Press the **Code Editor** button.
-3. Open the script you recorded in the previous section. You should see something similar to this code:
+1. From the now-open **Details** pane, press the **Edit** button.
+2. You should see something similar to this code:
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
+    function main(workbook: ExcelScript.Workbook) {
       // Set fill color to FFC000 for range Sheet1!A2:C2
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
-      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+      let selectedSheet = workbook.getActiveWorksheet();
+      selectedSheet.getRange("A2:C2").getFormat().getFill().setColor("FFC000");
     }
     ```
 
-    This code gets the current worksheet by first accessing the workbook's worksheet collection. Then, it sets the fill color of the range **A2:C2**.
+    This code gets the current worksheet from the workbook. Then, it sets the fill color of the range **A2:C2**.
 
     Ranges are a fundamental part of Office Scripts in Excel on the web. A range is a contiguous, rectangular block of cells that contains values, formula, and formatting. They are the basic structure of cells through which you'll perform most of your scripting tasks.
 
-4. Add the following line to the end of the script (between where the `color` is set and the closing `}`):
+3. Add the following line to the end of the script (between where the `color` is set and the closing `}`):
 
     ```TypeScript
-    selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
+    selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
     ```
 
-5. Test the script by pressing **Run**. Your workbook should now look like this:
+4. Test the script by pressing **Run**. Your workbook should now look like this:
 
     ![A fruit sales data row with the "Oranges" row highlighted orange and the "Lemons" row highlighted yellow.](../images/tutorial-2.png)
 
@@ -85,31 +82,29 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 1. Add the following line to the end of the script (before the closing `}`):
 
     ```TypeScript
-    let table = selectedSheet.tables.add("A1:C5", true);
+    let table = selectedSheet.addTable("A1:C5", true);
     ```
 
 2. That call returns a `Table` object. Let's use that table to sort the data. We'll sort the data in ascending order based on the values in the "Fruit" column. Add the following line after the table creation:
 
     ```TypeScript
-    table.sort.apply([{ key: 0, ascending: true }]);
+    table.getSort().apply([{ key: 0, ascending: true }]);
     ```
 
     Your script should look like this:
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Set fill color to FFC000 for range Sheet1!A2:C2
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
-      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
-      selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
-      let table = selectedSheet.tables.add("A1:C5", true);
-      table.sort.apply([{ key: 0, ascending: true }]);
+    function main(workbook: ExcelScript.Workbook) {
+        // Set fill color to FFC000 for range Sheet12!A2:C2
+        let selectedSheet = workbook.getActiveWorksheet();
+        selectedSheet.getRange("A2:C2").getFormat().getFill().setColor("FFC000");
+        selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
+        let table = selectedSheet.addTable("A1:C5", true);
+        table.getSort().apply([{ key: 0, ascending: true }]);
     }
     ```
 
-    Tables have a `TableSort` object, accessed through the `Table.sort` property. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, we only have one sorting criteria, so we only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
+    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, we only have one sorting criteria, so we only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
 
 3. Run the script. You should see a table like this:
 
