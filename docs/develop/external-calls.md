@@ -36,3 +36,7 @@ async function main(context: Excel.RequestContext): Promise <void> {
 
 > [!IMPORTANT]
 > Some external API calls have inconsistent behavior in Office Scripts. The JavaScript runtime may close before the API call completes (or its `Promise` is fully resolved). Do not rely on external APIs for critical script scenarios.
+
+## See also
+
+- [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
