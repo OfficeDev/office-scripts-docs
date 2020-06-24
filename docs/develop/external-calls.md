@@ -21,7 +21,7 @@ Any external API calls fail when a script is run with Power Automate. This is a 
 The definition files for external APIs aren't included with Office Scripts. The use of such APIs generates compile-time errors for missing definitions. The APIs still run, as shown in the following script:
 
 ```typescript
-async function main(context: Excel.RequestContext): Promise <void> {
+async function main(workbook: ExcelScript.Workbook): Promise <void> {
   /* The following line of code generates the error:
    * "Cannot find name 'fetch'".
    * It will still run and return the JSON from the testing service.
