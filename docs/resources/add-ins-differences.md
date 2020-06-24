@@ -1,13 +1,13 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 03/23/2020
+ms.date: 06/01/2020
 localization_priority: Normal
 ---
 
 # Differences between Office Scripts and Office Add-ins
 
-Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through the `Excel` namespace of the Office JavaScript API. However, Office Scripts are more limited in their scope.
+Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook a JavaScript API. However, the Office Scripts APIs are a specialized, synchronous version of the Office JavaScript API.
 
 ![A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers).)](../images/office-programmability-diagram.png)
 
@@ -23,7 +23,9 @@ Office Scripts are currently only supported by for Excel on the web. All recordi
 
 ## APIs
 
-Office Scripts support most of the Excel JavaScript APIs, which means there's  a lot of functionality overlap between the two platforms. There are two exceptions: events and Common APIs.
+There is no synchronous version of the Office JavaScript APIs for Office Add-ins. The standard Office Scripts APIs are unique to the platform and have numerous optimizations and alterations to avoid the usage of the `load`/`sync` paradigm.
+
+Some of the [Excel JavaScript APIs](/javascript/api/excel?view=excel-js-preview) are compatible with the [Office Scripts Async APIs](../develop/excel-async-model.md). Some samples and add-in code blocks could be ported to `Excel.run` blocks with minimal translation. While the two platforms share functionality, there are gaps. The two major API sets that Office Add-ins have but Office Scripts do not are events and the Common APIs.
 
 ### Events
 

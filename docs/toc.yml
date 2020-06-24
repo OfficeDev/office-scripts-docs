@@ -23,10 +23,16 @@
       href: resources/vba-differences.md
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
+  - name: Troubleshooting
+    items:
+    - name: Troubleshooting basics
+      href: testing/troubleshooting.md
+    - name: Improve script performance
+      href: develop/web-client-performance.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
-  - name: Troubleshooting
-    href: testing/troubleshooting.md
+    - name: Using the async model (legacy)
+      href: develop/excel-async-model.md
   - name: Samples
     items:
     - name: Sample scripts
