@@ -27,17 +27,14 @@
       href: resources/vba-differences.md
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
-<<<<<<< HEAD
     - name: Integrate with Power Automate
       href: develop/power-automate-integration.md
-=======
   - name: Troubleshooting
     items:
     - name: Troubleshooting basics
       href: testing/troubleshooting.md
     - name: Improve script performance
       href: develop/web-client-performance.md
->>>>>>> master
     - name: Undo the effects of an Office Script
       href: testing/undo.md
     - name: Using the async model (legacy)
