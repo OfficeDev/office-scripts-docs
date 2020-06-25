@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 12/13/2019
+ms.date: 05/14/2020
 localization_priority: Normal
 ---
 
@@ -14,14 +14,9 @@ As you develop Office Scripts, you may make mistakes. It's okay. We have tools t
 Sometimes while troubleshooting, you'll want to print messages to the screen. These can show you the current value of variables or which code paths are being triggered. To do this, log text to the console.
 
 ```TypeScript
-console.log("Logging my range's address.");
-myRange.load("address");
-await context.sync();
-console.log(myRange.address);
+console.log("Logging myRange's address.");
+console.log(myRange.getAddress());
 ```
-
-> [!IMPORTANT]
-> Don't forget to `load` worksheet data and `sync` with the workbook before logging object properties.
 
 Strings passed to`console.log` will be displayed in the Code Editor's logging console. To turn on the console, press the **Ellipses** button and select **Logs...**
 
@@ -44,3 +39,4 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Office Scripts in Excel on the web](../overview/excel.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
 - [Undo the effects of an Office Script](undo.md)
+- [Improve the performance of your Office Scripts](../develop/web-client-performance.md)

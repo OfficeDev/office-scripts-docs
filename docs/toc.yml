@@ -7,10 +7,14 @@
     href: overview/excel.md
   - name: Tutorials
     items:
-    - name: Office Scripts basics
+    - name: Learn the basics of Office Scripts
       href: tutorials/excel-tutorial.md
     - name: Read workbook data with a script
       href: tutorials/excel-read-tutorial.md
+    - name: Start using scripts with Power Automate
+      href: tutorials/excel-power-automate-manual.md
+    - name: Automatically run scripts with Power Automate
+      href: tutorials/excel-power-automate-trigger.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts
@@ -23,10 +27,18 @@
       href: resources/vba-differences.md
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
+    - name: Integrate with Power Automate
+      href: develop/power-automate-integration.md
+  - name: Troubleshooting
+    items:
+    - name: Troubleshooting basics
+      href: testing/troubleshooting.md
+    - name: Improve script performance
+      href: develop/web-client-performance.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
-  - name: Troubleshooting
-    href: testing/troubleshooting.md
+    - name: Using the async model (legacy)
+      href: develop/excel-async-model.md
   - name: Samples
     items:
     - name: Sample scripts
@@ -39,3 +51,5 @@
         href: resources/scenarios/analyze-web-downloads.md
       - name: Grade calculator
         href: resources/scenarios/grade-calculator.md
+      - name: Task reminders (with Power Automate)
+        href: resources/scenarios/task-reminders.md
