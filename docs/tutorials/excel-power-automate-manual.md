@@ -1,7 +1,7 @@
 ---
 title: 'Start using scripts with Power Automate'
-description: 'A tutorial about integrating Power Automate with Office Scripts using a manual trigger.'
-ms.date: 06/09/2020
+description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
+ms.date: 06/29/2020
 localization_priority: Priority
 ---
 
