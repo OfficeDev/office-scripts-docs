@@ -1,7 +1,7 @@
 ---
 title: 'Using the Office Scripts Async APIs to support legacy scripts'
 description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for legacy scripts.'
-ms.date: 06/22/2020
+ms.date: 06/29/2020
 localization_priority: Normal
 ---
 
@@ -33,7 +33,7 @@ The `context` object is necessary because the script and Excel are running in di
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. In the async API, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult?view=office-scripts-async)).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excelscript/excel.clientresult?view=office-scripts-async)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
