@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 06/24/2020
+ms.date: 06/29/2020
 localization_priority: Priority
 ---
 
@@ -222,15 +222,15 @@ function main(workbook: ExcelScript.Workbook) {
 
 The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
 
-- [Chart](/javascript/api/office-scripts/excel/excelscript.chart)
-- [Comment](/javascript/api/office-scripts/excel/excelscript.comment)
-- [PivotTable](/javascript/api/office-scripts/excel/excelscript.pivottable)
-- [Range](/javascript/api/office-scripts/excel/excelscript.range)
-- [RangeFormat](/javascript/api/office-scripts/excel/excelscript.rangeformat)
-- [Shape](/javascript/api/office-scripts/excel/excelscript.shape)
-- [Table](/javascript/api/office-scripts/excel/excelscript.table)
-- [Workbook](/javascript/api/office-scripts/excel/excelscript.workbook)
-- [Worksheet](/javascript/api/office-scripts/excel/excelscript.worksheet)
+- [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart)
+- [Comment](/javascript/api/office-scripts/excelscript/excelscript.comment)
+- [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable)
+- [Range](/javascript/api/office-scripts/excelscript/excelscript.range)
+- [RangeFormat](/javascript/api/office-scripts/excelscript/excelscript.rangeformat)
+- [Shape](/javascript/api/office-scripts/excelscript/excelscript.shape)
+- [Table](/javascript/api/office-scripts/excelscript/excelscript.table)
+- [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook)
+- [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet)
 
 ## See also
 
