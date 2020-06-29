@@ -24,10 +24,10 @@ You'll develop a script that analyzes weekly downloads data in the active worksh
 
 This sample was demoed as part of the Office Add-ins developer community call for February 2020.
 
-> [!NOTE]
-> The code shown in this video uses an older API model. The sample presented on this page has been updated, but the code looks a little different from the recording. The changes don't affect the behavior of the script or the other content in the presenter's demo.
-
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
+
+> [!NOTE]
+> The code shown in this video uses an [older, async API model](../../develop/excel-async-model.md). The sample presented on this page has been updated, but the code looks a little different from the recording. The changes don't affect the behavior of the script or the other content in the presenter's demo.
 
 ## Setup instructions
 
