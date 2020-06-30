@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 06/29/2020
+ms.date: 06/30/2020
 localization_priority: Normal
 ---
 
@@ -16,7 +16,7 @@ This article describes the main differences between VBA macros (as well as VBA i
 
 ## Platform and ecosystem
 
-VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop. This lets it work with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
+VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
 
 Office Scripts use a universal runtime or JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
 
