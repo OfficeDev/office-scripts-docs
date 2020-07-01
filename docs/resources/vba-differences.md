@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 03/23/2020
+ms.date: 06/30/2020
 localization_priority: Normal
 ---
 
@@ -16,7 +16,7 @@ This article describes the main differences between VBA macros (as well as VBA i
 
 ## Platform and ecosystem
 
-VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop. This lets it integrate with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
+VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
 
 Office Scripts use a universal runtime or JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
 
@@ -34,7 +34,7 @@ Currently, VBA offers a more complete coverage of Excel features, particularly t
 
 Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's desktop, Mac, or web client.
 
-VBA has no integration with Power Automate. All supported VBA scenarios involved a user attending to the macro's execution.
+VBA doesn't have a Power Automate connector. All supported VBA scenarios involved a user attending to the macro's execution.
 
 ## See also
 

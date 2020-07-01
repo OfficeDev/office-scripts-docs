@@ -27,7 +27,7 @@
       href: resources/vba-differences.md
     - name: Differences between Office Scripts and Office Add-ins
       href: resources/add-ins-differences.md
-    - name: Integrate with Power Automate
+    - name: Run scripts with Power Automate
       href: develop/power-automate-integration.md
   - name: Troubleshooting
     items:
