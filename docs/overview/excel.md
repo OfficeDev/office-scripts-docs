@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 06/25/2020
+ms.date: 07/01/2020
 localization_priority: Priority
 ---
 
@@ -27,7 +27,7 @@ As an example, say you start your work day by opening a .csv file from an accoun
 
 ![The Action Recorder after recording several actions.](../images/action-recorder-intro.png)
 
-The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
+The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
 ## Code Editor
 
