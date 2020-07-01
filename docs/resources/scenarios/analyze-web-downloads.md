@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Analyze web downloads'
 description: 'A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.'
-ms.date: 06/15/2020
+ms.date: 06/25/2020
 localization_priority: Normal
 ---
 
@@ -25,6 +25,9 @@ You'll develop a script that analyzes weekly downloads data in the active worksh
 This sample was demoed as part of the Office Add-ins developer community call for February 2020.
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
+
+> [!NOTE]
+> The code shown in this video uses an older API model (the [Office Scripts Async APIs](../../develop/excel-async-model.md)). The sample presented on this page has been updated, but the code looks a little different from the recording. The changes don't affect the behavior of the script or the other content in the presenter's demo.
 
 ## Setup instructions
 
