@@ -33,7 +33,7 @@ The `context` object is necessary because the script and Excel are running in di
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. In the async API, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excelscript/excel.clientresult?view=office-scripts-async)).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
@@ -112,7 +112,7 @@ async function main(context: Excel.RequestContext){
 
 ### ClientResult
 
-Methods in the async API that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the return `ClientResult` is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
+Methods in the async API that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the returned [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
 
 The following script gets the total number of tables in the workbook and logs that number to the console.
 
