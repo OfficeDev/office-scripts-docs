@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 06/29/2020
+ms.date: 07/08/2020
 localization_priority: Priority
 ---
 
@@ -13,18 +13,18 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 ## `main` function
 
-Each Office Script must contain the `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
-// Your code goes here
+  // Your code goes here
 }
 ```
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
 
 > [!CAUTION]
-> If your `main` function looks like `async function main(context: Excel.RequestContext)`, then your script is using the legacy, async API model. Please refer to [Using the Office Scripts Async APIs to support legacy scripts](excel-async-model.md) for more information, including how to convert your older script to the current API model.
+> If your `main` function looks like `async function main(context: Excel.RequestContext)`, then your script is using the older, async API model. Please refer to [Support older Office Scripts that use the Async APIs](excel-async-model.md) for more information, including how to convert your script to the current API model.
 
 ## Object model
 
@@ -55,9 +55,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Ranges
 
-A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g. **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
+A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g., **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
 
-Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object that's comprised of several smaller objects that are individually set.
+Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object comprised of several smaller objects that are individually set.
 
 Ranges use two-dimensional arrays to manage information. Read the [Working with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-ranges) for more information on handling those arrays in the Office Scripts framework.
 
@@ -158,7 +158,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 ### Collections and other object relations
 
-Any child object can be accessed through its parent object. For example, you can read `Worksheets` from the `Workbook` object. There will be a related `get` method on the parent class that (e.g. `Workbook.getWorksheets()` or `Workbook.getWorksheet(name)`). `get` methods that are singular return a single object and require an ID or name for the specific object (such as the name of a worksheet). `get` methods that are plural return the entire object collection as an array. If the collection is empty, you'll get an empty array (`[]`).
+Any child object can be accessed through its parent object. For example, you can read `Worksheets` from the `Workbook` object. There will be a related `get` method on the parent class that (e.g., `Workbook.getWorksheets()` or `Workbook.getWorksheet(name)`). `get` methods that are singular return a single object and require an ID or name for the specific object (such as the name of a worksheet). `get` methods that are plural return the entire object collection as an array. If the collection is empty, you'll get an empty array (`[]`).
 
 Once the collection is retrieved, you can use regular array operations such as getting its `length` or use `for`, `for..of`, `while` loops for iteration or use TypeScript array methods such as `map`, `forEach` on them. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
 

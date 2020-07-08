@@ -1,17 +1,17 @@
 ---
-title: 'Using the Office Scripts Async APIs to support legacy scripts'
-description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for legacy scripts.'
-ms.date: 06/29/2020
+title: 'Support older Office Scripts that use the async APIs'
+description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for older scripts.'
+ms.date: 07/08/2020
 localization_priority: Normal
 ---
 
 
-# Using the Office Scripts Async APIs to support legacy scripts
+# Support older Office Scripts that use the async APIs
 
-This article will teach you how to write scripts using the legacy, async, APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they require that your script control the data synchronization between the script and the workbook.
+This article will teach you how to maintain and update scripts that use the older, async, APIs. These APIs have the same core functionality as the standard, synchronous Office Scripts APIs, but they require that your script control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert a legacy script to the new model, you must use a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting legacy async scripts to the current model](#converting-legacy-async-scripts-to-the-current-model) section has advice on how to make this transition.
+> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#converting-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
 ## `main` function
 
@@ -51,7 +51,7 @@ await context.sync();
 > [!NOTE]
 > `context.sync()` is implicitly called when a script ends.
 
-After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g. `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation or a method that returns a `ClientResult` (as discussed in the next sections).
+After the `sync` operation completes, the workbook updates to reflect any write operations that script has specified. A write operation is setting any property on a Excel object (e.g., `range.format.fill.color = "red"`) or calling a method that changes a property (e.g., `range.format.autoFitColumns()`). The `sync` operation also reads any values from the workbook that the script requested by using a `load` operation or a method that returns a `ClientResult` (as discussed in the next sections).
 
 Synchronizing your script with the workbook can take time, depending on your network. Minimize the number of `sync` calls to help your script run fast. Otherwise, the async APIs are not faster the standard, synchronous APIs.
 
@@ -133,7 +133,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## Converting legacy async scripts to the current model
+## Converting async scripts to the current model
 
 The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
 
