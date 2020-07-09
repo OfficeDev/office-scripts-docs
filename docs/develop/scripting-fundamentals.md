@@ -24,7 +24,7 @@ function main(workbook: ExcelScript.Workbook) {
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
 
 > [!CAUTION]
-> If your `main` function looks like `async function main(context: Excel.RequestContext)`, then your script is using the older, async API model. Please refer to [Support older Office Scripts that use the Async APIs](excel-async-model.md) for more information, including how to convert your script to the current API model.
+> If your `main` function looks like `async function main(context: Excel.RequestContext)`, your script is using the older async API model. For more information (including how to convert your script to the current API model), refer to [Support older Office Scripts that use the Async APIs](excel-async-model.md).
 
 ## Object model
 
