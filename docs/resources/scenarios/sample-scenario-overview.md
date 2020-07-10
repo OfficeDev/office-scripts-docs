@@ -1,7 +1,7 @@
 ---
 title: 'Sample scenarios for Office Scripts'
 description: 'An explanation for the larger, scenario-driven samples for Office Scripts in Excel on the web.'
-ms.date: 02/20/2020
+ms.date: 07/10/2020
 localization_priority: Normal
 ---
 
@@ -18,6 +18,10 @@ The [Analyze web downloads](analyze-web-downloads.md) scenario features a script
 ### Grade calculator
 
 The [Grade calculator](grade-calculator.md) scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions.
+
+### Task reminders
+
+The [Task reminders](task-reminders.md) scenario uses an Office Script in a Power Automate flow to send reminders to coworkers to update a project's status. It highlights the skills of Power Automate integration and data transfer to and from scripts.
 
 ## See also
 
