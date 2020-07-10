@@ -1,7 +1,7 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 04/23/2020
+ms.date: 07/10/2020
 localization_priority: Priority
 ---
 
@@ -67,10 +67,9 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     ```
 
 6. Run the script.
-7. Open the console. Go to the **Ellipses** menu and press **Logs...**.
-8. You should see `[Array[1]]` in the console. This is not a number because ranges are two-dimensional arrays of data. That two-dimensional range is being logged to the console directly. Luckily, the Code Editor does let you see the contents of the array.
-9. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by pressing the blue triangle.
-10. Expand the second level of the array by pressing the newly revealed blue triangle. You should now see this:
+7. You should see `[Array[1]]` in the console. This is not a number because ranges are two-dimensional arrays of data. That two-dimensional range is being logged to the console directly. Luckily, the Code Editor lets you see the contents of the array.
+8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by pressing the blue triangle.
+9. Expand the second level of the array by pressing the newly revealed blue triangle. You should now see this:
 
     ![The console log displaying the the output "-20.05", nested under two arrays.](../images/tutorial-4.png)
 
@@ -81,7 +80,7 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 1. Add the following code to the end of the script:
 
     ```TypeScript
-        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
     let positiveValue = Math.abs(range.getValue());
     range.setValue(positiveValue);
     ```
@@ -119,7 +118,8 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.getRowCount(); i++) {
+    let rowCount = range.getRowCount();
+    for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
             let positiveValue = Math.abs(rangeValues[i][3]);

@@ -1,7 +1,7 @@
 ---
 title: 'Automatically run scripts with automated Power Automate flows'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate by using an automatic external trigger (receiving mail through Outlook).'
-ms.date: 07/01/2020
+ms.date: 07/10/2020
 localization_priority: Priority
 ---
 
@@ -197,7 +197,7 @@ function main(
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to the [Power Automate preview site](https://flow.microsoft.com).
+1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
