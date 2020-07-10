@@ -72,7 +72,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
     ![The manual trigger option for creating a new instant flow.](../images/power-automate-tutorial-3.png)
 
-    Note that manually triggered flows are just one of many types of flows. You'll make a flow that automatically runs when you receive an email in the next tutorial.
+    Note that a manually triggered flow is just one of many types of flows. In the next tutorial, you'll make a flow that automatically runs when you receive an email.
 
 5. Press **New step**.
 
