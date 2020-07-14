@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 07/08/2020
+ms.date: 07/10/2020
 localization_priority: Normal
 ---
 
@@ -94,19 +94,19 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, will fail when run through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
 
-The following functions will throw an error and fail when called from a script in a Power Automate flow.
+The following methods will throw an error and fail when called from a script in a Power Automate flow.
 
-- `Chart.activate`
-- `Range.select`
-- `Workbook.getActiveCell`
-- `Workbook.getActiveChart`
-- `Workbook.getActiveChartOrNullObject`
-- `Workbook.getActiveSlicer`
-- `Workbook.getActiveSlicerOrNullObject`
-- `Workbook.getActiveWorksheet`
-- `Workbook.getSelectedRange`
-- `Workbook.getSelectedRanges`
-- `Worksheet.activate`
+| Class | Method |
+|--|--|
+| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
 
 ## Example
 

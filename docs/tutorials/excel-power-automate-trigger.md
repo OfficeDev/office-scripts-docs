@@ -197,7 +197,7 @@ function main(
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to the [Power Automate preview site](https://flow.microsoft.com).
+1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
