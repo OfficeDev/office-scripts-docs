@@ -1,11 +1,11 @@
 ---
-title: 'Automatically run scripts with automated Power Automate flows'
-description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate by using an automatic external trigger (receiving mail through Outlook).'
+title: 'Pass data to scripts in an automatically-run Power Automate flow'
+description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate by using an automatic external trigger (receiving mail through Outlook) and passing data from the previous flow step to the script.'
 ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
-# Automatically run scripts with automated Power Automate flows (preview)
+# Pass data to scripts in an automatically-run Power Automate flow (preview)
 
 This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook.
 

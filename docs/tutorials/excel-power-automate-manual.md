@@ -1,11 +1,11 @@
 ---
-title: 'Start using scripts with Power Automate'
+title: 'Using scripts with a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
 ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
-# Start using scripts with Power Automate (preview)
+# Using scripts with a manual Power Automate flow (preview)
 
 This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
 
@@ -119,4 +119,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Complete the [Automatically run scripts with automated Power Automate flows](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script.
+Complete the [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script and set the Power Automate flow to run based on events instead of manual button presses.
