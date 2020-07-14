@@ -5,7 +5,7 @@ ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
-# Using scripts with a manual Power Automate flow (preview)
+# Call scripts from a manual Power Automate flow (preview)
 
 This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
 

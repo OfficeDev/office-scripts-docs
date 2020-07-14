@@ -11,7 +11,7 @@
       href: tutorials/excel-tutorial.md
     - name: Read workbook data with a script
       href: tutorials/excel-read-tutorial.md
-    - name: Using scripts with a manual Power Automate flow
+    - name: Call scripts from a manual Power Automate flow
       href: tutorials/excel-power-automate-manual.md
     - name: Pass data in an automatically-run Power Automate flow
       href: tutorials/excel-power-automate-trigger.md
