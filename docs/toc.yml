@@ -39,7 +39,7 @@
       href: develop/web-client-performance.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
-    - name: Using the async model (legacy)
+    - name: Support older Office Scripts
       href: develop/excel-async-model.md
   - name: Samples
     items:

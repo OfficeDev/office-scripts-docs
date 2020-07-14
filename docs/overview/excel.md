@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 06/29/2020
+ms.date: 07/10/2020
 localization_priority: Priority
 ---
 
@@ -19,7 +19,7 @@ This series of documents teaches you how to use these tools. You'll be introduce
 
 ## When to use Office Scripts
 
-Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, an Office Script can help you by reducing your whole workflow to a single button press.
+Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, you can turn all that work into an easy-to-run Office Script. Run your script with a button-press in Excel or combine it with Power Automate to streamline your entire workflow.
 
 As an example, say you start your work day by opening a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formatting a table, adding formulas, and creating a PivotTable in a new worksheet. Those actions you repeat daily can be recorded once with the Action Recorder. From then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts automate your common tasks so you and your workplace can be more efficient and productive.
 
@@ -27,7 +27,7 @@ As an example, say you start your work day by opening a .csv file from an accoun
 
 ![The Action Recorder after recording several actions.](../images/action-recorder-intro.png)
 
-The Action Recorder records actions you take in Excel and translates them into a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
+The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
 ## Code Editor
 
