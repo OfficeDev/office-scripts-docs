@@ -7,12 +7,11 @@ localization_priority: Normal
 
 # Run Office Scripts with Power Automate
 
-[Power Automate](https://flow.microsoft.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
-
-> [!IMPORTANT]
-> Currently, you can't run Office Scripts from a [shared flow](/power-automate/share-buttons). Only the user who created a script can run it, even through Power Automate.
+[Power Automate](https://flow.microsoft.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
 
 ## Getting started
+
+If you are new to Power Automate, we recommend visiting [Get started with Power Automate](/power-automate/getting-started). There, you can learn more about all the automation possibilities available to you. The documents here focus on how Office Scripts work with Power Automate and how that can help improve your Excel experience.
 
 To begin combining Power Automate and Office Scripts, follow the tutorial [Start using scripts with Power Automate](../tutorials/excel-power-automate-manual.md). This will teach you how to create a flow that calls a simple script. After you've completed that tutorial and the [Automatically run scripts with automated Power Automate flows](../tutorials/excel-power-automate-trigger.md) tutorial, return here for detailed information about connecting Office Scripts to Power Automate flows.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Automatically run scripts with automated Power Automate flows'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate by using an automatic external trigger (receiving mail through Outlook).'
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
@@ -11,7 +11,7 @@ This tutorial teaches you how to use an Office Script for Excel on the web with 
 
 ## Prerequisites
 
-[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
+[!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
 > This tutorial assumes you have completed the [Run Office Scripts in Excel on the web with Power Automate](excel-power-automate-manual.md) tutorial.

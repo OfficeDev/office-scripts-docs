@@ -1,7 +1,7 @@
 ---
 title: 'Start using scripts with Power Automate'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
@@ -11,7 +11,7 @@ This tutorial teaches you how to run an Office Script for Excel on the web throu
 
 ## Prerequisites
 
-[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
+[!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
 > This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
