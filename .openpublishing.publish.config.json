@@ -11,7 +11,10 @@
       "build_output_subfolder": "office-scripts-docs",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": ["office-scripts", "office-scripts-async"],
+      "moniker_ranges": [
+        "office-scripts",
+        "office-scripts-async"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -64,13 +67,16 @@
       "template_folder": "_themes.pdf"
     }
   },
- "dependent_packages": [
-  {
-    "id": "Microsoft.OpenPublishing.CommonPlugins",
-    "nuget_feed": "https://www.myget.org/F/op/api/v2",
-    "path_to_root": "_dependentPackages/CommonPlugins",
-    "target_framework": "net45",
-    "version": "latest"
+  "dependent_packages": [
+    {
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest"
+    }
+  ],
+  "docs_build_engine": {
+    "name": "docfx_v3"
   }
-]
 }
