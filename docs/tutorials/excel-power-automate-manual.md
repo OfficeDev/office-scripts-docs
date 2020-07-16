@@ -121,4 +121,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Complete the [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script and set the Power Automate flow to run based on events instead of manual button presses.
+Complete the [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script and run the Power Automate flow when certain events occur.

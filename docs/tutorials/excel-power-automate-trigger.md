@@ -1,6 +1,6 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
-description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate by using an automatic external trigger (receiving mail through Outlook) and passing data from the previous flow step to the script.'
+description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
 ms.date: 07/14/2020
 localization_priority: Priority
 ---
