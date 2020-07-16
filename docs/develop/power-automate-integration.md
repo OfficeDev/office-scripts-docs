@@ -1,20 +1,19 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 07/01/2020
+ms.date: 07/10/2020
 localization_priority: Normal
 ---
 
 # Run Office Scripts with Power Automate
 
-[Power Automate](https://flow.microsoft.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments. If you are new to Power Automate, we recommend visiting [Get started with Power Automate](/power-automate/getting-started). There, you can learn more about automating your workflows across multiple services.
-
-> [!IMPORTANT]
-> Currently, you can't run Office Scripts from a [shared flow](/power-automate/share-buttons). Only the user who created a script can run it, even through Power Automate.
+[Power Automate](https://flow.microsoft.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
 
 ## Getting started
 
-To begin combining Power Automate and Office Scripts, follow the tutorial [Start using scripts with Power Automate](../tutorials/excel-power-automate-manual.md). This will teach you how to create a flow that calls a simple script. After you've completed that tutorial and the [Automatically run scripts with automated Power Automate flows](../tutorials/excel-power-automate-trigger.md) tutorial, return here for detailed information about connecting Office Scripts to Power Automate flows.
+If you are new to Power Automate, we recommend visiting [Get started with Power Automate](/power-automate/getting-started). There, you can learn more about all the automation possibilities available to you. The documents here focus on how Office Scripts work with Power Automate and how that can help improve your Excel experience.
+
+To begin combining Power Automate and Office Scripts, follow the tutorial [Start using scripts with Power Automate](../tutorials/excel-power-automate-manual.md). This will teach you how to create a flow that calls a simple script. After you've completed that tutorial and the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) tutorial, return here for detailed information about connecting Office Scripts to Power Automate flows.
 
 ## Excel Online (Business) connector
 
@@ -28,9 +27,9 @@ To begin combining Power Automate and Office Scripts, follow the tutorial [Start
 Power Automate lets you pass pieces of data between steps of your flow. Scripts can be configured to accept whatever types of information you need and return anything from your workbook that you want in your flow. Input for your script is specified by adding parameters to the `main` function (in addition to `workbook: ExcelScript.Workbook`). Output from the script is declared by adding a return type to `main`.
 
 > [!NOTE]
-> When you create a "Run Script" block in you flow, the accepted parameters and returned types are populated. If you change the parameters or return types of your script, you'll need to redo the "Run script" block of your flow. This ensure the data is being parsed correctly.
+> When you create a "Run Script" block in your flow, the accepted parameters and returned types are populated. If you change the parameters or return types of your script, you'll need to redo the "Run script" block of your flow. This ensures the data is being parsed correctly.
 
-The following sections cover the details of input and output for scripts used in Power Automate. If you'd like a hands-on approach to learning this topic, try out the [Automatically run scripts with automated Power Automate flows](../tutorials/excel-power-automate-trigger.md) tutorial or explore the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario.
+The following sections cover the details of input and output for scripts used in Power Automate. If you'd like a hands-on approach to learning this topic, try out the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) tutorial or explore the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario.
 
 ### `main` Parameters: Passing data to a script
 
@@ -77,7 +76,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 10. Default parameter values are allowed (for example `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
 
-## Returning data from a script
+### Returning data from a script
 
 Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, Power Automate places some restrictions on the return type.
 
@@ -95,19 +94,19 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, will fail when run through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
 
-The following functions will throw an error and fail when called from a script in a Power Automate flow.
+The following methods will throw an error and fail when called from a script in a Power Automate flow.
 
-- `Chart.activate`
-- `Range.select`
-- `Workbook.getActiveCell`
-- `Workbook.getActiveChart`
-- `Workbook.getActiveChartOrNullObject`
-- `Workbook.getActiveSlicer`
-- `Workbook.getActiveSlicerOrNullObject`
-- `Workbook.getActiveWorksheet`
-- `Workbook.getSelectedRange`
-- `Workbook.getSelectedRanges`
-- `Worksheet.activate`
+| Class | Method |
+|--|--|
+| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
 
 ## Example
 
@@ -139,7 +138,7 @@ function main(
 ## See also
 
 - [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md)
-- [Automatically run scripts with automated Power Automate flows](../tutorials/excel-power-automate-trigger.md)
+- [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md)
 - [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
 - [Get started with Power Automate](/power-automate/getting-started)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)

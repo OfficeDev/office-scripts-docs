@@ -11,9 +11,9 @@
       href: tutorials/excel-tutorial.md
     - name: Read workbook data with a script
       href: tutorials/excel-read-tutorial.md
-    - name: Start using scripts with Power Automate
+    - name: Call scripts from a manual Power Automate flow
       href: tutorials/excel-power-automate-manual.md
-    - name: Automatically run scripts with Power Automate
+    - name: Pass data in an automatically-run Power Automate flow
       href: tutorials/excel-power-automate-trigger.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
@@ -39,7 +39,7 @@
       href: develop/web-client-performance.md
     - name: Undo the effects of an Office Script
       href: testing/undo.md
-    - name: Using the async model (legacy)
+    - name: Support older Office Scripts
       href: develop/excel-async-model.md
   - name: Samples
     items:

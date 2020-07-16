@@ -1,17 +1,17 @@
 ---
-title: 'Start using scripts with Power Automate'
+title: 'Call scripts from a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 localization_priority: Priority
 ---
 
-# Start using scripts with Power Automate (preview)
+# Call scripts from a manual Power Automate flow (preview)
 
 This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
 
 ## Prerequisites
 
-[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
+[!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
 > This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
@@ -58,7 +58,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to the [Power Automate preview site](https://flow.microsoft.com).
+1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
@@ -71,6 +71,8 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box, select **Manually trigger a flow** from the list of options under **Choose how to trigger the flow**, and press **Create**.
 
     ![The manual trigger option for creating a new instant flow.](../images/power-automate-tutorial-3.png)
+
+    Note that a manually triggered flow is just one of many types of flows. In the next tutorial, you'll make a flow that automatically runs when you receive an email.
 
 5. Press **New step**.
 
@@ -119,4 +121,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Complete the [Automatically run scripts with automated Power Automate flows](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script.
+Complete the [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script and run the Power Automate flow when certain events occur.
