@@ -12,7 +12,7 @@ This tutorial teaches you how to use an Office Script for Excel on the web with 
 Completing this tutorial help you understand how to run scripts based on outside information. You'll see how flows can be triggered automatically as well as how data is passed between flow steps, especially for input into an Office Script.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial.
 
 ## Prerequisites
 
