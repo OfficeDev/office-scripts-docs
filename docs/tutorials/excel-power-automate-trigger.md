@@ -87,9 +87,8 @@ Let's create a script that logs information from an email. We want to know how w
 
     ```TypeScript
       // Parse the received date string to determine the day of the week.
-      const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
       let emailDate = new Date(dateReceived);
-      let dayName = DAYS[emailDate.getDay()];
+      let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
     ```
 
 5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`:
@@ -133,9 +132,8 @@ function main(
   let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
 
   // Parse the received date string to determine the day of the week.
-  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   let emailDate = new Date(dateReceived);
-  let dayName = DAYS[emailDate.getDay()];
+  let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
 
   // Remove the reply tag from the email subject to group emails on the same thread.
   let subjectText = subject.replace("Re: ", "");
