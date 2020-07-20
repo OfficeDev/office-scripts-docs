@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 localization_priority: Priority
 ---
 
@@ -9,12 +9,14 @@ localization_priority: Priority
 
 This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook.
 
+Completing this tutorial help you understand how to run scripts based on outside information. You'll see how flows can be triggered automatically as well as how data is passed between flow steps, especially for input into an Office Script.
+
+> [!TIP]
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> This tutorial assumes you have completed the [Run Office Scripts in Excel on the web with Power Automate](excel-power-automate-manual.md) tutorial.
 
 ## Prepare the workbook
 
@@ -51,7 +53,7 @@ Power Automate can't use [relative references](../develop/power-automate-integra
     }
     ```
 
-## Create an Office Script for your automated workflow
+## Create an Office Script
 
 Let's create a script that logs information from an email. We want to know how which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
 
@@ -84,34 +86,10 @@ Let's create a script that logs information from an email. We want to know how w
 4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
-    // Parse the received date string.
-    let date = new Date(dateReceived);
-
-    // Convert number representing the day of the week into the name of the day.
-    let dayText : string;
-    switch (date.getDay()) {
-      case 0:
-        dayText = "Sunday";
-        break;
-      case 1:
-        dayText = "Monday";
-        break;
-      case 2:
-        dayText = "Tuesday";
-        break;
-      case 3:
-        dayText = "Wednesday";
-        break;
-      case 4:
-        dayText = "Thursday";
-        break;
-      case 5:
-        dayText = "Friday";
-        break;
-      default:
-        dayText = "Saturday";
-        break;
-    }
+      // Parse the received date string to determine the day of the week.
+      const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      let emailDate = new Date(dateReceived);
+      let dayName = DAYS[emailDate.getDay()];
     ```
 
 5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`:
@@ -126,7 +104,7 @@ Let's create a script that logs information from an email. We want to know how w
 
     ```TypeScript
     // Add the parsed text to the table.
-    table.addRow(-1, [dateReceived, dayText, from, subjectText]);
+    table.addRow(-1, [dateReceived, dayName, from, subjectText]);
     ```
 
 7. Finally, let's make sure the PivotTable is refreshed. Add the following code to the end of your script, before the closing `}`:
@@ -151,44 +129,20 @@ function main(
   let table = emailWorksheet.getTable("EmailTable");
 
   // Get the PivotTable.
-  let pivotTableWorksheet = workbook.getWorksheet("Pivot");
-  let pivotTable = pivotTableWorksheet.getPivotTable("SubjectPivot");
+  let pivotTableWorksheet = workbook.getWorksheet("SubjectPivot");
+  let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
 
-  // Parse the received date string.
-  let date = new Date(dateReceived);
-
-  // Convert number representing the day of the week into the name of the day.
-  let dayText: string;
-  switch (date.getDay()) {
-    case 0:
-      dayText = "Sunday";
-      break;
-    case 1:
-      dayText = "Monday";
-      break;
-    case 2:
-      dayText = "Tuesday";
-      break;
-    case 3:
-      dayText = "Wednesday";
-      break;
-    case 4:
-      dayText = "Thursday";
-      break;
-    case 5:
-      dayText = "Friday";
-      break;
-    default:
-      dayText = "Saturday";
-      break;
-  }
+  // Parse the received date string to determine the day of the week.
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let emailDate = new Date(dateReceived);
+  let dayName = DAYS[emailDate.getDay()];
 
   // Remove the reply tag from the email subject to group emails on the same thread.
   let subjectText = subject.replace("Re: ", "");
   subjectText = subjectText.replace("RE: ", "");
 
   // Add the parsed text to the table.
-  table.addRow(-1, [dateReceived, dayText, from, subjectText]);
+  table.addRow(-1, [dateReceived, dayName, from, subjectText]);
 
   // Refresh the PivotTable to include the new row.
   pivotTable.refresh();

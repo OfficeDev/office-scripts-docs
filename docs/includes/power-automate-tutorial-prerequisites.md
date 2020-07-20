@@ -1,5 +1,3 @@
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 Before starting this tutorial, you'll need access to the following applications:
 
 - [Power Automate](/power-automate/organization-q-and-a).

@@ -7,7 +7,9 @@ localization_priority: Priority
 
 # Record, edit, and create Office Scripts in Excel on the web
 
-This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web.
+This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web. You'll be recording a script that applies some formatting to a sales record worksheet. You'll then edit the script created by your recording to apply more formatting, create a table, and sort that table.
+
+Completing the tutorial gives you practice recording your actions and making small edits to those recordings. This record-then-edit pattern lets you see the changes you're making to your workbook in code form.
 
 ## Prerequisites
 
