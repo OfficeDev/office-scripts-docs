@@ -28,7 +28,7 @@ When your Excel Script encounters a problem running, it produces an error. You'l
 
 ## Data limits
 
-There are hard limits set by the feature to prevent large amounts of data from being transferred at once and large numbers of individual transactions.
+There are limits on how much Excel data can be transferred at once and how many individual Power Automate transactions can be conducted.
 
 ### Excel
 
