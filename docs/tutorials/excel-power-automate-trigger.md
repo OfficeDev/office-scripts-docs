@@ -7,9 +7,7 @@ localization_priority: Priority
 
 # Pass data to scripts in an automatically-run Power Automate flow (preview)
 
-This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook.
-
-Completing this tutorial help you understand how to run scripts based on outside information. You'll see how flows can be triggered automatically as well as how data is passed between flow steps, especially for input into an Office Script.
+This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
 > [!TIP]
 > If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial.
@@ -43,7 +41,7 @@ Power Automate can't use [relative references](../develop/power-automate-integra
       newTable.setName("EmailTable");
 
       // Add a new PivotTable to a new worksheet
-      let pivotWorksheet = workbook.addWorksheet("SubjectPivot");
+      let pivotWorksheet = workbook.addWorksheet("Subjects");
       let newPivotTable = workbook.addPivotTable("Pivot", "EmailTable", pivotWorksheet.getRange("A3:C20"));
 
       // Setup the pivot hierarchies
@@ -79,7 +77,7 @@ Let's create a script that logs information from an email. We want to know how w
     let table = emailWorksheet.getTable("EmailTable");
   
     // Get the PivotTable.
-    let pivotTableWorksheet = workbook.getWorksheet("SubjectPivot");
+    let pivotTableWorksheet = workbook.getWorksheet("Subjects");
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
@@ -128,7 +126,7 @@ function main(
   let table = emailWorksheet.getTable("EmailTable");
 
   // Get the PivotTable.
-  let pivotTableWorksheet = workbook.getWorksheet("SubjectPivot");
+  let pivotTableWorksheet = workbook.getWorksheet("Subjects");
   let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
 
   // Parse the received date string to determine the day of the week.

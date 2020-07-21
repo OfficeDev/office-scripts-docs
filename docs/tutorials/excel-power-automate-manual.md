@@ -7,9 +7,7 @@ localization_priority: Priority
 
 # Call scripts from a manual Power Automate flow (preview)
 
-This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed.
-
-Completing this tutorial gives you practice connecting Office Scripts with Power Automate flows. Once you understand the basic pattern, you can expand the flow to include other applications automate more of your daily workflow.
+This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
 
 > [!TIP]
 > If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
