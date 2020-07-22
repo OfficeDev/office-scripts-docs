@@ -21,9 +21,18 @@ This series of documents teaches you how to use these tools. You'll be introduce
 
 To use Office Scripts, you'll need the following.
 
-1. An [E3 license](https://www.microsoft.com/microsoft-365/enterprise/office-365-e3).
 1. [Excel on the web](https://www.office.com/launch/excel) (other platforms, such as desktop, are not supported).
 1. Office Scripts [enabled by your administrator](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+1. One of the following licenses:
+
+    - Office 365 Business
+    - Office 365 Business Premium
+    - Office 365 ProPlus
+    - Office 365 ProPlus for Devices
+    - Office 365 Enterprise E3
+    - Office 365 Enterprise E5
+    - Office 365 A3
+    - Office 365 A5
 
 ## When to use Office Scripts
 
