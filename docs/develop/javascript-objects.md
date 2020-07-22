@@ -1,7 +1,7 @@
 ---
 title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 06/29/2020
+ms.date: 07/16/2020
 localization_priority: Normal
 ---
 
@@ -102,7 +102,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The [Work with dates](../resources/excel-samples.md#work-with-dates) section of the samples has more Date-related scripts.
+The [Work with dates](../resources/excel-samples.md#dates) section of the samples has more date-related scripts.
 
 ## Math
 

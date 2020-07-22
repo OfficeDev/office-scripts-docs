@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 06/18/2020
+ms.date: 07/16/2020
 localization_priority: Normal
 ---
 
@@ -102,7 +102,67 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Work with dates
+### Change each individual cell in a range
+
+This script loops over the currently select range. It clears the current formatting and sets the fill color in each cell to a random color.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the currently selected range.
+  let range = workbook.getSelectedRange();
+
+  // Get the size boundaries of the range.
+  let rows = range.getRowCount();
+  let cols = range.getColumnCount();
+
+  // Clear any existing formatting
+  range.clear(ExcelScript.ClearApplyTo.formats);
+
+  // Iterate over the range.
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      // Generate a random color hex-code.
+      let colorString = `#${Math.random().toString(16).substr(-6)}`;
+
+      // Set the color of the current cell to that random hex-code.
+      range.getCell(row, col).getFormat().getFill().setColor(colorString);
+    }
+  }
+}
+```
+
+## Collections
+
+These samples work with collections of objects in the workbook.
+
+### Iterating over collections
+
+This script gets and logs the names of all the worksheets in the workbook. It also sets the their tab colors to a random color.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get all the worksheets in the workbook.
+  let sheets = workbook.getWorksheets();
+
+  // Get a list of all the worksheet names.
+  let names = sheets.map ((sheet) => sheet.getName());
+
+  // Write in the console all the worksheet names and the total count.
+  console.log(names);
+  console.log(`Total worksheets inside of this workbook: ${sheets.length}`);
+  
+  // Set the tab color each worksheet to a random color
+  for (let sheet of sheets) {
+    // Generate a random color hex-code.
+    let colorString = `#${Math.random().toString(16).substr(-6)}`;
+
+    // Set the color of the current worksheet's tab to that random hex-code.
+    sheet.setTabColor(colorString);
+  }
+}
+```
+
+## Dates
 
 The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.
 
