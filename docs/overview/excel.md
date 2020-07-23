@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 07/10/2020
+ms.date: 07/21/2020
 localization_priority: Priority
 ---
 
@@ -15,7 +15,24 @@ This series of documents teaches you how to use these tools. You'll be introduce
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
+## Requirements
+
 [!INCLUDE [Preview note](../includes/preview-note.md)]
+
+To use Office Scripts, you'll need the following.
+
+1. [Excel on the web](https://www.office.com/launch/excel) (other platforms, such as desktop, are not supported).
+1. Office Scripts [enabled by your administrator](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
+
+    - Office 365 Business
+    - Office 365 Business Premium
+    - Office 365 ProPlus
+    - Office 365 ProPlus for Devices
+    - Office 365 Enterprise E3
+    - Office 365 Enterprise E5
+    - Office 365 A3
+    - Office 365 A5
 
 ## When to use Office Scripts
 
