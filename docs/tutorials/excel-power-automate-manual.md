@@ -10,7 +10,7 @@ localization_priority: Priority
 This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. Office Scripts use [TypeScript](../code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
