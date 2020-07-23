@@ -23,7 +23,7 @@ To use Office Scripts, you'll need the following.
 
 1. [Excel on the web](https://www.office.com/launch/excel) (other platforms, such as desktop, are not supported).
 1. Office Scripts [enabled by your administrator](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf).
-1. One of the following licenses:
+1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Apps, such as:
 
     - Office 365 Business
     - Office 365 Business Premium
