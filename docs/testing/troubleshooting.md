@@ -26,7 +26,7 @@ Logs do not affect the workbook.
 
 When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
-## **Automate** tab not appearing
+## Automate tab not appearing
 
 The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel for the web.
 
