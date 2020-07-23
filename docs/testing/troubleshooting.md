@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 05/14/2020
+ms.date: 07/20/2020
 localization_priority: Normal
 ---
 
@@ -25,6 +25,25 @@ Logs do not affect the workbook.
 ## Error messages
 
 When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
+
+## Data limits
+
+There are limits on how much Excel data can be transferred at once and how many individual Power Automate transactions can be conducted.
+
+### Excel
+
+Excel for the web has the following limitations when making calls to the workbook through a script:
+
+- Requests and responses are limited to **5MB**.
+- A range is limited to **five million cells**.
+
+If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. You can also APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) to target specific cells instead of large ranges.
+
+### Power Automate
+
+When using Office Scripts with Power Automate, you're limited to **200 calls per day**. This limit resets at 12:00 AM UTC.
+
+The Power Automate platform also other usage limitation, which can be found in the article [Limits and configuration in Power Automate](/power-automate/limits-and-config).
 
 ## Help resources
 
