@@ -1,7 +1,7 @@
 ---
 title: 'Call scripts from a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 07/20/2020
+ms.date: 07/24/2020
 localization_priority: Priority
 ---
 
@@ -84,7 +84,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
     ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
 
-8. Specify the following settings for the **Run script** connector:
+8. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive

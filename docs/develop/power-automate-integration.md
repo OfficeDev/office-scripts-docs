@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 07/10/2020
+ms.date: 07/24/2020
 localization_priority: Normal
 ---
 
@@ -17,7 +17,7 @@ To begin combining Power Automate and Office Scripts, follow the tutorial [Start
 
 ## Excel Online (Business) connector
 
-[Connectors](/connectors/connectors) are the bridges between Power Automate and applications. The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. The "Run script" action lets you call any Office Script accessible through the selected workbook. Not only can you run scripts through a flow, you can pass data to and from the workbook with the flow through the scripts.
+[Connectors](/connectors/connectors) are the bridges between Power Automate and applications. The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. The "Run script" action lets you call any Office Script accessible through the selected workbook. You can also give your scripts input parameters so data can be provided by the flow, or have your script return information for later steps in the flow.
 
 > [!IMPORTANT]
 > The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf).
@@ -41,7 +41,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name does not matter.
 
-2. Every parameter must have a type.
+2. Every parameter must have a type (such as `string` or `number`).
 
 3. The basic types `string`, `number`, `boolean`, `any`, `unknown`, `object`, and `undefined` are supported.
 
@@ -49,7 +49,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 5. Nested arrays are supported as parameters (but not as return types).
 
-6. Union types are allowed if they are a union of literals belonging to a single type (`string`, `number`, or `boolean`). Unions of a supported type with undefined are also supported.
+6. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
 
 7. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
 
