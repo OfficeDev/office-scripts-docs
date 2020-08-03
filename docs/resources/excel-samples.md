@@ -162,6 +162,35 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Querying and deleting from a collection
+
+This script creates a new worksheet. It checks for an existing copy of the worksheet and deletes it before making a new sheet.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Name of the worksheet to be added.
+  let name = "Index";
+
+  // Get any worksheet with that name.
+  let sheet = workbook.getWorksheet("Index");
+  
+  // If `null` wasn't returned, then there was a pre-existing worksheet with that name.
+  if (sheet) {
+    console.log(`Worksheet by the name ${name} already exists. Deleting it.`);
+    // Delete the sheet.
+    sheet.delete();
+  }
+  
+  // Add a blank worksheet with the name "Index".
+  // Note that this code runs regardless of whether an existing sheet was deleted.
+  console.log(`Adding the worksheet named ${name}.`);
+  let newSheet = workbook.addWorksheet("Index");
+
+  // Switch to the new worksheet.
+  newSheet.activate();
+}
+```
+
 ## Dates
 
 The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.
