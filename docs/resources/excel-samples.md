@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 07/16/2020
+ms.date: 08/04/2020
 localization_priority: Normal
 ---
 
@@ -299,6 +299,65 @@ function main(workbook: ExcelScript.Workbook) {
   });
 }
 ```
+
+## Formulas
+
+These samples use Excel formulas and show how to work with them in scripts.
+
+## Single formula
+
+This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let selectedSheet = workbook.getActiveWorksheet();
+
+  // Set A1 to 2.
+  let a1 = selectedSheet.getRange("A1");
+  a1.setValue(2);
+
+  // Set B1 to the formula =(2*A1), which should equal 4.
+  let b1 = selectedSheet.getRange("B1")
+  b1.setFormula("=(2*A1)");
+
+  // Log the current results for `getFormula` and `getValue` at B1.
+  console.log(`B1 - Formula: ${b1.getFormula()} | Value: ${b1.getValue()}`);
+}
+```
+
+### Spilling results from a formula
+
+This script transposes the range "A1:D2" to "A4:B7" by using TRANSPOSE function. If the transpose results in #SPILL error, it clears the target range and applies the formula again.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let sheet = workbook.getActiveWorksheet();
+  // Use the data in A1:D2 for the sample.
+  let dataAddress = "A1:D2"
+  let inputRange = sheet.getRange(dataAddress);
+
+  // Place the transposed data starting at A4.
+  let targetStartCell = sheet.getRange("A4");
+
+  // Compute the target range.
+  let targetRange = targetStartCell.getResizedRange(inputRange.getColumnCount() - 1, inputRange.getRowCount() - 1);
+
+  // Call the transpose helper function.
+  targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+
+  // Check if the range update resulted in a spill error.
+  let checkValue = targetStartCell.getValue() as string;
+  if (checkValue === '#SPILL!') {
+    // Clear target range and call the transpose function again.
+    console.log("Target range has data that is preventing update. Clearing target range.");
+    targetRange.clear();
+    targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+  }
+
+  targetRange.select();
+  console.log("Complete.")
+  return;
+}
 
 ## Scenario samples
 
