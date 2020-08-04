@@ -354,9 +354,8 @@ function main(workbook: ExcelScript.Workbook) {
     targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
   }
 
+  // Select the transposed range to highlight it.
   targetRange.select();
-  console.log("Complete.")
-  return;
 }
 ```
 
