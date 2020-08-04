@@ -358,6 +358,7 @@ function main(workbook: ExcelScript.Workbook) {
   console.log("Complete.")
   return;
 }
+```
 
 ## Scenario samples
 
