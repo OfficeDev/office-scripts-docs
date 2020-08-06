@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 07/20/2020
+ms.date: 07/24/2020
 localization_priority: Priority
 ---
 
@@ -174,7 +174,7 @@ function main(
 
     ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
 
-8. Specify the following settings for the **Run script** connector:
+8. Next, you'll select the workbook, script, and script input arguments to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
