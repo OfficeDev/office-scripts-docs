@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Platform limits and requirements with Office Scripts
 
-There are some platform limitations of which you be aware when developing Office Scripts. This article details browser support and data limits.
+There are some platform limitations of which you should be aware when developing Office Scripts. This article details the browser support and data limits for Office Scripts for Excel on the web.
 
 ## Browser support
 
@@ -16,6 +16,9 @@ Office Scripts work in any browser that [supports Office for the web](https://su
 ### Third-party cookies
 
 Your browser needs third-party cookies enabled to show the **Automate** tab in Excel on the web. Check your browser settings if the tab isn't being displayed. If you're using a private browser session, you may need to re-enable this setting each time.
+
+> [!NOTE]
+> Some browsers refer to this setting as "all cookies", instead of "third-party cookies".
 
 ## Data limits
 
