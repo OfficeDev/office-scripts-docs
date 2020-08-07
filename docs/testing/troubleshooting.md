@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 07/20/2020
+ms.date: 07/23/2020
 localization_priority: Normal
 ---
 
@@ -26,24 +26,14 @@ Logs do not affect the workbook.
 
 When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
-## Data limits
+## Automate tab not appearing
 
-There are limits on how much Excel data can be transferred at once and how many individual Power Automate transactions can be conducted.
+The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel for the web.
 
-### Excel
-
-Excel for the web has the following limitations when making calls to the workbook through a script:
-
-- Requests and responses are limited to **5MB**.
-- A range is limited to **five million cells**.
-
-If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. You can also APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) to target specific cells instead of large ranges.
-
-### Power Automate
-
-When using Office Scripts with Power Automate, you're limited to **200 calls per day**. This limit resets at 12:00 AM UTC.
-
-The Power Automate platform also other usage limitation, which can be found in the article [Limits and configuration in Power Automate](/power-automate/limits-and-config).
+1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
+1. [Have your admin enable the feature](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+1. [Check that your browser is supported](platform-limits.md#browser-support).
+1. [Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).
 
 ## Help resources
 
@@ -57,5 +47,6 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 
 - [Office Scripts in Excel on the web](../overview/excel.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
-- [Undo the effects of an Office Script](undo.md)
+- [Platform Limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
+- [Undo the effects of an Office Script](undo.md)
