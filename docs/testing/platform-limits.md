@@ -37,7 +37,7 @@ If you're encountering errors when dealing with large datasets, try using multip
 
 When using Office Scripts with Power Automate, you're limited to **200 calls per day**. This limit resets at 12:00 AM UTC.
 
-The Power Automate platform also other usage limitation, which can be found in the article [Limits and configuration in Power Automate](/power-automate/limits-and-config).
+The Power Automate platform also has usage limitations, which can be found in the article [Limits and configuration in Power Automate](/power-automate/limits-and-config).
 
 ## See also
 
