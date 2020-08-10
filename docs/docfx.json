@@ -1,3 +1,5 @@
+
+
 {
   "build": {
     "content": [
@@ -48,8 +50,17 @@
       "titleSuffix": "Office Scripts"
     },
     "fileMetadata": {
+      "ms.prod": {
+        "develop/*.md": "excel",
+        "overview/*.md": "excel",
+        "resources/*.md": "excel",
+        "testing/*.md": "excel"
+      },
       "ms.topic": {
         "tutorials/*.md": "tutorial"
+      },
+      "ms.custom": {
+        "tutorials/*.md": "scenarios:getting-started; languages:JavaScript,TypeScript"
       }
     },
     "template": [],

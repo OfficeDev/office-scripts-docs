@@ -1,20 +1,20 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.'
-ms.date: 04/23/2020
+ms.date: 07/21/2020
 localization_priority: Priority
 ---
 
 # Record, edit, and create Office Scripts in Excel on the web
 
-This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web.
+This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web. You'll record a script that applies some formatting to a sales record worksheet. You'll then edit the recorded script to apply more formatting, create a table, and sort that table. This record-then-edit pattern is an important tool to see what your Excel actions look like as code.
 
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
-> This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/excel.md) to learn more about the script environment.
+> This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts Code Editor environment](../overview/code-editor-environment.md) to learn more about the script environment.
 
 ## Add data and record a basic script
 

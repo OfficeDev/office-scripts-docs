@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 05/14/2020
+ms.date: 07/23/2020
 localization_priority: Normal
 ---
 
@@ -26,6 +26,15 @@ Logs do not affect the workbook.
 
 When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
+## Automate tab not appearing
+
+The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel for the web.
+
+1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
+1. [Have your admin enable the feature](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+1. [Check that your browser is supported](platform-limits.md#browser-support).
+1. [Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).
+
 ## Help resources
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems. Often, you'll be able to find the solution to your problem through a quick Stack Overflow search. If not, ask your question and tag it with the "office-scripts" tag. Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.
@@ -38,5 +47,6 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 
 - [Office Scripts in Excel on the web](../overview/excel.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
-- [Undo the effects of an Office Script](undo.md)
+- [Platform Limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
+- [Undo the effects of an Office Script](undo.md)

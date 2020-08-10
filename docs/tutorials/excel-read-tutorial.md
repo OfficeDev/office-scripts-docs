@@ -1,23 +1,20 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 07/10/2020
+ms.date: 07/20/2020
 localization_priority: Priority
 ---
 
 # Read workbook data with Office Scripts in Excel on the web
 
-This tutorial teaches you how to read data from a workbook with an Office Script for Excel on the web. You'll then edit the data you read and put it back in the workbook.
+This tutorial teaches you how to read data from a workbook with an Office Script for Excel on the web. You'll be writing a new script that formats a bank statement and normalizes the data in that statement. As part of that data clean-up, your script will read values from the transaction cells, apply a simple formula to each value, and write the resulting answer to the workbook. Reading data from the workbook lets you automate some of your decision making processes in the script.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> This tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend reviewing the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction). Visit [Office Scripts in Excel on the web](../overview/excel.md) to learn more about the script environment.
 
 ## Read a cell
 
@@ -145,3 +142,5 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 ## Next steps
 
 Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel on the web](../resources/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
+
+The next series of Office Scripts tutorials focus on using Office Scripts with Power Automate. Learn more about the advantages combining the two platforms in [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) or try the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial to create a Power Automate flow that uses an Office Script.

@@ -1,20 +1,20 @@
 ---
 title: 'Call scripts from a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 07/14/2020
+ms.date: 07/24/2020
 localization_priority: Priority
 ---
 
 # Call scripts from a manual Power Automate flow (preview)
 
-This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com).
+This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
+
+> [!TIP]
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
 [!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> This tutorial assumes you have completed the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
 
 ## Prepare the workbook
 
@@ -84,7 +84,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
     ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
 
-8. Specify the following settings for the **Run script** connector:
+8. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive

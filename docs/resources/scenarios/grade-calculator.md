@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: 'A sample that determines the percentage and letter grades for a class of students.'
-ms.date: 06/01/2020
+ms.date: 07/24/2020
 localization_priority: Normal
 ---
 
@@ -127,8 +127,8 @@ You'll develop a script that totals the grades for each point category. It will 
         setCellValueConditionalFormatting(
           grade,
           totalRange,
-          "#9C0006",
-          "#FFC7CE",
+          "#443300",
+          "#FFEE22",
           ExcelScript.ConditionalCellValueOperator.equalTo
         );
       })
@@ -173,7 +173,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
 ## Running the script
 
-Run the **Grade Calculator** script on the only worksheet. The script will total the grades and assign each student a letter grade. If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated.
+Run the **Grade Calculator** script on the only worksheet. The script will total the grades and assign each student a letter grade. If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated. Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.
 
 ### Before running the script
 
