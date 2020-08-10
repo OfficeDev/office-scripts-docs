@@ -51,10 +51,10 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "develop/*.md": "product-specific",
-        "overview/*.md": "product-specific",
-        "resources/*.md": "product-specific",
-        "testing/*.md": "product-specific"
+        "develop/*.md": "excel",
+        "overview/*.md": "excel",
+        "resources/*.md": "excel",
+        "testing/*.md": "excel"
       },
       "ms.topic": {
         "tutorials/*.md": "tutorial"
