@@ -51,14 +51,8 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "concepts/*.md": "product-specific",
-        "design/*.md": "product-specific",
         "develop/*.md": "product-specific",
-        "excel/*.md": "excel",
         "overview/*.md": "product-specific",
-        "publish/*.md": "product-specific",
-        "reference/*.md": "product-specific",
-        "reference/manifest/*.md": "product-specific",
         "resources/*.md": "product-specific",
         "testing/*.md": "product-specific"
       },
@@ -66,7 +60,6 @@
         "tutorials/*.md": "tutorial"
       },
       "ms.custom": {
-        "quickstarts/*.md": "scenarios:getting-started; languages:JavaScript,TypeScript",
         "tutorials/*.md": "scenarios:getting-started; languages:JavaScript,TypeScript"
       }
     },
