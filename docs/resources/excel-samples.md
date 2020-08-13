@@ -174,7 +174,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Get any worksheet with that name.
   let sheet = workbook.getWorksheet("Index");
   
-  // If `null` wasn't returned, then there was a pre-existing worksheet with that name.
+  // If `null` wasn't returned, then there's already a worksheet with that name.
   if (sheet) {
     console.log(`Worksheet by the name ${name} already exists. Deleting it.`);
     // Delete the sheet.
@@ -327,7 +327,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Spilling results from a formula
 
-This script transposes the range "A1:D2" to "A4:B7" by using TRANSPOSE function. If the transpose results in #SPILL error, it clears the target range and applies the formula again.
+This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function. If the transpose results in a #SPILL error, it clears the target range and applies the formula again.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -348,7 +348,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Check if the range update resulted in a spill error.
   let checkValue = targetStartCell.getValue() as string;
   if (checkValue === '#SPILL!') {
-    // Clear target range and call the transpose function again.
+    // Clear the target range and call the transpose function again.
     console.log("Target range has data that is preventing update. Clearing target range.");
     targetRange.clear();
     targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
