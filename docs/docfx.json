@@ -36,6 +36,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "office-scripts",
       "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
