@@ -28,7 +28,7 @@ When your Excel Script encounters a problem running, it produces an error. You'l
 
 ## Automate tab not appearing
 
-The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel for the web.
+The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.
 
 1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
 1. [Have your admin enable the feature](/microsoft-365/admin/manage/manage-office-scripts-settings).
