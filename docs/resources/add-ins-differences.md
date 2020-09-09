@@ -25,7 +25,7 @@ Office Scripts are currently only supported by for Excel on the web. All recordi
 
 There is no synchronous version of the Office JavaScript APIs for Office Add-ins. The standard Office Scripts APIs are unique to the platform and have numerous optimizations and alterations to avoid the usage of the `load`/`sync` paradigm.
 
-Some of the [Excel JavaScript APIs](/javascript/api/excel?view=excel-js-preview) are compatible with the [Office Scripts Async APIs](../develop/excel-async-model.md). Some samples and add-in code blocks could be ported to `Excel.run` blocks with minimal translation. While the two platforms share functionality, there are gaps. The two major API sets that Office Add-ins have but Office Scripts do not are events and the Common APIs.
+Some of the [Excel JavaScript APIs](/javascript/api/excel?view=excel-js-preview&preserve-view=true) are compatible with the [Office Scripts Async APIs](../develop/excel-async-model.md). Some samples and add-in code blocks could be ported to `Excel.run` blocks with minimal translation. While the two platforms share functionality, there are gaps. The two major API sets that Office Add-ins have but Office Scripts do not are events and the Common APIs.
 
 ### Events
 
