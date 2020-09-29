@@ -1,7 +1,7 @@
 ---
 title: 'External API call support in Office Scripts'
 description: 'Support and guidance for making external API calls in an Office Script.'
-ms.date: 06/25/2020
+ms.date: 09/24/2020
 localization_priority: Normal
 ---
 
@@ -37,7 +37,7 @@ async function main(workbook: ExcelScript.Workbook): Promise <void> {
 Any external API calls fail when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel client and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
 
 > [!WARNING]
-> The failure of external calls [Excel Online connector](/connectors/excelonlinebusiness) in Power Automate is there to help uphold existing data loss prevention policies. However, the scripts run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel on the web through the [Office Scripts administrator controls](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf).
+> The failure of external calls [Excel Online connector](/connectors/excelonlinebusiness) in Power Automate is there to help uphold existing data loss prevention policies. However, the scripts run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel on the web through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 ## See also
 
