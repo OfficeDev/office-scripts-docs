@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 07/21/2020
+ms.date: 09/29/2020
 localization_priority: Priority
 ---
 
@@ -22,6 +22,7 @@ This series of documents teaches you how to use these tools. You'll be introduce
 To use Office Scripts, you'll need the following.
 
 1. [Excel on the web](https://www.office.com/launch/excel) (other platforms, such as desktop, are not supported).
+1. OneDrive for Business.
 1. Office Scripts [enabled by your administrator](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
 
@@ -60,7 +61,10 @@ One easy way to start learning the capabilities of Office Scripts is to record s
 
 Office Scripts can be shared with other users of an Excel workbook. When you share a script with others in a workbook, the script is attached to the workbook. Your scripts are stored in your OneDrive, and when you share one, you create a link to it in the workbook you have open.
 
-More details about sharing and unsharing scripts can be in the article [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US).
+More details about sharing and unsharing scripts can be in the article [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
+
+> [!NOTE]
+> Since Office Scripts are stored on a user's OneDrive, they follow the same retention and deletion policies. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
 
 ## Connecting Office Scripts to Power Automate
 

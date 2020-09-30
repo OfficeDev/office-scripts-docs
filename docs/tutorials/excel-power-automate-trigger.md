@@ -186,7 +186,7 @@ function main(
 
     *Note that the parameters for the script will only appear once the script is selected.*
 
-    ![The Power Automate action option for Run script (preview).](../images/power-automate-params-tutorial-3.png)
+    ![Parameters of the Power Automate action option for Run script (preview).](../images/power-automate-params-tutorial-3.png)
 
 9. Press **Save**.
 
