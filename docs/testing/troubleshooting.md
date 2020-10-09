@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 07/23/2020
+ms.date: 10/08/2020
 localization_priority: Normal
 ---
 
@@ -18,7 +18,7 @@ console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-Strings passed to`console.log` will be displayed in the Code Editor's logging console. To turn on the console, press the **Ellipses** button and select **Logs...**
+Strings passed to `console.log` will be displayed in the Code Editor's logging console. To turn on the console, press the **Ellipses** button and select **Logs...**
 
 Logs do not affect the workbook.
 
@@ -26,7 +26,7 @@ Logs do not affect the workbook.
 
 When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
-## Automate tab not appearing
+## Automate tab not appearing or Office Scripts unavailable
 
 The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.
 
@@ -34,6 +34,8 @@ The following steps should help troubleshoot any problems related to the **Autom
 1. [Have your admin enable the feature](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. [Check that your browser is supported](platform-limits.md#browser-support).
 1. [Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).
+
+[!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ## Help resources
 

@@ -1,7 +1,7 @@
 ---
 title: 'Platform limits and requirements with Office Scripts'
 description: 'Resource limits and browser support for Office Scripts when used with Excel on the web'
-ms.date: 07/23/2020
+ms.date: 10/09/2020
 localization_priority: Normal
 ---
 
@@ -12,6 +12,8 @@ There are some platform limitations of which you should be aware when developing
 ## Browser support
 
 Office Scripts work in any browser that [supports Office for the web](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452). However, some JavaScript features aren't supported in Internet Explorer 11 (IE 11). Any features introduced in [ES6 or later](https://www.w3schools.com/Js/js_es6.asp) won't work with IE 11. If people in your organization still use that browser, be sure to test your scripts in that environment when sharing them.
+
+[!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ### Third-party cookies
 
