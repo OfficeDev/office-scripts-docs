@@ -35,8 +35,6 @@ To use Office Scripts, you'll need the following.
     - Office 365 A3
     - Office 365 A5
 
-[!INCLUDE [Teams support note](../includes/teams-support-note.md)]
-
 ## When to use Office Scripts
 
 Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, you can turn all that work into an easy-to-run Office Script. Run your script with a button-press in Excel or combine it with Power Automate to streamline your entire workflow.
