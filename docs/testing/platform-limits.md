@@ -1,7 +1,7 @@
 ---
 title: 'Platform limits and requirements with Office Scripts'
 description: 'Resource limits and browser support for Office Scripts when used with Excel on the web'
-ms.date: 10/09/2020
+ms.date: 10/23/2020
 localization_priority: Normal
 ---
 
@@ -17,10 +17,17 @@ Office Scripts work in any browser that [supports Office for the web](https://su
 
 ### Third-party cookies
 
-Your browser needs third-party cookies enabled to show the **Automate** tab in Excel on the web. Check your browser settings if the tab isn't being displayed. If you're using a private browser session, you may need to re-enable this setting each time.
+Your browser needs third-party cookies enabled to show the **Automate** tab in Excel on the web. Check your [browser settings](#instructions-for-adjusting-cookie-settings-in-popular-browsers) if the tab isn't being displayed. If you're using a private browser session, you may need to re-enable this setting each time.
 
 > [!NOTE]
 > Some browsers refer to this setting as "all cookies", instead of "third-party cookies".
+
+#### Instructions for adjusting cookie settings in popular browsers
+
+- [Chrome](https://support.google.com/chrome/answer/95647)
+- [Edge](https://support.microsoft.com/microsoft-edge/temporarily-allow-cookies-and-site-data-in-microsoft-edge-597f04f2-c0ce-f08c-7c2b-541086362bd2)
+- [Firefox](https://support.mozilla.org/kb/disable-third-party-cookies)
+- [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)
 
 ## Data limits
 
