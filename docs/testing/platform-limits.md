@@ -17,7 +17,7 @@ Office Scripts work in any browser that [supports Office for the web](https://su
 
 ### Third-party cookies
 
-Your browser needs third-party cookies enabled to show the **Automate** tab in Excel on the web. Check your [browser settings](#instructions-for-adjusting-cookie-settings-in-popular-browsers) if the tab isn't being displayed. If you're using a private browser session, you may need to re-enable this setting each time.
+Your browser needs third-party cookies enabled to show the **Automate** tab in Excel on the web. Check your browser settings if the tab isn't being displayed. If you're using a private browser session, you may need to re-enable this setting each time.
 
 > [!NOTE]
 > Some browsers refer to this setting as "all cookies", instead of "third-party cookies".
