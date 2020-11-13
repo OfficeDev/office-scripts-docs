@@ -24,3 +24,10 @@ Adding folders to your OneDrive helps keep your scripts organized. Any folders u
 ## File ownership and retention
 
 Office Scripts are stored on a user's OneDrive, they follow the same retention and deletion policies. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
+
+## See also
+
+- [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
+- [Troubleshooting Office Scripts](../testing/troubleshooting.md)
+- [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
+- [Undo the effects of an Office Script](undo.md)
