@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: 'Resources for learning Office Scripts in Excel on the web, including tutorials, conceptual articles, and code samples.'
-ms.date: 01/22/2020
+ms.date: 10/30/2020
 localization_priority: Priority
 ---
 
@@ -76,22 +76,6 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Enable Office Scripts" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>Enable Office Scripts</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
                             <a href="/javascript/api/office-scripts/overview" target="_blank"><img src="images/index-landing-page/i_reference.svg" alt="Office Scripts API reference" /></a>
                         </div>
                     </div>
@@ -113,6 +97,22 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                     </div>
                     <div class="cardText">
                         <a href="resources/excel-samples.md" target="_blank"><h3>Sample scripts</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>Admin settings</h3></a>
                     </div>
                 </div>
             </div>
