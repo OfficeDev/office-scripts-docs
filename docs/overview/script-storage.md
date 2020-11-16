@@ -7,13 +7,13 @@ localization_priority: Normal
 
 # Office Scripts file storage and ownership
 
-Office Scripts are stored as **.osts** files in your OneDrive. The permissions of a script inside a workbook are limited to the permissions of that script's owner. The script **.osts** files carry whatever shared access and permissions that user's OneDrive allows.
+Office Scripts are stored as **.osts** files in your OneDrive. This allows your scripts to exist outside any particular workbook. Your OneDrive settings control the shared access and permissions for these script **.osts** files; independent of any Excel settings.
 
 ## File storage
 
 You Office Scripts are stored in your OneDrive. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery.
 
-Scripts that are shared with one of your workbooks remain in the cloud and are not locally copied. The **Make a Copy** button of the Code Editor saves a separate, local copy of the script.Changes to the copy do not affect the original script.
+Scripts that are shared with one of your workbooks remain in the cloud and are not copied to any of your local or OneDrive folders. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
 
 ### Script Folders
 
@@ -27,7 +27,7 @@ Office Scripts are stored on a user's OneDrive, they follow the same retention a
 
 ## See also
 
-- [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
+- [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Undo the effects of an Office Script](../testing/undo.md)
