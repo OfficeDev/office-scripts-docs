@@ -66,7 +66,7 @@ Office Scripts can be shared with other users of an Excel workbook. When you sha
 More details about sharing and unsharing scripts can be in the article [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 > [!NOTE]
-> Learn more about scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
+> Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
 
 ## Connecting Office Scripts to Power Automate
 
