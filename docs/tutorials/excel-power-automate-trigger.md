@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
 ---
 
@@ -178,7 +178,7 @@ function main(
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
-    - **File**: MyWorkbook.xlsx
+    - **File**: MyWorkbook.xlsx *(Chosen through the file browser)*
     - **Script**: Record Email
     - **from**: From *(dynamic content from Outlook)*
     - **dateReceived**: Received Time *(dynamic content from Outlook)*
