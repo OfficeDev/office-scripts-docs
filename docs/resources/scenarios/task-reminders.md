@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: 'A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.'
-ms.date: 11//2020
+ms.date: 11/30/2020
 localization_priority: Normal
 ---
 
