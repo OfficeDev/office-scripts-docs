@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: 'A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.'
-ms.date: 06/09/2020
+ms.date: 11/30/2020
 localization_priority: Normal
 ---
 
@@ -60,7 +60,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
         let row = bodyRangeValues[i];
         if (row[STATUS_REPORT_INDEX] === "") {
           // Save the email to return.
-          people.push({ name: row[NAME_INDEX], email: row[EMAIL_INDEX] });
+          people.push({ name: row[NAME_INDEX].toString(), email: row[EMAIL_INDEX].toString() });
         }
       }
 
@@ -153,7 +153,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
-    - **File**: task-reminders.xlsx
+    - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Get People
 
     ![The first Run script flow step.](../../images/scenario-task-reminders-first-flow-step.png)
@@ -212,7 +212,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
-    - **File**: task-reminders.xlsx
+    - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Save Status
     - **senderEmail**: email *(dynamic content from Excel)*
     - **statusReportResponse**: response *(dynamic content from Teams)*

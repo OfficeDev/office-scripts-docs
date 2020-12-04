@@ -1,7 +1,7 @@
 ---
 title: 'Call scripts from a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
 ---
 
@@ -88,7 +88,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
-    - **File**: MyWorkbook.xlsx
+    - **File**: MyWorkbook.xlsx *(Chosen through the file browser)*
     - **Script**: Set date and time
 
     ![The connector settings for running a script in Power Automate.](../images/power-automate-tutorial-6.png)
