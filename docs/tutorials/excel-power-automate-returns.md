@@ -1,6 +1,6 @@
 ---
 title: 'Return data from a script to an automatically-run Power Automate flow'
-description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate to send reminder emails.'
+description: 'A tutorial that shows how to send reminder emails by running Office Scripts for Excel on the web through Power Automate.'
 ms.date: 12/15/2020
 localization_priority: Priority
 ---
@@ -10,7 +10,11 @@ localization_priority: Priority
 This tutorial teaches you how to return information from an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+>
+> If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials.
+>
+> [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -67,7 +71,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     }
     ```
 
-1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address. Add the following code to the end of `main` function:
+1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address. Add the following code to the end of the `main` function.
 
     ```typescript
     // Look for the first row where today's date is between the row's start and end dates.
@@ -126,14 +130,14 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     ![The Scheduled cloud flow button in Power Automate](../images/power-automate-return-tutorial-2.png)
 
-1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week:
+1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
 
     - **Flow name**: Notify On-Call Person
     - **Starting**: 1/4/21 at 1:00am
     - **Repeat every**: 1 Week
     - **On these days**: M
 
-    ![A window with the specified options for the scheduled flow](../images/power-automate-return-tutorial-3.png)
+    ![Window showing the specified options for the scheduled flow](../images/power-automate-return-tutorial-3.png)
 
 1. Press **Create**.
 
@@ -141,11 +145,11 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Select the **Standard** tab, then select **Excel Online (Business)**.
 
-    ![The Power Automate option for Excel Online (Business).](../images/power-automate-tutorial-4.png)
+    ![Excel Online (Business) option in Power Automate](../images/power-automate-tutorial-4.png)
 
 1. Under **Actions**, select **Run script (preview)**.
 
-    ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
+    ![Run script (preview) action option in Power Automate](../images/power-automate-tutorial-5.png)
 
 1. Next, you'll select the workbook and script to use in the flow step. Use the **on-call-rotation.xlsx** workbook you created in your OneDrive. Specify the following settings for the **Run script** connector:
 
@@ -154,13 +158,13 @@ This tutorial teaches you how to return information from an Office Script for Ex
     - **File**: on-call-rotation.xlsx *(Chosen through the file browser)*
     - **Script**: Get On-Call Person
 
-    ![The connector settings for running a script in Power Automate.](../images/power-automate-return-tutorial-4.png)
+    ![The connector settings for running a script in Power Automate](../images/power-automate-return-tutorial-4.png)
 
 1. Press **New step**.
 
-1. We'll end the flow by sending the reminder email. Select the **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
+1. We'll end the flow by sending the reminder email. Select **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
 
-    ![The connector settings for sending an email in Power Automate.](../images/power-automate-return-tutorial-5.png)
+    ![The connector settings for sending an email in Power Automate](../images/power-automate-return-tutorial-5.png)
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
@@ -171,7 +175,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 Your flow will run every Monday morning. You can test the script now by pressing the **Test** button in the upper-right corner of the screen. Select **Manually** and press **Run Test** to run the flow now and test the behavior. You may need to grant permissions to Excel and Outlook to continue.
 
-![The Power Automate Test button.](../images/power-automate-return-tutorial-6.png)
+![The Power Automate Test button](../images/power-automate-return-tutorial-6.png)
 
 > [!TIP]
 > If your flow fails to send an email, double-check in the spreadsheet that a valid email is listed for the current date range at the top of the table.
