@@ -37,7 +37,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     |10/25/2019 |Checking |Best For You Organics Company | -85.64 | |
     |11/01/2019 |Checking |External Deposit | |1000 |
 
-3. Open the **All Scripts** and select **New Script**.
+3. Open **All Scripts** and select **New Script**.
 4. Let's clean up the formatting. This is a financial document, so let's change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Let's also fit the column width to the data.
 
     Replace the script contents with the following code:
