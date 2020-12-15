@@ -18,7 +18,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
 ## Prepare the workbook
 
-1. Download <a href="on-call-rotation.xlsx">task-reminders.xlsx</a> to your OneDrive.
+1. Download <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.
 
 1. Open **on-call-rotation.xlsx** in Excel on the web,
 
