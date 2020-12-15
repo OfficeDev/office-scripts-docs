@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 11/30/2020
+ms.date: 12/15/2020
 localization_priority: Priority
 ---
 
@@ -208,6 +208,6 @@ When the flow is triggered and successfully runs your script, you should see the
 
 ## Next steps
 
-Visit [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn more about connecting Office Scripts with Power Automate.
+Complete the [Return data from a script to an automatically-run Power Automate flow](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
 
 You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.
