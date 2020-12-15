@@ -124,7 +124,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
 1. Under the **Start from blank** section, select **Scheduled cloud flow**.
 
-    ![The Scheduled cloud flow button in Power Automate](../images/power-automate--return-tutorial-2.png)
+    ![The Scheduled cloud flow button in Power Automate](../images/power-automate-return-tutorial-2.png)
 
 1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting Mondays in 2021, so let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday every week:
 
