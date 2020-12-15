@@ -57,7 +57,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
     let tableValues = table.getRangeBetweenHeaderAndTotal().getValues();
     ```
 
-1. The dates in the table are stored using Excel's date format. We need to convert those dates to JavaScript dates in order to compare them. We'll add a helper function to our script. Add the following code outside of the `main` function:
+1. The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487). We need to convert those dates to JavaScript dates in order to compare them. We'll add a helper function to our script. Add the following code outside of the `main` function:
 
     ```typescript
     // Convert the Excel date to a JavaScript Date object.
@@ -118,7 +118,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
 
 
-## Manage the script in Power Automate
+## Test the script in Power Automate
 
 
 
