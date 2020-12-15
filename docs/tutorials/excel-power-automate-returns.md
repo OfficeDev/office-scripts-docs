@@ -1,13 +1,13 @@
 ---
 title: 'Return data from a script to an automatically-run Power Automate flow'
-description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
+description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate to send reminder emails.'
 ms.date: 12/15/2020
 localization_priority: Priority
 ---
 
 # Return data from a script to an automatically-run Power Automate flow (preview)
 
-This tutorial teaches you how to return information an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
+This tutorial teaches you how to return information from an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
 > [!TIP]
 > If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
@@ -18,9 +18,9 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
 ## Prepare the workbook
 
-1. Download <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.
+1. Download the workbook <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.
 
-1. Open **on-call-rotation.xlsx** in Excel on the web,
+1. Open **on-call-rotation.xlsx** in Excel on the web.
 
 1. Add a row to the table with your name, email address, and start and end dates that overlap with the current date.
 
@@ -44,7 +44,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
     }
     ```
 
-1. Next, we need to get all data from the table. That lets us look through each row with the script. Add the following code inside the `main` function.
+1. Next, we need to get all the data from the table. That lets us look through each row with the script. Add the following code inside the `main` function.
 
     ```typescript
     // Get the H1 worksheet.
@@ -67,7 +67,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
     }
     ```
 
-1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding today's date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values but for now, we'll return the first matching email address. Add the following code to the end of `main` function, inside the `}`:
+1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address. Add the following code to the end of `main` function:
 
     ```typescript
     // Look for the first row where today's date is between the row's start and end dates.
@@ -126,7 +126,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
     ![The Scheduled cloud flow button in Power Automate](../images/power-automate-return-tutorial-2.png)
 
-1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting Mondays in 2021, so let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday every week:
+1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week:
 
     - **Flow name**: Notify On-Call Person
     - **Starting**: 1/4/21 at 1:00am
@@ -171,7 +171,7 @@ This tutorial teaches you how to return information an Office Script for Excel o
 
 Your flow will run every Monday morning. You can test the script now by pressing the **Test** button in the upper-right corner of the screen. Select **Manually** and press **Run Test** to run the flow now and test the behavior. You may need to grant permissions to Excel and Outlook to continue.
 
-![The Power Automate Test button.](../images/power-automate-return-tutorial-5.png)
+![The Power Automate Test button.](../images/power-automate-return-tutorial-6.png)
 
 > [!TIP]
 > If your flow fails to send an email, double-check in the spreadsheet that a valid email is listed for the current date range at the top of the table.
