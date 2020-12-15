@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 08/04/2020
+ms.date: 12/14/2020
 localization_priority: Normal
 ---
 
@@ -222,7 +222,7 @@ function main(workbook: ExcelScript.Workbook) {
   let dateRange = workbook.getActiveWorksheet().getRange("A1");
 
   // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.getValue();
+  let excelDateValue = dateRange.getValue() as number;
   let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
   console.log(javaScriptDate);
 }
