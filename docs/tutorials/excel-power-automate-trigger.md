@@ -22,7 +22,7 @@ Power Automate can't use [relative references](../develop/power-automate-integra
 
 1. Create a new workbook named **MyWorkbook**.
 
-2. Go to the **Automate** tab and select **Code Editor**.
+2. Go to the **Automate** tab and select **All Scripts**.
 
 3. Select **New Script**.
 

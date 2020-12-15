@@ -26,7 +26,7 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 ## Create an Office Script
 
-1. Go to the **Automate** tab and select **Code Editor**.
+1. Go to the **Automate** tab and select **All Scripts**.
 
 2. Select **New Script**.
 
