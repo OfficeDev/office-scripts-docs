@@ -151,15 +151,15 @@ function main(
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
-    ![The Create button in Power Automate.](../images/power-automate-tutorial-1.png)
+    ![The Create button in Power Automate](../images/power-automate-tutorial-1.png)
 
 3. In the **Start from blank** section, select **Automated flow**. This creates a workflow triggered by an event, such as receiving an email.
 
-    ![The Automated flow option in Power Automate.](../images/power-automate-params-tutorial-1.png)
+    ![The Automated flow option in Power Automate](../images/power-automate-params-tutorial-1.png)
 
 4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Then select **When a new email arrives** from the list of options under **Choose your flow's trigger**. You may need to search for the option using the search box. Finally, press **Create**.
 
-    ![Part of the Build an automated flow window in Power Automate that shows the "new email arrives" option.](../images/power-automate-params-tutorial-2.png)
+    ![Part of the Build an automated flow window in Power Automate that shows the "new email arrives" option](../images/power-automate-params-tutorial-2.png)
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
@@ -168,11 +168,11 @@ function main(
 
 6. Select the **Standard** tab, then select **Excel Online (Business)**.
 
-    ![The Power Automate option for Excel Online (Business).](../images/power-automate-tutorial-4.png)
+    ![The Power Automate option for Excel Online (Business)](../images/power-automate-tutorial-4.png)
 
 7. Under **Actions**, select **Run script (preview)**.
 
-    ![The Power Automate action option for Run script (preview).](../images/power-automate-tutorial-5.png)
+    ![The Power Automate action option for Run script (preview)](../images/power-automate-tutorial-5.png)
 
 8. Next, you'll select the workbook, script, and script input arguments to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
@@ -186,7 +186,7 @@ function main(
 
     *Note that the parameters for the script will only appear once the script is selected.*
 
-    ![Parameters of the Power Automate action option for Run script (preview).](../images/power-automate-params-tutorial-3.png)
+    ![Parameters of the Power Automate action option for Run script (preview)](../images/power-automate-params-tutorial-3.png)
 
 9. Press **Save**.
 
@@ -196,15 +196,15 @@ Your flow is now enabled. It will automatically run your script each time you re
 
 1. From the main Power Automate page, select **My flows**.
 
-    ![The My flows button in Power Automate.](../images/power-automate-tutorial-7.png)
+    ![The My flows button in Power Automate](../images/power-automate-tutorial-7.png)
 
 2. Select your flow. Here you can see the run history. You can refresh the page or press the refresh **All runs** button to update the history. The flow will trigger shortly after an email is received. Test the flow by sending yourself mail.
 
 When the flow is triggered and successfully runs your script, you should see the workbook's table and PivotTable update.
 
-![The email table after the flow has run a couple times.](../images/power-automate-params-tutorial-4.png)
+![The email table after the flow has run a couple times](../images/power-automate-params-tutorial-4.png)
 
-![The PivotTable after the flow has run a couple times.](../images/power-automate-params-tutorial-5.png)
+![The PivotTable after the flow has run a couple times](../images/power-automate-params-tutorial-5.png)
 
 ## Next steps
 
