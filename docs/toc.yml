@@ -40,6 +40,8 @@ items:
     items:
     - name: Troubleshooting basics
       href: testing/troubleshooting.md
+    - name: Troubleshooting with Power Automate
+      href: testing/power-automate-troubleshooting.md
     - name: Improve script performance
       href: develop/web-client-performance.md
     - name: Platform limits
