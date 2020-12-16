@@ -37,7 +37,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     |10/25/2019 |Checking |Best For You Organics Company | -85.64 | |
     |11/01/2019 |Checking |External Deposit | |1000 |
 
-3. Open the **Code Editor** and select **New Script**.
+3. Open **All Scripts** and select **New Script**.
 4. Let's clean up the formatting. This is a financial document, so let's change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Let's also fit the column width to the data.
 
     Replace the script contents with the following code:
@@ -68,7 +68,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by pressing the blue triangle.
 9. Expand the second level of the array by pressing the newly revealed blue triangle. You should now see this:
 
-    ![The console log displaying the the output "-20.05", nested under two arrays.](../images/tutorial-4.png)
+    ![The console log displaying the the output "-20.05", nested under two arrays](../images/tutorial-4.png)
 
 ## Modify the value of a cell
 
@@ -137,7 +137,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     Your banking statement should now look like this:
 
-    ![The banking statement as a formatted table with only positive values.](../images/tutorial-5.png)
+    ![The banking statement as a formatted table with only positive values](../images/tutorial-5.png)
 
 ## Next steps
 

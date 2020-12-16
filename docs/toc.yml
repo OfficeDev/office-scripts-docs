@@ -1,3 +1,4 @@
+items:
 - name: Office Scripts documentation
   href: index.md
 
@@ -13,8 +14,10 @@
       href: tutorials/excel-read-tutorial.md
     - name: Call scripts from a manual Power Automate flow
       href: tutorials/excel-power-automate-manual.md
-    - name: Pass data in an automatically-run Power Automate flow
+    - name: Use data in a script from an automatically-run Power Automate flow
       href: tutorials/excel-power-automate-trigger.md
+    - name: Pass data from a script to Power Automate flow
+      href: tutorials/excel-power-automate-returns.md
   - name: Scripting fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts

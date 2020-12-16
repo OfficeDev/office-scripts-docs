@@ -29,7 +29,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 2. Open the workbook in Excel on the web.
 
-3. Under the **Automate** tab, open the **Code Editor**.
+3. Under the **Automate** tab, open **All Scripts**.
 
 4. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
 

@@ -24,7 +24,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
 2. Open the workbook with Excel for the web.
 
-3. Under the **Automate** tab, open the **Code Editor**.
+3. Under the **Automate** tab, open **All Scripts**.
 
 4. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
 
