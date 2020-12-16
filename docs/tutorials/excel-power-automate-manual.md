@@ -78,11 +78,11 @@ Power Automate can't use relative references like `Workbook.getActiveWorksheet` 
 
 6. Select the **Standard** tab, then select **Excel Online (Business)**.
 
-    ![The Power Automate option for Excel Online (Business)](../images/power-automate-tutorial-4.png)
+    ![Excel Online (Business) option in Power Automate](../images/power-automate-tutorial-4.png)
 
 7. Under **Actions**, select **Run script (preview)**.
 
-    ![The Power Automate action option for Run script (preview)](../images/power-automate-tutorial-5.png)
+    ![Run script (preview) action option in Power Automate](../images/power-automate-tutorial-5.png)
 
 8. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
