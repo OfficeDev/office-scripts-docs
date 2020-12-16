@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 12/15/2020
+ms.date: 12/16/2020
 localization_priority: Priority
 ---
 
@@ -18,7 +18,7 @@ This tutorial teaches you how to use an Office Script for Excel on the web with 
 
 ## Prepare the workbook
 
-Power Automate can't use [relative references](../develop/power-automate-integration.md#avoid-using-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
+Power Automate can't use [relative references](../testing/power-automate-troubleshooting.md#avoid-using-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
 
 1. Create a new workbook named **MyWorkbook**.
 

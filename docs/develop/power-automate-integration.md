@@ -121,6 +121,7 @@ function main(
 
 - [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md)
 - [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md)
-- [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md)
+- [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
 - [Get started with Power Automate](/power-automate/getting-started)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)
