@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Analyze web downloads'
 description: 'A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.'
-ms.date: 12/107/2020
+ms.date: 12/17/2020
 localization_priority: Normal
 ---
 
