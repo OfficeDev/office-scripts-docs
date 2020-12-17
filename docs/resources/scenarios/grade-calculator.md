@@ -35,29 +35,29 @@ You'll develop a script that totals the grades for each point category. It will 
       if (studentsRange.getColumnCount() !== 6) {
         throw new Error(`The required columns are not present. Expected column headers: "Student ID | Assignment score | Mid-term | Final | Total | Grade"`);
       }
-    
+
       let studentData = studentsRange.getValues();
-    
+
       // Clear the total and grade columns.
       studentsRange.getColumn(4).getCell(1, 0).getAbsoluteResizedRange(studentData.length - 1, 2).clear();
-    
+
       // Clear all conditional formatting.
       workbook.getActiveWorksheet().getUsedRange().clearAllConditionalFormats();
-    
+
       // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
       const assignmentMaxMatches = (studentData[0][1] as string).match(/\d+/);
       const midtermMaxMatches = (studentData[0][2] as string).match(/\d+/);
       const finalMaxMatches = (studentData[0][3] as string).match(/\d+/);
-    
+
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
         throw new Error(`The scores are not present in the column headers. Expected format: "Assignments (n)|Mid-term (n)|Final (n)"`);
       }
-    
+
       // Use the first (and only) match from the regular expressions as the max scores.
       maxScores = [assignmentMaxMatches[0], midtermMaxMatches[0], finalMaxMatches[0]];
-    
+
       // Set conditional formatting for each of the assignment, mid-term, and final scores columns.
       maxScores.forEach((score, i) => {
         let range = studentsRange.getColumn(i + 1).getCell(0, 0).getRowsBelow(studentData.length - 1);
@@ -69,11 +69,11 @@ You'll develop a script that totals the grades for each point category. It will 
           ExcelScript.ConditionalCellValueOperator.greaterThan
         )
       });
-    
+
       // Store the current range information to avoid calling the workbook in the loop.
       let studentsRangeFormulas = studentsRange.getColumn(4).getFormulasR1C1();
       let studentsRangeValues = studentsRange.getColumn(5).getValues();
-    
+
       /* Iterate over each of the student rows and compute the total score and letter grade.
       * Note that iterator starts at index 1 to skip first (header) row.
       */
@@ -109,11 +109,11 @@ You'll develop a script that totals the grades for each point category. It will 
         // Set grade cell.
         studentsRangeValues[i][0] = grade;
       }
-    
+
       // Set the formulas and values outside the loop.
       studentsRange.getColumn(4).setFormulasR1C1(studentsRangeFormulas);
       studentsRange.getColumn(5).setValues(studentsRangeValues);
-    
+
       // Put a conditional formatting on the grade column.
       let totalRange = studentsRange.getColumn(5).getCell(0, 0).getRowsBelow(studentData.length - 1);
       setCellValueConditionalFormatting(
@@ -135,7 +135,7 @@ You'll develop a script that totals the grades for each point category. It will 
       // Center the grade column.
       studentsRange.getColumn(5).getFormat().setHorizontalAlignment(ExcelScript.HorizontalAlignment.center);
     }
-    
+
     /**
      * Helper function to apply conditional formatting.
      * @param value Cell value to use in conditional formatting formula1.
@@ -159,7 +159,7 @@ You'll develop a script that totals the grades for each point category. It will 
         // For number input (greater-than or less-than rules), just append '='.
         formula1 = `=${value}`;
       }
-    
+
       // Apply conditional formatting.
       let conditionalFormatting: ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
