@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 11/13/2020
+ms.date: 12/14/2020
 localization_priority: Normal
 ---
 
@@ -29,6 +29,8 @@ Admins have three options for VBA macros: allow all macros on the tenant, allow 
 ## Coverage
 
 Currently, VBA offers a more complete coverage of Excel features, particularly those available on the desktop client. Office Scripts cover nearly all of the scenarios for Excel on the web. Additionally, as new features debut on the web, Office Scripts will support them for both the Action Recorder and JavaScript APIs.
+
+Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/events-worksheetfunctions-shapes/using-events-with-excel-objects). Scripts are only run when a user manually starts them or when a Power Automate flow calls the script.
 
 ## Power Automate
 
