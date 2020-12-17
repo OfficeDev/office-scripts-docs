@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: 'A sample that determines the percentage and letter grades for a class of students.'
-ms.date: 07/24/2020
+ms.date: 12/17/2020
 localization_priority: Normal
 ---
 
@@ -46,9 +46,9 @@ You'll develop a script that totals the grades for each point category. It will 
 
       // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
-      const assignmentMaxMatches = studentData[0][1].match(/\d+/);
-      const midtermMaxMatches = studentData[0][2].match(/\d+/);
-      const finalMaxMatches = studentData[0][3].match(/\d+/);
+      const assignmentMaxMatches = (studentData[0][1] as string).match(/\d+/);
+      const midtermMaxMatches = (studentData[0][2] as string).match(/\d+/);
+      const finalMaxMatches = (studentData[0][3] as string).match(/\d+/);
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
@@ -84,7 +84,7 @@ You'll develop a script that totals the grades for each point category. It will 
           studentData[i][3] > maxScores[2]) {
           continue;
         }
-        const total = studentData[i][1] + studentData[i][2] + studentData[i][3];
+        const total = (studentData[i][1] as number) + (studentData[i][2] as number) + (studentData[i][3] as number);
         let grade: string;
         switch (true) {
           case total < 60:
@@ -103,7 +103,7 @@ You'll develop a script that totals the grades for each point category. It will 
             grade = "A";
             break;
         }
-
+    
         // Set total score formula.
         studentsRangeFormulas[i][0] = '=RC[-2]+RC[-1]';
         // Set grade cell.
@@ -161,11 +161,11 @@ You'll develop a script that totals the grades for each point category. It will 
       }
 
       // Apply conditional formatting.
-      let conditionalFormatting : ExcelScript.ConditionalFormat;
+      let conditionalFormatting: ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
-      conditionalFormatting.getCellValue().setRule({formula1, operator});
+      conditionalFormatting.getCellValue().setRule({ formula1, operator });
     }
     ```
 
