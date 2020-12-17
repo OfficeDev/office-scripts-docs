@@ -30,7 +30,7 @@ Admins have three options for VBA macros: allow all macros on the tenant, allow 
 
 Currently, VBA offers a more complete coverage of Excel features, particularly those available on the desktop client. Office Scripts cover nearly all of the scenarios for Excel on the web. Additionally, as new features debut on the web, Office Scripts will support them for both the Action Recorder and JavaScript APIs.
 
-Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/events-worksheetfunctions-shapes/using-events-with-excel-objects). Scripts are only ran when a user manually starts them or when a Power Automate flow calls the script.
+Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/events-worksheetfunctions-shapes/using-events-with-excel-objects). Scripts are only run when a user manually starts them or when a Power Automate flow calls the script.
 
 ## Power Automate
 
