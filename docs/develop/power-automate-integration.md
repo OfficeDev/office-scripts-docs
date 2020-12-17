@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 07/24/2020
+ms.date: 12/16/2020
 localization_priority: Normal
 ---
 
@@ -90,29 +90,11 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 5. Implicit typing is supported, though it must follow the same rules as a defined type.
 
-## Avoid using relative references
-
-Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, will fail when run through Power Automate. When designing your scripts, be sure to use absolute references for worksheets and ranges.
-
-The following methods will throw an error and fail when called from a script in a Power Automate flow.
-
-| Class | Method |
-|--|--|
-| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
-| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
-
 ## Example
 
 The following screenshot shows a Power Automate flow that's triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The flow runs a script that adds the issue to a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
 
-![The example flow as shown in the Power Automate flow editor.](../images/power-automate-parameter-return-sample.png)
+![The example flow as shown in the Power Automate flow editor](../images/power-automate-parameter-return-sample.png)
 
 The `main` function of the script specifies the issue ID and issue title as input parameters, and the script returns the number of rows in the issue table.
 
@@ -139,6 +121,7 @@ function main(
 
 - [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md)
 - [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md)
-- [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md)
+- [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
 - [Get started with Power Automate](/power-automate/getting-started)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)

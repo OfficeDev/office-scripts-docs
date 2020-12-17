@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 10/30/2020
+ms.date: 12/16/2020
 localization_priority: Normal
 ---
 
@@ -37,6 +37,10 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
+## Power Automate troubleshooting
+
+For information specific to running scripts through Power Automate, see [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md).
+
 ## Help resources
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems. Often, you'll be able to find the solution to your problem through a quick Stack Overflow search. If not, ask your question and tag it with the "office-scripts" tag. Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.
@@ -51,4 +55,5 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
 - [Platform Limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
+- [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)
 - [Undo the effects of an Office Script](undo.md)
