@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 12/17/2020
+ms.date: 12/21/2020
 localization_priority: Normal
 ---
 
@@ -128,6 +128,23 @@ function main(workbook: ExcelScript.Workbook) {
       range.getCell(row, col).getFormat().getFill().setColor(colorString);
     }
   }
+}
+```
+
+### Get groups of cells based on special criteria
+
+This script gets all the blank cells in the current worksheet's used range. It then highlights all those cells with a yellow background.
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the current used range.
+    let range = workbook.getActiveWorksheet().getUsedRange();
+    
+    // Get all the blank cells.
+    let blankCells = range.getSpecialCells(ExcelScript.SpecialCellType.blanks);
+
+    // Highlight the blank cells with a yellow background.
+    blankCells.getFormat().getFill().setColor("yellow");
 }
 ```
 
@@ -304,7 +321,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 These samples use Excel formulas and show how to work with them in scripts.
 
-## Single formula
+### Single formula
 
 This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.
 
