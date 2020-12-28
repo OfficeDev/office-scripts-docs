@@ -143,7 +143,7 @@ function main(workbook: ExcelScript.Workbook) {
     // Get all the blank cells.
     let blankCells = range.getSpecialCells(ExcelScript.SpecialCellType.blanks);
 
-    // Highlight the blank cells with a yellow background
+    // Highlight the blank cells with a yellow background.
     blankCells.getFormat().getFill().setColor("yellow");
 }
 ```
