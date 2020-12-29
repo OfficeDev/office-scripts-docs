@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooting information for Power Automate with Office Scripts'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
-ms.date: 12/28/2020
+ms.date: 12/29/2020
 localization_priority: Normal
 ---
 
@@ -14,9 +14,9 @@ Power Automate lets you take your Office Script automation to the next level. Ho
 
 ## Avoid using relative references
 
-Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, may behave differently in Power Automate. Some methods will outright fail in a flow.
+Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, may behave differently in Power Automate. This is because the APIs are based on a relative position of the user's view or cursor and that reference doesn't exist in a Power Automate flow.
 
-When designing your scripts, be sure to use absolute references for worksheets and ranges. This makes your Power Automate flow consistent, even if worksheets are rearranged.
+Some relative reference APIs throw errors in Power Automate. Others have a default behavior that implies a user's state. When designing your scripts, be sure to use absolute references for worksheets and ranges. This makes your Power Automate flow consistent, even if worksheets are rearranged.
 
 ### Script methods that fail when run Power Automate flows
 
