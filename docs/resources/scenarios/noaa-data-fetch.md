@@ -28,7 +28,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
     ```typescript
     /**
      * Gets data from the National Oceanic and Atmospheric Administration's Tides and Currents database. 
-     * That data is used to make charts
+     * That data is used to make a chart.
      */
     async function main(workbook: ExcelScript.Workbook): Promise<void> {
       // Get the current sheet.
@@ -73,7 +73,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
       let dataRange = currentSheet.getRange("A2:B" + String(noaaDataCount + 1)); /* +1 to account for the title row */
       dataRange.setValues(dataToEnter);
       
-      // Format the "Time" column for timestamps
+      // Format the "Time" column for timestamps.
       dataRange.getColumn(0).setNumberFormatLocal("[$-en-US]mm/dd/yyyy hh:mm AM/PM;@");
     
       // Create and format a chart with the level data.
