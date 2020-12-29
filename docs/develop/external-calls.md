@@ -1,13 +1,13 @@
 ---
 title: 'External API call support in Office Scripts'
 description: 'Support and guidance for making external API calls in an Office Script.'
-ms.date: 12/28/2020
+ms.date: 12/29/2020
 localization_priority: Normal
 ---
 
 # External API call support in Office Scripts
 
-Script authors shouldn't expect consistent behavior when using [external APIs](https://developer.mozilla.org/docs/Web/API) during the platform's preview phase. This is due how the JavaScript runtime manages interacting with the workbook. The script may end before the API call completes (or its `Promise` is fully resolved). As such, do not rely on external APIs for critical script scenarios.
+Script authors shouldn't expect consistent behavior when using [external APIs](https://developer.mozilla.org/docs/Web/API) during the platform's preview phase.  As such, do not rely on external APIs for critical script scenarios.
 
 Calls to external APIs can be only be made through the Excel client, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
 
@@ -16,7 +16,7 @@ Calls to external APIs can be only be made through the Excel client, not through
 
 ## Working with `fetch`
 
-The [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you will need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`.
+The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you will need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
 
 The following script uses fetch to retrieve JSON data from the test server in the given URL.
 
