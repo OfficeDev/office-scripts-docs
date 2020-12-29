@@ -33,7 +33,7 @@ async function main(workbook: ExcelScript.Workbook): Promise <void> {
 }
 ```
 
-The [Office Scripts sample scenario:  Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
+The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
 
 ## External calls from Power Automate
 

@@ -5,7 +5,7 @@ ms.date: 12/28/2020
 localization_priority: Normal
 ---
 
-# Office Scripts sample scenario:  Graph water-level data from NOAA
+# Office Scripts sample scenario: Graph water-level data from NOAA
 
 In this scenario, you need to plot the water level at the [National Oceanic and Atmospheric Administration's Seattle station](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130). You'll use external data to populate a spreadsheet and create a chart.
 
