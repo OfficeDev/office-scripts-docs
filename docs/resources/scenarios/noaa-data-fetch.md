@@ -19,11 +19,11 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
 
 ## Setup instructions
 
-1. Open the workbook with Excel for the web.
+1. Open the workbook with Excel on the web.
 
-1. Under the **Automate** tab, open **All Scripts**.
+1. Under the **Automate** tab, select **All Scripts**.
 
-1. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
+1. In the **Code Editor** task pane, select **New Script** and paste the following script into the editor.
 
     ```typescript
     /**
@@ -62,7 +62,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
       headerRange.getFormat().getFill().setColor("#4472C4");
       headerRange.getFormat().getFont().setColor("white");
     
-      // Insert all the data in rows from JSON
+      // Insert all the data in rows from JSON.
       let noaaDataCount = noaaData.data.length;
       let dataToEnter = [[], []]
       for (let i = 0; i < noaaDataCount; i++) {
@@ -93,7 +93,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
 
 ## Running the script
 
-On any worksheet, run the **NOAA Water Level Chart** script. The script fetches the water level data from December 25th 2020 to December 27th 2020. The `const` variables at the beginning of the script can be changed to use different dates or get different station information. The [CO-OPS API For Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) describes how to get all this data.
+On any worksheet, run the **NOAA Water Level Chart** script. The script fetches the water level data from December 25, 2020 to December 27, 2020. The `const` variables at the beginning of the script can be changed to use different dates or get different station information. The [CO-OPS API For Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) describes how to get all this data.
 
 ### After running the script
 

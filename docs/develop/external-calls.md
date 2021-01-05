@@ -7,9 +7,9 @@ localization_priority: Normal
 
 # External API call support in Office Scripts
 
-Script authors shouldn't expect consistent behavior when using [external APIs](https://developer.mozilla.org/docs/Web/API) during the platform's preview phase.  As such, do not rely on external APIs for critical script scenarios.
+Script authors shouldn't expect consistent behavior when using [external APIs](https://developer.mozilla.org/docs/Web/API) during the platform's preview phase. As such, do not rely on external APIs for critical script scenarios.
 
-Calls to external APIs can be only be made through the Excel client, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
+Calls to external APIs can be only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
 
 > [!CAUTION]
 > External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish firewall protection against such calls.
@@ -18,7 +18,7 @@ Calls to external APIs can be only be made through the Excel client, not through
 
 The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you will need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
 
-The following script uses fetch to retrieve JSON data from the test server in the given URL.
+The following script uses `fetch` to retrieve JSON data from the test server in the given URL.
 
 ```typescript
 async function main(workbook: ExcelScript.Workbook): Promise <void> {
@@ -45,4 +45,4 @@ Any external API calls fail when a script is run with Power Automate. This is a 
 ## See also
 
 - [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
-- [Office Scripts sample scenario:  Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)
+- [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)
