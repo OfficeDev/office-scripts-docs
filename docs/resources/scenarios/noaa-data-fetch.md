@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
-ms.date: 12/28/2020
+ms.date: 01/05/2021
 localization_priority: Normal
 ---
 
@@ -86,6 +86,12 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
       chart.getAxes().getValueAxis().setShowDisplayUnitLabel(false);
       chart.getAxes().getCategoryAxis().setTextOrientation(60);
       chart.getLegend().setVisible(false);
+
+      // Add a comment with the data attribution.
+      currentSheet.addComment(
+        "A1", 
+        `This data was taken from the National Oceanic and Atmospheric Administration's Tides and Currents database on ${new Date(Date.now())}.`
+      );
     }
     ```
 
