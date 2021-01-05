@@ -40,7 +40,7 @@ The [Office Scripts sample scenario: Graph water-level data from NOAA](../resour
 Any external API calls fail when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel client and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
 
 > [!WARNING]
-> External calls [Excel Online connector](/connectors/excelonlinebusiness) fail in Power Automate to help uphold existing data loss prevention policies. However, scripts that are run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel on the web through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
+> External calls made through the Power Automate [Excel Online connector](/connectors/excelonlinebusiness) fail in order to help uphold existing data loss prevention policies. However, scripts that are run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel on the web through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 ## See also
 
