@@ -1,7 +1,7 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 localization_priority: Priority
 ---
 
@@ -74,15 +74,16 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
-1. Add the following code to the end of the script:
+1. We'll use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script:
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.getValue());
+    let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
 
-    Note that we're using `getValue` and `setValue`. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`.
+    > [!NOTE]
+    > We are [casting](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) the returned value of `range.getValue()` to a `number` by using the `as` keyword. This is necessary because a range could be strings, numbers, or booleans. In this instance, we explicitly need a number.
 
 2. The value of cell **D2** should now be positive.
 
@@ -119,13 +120,13 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][3]);
+            let positiveValue = Math.abs(rangeValues[i][3] as number);
             selectedSheet.getCell(i, 3).setValue(positiveValue);
         }
 
         // The column at index 4 is column "5" in the worksheet.
         if (rangeValues[i][4] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][4]);
+            let positiveValue = Math.abs(rangeValues[i][4] as number);
             selectedSheet.getCell(i, 4).setValue(positiveValue);
         }
     }
