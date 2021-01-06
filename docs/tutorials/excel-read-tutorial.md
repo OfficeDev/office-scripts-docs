@@ -1,7 +1,7 @@
 ---
 title: 'Read workbook data with Office Scripts in Excel on the web'
 description: 'An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.'
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 localization_priority: Priority
 ---
 
@@ -78,7 +78,7 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.getValue());
+    let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
 
@@ -119,13 +119,13 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][3]);
+            let positiveValue = Math.abs(rangeValues[i][3] as number);
             selectedSheet.getCell(i, 3).setValue(positiveValue);
         }
 
         // The column at index 4 is column "5" in the worksheet.
         if (rangeValues[i][4] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][4]);
+            let positiveValue = Math.abs(rangeValues[i][4] as number);
             selectedSheet.getCell(i, 4).setValue(positiveValue);
         }
     }
