@@ -74,6 +74,8 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
+Note that we are [casting](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) the returned value of `range.getValue()` to a `number` by using the `as` keyword. This is necessary because a range could be strings, numbers, or booleans. In this instance, we explicitly need a number.
+
 1. Add the following code to the end of the script:
 
     ```TypeScript
