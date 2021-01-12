@@ -1,11 +1,11 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
-ms.date: 01/05/2021
+ms.date: 01/11/2021
 localization_priority: Normal
 ---
 
-# Office Scripts sample scenario: Graph water-level data from NOAA
+# Office Scripts sample scenario: Fetch and graph water-level data from NOAA
 
 In this scenario, you need to plot the water level at the [National Oceanic and Atmospheric Administration's Seattle station](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130). You'll use external data to populate a spreadsheet and create a chart.
 

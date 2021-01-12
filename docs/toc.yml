@@ -60,9 +60,9 @@ items:
         href: resources/scenarios/sample-scenario-overview.md
       - name: Analyze web downloads
         href: resources/scenarios/analyze-web-downloads.md
+      - name: Fetch and graph water-level data from NOAA
+        href: resources/scenarios/noaa-data-fetch.md
       - name: Grade calculator
         href: resources/scenarios/grade-calculator.md
-      - name: Graph water-level data from NOAA
-        href: resources/scenarios/noaa-data-fetch.md
       - name: Task reminders (with Power Automate)
         href: resources/scenarios/task-reminders.md
