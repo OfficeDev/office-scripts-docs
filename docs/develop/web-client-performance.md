@@ -95,7 +95,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Case-by-case help
 
-As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](https://docs.microsoft.com/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). Be sure to tag your question with "office-scripts" so experts can find it and help.
+As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). Be sure to tag your question with "office-scripts" so experts can find it and help.
 
 ## See also
 
