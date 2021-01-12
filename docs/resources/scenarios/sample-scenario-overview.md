@@ -17,7 +17,7 @@ The [Analyze web downloads](analyze-web-downloads.md) scenario features a script
 
 ### Fetch and graph water-level data from NOAA
 
-The [ Fetch and graph water-level data from NOAA](noaa-data-fetch.md) scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts.
+The [Fetch and graph water-level data from NOAA](noaa-data-fetch.md) scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/)) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts.
 
 ### Grade calculator
 
