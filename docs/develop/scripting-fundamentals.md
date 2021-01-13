@@ -272,7 +272,7 @@ If you are uncertain about the type of a variable, one cool trick in TypeScript 
 
 #### Type inference 
 
-In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html is used to provide type information when there is no explicit type annotation. For example, in this code
+In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) is used to provide type information when there is no explicit type annotation. For example, in this code
 
 ```typescript
 let x = 3;
