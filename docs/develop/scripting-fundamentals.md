@@ -218,6 +218,120 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Definining types 
+
+Type declarations help users understand the type of variable they are dealing with. It helps with auto completion of methods and assists in development time quality checks. 
+You can fine type declarations in the script in various places including function declaration, variable declaration, IntelliSence definitions, etc. 
+
+Examples: 
+
+* `function main(workbook: ExcelScript.Workbook)`
+* `let myRange: ExcelScript.Range;` 
+* `function getMaxAmount(range: ExcelScript.Range): number`
+
+You can identify the types easily in the code editor as it appears distinctly usually in a different color. The color `:` usually preceds the type declaration.  
+
+Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part TypeScript language is good at inferring the types of variables. However, in certain cases, Office Script will require the type declarations be explicitly defined if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that below 
+
+#### 'any' type in the script
+
+As the [TypeScript website states](https://www.typescriptlang.org/docs/handbook/basic-types.html#any), in some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the `any` type:
+
+```typescript
+declare function getValue(key: string): any;
+// OK, return value of 'getValue' is not checked
+const str: string = getValue("myString");
+```
+
+**Explicit `any` is not allowed**
+
+```typescript
+let someVariable: any; 
+// ^^ This is not allowed ^^
+```
+
+The `any` type presents challenges to the way Office Script processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile time error (error prior to the running of the script) if there is any variable with `any` type defined in the script. You will see an error on the editor as well. 
+
+![Explicit any error](eanyi.png)] 
+
+![Explicit any error](expany.png)] 
+
+In the above code `[5, 16] Explicit Any is not allowed` indicates that line # 5 column # 16 defines `any` type. This helps to locate the error line. 
+
+To get around this issue, always define the type of the variable. 
+
+If you are uncertain about the type of a variable, one cool trick in TypeScript allows you to define [union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be used for variables to hold range value, which can be only of many types. 
+
+```typescript
+   let value: (string | number | boolean);
+   // ^^ define this as a union type rather than any type ^^
+   value = someValue_from_another_source;
+   //...
+   someRange.setValue(value);
+```
+
+#### Type inference 
+
+In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html is used to provide type information when there is no explicit type annotation. For example, in this code
+
+```typescript
+let x = 3;
+//  ^ = let x: number
+```
+
+The type of the x variable is inferred to be number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types. 
+
+
+#### no-implicit-any rule
+A script requires the types of the variables used to be explicitly or implicity defined. If TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference is not not possible), then you will receive a compilation time error (error prior to the running of the script).  You will see an error on the editor as well.
+
+![Implicit any error](iany.png)
+
+Following scripts will receive compilation time error as variables are defined without any types and TypeScript cannot determine the type at the time of declaration. 
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    let value; 
+    // ^^ the variable 'value' gets 'any' type as no type is defined. ^^
+    value = 10; 
+    // ^^Even when a numer type is assigned, the type of 'value' remains any. ^^
+    workbook.getActiveCell().setValue(value);
+    // ^^ Above line will fail because Office Scripts can't send an argument of type 'any' to Excel for processing. ^^
+    return;
+}
+```
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    let cell; 
+    // ^^ the variable 'cell' gets 'any' type as no type is defined. ^^
+    cell = workbook.getActiveCell().getValue();
+    console.log(cell.getValue());
+    // ^^ Office Scripts cannot assign Range type object to 'any' type variable. ^^    
+    return;
+}
+```
+
+To avoid this, use following instead. In each case, the type is declared at the time of declaration of variable. 
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    const value: number = 10; 
+    workbook.getActiveCell().setValue(value);
+    return;
+}
+```
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    const cell: ExcelScript.Range = workbook.getActiveCell().getValue();
+    console.log(cell.getValue()); 
+    return;
+}
+```
+
+
+
 ### Further reading on the object model
 
 The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
