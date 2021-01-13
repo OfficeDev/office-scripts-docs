@@ -252,9 +252,9 @@ let someVariable: any;
 
 The `any` type presents challenges to the way Office Script processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile time error (error prior to the running of the script) if there is any variable with `any` type defined in the script. You will see an error on the editor as well. 
 
-![Explicit any error](eanyi.png)] 
+![Explicit any message in editor](explicit-any-editor-message.png)] 
 
-![Explicit any error](expany.png)] 
+![Explicit any error](explicit-any-error-message.png)] 
 
 In the above code `[5, 16] Explicit Any is not allowed` indicates that line # 5 column # 16 defines `any` type. This helps to locate the error line. 
 
@@ -285,7 +285,7 @@ The type of the x variable is inferred to be number. This kind of inference take
 #### no-implicit-any rule
 A script requires the types of the variables used to be explicitly or implicity defined. If TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference is not not possible), then you will receive a compilation time error (error prior to the running of the script).  You will see an error on the editor as well.
 
-![Implicit any error](iany.png)
+![Implicit any error](implicit-any-message.png)
 
 Following scripts will receive compilation time error as variables are defined without any types and TypeScript cannot determine the type at the time of declaration. 
 
