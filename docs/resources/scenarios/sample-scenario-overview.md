@@ -1,7 +1,7 @@
 ---
 title: 'Sample scenarios for Office Scripts'
 description: 'An explanation for the larger, scenario-driven samples for Office Scripts in Excel on the web.'
-ms.date: 07/10/2020
+ms.date: 01/11/2021
 localization_priority: Normal
 ---
 
@@ -14,6 +14,10 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 ### Analyze web downloads
 
 The [Analyze web downloads](analyze-web-downloads.md) scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables.
+
+### Fetch and graph water-level data from NOAA
+
+The [Fetch and graph water-level data from NOAA](noaa-data-fetch.md) scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/)) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts.
 
 ### Grade calculator
 
