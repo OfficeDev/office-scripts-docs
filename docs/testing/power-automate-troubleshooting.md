@@ -36,7 +36,7 @@ The following methods will throw an error and fail when called from a script in 
 
 The following methods use a default behavior, in lieu of any user's current state.
 
-| Class | Method | Power automate behavior |
+| Class | Method | Power Automate behavior |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Returns either the first worksheet in the workbook or the worksheet currently activated by the `Worksheet.activate` method. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Marks the worksheet as the active worksheet for purposes of `Workbook.getActiveWorksheet`. |
