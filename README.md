@@ -27,6 +27,13 @@ If your issue is not related to the Office Scripts documentation, please post it
 - To report an issue with the Office.js API, create the issue in the [OfficeDev/office-js repository](https://github.com/OfficeDev/office-js), which members of the product team monitor for customer-reported issues.
 - To submit a feature request for Office Scripts, post your idea to our [User Voice page](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439), or if the feature request already exists there, add your vote for it.
 
+## Join the Microsoft 365 Developer Program
+Get a free sandbox, tools, and other resources you need to build solutions for the Microsoft 365 platform.
+- [Free developer sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) Get a free, renewable 90-day Microsoft 365 E5 developer subscription.
+- [Sample data packs](https://developer.microsoft.com/microsoft-365/dev-program#Sample) Automatically configure your sandbox by installing user data and content to help you build your solutions.
+- [Access to experts](https://developer.microsoft.com/microsoft-365/dev-program#Experts) Access community events to learn from Microsoft 365 experts.
+- [Personalized recommendations](https://developer.microsoft.com/microsoft-365/dev-program#Recommendations) Find developer resources quickly from your personalized dashboard.
+
 ## Copyright
 
 Copyright (c) 2019 Microsoft Corporation. All rights reserved.
