@@ -13,7 +13,7 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 ## `main` function
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, the Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
