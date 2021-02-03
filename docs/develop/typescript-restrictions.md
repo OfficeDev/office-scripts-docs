@@ -1,6 +1,6 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
-description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor'
+description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
 ms.date: 01/29/2021
 localization_priority: Normal
 ---
@@ -15,7 +15,7 @@ Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-min
 
 ### Explicit `any`
 
-You cannot explicitly declare a variable to be of type `any` in Office Scripts (i.e. `let someVariable: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
+You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let someVariable: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
 
 ![The explicit any message in the code editor's hover text](../images/explicit-any-editor-message.png)
 
@@ -27,7 +27,7 @@ To get around this issue, always define the type of the variable. If you are unc
 
 ### Implicit `any`
 
-TypeScript variable types can be [implicitly]((https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then is an implicit `any` and you will receive a compilation-time error.
+TypeScript variable types can be [implicitly]((https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
 
 The most common case on any implicit `any` is in a variable declaration, such as `let value;`. There are two ways to avoid this:
 
