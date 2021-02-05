@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 01/29/2021
+ms.date: 02/05/2021
 localization_priority: Normal
 ---
 
@@ -27,7 +27,7 @@ To get around this issue, always define the type of the variable. If you are unc
 
 ### Implicit `any`
 
-TypeScript variable types can be [implicitly]((https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
+TypeScript variable types can be [implicitly](https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
 
 The most common case on any implicit `any` is in a variable declaration, such as `let value;`. There are two ways to avoid this:
 
@@ -56,6 +56,23 @@ The following words can't be used as identifiers in a script. They are reserved 
 * `Excel`
 * `ExcelScript`
 * `console`
+
+## Only arrow functions in array callbacks
+
+Your scripts can only use [arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) when providing callback arguments for [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) methods. You cannot use any sort of identifier or "traditional" function in these methods.
+
+```typescript
+const myArray = [1, 2, 3, 4, 5, 6];
+let filteredArray = myArray.filter((x) => {
+  return x % 2 === 0;
+});
+/*
+  The following code generates a compiler error in the Office Scripts Code Editor.
+  filteredArray = myArray.filter(function (x) {
+    return x % 2 === 0;
+  });
+*/
+```
 
 ## Performance warnings
 
