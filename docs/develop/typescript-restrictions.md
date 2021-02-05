@@ -59,7 +59,7 @@ The following words can't be used as identifiers in a script. They are reserved 
 
 ## Only arrow functions in array callbacks
 
-Your scripts can only use [arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) when providing callback arguments for [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) methods. You cannot use any sort of identifier or "traditional" function in these methods.
+Your scripts can only use [arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) when providing callback arguments for [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) methods. You cannot pass any sort of identifier or "traditional" function to these methods.
 
 ```typescript
 const myArray = [1, 2, 3, 4, 5, 6];
