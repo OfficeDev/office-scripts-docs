@@ -1,10 +1,9 @@
 ---
 title: 'Support older Office Scripts that use the async APIs'
 description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for older scripts.'
-ms.date: 07/08/2020
+ms.date: 02/08/2021
 localization_priority: Normal
 ---
-
 
 # Support older Office Scripts that use the async APIs
 
@@ -33,7 +32,7 @@ The `context` object is necessary because the script and Excel are running in di
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. In the async API, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
-- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async&preserve-view=true)).
+- Read data from the workbook (following a `load` operation or method that returns a [ClientResult](/javascript/api/office/officeextension.clientresult?view=excel-js-online&preserve-view=true)).
 - Write data to the workbook (usually because the script has finished).
 
 The following image shows an example control flow between the script and workbook:
@@ -112,7 +111,7 @@ async function main(context: Excel.RequestContext){
 
 ### ClientResult
 
-Methods in the async API that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the returned [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async&preserve-view=true) is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
+Methods in the async API that return information from the workbook have a similar pattern to the `load`/`sync` paradigm. As an example, `TableCollection.getCount` gets the number of tables in the collection. `getCount` returns a `ClientResult<number>`, meaning the `value` property in the returned [`ClientResult`](/javascript/api/office/officeextension.clientresult?view=excel-js-online&preserve-view=true) is a number. Your script can't access that value until `context.sync()` is called. Much like loading a property, the `value` is a local "empty" value until that `sync` call.
 
 The following script gets the total number of tables in the workbook and logs that number to the console.
 
@@ -147,6 +146,6 @@ The current API model doesn't use `load`, `sync`, or a `RequestContext`. This ma
 
 5. Some methods have been renamed for clarity and added for convenience. Please consult the [Office Scripts API reference](/javascript/api/office-scripts/overview?view=office-scripts&preserve-view=true) for more details.
 
-## Office Scripts Async API reference documentation
+## Office Scripts async API reference documentation
 
-[!INCLUDE [Async reference documentation](../includes/async-reference-documentation-link.md)]
+The async APIs are equivalent to those used in Office Add-ins. The reference documentation is found in [the Excel section of the Office Add-ins JavaScript API reference](/javascript/api/excel?view=excel-js-online&preserve-view=true).
