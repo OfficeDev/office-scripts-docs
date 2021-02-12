@@ -319,9 +319,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Use data validation to create a drop-down list
 
-This script creates a drop-down selection list for a cell. Is uses the existing values of the selected range as the choices for the list.
+This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
 
-![A before-and-after set of screenshots that shows a three words in a range, then those same words in a drop-down list.](../images/sample-data-validation.png)
+![A before-and-after set of screenshots that shows three words in a range, then those same words in a drop-down list.](../images/sample-data-validation.png)
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
