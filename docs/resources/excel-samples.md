@@ -1,7 +1,7 @@
 ---
 title: 'Sample scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 12/21/2020
+ms.date: 02/12/2021
 localization_priority: Normal
 ---
 
@@ -314,6 +314,43 @@ function main(workbook: ExcelScript.Workbook) {
     console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
     // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
+}
+```
+
+### Use data validation to create a drop-down list
+
+This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
+
+![A before-and-after set of screenshots that shows three words in a range, then those same words in a drop-down list.](../images/sample-data-validation.png)
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the values for data validation.
+  let selectedRange = workbook.getSelectedRange();
+  let rangeValues = selectedRange.getValues();
+
+  // Convert the values into a comma-delimited string.
+  let dataValidationListString = "";
+  rangeValues.forEach((rangeValueRow) => {
+    rangeValueRow.forEach((value) => {
+      dataValidationListString += value + ",";
+    });
+  });
+
+  // Clear the old range.
+  selectedRange.clear(ExcelScript.ClearApplyTo.contents);
+
+  // Apply the data validation to the first cell in the selected range.
+  let targetCell = selectedRange.getCell(0,0);
+  let dataValidation = targetCell.getDataValidation();
+
+  // Set the content of the drop-down list.
+  dataValidation.setRule({
+      list: {
+        inCellDropDown: true,
+        source: dataValidationListString
+      }
+    });
 }
 ```
 
