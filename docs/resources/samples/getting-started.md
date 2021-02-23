@@ -1,7 +1,7 @@
 ---
 title: 'Getting started with Office Scripts'
 description: 'Basics about Office Scripts including access, environment, and script patterns.'
-ms.date: 02/19/2021
+ms.date: 02/23/2021
 localization_priority: Normal
 ---
 
@@ -11,14 +11,14 @@ This section provides details about the basics of Office Scripts including acces
 
 ## Content
 
-* [Access, environment and editor](#environment)
-* [Gentle introduction to script](#gentle-introduction-to-script)
+* [Access, environment, and editor](#environment-setup)
+* [Gentle introduction to scripting](#gentle-introduction-to-scripting)
 * [Error handling](#error-handling)
 * [Range basics](#range-basics)
 * [Basic performance considerations](#basic-performance-considerations)
 * [Note to VBA developers](#note-to-vba-developers)
 
-## Environment
+## Environment setup
 
 Learn about the basics of access, environment, and script editor.
 
@@ -29,19 +29,19 @@ Learn about the basics of access, environment, and script editor.
 Office Scripts requires admin settings available for Microsoft 365 administrator under **Settings** > **Org settings** > **Office Scripts**. By default, it's turned on for all users. There are two sub-settings, which the admin can turn on and off.
 
 * Ability to share scripts within the organization
-* Ability to use scripts in Power Automation
+* Ability to use scripts in Power Automate
 
 You can tell if you have access to Office Scripts by opening a file in Excel on the web (browser) and seeing if the **Automate** tab appears in the Excel ribbon or not.
 If you still can't see the **Automate** tab, check [this troubleshooting section](../../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
 
 ### Availability
 
-Office Scripts is available only in the Excel on the web for Enterprise E3+ licenses (Consumer, E1 accounts are not supported). Excel is not yet supported on Windows and Mac.
+Office Scripts is available only in the Excel on the web for Enterprise E3+ licenses (Consumer and E1 accounts are not supported). Office Scripts is not yet supported in Excel on Windows and Mac.
 
 ### Scripts and editor
 
-The code editor is built right into Excel on the web (online version). If you have used Visual Studio Code or Sublime editors, this editing experience will be quite similar.
-Most of the shortcut keys that Visual Studio Code editor uses works in the Office Script editing experience as well. Check out the following short-cut keys handout:
+The code editor is built right into Excel on the web (online version). If you have used editors like Visual Studio Code or Sublime, this editing experience will be quite similar.
+Most of the shortcut keys that Visual Studio Code editor uses work in the Office Scripts editing experience as well. Check out the following shortcut keys handouts:
 
 * https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 * https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
@@ -55,11 +55,11 @@ Most of the shortcut keys that Visual Studio Code editor uses works in the Offic
 * You can share the script with an Excel file which in effect means you are linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to **view**, **run**, or **make a copy** of the script. This is a key difference compared to VBA macros.
 * Unless you share your scripts, no one else can access it as it resides in your own library.
 * Scripts cannot be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script that is on pre-defined location (your OneDrive folder mentioned above) or shared scripts.
-* While editing, files are temporarily saved in the browser but you'll have to save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits.
+* During editing, files are temporarily saved in the browser but you'll have to save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits.
 
 ## Gentle introduction to scripting
 
-Office Scripts are standalone scripts written in the TypeScript language, which contains instructions to perform some automation against the selected Excel workbook. All automation instructions are self-contained within a script and scripts don't invoke or call other scripts. All scripts are stored in standalone files and stored on the user's OneDrive folder. You can record a new script, edit a recorded script, or write a whole new script from the scratch, all within a built-in editor interface. The best part of scripts is that they don't need any further setup from users. No external libraries, web pages, or UI elements, setup, etc. All the environment setup is handled by Office Scripts and it allows easy and fast access to automation through a simple API interface.
+Office Scripts are standalone scripts written in the TypeScript language that contain instructions to perform some automation against the selected Excel workbook. All automation instructions are self-contained within a script and scripts can't invoke or call other scripts. All scripts are stored in standalone files and stored on the user's OneDrive folder. You can record a new script, edit a recorded script, or write a whole new script from scratch, all within a built-in editor interface. The best part of Office Scripts is that they don't need any further setup from users. No external libraries, web pages, or UI elements, setup, etc. All the environment setup is handled by Office Scripts and it allows easy and fast access to automation through a simple API interface.
 
 Some of the basic concepts helpful to understand how to edit and navigate around scripts include:
 
@@ -70,35 +70,35 @@ Some of the basic concepts helpful to understand how to edit and navigate around
 * Type definitions
 * Environment: record/edit, run, examine results, share
 
-This video and section explain some of the above concepts in detail.
+This video and section explain some of these concepts in detail.
 
 [![Basics of Office Scripts](../../images/getting-started-v_script.png)](https://youtu.be/8Zsrc1uaiiU "Basics of Scripts")
 
 ### Language: TypeScript
 
-[Office Scripts](../../index.md) is written using the [TypeScript language](https://www.typescriptlang.org/), which is an open-source language that builds on JavaScript, one of the world's most used tools, by adding static type definitions. As the website says, `Types` provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
+[Office Scripts](../../index.md) is written using the [TypeScript language](https://www.typescriptlang.org/), which is an open-source language that builds on JavaScript (one of the world's most used) by adding static type definitions. As the website says, `Types` provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
 
-The language syntax itself is written using [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) with additional typings defined in the script using TypeScript conventions. For the most part, you can think of Office Scripts as written in JavaScript. It is essential that you understand the basics of JavaScript language to begin your Office Scripts journey; though you don't need to be proficient at it to begin your automation journey. With the Office Scripts' action recorder, you can understand the script statements as code comments are included and you can follow along and make small edits.
+The language syntax itself is written using [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) with additional typings defined in the script using TypeScript conventions. For the most part, you can think of Office Scripts as written in JavaScript. It is essential that you understand the basics of JavaScript language to begin your Office Scripts journey; though you don't need to be proficient at it to begin your automation journey. With the Office Scripts' action recorder, you can understand the script statements because code comments are included and you can follow along and make small edits.
 
-Office Scripts APIs, which allows the script to interact with Excel, is designed for end-users who may not have much coding background. APIs can be invoked synchronously and you don't need to know advanced topics such as promises or callbacks. Office Scripts API design provides:
+Office Scripts APIs, which allow the script to interact with Excel, are designed for end-users who may not have much coding background. APIs can be invoked synchronously and you don't need to know advanced topics such as promises or callbacks. Office Scripts API design provides:
 
-* Simple object model with methods, getter/setters
-* Easy to access object collections as regular arrays
-* Simple error handling options
-* Optimized performance for select scenarios helping users to focus on the scenario at hand
+* Simple object model with methods, getters/setters.
+* Easy-to-access object collections as regular arrays.
+* Simple error handling options.
+* Optimized performance for select scenarios helping users to focus on the scenario at hand.
 
-### `main` function: the script's starting point
+### `main` function: The script's starting point
 
-Office Scripts' execution begins at the `main` function. A script is a single file containing one of many functions along with declarations of types, interfaces, variables, etc. To follow along with the script, begin with `main` function as Excel always invokes the `main` function when you execute any script. The `main` function will always have at least one argument (or parameter) named `workbook`, which is just a variable name identifying the current workbook against which the script is running. You can define additional arguments for usage with Power Automation (offline) execution.
+Office Scripts' execution begins at the `main` function. A script is a single file containing one or many functions along with declarations of types, interfaces, variables, etc. To follow along with the script, begin with the `main` function as Excel always first invokes the `main` function when you execute any script. The `main` function will always have at least one argument (or parameter) named `workbook`, which is just a variable name identifying the current workbook against which the script is running. You can define additional arguments for usage with Power Automate (offline) execution.
 
 * `function main(workbook: ExcelScript.Workbook)`
 
-A script can be organized into many smaller functions to aid with code reusability, clarity, etc. Other functions can be inside or outside of the main function but always in the same file. A script is self-contained and can only use functions defined in the same file. Scripts cannot invoke or call another Office Script.
+A script can be organized into smaller functions to aid with code reusability, clarity, etc. Other functions can be inside or outside of the main function but always in the same file. A script is self-contained and can only use functions defined in the same file. Scripts cannot invoke or call another Office Script.
 
 So, in summary:
 
-* `main` function is the entry point for any script. When the function is executed, the Excel application invokes this main function by providing the workbook as its first parameter.
-* It's important to keep the first argument `workbook` and its type declaration as it appears. You can add new arguments to `main` function (see the next section) but do keep the first argument as is.
+* The `main` function is the entry point for any script. When the function is executed, the Excel application invokes this main function by providing the workbook as its first parameter.
+* It's important to keep the first argument `workbook` and its type declaration as it appears. You can add new arguments to the `main` function (see the next section) but do keep the first argument as is.
 
 ![The main function is the script's entry point](../../images/getting-started-main-introduction.png)
 
@@ -106,7 +106,7 @@ So, in summary:
 
 You can connect Excel to other parts of your organization by running scripts in [Power Automate](https://flow.microsoft.com). Learn more about [running Office Scripts in Power Automate flows](../../develop/power-automate-integration.md).
 
-The way to receive or send data from and to Excel is through the `main` function. Think of it as the information gateway that allows incoming and outgoing data to be described and used in the script. You can receive data from outside the script in the form of `string` data type and return any TypeScript recognized data such as `string`, `number`, `boolean`, or any objects in the form of interfaces you define in the script.
+The way to receive or send data from and to Excel is through the `main` function. Think of it as the information gateway that allows incoming and outgoing data to be described and used in the script. You can receive data from outside the script using the `string` data type and return any TypeScript-recognized data such as `string`, `number`, `boolean`, or any objects in the form of interfaces you define in the script.
 
 ![The inputs and outputs of a script](../../images/getting-started-data-in-out.png)
 
@@ -118,24 +118,24 @@ You can use functions to organize and reuse code within your script.
 
 ### Objects, hierarchy, methods, properties, collections
 
-All of the Excel's object model is defined in a hierarchical structure of objects, beginning with workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](../../overview/excel.md) to follow along with the relationships among objects.
+All of the Excel's object model is defined in a hierarchical structure of objects, beginning with the workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](/javascript/api/office-scripts/overview?view=office-scripts) to follow along with the relationships among objects.
 
-An [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In the case of Office Scripts object model, an object represents a thing in the Excel file that users interact with such as chart, hyperlink, pivot-table, etc. It can also represent the behavior of an object such as the protection attributes of a worksheet.
+An [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In the case of the Office Scripts object model, an object represents a thing in the Excel file that users interact with such as a chart, hyperlink, pivot-table, etc. It can also represent the behavior of an object such as the protection attributes of a worksheet.
 
-The topic of TypeScript objects and properties vs methods is quite deep. In order to get started with the script and be productive, you can remember few basic things:
+The topic of TypeScript objects and properties vs methods is quite deep. In order to get started with the script and be productive, you can remember a few basic things:
 
-* Both objects are properties are accessed using `.` dot notation, with the object on the left side of the `.` and property or method on the right side. Example: `hyperlink.address`, `range.getAddress()`
-* Properties are scalar in nature (strings, booleans, numbers). E.g., name of a workbook, position of a worksheet, the value of whether the table has a footer or not.
-* Methods are 'invoked' or 'executed' using the open-close parenthesis. e.g.,: `table.delete()`. Sometimes an argument is passed to a function by including them between open close parenthesis: `range.setValue('Hello')`. You can pass many arguments to a function (as defined by its contract/signature). simply separate them using `,`.  e.g.,: `worksheet.addTable('A1:D6', true)`. You can pass arguments of any type as required by the method such as strings, number, boolean or even other objects. e.g., `worksheet.addTable(targetRange, true)`, where targetRange is an object created elsewhere in the script.
-* Methods can return a thing such as a scalar property (name, address, etc.) or another object (range, chart), or not return anything at all (such as the case with `delete` methods). You receive what method returns by declaring a variable or assigning to an existing variable. You can see that on the left hand side of statement such as `const table = worksheet.addTable('A1:D6', true)`.
-* For the most part, Office Script object model consists of objects with methods that link various parts of the Excel object model. Very rarely you'll come across properties that are of scalar or object values.
-* In Office Scripts, an Excel object model method has to contain open-close parenthesis. Usage of methods without them is not allowed (such as assigning a method to a variable).
+* Both objects and properties are accessed using `.` (dot) notation, with the object on the left side of the `.` and the property or method on the right side. Examples: `hyperlink.address`, `range.getAddress()`.
+* Properties are scalar in nature (strings, booleans, numbers). For example, name of a workbook, position of a worksheet, the value of whether the table has a footer or not.
+* Methods are 'invoked' or 'executed' using the open and close parentheses. Example: `table.delete()`. Sometimes an argument is passed to a function by including them between open and close parentheses: `range.setValue('Hello')`. You can pass many arguments to a function (as defined by its contract/signature) and separate them using `,`.  For example: `worksheet.addTable('A1:D6', true)`. You can pass arguments of any type as required by the method such as strings, number, boolean, or even other objects, for example, `worksheet.addTable(targetRange, true)`, where `targetRange` is an object created elsewhere in the script.
+* Methods can return a thing such as a scalar property (name, address, etc.) or another object (range, chart), or not return anything at all (such as the case with `delete` methods). You receive what the method returns by declaring a variable or assigning to an existing variable. You can see that on the left hand side of statement such as `const table = worksheet.addTable('A1:D6', true)`.
+* For the most part, the Office Scripts object model consists of objects with methods that link various parts of the Excel object model. Very rarely you'll come across properties that are of scalar or object values.
+* In Office Scripts, an Excel object model method has to contain open and close parentheses. Using methods without them is not allowed (such as assigning a method to a variable).
 
-Let's look at some of the methods of `workbook` object.
+Let's look at a few methods on the `workbook` object.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
-    // Returns a boolean (true or false) setting of whether the workbook is set to auto-save or not. 
+    // Return a boolean (true or false) setting of whether the workbook is set to auto-save or not. 
     const autoSave = workbook.getAutoSave(); 
     // Get workbook name.
     const name = workbook.getName();
@@ -148,16 +148,16 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-In the above example,
+In this example:
 
-* The methods of `workbook` object such as `getAutoSave()` and `getName()` returns a scalar property (string, number, boolean).
-* Where as methods such as `getActiveCell()` returns another object.
+* The methods of the `workbook` object such as `getAutoSave()` and `getName()` return a scalar property (string, number, boolean).
+* Methods such as `getActiveCell()` return another object.
 * The `getTable()` method accepts an argument (table name in this case) and returns a specific table in the workbook.
-* The `getSlicers()` method returns an array (referred to in many places as collection) of all slicer objects within the workbook.
+* The `getSlicers()` method returns an array (referred to in many places as a collection) of all slicer objects within the workbook.
 
-You'll notice that all of the above methods have a prefix of `get`, which is just a convention used in the Office Scripts object model to convey that the method is returning something. They are also commonly referred to as 'getters'.
+You'll notice that all of these methods have a `get` prefix, which is just a convention used in the Office Scripts object model to convey that the method is returning something. They are also commonly referred to as 'getters'.
 
-There are two other types of methods that we'll now see in the example below:
+There are two other types of methods that we'll now see in the next example:
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -170,26 +170,26 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-In the above example,
+In this example:
 
-* `setName()` method sets the name to a a new name. `setPosition()` sets the position to 1st place.
-* Such methods modify the Excel file by setting some property or behavior of the workbook. These methods are called 'setters'.
-* Typically 'setters' have a companion 'getters'. e.g., `worksheet.getPosition` and `worksheet.setPosition` - both of which are methods.
+* The `setName()` method sets a new name to the worksheet. `setPosition()` sets the position to the first cell.
+* Such methods modify the Excel file by setting a property or behavior of the workbook. These methods are called 'setters'.
+* Typically 'setters' have a companion 'getter', for example, `worksheet.getPosition` and `worksheet.setPosition`, both of which are methods.
 
 #### `undefined` and `null` primitive types
 
-There are two primitive data types that one must be aware of:
+The following are two primitive data types that you must be aware of:
 
-* The value [`null`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) represents the intentional absence of any object value. It is one of JavaScript's primitive values. It is used to indicate that a variable has no value.
-* A variable that has not been assigned a value is of type [`undefined`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined). A method or statement can also return `undefined` if the variable that is being evaluated does not have an assigned value.
+1. The value [`null`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) represents the intentional absence of any object value. It is one of JavaScript's primitive values and is used to indicate that a variable has no value.
+1. A variable that has not been assigned a value is of type [`undefined`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined). A method or statement can also return `undefined` if the variable that's being evaluated doesn't have an assigned value.
 
-The above two types crop up as part of error handling and can cause quite a bit of headache if not handled properly. Fortunately, TypeScript/JavaScript language offers an easy way to check if a variable is of type `undefined` or `null` easily. We will talk about some of those checks in the below sections, including error handling.
+These two types crop up as part of error handling and can cause quite a bit of headache if not handled properly. Fortunately, TypeScript/JavaScript offers a way to check if a variable is of type `undefined` or `null`. We will talk about some of those checks in later sections, including error handling.
 
 #### Method chaining
 
-You can use dot notation to connect objects being returned from a method to shorten your code. Sometimes this technique makes the code easy to read and manage. However, there are few things to be aware of. Let's look at the following examples:
+You can use dot notation to connect objects being returned from a method to shorten your code. Sometimes this technique makes the code easy to read and manage. However, there are few things to be aware of. Let's look at the following examples.
 
-Below code gets the active cell and gets the next cell and sets the value. This is a good candidate to use chaining as this code will succeed all the time.
+The following code gets the active cell and the next cell, then sets the value. This is a good candidate to use chaining as this code will succeed all the time.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -197,30 +197,30 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-However, the below code (which gets a table named SALES and turns its banded column style on) has an issue.
+However, the following code (which gets a table named **SALES** and turns on its banded column style) has an issue.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
-    workbook.getTable('SALES').setShowBandedColumns(true);
+  workbook.getTable('SALES').setShowBandedColumns(true);
 }
 ```
 
-What if the SALES table doesn't exist? The script will fail with an error as shown below because the `getTable('SALES')` returns `undefined` type (which is a JavaScript type indicating that there is no table such as `SALES`). Calling `setShowBandedColumns` method on `undefined` makes no sense - `undefined.setShowBandedColumns(true)` and hence the script ends in an error.
+What if the **SALES** table doesn't exist? The script will fail with an error (shown next) because `getTable('SALES')` returns `undefined` (which is a JavaScript type indicating that there is no table such as **SALES**). Calling the `setShowBandedColumns` method on `undefined` makes no sense, that is, `undefined.setShowBandedColumns(true)`, and hence the script ends in an error.
 
 ```text
 Line 2: Cannot read property 'setShowBandedColumns' of undefined
 ```
 
-You could use [optional chaining operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining) that provides a way to simplify accessing values through connected objects when it's possible that a reference or method may be `undefined` or `null` (which is JavaScript way of indicating unassigned or non-existent object or result) to handle this condition.
+You could use the [optional chaining operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining) that provides a way to simplify accessing values through connected objects when it's possible that a reference or method may be `undefined` or `null` (which is JavaScript's way of indicating an unassigned or nonexistent object or result) to handle this condition.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
-    // This line will not fail as the setShowBandedColumns method is executed only if the SALES table is present
+    // This line will not fail as the setShowBandedColumns method is executed only if the SALES table is present.
     workbook.getTable('SALES')?.setShowBandedColumns(true); 
 }
 ```
 
-If you wish to handle non-existing object conditions or `undefined` type being returned by a method, then it is better to assign the return value from the method and handle that separately.
+If you wish to handle nonexistent object conditions or `undefined` type being returned by a method, then it is better to assign the return value from the method and handle that separately.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -228,7 +228,7 @@ function main(workbook: ExcelScript.Workbook) {
     if (salesTable) {
         salesTable.setShowBandedColumns(true);
     } else { 
-        // Handle this condition
+        // Handle this condition.
     }
 }
 ```
@@ -357,7 +357,7 @@ Examples:
 
 You can identify the types easily in the code editor as it appears distinctly usually in a different color. The color `:` usually precedes the type declaration.  
 
-Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part TypeScript language is good at inferring the types of variables. However, in certain cases, Office Script will require the type declarations be explicitly defined if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that below.
+Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part TypeScript language is good at inferring the types of variables. However, in certain cases, Office Scripts will require the type declarations be explicitly defined if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that below.
 
 #### Type assertion (overriding the type)
 
@@ -395,7 +395,7 @@ let someVariable: any;
 // ^^ This is not allowed ^^
 ```
 
-The `any` type presents challenges to the way Office Script processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile-time error (error prior to the running of the script) if there is any variable with `any` type defined in the script. You will see an error in the editor as well.
+The `any` type presents challenges to the way Office Scripts processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile-time error (error prior to the running of the script) if there is any variable with `any` type defined in the script. You will see an error in the editor as well.
 
 ![Explicit any error](../../images/getting-started-eanyi.png)
 
@@ -581,7 +581,7 @@ function inputPresent( workbook: ExcelScript.Workbook): boolean {
 
 For the most part, you don't need to abort (`throw`) from your script. This is because the script's purpose here is to inform the user that script failed to run due to the absence of input data. Ending the script with an error message is sufficient in most cases and is lot simpler to simply `return` out of the `main` function.
 
-However, if your script is running as part of Power Automation, you may want to abort the flow if certain conditions are not met. It is therefore important to not `return` upon an error but rather issue `throw` statement to abort the script so that the following step doesn't run.
+However, if your script is running as part of Power Automate, you may want to abort the flow if certain conditions are not met. It is therefore important to not `return` upon an error but rather issue `throw` statement to abort the script so that the following step doesn't run.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
