@@ -1,6 +1,6 @@
 ---
 title: 'Range basics in Office Scripts'
-description: 'Learn about basic methods in the Range object.'
+description: 'Learn basics about using the Range object in Office Scripts.'
 ms.date: 02/26/2021
 localization_priority: Normal
 ---
