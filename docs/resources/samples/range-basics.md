@@ -1,11 +1,11 @@
 ---
 title: 'Range basics in Office Scripts'
-description: 'Learn about get range methods in Office Scripts.'
+description: 'Learn about basic methods in the Range object.'
 ms.date: 02/26/2021
 localization_priority: Normal
 ---
 
-# Range Basics: Get Methods
+# Range Basics
 
 `Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range?view=office-scripts) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
 
