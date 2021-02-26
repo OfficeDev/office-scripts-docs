@@ -1,7 +1,7 @@
 ---
 title: 'Getting started with Office Scripts'
 description: 'Basics about Office Scripts including access, environment, and script patterns.'
-ms.date: 02/23/2021
+ms.date: 02/26/2021
 localization_priority: Normal
 ---
 
@@ -54,7 +54,7 @@ Most of the shortcut keys that Visual Studio Code editor uses work in the Office
 * Scripts are not stored as part of Excel files. They are stored separately.
 * You can share the script with an Excel file which in effect means you are linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to **view**, **run**, or **make a copy** of the script. This is a key difference compared to VBA macros.
 * Unless you share your scripts, no one else can access it as it resides in your own library.
-* Scripts cannot be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script that is on pre-defined location (your OneDrive folder mentioned above) or shared scripts.
+* Scripts can't be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script that is on predefined location (your OneDrive folder mentioned above) or shared scripts.
 * During editing, files are temporarily saved in the browser but you'll have to save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits.
 
 ## Gentle introduction to scripting
@@ -126,10 +126,10 @@ The topic of TypeScript objects and properties vs methods is quite deep. In orde
 
 * Both objects and properties are accessed using `.` (dot) notation, with the object on the left side of the `.` and the property or method on the right side. Examples: `hyperlink.address`, `range.getAddress()`.
 * Properties are scalar in nature (strings, booleans, numbers). For example, name of a workbook, position of a worksheet, the value of whether the table has a footer or not.
-* Methods are 'invoked' or 'executed' using the open and close parentheses. Example: `table.delete()`. Sometimes an argument is passed to a function by including them between open and close parentheses: `range.setValue('Hello')`. You can pass many arguments to a function (as defined by its contract/signature) and separate them using `,`.  For example: `worksheet.addTable('A1:D6', true)`. You can pass arguments of any type as required by the method such as strings, number, boolean, or even other objects, for example, `worksheet.addTable(targetRange, true)`, where `targetRange` is an object created elsewhere in the script.
+* Methods are 'invoked' or 'executed' using the open-close parentheses. Example: `table.delete()`. Sometimes an argument is passed to a function by including them between open-close parentheses: `range.setValue('Hello')`. You can pass many arguments to a function (as defined by its contract/signature) and separate them using `,`.  For example: `worksheet.addTable('A1:D6', true)`. You can pass arguments of any type as required by the method such as strings, number, boolean, or even other objects, for example, `worksheet.addTable(targetRange, true)`, where `targetRange` is an object created elsewhere in the script.
 * Methods can return a thing such as a scalar property (name, address, etc.) or another object (range, chart), or not return anything at all (such as the case with `delete` methods). You receive what the method returns by declaring a variable or assigning to an existing variable. You can see that on the left hand side of statement such as `const table = worksheet.addTable('A1:D6', true)`.
 * For the most part, the Office Scripts object model consists of objects with methods that link various parts of the Excel object model. Very rarely you'll come across properties that are of scalar or object values.
-* In Office Scripts, an Excel object model method has to contain open and close parentheses. Using methods without them is not allowed (such as assigning a method to a variable).
+* In Office Scripts, an Excel object model method has to contain open-close parentheses. Using methods without them is not allowed (such as assigning a method to a variable).
 
 Let's look at a few methods on the `workbook` object.
 
@@ -235,7 +235,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Get object reference
 
-the `workbook` object is given to you directly in the `main` function. You can begin to use the `workbook` object and access its methods directly.
+The `workbook` object is given to you in the `main` function. You can begin to use the `workbook` object and access its methods directly.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -246,13 +246,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-For using all other objects within the workbook, begin with `workbook` object and go down the hierarchy until you get to the object you are looking for. You can get object reference by fetching the object using `get` method or by retrieving the collection of objects as shown below:
+For using all other objects within the workbook, begin with `workbook` object and go down the hierarchy until you get to the object you are looking for. You can get the object reference by fetching the object using its `get` method or by retrieving the collection of objects as shown below:
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     const sheet = workbook.getActiveWorksheet();
-    // If you want to fetch using an ID or key.
+    // Fetch using an ID or key.
     const sheet = workbook.getWorksheet('SomeSheetName');
     // Invoke methods on the object.
     sheet.setPosition(0); 
@@ -263,9 +263,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-#### Check if an object exists, delete, and add
+#### Check if an object exists, then delete, and add
 
-For creating an object, say with a pre-defined name, it is always better to remove similar object that may exist and then add it. You can do that using this pattern:
+For creating an object, say with a predefined name, it is always better to remove a similar object that may exist and then add it. You can do that using the following pattern.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -285,16 +285,16 @@ function main(workbook: ExcelScript.Workbook) {
 
 ```
 
-Alternately, for deleting an object that may or may not exist, use this pattern: 
+Alternatively, for deleting an object that may or may not exist, use the following pattern.
 
 ```ts
-    // The ? preceding the delete() will ensure that the API is only invoked if the object exists. 
+    // The ? preceding delete() will ensure that the API is only invoked if the object exists. 
     workbook.getWorksheet('Index')?.delete(); 
 ```
 
 #### Note about adding an object
 
-To create or insert or add an object such as slicer, pivot-table, worksheet, etc. simply use the corresponding **add_Object_** method. Such method will be available on its parent object. Example - `addChart()` method will be available on `worksheet` object. The **add_Object_** returns the object it creates. Simply receive the returned value and use it later in your script.
+To create, insert, or add an object such as a slicer, pivot table, worksheet, etc., use the corresponding **add_Object_** method. Such a method is available on its parent object. For example, the `addChart()` method is available on `worksheet` object. The **add_Object_** method returns the object it creates. Receive the returned value and use it later in your script.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -306,10 +306,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ```
 
-Alternately, for deleting an object that may or may not exist, use this pattern:
+Alternatively, for deleting an object that may or may not exist, use this pattern:
 
 ```ts
-    workbook.getWorksheet('Index')?.delete(); // The ? preceding the delete() will ensure that the API is only invoked if the object exists. 
+    workbook.getWorksheet('Index')?.delete(); // The ? preceding delete() will ensure that the API is only invoked if the object exists. 
 ```
 
 #### Collections
@@ -318,16 +318,16 @@ Collections are objects such as tables, charts, columns, etc. that can be retrie
 
 * [`for` or `while`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)
 * [`for..of`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of)
-* [`forEach`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), etc.
+* [`forEach`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 * [Language basics of arrays](https://developer.mozilla.org//docs/Learn/JavaScript/First_steps/Arrays)
 
-This script demonstrates how to use collections used in Office Scripts Excel APIs. It colors each worksheet tab in the file with a random color.
+This script demonstrates how to use collections supported in Office Scripts APIs. It colors each worksheet tab in the file with a random color.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
 
-  // Get all sheets as a collection. 
+  // Get all sheets as a collection.
   const sheets = workbook.getWorksheets();
   const names = sheets.map ((sheet) => sheet.getName());
   console.log(names);
@@ -336,7 +336,7 @@ function main(workbook: ExcelScript.Workbook) {
   console.log(`First sheet name is: ${names[0]}`);
   if (sheets.length > 1) {
     console.log(`Last sheet's Id is: ${sheets[sheets.length -1].getId()}`);
-  }  
+  }
   // Color each worksheet with random color.
   for (const sheet of sheets) {
     sheet.setTabColor(`#${Math.random().toString(16).substr(-6)}`);
@@ -347,28 +347,29 @@ function main(workbook: ExcelScript.Workbook) {
 ### Type definitions
 
 Type declarations help users understand the type of variable they are dealing with. It helps with auto-completion of methods and assists in development time quality checks.
+
 You can find type declarations in the script in various places including function declaration, variable declaration, IntelliSense definitions, etc.
 
 Examples:
 
 * `function main(workbook: ExcelScript.Workbook)`
-* `let myRange: ExcelScript.Range;` 
+* `let myRange: ExcelScript.Range;`
 * `function getMaxAmount(range: ExcelScript.Range): number`
 
-You can identify the types easily in the code editor as it appears distinctly usually in a different color. The color `:` usually precedes the type declaration.  
+You can identify the types easily in the code editor as it usually appears distinctly in a different color. A colon `:` usually precedes the type declaration.  
 
-Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part TypeScript language is good at inferring the types of variables. However, in certain cases, Office Scripts will require the type declarations be explicitly defined if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that below.
+Including the type can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part, the TypeScript language is good at inferring the types of variables. However, in certain cases, Office Scripts will require explicit type declarations if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that later.
 
 #### Type assertion (overriding the type)
 
-As the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions) states,  "sometimes you’ll end up in a situation where you’ll know more about a value than TypeScript does. Usually, this will happen when you know the type of some entity could be more specific than its current type.Type assertions are a way to tell the compiler “trust me, I know what I’m doing.” A type assertion is like a type cast in other languages, but it performs no special checking or restructuring of data. It has no runtime impact and is used purely by the compiler."
+As the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions) states, "Sometimes you'll end up in a situation where you'll know more about a value than TypeScript does. Usually, this will happen when you know the type of some entity could be more specific than its current type. Type assertions are a way to tell the compiler “trust me, I know what I'm doing.” A type assertion is like a type cast in other languages, but it performs no special checking or restructuring of data. It has no runtime impact and is used purely by the compiler."
 
-You can assert the type using `as` keyword or using angle-brackets as shown in below code.
+You can assert the type using the `as` keyword or using angle brackets as shown in following code.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
   let data = workbook.getActiveCell().getValue();
-  // Since the add10 function accepts only number, I have to assert data's type as number - otherwise the script cannot be run.
+  // Since the add10 function only accepts number, assert data's type as number, otherwise the script cannot be run.
   const answer1 = add10(data as number);
   const answer2 = add10(<number> data);
 }
@@ -380,46 +381,48 @@ function add10(data: number) {
 
 #### 'any' type in the script
 
-As the [TypeScript website states](https://www.typescriptlang.org/docs/handbook/basic-types.html#any), in some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the `any` type:
+The [TypeScript website states](https://www.typescriptlang.org/docs/handbook/basic-types.html#any):
 
-```typescript
-declare function getValue(key: string): any;
-// OK, return value of 'getValue' is not checked
-const str: string = getValue("myString");
-```
+  In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the `any` type:
 
-**Explicit `any` is not allowed**
+  ```ts
+  declare function getValue(key: string): any;
+  // OK, return value of 'getValue' is not checked
+  const str: string = getValue("myString");
+  ```
 
-```typescript
+**Explicit `any` is NOT allowed**
+
+```ts
+// This is not allowed
 let someVariable: any; 
-// ^^ This is not allowed ^^
 ```
 
-The `any` type presents challenges to the way Office Scripts processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile-time error (error prior to the running of the script) if there is any variable with `any` type defined in the script. You will see an error in the editor as well.
+The `any` type presents challenges to the way Office Scripts processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile-time error (error prior to running the script) if there is any variable with `any` type declared in the script. You will see an error in the editor as well.
 
-![Explicit any error](../../images/getting-started-eanyi.png)
+![Explicit 'any' error](../../images/getting-started-eanyi.png)
 
-![Explicit any error](../../images/getting-started-expany.png)
+![Explicit 'any' error shown in Output](../../images/getting-started-expany.png)
 
-In the above code `[5, 16] Explicit Any is not allowed` indicates that line # 5 column # 16 defines `any` type. This helps to locate the error line.
+In the code displayed in the previous image, `[5, 16] Explicit Any is not allowed` indicates that line 5 column 16 declares the `any` type. This helps you locate the line of code that contains the error.
 
-To get around this issue, always define the type of the variable.
+To get around this issue, always declare the type of the variable.
 
-If you are uncertain about the type of a variable, one cool trick in TypeScript allows you to define [union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be used for variables to hold range values, which can be only of many types.
+If you are uncertain about the type of a variable, one cool trick in TypeScript allows you to define [union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be used for variables to hold a range values, which can be of many types.
 
-```typescript
-   let value: (string | number | boolean);
-   // ^^ define this as a union type rather than any type ^^
-   value = someValue_from_another_source;
-   //...
-   someRange.setValue(value);
+```ts
+// Define value as a union type rather than 'any' type.
+let value: (string | number | boolean);
+value = someValue_from_another_source;
+//...
+someRange.setValue(value);
 ```
 
 #### Type inference
 
 In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) is used to provide type information when there is no explicit type annotation. For example, in this code:
 
-```typescript
+```ts
 let x = 3;
 //  ^ = let x: number
 ```
@@ -428,38 +431,44 @@ The type of the x variable is inferred to be a number. This kind of inference ta
 
 #### no-implicit-any rule
 
-A script requires the types of the variables used to be explicitly or implicitly defined. If TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference is not possible), then you will receive a compilation time error (error prior to the running of the script).  You will see an error in the editor as well.
+A script requires the types of the variables used to be explicitly or implicitly declared. If the TypeScript compiler is unable to determine the type of a variable (either because type is not declared explicitly or type inference is not possible), then you will receive a compilation time error (error prior to running the script). You will see an error in the editor as well.
 
-![Implicit any error](../../images/getting-started-iany.png)
+![Implicit 'any' error shown in editor](../../images/getting-started-iany.png)
 
-Following scripts will receive compilation time error as variables are defined without any types and TypeScript cannot determine the type at the time of declaration.
+The following scripts have compilation time errors because variables are declared without types and TypeScript cannot determine the type at the time of declaration.
 
-```typescript
+```ts
 function main(workbook: ExcelScript.Workbook) {
+    // The variable 'value' gets 'any' type
+    // because no type is declared.
     let value; 
-    // ^^ the variable 'value' gets 'any' type as no type is defined. ^^
+    // Even when a number type is assigned,
+    // the type of 'value' remains any.
     value = 10; 
-    // ^^Even when a number type is assigned, the type of 'value' remains any. ^^
+    // The following statement fails because
+    // Office Scripts can't send an argument
+    // of type 'any' to Excel for processing.
     workbook.getActiveCell().setValue(value);
-    // ^^ Above line will fail because Office Scripts can't send an argument of type 'any' to Excel for processing. ^^
     return;
 }
 ```
 
-```typescript
+```ts
 function main(workbook: ExcelScript.Workbook) {
+    // The variable 'cell' gets 'any' type
+    // because no type is defined.
     let cell; 
-    // ^^ the variable 'cell' gets 'any' type as no type is defined. ^^
     cell = workbook.getActiveCell().getValue();
+    // Office Scripts can't assign Range type object
+    // to a variable of 'any' type.
     console.log(cell.getValue());
-    // ^^ Office Scripts cannot assign Range type object to 'any' type variable. ^^    
     return;
 }
 ```
 
-To avoid this, use the following instead. In each case, the type is declared at the time of declaration of the variable.
+To avoid this error, use the following patterns instead. In each case, the variable and its type are declared at the same time.
 
-```typescript
+```ts
 function main(workbook: ExcelScript.Workbook) {
     const value: number = 10; 
     workbook.getActiveCell().setValue(value);
@@ -467,7 +476,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-```typescript
+```ts
 function main(workbook: ExcelScript.Workbook) {
     const cell: ExcelScript.Range = workbook.getActiveCell().getValue();
     console.log(cell.getValue()); 
@@ -477,36 +486,37 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Error handling
 
-Office Scripts error can be classified into one of the following categories:
+Office Scripts error can be classified into one of the following categories.
 
-1. Compile time warnings shown in the editor
-1. Compile time error that appears when you run - it occurs before the execution begins
+1. Compile-time warning shown in the editor
+1. Compile-time error that appears when you run but occurs before execution begins
 1. Runtime error
 
-Editor warnings can be identified using the red underlines in the editor:
+Editor warnings can be identified using the wavy red underlines in the editor:
 
-![Implicit any error](../../images/getting-started-eanyi.png)
+![Compile-time warning shown in the editor](../../images/getting-started-eanyi.png)
 
-At times, you may also see orange warning underlines and grey informational messages. They should be examined closely - though they are not going to cause errors.
+At times, you may also see orange warning underlines and grey informational messages. They should be examined closely though they are not going to cause errors.
 
-It is not possible to distinguish between compile-time and runtime errors as both error messages will look identical. They both occur when you actually execute the script. See below for an example of compile-time error followed by runtime error.
+It isn't possible to distinguish between compile-time and runtime errors as both error messages look identical. They both occur when you actually execute the script. The following images show examples of a compile-time error and a runtime error.
 
-![Explicit any error](../../images/getting-started-expany.png)
+![Example of a compile-time error](../../images/getting-started-expany.png)
 
-![Error](../../images/getting-started-error-basic.png)
+![Example of a runtime error](../../images/getting-started-error-basic.png)
 
-In both cases, you will see the line # where the error occurred. You can then examine the code, fix the issue, and run again.
+In both cases, you will see the line number where the error occurred. You can then examine the code, fix the issue, and run again.
 
-Below are few best practices to avoid runtime errors.
+Following are a few best practices to avoid runtime errors.
 
 ### Check for object existence before deletion
 
-Alternately, for deleting an object that may or may not exist, use this pattern:
+Alternatively, for deleting an object that may or may not exist, use this pattern:
 
 ```ts
-    workbook.getWorksheet('Index')?.delete(); // The ? preceding the delete() will ensure that the API is only invoked if the object exists. 
+    // The ? ensures that the delete() API is only invoked if the object exists. 
+    workbook.getWorksheet('Index')?.delete();
 
-    // Alternate way -- 
+    // Alternative:
     const indexSheet = workbook.getWorksheet('Index');
     if (indexSheet) {
         indexSheet.delete();
@@ -515,78 +525,14 @@ Alternately, for deleting an object that may or may not exist, use this pattern:
 
 ### Do pre-checks at the beginning of the script
 
-As a best practice, always ensure that all your inputs are present in the Excel file prior to running your script. You may have made certain assumptions about objects being present in the workbook. If those objects don't exist, your script may encounter an error when you read the object or its data. Rather than beginning the processing and erroring in the middle after part of the updates/processing has already finished, it is better to do all pre-checks at the start of the script.
+As a best practice, always ensure that all your inputs are present in the Excel file prior to running your script. You may have made certain assumptions about objects being present in the workbook. If those objects don't exist, your script may encounter an error when you read the object or its data. Rather than beginning the processing and erroring in the middle after part of the updates or processing has already finished, it is better to do all pre-checks at the start of the script.
 
-Example:
-
-The following script requires two tables by the name of Table1 and Table2 to be present. Hence it checks their presence and ends the script with `return` statement if they are not present with an appropriate message.
-
+For example, the following script requires two tables named Table1 and Table2 to be present. Hence the script checks for their presence and ends with the `return` statement and an appropriate message if they are not present.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
 
-  // Tables that should be part of the workbook for the script to work:
-  const TargetTableName = 'Table1';
-  const SourceTableName = 'Table2';
-
-  // Get the table objects
-  let targetTable = workbook.getTable(TargetTableName);
-  let sourceTable = workbook.getTable(SourceTableName);
-
-
-  if (!targetTable || !sourceTable) {
-    console.log(`Tables missing - Check to make sure both source (${TargetTableName}) and target table (${SourceTableName}) are present before running the script. `);
-    return;
-  }
-  // Continue....
-
-```
-
-If the verification to ensure input data is present or not is happening in a separate function, it is important to end the script by issuing `return` statement from the `main` function.
-
-For example, `main` function calls `inputPresent` function to do the pre-checks. The `inputPresent` just returns a boolean (true or false) indicating whether all required inputs are present or not. It is then the responsibility of the `main` function to issue `return` statement (from within same the `main` function) to end the script immediately.
-
-
-```ts
-function main(workbook: ExcelScript.Workbook) {
-
-  // Get the table objects
-  if (!inputPresent(workbook)) {
-    return;
-  }
-  // Continue....
-
-}
-
-function inputPresent( workbook: ExcelScript.Workbook): boolean {
-
-  // Tables that should be part of the workbook for the script to work:
-  const TargetTableName = 'Table1';
-  const SourceTableName = 'Table2';
-
-  // Get the table objects
-  let targetTable = workbook.getTable(TargetTableName);
-  let sourceTable = workbook.getTable(SourceTableName);
-
-  if (!targetTable || !sourceTable) {
-    console.log(`Tables missing - Check to make sure both source (${TargetTableName}) and target table (${SourceTableName}) are present before running the script. `);
-    return false;
-  }
-  return true; 
-
-}
-```
-
-### When to abort (throw) the script  
-
-For the most part, you don't need to abort (`throw`) from your script. This is because the script's purpose here is to inform the user that script failed to run due to the absence of input data. Ending the script with an error message is sufficient in most cases and is lot simpler to simply `return` out of the `main` function.
-
-However, if your script is running as part of Power Automate, you may want to abort the flow if certain conditions are not met. It is therefore important to not `return` upon an error but rather issue `throw` statement to abort the script so that the following step doesn't run.
-
-```ts
-function main(workbook: ExcelScript.Workbook) {
-
-  // Tables that should be part of the workbook for the script to work:
+  // Tables that should be in the workbook for the script to work:
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
 
@@ -594,21 +540,79 @@ function main(workbook: ExcelScript.Workbook) {
   let targetTable = workbook.getTable(TargetTableName);
   let sourceTable = workbook.getTable(SourceTableName);
 
+  if (!targetTable || !sourceTable) {
+    console.log(`Required tables missing - Check that both source (${TargetTableName}) and target (${SourceTableName}) tables are present before running the script.`);
+    return;
+  }
+
+  // Continue....
+}
+```
+
+If the verification to ensure the presence of input data is happening in a separate function, it's important to end the script by issuing the `return` statement from the `main` function.
+
+In the following example, the `main` function calls the `inputPresent` function to do the pre-checks. `inputPresent` returns a boolean (`true` or `false`) indicating whether all required inputs are present or not. It's then the responsibility of the `main` function to issue the `return` statement (that is, from within the `main` function) to end the script immediately.
+
+```ts
+function main(workbook: ExcelScript.Workbook) {
+
+  // Get the table objects.
+  if (!inputPresent(workbook)) {
+    return;
+  }
+
+  // Continue....
+}
+
+function inputPresent( workbook: ExcelScript.Workbook): boolean {
+
+  // Tables that should be in the workbook for the script to work:
+  const TargetTableName = 'Table1';
+  const SourceTableName = 'Table2';
+
+  // Get the table objects.
+  let targetTable = workbook.getTable(TargetTableName);
+  let sourceTable = workbook.getTable(SourceTableName);
+
+  if (!targetTable || !sourceTable) {
+    console.log(`Required tables missing - Check that both source (${TargetTableName}) and target (${SourceTableName}) tables are present before running the script.`);
+    return false;
+  }
+  return true;
+}
+```
+
+### When to abort (`throw`) the script  
+
+For the most part, you don't need to abort (`throw`) from your script. This is because the script's usually informs the user that the script failed to run due to an issue. In most case, it's sufficient to end the script with an error message and a `return` statement from the `main` function.
+
+However, if your script is running as part of Power Automate, you may want to abort the flow if certain conditions are not met. It's therefore important to not `return` upon an error but rather issue a `throw` statement to abort the script so that any subsequent code statements don't run.
+
+```ts
+function main(workbook: ExcelScript.Workbook) {
+
+  // Tables that should be in the workbook for the script to work:
+  const TargetTableName = 'Table1';
+  const SourceTableName = 'Table2';
+
+  // Get the table objects.
+  let targetTable = workbook.getTable(TargetTableName);
+  let sourceTable = workbook.getTable(SourceTableName);
 
   if (!targetTable || !sourceTable) {
     // Abort script.
-    throw `Tables missing - Check to make sure both source (${TargetTableName}) and target table (${SourceTableName}) are present before running the script. `;
+    throw `Required tables missing - Check that both source (${TargetTableName}) and target (${SourceTableName}) tables are present before running the script.`;
   }
   
 ```
 
-As mentioned in the following section, another scenario is when you have several functions involved (main calls functionX which calls functionY, etc.) which makes it hard to propagate the error. Aborting/throwing from the nested function with a message may be easier than returning an error all the way up to `main` and returning from `main` with an error message.
+As mentioned in the following section, another scenario is when you have several functions involved (`main` calls `functionX` which calls `functionY`, etc.) which makes it hard to propagate the error. Aborting/throwing from the nested function with a message may be easier than returning an error all the way up to `main` and returning from `main` with an error message.
 
 ### When to use try..catch (throw exception)
 
-[`try..catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) technique is a way to detect if an API call failed and handling such error in your script. It may be important to check the return value of an API to verify that it was completed successfully.
+The [`try..catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) technique is a way to detect if an API call failed and handle that error in your script. It may be important to check the return value of an API to verify that it was completed successfully.
 
-Example: Consider the following snippet:
+Consider the following example snippet.
 
 ```ts
 function main(workbook: ExcelScript.Workbook) {
@@ -619,30 +623,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The `setValues()` may fail resulting in the script failure. You may wish to handle this condition in your code and perhaps customize the error message or break-up the update into smaller units, etc. In that case, it is important to know that the API returned an error and interpret or handle that error.
+The `setValues()` call may fail and result in the script failure. You may wish to handle this condition in your code and perhaps customize the error message or break up the update into smaller units, etc. In that case, it's important to know that the API returned an error and interpret or handle that error.
 
 ```ts
     try {
         range.setValues(someLargeValues);
     } catch (error) {
-        console.log(`The script failed to update the values at location ____. Please inspect and run again.`);        
-        console.log(error);      
-        return; // End script (assuming this is in main function)  
+        console.log(`The script failed to update the values at location ____. Please inspect and run again.`);
+        console.log(error);
+        return; // End script (assuming this is in main function).
     }
 
-    // or...
+    // OR...
 
     try {
         range.setValues(someLargeValues);
     } catch (error) {
-        console.log(`The script failed to update the values at location ____. Trying a different approach`);        
+        console.log(`The script failed to update the values at location ____. Trying a different approach`);
         handleUpdatesInSmallerChunks(someLargeValues);
     }
-    // Continue
 
+    // Continue...
+}
 ```
 
-Another scenario is when main function calls another function, which in turn calls another function (and so on..), and the API call that you care about happens down in the bottom function. Propagating error up all the way to `main` may not be feasible or convenient. In that case, throwing an error in the bottom function will be most convenient.
+Another scenario is when main function calls another function, which in turn calls another function (and so on..), and the API call that you care about happens down in the bottom function. Propagating the error all the way up to `main` may not be feasible or convenient. In that case, throwing an error in the bottom function will be most convenient.
 
 ```ts
 
@@ -659,11 +664,11 @@ function updateRangeInChunks(
 }
 
 function updateTargetRange(
-      targetCell: ExcelScript.Range, 
+      targetCell: ExcelScript.Range,
       values: (string | boolean | number)[][]
     ) {
     const targetRange = targetCell.getResizedRange(values.length - 1, values[0].length - 1);
-    console.log(`Updating the range. ${targetRange.getAddress()}`);
+    console.log(`Updating the range: ${targetRange.getAddress()}`);
     try {
       targetRange.setValues(values);
     } catch (e) {
@@ -671,30 +676,29 @@ function updateTargetRange(
     }
     return;
 }
-
 ```
 
-*Warning* - Using `try..catch` inside of a loop will slow down your script. Avoid using this inside of or around loops. 
+*Warning*: Using `try..catch` inside of a loop will slow down your script. Avoid using this inside of or around loops.
 
 ## Range basics
 
-Check out the [Range Basics](range-basics.md) before you go further on your journey.
+Check out [Range Basics](range-basics.md) before you go further on your journey.
 
 ## Basic performance considerations
 
 ### Avoid slow operations in the loop
 
-Certain operations when done inside/around the loop statements such as `for`, `for..of`, `map`, `forEach`, etc. can lead to slow performance. Avoid the following patterns:
+Certain operations when done inside/around the loop statements such as `for`, `for..of`, `map`, `forEach`, etc. can lead to slow performance. Avoid the following API categories.
 
 * `get*` APIs
 
-Read all the data you need outside of the loop rather than reading it inside of the loop. At times, it is hard to avoid reading inside of loops - in such a case, make sure your loop counts are not too large or manage them in batches to avoid having to loop through a large data structure.
+Read all the data you need outside of the loop rather than reading it inside of the loop. At times, it is hard to avoid reading inside of loops; in such a case, make sure your loop counts are not too large or manage them in batches to avoid having to loop through a large data structure.
 
-**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking-up your read/writes into multiple chunks. The following video is really for a small-mid size data setup. For large dataset, refer to [advanced data write scenario](../Performance#large-data-write-scenario).
+**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](../performance.md#large-data-write-scenario).
 
-[![Read and write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Read and write optimization tip")
+[![Video providing a read-and-write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Read-and-write optimization tip")
 
-* `console.log` in the loop slows down the script
+* `console.log` statement (see the following example)
 
 ```ts
     // Color each cell with random color.
@@ -713,13 +717,13 @@ Read all the data you need outside of the loop rather than reading it inside of 
 
 * `try {} catch ()` statement
 
-Avoid exception handling for loops. Both inside and outside loops.
+Avoid exception handling `for` loops. Both inside and outside loops.
 
 ## Note to VBA developers
 
-TypeScript language differs from VBA both syntactically as well in naming conventions.
+The TypeScript language differs from VBA both syntactically as well as in naming conventions.
 
-Check out the following snippets that achieve the same thing:
+Check out the following equivalent snippets.
 
 ```vba
 Worksheets("Sheet1").Range("A1:G37").Clear
@@ -729,12 +733,12 @@ Worksheets("Sheet1").Range("A1:G37").Clear
 workbook.getWorksheet('Sheet1').getRange('A1:G37').clear(ExcelScript.ClearApplyTo.all);
 ```
 
-Few things to call out are:
+A few things to call out about TypeScript:
 
-* You'll notice that all methods will need to have open-close parenthesis to execute. Arguments are passed identically - but some arguments maybe are required for execution (required vs optional).
-* The naming convention follows camelCase as opposed to PascalCase convention.
-* Methods usually have `get` or `set` prefixes indicating whether it is reading or writing object members. 
-* The code blocks are defined and identified by open/close of curly braces: `{` `}`. Blocks are required for `if` conditions, `while`, `for` loops, function definition, etc.
+* You may notice that all methods need to have open-close parentheses to execute. Arguments are passed identically but some arguments may be required for execution (that is, required vs optional).
+* The naming convention follows camelCase instead of PascalCase convention.
+* Methods usually have `get` or `set` prefixes indicating whether it is reading or writing object members.
+* The code blocks are defined and identified by open-close curly braces: `{` `}`. Blocks are required for `if` conditions, `while` statements, `for` loops, function definitions, etc.
 * Functions can call other functions and you can even define functions within a function.
 
-Overall, TypeScript is a different language and there are few similarities between them. However, the Office Scripts API themselves uses similar terminology and data-model (OM) hierarchy as VBA APIs and that should help you navigate around.
+Overall, TypeScript is a different language and there are few similarities between them. However, the Office Scripts API themselves use similar terminology and data-model (object model) hierarchy as VBA APIs and that should help you navigate around.
