@@ -28,7 +28,7 @@ There are two variants of the solution. It mainly differs in the way the rows ar
 
 ## Input Excel file
 
-Download the [input Excel file](input-table-filters.xlsx) used in this sample and try it out yourself!
+Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this sample and try it out yourself!
 
 ## Office Scripts
 

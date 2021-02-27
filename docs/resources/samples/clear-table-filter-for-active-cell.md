@@ -29,7 +29,7 @@ _After clearing column filter_
 
 This example can be applied to any Excel file with a table. For the convenience sake, you can use the following file.
 
-* [Input Excel file](table-with-filter.xlsx)
+* <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>
 
 ## Script
 
