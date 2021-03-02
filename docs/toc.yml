@@ -56,6 +56,16 @@ items:
     items:
     - name: Sample scripts
       href: resources/excel-samples.md
+    - name: Basics
+      items:
+      - name: Getting started
+        href: resources/samples/getting-started.md
+      - name: Range basics
+        href: resources/samples/range-basics.md
+    - name: Beyond basics
+      items:
+      - name: Move selected rows across tables
+        href: resources/samples/move-rows-across-tables.md
     - name: Scenarios
       items:
       - name: Overview
