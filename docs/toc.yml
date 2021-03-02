@@ -64,6 +64,12 @@ items:
         href: resources/samples/range-basics.md
     - name: Beyond basics
       items:
+      - name: Copy multiple tables into single table
+        href: resources/samples/copy-tables-combine.md
+      - name: Email chart image
+        href: resources/samples/email-chart-image.md
+      - name: Filter table and get visible range
+        href: resources/samples/filter-table-get-visible-range.md
       - name: Move selected rows across tables
         href: resources/samples/move-rows-across-tables.md
     - name: Scenarios
