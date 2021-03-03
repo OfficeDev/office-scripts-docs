@@ -13,9 +13,9 @@ localization_priority: Normal
 
 `Range` can also be obtained via user's selection that consists of at least one cell. As you interact with the range, it is important to keep these cell and range relationships clear.
 
-The following are the core set of getters, setters, and other useful methods most often used in scripts. This is a great starting point to begin the API journey. The following sections group the methods and help to build a mental model as you begin to unlock the `Range` object's APIs.
+Following are the core set of getters, setters, and other useful methods most often used in scripts. This is a great starting point for your API journey. The later sections group the methods and help to build a mental model as you begin to unlock the `Range` object's APIs.
 
-## Video links
+## Videos
 
 _Range basics_
 
