@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables in Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 02/26/2021
+ms.date: 03/02/2021
 localization_priority: Normal
 ---
 
@@ -13,7 +13,7 @@ This script achieves the following:
 * Move all selected rows into a another (target) table on another worksheet.
 * Reapply the relevant filters on the source table.
 
-## Video link
+## Video
 
 [![Watch step-by-step video](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video")
 
@@ -21,18 +21,18 @@ This script achieves the following:
 
 ## Solution
 
-There are two variants of the solution. It mainly differs in the way the rows are selected.
+There are two script variants. The main difference is in the way the rows are selected.
 
 * In one script, the rows are selected by applying the table filter and reading the visible range. [Script](#move-rows-using-table-filter)
 * In the second, the rows are selected simply by reading the values and extracting the row values. [Script](#move-rows-using-range-values)
 
-## Input Excel file
+## Sample Excel file
 
-Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this sample and try it out yourself!
+Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!
 
 ## Office Scripts
 
-The solution uses two Office Scripts:
+The solution contains two Office Scripts:
 
 1. [Move Rows Using Table Filter](#move-rows-using-table-filter)
 1. [Move Rows Using Range Values](#move-rows-using-range-values)
