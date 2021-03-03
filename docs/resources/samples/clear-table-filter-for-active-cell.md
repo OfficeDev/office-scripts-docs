@@ -13,7 +13,7 @@ If you wish to learn more about how to save the filter prior to clearing it (and
 
 ## Video
 
-See [Range basics](range-basics.md#video-links)
+See [Range basics](range-basics.md#videos)
 
 ## Screenshots
 

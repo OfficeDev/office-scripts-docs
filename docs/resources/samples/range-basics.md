@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Range Basics
 
-`Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range?view=office-scripts) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
+`Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range?view=office-scripts&preserve-view=true) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
 
 `Range` is identified using its address such as "A1:B4" or using a named-item, which is a named key for a given set of cells. In the Excel object model, both a cell and group of cells are referred as _range_. `Range` can contain cell-level attributes such as data within a cell and also cell and cells-level attributes such as format, borders, etc.
 
