@@ -77,7 +77,7 @@ The solution has a single Office Script:
 
 The following script filters a table and gets the visible range.
 
-Download the sample file <a href="excel-filter.xlsx">excel-filter.xlsx</a> and use it with this script to try it out yourself!
+Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and use it with this script to try it out yourself!
 
 ```ts
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
