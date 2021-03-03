@@ -66,6 +66,10 @@ items:
       items:
       - name: Move selected rows across tables
         href: resources/samples/move-rows-across-tables.md
+    - name: Performance
+      items:
+      - name: Performance optimization
+        href: resources/samples/performance.md
     - name: Scenarios
       items:
       - name: Overview
