@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Clear table column filter based on active cell location
 
-Shows how to clear the table column filter based on active cell location. The script detects if the cell is part of a table and then determines the table column and clears any filter that may be applied on it.
+This sample clears the table column filter based on active cell location. The script detects if the cell is part of a table and then determines the table column and clears any filter that may be applied on it.
 
 If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), check out a [more advanced sample](move-rows-across-tables.md).
 
