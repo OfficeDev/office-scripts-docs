@@ -118,7 +118,7 @@ You can use functions to organize and reuse code within your script.
 
 ### Objects, hierarchy, methods, properties, collections
 
-All of the Excel's object model is defined in a hierarchical structure of objects, beginning with the workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](/javascript/api/office-scripts/overview?view=office-scripts&preserve-view=true) to follow along with the relationships among objects.
+All of the Excel's object model is defined in a hierarchical structure of objects, beginning with the workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](/javascript/api/office-scripts/overview) to follow along with the relationships among objects.
 
 An [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In the case of the Office Scripts object model, an object represents a thing in the Excel file that users interact with such as a chart, hyperlink, pivot-table, etc. It can also represent the behavior of an object such as the protection attributes of a worksheet.
 
@@ -694,7 +694,7 @@ Certain operations when done inside/around the loop statements such as `for`, `f
 
 Read all the data you need outside of the loop rather than reading it inside of the loop. At times, it is hard to avoid reading inside of loops; in such a case, make sure your loop counts are not too large or manage them in batches to avoid having to loop through a large data structure.
 
-**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](performance.md#large-data-write-scenario).
+**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](large-data-write.md#large-data-write-scenario).
 
 [![Video providing a read-and-write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Read-and-write optimization tip")
 

@@ -69,7 +69,7 @@ items:
     - name: Performance
       items:
       - name: Performance optimization
-        href: resources/samples/performance.md
+        href: resources/samples/large-data-write.md
     - name: Scenarios
       items:
       - name: Overview
