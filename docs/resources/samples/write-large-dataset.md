@@ -95,7 +95,7 @@ function updateRangeInChunks(
 }
 
 /**
- * A Helper function that computes the target range and updates. 
+ * A helper function that computes the target range and updates. 
  */
 
 function updateNextChunk(
@@ -118,8 +118,8 @@ function updateNextChunk(
 }
 
 /**
- * A Helper function that computes the target range given the target range's starting cell
- * and selected range and updates the values. 
+ * A helper function that computes the target range given the target range's starting cell
+ * and selected range and updates the values.
  */
 function updateTargetRange(
   targetCell: ExcelScript.Range,

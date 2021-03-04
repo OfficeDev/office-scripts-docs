@@ -5,7 +5,7 @@ ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
-# Range Basics
+# Range basics
 
 `Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
 
@@ -145,7 +145,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 
 /**
- * A Helper function that computes the target range given the target range's starting cell and selected range. 
+ * A helper function that computes the target range given the target range's starting cell and selected range. 
  */
 function computeTargetRange(targetCell: ExcelScript.Range, data: string[][]): ExcelScript.Range {
   const targetRange = targetCell.getResizedRange(data.length - 1, data[0].length - 1);
@@ -153,7 +153,7 @@ function computeTargetRange(targetCell: ExcelScript.Range, data: string[][]): Ex
 }
 
 /**
- * A Helper function that places a border around the range.
+ * A helper function that places a border around the range.
  */
 function borderAround(range: ExcelScript.Range): void {
   range.getFormat().getRangeBorder(ExcelScript.BorderIndex.edgeLeft).setStyle(ExcelScript.BorderLineStyle.dash);
