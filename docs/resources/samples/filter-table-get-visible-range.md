@@ -1,17 +1,13 @@
 ---
 title: 'Filter Excel table and get visible range'
 description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
 # Filter Excel table and get visible range as array of objects
 
 Shows how to use Office Scripts to filter an Excel table and get the visible range as an array of objects
-
-## Video link
-
-[![Watch step-by-step video on how to filter an Excel table and get the visible range](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "Step-by-step video on how to filter an Excel table and get the visible range")
 
 ## Example scenario
 
@@ -125,3 +121,7 @@ interface ReturnTemplate {
   [key: string]: BasicObj[]
 }
 ```
+
+## Video
+
+[![Watch step-by-step video on how to filter an Excel table and get the visible range](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "Step-by-step video on how to filter an Excel table and get the visible range")

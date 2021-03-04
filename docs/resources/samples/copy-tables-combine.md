@@ -1,7 +1,7 @@
 ---
 title: 'Copy Excel tables into new master table'
 description: 'Learn how to use Office Scripts to combine data from multiple Excel tables into a single table.'
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
@@ -13,10 +13,6 @@ There are two variations of this script:
 
 1. The first script combines all tables in the Excel file. It assumes that all tables in the Excel files have same structure.
 1. The second script selectively gets tables within a set of worksheets. It assumes that all the tables in those select worksheets have the same structure.
-
-## Video link
-
-[![Watch step-by-step video on how to combine data from multiple Excel tables into a single table](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "Step-by-step video on how to combine data from multiple Excel tables into a single table")
 
 ## Office Scripts
 
@@ -91,3 +87,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
   return targetRange;
 }
 ```
+
+## Video
+
+[![Watch step-by-step video on how to combine data from multiple Excel tables into a single table](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "Step-by-step video on how to combine data from multiple Excel tables into a single table")

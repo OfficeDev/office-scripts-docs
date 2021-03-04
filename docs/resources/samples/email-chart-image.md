@@ -1,17 +1,13 @@
 ---
 title: 'Email chart image'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email chart image.'
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
 # Use Office Scripts and Power Automate to email chart and table images
 
 Shows how to use Office Scripts and Power Automate actions to recalculate, create a chart, and extract images as base-64 strings to be used later to send by email.
-
-## Video link
-
-[![Watch step-by-step video on how to extract and email chart image](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email chart image")
 
 ## Example scenario
 
@@ -89,3 +85,7 @@ interface ReportImages {
   tableImage: string
 }
 ```
+
+## Video
+
+[![Watch step-by-step video on how to extract and email chart image](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email chart image")
