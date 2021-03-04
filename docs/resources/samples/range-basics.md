@@ -1,29 +1,19 @@
 ---
 title: 'Range basics in Office Scripts'
 description: 'Learn basics about using the Range object in Office Scripts.'
-ms.date: 02/26/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
-# Range Basics
+# Range basics
 
-`Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range?view=office-scripts&preserve-view=true) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
+`Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
 
 `Range` is identified using its address such as "A1:B4" or using a named-item, which is a named key for a given set of cells. In the Excel object model, both a cell and group of cells are referred as _range_. `Range` can contain cell-level attributes such as data within a cell and also cell and cells-level attributes such as format, borders, etc.
 
 `Range` can also be obtained via user's selection that consists of at least one cell. As you interact with the range, it is important to keep these cell and range relationships clear.
 
 Following are the core set of getters, setters, and other useful methods most often used in scripts. This is a great starting point for your API journey. The later sections group the methods and help to build a mental model as you begin to unlock the `Range` object's APIs.
-
-## Videos
-
-_Range basics_
-
-[![Watch step-by-step video on Range basics](../../images/rangebasics-vid.png)](https://youtu.be/4emjkOFdLBA "Step-by-step video on Range basics")
-
-_Add row at the end of worksheet_
-
-[![Watch step-by-step video on how to add a row at the end of a worksheet](../../images/rangebasics-addrow-vid.png)](https://youtu.be/RgtUar013D0 "Step-by-step video on how to add a row at the end of a worksheet")
 
 ## Example scripts
 
@@ -155,7 +145,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 
 /**
- * A Helper function that computes the target range given the target range's starting cell and selected range. 
+ * A helper function that computes the target range given the target range's starting cell and selected range. 
  */
 function computeTargetRange(targetCell: ExcelScript.Range, data: string[][]): ExcelScript.Range {
   const targetRange = targetCell.getResizedRange(data.length - 1, data[0].length - 1);
@@ -163,7 +153,7 @@ function computeTargetRange(targetCell: ExcelScript.Range, data: string[][]): Ex
 }
 
 /**
- * A Helper function that places a border around the range.
+ * A helper function that places a border around the range.
  */
 function borderAround(range: ExcelScript.Range): void {
   range.getFormat().getRangeBorder(ExcelScript.BorderIndex.edgeLeft).setStyle(ExcelScript.BorderLineStyle.dash);
@@ -179,6 +169,16 @@ const DATA = [
   ['Amount', '2', '1.5', '4', '12', '26']
 ]
 ```
+
+## Videos
+
+_Range basics_
+
+[![Watch step-by-step video on Range basics](../../images/rangebasics-vid.png)](https://youtu.be/4emjkOFdLBA "Step-by-step video on Range basics")
+
+_Add row at the end of worksheet_
+
+[![Watch step-by-step video on how to add a row at the end of a worksheet](../../images/rangebasics-addrow-vid.png)](https://youtu.be/RgtUar013D0 "Step-by-step video on how to add a row at the end of a worksheet")
 
 ## Methods that return some range metadata
 

@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables in Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
@@ -12,10 +12,6 @@ This script achieves the following:
 * Select rows from the source table where the value in a column is equal to _some value_.
 * Move all selected rows into a another (target) table on another worksheet.
 * Reapply the relevant filters on the source table.
-
-## Video
-
-[![Watch step-by-step video](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video")
 
 ![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
 
@@ -42,7 +38,7 @@ The solution contains two Office Scripts:
 ```ts
 function main(workbook: ExcelScript.Workbook) {
 
-  // Update the table names, column name, and look-up value as needed.
+  // Update the table names, column name, and look up value as needed.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
   const NameOfColumnToFilterOn = 'Category';
@@ -159,7 +155,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 ```ts
 function main(workbook: ExcelScript.Workbook) {
 
-  // Update the table names, column index to look-up on as needed
+  // Update the table names, column index to look up as needed.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
   const IndexOfColumnToFilterOn = 1; // 0-index
@@ -254,3 +250,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
   return;
 }
 ```
+
+## Video
+
+[![Watch step-by-step video](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video")
