@@ -1,7 +1,7 @@
 ---
 title: 'Getting started with Office Scripts'
 description: 'Basics about Office Scripts including access, environment, and script patterns.'
-ms.date: 02/26/2021
+ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
@@ -694,7 +694,7 @@ Certain operations when done inside/around the loop statements such as `for`, `f
 
 Read all the data you need outside of the loop rather than reading it inside of the loop. At times, it is hard to avoid reading inside of loops; in such a case, make sure your loop counts are not too large or manage them in batches to avoid having to loop through a large data structure.
 
-**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](large-data-write.md#large-data-write-scenario).
+**Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](write-large-dataset.md).
 
 [![Video providing a read-and-write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Read-and-write optimization tip")
 

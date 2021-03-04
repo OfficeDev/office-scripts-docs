@@ -1,17 +1,17 @@
 ---
-title: 'Performance optimization when writing a large amount of data'
-description: 'Learn how to optimize performance when writing a large amount of data in Office Scripts.'
+title: 'Performance optimization when writing a large dataset'
+description: 'Learn how to optimize performance when writing a large dataset in Office Scripts.'
 ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
-# Performance optimization when writing a large amount of data
+# Performance optimization when writing a large dataset
 
 ## Basic performance optimization
 
 For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.
 
-## Suggestion for optimizing performance of a large amount of data
+## Suggestion for optimizing performance of a large dataset
 
 The `setValues()` Range API allows setting the values of a range. This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks. This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts. **Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script. As we have opportunity to test, we'll update with findings around how it performs for various data sizes.
 
