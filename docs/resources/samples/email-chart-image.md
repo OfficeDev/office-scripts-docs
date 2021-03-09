@@ -1,13 +1,13 @@
 ---
-title: 'Email chart image'
-description: 'Learn how to use Office Scripts and Power Automate to extract and email chart image.'
+title: 'Email a chart image'
+description: 'Learn how to use Office Scripts and Power Automate to extract and email an image of an Excel chart.'
 ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
 # Use Office Scripts and Power Automate to email chart and table images
 
-Shows how to use Office Scripts and Power Automate actions to recalculate, create a chart, and extract images as base-64 strings to be used later to send by email.
+This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email.
 
 ## Example scenario
 
@@ -34,7 +34,7 @@ Shows how to use Office Scripts and Power Automate actions to recalculate, creat
 
 The solution has 2 parts:
 
-1. [Office Script to calculate and extract Excel chart and table](#office-script)
+1. [An Office Script to calculate and extract Excel chart and table](#office-script)
 1. A Power Automate flow to invoke script and email the results.
 
 ## Office Script

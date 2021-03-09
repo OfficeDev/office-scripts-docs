@@ -1,5 +1,5 @@
 ---
-title: 'Copy Excel tables into new master table'
+title: 'Merge multiple Excel tables into a single table'
 description: 'Learn how to use Office Scripts to combine data from multiple Excel tables into a single table.'
 ms.date: 03/04/2021
 localization_priority: Normal
@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Copy Excel tables into new master table
 
-Shows how to combine data that resides in Excel tables into a new master table with all rows included. It creates a new worksheet and combines all rows into a single table.
+This sample combines data from multiple Excel tables into a single table that includes all the rows.
 
 There are two variations of this script:
 

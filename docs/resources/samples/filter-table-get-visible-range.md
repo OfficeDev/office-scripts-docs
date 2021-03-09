@@ -5,15 +5,15 @@ ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
-# Filter Excel table and get visible range as array of objects
+# Filter Excel table and get visible range as a JSON object
 
-Shows how to use Office Scripts to filter an Excel table and get the visible range as an array of objects
+This sample filters an Excel table and returns the visible range as a JSON object. This JSON could be provided to a Power Automate flow as part of a larger solution.
 
 ## Example scenario
 
-* Apply filter on a column of a table.
-* Extract visible range after filtering and extract data as array of objects.
-* Assemble an object with following JSON structure and return for a future action to use.
+* Apply a filter to a table column.
+* Extract the visible range after filtering.
+* Assemble and return an object with a specific JSON structure.
 
 ### Sample JSON
 
