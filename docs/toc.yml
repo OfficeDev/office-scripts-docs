@@ -82,3 +82,7 @@ items:
         href: resources/scenarios/grade-calculator.md
       - name: Task reminders (with Power Automate)
         href: resources/scenarios/task-reminders.md
+    - name: Community contributions
+      items:
+      - name: Seasons greetings
+        href: resources/samples/community-seasons-greetings.md
