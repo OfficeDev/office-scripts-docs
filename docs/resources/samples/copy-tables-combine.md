@@ -5,7 +5,7 @@ ms.date: 03/04/2021
 localization_priority: Normal
 ---
 
-# Copy Excel tables into new master table
+# Copy Excel tables into a new table
 
 This sample combines data from multiple Excel tables into a single table that includes all the rows.
 
@@ -18,10 +18,10 @@ There are two variations of this script:
 
 This solution showcases two Office Scripts:
 
-1. [Copy all tables in an Excel file to a new master table](#copy-all-tables-in-excel-to-a-new-master-table)
-1. [Copy tables from select worksheets into a new master table](#copy-tables-from-select-worksheets-into-a-new-master-table)
+1. [Copy all tables in an Excel file to a new table](#copy-all-tables-in-excel-to-a-new-table)
+1. [Copy tables from select worksheets into a new table](#copy-tables-from-select-worksheets-into-a-new-table)
 
-### Copy all tables in Excel to a new master table
+### Copy all tables in Excel to a new table
 
 Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!
 
@@ -51,7 +51,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-### Copy tables from select worksheets into a new master table
+### Copy tables from select worksheets into a new table
 
 Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
 
