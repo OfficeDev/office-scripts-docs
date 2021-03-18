@@ -1,6 +1,6 @@
 ---
-title: 'External API calls from Office Scripts'
-description: 'Learn how to make external API calls from Office Scripts.'
+title: 'Make external API calls in Office Scripts'
+description: 'Learn how to make external API calls in Office Scripts.'
 ms.date: 03/18/2021
 localization_priority: Normal
 ---

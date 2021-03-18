@@ -1,5 +1,5 @@
 ---
-title: 'Send Teams meeting from Excel data'
+title: 'Send a Teams meeting from Excel data'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
 ms.date: 03/18/2021
 localization_priority: Normal
