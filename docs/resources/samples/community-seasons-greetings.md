@@ -1,13 +1,13 @@
 ---
 title: 'Seasons greetings'
 description: 'Learn how to use Office Scripts to show a singing Christmas tree in Excel on the web.'
-ms.date: 03/10/2021
+ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
 # Seasons greetings
 
-This is a script contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts.
+This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts.
 
 Enjoy!
 
@@ -37,20 +37,20 @@ function main(workbook: ExcelScript.Workbook) {
   OuterEdgeFFFF00(workbook) //yellow
   OuterEdgeFF0000(workbook) //red
   OuterEdgeFFFF00(workbook) //yellow
-  FlashingStarandSmileFF0000(workbook) //red
-  FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
-  //FlashingStarandSmileFF0000(workbook) //red
-  //FlashingStarandSmileFFFF00(workbook) //yellow
+  FlashingStarAndSmileFF0000(workbook) //red
+  FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
+  //FlashingStarAndSmileFF0000(workbook) //red
+  //FlashingStarAndSmileFFFF00(workbook) //yellow
 
   OuterEdgeFFFF00(workbook) //yellow
   OuterEdgeFF0000(workbook) //red
@@ -69,8 +69,8 @@ function main(workbook: ExcelScript.Workbook) {
   OuterEdgeFFFF00(workbook) //yellow
   OuterEdgeFF0000(workbook) //red
   OuterEdgeFFFF00(workbook) //yellow
-  FlashingStarandSmileFF0000(workbook) //red
-  FlashingStarandSmileFFFF00(workbook) //yellow
+  FlashingStarAndSmileFF0000(workbook) //red
+  FlashingStarAndSmileFFFF00(workbook) //yellow
   Blink(workbook)
 
   OuterEdgeFF0000(workbook) //red
@@ -89,11 +89,6 @@ function main(workbook: ExcelScript.Workbook) {
 
   //Blink(workbook)
   //Unblink(workbook)
-
-
-
-
-
 
   function Blink(workbook: ExcelScript.Workbook) {
     //blink
@@ -144,7 +139,7 @@ function main(workbook: ExcelScript.Workbook) {
       .setColor("FFFFFF");
   }
 
-  function FlashingStarandSmileFF0000(workbook: ExcelScript.Workbook) {
+  function FlashingStarAndSmileFF0000(workbook: ExcelScript.Workbook) {
     //red
     let selectedSheet = workbook.getWorksheet('HappyXmasTree');
     // Set fill color to FF0000 for range HappyXmasTree!L2:L6
@@ -184,7 +179,7 @@ function main(workbook: ExcelScript.Workbook) {
       .setColor("000000") //black
   }
 
-  function FlashingStarandSmileFFFF00(workbook: ExcelScript.Workbook) {
+  function FlashingStarAndSmileFFFF00(workbook: ExcelScript.Workbook) {
     //yellow
     let selectedSheet = workbook.getWorksheet('HappyXmasTree');
     // Set fill color to FF0000 for range HappyXmasTree!L2:L6

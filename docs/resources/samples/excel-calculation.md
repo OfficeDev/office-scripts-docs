@@ -1,34 +1,36 @@
 ---
-title: 'Email a chart image'
-description: 'Learn how to use Office Scripts and Power Automate to extract and email an image of an Excel chart.'
-ms.date: 03/10/2021
+title: 'Manage calculation mode in Excel'
+description: 'Learn how to use Office Scripts to manage the calculation mode in Excel on the web.'
+ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
-# Excel calculation and setting calculation mode 
+# Manage calculation mode in Excel
 
-This project shows how to use Excel application's calculation mode and calculate methods in Excel for web using Office Scripts. 
-
-## Video 
-
-[![Watch step by step video](v_calc_mode.jpg)](https://youtu.be/iw6O8QH01CI "Watch step by step video")
+This sample shows how to use the calculation mode and calculate methods in Excel on the web using Office Scripts. You can try the script on any Excel file.
 
 ## Scenario
 
-Excel for web file's calculation mode can be controlled programatically using simple APIs. Following actions are possible using Office Scripts:
+In Excel on the web, a file's calculation mode can be controlled programmatically using APIs. The following actions are possible using Office Scripts.
 
-1. Get calculation mode (automatic or manual, etc.) 
-1. Set the calculation mode 
-1. Calculate Exel formulas for files that are set to the manual mode (also referred as re-calculate) 
+1. Get the calculation mode (automatic or manual, etc.).
+1. Set the calculation mode.
+1. Calculate Excel formulas for files that are set to the manual mode (also referred as re-calculate).
 
-Checkout the script and video for more details. 
+## Office Script
 
-## Input Excel file
+```ts
+function main(workbook: ExcelScript.Workbook) {
+    // Set calculation mode.
+    workbook.getApplication().setCalculationMode(ExcelScript.CalculationMode.manual);
+    // Get calculation mode.
+    const calcMode = workbook.getApplication().getCalculationMode();    
+    console.log(calcMode);
+    // Calculate (for manual mode files).
+    workbook.getApplication().calculate(ExcelScript.CalculationType.full);
+}
+```
 
-Any Excel file on the web will do. Checkout the video. 
+## Video
 
-## Office Scripts
-
-The solution uses two Office Scripts. 
-
-1. [Manage Excel calculation and calculation mode options](ExcelRecalc.ts)
+[![Watch step-by-step video](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Step-by-step video")
