@@ -11,7 +11,7 @@ This solution shows how two Excel files can be cross-referenced and formatted us
 
 The project achieves the following:
 
-1. Extracts event data from <a href="event.xlsx">event.xlsx</a> using one Run script action.
+1. Extracts event data from <a href="events.xlsx">events.xlsx</a> using one Run script action.
 1. Passes that data to the second Excel file containing event transaction data and uses that data to do basic validation of data and formatting of missing or incorrect data using Office Scripts.
 1. Emails the result to a reviewer.
 
@@ -19,7 +19,7 @@ For further details, see [Cross Reference and formatting two Excel files using O
 
 ## Sample Excel files
 
-1. <a href="event.xlsx">event.xlsx</a>
+1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
 
 ## Office Scripts
