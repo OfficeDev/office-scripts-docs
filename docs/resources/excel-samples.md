@@ -413,9 +413,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Scenario samples
+## Samples and scenarios
 
-For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](scenarios/sample-scenario-overview.md).
+For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](samples/samples-overview.md).
 
 ## Suggest new samples
 
