@@ -144,7 +144,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="h/answers/questions/topics/single/312419.html" target="_blank"><h3>Request features</h3></a>
+                        <a href="/answers/questions/topics/single/312419.html" target="_blank"><h3>Request features</h3></a>
                     </div>
                 </div>
             </div>
