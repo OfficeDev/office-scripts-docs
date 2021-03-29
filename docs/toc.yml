@@ -54,13 +54,15 @@ items:
       href: develop/excel-async-model.md
   - name: Samples
     items:
+    - name: Overview
+      href: resources/samples/samples-overview.md
     - name: Sample scripts
       href: resources/excel-samples.md
     - name: Basics
       items:
       - name: Range basics
         href: resources/samples/range-basics.md
-    - name: Beyond basics
+    - name: Beyond the basics
       items:
       - name: Add comments
         href: resources/samples/add-excel-comments.md
@@ -86,8 +88,6 @@ items:
         href: resources/samples/send-teams-invite-from-excel-data.md
     - name: Scenarios
       items:
-      - name: Overview
-        href: resources/scenarios/sample-scenario-overview.md
       - name: Analyze web downloads
         href: resources/scenarios/analyze-web-downloads.md
       - name: Fetch and graph water-level data from NOAA

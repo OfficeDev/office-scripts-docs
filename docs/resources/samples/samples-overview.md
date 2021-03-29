@@ -1,15 +1,19 @@
 ---
 title: 'Office Scripts samples'
-description: 'Available Office Scripts samples and solutions.'
+description: 'Available Office Scripts samples and scenarios.'
 ms.date: 03/29/2021
 localization_priority: Normal
 ---
 
-# Office Scripts samples
+# Office Scripts samples and scenarios
 
 This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that business users face and provides detailed solutions along with step-by-step instructional video links.
 
-For each of the following projects, check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
+For each of the projects in [Basics](#basics), [Beyond the basics](#beyond-the-basics), and [Performance](#performance), check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
+
+In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
+
+We also welcome [contributions from the community](#community-contributions).
 
 ## Basics
 
@@ -17,7 +21,7 @@ For each of the following projects, check out the source code, step-by-step [**Y
 |---------|---------|
 | [Learn basics about using the Range object in Office Scripts](range-basics.md) | This article shows the basics of using Range object and its APIs. This is a foundational topic that'll be used across all other projects. |
 
-## Beyond Basics
+## Beyond the basics
 
 Check out the following end-to-end project that automates sample scenarios along with full scripts, sample Excel files used, and [videos](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0).
 
@@ -42,7 +46,20 @@ Check out the following end-to-end project that automates sample scenarios along
 |---------|---------|
 | [Performance optimization when writing a large dataset](write-large-dataset.md) | Learn how to optimize performance when writing a large dataset in Office Scripts. |
 
+## Scenarios
+
+Office Scripts can automate parts of your daily routine. These day-to-day tasks often exist in unique ecosystems, with Excel workbooks that are set up in particular ways. These larger scenario samples demonstrate such real-world use-cases. They include both the Office Scripts and the workbooks, so you can see the scenario from end to end.
+
+| Scenario | Details |
+|---------|---------|
+| [Analyze web downloads](../scenarios/analyze-web-downloads.md) | This scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables. |
+| [Fetch and graph water-level data from NOAA](../scenarios/noaa-data-fetch.md) | This scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/)) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts. |
+| [Grade calculator](../scenarios/grade-calculator.md) | This scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions. |
+| [Task reminders](../scenarios/task-reminders.md) | This scenario uses an Office Script in a Power Automate flow to send reminders to coworkers to update a project's status. It highlights the skills of Power Automate integration and data transfer to and from scripts. |
+
 ## Community contributions
+
+We welcome [contributions](../../../Contributing.md) from our Office Scripts community! Feel free to create a pull request for review.
 
 | Project | Details |
 |---------|---------|
@@ -54,4 +71,8 @@ These samples are open source. Try them out yourself. You'll need a Microsoft wo
 
 ## Leave a comment
 
-Feel free to leave a comment, make a suggestion, or log an issue by using the **Feedback** section at the bottom of a sample's documentation page.
+Feel free to leave a comment, make a suggestion, or log an issue by using the **Feedback** section at the bottom of the specific sample's documentation page.
+
+## See also
+
+- [Sample scripts for Office Scripts in Excel on the web](../excel-samples.md)
