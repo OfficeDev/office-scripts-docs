@@ -59,7 +59,7 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 
 ## Community contributions
 
-We welcome [contributions](../../../Contributing.md) from our Office Scripts community! Feel free to create a pull request for review.
+We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md) from our Office Scripts community! Feel free to create a pull request for review.
 
 | Project | Details |
 |---------|---------|
