@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and solutions.'
-ms.date: 03/18/2021
+ms.date: 03/29/2021
 localization_priority: Normal
 ---
 
@@ -15,7 +15,6 @@ For each of the following projects, check out the source code, step-by-step [**Y
 
 | Project | Details |
 |---------|---------|
-| [Basics of Office Scripts and getting started](getting-started.md) | Learn about the Office Script language, basics of the object model, performance tips, error handling, etc. |
 | [Learn basics about using the Range object in Office Scripts](range-basics.md) | This article shows the basics of using Range object and its APIs. This is a foundational topic that'll be used across all other projects. |
 
 ## Beyond Basics
@@ -36,7 +35,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
 | [Send a Teams meeting from Excel data](send-teams-invite-from-excel-data.md) | This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel. |
-| [Using macro files or xlsm files in Power Automate flows](macros-power-automate.md) | Tip for how to get around the limitation to use xlsm files by the Run Script action in Excel on the web. |
 
 ## Performance
 

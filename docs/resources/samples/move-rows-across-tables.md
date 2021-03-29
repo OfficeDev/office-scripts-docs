@@ -35,7 +35,7 @@ The solution contains two Office Scripts:
 
 ### Move rows using table filter
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Update the table names, column name, and look up value as needed.
@@ -152,7 +152,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 
 ### Move rows using range values
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Update the table names, column index to look up as needed.

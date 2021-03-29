@@ -43,7 +43,7 @@ The following script calculates and extracts an Excel chart and table.
 
 Download the sample file <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> and use it with this script to try it out yourself!
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
 
   workbook.getApplication().calculate(ExcelScript.CalculationType.full);

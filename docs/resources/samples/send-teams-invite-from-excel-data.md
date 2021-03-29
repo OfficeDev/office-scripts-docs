@@ -41,7 +41,7 @@ The solution uses two Office Scripts.
 
 ### Select filtered rows from table as JSON
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
   console.log("Current date time: " + new Date().toUTCString())
   const MEETING_DURATION = workbook.getNamedItem('MeetingDuration').getRange().getValue() as number;
@@ -180,7 +180,7 @@ interface InterviewInvite extends BasicObj {
 
 ### Mark as invited
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
     completedInvitesString = `[
   {

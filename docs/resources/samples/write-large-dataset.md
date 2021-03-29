@@ -17,7 +17,7 @@ The `setValues()` Range API allows setting the values of a range. This API has d
 
 This script selects 1K cells per chunk but you can override to test out how it works for you. It updates 100k rows with 6 columns of data. Run this on a blank sheet to examine.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   const sheet = workbook.getActiveWorksheet();
 

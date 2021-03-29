@@ -46,7 +46,7 @@ This script gets basic information about the user's GitHub repositories.
 
 ## Script
 
-```ts
+```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
 
   // Replace the {USERNAME} placeholder with your GitHub username.

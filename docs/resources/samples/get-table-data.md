@@ -31,7 +31,7 @@ Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hype
 > [!NOTE]
 > To suit your needs or data, change the `interface TableData` structure to match your table columns. Note that for column names that contain spaces, be sure to place your key within quotes as with `"Event ID"` in the sample.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
   const table = workbook.getWorksheet('PlainTable').getTables()[0];
   // If you know the table name, you can also do the following:
@@ -141,7 +141,7 @@ interface TableData {
 > [!NOTE]
 > The script always extracts hyperlinks from the 4th column (0 index) of the table. You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
   const table = workbook.getWorksheet('WithHyperLink').getTables()[0];
   const range = table.getRange();

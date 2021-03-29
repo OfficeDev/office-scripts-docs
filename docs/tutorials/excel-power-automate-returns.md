@@ -43,14 +43,14 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. You should now have an empty script. We want to use the script to get an email address from the spreadsheet. Change `main` to return a string, like this:
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
     }
     ```
 
 1. Next, we need to get all the data from the table. That lets us look through each row with the script. Add the following code inside the `main` function.
 
-    ```typescript
+    ```TypeScript
     // Get the H1 worksheet.
     let worksheet = workbook.getWorksheet("H1");
 
@@ -63,7 +63,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487). We need to convert those dates to JavaScript dates in order to compare them. We'll add a helper function to our script. Add the following code outside of the `main` function:
 
-    ```typescript
+    ```TypeScript
     // Convert the Excel date to a JavaScript Date object.
     function convertDate(excelDateValue: number) {
         let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
@@ -73,7 +73,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address. Add the following code to the end of the `main` function.
 
-    ```typescript
+    ```TypeScript
     // Look for the first row where today's date is between the row's start and end dates.
     let currentDate = new Date();
     for (let row = 0; row < tableValues.length; row++) {
@@ -88,7 +88,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. The final script should look like this:
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
         // Get the H1 worksheet.
         let worksheet = workbook.getWorksheet("H1");

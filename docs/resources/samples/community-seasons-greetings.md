@@ -1,7 +1,7 @@
 ---
 title: 'Seasons greetings'
 description: 'Learn how to use Office Scripts to show a singing Christmas tree in Excel on the web.'
-ms.date: 03/18/2021
+ms.date: 03/29/2021
 localization_priority: Normal
 ---
 
@@ -15,7 +15,7 @@ Enjoy!
 
 ## Script
 
-```ts
+```TypeScript
 /* By: Leslie Black  */
 
 function main(workbook: ExcelScript.Workbook) {
@@ -39,18 +39,6 @@ function main(workbook: ExcelScript.Workbook) {
   OuterEdgeFFFF00(workbook) //yellow
   FlashingStarAndSmileFF0000(workbook) //red
   FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
-  //FlashingStarAndSmileFF0000(workbook) //red
-  //FlashingStarAndSmileFFFF00(workbook) //yellow
 
   OuterEdgeFFFF00(workbook) //yellow
   OuterEdgeFF0000(workbook) //red
@@ -75,23 +63,16 @@ function main(workbook: ExcelScript.Workbook) {
 
   OuterEdgeFF0000(workbook) //red
   OuterEdgeFFFF00(workbook) //yellow
-  //Unblink(workbook)
 
-  //Blink(workbook)
   OuterEdgeFF0000(workbook) //red
   OuterEdgeFFFF00(workbook) //yellow
-  //Unblink(workbook)
 
-  //Blink(workbook)
   OuterEdgeFF0000(workbook) //red
   OuterEdgeFFFF00(workbook) //yellow
   Unblink(workbook)
 
-  //Blink(workbook)
-  //Unblink(workbook)
-
   function Blink(workbook: ExcelScript.Workbook) {
-    //blink
+    // blink
     let selectedSheet = workbook.getWorksheet('HappyXmasTree');
     // Set fill color to C65911 for range HappyXmasTree!N16:Q17
     selectedSheet.getRange("N16:Q17")
@@ -140,7 +121,7 @@ function main(workbook: ExcelScript.Workbook) {
   }
 
   function FlashingStarAndSmileFF0000(workbook: ExcelScript.Workbook) {
-    //red
+    // red
     let selectedSheet = workbook.getWorksheet('HappyXmasTree');
     // Set fill color to FF0000 for range HappyXmasTree!L2:L6
     selectedSheet.getRange("L2:L6")
@@ -180,7 +161,7 @@ function main(workbook: ExcelScript.Workbook) {
   }
 
   function FlashingStarAndSmileFFFF00(workbook: ExcelScript.Workbook) {
-    //yellow
+    // yellow
     let selectedSheet = workbook.getWorksheet('HappyXmasTree');
     // Set fill color to FF0000 for range HappyXmasTree!L2:L6
     selectedSheet.getRange("L2:L6")
@@ -211,17 +192,14 @@ function main(workbook: ExcelScript.Workbook) {
     selectedSheet.getRange("O26")
       .getFormat()
       .getFill().clear
-      //.setColor("000000");
     // Set fill color to 000000 for range HappyXmasTree!I26
     selectedSheet.getRange("I26")
       .getFormat()
       .getFill().clear
-      //.setColor("000000")
   }
 
-  //OuterEdgeClearFill()
   console.log('Routine finished')
-  }
+}
 
 function OuterEdgeFFFF00(workbook: ExcelScript.Workbook) {
   // Set fill color to FFFF00 for range sheet!Q11

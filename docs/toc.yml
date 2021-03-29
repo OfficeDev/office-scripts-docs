@@ -74,8 +74,6 @@ items:
         href: resources/samples/email-chart-image.md
       - name: Filter table and get visible range
         href: resources/samples/filter-table-get-visible-range.md
-      - name: Make external API calls
-        href: resources/samples/external-calls.md
       - name: Manage calculation mode
         href: resources/samples/excel-calculation.md
       - name: Move selected rows across tables

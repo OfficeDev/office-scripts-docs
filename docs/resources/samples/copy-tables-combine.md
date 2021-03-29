@@ -25,7 +25,7 @@ This solution showcases two Office Scripts:
 
 Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     workbook.getWorksheet('Combined')?.delete();
     const newSheet = workbook.addWorksheet('Combined');
@@ -55,7 +55,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 
 Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const sheetNames = ['Sheet1', 'Sheet2', 'Sheet3'];
     

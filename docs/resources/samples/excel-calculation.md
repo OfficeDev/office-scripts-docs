@@ -19,7 +19,7 @@ In Excel on the web, a file's calculation mode can be controlled programmaticall
 
 ## Office Script
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Set calculation mode.
     workbook.getApplication().setCalculationMode(ExcelScript.CalculationMode.manual);

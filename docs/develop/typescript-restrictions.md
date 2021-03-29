@@ -61,7 +61,7 @@ The following words can't be used as identifiers in a script. They are reserved 
 
 Your scripts can only use [arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) when providing callback arguments for [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) methods. You cannot pass any sort of identifier or "traditional" function to these methods.
 
-```typescript
+```TypeScript
 const myArray = [1, 2, 3, 4, 5, 6];
 let filteredArray = myArray.filter((x) => {
   return x % 2 === 0;

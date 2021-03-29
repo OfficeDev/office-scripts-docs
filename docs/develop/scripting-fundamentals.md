@@ -15,7 +15,7 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, the Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Your code goes here
 }
@@ -43,7 +43,7 @@ Every script is provided a `workbook` object of type `Workbook` by the `main` fu
 
 The following script gets the active worksheet from the workbook and logs its name.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     let sheet = workbook.getActiveWorksheet();
@@ -164,7 +164,7 @@ Once the collection is retrieved, you can use regular array operations such as g
 
 The following script gets all tables in the workbook. It then ensures the headers are displays, the filter buttons are visible, and the table style is set to "TableStyleLight1".
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   /* Get table collection */
   const tables = workbook.getTables();
@@ -186,7 +186,7 @@ You can programmatically add document objects, such as tables or charts, by call
 
 The following script creates a table in Excel on the first worksheet in the workbook. Note that the created table is returned by the `addTable` method.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
@@ -208,7 +208,7 @@ To delete an object, call the object's `delete` method.
 
 The following script removes the first worksheet in the workbook.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get first worksheet.
     let sheet = workbook.getWorksheets()[0];

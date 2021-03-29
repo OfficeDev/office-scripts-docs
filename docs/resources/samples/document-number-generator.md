@@ -47,7 +47,7 @@ Download the file <a href="document-number-generator.xlsx">document-number-gener
 
 ### Generate key and add row to range
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
     // Object to hold key prefixes for each document type.
     const PREFIX  = {
@@ -123,7 +123,7 @@ interface RequestData {
 
 ### Generate key and add row to table
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
     // Object to hold key prefixes for each document type.
     const PREFIX = {

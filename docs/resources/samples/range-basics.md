@@ -25,7 +25,7 @@ Following are the core set of getters, setters, and other useful methods most of
 
 ### Basic read and write
 
-```ts
+```TypeScript
 /**
  * This script demonstrates basic read-write operations on the Range object.
  */
@@ -71,7 +71,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Add row at the end of worksheet
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const sheet = workbook.getWorksheet('Sheet5');
     const data = ['2016', 'Bikes', 'Seats', '1500', .05];
@@ -98,7 +98,7 @@ function addRow(sheet: ExcelScript.Worksheet, data: (string | number | boolean)[
 
 ### Color each cell with unique color
 
-```ts
+```TypeScript
 /**
  * This sample demonstrates how to iterate over a selected range and set cell property.
    It colors each cell within the selected range with a random color.
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Dynamically calculates the range dimension to update based on 2D array values.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   const currentCell = workbook.getActiveCell();
   let inputRange = computeTargetRange(currentCell, DATA);

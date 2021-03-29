@@ -18,7 +18,7 @@ Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> us
 
 ## Office Script
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
 
   // Get the active worksheet. 

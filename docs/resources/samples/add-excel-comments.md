@@ -1,19 +1,19 @@
 ---
 title: 'Add comments in Excel'
 description: 'Learn how to use Office Scripts to add comments in a worksheet.'
-ms.date: 03/18/2021
+ms.date: 03/29/2021
 localization_priority: Normal
 ---
 
 # Add comments in Excel
 
-This sample shows how to add comments to a cell with at-mention of a contact.
+This sample shows how to add comments to a cell including [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.
 
 ## Example scenario
 
-* Team lead maintains shift schedule information. Team lead assigns employee ID to shift record.
-* Team lead wishes to send email reminder by adding a comment with @mention of the employee by cross referencing the employee email address along with a custom message from the sheet.
-* Employee can then address and respond to the comment.
+* The team lead maintains the shift schedule. The team lead assigns an employee ID to the shift record.
+* The team lead wishes to notify the employee. By adding a comment that @mentions the employee, the employee is emailed with a custom message from the sheet.
+* The employee can then address and respond to the comment.
 
 ## Solution
 
@@ -27,7 +27,7 @@ Download the file <a href="excel-comments.xlsx">excel-comments.xlsx</a> used in 
 
 ## Office Script
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const employees = workbook.getWorksheet('Employees').getUsedRange().getTexts();
     console.log(employees); 

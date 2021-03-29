@@ -21,7 +21,7 @@ The following script filters a table and gets the visible range.
 
 Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and use it with this script to try it out yourself!
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
   const table1 = workbook.getTable("Table1");
   const keyColumnValues: string [] = table1.getColumnByName('Station').getRangeBetweenHeaderAndTotal().getValues().map(v => v[0] as string);

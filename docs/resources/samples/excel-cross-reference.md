@@ -29,7 +29,7 @@ For further details, see [Cross Reference and formatting two Excel files using O
 
 ### Get event data
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
     let table = workbook.getWorksheet('Keys').getTables()[0];
     let range = table.getRangeBetweenHeaderAndTotal();
@@ -58,7 +58,7 @@ interface EventData {
 
 ### Validate event transactions
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
     let table = workbook.getWorksheet('Transactions').getTables()[0];
     let range = table.getRangeBetweenHeaderAndTotal();
