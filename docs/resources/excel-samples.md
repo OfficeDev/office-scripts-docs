@@ -25,7 +25,7 @@ These samples demonstrate fundamental building blocks for Office Scripts. Add th
 
 This sample reads the value of **A1** and prints it to the console.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
   let selectedSheet = workbook.getActiveWorksheet();
@@ -42,7 +42,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script logs the value of the current active cell. If multiple cells are selected, the top-leftmost cell will be logged.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current active cell in the workbook.
   let cell = workbook.getActiveCell();
@@ -56,7 +56,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently active cell in the workbook.
   let activeCell = workbook.getActiveCell();
@@ -83,7 +83,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script copies the formatting in the active cell to the neighboring cells. Note that this script only works when the active cell isn't on an edge of the worksheet.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the active cell.
   let activeCell = workbook.getActiveCell();
@@ -106,7 +106,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script loops over the currently select range. It clears the current formatting and sets the fill color in each cell to a random color.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently selected range.
   let range = workbook.getSelectedRange();
@@ -135,7 +135,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script gets all the blank cells in the current worksheet's used range. It then highlights all those cells with a yellow background.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the current used range.
     let range = workbook.getActiveWorksheet().getUsedRange();
@@ -156,7 +156,7 @@ These samples work with collections of objects in the workbook.
 
 This script gets and logs the names of all the worksheets in the workbook. It also sets the their tab colors to a random color.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get all the worksheets in the workbook.
   let sheets = workbook.getWorksheets();
@@ -183,7 +183,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script creates a new worksheet. It checks for an existing copy of the worksheet and deletes it before making a new sheet.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Name of the worksheet to be added.
   let name = "Index";
@@ -323,7 +323,7 @@ This script creates a drop-down selection list for a cell. It uses the existing 
 
 ![A before-and-after set of screenshots that shows three words in a range, then those same words in a drop-down list.](../images/sample-data-validation.png)
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the values for data validation.
   let selectedRange = workbook.getSelectedRange();
@@ -362,7 +362,7 @@ These samples use Excel formulas and show how to work with them in scripts.
 
 This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let selectedSheet = workbook.getActiveWorksheet();
 
@@ -383,7 +383,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function. If the transpose results in a #SPILL error, it clears the target range and applies the formula again.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let sheet = workbook.getActiveWorksheet();
   // Use the data in A1:D2 for the sample.
@@ -413,9 +413,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Scenario samples
+## Samples and scenarios
 
-For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](scenarios/sample-scenario-overview.md).
+For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](samples/samples-overview.md).
 
 ## Suggest new samples
 

@@ -31,7 +31,7 @@ The example script can be applied to any Excel file with a table. For convenienc
 
 The following script clears the table column filter based on active cell location.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get active cell.
     const cell = workbook.getActiveCell();

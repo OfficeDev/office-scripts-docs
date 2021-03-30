@@ -54,26 +54,40 @@ items:
       href: develop/excel-async-model.md
   - name: Samples
     items:
+    - name: Overview
+      href: resources/samples/samples-overview.md
     - name: Sample scripts
       href: resources/excel-samples.md
     - name: Basics
       items:
       - name: Range basics
         href: resources/samples/range-basics.md
-    - name: Beyond basics
+    - name: Beyond the basics
       items:
+      - name: Add comments
+        href: resources/samples/add-excel-comments.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
+      - name: Cross reference and format Excel files
+        href: resources/samples/excel-cross-reference.md
+      - name: Document number generator
+        href: resources/samples/document-number-generator.md
       - name: Email chart image
         href: resources/samples/email-chart-image.md
       - name: Filter table and get visible range
         href: resources/samples/filter-table-get-visible-range.md
+      - name: Manage calculation mode
+        href: resources/samples/excel-calculation.md
       - name: Move selected rows across tables
         href: resources/samples/move-rows-across-tables.md
+      - name: Output table data as JSON
+        href: resources/samples/get-table-data.md
+      - name: Remove hyperlinks from Excel cells
+        href: resources/samples/remove-hyperlinks-from-cells.md
+      - name: Send Teams invite from Excel data
+        href: resources/samples/send-teams-invite-from-excel-data.md
     - name: Scenarios
       items:
-      - name: Overview
-        href: resources/scenarios/sample-scenario-overview.md
       - name: Analyze web downloads
         href: resources/scenarios/analyze-web-downloads.md
       - name: Fetch and graph water-level data from NOAA
@@ -82,3 +96,7 @@ items:
         href: resources/scenarios/grade-calculator.md
       - name: Task reminders (with Power Automate)
         href: resources/scenarios/task-reminders.md
+    - name: Community contributions
+      items:
+      - name: Seasons greetings
+        href: resources/samples/community-seasons-greetings.md

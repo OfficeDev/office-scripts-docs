@@ -33,7 +33,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 4. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
 
-    ```typescript
+    ```TypeScript
     /**
      * This script looks for missing status reports in a project management table.
      *
@@ -86,7 +86,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 6. Next, we need a second script to process the status report cards and put the new information in the spreadsheet. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
 
-    ```typescript
+    ```TypeScript
     /**
      * This script applies the results of a Teams Adaptive Card about
      * a status update to a project management table.
