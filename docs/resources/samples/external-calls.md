@@ -1,7 +1,7 @@
 ---
 title: 'Make external API calls in Office Scripts'
 description: 'Learn how to make external API calls in Office Scripts.'
-ms.date: 03/18/2021
+ms.date: 03/30/2021
 localization_priority: Normal
 ---
 
@@ -14,7 +14,7 @@ Office Scripts allows [limited external API call support](../../develop/external
 > * There is no way to sign in or use OAuth2 type of authentication flows. All keys and credentials have to be hardcoded (or read from another source).
 > * There is no infrastructure to store API credentials and keys. This will have to be managed by the user.
 > * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
-> * If a script uses an API call, it will not function in a Power Automate scenario. You'll have to use Power Automate's HTTP action or equivalent actions to pull from or push to data an external service.
+> * If a script uses an API call, it will not function in a Power Automate scenario. You'll have to use Power Automate's HTTP action or equivalent actions to pull data from or push it to an external service.
 > * An external API call involves asynchronous API syntax and requires slightly advanced knowledge of the way async communication works.
 > * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
 
@@ -26,7 +26,7 @@ Office Scripts allows [limited external API call support](../../develop/external
 
 ## Steps
 
-1. Mark you `main` function as an asynchronous function by adding `async` prefix, for example, `async function main(workbook: ExcelScript.Workbook)`.
+1. Mark your `main` function as an asynchronous function by adding `async` prefix, for example, `async function main(workbook: ExcelScript.Workbook)`.
 1. Which type of API call are you making? `GET`, `POST`, `PUT`, `DELETE`, `PATCH`? Refer to REST API material for details.
 1. Obtain the service API endpoint, authentication requirements, headers, etc.
 1. Define the input or output `interface` to help with code completion and development time verification. See [video](#video) for details.
@@ -41,7 +41,7 @@ This script gets basic information about the user's GitHub repositories.
 ## Resources used in the sample
 
 1. [Get repos Github API reference.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)
-1. API call output: Go to browser or any HTTP interface and type in https://api.github.com/users/{USERNAME}/repos, replacing the {USERNAME} placeholder with your Github ID.
+1. API call output: Go to a web browser or any HTTP interface and type in `https://api.github.com/users/{USERNAME}/repos`, replacing the {USERNAME} placeholder with your Github ID.
 1. Information fetched: repo.name, repo.size, repo.owner.id, repo.license?.name
 
 ## Script
