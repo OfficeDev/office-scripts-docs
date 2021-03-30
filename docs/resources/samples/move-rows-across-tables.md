@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables in Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 03/04/2021
+ms.date: 03/30/2021
 localization_priority: Normal
 ---
 
@@ -10,7 +10,7 @@ localization_priority: Normal
 This script achieves the following:
 
 * Select rows from the source table where the value in a column is equal to _some value_.
-* Move all selected rows into a another (target) table on another worksheet.
+* Move all selected rows into another (target) table on another worksheet.
 * Reapply the relevant filters on the source table.
 
 ![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
@@ -19,8 +19,8 @@ This script achieves the following:
 
 There are two script variants. The main difference is in the way the rows are selected.
 
-* In one script, the rows are selected by applying the table filter and reading the visible range. [Script](#move-rows-using-table-filter)
-* In the second, the rows are selected simply by reading the values and extracting the row values. [Script](#move-rows-using-range-values)
+* In the [first variant](#move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
+* In the [second](#move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
 
 ## Sample Excel file
 
