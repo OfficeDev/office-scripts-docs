@@ -133,7 +133,7 @@ The topic of TypeScript objects and properties vs methods is quite deep. In orde
 
 Let's look at a few methods on the `workbook` object.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Return a boolean (true or false) setting of whether the workbook is set to auto-save or not. 
     const autoSave = workbook.getAutoSave(); 
@@ -159,7 +159,7 @@ You'll notice that all of these methods have a `get` prefix, which is just a con
 
 There are two other types of methods that we'll now see in the next example:
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get a worksheet named 'Sheet1.
     const sheet = workbook.getWorksheet('Sheet1'); 
@@ -191,7 +191,7 @@ You can use dot notation to connect objects being returned from a method to shor
 
 The following code gets the active cell and the next cell, then sets the value. This is a good candidate to use chaining as this code will succeed all the time.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     workbook.getActiveCell().getOffsetRange(0,1).setValue('Next cell');
 }
@@ -199,7 +199,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 However, the following code (which gets a table named **SALES** and turns on its banded column style) has an issue.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   workbook.getTable('SALES').setShowBandedColumns(true);
 }
@@ -213,7 +213,7 @@ Line 2: Cannot read property 'setShowBandedColumns' of undefined
 
 You could use the [optional chaining operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining) that provides a way to simplify accessing values through connected objects when it's possible that a reference or method may be `undefined` or `null` (which is JavaScript's way of indicating an unassigned or nonexistent object or result) to handle this condition.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // This line will not fail as the setShowBandedColumns method is executed only if the SALES table is present.
     workbook.getTable('SALES')?.setShowBandedColumns(true); 
@@ -222,7 +222,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 If you wish to handle nonexistent object conditions or `undefined` type being returned by a method, then it is better to assign the return value from the method and handle that separately.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const salesTable = workbook.getTable('SALES');
     if (salesTable) {
@@ -237,7 +237,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 The `workbook` object is given to you in the `main` function. You can begin to use the `workbook` object and access its methods directly.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get workbook name.
     const name = workbook.getName();
@@ -248,7 +248,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 For using all other objects within the workbook, begin with `workbook` object and go down the hierarchy until you get to the object you are looking for. You can get the object reference by fetching the object using its `get` method or by retrieving the collection of objects as shown below:
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     const sheet = workbook.getActiveWorksheet();
@@ -267,7 +267,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 For creating an object, say with a predefined name, it is always better to remove a similar object that may exist and then add it. You can do that using the following pattern.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Name of the worksheet to be added. 
   let name = "Index";
@@ -287,7 +287,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Alternatively, for deleting an object that may or may not exist, use the following pattern.
 
-```ts
+```TypeScript
     // The ? preceding delete() will ensure that the API is only invoked if the object exists. 
     workbook.getWorksheet('Index')?.delete(); 
 ```
@@ -296,7 +296,7 @@ Alternatively, for deleting an object that may or may not exist, use the followi
 
 To create, insert, or add an object such as a slicer, pivot table, worksheet, etc., use the corresponding **add_Object_** method. Such a method is available on its parent object. For example, the `addChart()` method is available on `worksheet` object. The **add_Object_** method returns the object it creates. Receive the returned value and use it later in your script.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Add object and get a reference to it. 
   const indexSheet = workbook.addWorksheet("Index");
@@ -308,7 +308,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Alternatively, for deleting an object that may or may not exist, use this pattern:
 
-```ts
+```TypeScript
     workbook.getWorksheet('Index')?.delete(); // The ? preceding delete() will ensure that the API is only invoked if the object exists. 
 ```
 
@@ -324,7 +324,7 @@ Collections are objects such as tables, charts, columns, etc. that can be retrie
 
 This script demonstrates how to use collections supported in Office Scripts APIs. It colors each worksheet tab in the file with a random color.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Get all sheets as a collection.
@@ -366,7 +366,7 @@ As the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/b
 
 You can assert the type using the `as` keyword or using angle brackets as shown in following code.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let data = workbook.getActiveCell().getValue();
   // Since the add10 function only accepts number, assert data's type as number, otherwise the script cannot be run.
@@ -385,7 +385,7 @@ The [TypeScript website states](https://www.typescriptlang.org/docs/handbook/bas
 
   In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the `any` type:
 
-  ```ts
+  ```TypeScript
   declare function getValue(key: string): any;
   // OK, return value of 'getValue' is not checked
   const str: string = getValue("myString");
@@ -393,7 +393,7 @@ The [TypeScript website states](https://www.typescriptlang.org/docs/handbook/bas
 
 **Explicit `any` is NOT allowed**
 
-```ts
+```TypeScript
 // This is not allowed
 let someVariable: any; 
 ```
@@ -410,7 +410,7 @@ To get around this issue, always declare the type of the variable.
 
 If you are uncertain about the type of a variable, one cool trick in TypeScript allows you to define [union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be used for variables to hold a range values, which can be of many types.
 
-```ts
+```TypeScript
 // Define value as a union type rather than 'any' type.
 let value: (string | number | boolean);
 value = someValue_from_another_source;
@@ -422,7 +422,7 @@ someRange.setValue(value);
 
 In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) is used to provide type information when there is no explicit type annotation. For example, in this code:
 
-```ts
+```TypeScript
 let x = 3;
 //  ^ = let x: number
 ```
@@ -437,7 +437,7 @@ A script requires the types of the variables used to be explicitly or implicitly
 
 The following scripts have compilation time errors because variables are declared without types and TypeScript cannot determine the type at the time of declaration.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // The variable 'value' gets 'any' type
     // because no type is declared.
@@ -453,7 +453,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // The variable 'cell' gets 'any' type
     // because no type is defined.
@@ -468,7 +468,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 To avoid this error, use the following patterns instead. In each case, the variable and its type are declared at the same time.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const value: number = 10; 
     workbook.getActiveCell().setValue(value);
@@ -476,7 +476,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const cell: ExcelScript.Range = workbook.getActiveCell().getValue();
     console.log(cell.getValue()); 
@@ -512,7 +512,7 @@ Following are a few best practices to avoid runtime errors.
 
 Alternatively, for deleting an object that may or may not exist, use this pattern:
 
-```ts
+```TypeScript
     // The ? ensures that the delete() API is only invoked if the object exists. 
     workbook.getWorksheet('Index')?.delete();
 
@@ -529,7 +529,7 @@ As a best practice, always ensure that all your inputs are present in the Excel 
 
 For example, the following script requires two tables named Table1 and Table2 to be present. Hence the script checks for their presence and ends with the `return` statement and an appropriate message if they are not present.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Tables that should be in the workbook for the script to work:
@@ -553,7 +553,7 @@ If the verification to ensure the presence of input data is happening in a separ
 
 In the following example, the `main` function calls the `inputPresent` function to do the pre-checks. `inputPresent` returns a boolean (`true` or `false`) indicating whether all required inputs are present or not. It's then the responsibility of the `main` function to issue the `return` statement (that is, from within the `main` function) to end the script immediately.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Get the table objects.
@@ -588,7 +588,7 @@ For the most part, you don't need to abort (`throw`) from your script. This is b
 
 However, if your script is running as part of Power Automate, you may want to abort the flow if certain conditions are not met. It's therefore important to not `return` upon an error but rather issue a `throw` statement to abort the script so that any subsequent code statements don't run.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Tables that should be in the workbook for the script to work:
@@ -614,7 +614,7 @@ The [`try..catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/S
 
 Consider the following example snippet.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
 
   // Somewhere in the script, perform a large data update.
@@ -625,7 +625,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 The `setValues()` call may fail and result in the script failure. You may wish to handle this condition in your code and perhaps customize the error message or break up the update into smaller units, etc. In that case, it's important to know that the API returned an error and interpret or handle that error.
 
-```ts
+```TypeScript
     try {
         range.setValues(someLargeValues);
     } catch (error) {
@@ -649,7 +649,7 @@ The `setValues()` call may fail and result in the script failure. You may wish t
 
 Another scenario is when main function calls another function, which in turn calls another function (and so on..), and the API call that you care about happens down in the bottom function. Propagating the error all the way up to `main` may not be feasible or convenient. In that case, throwing an error in the bottom function will be most convenient.
 
-```ts
+```TypeScript
 
 function main(workbook: ExcelScript.Workbook) {
     ...
@@ -700,7 +700,7 @@ Read all the data you need outside of the loop rather than reading it inside of 
 
 * `console.log` statement (see the following example)
 
-```ts
+```TypeScript
     // Color each cell with random color.
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
@@ -729,7 +729,7 @@ Check out the following equivalent snippets.
 Worksheets("Sheet1").Range("A1:G37").Clear
 ```
 
-```ts
+```TypeScript
 workbook.getWorksheet('Sheet1').getRange('A1:G37').clear(ExcelScript.ClearApplyTo.all);
 ```
 
