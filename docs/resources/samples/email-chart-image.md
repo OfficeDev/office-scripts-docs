@@ -11,10 +11,10 @@ This sample uses Office Scripts and Power Automate actions to create a chart and
 
 ## Example scenario
 
-* Calculate to get latest results
-* Create chart
-* Get chart and table images
-* Email the images to recipient using Power Automate action
+* Calculate to get latest results.
+* Create chart.
+* Get chart and table images.
+* Email the images to recipient using Power Automate action.
 
 ## Screenshots
 
@@ -34,7 +34,7 @@ This sample uses Office Scripts and Power Automate actions to create a chart and
 
 The solution has 2 parts:
 
-1. [An Office Script to calculate and extract Excel chart and table](#office-script)
+1. [An Office Script to calculate and extract Excel chart and table.](#office-script)
 1. A Power Automate flow to invoke script and email the results.
 
 ## Office Script

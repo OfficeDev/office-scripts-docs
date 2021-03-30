@@ -1,7 +1,7 @@
 ---
 title: 'Merge multiple Excel tables into a single table'
 description: 'Learn how to use Office Scripts to combine data from multiple Excel tables into a single table.'
-ms.date: 03/04/2021
+ms.date: 03/30/2021
 localization_priority: Normal
 ---
 
@@ -11,7 +11,7 @@ This sample combines data from multiple Excel tables into a single table that in
 
 There are two variations of this script:
 
-1. The first script combines all tables in the Excel file. It assumes that all tables in the Excel files have same structure.
+1. The first script combines all tables in the Excel file. It assumes that all tables in the Excel files have the same structure.
 1. The second script selectively gets tables within a set of worksheets. It assumes that all the tables in those select worksheets have the same structure.
 
 ## Office Scripts

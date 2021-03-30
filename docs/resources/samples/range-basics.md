@@ -1,15 +1,15 @@
 ---
 title: 'Range basics in Office Scripts'
 description: 'Learn basics about using the Range object in Office Scripts.'
-ms.date: 03/04/2021
+ms.date: 03/30/2021
 localization_priority: Normal
 ---
 
 # Range basics
 
-`Range` is the foundational object within Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
+`Range` is the foundational object within the Office Scripts Excel object model. [Range APIs](/javascript/api/office-scripts/excelscript/excelscript.range) allow access to both data and format available on the grid and link other key objects within Excel such as worksheets, tables, charts, etc.
 
-`Range` is identified using its address such as "A1:B4" or using a named-item, which is a named key for a given set of cells. In the Excel object model, both a cell and group of cells are referred as _range_. `Range` can contain cell-level attributes such as data within a cell and also cell and cells-level attributes such as format, borders, etc.
+A range is identified using its address such as "A1:B4" or using a named-item, which is a named key for a given set of cells. In the Excel object model, both a cell and group of cells are referred as _range_. `Range` can contain cell-level attributes such as data within a cell and also cell and cells-level attributes such as format, borders, etc.
 
 `Range` can also be obtained via user's selection that consists of at least one cell. As you interact with the range, it is important to keep these cell and range relationships clear.
 
@@ -17,11 +17,11 @@ Following are the core set of getters, setters, and other useful methods most of
 
 ## Example scripts
 
-[Basic read and write](#basic-read-and-write)
-[Add row at the end of worksheet](#add-row-at-the-end-of-worksheet)
-[Clear column filter](clear-table-filter-for-active-cell.md)
-[Color each cell with unique color](#color-each-cell-with-unique-color)
-[Update range with values using 2-dimensional (2D) array](#update-range-with-values-using-2d-array)
+* [Basic read and write](#basic-read-and-write)
+* [Add row at the end of worksheet](#add-row-at-the-end-of-worksheet)
+* [Clear column filter](clear-table-filter-for-active-cell.md)
+* [Color each cell with unique color](#color-each-cell-with-unique-color)
+* [Update range with values using 2-dimensional (2D) array](#update-range-with-values-using-2d-array)
 
 ### Basic read and write
 
