@@ -1,7 +1,7 @@
 ---
 title: 'Send a Teams meeting from Excel data'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
-ms.date: 03/18/2021
+ms.date: 03/30/2021
 localization_priority: Normal
 ---
 
@@ -12,13 +12,13 @@ This solution shows how to use Office Scripts and Power Automate actions to sele
 ## Example scenario
 
 * An HR recruiter manages the interview schedule of candidates in an Excel file.
-* The recruiter needs to send the Teams meeting invite to candidate and interviewers. The business rules are to select:
+* The recruiter needs to send the Teams meeting invite to the candidate and interviewers. The business rules are to select:
 
     (a) Invites to only those for whom the invite isn't already sent as recorded in the file column.
 
     (b) Interview dates in the future (no past dates).
 
-* Recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.
+* The recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.
 
 ## Solution
 

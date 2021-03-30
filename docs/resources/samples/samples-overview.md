@@ -9,7 +9,7 @@ localization_priority: Normal
 
 This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that business users face and provides detailed solutions along with step-by-step instructional video links.
 
-For each of the projects in [Basics](#basics), [Beyond the basics](#beyond-the-basics), and [Performance](#performance), check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
+For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-the-basics), check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
 
 In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
 
@@ -38,12 +38,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
 | [Send a Teams meeting from Excel data](send-teams-invite-from-excel-data.md) | This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel. |
-
-## Performance
-
-| Project | Details |
-|---------|---------|
-| [Performance optimization when writing a large dataset](write-large-dataset.md) | Learn how to optimize performance when writing a large dataset in Office Scripts. |
 
 ## Scenarios
 
