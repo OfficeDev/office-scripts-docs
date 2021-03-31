@@ -12,7 +12,7 @@ It performs calculations on the Excel files, adds formatting, and inserts a comm
 
 ## Office Scripts sample code: Add formatting and insert comment
 
-Download the file <a href="highlight-alert-excel-files.zip">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!
+Download the file <a href="https://github.com/OfficeDev/office-scripts-docs/blob/elizs-transfer-samples/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
