@@ -25,7 +25,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
 
 1. In the **Code Editor** task pane, select **New Script** and paste the following script into the editor.
 
-    ```typescript
+    ```TypeScript
     /**
      * Gets data from the National Oceanic and Atmospheric Administration's Tides and Currents database. 
      * That data is used to make a chart.

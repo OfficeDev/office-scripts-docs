@@ -11,7 +11,7 @@ localization_priority: Normal
 
 A range is identified using its address such as "A1:B4" or using a named-item, which is a named key for a given set of cells. In the Excel object model, both a cell and group of cells are referred as _range_. `Range` can contain cell-level attributes such as data within a cell and also cell and cells-level attributes such as format, borders, etc.
 
-`Range` can also be obtained via user's selection that consists of at least one cell. As you interact with the range, it is important to keep these cell and range relationships clear.
+`Range` can also be obtained via user's selection that consists of at least one cell. As you interact with the range, it's important to keep these cell and range relationships clear.
 
 Following are the core set of getters, setters, and other useful methods most often used in scripts. This is a great starting point for your API journey. The later sections group the methods and help to build a mental model as you begin to unlock the `Range` object's APIs.
 
@@ -25,7 +25,7 @@ Following are the core set of getters, setters, and other useful methods most of
 
 ### Basic read and write
 
-```ts
+```TypeScript
 /**
  * This script demonstrates basic read-write operations on the Range object.
  */
@@ -71,7 +71,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Add row at the end of worksheet
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     const sheet = workbook.getWorksheet('Sheet5');
     const data = ['2016', 'Bikes', 'Seats', '1500', .05];
@@ -98,7 +98,7 @@ function addRow(sheet: ExcelScript.Worksheet, data: (string | number | boolean)[
 
 ### Color each cell with unique color
 
-```ts
+```TypeScript
 /**
  * This sample demonstrates how to iterate over a selected range and set cell property.
    It colors each cell within the selected range with a random color.
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Dynamically calculates the range dimension to update based on 2D array values.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   const currentCell = workbook.getActiveCell();
   let inputRange = computeTargetRange(currentCell, DATA);

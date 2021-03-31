@@ -9,9 +9,8 @@ localization_priority: Normal
 
 This sample clears the table column filter based on the active cell location. The script detects if the cell is part of a table and then determines the table column and clears any filter that may be applied on it.
 
-If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), check out a [more advanced sample](move-rows-across-tables.md).
+If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), see [Move rows across tables by saving filters, then processing and reapplying the filters](move-rows-across-tables.md), a more advanced sample.
 
-## Screenshots
 
 _Before clearing column filter (notice the active cell)_
 
@@ -27,11 +26,11 @@ The example script can be applied to any Excel file with a table. For convenienc
 
 * <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>
 
-## Office Script
+## Office Script sample code: Clear table column filter based on active cell
 
 The following script clears the table column filter based on active cell location.
 
-```ts
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get active cell.
     const cell = workbook.getActiveCell();
