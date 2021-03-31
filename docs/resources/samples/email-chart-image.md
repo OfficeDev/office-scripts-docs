@@ -34,8 +34,8 @@ This sample uses Office Scripts and Power Automate actions to create a chart and
 
 The solution has 2 parts:
 
-1. [An Office Script to calculate and extract Excel chart and table.](#office-script)
-1. A Power Automate flow to invoke script and email the results.
+1. [An Office Script to calculate and extract Excel chart and table](#office-script)
+1. A Power Automate flow to invoke script and email the results
 
 ## Office Script
 

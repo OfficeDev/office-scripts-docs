@@ -22,12 +22,9 @@ For further details, see [Cross Reference and formatting two Excel files using O
 1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
 
-## Office Scripts
 
-1. [Get event data](#get-event-data)
-1. [Validate event transactions](#validate-event-transactions)
 
-### Get event data
+## Office Scripts sample code: Get event data
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -56,7 +53,7 @@ interface EventData {
 }
 ```
 
-### Validate event transactions
+## Office Scripts sample code: Validate event transactions
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {

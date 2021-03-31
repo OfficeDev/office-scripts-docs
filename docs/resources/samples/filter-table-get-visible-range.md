@@ -15,7 +15,7 @@ This sample filters an Excel table and returns the visible range as a JSON objec
 * Extract the visible range after filtering.
 * Assemble and return an object with a [specific JSON structure](#sample-json).
 
-## Office Script
+## Office Script sample code: Filter a table and get visible range
 
 The following script filters a table and gets the visible range.
 

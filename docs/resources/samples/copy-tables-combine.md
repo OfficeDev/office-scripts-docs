@@ -14,14 +14,10 @@ There are two variations of this script:
 1. The first script combines all tables in the Excel file. It assumes that all tables in the Excel files have the same structure.
 1. The second script selectively gets tables within a set of worksheets. It assumes that all the tables in those select worksheets have the same structure.
 
-## Office Scripts
 
-This solution showcases two Office Scripts:
 
-1. [Copy all tables in an Excel file to a new table](#copy-all-tables-in-excel-to-a-new-table)
-1. [Copy tables from select worksheets into a new table](#copy-tables-from-select-worksheets-into-a-new-table)
 
-### Copy all tables in Excel to a new table
+## Office Script sample code:  Copy all tables in Excel to a new table
 
 Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!
 
@@ -51,7 +47,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-### Copy tables from select worksheets into a new table
+## Office Script sample code:  Copy tables from select worksheets into a new table
 
 Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
 

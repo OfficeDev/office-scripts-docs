@@ -17,7 +17,7 @@ In Excel on the web, a file's calculation mode can be controlled programmaticall
 1. Set the calculation mode.
 1. Calculate Excel formulas for files that are set to the manual mode (also referred as re-calculate).
 
-## Office Script
+## Office Script sample code: Control calculation mode
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

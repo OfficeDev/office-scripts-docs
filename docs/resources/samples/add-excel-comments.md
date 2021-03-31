@@ -18,14 +18,14 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 ## Solution
 
 1. The Office Script extracts employee information from the employee sheet.
-1. The script then cross references the shift record and adds a comment to the appropriate cell by including the relevant employee email in the team lead's comment.
+1. The script then cross-references the shift record and adds a comment to the appropriate cell by including the relevant employee email in the team lead's comment.
 1. It also removes any existing comment on the cell before adding a new comment.
 
 ## Sample Excel file
 
 Download the file <a href="excel-comments.xlsx">excel-comments.xlsx</a> used in this sample and try it out yourself!
 
-## Office Script
+## Office Script sample code: Add comments
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

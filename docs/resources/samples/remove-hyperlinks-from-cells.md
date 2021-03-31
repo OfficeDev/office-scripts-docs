@@ -16,7 +16,7 @@ localization_priority: Normal
 
 Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!
 
-## Office Script
+## Office Script sample code: Remove hyperlinks
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

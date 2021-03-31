@@ -20,6 +20,5 @@ One way to get around this issue is by including the "Get File Metadata" action 
 > [!NOTE]
 > Some XLSM (especially the ones with ActiveX/Form controls) may not work in the Excel online connector. Be sure to test before deploying your solution.
 
-## Video
 
 [![Watch video about using XLSM in Run Script action](../../images/xlsm-vid.png)](https://youtu.be/o-H9BbywJQQ "Video about using XLSM in Run Script action")

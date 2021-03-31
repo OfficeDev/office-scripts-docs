@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Output Excel table data (including hyperlink data) as JSON for usage in Power Automate
 
-Often it is beneficial to extract Excel table data as an array of objects (each item representing a row) in the form of JSON using Office Scripts. This helps with extracting the data from Excel in the same format that is visible to the user. Data can then be fed into other systems using Power Automate flows.
+Often, it is beneficial to extract Excel table data as an array of objects (each item representing a row) in the form of JSON using Office Scripts. This helps with extracting the data from Excel in the same format that is visible to the user. Data can then be fed into other systems using Power Automate flows.
 
 A variation of this sample involves doing the same as described previously, but this time also selecting the hyperlink associated with one of the table columns. This allows data not readily available at the cell level to be surfaced in the JSON.
 
@@ -15,18 +15,13 @@ A variation of this sample involves doing the same as described previously, but 
 
 Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in this sample and try it out yourself!
 
-## Office Scripts
 
-1. [Return table data as JSON](#return-table-data-as-json)
-1. [Return table data as JSON with hyperlink text](#return-table-data-as-json-with-hyperlink-text)
 
-### Return table data as JSON
+### Office Script sample code: Return table data as JSON
 
-#### Screenshot
 
 ![Screenshot displaying input table data](../../images/table-input.png)
 
-#### Script
 
 > [!NOTE]
 > To suit your needs or data, change the `interface TableData` structure to match your table columns. Note that for column names that contain spaces, be sure to place your key within quotes as with `"Event ID"` in the sample.
@@ -75,7 +70,7 @@ interface TableData {
 }
 ```
 
-#### Sample output
+### Sample output
 
 ```json
 [{
@@ -129,14 +124,12 @@ interface TableData {
 }]
 ```
 
-### Return table data as JSON with hyperlink text
+### Office Script sample code: Return table data as JSON with hyperlink text
 
-#### Screenshots
 
 ![Screenshot displaying table data that includes hyperlinks](../../images/table-hyperlink-view.png)
 ![Screenshot displaying dialog to edit hyperlink](../../images/table-hyperlink-edit.png)
 
-#### Script
 
 > [!NOTE]
 > The script always extracts hyperlinks from the 4th column (0 index) of the table. You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
@@ -192,7 +185,7 @@ interface TableData {
 }
 ```
 
-## Sample output
+### Sample output
 
 ```json
 [{

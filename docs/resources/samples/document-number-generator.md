@@ -40,12 +40,9 @@ There are two versions of the sample for this scenario.
 
 Download the file <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> used in this solution to try it out yourself!
 
-## Office Scripts
 
-1. Version 1: [Generate key and add row to range](#generate-key-and-add-row-to-range)
-1. Version 2: [Generate key and add row to table](#generate-key-and-add-row-to-table)
 
-### Generate key and add row to range
+## Office Script sample code:  Generate key and add row to range
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
@@ -121,7 +118,7 @@ interface RequestData {
 }
 ```
 
-### Generate key and add row to table
+## Office Script sample code:  Generate key and add row to table
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {

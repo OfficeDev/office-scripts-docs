@@ -34,12 +34,9 @@ Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this s
 
 ## Office Scripts
 
-The solution uses two Office Scripts.
 
-1. [Select filtered rows from table as JSON](#select-filtered-rows-from-table-as-json)
-1. [Mark as invited](#mark-as-invited)
 
-### Select filtered rows from table as JSON
+## Office Script sample code: Select filtered rows from table as JSON
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -178,7 +175,7 @@ interface InterviewInvite extends BasicObj {
 }
 ```
 
-### Mark as invited
+## Office Script sample code: Mark as invited
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
