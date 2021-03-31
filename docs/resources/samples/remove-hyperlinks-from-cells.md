@@ -12,11 +12,9 @@ localization_priority: Normal
 > [!NOTE]
 > This only works if the cell count is < 10k.
 
-## Sample Excel file
+## Office Scripts sample code: Remove hyperlinks
 
 Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!
-
-## Office Script sample code: Remove hyperlinks
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

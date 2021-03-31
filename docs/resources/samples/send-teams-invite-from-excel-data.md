@@ -20,8 +20,6 @@ This solution shows how to use Office Scripts and Power Automate actions to sele
 
 * The recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.
 
-## Solution
-
 The solution has 3 parts:
 
 1. Office Script to extract data from a table based on conditions and returns an array of objects as JSON data.
@@ -30,13 +28,9 @@ The solution has 3 parts:
 
 ## Sample Excel file
 
-Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this sample and try it out yourself!
+Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this solution and try it out yourself!
 
-## Office Scripts
-
-
-
-## Office Script sample code: Select filtered rows from table as JSON
+## Office Scripts sample code: Select filtered rows from table as JSON
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -175,7 +169,7 @@ interface InterviewInvite extends BasicObj {
 }
 ```
 
-## Office Script sample code: Mark as invited
+## Office Scripts sample code: Mark as invited
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {

@@ -11,7 +11,6 @@ This sample clears the table column filter based on the active cell location. Th
 
 If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), see [Move rows across tables by saving filters, then processing and reapplying the filters](move-rows-across-tables.md), a more advanced sample.
 
-
 _Before clearing column filter (notice the active cell)_
 
 ![Before clearing column filter](../../images/before-filter-applied.png)
@@ -20,15 +19,9 @@ _After clearing column filter_
 
 ![After clearing column filter](../../images/after-filter-cleared.png)
 
-## Sample Excel file
+## Office Scripts sample code: Clear table column filter based on active cell
 
-The example script can be applied to any Excel file with a table. For convenience, you can use the following file.
-
-* <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>
-
-## Office Script sample code: Clear table column filter based on active cell
-
-The following script clears the table column filter based on active cell location.
+The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table. For convenience, you can download and use <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

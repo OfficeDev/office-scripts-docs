@@ -16,17 +16,15 @@ This sample uses Office Scripts and Power Automate actions to create a chart and
 * Get chart and table images.
 * Email the images to recipient using Power Automate action.
 
-## Screenshots
-
-### Input data
+_Input data_
 
 ![Input data](../../images/input-data.png)
 
-### Output chart
+_Output chart_
 
 ![Chart created](../../images/chart-created.png)
 
-## Email that was received through Power Automate flow
+_Email that was received through Power Automate flow_
 
 ![Email received](../../images/email-received.png)
 
@@ -34,10 +32,10 @@ This sample uses Office Scripts and Power Automate actions to create a chart and
 
 The solution has 2 parts:
 
-1. [An Office Script to calculate and extract Excel chart and table](#office-script)
-1. A Power Automate flow to invoke script and email the results
+1. [An Office Script to calculate and extract Excel chart and table](#office-scripts-sample-code-calculate-and-extract-excel-chart-and-table)
+1. A Power Automate flow to invoke the script and email the results. For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
 
-## Office Script
+## Office Scripts sample code: Calculate and extract Excel chart and table
 
 The following script calculates and extracts an Excel chart and table.
 

@@ -9,19 +9,25 @@ localization_priority: Normal
 
 Often, it is beneficial to extract Excel table data as an array of objects (each item representing a row) in the form of JSON using Office Scripts. This helps with extracting the data from Excel in the same format that is visible to the user. Data can then be fed into other systems using Power Automate flows.
 
-A variation of this sample involves doing the same as described previously, but this time also selecting the hyperlink associated with one of the table columns. This allows data not readily available at the cell level to be surfaced in the JSON.
-
-## Sample Excel file
-
-Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in this sample and try it out yourself!
-
-
-
-### Office Script sample code: Return table data as JSON
-
+_Input table data_
 
 ![Screenshot displaying input table data](../../images/table-input.png)
 
+A variation of this sample involves doing the same as described previously, but this time also selecting the hyperlink associated with one of the table columns. This allows data not readily available at the cell level to be surfaced in the JSON.
+
+_Input table data that includes hyperlinks_
+
+![Screenshot displaying table data that includes hyperlinks](../../images/table-hyperlink-view.png)
+
+_Dialog to edit hyperlink_
+
+![Screenshot displaying dialog to edit hyperlink](../../images/table-hyperlink-edit.png)
+
+## Sample Excel file
+
+Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in these samples and try it out yourself!
+
+## Office Scripts sample code: Return table data as JSON
 
 > [!NOTE]
 > To suit your needs or data, change the `interface TableData` structure to match your table columns. Note that for column names that contain spaces, be sure to place your key within quotes as with `"Event ID"` in the sample.
@@ -124,12 +130,7 @@ interface TableData {
 }]
 ```
 
-### Office Script sample code: Return table data as JSON with hyperlink text
-
-
-![Screenshot displaying table data that includes hyperlinks](../../images/table-hyperlink-view.png)
-![Screenshot displaying dialog to edit hyperlink](../../images/table-hyperlink-edit.png)
-
+## Office Scripts sample code: Return table data as JSON with hyperlink text
 
 > [!NOTE]
 > The script always extracts hyperlinks from the 4th column (0 index) of the table. You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
@@ -249,4 +250,4 @@ interface TableData {
 
 ## Use in Power Automate
 
-For how to use such a script in Power Automate, see [similar sample](email-chart-image.md).
+For how to use such a script in Power Automate, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).

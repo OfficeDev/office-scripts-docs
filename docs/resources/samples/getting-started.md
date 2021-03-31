@@ -9,15 +9,6 @@ localization_priority: Normal
 
 This section provides details about the basics of Office Scripts including access, environment, script fundamentals, and few basic script patterns.
 
-## Content
-
-* [Access, environment, and editor](#environment-setup)
-* [Gentle introduction to scripting](#gentle-introduction-to-scripting)
-* [Error handling](#error-handling)
-* [Range basics](#range-basics)
-* [Basic performance considerations](#basic-performance-considerations)
-* [Note to VBA developers](#note-to-vba-developers)
-
 ## Environment setup
 
 Learn about the basics of access, environment, and script editor.
@@ -41,10 +32,10 @@ Office Scripts is available only in the Excel on the web for Enterprise E3+ lice
 ### Scripts and editor
 
 The code editor is built right into Excel on the web (online version). If you have used editors like Visual Studio Code or Sublime, this editing experience will be quite similar.
-Most of the shortcut keys that Visual Studio Code editor uses work in the Office Scripts editing experience as well. Check out the following shortcut keys handouts:
+Most of the shortcut keys that Visual Studio Code editor uses work in the Office Scripts editing experience as well. Check out the following shortcut keys handouts.
 
-* https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
-* https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+* [macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+* [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 #### Key things to note
 
@@ -118,7 +109,7 @@ You can use functions to organize and reuse code within your script.
 
 ### Objects, hierarchy, methods, properties, collections
 
-All of the Excel's object model is defined in a hierarchical structure of objects, beginning with the workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](/javascript/api/office-scripts/overview) to follow along with the relationships among objects.
+All of Excel's object model is defined in a hierarchical structure of objects, beginning with the workbook object of type `ExcelScript.Workbook`. An object can contain methods, properties, and other objects within it. Objects are linked to each other using the methods. An object's method can return another object or collection of objects. Using the code editor's IntelliSense (code completion) feature is a great way to explore the object hierarchy. You can also use the [official reference documentation site](/javascript/api/office-scripts/overview) to follow along with the relationships among objects.
 
 An [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In the case of the Office Scripts object model, an object represents a thing in the Excel file that users interact with such as a chart, hyperlink, pivot-table, etc. It can also represent the behavior of an object such as the protection attributes of a worksheet.
 
@@ -513,14 +504,14 @@ Following are a few best practices to avoid runtime errors.
 Alternatively, for deleting an object that may or may not exist, use this pattern:
 
 ```TypeScript
-    // The ? ensures that the delete() API is only invoked if the object exists. 
-    workbook.getWorksheet('Index')?.delete();
+// The ? ensures that the delete() API is only invoked if the object exists.
+workbook.getWorksheet('Index')?.delete();
 
-    // Alternative:
-    const indexSheet = workbook.getWorksheet('Index');
-    if (indexSheet) {
-        indexSheet.delete();
-    }
+// Alternative:
+const indexSheet = workbook.getWorksheet('Index');
+if (indexSheet) {
+    indexSheet.delete();
+}
 ```
 
 ### Do pre-checks at the beginning of the script
@@ -626,24 +617,24 @@ function main(workbook: ExcelScript.Workbook) {
 The `setValues()` call may fail and result in the script failure. You may wish to handle this condition in your code and perhaps customize the error message or break up the update into smaller units, etc. In that case, it's important to know that the API returned an error and interpret or handle that error.
 
 ```TypeScript
-    try {
-        range.setValues(someLargeValues);
-    } catch (error) {
-        console.log(`The script failed to update the values at location ____. Please inspect and run again.`);
-        console.log(error);
-        return; // End script (assuming this is in main function).
-    }
+try {
+    range.setValues(someLargeValues);
+} catch (error) {
+    console.log(`The script failed to update the values at location ____. Please inspect and run again.`);
+    console.log(error);
+    return; // End script (assuming this is in main function).
+}
 
-    // OR...
+// OR...
 
-    try {
-        range.setValues(someLargeValues);
-    } catch (error) {
-        console.log(`The script failed to update the values at location ____. Trying a different approach`);
-        handleUpdatesInSmallerChunks(someLargeValues);
-    }
+try {
+    range.setValues(someLargeValues);
+} catch (error) {
+    console.log(`The script failed to update the values at location ____. Trying a different approach`);
+    handleUpdatesInSmallerChunks(someLargeValues);
+}
 
-    // Continue...
+// Continue...
 }
 ```
 
@@ -696,23 +687,23 @@ Read all the data you need outside of the loop rather than reading it inside of 
 
 **Note**: If the range/data you are dealing with is quite large (say >100K cells), you may need to use advanced techniques like breaking up your read/writes into multiple chunks. The following video is really for a small-mid sized data setup. For a large dataset, refer to [advanced data write scenario](write-large-dataset.md).
 
-[![Video providing a read-and-write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Read-and-write optimization tip")
+[![Video providing a read-and-write optimization tip](../../images/getting-started-v_perf.jpg)](https://youtu.be/lsR_GvVW3Pg "Video showing read-and-write optimization tip")
 
 * `console.log` statement (see the following example)
 
 ```TypeScript
-    // Color each cell with random color.
-    for (let row = 0; row < rows; row++) {
-        for (let col = 0; col < cols; col++) {
-            range
-                .getCell(row, col)
-                .getFormat()
-                .getFill()
-                .setColor(`#${Math.random().toString(16).substr(-6)}`);
-            /* Avoid such console.log inside loop */    
-            // console.log("Updating" + range.getCell(row, col).getAddress()); 
-        }
+// Color each cell with random color.
+for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+        range
+            .getCell(row, col)
+            .getFormat()
+            .getFill()
+            .setColor(`#${Math.random().toString(16).substr(-6)}`);
+        /* Avoid such console.log inside loop */
+        // console.log("Updating" + range.getCell(row, col).getAddress());
     }
+}
 ```
 
 * `try {} catch ()` statement

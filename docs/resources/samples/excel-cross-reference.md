@@ -1,11 +1,11 @@
 ---
-title: 'Cross reference and format an Excel file'
-description: 'Learn how to use Office Scripts and Power Automate to cross reference and format an Excel file.'
+title: 'Cross-reference and format an Excel file'
+description: 'Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.'
 ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
-# Cross reference and format an Excel file
+# Cross-reference and format an Excel file
 
 This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate.
 
@@ -19,10 +19,10 @@ For further details, see [Cross Reference and formatting two Excel files using O
 
 ## Sample Excel files
 
+Download the following files used in this solution to try it out yourself!
+
 1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
-
-
 
 ## Office Scripts sample code: Get event data
 

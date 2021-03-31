@@ -11,13 +11,10 @@ This sample combines data from multiple Excel tables into a single table that in
 
 There are two variations of this script:
 
-1. The first script combines all tables in the Excel file. It assumes that all tables in the Excel files have the same structure.
-1. The second script selectively gets tables within a set of worksheets. It assumes that all the tables in those select worksheets have the same structure.
+1. The [first script](#office-scripts-sample-code-copy-all-tables-in-excel-to-a-new-table) combines all tables in the Excel file. It assumes that all tables in the Excel files have the same structure.
+1. The [second script](#office-scripts-sample-code-copy-tables-from-select-worksheets-into-a-new-table) selectively gets tables within a set of worksheets. It assumes that all the tables in those select worksheets have the same structure.
 
-
-
-
-## Office Script sample code:  Copy all tables in Excel to a new table
+## Office Scripts sample code: Copy all tables in Excel to a new table
 
 Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!
 
@@ -47,7 +44,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## Office Script sample code:  Copy tables from select worksheets into a new table
+## Office Scripts sample code: Copy tables from select worksheets into a new table
 
 Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
 

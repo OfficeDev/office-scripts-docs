@@ -15,25 +15,16 @@ This script achieves the following:
 
 ![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
 
-## Solution
+There are two script variants in this solution. The main difference is in the way the rows are selected.
 
-There are two script variants. The main difference is in the way the rows are selected.
-
-* In the [first variant](#move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
-* In the [second](#move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
+* In the [first variant](#office-scripts-sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
+* In the [second](#office-scripts-sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
 
 ## Sample Excel file
 
 Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!
 
-## Office Scripts
-
-The solution contains two Office Scripts:
-
-1. [Move Rows Using Table Filter](#move-rows-using-table-filter)
-1. [Move Rows Using Range Values](#move-rows-using-range-values)
-
-### Move rows using table filter
+## Office Scripts sample code: Move rows using table filter
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -150,7 +141,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-### Move rows using range values
+## Office Scripts sample code: Move rows using range values
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

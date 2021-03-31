@@ -11,38 +11,31 @@ This scenario helps a user generate a unique document number with a specific for
 
 There are two versions of the sample for this scenario.
 
-* Version 1: Read and add a row to a worksheet containing plain range.
-* Version 2: Read and add a row to a table.
+* [Version 1: Read and add a row to a worksheet containing plain range](#office-scripts-sample-code-generate-key-and-add-row-to-range)
 
-## Screenshots
+    _Before the new row is added_
 
-### Version 1: Generate document number on a range
+    ![Screenshot showing range before row is added](../../images/document-number-generator-range-before.png)
 
-#### Before the new row is added
+    _After the new row is added_
 
-![Screenshot showing range before row is added](../../images/document-number-generator-range-before.png)
+    ![Screenshot showing range after row is added](../../images/document-number-generator-range-after.png)
 
-### After the new row is added
+* [Version 2: Read and add a row to a table](#office-scripts-sample-code-generate-key-and-add-row-to-table)
 
-![Screenshot showing range after row is added](../../images/document-number-generator-range-after.png)
+    _Before the new row is added_
 
-### Version 2 Generate document number on a table
+    ![Screenshot showing table before row is added](../../images/document-number-generator-table-before.png)
 
-#### Before the new row is added
+    _After the new row is added_
 
-![Screenshot showing table before row is added](../../images/document-number-generator-table-before.png)
-
-#### After the new row is added
-
-![Screenshot showing table after row is added](../../images/document-number-generator-table-after.png)
+    ![Screenshot showing table after row is added](../../images/document-number-generator-table-after.png)
 
 ## Sample Excel file
 
 Download the file <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> used in this solution to try it out yourself!
 
-
-
-## Office Script sample code:  Generate key and add row to range
+## Office Scripts sample code: Generate key and add row to range
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
@@ -77,7 +70,6 @@ function main(workbook: ExcelScript.Workbook, inputString: string): string {
 
     // Get the max document ID for the type.
     const maxId = selectIds[selectIds.length-1];
-
 
     // Extract numeric part.
     const numPart = maxId.substring(1);
@@ -118,7 +110,7 @@ interface RequestData {
 }
 ```
 
-## Office Script sample code:  Generate key and add row to table
+## Office Scripts sample code: Generate key and add row to table
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {

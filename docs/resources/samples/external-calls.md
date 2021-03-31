@@ -36,15 +36,15 @@ Office Scripts allows [limited external API call support](../../develop/external
 
 This script gets basic information about the user's GitHub repositories.
 
-![Get repos info example](../../images/git.png)
+![Get repositories info example](../../images/git.png)
 
 ## Resources used in the sample
 
-1. [Get repos Github API reference.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)
+1. [Get repositories Github API reference.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)
 1. API call output: Go to a web browser or any HTTP interface and type in `https://api.github.com/users/{USERNAME}/repos`, replacing the {USERNAME} placeholder with your Github ID.
 1. Information fetched: repo.name, repo.size, repo.owner.id, repo.license?.name
 
-## Script
+## Office Scripts sample code: Get basic information about user's GitHub repositories
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {

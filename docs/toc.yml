@@ -68,7 +68,9 @@ items:
         href: resources/samples/add-excel-comments.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
-      - name: Cross reference and format Excel files
+      - name: Count blank rows in worksheets
+        href: resources/samples/count-blank-rows.md
+      - name: Cross-reference and format Excel files
         href: resources/samples/excel-cross-reference.md
       - name: Document number generator
         href: resources/samples/document-number-generator.md
@@ -84,6 +86,8 @@ items:
         href: resources/samples/get-table-data.md
       - name: Remove hyperlinks from Excel cells
         href: resources/samples/remove-hyperlinks-from-cells.md
+      - name: Run a script on all Excel files in a folder
+        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Send Teams invite from Excel data
         href: resources/samples/send-teams-invite-from-excel-data.md
     - name: Scenarios
