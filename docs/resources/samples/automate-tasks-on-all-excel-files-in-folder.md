@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Run a script on all Excel files in a folder
 
-This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for SharePoint folder).
+This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used on a SharePoint folder).
 It performs calculations on the Excel files, adds formatting, and inserts a comment that [@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.
 
 ## Office Scripts sample code: Add formatting and insert comment
@@ -58,4 +58,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Office Scripts training video: Run a script on all Excel files in a folder
 
-[Watch step-by-step video on how to run a script on all Excel files in a OneDrive for Business or SharePoint folder](https://youtu.be/xMg711o7k6w)
+[Watch step-by-step video](https://youtu.be/xMg711o7k6w) on how to run a script on all Excel files in a OneDrive for Business or SharePoint folder.
