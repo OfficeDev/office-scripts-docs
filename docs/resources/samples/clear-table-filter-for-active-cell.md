@@ -61,4 +61,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Office Scripts training video: Clear table column filter based on active cell location
 
-See [Range basics](range-basics.md#videos).
+See [Range basics](range-basics.md#office-scripts-training-videos-range-basics).
