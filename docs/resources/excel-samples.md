@@ -1,11 +1,11 @@
 ---
-title: 'Sample scripts for Office Scripts in Excel on the web'
+title: 'Basic scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 02/12/2021
+ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
-# Sample scripts for Office Scripts in Excel on the web (preview)
+# Basic scripts for Office Scripts in Excel on the web (preview)
 
 The following samples are simple scripts for you to try on your own workbooks. To use them in Excel on the web:
 
@@ -412,10 +412,6 @@ function main(workbook: ExcelScript.Workbook) {
   targetRange.select();
 }
 ```
-
-## Samples and scenarios
-
-For samples showcasing larger, real-world solutions, visit [Sample scenarios for Office Scripts](samples/samples-overview.md).
 
 ## Suggest new samples
 

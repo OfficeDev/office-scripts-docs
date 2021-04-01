@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 03/31/2021
+ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
@@ -15,10 +15,13 @@ In [Scenarios](#scenarios), we have included a few larger scenario samples that 
 
 We also welcome [contributions from the community](#community-contributions).
 
+[!INCLUDE [Preview note](../includes/preview-note.md)]
+
 ## Basics
 
 | Project | Details |
 |---------|---------|
+| [Scripting basics](../excel-samples.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
 | [Learn basics about using the Range object in Office Scripts](range-basics.md) | This article shows the basics of using Range object and its APIs. This is a foundational topic that'll be used across all other projects. |
 
 ## Beyond the basics
@@ -67,7 +70,3 @@ These samples are open source. Try them out yourself. You'll need a Microsoft wo
 ## Leave a comment
 
 Feel free to leave a comment, make a suggestion, or log an issue by using the **Feedback** section at the bottom of the specific sample's documentation page.
-
-## See also
-
-- [Sample scripts for Office Scripts in Excel on the web](../excel-samples.md)
