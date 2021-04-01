@@ -11,8 +11,8 @@ This sample combines data from multiple Excel tables into a single table that in
 
 There are two variations of this script:
 
-1. The [first script](#sample-code-copy-all-tables-in-excel-to-a-new-table) combines all tables in the Excel file.
-1. The [second script](#sample-code-copy-tables-from-select-worksheets-into-a-new-table) selectively gets tables within a set of worksheets.
+1. The [first script](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) combines all tables in the Excel file.
+1. The [second script](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) selectively gets tables within a set of worksheets.
 
 ## Sample code: Combine data from multiple Excel tables into a single table
 
@@ -44,7 +44,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## Sample code: Copy tables from select worksheets into a new table
+## Sample code: Combine data from multiple Excel tables in select worksheets into a single table
 
 Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
 
