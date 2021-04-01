@@ -1,7 +1,7 @@
 ---
 title: 'Range basics in Office Scripts'
 description: 'Learn basics about using the Range object in Office Scripts.'
-ms.date: 03/30/2021
+ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
@@ -212,6 +212,7 @@ _Add row at the end of worksheet_
 
 ## Methods that return other range object
 
+* getSurroundingRegion() -- similar to CurrentRegion in VBA
 * getCell(row, column)
 * getColumn(column)
 * getColumnHidden()

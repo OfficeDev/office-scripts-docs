@@ -1,7 +1,7 @@
 ---
 title: 'Getting started with Office Scripts'
 description: 'Basics about Office Scripts including access, environment, and script patterns.'
-ms.date: 03/04/2021
+ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
@@ -335,7 +335,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Type definitions
+## Type declarations
 
 Type declarations help users understand the type of variable they are dealing with. It helps with auto-completion of methods and assists in development time quality checks.
 
@@ -349,9 +349,108 @@ Examples:
 
 You can identify the types easily in the code editor as it usually appears distinctly in a different color. A colon `:` usually precedes the type declaration.  
 
-Including the type can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code. For the most part, the TypeScript language is good at inferring the types of variables. However, in certain cases, Office Scripts will require explicit type declarations if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that later.
+Writing types can be optional in TypeScript because type inference allows you to get a lot of power without writing additional code. For the most part, the TypeScript language is good at inferring the types of variables. However, in certain cases, Office Scripts require the type declarations to be explicitly defined if the language is unable to clearly identify the type. Also, explicit or implicit `any` is not allowed in Office Script. More on that later.
 
-#### Type assertion (overriding the type)
+### `ExcelScript` types
+
+In Office Scripts, you will use the following kinds of types.
+
+* Native language types such as `number`, `string`, `object`, `boolean`, `null`, etc.
+* Excel API types. They begin with `ExcelScript`. For example, `ExcelScript.Range`, `ExcelScript.Table`, etc.
+* Any custom interfaces you may have defined in the script using `interface` statements.
+
+See examples of each of these groups next.
+
+**_Native language types_**
+
+In the following example, notice places where `string`, `number`, and `boolean` have been used. These are native **TypeScript** language types.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook)
+{
+  const table = workbook.getActiveWorksheet().getTables()[0];
+  const sales = table.getColumnByName('Sales').getRange().getValues();
+  console.log(sales);
+  // Add 100 to each value.
+  const revisedSales = salesAs1DArray.map(data => data as number + 100);
+  // Add a column.
+  table.addColumn(-1, revisedSales);  
+}
+/**
+ * Extract a column from 2D array and return result.
+ */
+function extractColumn(data: (string | number | boolean)[][], index: number): (string | number | boolean)[] {
+
+  const column = data.map((row) => {
+    return row[index];
+  })
+  return column;
+}
+/**
+ * Convert a flat array into a 2D array that can be used as range column.
+ */
+function convertColumnTo2D(data: (string | number | boolean)[]): (string | number | boolean)[][] {
+
+  const columnAs2D = data.map((row) => {
+    return [row];
+  })
+  return columnAs2D;
+}
+```
+
+**_ExcelScript types_**
+
+In the following example, a helper function takes two arguments. The first one is the `sheet` variable which is of type `ExcelScript.Worksheet` type.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    const sheet = workbook.getWorksheet('Sheet5');
+    const data = ['2016', 'Bikes', 'Seats', '1500', .05];
+    addRow(sheet, data);
+    return;
+}
+
+function addRow(sheet: ExcelScript.Worksheet, data: (string | number | boolean)[]): void {
+
+    const usedRange = sheet.getUsedRange();
+    let startCell: ExcelScript.Range;
+    // If the sheet is empty, then use A1 as starting cell for update.
+    if (usedRange) { 
+      startCell = usedRange.getLastRow().getCell(0, 0).getOffsetRange(1, 0);
+    } else {
+      startCell = sheet.getRange('A1');
+    }
+    console.log(startCell.getAddress());
+    const targetRange = startCell.getResizedRange(0, data.length - 1);      
+    targetRange.setValues([data]);
+    return;
+}
+```
+
+**_Custom types_**
+
+The custom interface `ReportImages` is used to return images to another flow action. The `main` function declaration includes `: ReportImages` instruction to tell TypeScript that an object of that type is being returned.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook): ReportImages {
+  let chart = workbook.getWorksheet("Sheet1").getCharts()[0];
+  const table = workbook.getWorksheet('InvoiceAmounts').getTables()[0];
+  
+  const chartImage = chart.getImage();
+  const tableImage = table.getRange().getImage();
+  return {
+    chartImage,
+    tableImage
+  }
+}
+
+interface ReportImages {
+  chartImage: string
+  tableImage: string
+}
+```
+
+### Type assertion (overriding the type)
 
 As the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions) states, "Sometimes you'll end up in a situation where you'll know more about a value than TypeScript does. Usually, this will happen when you know the type of some entity could be more specific than its current type. Type assertions are a way to tell the compiler “trust me, I know what I'm doing.” A type assertion is like a type cast in other languages, but it performs no special checking or restructuring of data. It has no runtime impact and is used purely by the compiler."
 
@@ -409,18 +508,18 @@ value = someValue_from_another_source;
 someRange.setValue(value);
 ```
 
-#### Type inference
+### Type inference
 
-In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) is used to provide type information when there is no explicit type annotation. For example, in this code:
+In TypeScript, there are several places where [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) is used to provide type information when there is no explicit type annotation. For example, the type of the x variable is inferred to be a number in the following code.
 
 ```TypeScript
 let x = 3;
 //  ^ = let x: number
 ```
 
-The type of the x variable is inferred to be a number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
+This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
 
-#### no-implicit-any rule
+### no-implicit-any rule
 
 A script requires the types of the variables used to be explicitly or implicitly declared. If the TypeScript compiler is unable to determine the type of a variable (either because type is not declared explicitly or type inference is not possible), then you will receive a compilation time error (error prior to running the script). You will see an error in the editor as well.
 
