@@ -1,5 +1,5 @@
 ---
-title: 'Clear table column filter based on active cell location in Office Scripts'
+title: 'Clear table column filter based on active cell location'
 description: 'Learn how to clear table column filter based on active cell location.'
 ms.date: 03/04/2021
 localization_priority: Normal
@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Clear table column filter based on active cell location
 
-This sample clears the table column filter based on the active cell location. The script detects if the cell is part of a table and then determines the table column and clears any filter that may be applied on it.
+This sample clears the table column filter based on the active cell location. The script detects if the cell is part of a table, determines the table column, and clears any filter that are applied on it.
 
 If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), see [Move rows across tables by saving filters, then processing and reapplying the filters](move-rows-across-tables.md), a more advanced sample.
 
