@@ -15,7 +15,7 @@ In [Scenarios](#scenarios), we have included a few larger scenario samples that 
 
 We also welcome [contributions from the community](#community-contributions).
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
+[!INCLUDE [Preview note](../../includes/preview-note.md)]
 
 ## Basics
 

@@ -74,8 +74,8 @@ items:
         href: resources/samples/excel-cross-reference.md
       - name: Document number generator
         href: resources/samples/document-number-generator.md
-      - name: Email chart image
-        href: resources/samples/email-chart-image.md
+      - name: Email images of chart and table
+        href: resources/samples/email-images-chart-table.md
       - name: Filter table and get visible range
         href: resources/samples/filter-table-get-visible-range.md
       - name: Manage calculation mode

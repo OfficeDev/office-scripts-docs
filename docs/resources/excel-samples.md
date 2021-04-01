@@ -15,8 +15,6 @@ The following samples are simple scripts for you to try on your own workbooks. T
 4. Replace the entire script with the sample of your choice.
 5. Press **Run** in the Code Editor's task pane.
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 ## Scripting basics
 
 These samples demonstrate fundamental building blocks for Office Scripts. Add these to your scripts to extend your solution and solve common problems.
