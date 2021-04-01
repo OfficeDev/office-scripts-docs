@@ -13,12 +13,12 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 
 * The team lead maintains the shift schedule. The team lead assigns an employee ID to the shift record.
 * The team lead wishes to notify the employee. By adding a comment that @mentions the employee, the employee is emailed with a custom message from the worksheet.
-* The employee can view the workbook and respond to the comment at their convenience.
+* Subsequently, the employee can view the workbook and respond to the comment at their convenience.
 
 ## Solution
 
 1. The script extracts employee information from the employee worksheet.
-1. The script then cross-references the shift record and adds a comment to the appropriate cell by including the relevant employee email in the team lead's comment.
+1. The script then adds a comment (including the relevant employee email) to the appropriate cell in the shift record.
 1. Existing comments in the cell are removed before adding the new comment.
 
 ## Office Scripts sample code: Add comments
