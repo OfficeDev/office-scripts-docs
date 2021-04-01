@@ -5,15 +5,15 @@ ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
-# Output Excel table data (including hyperlink data) as JSON for usage in Power Automate
+# Output Excel table data as JSON for usage in Power Automate
 
-Often, it is beneficial to extract Excel table data as an array of objects (each item representing a row) in the form of JSON using Office Scripts. This helps with extracting the data from Excel in the same format that is visible to the user. Data can then be fed into other systems using Power Automate flows.
+Excel table data can be represented as an array of objects in the form of JSON. Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows.
 
 _Input table data_
 
 ![Screenshot displaying input table data](../../images/table-input.png)
 
-A variation of this sample involves doing the same as described previously, but this time also selecting the hyperlink associated with one of the table columns. This allows data not readily available at the cell level to be surfaced in the JSON.
+A variation of this sample also includes the hyperlinks in one of the table columns. This allows additional levels of cell data to be surfaced in the JSON.
 
 _Input table data that includes hyperlinks_
 
@@ -30,7 +30,7 @@ Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hype
 ## Office Scripts sample code: Return table data as JSON
 
 > [!NOTE]
-> To suit your needs or data, change the `interface TableData` structure to match your table columns. Note that for column names that contain spaces, be sure to place your key within quotes as with `"Event ID"` in the sample.
+> You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {

@@ -30,7 +30,7 @@ _Email that was received through Power Automate flow_
 
 ## Solution
 
-The solution has 2 parts:
+This solution has two parts:
 
 1. [An Office Script to calculate and extract Excel chart and table](#office-scripts-sample-code-calculate-and-extract-excel-chart-and-table)
 1. A Power Automate flow to invoke the script and email the results. For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).

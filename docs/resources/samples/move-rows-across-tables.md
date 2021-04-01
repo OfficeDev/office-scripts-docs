@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Move rows across tables by saving filters, then processing and reapplying the filters
 
-This script achieves the following:
+This script does the following:
 
 * Select rows from the source table where the value in a column is equal to _some value_.
 * Move all selected rows into another (target) table on another worksheet.
@@ -15,7 +15,7 @@ This script achieves the following:
 
 ![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
 
-There are two script variants in this solution. The main difference is in the way the rows are selected.
+There are two scripts in this solution. The main difference is how the rows are selected.
 
 * In the [first variant](#office-scripts-sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
 * In the [second](#office-scripts-sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
@@ -38,7 +38,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Get the table objects.
   let targetTable = workbook.getTable(TargetTableName);
   let sourceTable = workbook.getTable(SourceTableName);
-  // If you don't know the table names, you can fetch first table on a given worksheet name.
+  // If you don't know the table names, you can instead use the following code to fetch the first table on a given worksheet name.
   // let targetTable = workbook.getWorksheet('Sheet1').getTables()[0];
   // let sourceTable = workbook.getWorksheet('Sheet2').getTables()[0];
 

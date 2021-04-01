@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Generate a new unique identifier and add a row to table and range
 
-This scenario helps a user generate a unique document number with a specific format and add an entry to a range or table. The new entry or row added will contain the newly generated unique document number and a few other attributes passed to the script.
+This scenario helps a user generate a unique document number with a specific format and add it as an entry to a range or table. The new entry or row added will contain the newly generated unique document number and a few other attributes passed to the script.
 
 There are two versions of the sample for this scenario.
 

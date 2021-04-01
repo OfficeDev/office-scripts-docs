@@ -1,15 +1,15 @@
 ---
-title: 'Tip for how to use macro files or xlsm files in Power Automate flows'
+title: 'Use macro files in Power Automate flows'
 description: 'Learn how to use macro files or xlsm files in Power Automate flows.'
 ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
-# Tip for how to use macro files or xlsm files in Power Automate flows
+# How to use macro files in Power Automate flows
 
-[Power Automate flows](https://us.flow.microsoft.com/) provide [Excel connectors](https://us.flow.microsoft.com/connectors/shared_excelonlinebusiness/excel-online-business/) to help connect Excel files with the rest of your organizational data and apps such as Teams, Outlook, SharePoint, etc.
+[Power Automate flows](https://flow.microsoft.com/) provide [Excel connectors](https://flow.microsoft.com/connectors/shared_excelonlinebusiness/excel-online-business/) to help connect Excel files with the rest of your organizational data and apps such as Teams, Outlook, and SharePoint.
 
-However, a limitation is that macro files can't be selected in the file dropdown (see an example in the following screenshot).
+However, macro files can't be selected in the file dropdown (see an example in the following screenshot).
 
 ![No xlsm in Run Script action](../../images/no-xlsm.png)
 
