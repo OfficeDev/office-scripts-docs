@@ -242,6 +242,6 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## Video
+## Office Scripts training video: Move rows across tables
 
 [![Watch step-by-step video](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video")

@@ -65,6 +65,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Video
+## Office Scripts training video: Add comments
 
 [![Watch step-by-step video](../../images/comments-vid.jpg)](https://youtu.be/CpR78nkaOFw "Step-by-step video")

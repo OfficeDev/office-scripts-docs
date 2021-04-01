@@ -31,6 +31,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Video
+## Office Scripts training video: Manage calculation mode
 
 [![Watch step-by-step video](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Step-by-step video")

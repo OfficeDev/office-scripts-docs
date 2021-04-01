@@ -115,6 +115,6 @@ Each key represents a unique value of a table. Each array instance represents th
 }
 ```
 
-## Video
+## Office Scripts training video: Filter an Excel table and get the visible range
 
 [![Watch step-by-step video on how to filter an Excel table and get the visible range](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "Step-by-step video on how to filter an Excel table and get the visible range")

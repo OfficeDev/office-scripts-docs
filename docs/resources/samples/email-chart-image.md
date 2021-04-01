@@ -84,6 +84,6 @@ interface ReportImages {
 }
 ```
 
-## Video
+## Office Scripts training video: Extract and email chart image
 
 [![Watch step-by-step video on how to extract and email chart image](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email chart image")

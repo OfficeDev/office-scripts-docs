@@ -223,6 +223,6 @@ interface InterviewInvite  {
 }
 ```
 
-## Video
+## Office Scripts training video: Send a Teams meeting from Excel data
 
 [![Watch step-by-step video](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Step-by-step video")

@@ -81,6 +81,6 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## Video
+## Office Scripts training video: Combine data from multiple Excel tables into a single table
 
 [![Watch step-by-step video on how to combine data from multiple Excel tables into a single table](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "Step-by-step video on how to combine data from multiple Excel tables into a single table")

@@ -56,6 +56,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Video
+## Office Scripts training video: Run a script on all Excel files in a folder
 
 [Watch step-by-step instruction](https://youtu.be/xMg711o7k6w)

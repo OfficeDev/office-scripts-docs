@@ -75,6 +75,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## Video
+## Office Scripts training video: Remove hyperlinks from each cell in an Excel worksheet
 
 [![Watch step-by-step video](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Step-by-step video")
