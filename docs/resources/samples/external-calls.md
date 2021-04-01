@@ -29,7 +29,7 @@ Office Scripts allows [limited external API call support](../../develop/external
 1. Mark your `main` function as an asynchronous function by adding `async` prefix. For example, `async function main(workbook: ExcelScript.Workbook)`.
 1. Which type of API call are you making? `GET`, `POST`, `PUT`, `DELETE`, `PATCH`? Refer to REST API material for details.
 1. Obtain the service API endpoint, authentication requirements, headers, etc.
-1. Define the input or output `interface` to help with code completion and development time verification. See [video](#office-scripts-training-video-how-to-make-external-api-calls) for details.
+1. Define the input or output `interface` to help with code completion and development time verification. See [video](#training-video-how-to-make-external-api-calls) for details.
 1. Code, test, optimize. You can create a function for your API call routine to make it reusable from other parts of your script or for reuse in a different script (copy-paste becomes much easier this way).
 
 ## Scenario

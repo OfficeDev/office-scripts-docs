@@ -17,8 +17,8 @@ This script does the following:
 
 There are two scripts in this solution. The main difference is how the rows are selected.
 
-* In the [first variant](#office-scripts-sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
-* In the [second](#office-scripts-sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
+* In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.
+* In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.
 
 ## Sample Excel file
 

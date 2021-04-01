@@ -9,8 +9,8 @@ localization_priority: Normal
 
 This project includes two scripts:
 
-* [Count blank rows on a given sheet](#office-scripts-sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.
-* [Count blank rows on all sheets](#office-scripts-sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.
+* [Count blank rows on a given sheet](#sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.
+* [Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.
 
 > [!NOTE]
 > For our script, a blank row is any row where there's no data. The row can have formatting.

@@ -11,7 +11,7 @@ This scenario helps a user generate a unique document number with a specific for
 
 There are two versions of the sample for this scenario.
 
-* [Version 1: Read and add a row to a worksheet containing plain range](#office-scripts-sample-code-generate-key-and-add-row-to-range)
+* [Version 1: Read and add a row to a worksheet containing plain range](#sample-code-generate-key-and-add-row-to-range)
 
     _Before the new row is added_
 
@@ -21,7 +21,7 @@ There are two versions of the sample for this scenario.
 
     ![Screenshot showing range after row is added](../../images/document-number-generator-range-after.png)
 
-* [Version 2: Read and add a row to a table](#office-scripts-sample-code-generate-key-and-add-row-to-table)
+* [Version 2: Read and add a row to a table](#sample-code-generate-key-and-add-row-to-table)
 
     _Before the new row is added_
 
