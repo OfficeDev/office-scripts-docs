@@ -77,4 +77,4 @@ interface License {
 
 ## Office Scripts training video: How to make external API calls
 
-[![Watch API call video](../../images/api-vid.png)](https://youtu.be/fulP29J418E "API call video")
+[![Watch video on how to make external API calls](../../images/api-vid.png)](https://youtu.be/fulP29J418E "Video on how to make external API calls")

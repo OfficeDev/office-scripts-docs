@@ -58,4 +58,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Office Scripts training video: Run a script on all Excel files in a folder
 
-[Watch step-by-step instruction](https://youtu.be/xMg711o7k6w)
+[Watch step-by-step video on how to run a script on all Excel files in a OneDrive for Business or SharePoint folder](https://youtu.be/xMg711o7k6w)

@@ -148,4 +148,4 @@ function getRandomString(length: number): string {
 
 ## Office Scripts training video: Optimize performance when writing a large dataset
 
-[![Watch video on large range data update](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "Video on large range data update")
+[![Watch video on how to optimize performance when writing a large dataset](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "Video on how to optimize performance when writing a large dataset")

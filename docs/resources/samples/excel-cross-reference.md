@@ -122,4 +122,4 @@ capacity: number
 
 ## Office Scripts training video: Cross-reference and format an Excel file
 
-[![Watch step-by-step video](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Step-by-step video")
+[![Watch step-by-step video on how to cross-reference and format an Excel file](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Step-by-step video on how to cross-reference and format an Excel file")
