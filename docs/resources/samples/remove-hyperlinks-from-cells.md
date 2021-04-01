@@ -12,7 +12,7 @@ localization_priority: Normal
 > [!NOTE]
 > This only works if the cell count is < 10k.
 
-## Office Scripts sample code: Remove hyperlinks
+## Sample code: Remove hyperlinks
 
 Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!
 
@@ -75,6 +75,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## Office Scripts training video: Remove hyperlinks from each cell in an Excel worksheet
+## Training video: Remove hyperlinks from each cell in an Excel worksheet
 
 [![Watch step-by-step video on how to remove hyperlinks from each cell in an Excel worksheet](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Step-by-step video on how to remove hyperlinks from each cell in an Excel worksheet")

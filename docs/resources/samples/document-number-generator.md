@@ -1,11 +1,11 @@
 ---
-title: 'Generate a new unique identifier and add a row to table and range'
-description: 'Learn how to use Office Scripts to generate a new unique identifier and add a row to a table and range.'
+title: 'Generate a unique identifier in a workbook'
+description: 'Learn how to use Office Scripts to generate a unique identifier and add a row to a table and range.'
 ms.date: 03/18/2021
 localization_priority: Normal
 ---
 
-# Generate a new unique identifier and add a row to table and range
+# Generate a unique identifier in a workbook
 
 This scenario helps a user generate a unique document number with a specific format and add it as an entry to a range or table. The new entry or row added will contain the newly generated unique document number and a few other attributes passed to the script.
 
@@ -35,7 +35,7 @@ There are two versions of the sample for this scenario.
 
 Download the file <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> used in this solution to try it out yourself!
 
-## Office Scripts sample code: Generate key and add row to range
+## Sample code: Generate key and add row to range
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
@@ -110,7 +110,7 @@ interface RequestData {
 }
 ```
 
-## Office Scripts sample code: Generate key and add row to table
+## Sample code: Generate key and add row to table
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {

@@ -9,9 +9,9 @@ localization_priority: Normal
 
 This script does the following:
 
-* Select rows from the source table where the value in a column is equal to _some value_.
-* Move all selected rows into another (target) table on another worksheet.
-* Reapply the relevant filters on the source table.
+* Selects rows from the source table where the value in a column is equal to _some value_.
+* Moves all selected rows into another (target) table on another worksheet.
+* Reapplies the relevant filters on the source table.
 
 ![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
 
@@ -24,7 +24,7 @@ There are two scripts in this solution. The main difference is how the rows are 
 
 Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!
 
-## Office Scripts sample code: Move rows using table filter
+## Sample code: Move rows using table filter
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -141,7 +141,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## Office Scripts sample code: Move rows using range values
+## Sample code: Move rows using range values
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -242,6 +242,6 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## Office Scripts training video: Move rows across tables
+## Training video: Move rows across tables
 
 [![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")

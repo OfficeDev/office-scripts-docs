@@ -30,9 +30,9 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Add comments in Excel](add-excel-comments.md) | This sample shows how to add comments to a cell including @mentioning a colleague. |
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Cross-reference and format an Excel file](excel-cross-reference.md) | This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate. |
-| [Email a chart image](email-chart-image.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
+| [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [Filter Excel table and get visible range](filter-table-get-visible-range.md) | This sample filters an Excel table and returns the visible range as a JSON object. This JSON could be provided to a Power Automate flow as part of a larger solution. |
-| [Generate a new unique identifier and add a row to table and range](document-number-generator.md)  | This scenario helps a user generate a unique document number with a specific format and add an entry to a range or table. |
+| [Generate a unique identifier in a workbook](document-number-generator.md) | This scenario helps a user generate a unique document number with a specific format and add an entry to a range or table. |
 | [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel on the web using Office Scripts. |
 | [Merge multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |

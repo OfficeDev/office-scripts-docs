@@ -30,7 +30,7 @@ The solution has 3 parts:
 
 Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this solution and try it out yourself!
 
-## Office Scripts sample code: Select filtered rows from table as JSON
+## Sample code: Select filtered rows from table as JSON
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -169,7 +169,7 @@ interface InterviewInvite extends BasicObj {
 }
 ```
 
-## Office Scripts sample code: Mark as invited
+## Sample code: Mark as invited
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
@@ -223,6 +223,6 @@ interface InterviewInvite  {
 }
 ```
 
-## Office Scripts training video: Send a Teams meeting from Excel data
+## Training video: Send a Teams meeting from Excel data
 
 [![Watch step-by-step video on how to send a Teams meeting from Excel data](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Step-by-step video on how to send a Teams meeting from Excel data")

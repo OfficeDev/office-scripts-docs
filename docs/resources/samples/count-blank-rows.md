@@ -23,7 +23,7 @@ _This sheet returns count of 0 blank rows (all rows have some data)_
 
 ![Data without blank rows](../../images/no-blank-rows.png)
 
-## Office Scripts sample code: Count blank rows on a given sheet
+## Sample code: Count blank rows on a given sheet
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number
@@ -54,7 +54,7 @@ function main(workbook: ExcelScript.Workbook): number
 }
 ```
 
-## Office Scripts sample code: Count blank rows on all sheets
+## Sample code: Count blank rows on all sheets
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number

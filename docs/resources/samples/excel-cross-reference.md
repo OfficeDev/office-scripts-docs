@@ -24,7 +24,7 @@ Download the following files used in this solution to try it out yourself!
 1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
 
-## Office Scripts sample code: Get event data
+## Sample code: Get event data
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -53,7 +53,7 @@ interface EventData {
 }
 ```
 
-## Office Scripts sample code: Validate event transactions
+## Sample code: Validate event transactions
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -120,6 +120,6 @@ capacity: number
 }
 ```
 
-## Office Scripts training video: Cross-reference and format an Excel file
+## Training video: Cross-reference and format an Excel file
 
 [![Watch step-by-step video on how to cross-reference and format an Excel file](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Step-by-step video on how to cross-reference and format an Excel file")

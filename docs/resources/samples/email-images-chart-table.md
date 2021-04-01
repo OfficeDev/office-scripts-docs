@@ -1,20 +1,20 @@
 ---
-title: 'Email a chart image'
-description: 'Learn how to use Office Scripts and Power Automate to extract and email an image of an Excel chart.'
-ms.date: 03/04/2021
+title: 'Email the images of an Excel chart and table'
+description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
+ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
-# Use Office Scripts and Power Automate to email chart and table images
+# Use Office Scripts and Power Automate to email images of a chart and table
 
-This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email.
+This sample uses Office Scripts and Power Automate to create a chart. It then emails images of the chart and its base table.
 
 ## Example scenario
 
 * Calculate to get latest results.
 * Create chart.
 * Get chart and table images.
-* Email the images to recipient using Power Automate action.
+* Email the images with Power Automate.
 
 _Input data_
 
@@ -35,7 +35,7 @@ This solution has two parts:
 1. [An Office Script to calculate and extract Excel chart and table](#office-scripts-sample-code-calculate-and-extract-excel-chart-and-table)
 1. A Power Automate flow to invoke the script and email the results. For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
 
-## Office Scripts sample code: Calculate and extract Excel chart and table
+## Sample code: Calculate and extract Excel chart and table
 
 The following script calculates and extracts an Excel chart and table.
 
@@ -84,6 +84,6 @@ interface ReportImages {
 }
 ```
 
-## Office Scripts training video: Extract and email chart image
+## Training video: Extract and email images of chart and table
 
-[![Watch step-by-step video on how to extract and email chart image](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email chart image")
+[![Watch step-by-step video on how to extract and email images of chart and table](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email images of chart and table")

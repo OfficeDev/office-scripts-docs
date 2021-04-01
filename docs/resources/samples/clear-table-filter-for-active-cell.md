@@ -19,7 +19,7 @@ _After clearing column filter_
 
 ![After clearing column filter](../../images/after-filter-cleared.png)
 
-## Office Scripts sample code: Clear table column filter based on active cell
+## Sample code: Clear table column filter based on active cell
 
 The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table. For convenience, you can download and use <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>.
 
@@ -59,6 +59,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Office Scripts training video: Clear table column filter based on active cell location
+## Training video: Clear table column filter based on active cell location
 
 For an example of how to work with ranges, see [Range basics training videos](range-basics.md#office-scripts-training-videos-range-basics).

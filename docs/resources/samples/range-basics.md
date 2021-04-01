@@ -170,7 +170,7 @@ const DATA = [
 ]
 ```
 
-## Office Scripts training videos: Range basics
+## Training videos: Range basics
 
 _Range basics_
 

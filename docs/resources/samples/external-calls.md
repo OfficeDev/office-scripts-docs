@@ -44,7 +44,7 @@ This script gets basic information about the user's GitHub repositories.
 1. API call output: Go to a web browser or any HTTP interface and type in `https://api.github.com/users/{USERNAME}/repos`, replacing the {USERNAME} placeholder with your Github ID.
 1. Information fetched: repo.name, repo.size, repo.owner.id, repo.license?.name
 
-## Office Scripts sample code: Get basic information about user's GitHub repositories
+## Sample code: Get basic information about user's GitHub repositories
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
@@ -75,6 +75,6 @@ interface License {
 }
 ```
 
-## Office Scripts training video: How to make external API calls
+## Training video: How to make external API calls
 
 [![Watch video on how to make external API calls](../../images/api-vid.png)](https://youtu.be/fulP29J418E "Video on how to make external API calls")

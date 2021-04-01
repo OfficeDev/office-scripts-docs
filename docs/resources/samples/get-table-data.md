@@ -27,7 +27,7 @@ _Dialog to edit hyperlink_
 
 Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in these samples and try it out yourself!
 
-## Office Scripts sample code: Return table data as JSON
+## Sample code: Return table data as JSON
 
 > [!NOTE]
 > You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample.
@@ -130,7 +130,7 @@ interface TableData {
 }]
 ```
 
-## Office Scripts sample code: Return table data as JSON with hyperlink text
+## Sample code: Return table data as JSON with hyperlink text
 
 > [!NOTE]
 > The script always extracts hyperlinks from the 4th column (0 index) of the table. You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`

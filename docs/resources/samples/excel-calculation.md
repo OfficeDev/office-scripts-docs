@@ -7,17 +7,17 @@ localization_priority: Normal
 
 # Manage calculation mode in Excel
 
-This sample shows how to use the calculation mode and calculate methods in Excel on the web using Office Scripts. You can try the script on any Excel file.
+This sample shows how to use the [calculation mode](/javascript/api/office-scripts/excelscript/excelscript.calculationmode) and calculate methods in Excel on the web using Office Scripts. You can try the script on any Excel file.
 
 ## Scenario
 
 In Excel on the web, a file's calculation mode can be controlled programmatically using APIs. The following actions are possible using Office Scripts.
 
-1. Get the calculation mode (automatic or manual, etc.).
+1. Get the calculation mode.
 1. Set the calculation mode.
-1. Calculate Excel formulas for files that are set to the manual mode (also referred as re-calculate).
+1. Calculate Excel formulas for files that are set to the manual mode (also referred to as recalculate).
 
-## Office Scripts sample code: Control calculation mode
+## Sample code: Control calculation mode
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -31,6 +31,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Office Scripts training video: Manage calculation mode
+## Training video: Manage calculation mode
 
 [![Watch step-by-step video on how to manage calculation mode in Excel on the web](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Step-by-step video on how to manage calculation mode in Excel on the web")
