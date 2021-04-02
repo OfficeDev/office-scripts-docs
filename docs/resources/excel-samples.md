@@ -5,7 +5,7 @@ ms.date: 04/01/2021
 localization_priority: Normal
 ---
 
-# Basic scripts for Office Scripts in Excel on the web (preview)
+# Basic scripts for Office Scripts in Excel on the web
 
 The following samples are simple scripts for you to try on your own workbooks. To use them in Excel on the web:
 
