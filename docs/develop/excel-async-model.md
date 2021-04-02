@@ -10,7 +10,7 @@ localization_priority: Normal
 This article will teach you how to maintain and update scripts that use the older model's async APIs. These APIs have the same core functionality as the now-standard, synchronous Office Scripts APIs, but they require your script to control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md?view=office-scripts&preserve-view=true). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#converting-async-scripts-to-the-current-model) section has advice on how to make this transition.
+> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#converting-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
 ## `main` function
 
@@ -144,7 +144,7 @@ The current API model doesn't use `load`, `sync`, or a `RequestContext`. This ma
 
 4. Collection classes have been replaced by arrays. The `add` and `get` methods of those collection classes were moved to the object that owned the collection, so your references must be updated accordingly. For example, to get a chart named "MyChart" from the first worksheet in the workbook, use the following code: `workbook.getWorksheets()[0].getChart("MyChart");`. Note the `[0]` to access the first value of the `Worksheet[]` returned by `getWorksheets()`.
 
-5. Some methods have been renamed for clarity and added for convenience. Please consult the [Office Scripts API reference](/javascript/api/office-scripts/overview?view=office-scripts&preserve-view=true) for more details.
+5. Some methods have been renamed for clarity and added for convenience. Please consult the [Office Scripts API reference](/javascript/api/office-scripts/overview) for more details.
 
 ## Office Scripts async API reference documentation
 

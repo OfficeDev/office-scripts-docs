@@ -20,7 +20,7 @@ The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves 
 
 The following script uses `fetch` to retrieve JSON data from the test server in the given URL.
 
-```typescript
+```TypeScript
 async function main(workbook: ExcelScript.Workbook): Promise <void> {
   /* 
    * Retrieve JSON data from a test server.
