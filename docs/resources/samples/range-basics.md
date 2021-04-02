@@ -133,6 +133,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 Dynamically calculates the range dimension to update based on 2D array values.
 
+> [!TIP]
+> To understand more about working with range and 2D, see [tip](../../testing/tips.md#tip-5-range-values-texts-etc-2-dimensional-to-1-dimensional-conversion).
+
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   const currentCell = workbook.getActiveCell();
