@@ -65,18 +65,21 @@ This flow runs the script on every workbook in the "Sales" folder.
 1. Create a new **Instant cloud flow**.
 1. Select **Manually trigger a flow** and press **Create**.
 1. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action.
+
     ![The completed OneDrive for Business connector.](../../images/all-files-in-folder-sample-flow-1.png)
 1. Select the "Sales" folder with the extracted workbooks.
 1. To ensure only workbooks are selected, choose **New step**, then select **Condition** and set the following values:
     1. **Name** (the OneDrive file name value)
     1. "ends with"
     1. "xlsx".
+
     ![The apply-to-each file step with the condition.](../../images/all-files-in-folder-sample-flow-2.png)
 1. Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script (preview)** action. Use the following values for the action:
     1. **Location**: OneDrive for Business
     1. **Document Library**: OneDrive
     1. **File**: **Id** (the OneDrive file ID value)
     1. **Script**: Your script name
+
     ![The completed Excel Online (Business) connector.](../../images/all-files-in-folder-sample-flow-3.png)
 1. Save the flow and try it out.
 
