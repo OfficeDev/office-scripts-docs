@@ -239,7 +239,7 @@ For setter APIs, the model is similar. There are singular `setValue()`, `setForm
 A full-screen detachable editor is not yet offered in Office Scripts. In the meantime, you can use the following steps to get code completion in Visual Studio Code. It's only for editing; you can't execute a script using this. To run the script, you still have to copy/paste code into the Office Scripts in-built code editor.
 
 1. In case you already don't have it, download and install the [Visual Studio Code editor](https://code.visualstudio.com/).
-1. Download the intelliSense (code completion assistance) [file](index.d.ts) to your local machine into a base folder from where you'll edit your script files.
+1. Download the IntelliSense (code completion assistance) [file](index.d.ts) to your local machine into a base folder from where you'll edit your script files.
 1. You can see in the image later that this file is saved in a folder called **OS**.
 1. Edit or copy your script to a new file in the same folder. The key is to name the script file locally with the .ts extension. Otherwise, the code completion doesn't work. This only works with the Visual Studio Code editor.
 1. Next, add triple-slash directive to the script on line 1. `/// <reference path="{path to index.d.ts}" />`. For example: `/// <reference path="index.d.ts" />`.
