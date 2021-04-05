@@ -1,7 +1,7 @@
 ---
 title: 'External API call support in Office Scripts'
 description: 'Support and guidance for making external API calls in an Office Script.'
-ms.date: 01/05/2021
+ms.date: 04/05/2021
 localization_priority: Normal
 ---
 
@@ -14,7 +14,27 @@ Calls to external APIs can be only be made through the Excel application, not th
 > [!CAUTION]
 > External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish firewall protection against such calls.
 
-## Working with `fetch`
+## Configure your script for external calls
+
+External calls are [asynchronous](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Async_await) and require that your script is marked as `async`. Add the `async` prefix to your `main` function and have it return a `Promise`, as shown here:
+
+```typescript
+async function main(workbook: ExcelScript.Workbook) : Promise <void>
+```
+
+> [!NOTE]
+> Scripts that return other information can return a `Promise` of that type. For example, if your script needs to return an `Employee` object, the return signature would be `: Promise <Employee>`
+
+You'll need to learn the external service's interfaces to make calls to that service. If you are using `fetch` or [REST APIs](https://wikipedia.org/wiki/Representational_state_transfer), you need to determine the JSON structure of the returned data. For both input to and output from your script, consider making an `interface` to match the needed JSON structures. This gives the script more type safety. You can see an example of this in [Using fetch from Office Scripts](../resources/samples/external-calls.md).
+
+### Limitations with external calls from Office Scripts
+
+* There is no way to sign in or use OAuth2 type of authentication flows. All keys and credentials have to be hardcoded (or read from another source).
+* There is no infrastructure to store API credentials and keys. This will have to be managed by the user.
+* External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
+* Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
+
+### Working with `fetch`
 
 The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you will need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
 
@@ -39,10 +59,13 @@ The [Office Scripts sample scenario: Graph water-level data from NOAA](../resour
 
 Any external API calls fail when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel client and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
 
+You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equivalent actions to pull data from or push it to an external service.
+
 > [!WARNING]
 > External calls made through the Power Automate [Excel Online connector](/connectors/excelonlinebusiness) fail in order to help uphold existing data loss prevention policies. However, scripts that are run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel on the web through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 ## See also
 
-- [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
-- [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)
+* [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
+* [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md)
+* [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)

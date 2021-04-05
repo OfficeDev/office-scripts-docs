@@ -1,0 +1,49 @@
+---
+title: 'Use external fetch calls in Office Scripts'
+description: 'Learn how to make external API calls in Office Scripts.'
+ms.date: 04/05/2021
+localization_priority: Normal
+---
+
+# Use external fetch calls in Office Scripts
+
+This script gets basic information about a user's GitHub repositories. It shows how to use `fetch` in a simple scenario.
+
+You can learn more about the GItHub APIs being used in the [GitHub API reference](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user). You can also see the raw API call output by visiting `https://api.github.com/users/{USERNAME}/repos` in a web browser (be sure to replace the {USERNAME} placeholder with your Github ID).
+
+![Get repositories info example](../../images/git.png)
+
+## Sample code: Get basic information about user's GitHub repositories
+
+```TypeScript
+async function main(workbook: ExcelScript.Workbook) {
+
+  // Replace the {USERNAME} placeholder with your GitHub username.
+  const response = await fetch('https://api.github.com/users/{USERNAME}/repos');
+  const repos: Repository[] = await response.json();
+  
+  const rows: (string | boolean | number)[][] = [];
+  for (let repo of repos){ 
+    rows.push([repo.id, repo.name, repo.license?.name, repo.license?.url])
+  }
+  const sheet = workbook.getActiveWorksheet();
+  const range = sheet.getRange('A2').getResizedRange(rows.length - 1, rows[0].length - 1);
+  range.setValues(rows);
+  return;
+}
+
+interface Repository {
+  name: string,
+  id: string,
+  license?: License 
+}
+
+interface License {
+  name: string,
+  url: string
+}
+```
+
+## Training video: How to make external API calls
+
+[![Watch video on how to make external API calls](../../images/api-vid.png)](https://youtu.be/fulP29J418E "Video on how to make external API calls")

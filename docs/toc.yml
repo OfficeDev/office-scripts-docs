@@ -90,6 +90,8 @@ items:
         href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Send Teams invite from Excel data
         href: resources/samples/send-teams-invite-from-excel-data.md
+      - name: Use external fetch calls in Office Scripts
+        href: resources/samples/external-fetch-calls.md
     - name: Scenarios
       items:
       - name: Analyze web downloads
