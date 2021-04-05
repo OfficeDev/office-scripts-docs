@@ -25,7 +25,7 @@ async function main(workbook: ExcelScript.Workbook) : Promise <void>
 > [!NOTE]
 > Scripts that return other information can return a `Promise` of that type. For example, if your script needs to return an `Employee` object, the return signature would be `: Promise <Employee>`
 
-You'll need to learn the external service's interfaces to make calls to that service. If you are using `fetch` or [REST APIs](https://wikipedia.org/wiki/Representational_state_transfer), you need to determine the JSON structure of the returned data. For both input to and output from your script, consider making an `interface` to match the needed JSON structures. This gives the script more type safety. You can see an example of this in [Using fetch from Office Scripts](../resources/samples/external-calls.md).
+You'll need to learn the external service's interfaces to make calls to that service. If you are using `fetch` or [REST APIs](https://wikipedia.org/wiki/Representational_state_transfer), you need to determine the JSON structure of the returned data. For both input to and output from your script, consider making an `interface` to match the needed JSON structures. This gives the script more type safety. You can see an example of this in [Using fetch from Office Scripts](../resources/samples/external-fetch-calls.md).
 
 ### Limitations with external calls from Office Scripts
 
