@@ -1,7 +1,7 @@
 ---
 title: 'Email the images of an Excel chart and table'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
-ms.date: 04/01/2021
+ms.date: 04/05/2021
 localization_priority: Normal
 ---
 
@@ -83,6 +83,42 @@ interface ReportImages {
   tableImage: string
 }
 ```
+
+## Power Automate flow: Email the chart and table images
+
+This flow runs the script and emails the returned images.
+
+1. Create a new **Instant cloud flow**.
+1. Select **Manually trigger a flow** and press **Create**.
+1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script (preview)** action. Use the following values for the action:
+    * **Location**: OneDrive for Business
+    * **Document Library**: OneDrive
+    * **File**: Your workbook ([selected with the file chooser](../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
+    * **Script**: Your script name
+
+    ![The completed Excel Online (Business) connector](../../images/email-chart-sample-flow-1.png)
+1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action:
+    * **To**: Your test email account (or personal email)
+    * **Subject**: Please Review Report Data
+    * For the **Body** field, select "Code View" (`</>`) and enter the following:
+
+    ```HTML
+    <p>Please review the following report data:<br>
+    <br>
+    Chart:<br>
+    <br>
+    <img src="data:image/png;base64,@{outputs('Run_script')?['body/result/chartImage']}"/>
+    <br>
+    Data:<br>
+    <br>
+    <img src="data:image/png;base64,@{outputs('Run_script')?['body/result/tableImage']}"/>
+    <br>
+    </p>
+    ```
+
+![The completed Office 365 Outlook connector](../../images/email-chart-sample-flow-2.png)
+
+1. Save the flow and try it out.
 
 ## Training video: Extract and email images of chart and table
 
