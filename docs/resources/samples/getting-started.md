@@ -3,6 +3,7 @@ title: 'Getting started with Office Scripts'
 description: 'Basics about Office Scripts including access, environment, and script patterns.'
 ms.date: 04/01/2021
 localization_priority: Normal
+ROBOTS: NOINDEX
 ---
 
 # Getting started
