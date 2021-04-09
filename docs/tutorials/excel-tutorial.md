@@ -73,7 +73,7 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
 4. Test the script by pressing **Run**. Your workbook should now look like this:
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="A fruit sales data row with the 'Oranges' row highlighted orange and the "Lemons" row highlighted yellow":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="A fruit sales data row with the 'Oranges' row highlighted orange and the 'Lemons' row highlighted yellow":::
 
 ## Create a table
 
