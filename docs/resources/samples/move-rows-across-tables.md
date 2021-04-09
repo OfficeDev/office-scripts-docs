@@ -13,7 +13,7 @@ This script does the following:
 * Moves all selected rows into another (target) table on another worksheet.
 * Reapplies the relevant filters on the source table.
 
-![Screenshots of workbook before and after](../../images/table-filter-before-after.png)
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="Screenshots of workbook before and after":::
 
 There are two scripts in this solution. The main difference is how the rows are selected.
 

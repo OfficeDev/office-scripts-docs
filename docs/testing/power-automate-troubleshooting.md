@@ -45,7 +45,7 @@ The following methods use a default behavior, in lieu of any user's current stat
 
 When building the **Run script** step of a Power Automate flow, you need to select which workbook is part of the flow. Use the file browser to select your workbook, instead of manually typing the workbook's name.
 
-![The file browser option when creating a "Run script" action in Power Automate](../images/power-automate-file-browser.png)
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="The file browser option when creating a 'Run script' action in Power Automate":::
 
 For more context on the Power Automate limitation and a discussion of potential workarounds for the dynamic selection of workbooks, see [this thread in the Microsoft Power Automate Community](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#).
 

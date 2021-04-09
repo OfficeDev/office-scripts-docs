@@ -94,7 +94,7 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 The following screenshot shows a Power Automate flow that's triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The flow runs a script that adds the issue to a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
 
-![The example flow as shown in the Power Automate flow editor](../images/power-automate-parameter-return-sample.png)
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="The example flow as shown in the Power Automate flow editor":::
 
 The `main` function of the script specifies the issue ID and issue title as input parameters, and the script returns the number of rows in the issue table.
 

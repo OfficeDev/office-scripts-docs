@@ -45,13 +45,13 @@ As an example, say you start your work day by opening a .csv file from an accoun
 
 ## Action Recorder
 
-![The Action Recorder after recording several actions.](../images/action-recorder-intro.png)
+:::image type="content" source="../images/action-recorder-intro.png" alt-text="The Action Recorder after recording several actions.":::
 
 The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
 ## Code Editor
 
-![The Code Editor showing the script code for the above script.](../images/code-editor-intro.png)
+:::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code for the above script.":::
 
 All scripts recorded with the Action Recorder can be edited through the Code Editor. This lets you tweak and customize the script to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
@@ -59,7 +59,7 @@ One easy way to start learning the capabilities of Office Scripts is to record s
 
 ## Sharing scripts
 
-![The script Details page showing the "Share with others in this workbook" option.](../images/script-sharing.png)
+:::image type="content" source="../images/script-sharing.png" alt-text="The script Details page showing the 'Share with others in this workbook' option.":::
 
 Office Scripts can be shared with other users of an Excel workbook. When you share a script with others in a workbook, the script is attached to the workbook. Your scripts are stored in your OneDrive, and when you share one, you create a link to it in the workbook you have open.
 

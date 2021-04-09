@@ -11,11 +11,11 @@ localization_priority: Normal
 
 However, macro files can't be selected in the file dropdown (see an example in the following screenshot).
 
-![No xlsm in Run Script action](../images/no-xlsm.png)
+:::image type="content" source="../images/no-xlsm.png" alt-text="No xlsm in Run Script action":::
 
 One way to get around this issue is by including the "Get File Metadata" action (OneDrive or SharePoint) and use the ID property in the "Run Script" action as shown in the following screenshot.
 
-![xlsm in Run Script action](../images/xlsm-in-pa.png)
+:::image type="content" source="../images/xlsm-in-pa.png" alt-text="xlsm in Run Script action":::
 
 > [!NOTE]
 > Some XLSM (especially the ones with ActiveX/Form controls) may not work in the Excel online connector. Be sure to test before deploying your solution.

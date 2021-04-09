@@ -36,7 +36,7 @@ Office Scripts allows [limited external API call support](../../develop/external
 
 This script gets basic information about the user's GitHub repositories.
 
-![Get repositories info example](../../images/git.png)
+:::image type="content" source="../../images/git.png" alt-text="Get repositories info example":::
 
 ## Resources used in the sample
 
