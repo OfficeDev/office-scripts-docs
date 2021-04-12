@@ -156,7 +156,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Get People
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="The first Run script flow step.":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="The Power Automate flow showing the first Run script flow step.":::
 
 12. Next, the flow needs to process each Employee in the array returned by the script. Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.
 
@@ -217,7 +217,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **senderEmail**: email *(dynamic content from Excel)*
     - **statusReportResponse**: response *(dynamic content from Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="The apply-to-each flow step.":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
 17. Save the flow.
 

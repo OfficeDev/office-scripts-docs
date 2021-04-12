@@ -19,7 +19,7 @@ Scripts that are shared with one of your workbooks remain in the script creator'
 
 Adding folders to your OneDrive helps keep your scripts organized. Any folders under **/Documents/Office Scripts/** are displayed under the **My Scripts** section of the Code Editor. Please note that these folders cannot be created or deleted by using the Code Editor. Likewise, scripts cannot be placed in folders, or moved across folders by using the Code Editor.
 
-:::image type="content" source="../images/script-folders.png" alt-text="Some scripts contained in folders, as displayed in the Code Editor task pane":::
+:::image type="content" source="../images/script-folders.png" alt-text="The New Script dialog in Code Editor showing scripts contained in folders, as displayed in task pane.":::
 
 ## File ownership and retention
 

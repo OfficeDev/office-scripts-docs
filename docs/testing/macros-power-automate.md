@@ -11,11 +11,11 @@ localization_priority: Normal
 
 However, macro files can't be selected in the file dropdown (see an example in the following screenshot).
 
-:::image type="content" source="../images/no-xlsm.png" alt-text="No xlsm in Run Script action":::
+:::image type="content" source="../images/no-xlsm.png" alt-text="The Power Automate Run script action showing no macro file selected. The error shown is 'File' is required.":::
 
 One way to get around this issue is by including the "Get File Metadata" action (OneDrive or SharePoint) and use the ID property in the "Run Script" action as shown in the following screenshot.
 
-:::image type="content" source="../images/xlsm-in-pa.png" alt-text="xlsm in Run Script action":::
+:::image type="content" source="../images/xlsm-in-pa.png" alt-text="The Power Automate Run script action showing the macro file selected and no Run script error.":::
 
 > [!NOTE]
 > Some XLSM (especially the ones with ActiveX/Form controls) may not work in the Excel online connector. Be sure to test before deploying your solution.

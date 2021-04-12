@@ -13,11 +13,11 @@ If you wish to learn more about how to save the filter prior to clearing it (and
 
 _Before clearing column filter (notice the active cell)_
 
-:::image type="content" source="../../images/before-filter-applied.png" alt-text="Before clearing column filter":::
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="An active cell before clearing column filter.":::
 
 _After clearing column filter_
 
-:::image type="content" source="../../images/after-filter-cleared.png" alt-text="After clearing column filter":::
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="An active cell after clearing column filter.":::
 
 ## Sample code: Clear table column filter based on active cell
 

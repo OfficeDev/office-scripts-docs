@@ -62,15 +62,15 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
-    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Create button in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate 'Create' button.":::
 
 3. In the **Start from blank** section, select **Instant flow**. This creates a manually activated workflow.
 
-    :::image type="content" source="../images/power-automate-tutorial-2.png" alt-text="The Instant flow option for creating a new workflow":::
+    :::image type="content" source="../images/power-automate-tutorial-2.png" alt-text="The Power Automate Instant flow option for creating a new workflow.":::
 
 4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box, select **Manually trigger a flow** from the list of options under **Choose how to trigger the flow**, and press **Create**.
 
-    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="The manual trigger option for creating a new instant flow":::
+    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="The Power Automate 'Manually trigger a flow' option.":::
 
     Note that a manually triggered flow is just one of many types of flows. In the next tutorial, you'll make a flow that automatically runs when you receive an email.
 
@@ -91,7 +91,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
     - **File**: MyWorkbook.xlsx *(Chosen through the file browser)*
     - **Script**: Set date and time
 
-    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="The connector settings for running a script in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="The Power Automate connector settings for running a script.":::
 
 9. Press **Save**.
 

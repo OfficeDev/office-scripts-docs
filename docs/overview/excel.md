@@ -45,13 +45,13 @@ As an example, say you start your work day by opening a .csv file from an accoun
 
 ## Action Recorder
 
-:::image type="content" source="../images/action-recorder-intro.png" alt-text="The Action Recorder after recording several actions.":::
+:::image type="content" source="../images/action-recorder-intro.png" alt-text="A list of actions recorded by Action Recorder.":::
 
 The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
 ## Code Editor
 
-:::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code for the above script.":::
+:::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code used in this tutorial.":::
 
 All scripts recorded with the Action Recorder can be edited through the Code Editor. This lets you tweak and customize the script to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
