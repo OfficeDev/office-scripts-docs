@@ -17,7 +17,7 @@ Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-min
 
 You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let someVariable: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit any message in the code editor's hover text":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit 'any' message in the code editor's hover text":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit 'any' error in the console window":::
 
