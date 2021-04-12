@@ -524,7 +524,7 @@ This kind of inference takes place when initializing variables and members, sett
 
 A script requires the types of the variables used to be explicitly or implicitly declared. If the TypeScript compiler is unable to determine the type of a variable (either because type is not declared explicitly or type inference is not possible), then you will receive a compilation time error (error prior to running the script). You will see an error in the editor as well.
 
-:::image type="content" source="../../images/getting-started-iany.png" alt-text="Implicit 'any' error shown in editor":::
+:::image type="content" source="../../images/getting-started-iany.png" alt-text="The Implicit 'any' error shown in editor.":::
 
 The following scripts have compilation time errors because variables are declared without types and TypeScript cannot determine the type at the time of declaration.
 
