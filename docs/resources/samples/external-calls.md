@@ -36,8 +36,6 @@ Office Scripts allows [limited external API call support](../../develop/external
 
 This script gets basic information about the user's GitHub repositories.
 
-![Get repositories info example](../../images/git.png)
-
 ## Resources used in the sample
 
 1. [Get repositories Github API reference.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)

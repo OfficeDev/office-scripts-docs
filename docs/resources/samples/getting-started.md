@@ -92,7 +92,7 @@ So, in summary:
 * The `main` function is the entry point for any script. When the function is executed, the Excel application invokes this main function by providing the workbook as its first parameter.
 * It's important to keep the first argument `workbook` and its type declaration as it appears. You can add new arguments to the `main` function (see the next section) but do keep the first argument as is.
 
-![The main function is the script's entry point](../../images/getting-started-main-introduction.png)
+:::image type="content" source="../../images/getting-started-main-introduction.png" alt-text="The main function is the script's entry point":::
 
 #### Send or receive data from other apps
 
@@ -100,13 +100,13 @@ You can connect Excel to other parts of your organization by running scripts in 
 
 The way to receive or send data from and to Excel is through the `main` function. Think of it as the information gateway that allows incoming and outgoing data to be described and used in the script. You can receive data from outside the script using the `string` data type and return any TypeScript-recognized data such as `string`, `number`, `boolean`, or any objects in the form of interfaces you define in the script.
 
-![The inputs and outputs of a script](../../images/getting-started-data-in-out.png)
+:::image type="content" source="../../images/getting-started-data-in-out.png" alt-text="The inputs and outputs of a script":::
 
 #### Use functions to organize and reuse code
 
 You can use functions to organize and reuse code within your script.
 
-![Using functions in a script](../../images/getting-started-use-functions.png)
+:::image type="content" source="../../images/getting-started-use-functions.png" alt-text="Using functions in a script":::
 
 ### Objects, hierarchy, methods, properties, collections
 
@@ -491,9 +491,9 @@ let someVariable: any;
 
 The `any` type presents challenges to the way Office Scripts processes the Excel APIs. It causes issues when the variables are sent to Excel APIs for processing. Knowing the type of variables used in the script is essential to the processing of script and hence explicit definition of any variable with `any` type is prohibited. You will receive a compile-time error (error prior to running the script) if there is any variable with `any` type declared in the script. You will see an error in the editor as well.
 
-![Explicit 'any' error](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="Explicit 'any' error":::
 
-![Explicit 'any' error shown in Output](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="Explicit 'any' error shown in Output":::
 
 In the code displayed in the previous image, `[5, 16] Explicit Any is not allowed` indicates that line 5 column 16 declares the `any` type. This helps you locate the line of code that contains the error.
 
@@ -524,7 +524,7 @@ This kind of inference takes place when initializing variables and members, sett
 
 A script requires the types of the variables used to be explicitly or implicitly declared. If the TypeScript compiler is unable to determine the type of a variable (either because type is not declared explicitly or type inference is not possible), then you will receive a compilation time error (error prior to running the script). You will see an error in the editor as well.
 
-![Implicit 'any' error shown in editor](../../images/getting-started-iany.png)
+:::image type="content" source="../../images/getting-started-iany.png" alt-text="The Implicit 'any' error shown in editor.":::
 
 The following scripts have compilation time errors because variables are declared without types and TypeScript cannot determine the type at the time of declaration.
 
@@ -585,15 +585,15 @@ Office Scripts error can be classified into one of the following categories.
 
 Editor warnings can be identified using the wavy red underlines in the editor:
 
-![Compile-time warning shown in the editor](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="Compile-time warning shown in the editor":::
 
 At times, you may also see orange warning underlines and grey informational messages. They should be examined closely though they are not going to cause errors.
 
 It isn't possible to distinguish between compile-time and runtime errors as both error messages look identical. They both occur when you actually execute the script. The following images show examples of a compile-time error and a runtime error.
 
-![Example of a compile-time error](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="Example of a compile-time error":::
 
-![Example of a runtime error](../../images/getting-started-error-basic.png)
+:::image type="content" source="../../images/getting-started-error-basic.png" alt-text="Example of a runtime error":::
 
 In both cases, you will see the line number where the error occurred. You can then examine the code, fix the issue, and run again.
 
