@@ -104,7 +104,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script creates the following data in the current worksheet:
 
-:::image type="content" source="../images/range-sample.png" alt-text="A  worksheet containing a sales record consisting of value rows, a formula column, and formatted headers.":::
+:::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers.":::
 
 ### Charts, tables, and other data objects
 
