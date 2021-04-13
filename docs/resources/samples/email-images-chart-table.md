@@ -18,15 +18,15 @@ This sample uses Office Scripts and Power Automate to create a chart. It then em
 
 _Input data_
 
-![Input data](../../images/input-data.png)
+:::image type="content" source="../../images/input-data.png" alt-text="A worksheet showing a table of input data.":::
 
 _Output chart_
 
-![Chart created](../../images/chart-created.png)
+:::image type="content" source="../../images/chart-created.png" alt-text="The column chart created showing amount due by customer.":::
 
 _Email that was received through Power Automate flow_
 
-![Email received](../../images/email-received.png)
+:::image type="content" source="../../images/email-received.png" alt-text="The email sent by the flow showing the Excel chart embedded in the body.":::
 
 ## Solution
 

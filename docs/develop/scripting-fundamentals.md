@@ -104,7 +104,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script creates the following data in the current worksheet:
 
-![A sales record showing value rows, a formula column, and formatted headers.](../images/range-sample.png)
+:::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers.":::
 
 ### Charts, tables, and other data objects
 
@@ -128,7 +128,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script on the worksheet with the previous data creates the following table:
 
-![A table made from the previous sales record.](../images/table-sample.png)
+:::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record.":::
 
 #### Creating a chart
 
@@ -154,7 +154,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script on the worksheet with the previous table creates the following chart:
 
-![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
+:::image type="content" source="../images/chart-sample.png" alt-text="A column chart showing quantities of three items from the previous sales record.":::
 
 ### Collections and other object relations
 
