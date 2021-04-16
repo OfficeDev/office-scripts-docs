@@ -140,11 +140,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://techcommunity.microsoft.com/t5/excel/bd-p/ExcelGeneral" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
+                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://techcommunity.microsoft.com/t5/excel/bd-p/ExcelGeneral" target="_blank"><h3>Request features</h3></a>
+                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>Request features</h3></a>
                     </div>
                 </div>
             </div>
