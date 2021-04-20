@@ -3,6 +3,11 @@
       {
         "source_path": "docs/tutorials/excel-office-scripts-tutorial.md",
         "redirect_url": "/office/dev/scripts/tutorials/excel-tutorial"
+      },
+      {
+        "source_path": "docs/resources/scenarios/sample-scenario-overview.md",
+        "redirect_url": "/office/dev/scripts/resources/samples/samples-overview",
+        "redirect_document_id": true
       }
     ] 
 }
