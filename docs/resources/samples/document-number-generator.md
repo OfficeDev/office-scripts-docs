@@ -15,21 +15,21 @@ There are two versions of the sample for this scenario.
 
     _Before the new row is added_
 
-    ![Screenshot showing range before row is added](../../images/document-number-generator-range-before.png)
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="A worksheet showing a range of data before row is added.":::
 
     _After the new row is added_
 
-    ![Screenshot showing range after row is added](../../images/document-number-generator-range-after.png)
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="A worksheet showing a range of data after row is added.":::
 
 * [Version 2: Read and add a row to a table](#sample-code-generate-key-and-add-row-to-table)
 
     _Before the new row is added_
 
-    ![Screenshot showing table before row is added](../../images/document-number-generator-table-before.png)
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="A worksheet showing a table before a row is added.":::
 
     _After the new row is added_
 
-    ![Screenshot showing table after row is added](../../images/document-number-generator-table-after.png)
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="A worksheet showing a table after a row is added.":::
 
 ## Sample Excel file
 

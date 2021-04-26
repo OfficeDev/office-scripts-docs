@@ -291,7 +291,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 
-![A fruit sales PivotTable with the Grand Total row highlighted green.](../images/sample-pivottable-grand-total-row.png)
+:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -319,7 +319,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
 
-![A before-and-after set of screenshots that shows three words in a range, then those same words in a drop-down list.](../images/sample-data-validation.png)
+:::image type="content" source="../images/sample-data-validation.png" alt-text="A worksheet showing a range of three cells containing color choices 'red, blue, green' and next to it, the same choices shown in a drop-down list.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

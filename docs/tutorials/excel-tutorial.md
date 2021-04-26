@@ -44,7 +44,7 @@ First, we'll need some data and a small starting script.
 
     Your worksheet should look like this (don't worry if the color is different):
 
-    ![A fruit sales data row with the "Oranges" row highlighted orange](../images/tutorial-1.png)
+    :::image type="content" source="../images/tutorial-1.png" alt-text="A worksheet showing fruit sales data row with the row containing 'Oranges' highlighted in the color orange.":::
 
 ## Edit an existing script
 
@@ -73,7 +73,7 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
 4. Test the script by pressing **Run**. Your workbook should now look like this:
 
-    ![A fruit sales data row with the "Oranges" row highlighted orange and the "Lemons" row highlighted yellow](../images/tutorial-2.png)
+    :::image type="content" source="../images/tutorial-2.png" alt-text="A worksheet showing the fruit sales data row with the 'Oranges' row highlighted in the color orange and the 'Lemons' row highlighted in the color yellow.":::
 
 ## Create a table
 
@@ -108,7 +108,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 
 3. Run the script. You should see a table like this:
 
-    ![A sorted fruit sales table](../images/tutorial-3.png)
+    :::image type="content" source="../images/tutorial-3.png" alt-text="A worksheet showing the sorted fruit sales table.":::
 
     > [!NOTE]
     > If you re-run the script, you'll get an error. This is because you cannot create a table on top of another table. However, you can run the script on a different worksheet or workbook.

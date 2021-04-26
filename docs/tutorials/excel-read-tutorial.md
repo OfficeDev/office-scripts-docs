@@ -68,7 +68,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by pressing the blue triangle.
 9. Expand the second level of the array by pressing the newly revealed blue triangle. You should now see this:
 
-    ![The console log displaying the the output "-20.05", nested under two arrays](../images/tutorial-4.png)
+    :::image type="content" source="../images/tutorial-4.png" alt-text="The console log displaying the the output '-20.05', nested under two arrays":::
 
 ## Modify the value of a cell
 
@@ -138,7 +138,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     Your banking statement should now look like this:
 
-    ![The banking statement as a formatted table with only positive values](../images/tutorial-5.png)
+    :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values.":::
 
 ## Next steps
 
