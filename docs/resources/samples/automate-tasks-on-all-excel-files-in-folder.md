@@ -1,7 +1,7 @@
 ---
 title: 'Run a script on all Excel files in a folder'
 description: 'Learn how to run a script on all the Excel files in a folder on OneDrive for Business.'
-ms.date: 03/31/2021
+ms.date: 04/02/2021
 localization_priority: Normal
 ---
 
@@ -10,9 +10,11 @@ localization_priority: Normal
 This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business. It could also be used on a SharePoint folder.
 It performs calculations on the Excel files, adds formatting, and inserts a comment that [@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.
 
+Download the file <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!
+
 ## Sample code: Add formatting and insert comment
 
-Download the file <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!
+This is the script that runs on each individual workbook.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -55,6 +57,31 @@ function main(workbook: ExcelScript.Workbook) {
   }, ExcelScript.ContentType.mention);
 }
 ```
+
+## Power Automate flow: Run the script on every workbook in the folder
+
+This flow runs the script on every workbook in the "Sales" folder.
+
+1. Create a new **Instant cloud flow**.
+1. Select **Manually trigger a flow** and press **Create**.
+1. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action.
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
+1. Select the "Sales" folder with the extracted workbooks.
+1. To ensure only workbooks are selected, choose **New step**, then select **Condition** and set the following values:
+    1. **Name** (the OneDrive file name value)
+    1. "ends with"
+    1. "xlsx".
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
+1. Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script (preview)** action. Use the following values for the action:
+    1. **Location**: OneDrive for Business
+    1. **Document Library**: OneDrive
+    1. **File**: **Id** (the OneDrive file ID value)
+    1. **Script**: Your script name
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
+1. Save the flow and try it out.
 
 ## Training video: Run a script on all Excel files in a folder
 
