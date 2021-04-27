@@ -1,7 +1,7 @@
 ---
 title: 'Add comments in Excel'
 description: 'Learn how to use Office Scripts to add comments in a worksheet.'
-ms.date: 03/29/2021
+ms.date: 04/27/2021
 localization_priority: Normal
 ---
 
@@ -67,4 +67,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Training video: Add comments
 
-[![Watch step-by-step video on how to add comments in an Excel file](../../images/comments-vid.jpg)](https://youtu.be/CpR78nkaOFw "Step-by-step video on how to add comments in an Excel file")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/CpR78nkaOFw).

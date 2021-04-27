@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 localization_priority: Normal
 ---
 
@@ -26,7 +26,7 @@ We also welcome [contributions from the community](#community-contributions).
 
 ## Beyond the basics
 
-Check out the following end-to-end project that automates sample scenarios along with full scripts, sample Excel files used, and [videos](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0).
+Check out the following end-to-end project that automates sample scenarios along with full scripts, sample Excel files used, and [videos (hosted on YouTube)](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0).
 
 | Project | Details |
 |---------|---------|
