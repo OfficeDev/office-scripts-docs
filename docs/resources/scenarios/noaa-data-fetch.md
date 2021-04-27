@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
-ms.date: 01/11/2021
+ms.date: 04/26/2021
 localization_priority: Normal
 ---
 
@@ -49,11 +49,13 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
     
       // Resolve the Promises returned by the fetch operation.
       const response = await fetch(strQuery);
-      const rawJson = await response.json();
+      const rawJson: string = await response.json();
     
       // Translate the raw JSON into a usable state.
       const stringifiedJson = JSON.stringify(rawJson);
-      const noaaData = JSON.parse(stringifiedJson);
+    
+      // Note that we're only taking the data part of the JSON and excluding the metadata.
+      const noaaData: NOAAData[] = JSON.parse(stringifiedJson).data;
     
       // Create table headers and format them to stand out.
       let headers = [["Time", "Level"]];
@@ -63,21 +65,21 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
       headerRange.getFormat().getFont().setColor("white");
     
       // Insert all the data in rows from JSON.
-      let noaaDataCount = noaaData.data.length;
+      let noaaDataCount = noaaData.length;
       let dataToEnter = [[], []]
       for (let i = 0; i < noaaDataCount; i++) {
-        let currentDataPiece = noaaData.data[i];
+        let currentDataPiece = noaaData[i];
         dataToEnter[i] = [currentDataPiece.t, currentDataPiece.v];
       }
     
       let dataRange = currentSheet.getRange("A2:B" + String(noaaDataCount + 1)); /* +1 to account for the title row */
       dataRange.setValues(dataToEnter);
-      
+    
       // Format the "Time" column for timestamps.
       dataRange.getColumn(0).setNumberFormatLocal("[$-en-US]mm/dd/yyyy hh:mm AM/PM;@");
     
       // Create and format a chart with the level data.
-      let chart = currentSheet.addChart(ExcelScript.ChartType.xyscatterSmooth,dataRange);
+      let chart = currentSheet.addChart(ExcelScript.ChartType.xyscatterSmooth, dataRange);
       chart.getTitle().setText("Water Level - Seattle");
       chart.setTop(0);
       chart.setLeft(300);
@@ -86,12 +88,21 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
       chart.getAxes().getValueAxis().setShowDisplayUnitLabel(false);
       chart.getAxes().getCategoryAxis().setTextOrientation(60);
       chart.getLegend().setVisible(false);
-
+    
       // Add a comment with the data attribution.
       currentSheet.addComment(
-        "A1", 
+        "A1",
         `This data was taken from the National Oceanic and Atmospheric Administration's Tides and Currents database on ${new Date(Date.now())}.`
       );
+    
+      /**
+       * An interface to wrap the parts of the JSON we need.
+       * These properties must match the names used in the JSON.
+       */ 
+      interface NOAAData {
+        t: string; // Time
+        v: number; // Level
+      }
     }
     ```
 
