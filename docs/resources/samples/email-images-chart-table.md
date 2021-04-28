@@ -1,7 +1,7 @@
 ---
 title: 'Email the images of an Excel chart and table'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -121,4 +121,4 @@ This flow runs the script and emails the returned images.
 
 ## Training video: Extract and email images of chart and table
 
-[![Watch step-by-step video on how to extract and email images of chart and table](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email images of chart and table")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/152GJyqc-Kw).

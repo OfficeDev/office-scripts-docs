@@ -1,7 +1,7 @@
 ---
 title: 'Seasons greetings'
 description: 'Learn how to use Office Scripts to show a singing tree in Excel on the web.'
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -11,7 +11,7 @@ This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesbla
 
 Enjoy!
 
-[![Watch the Seasons greetings script in action](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "Seasons greetings script in action!")
+[Watch the Seasons Greetings script in action on the "Les's IT Blog" YouTube channel](https://youtu.be/HBiGEkzmkgo).
 
 ## Script
 

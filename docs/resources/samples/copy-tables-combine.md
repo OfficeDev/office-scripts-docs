@@ -1,7 +1,7 @@
 ---
 title: 'Combine data from multiple Excel tables into a single table'
 description: 'Learn how to use Office Scripts to combine data from multiple Excel tables into a single table.'
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -83,4 +83,4 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 
 ## Training video: Combine data from multiple Excel tables into a single table
 
-[![Watch step-by-step video on how to combine data from multiple Excel tables into a single table](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "Step-by-step video on how to combine data from multiple Excel tables into a single table")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/di-8JukK3Lc).

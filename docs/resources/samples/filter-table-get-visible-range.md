@@ -1,7 +1,7 @@
 ---
 title: 'Filter Excel table and get visible range'
 description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
-ms.date: 03/16/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -117,4 +117,4 @@ Each key represents a unique value of a table. Each array instance represents th
 
 ## Training video: Filter an Excel table and get the visible range
 
-[![Watch step-by-step video on how to filter an Excel table and get the visible range](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "Step-by-step video on how to filter an Excel table and get the visible range")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/Mv7BrvPq84A).

@@ -1,7 +1,7 @@
 ---
 title: 'Use macro files in Power Automate flows'
 description: 'Learn how to use macro files or xlsm files in Power Automate flows.'
-ms.date: 03/18/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -20,4 +20,6 @@ One way to get around this issue is by including the "Get File Metadata" action 
 > [!NOTE]
 > Some XLSM (especially the ones with ActiveX/Form controls) may not work in the Excel online connector. Be sure to test before deploying your solution.
 
-[![Watch video about using XLSM in Run Script action](../images/xlsm-vid.png)](https://youtu.be/o-H9BbywJQQ "Video about using XLSM in Run Script action")
+## Other resources
+
+[Watch Sudhi Ramamurthy's YouTube video on how use an .xlsm file in a Run Script action](https://youtu.be/o-H9BbywJQQ).

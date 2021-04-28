@@ -1,7 +1,7 @@
 ---
 title: 'Run a script on all Excel files in a folder'
 description: 'Learn how to run a script on all the Excel files in a folder on OneDrive for Business.'
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -85,4 +85,4 @@ This flow runs the script on every workbook in the "Sales" folder.
 
 ## Training video: Run a script on all Excel files in a folder
 
-[Watch step-by-step video](https://youtu.be/xMg711o7k6w) on how to run a script on all Excel files in a OneDrive for Business or SharePoint folder.
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/xMg711o7k6w).

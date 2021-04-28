@@ -1,7 +1,7 @@
 ---
 title: 'Range basics in Office Scripts'
 description: 'Learn basics about using the Range object in Office Scripts.'
-ms.date: 04/01/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -172,13 +172,10 @@ const DATA = [
 
 ## Training videos: Range basics
 
-_Range basics_
+Watch Sudhi Ramamurthy go through these Range samples on YouTube.
 
-[![Watch step-by-step video on Range basics](../../images/rangebasics-vid.png)](https://youtu.be/4emjkOFdLBA "Step-by-step video on Range basics")
-
-_Add row at the end of worksheet_
-
-[![Watch step-by-step video on how to add a row at the end of a worksheet](../../images/rangebasics-addrow-vid.png)](https://youtu.be/RgtUar013D0 "Step-by-step video on how to add a row at the end of a worksheet")
+* "[Range basics](https://youtu.be/4emjkOFdLBA)".
+* "[Add row at end of worksheet](https://youtu.be/RgtUar013D0)".
 
 ## Methods that return some range metadata
 

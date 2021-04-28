@@ -1,7 +1,7 @@
 ---
 title: 'Cross-reference and format an Excel file'
 description: 'Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.'
-ms.date: 03/18/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -122,4 +122,4 @@ capacity: number
 
 ## Training video: Cross-reference and format an Excel file
 
-[![Watch step-by-step video on how to cross-reference and format an Excel file](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Step-by-step video on how to cross-reference and format an Excel file")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/dVwqBf483qo").
