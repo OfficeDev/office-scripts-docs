@@ -58,7 +58,3 @@ function main(workbook: ExcelScript.Workbook) {
     col.getFilter().clear();
 }
 ```
-
-## Training video: Clear table column filter based on active cell location
-
-For an example of how to work with ranges, see [Range basics training videos](range-basics.md#training-videos-range-basics).

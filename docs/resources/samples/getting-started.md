@@ -771,10 +771,6 @@ function updateTargetRange(
 
 *Warning*: Using `try..catch` inside of a loop will slow down your script. Avoid using this inside of or around loops.
 
-## Range basics
-
-Check out [Range Basics](range-basics.md) before you go further on your journey.
-
 ## Basic performance considerations
 
 ### Avoid slow operations in the loop
