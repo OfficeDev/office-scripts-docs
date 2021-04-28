@@ -10,7 +10,7 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "docs/resources/samples/excel-samples.md",
+        "source_path": "docs/resources/excel-samples.md",
         "redirect_url": "/office/dev/scripts/resources/samples/excel-samples.md",
         "redirect_document_id": true
       }
