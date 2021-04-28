@@ -1,7 +1,7 @@
 ---
 title: 'Basic scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 04/01/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -413,4 +413,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Suggest new samples
 
-We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section below.
+We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.
+
+## See also
+
+* [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
+* [Office Scripts samples and scenarios](samples-overview.md)
+* [Record, edit, and create Office Scripts in Excel on the web](../../tutorials/excel-tutorial.md)

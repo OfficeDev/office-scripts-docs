@@ -57,11 +57,7 @@ items:
     - name: Overview
       href: resources/samples/samples-overview.md
     - name: Basics
-      items:
-      - name: Scripting basics
-        href: resources/excel-samples.md
-      - name: Range basics
-        href: resources/samples/range-basics.md
+      href: resources/samples/excel-samples.md
     - name: Beyond the basics
       items:
       - name: Add comments

@@ -8,6 +8,11 @@
         "source_path": "docs/resources/scenarios/sample-scenario-overview.md",
         "redirect_url": "/office/dev/scripts/resources/samples/samples-overview",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/resources/samples/excel-samples.md",
+        "redirect_url": "/office/dev/scripts/resources/samples/excel-samples.md",
+        "redirect_document_id": true
       }
     ] 
 }

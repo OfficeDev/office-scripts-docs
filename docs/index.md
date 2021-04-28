@@ -92,11 +92,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="resources/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
+                            <a href="resources/samples/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-samples.md" target="_blank"><h3>Sample scripts</h3></a>
+                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>Sample scripts</h3></a>
                     </div>
                 </div>
             </div>
