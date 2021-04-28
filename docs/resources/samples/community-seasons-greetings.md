@@ -11,7 +11,7 @@ This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesbla
 
 Enjoy!
 
-[Watch the Seasons Greetings script in action on the "Les's IT Blog" YouTube channel](https://youtu.be/HBiGEkzmkgo).
+[Watch the Seasons greetings script in action on the "Les's IT Blog" YouTube channel](https://youtu.be/HBiGEkzmkgo).
 
 ## Script
 
