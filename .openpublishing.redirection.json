@@ -11,8 +11,7 @@
       },
       {
         "source_path": "docs/resources/excel-samples.md",
-        "redirect_url": "/office/dev/scripts/resources/samples/excel-samples.md",
-        "redirect_document_id": true
+        "redirect_url": "/office/dev/scripts/resources/samples/excel-samples"
       }
     ] 
 }
