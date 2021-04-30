@@ -212,10 +212,10 @@ Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloa
 
 ### Before running the script
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="A worksheet that shows raw web traffic data.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="A worksheet that shows raw web traffic data":::
 
 ### After running the script
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="A worksheet that shows formatted IP location information with the previous web traffic rows.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="A worksheet that shows formatted IP location information with the previous web traffic rows":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="The summary table and chart that summarizes the worksheets on which the script has been run.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="The summary table and chart that summarizes the worksheets on which the script has been run":::

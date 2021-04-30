@@ -15,21 +15,21 @@ There are two versions of the sample for this scenario.
 
     _Before the new row is added_
 
-    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="A worksheet showing a range of data before row is added.":::
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="A worksheet showing a range of data before row is added":::
 
     _After the new row is added_
 
-    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="A worksheet showing a range of data after row is added.":::
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="A worksheet showing a range of data after row is added":::
 
 * [Version 2: Read and add a row to a table](#sample-code-generate-key-and-add-row-to-table)
 
     _Before the new row is added_
 
-    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="A worksheet showing a table before a row is added.":::
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="A worksheet showing a table before a row is added":::
 
     _After the new row is added_
 
-    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="A worksheet showing a table after a row is added.":::
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="A worksheet showing a table after a row is added":::
 
 ## Sample Excel file
 

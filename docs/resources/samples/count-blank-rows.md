@@ -17,11 +17,11 @@ This project includes two scripts:
 
 _This sheet returns count of 4 blank rows_
 
-:::image type="content" source="../../images/blank-rows.png" alt-text="A worksheet showing data with blank rows.":::
+:::image type="content" source="../../images/blank-rows.png" alt-text="A worksheet showing data with blank rows":::
 
 _This sheet returns count of 0 blank rows (all rows have some data)_
 
-:::image type="content" source="../../images/no-blank-rows.png" alt-text="A worksheet showing data without blank rows.":::
+:::image type="content" source="../../images/no-blank-rows.png" alt-text="A worksheet showing data without blank rows":::
 
 ## Sample code: Count blank rows on a given sheet
 
@@ -87,4 +87,4 @@ function main(workbook: ExcelScript.Workbook): number
 
 ## Use with Power Automate
 
-:::image type="content" source="../../images/use-in-power-automate.png" alt-text="A Power Automate flow showing how to set up to run an Office Script.":::
+:::image type="content" source="../../images/use-in-power-automate.png" alt-text="A Power Automate flow showing how to set up to run an Office Script":::

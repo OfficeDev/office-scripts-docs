@@ -37,7 +37,7 @@ Because your script and workbook run in different locations, any data transfer b
 
 The following image shows an example control flow between the script and workbook:
 
-:::image type="content" source="../images/load-sync.png" alt-text="A diagram showing read and write operations going to the workbook from the script.":::
+:::image type="content" source="../images/load-sync.png" alt-text="A diagram showing read and write operations going to the workbook from the script":::
 
 ### Sync
 

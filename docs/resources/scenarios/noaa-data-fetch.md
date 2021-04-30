@@ -114,4 +114,4 @@ On any worksheet, run the **NOAA Water Level Chart** script. The script fetches 
 
 ### After running the script
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="The worksheet after running the script shows some water level data and a chart.":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="The worksheet after running the script shows some water level data and a chart":::

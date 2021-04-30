@@ -138,7 +138,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     Your banking statement should now look like this:
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values.":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values":::
 
 ## Next steps
 

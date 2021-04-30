@@ -31,7 +31,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     > [!IMPORTANT]
     > The script you'll write uses the first matching entry in the table, so make sure your name is above any row with the current week.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="A worksheet containing the on-call rotation table data.":::
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="A worksheet containing the on-call rotation table data":::
 
 ## Create an Office Script
 
@@ -137,7 +137,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     - **Repeat every**: 1 Week
     - **On these days**: M
 
-    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="The Power Automate 'Build a scheduled cloud flow' dialog showing options. The options include flow name, time to start, how often to repeat, and one which day of the week to run the flow.":::
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="The Power Automate 'Build a scheduled cloud flow' dialog showing options. The options include flow name, time to start, how often to repeat, and one which day of the week to run the flow":::
 
 1. Press **Create**.
 
@@ -158,13 +158,13 @@ This tutorial teaches you how to return information from an Office Script for Ex
     - **File**: on-call-rotation.xlsx *(Chosen through the file browser)*
     - **Script**: Get On-Call Person
 
-    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script.":::
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script":::
 
 1. Press **New step**.
 
 1. We'll end the flow by sending the reminder email. Select **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options.":::
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options":::
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
