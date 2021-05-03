@@ -1,7 +1,7 @@
 ---
 title: 'Clear table column filter based on active cell location'
 description: 'Learn how to clear table column filter based on active cell location.'
-ms.date: 03/04/2021
+ms.date: 05/03/2021
 localization_priority: Normal
 ---
 
@@ -25,36 +25,37 @@ The following script clears the table column filter based on active cell locatio
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-    // Get active cell.
+    // Get the active cell.
     const cell = workbook.getActiveCell();
 
     // Get all tables associated with that cell.
     const tables = cell.getTables();
     
-    // If there is no table on the selection, return/exit.
+    // If there is no table on the selection, end the script.
     if (tables.length !== 1) {
       console.log("The selection is not in a table.");
       return;
     }
 
-    // Get table (since it is already determined that there is only
-    // a single table part of the selection).
+    // Get the first table associated with the active cell.
     const currentTable = tables[0];
 
+    // Log some information about the  table.
     console.log(currentTable.getName());
     console.log(currentTable.getRange().getAddress());
 
-    const entireCol = cell.getEntireColumn();
-    const intersect = entireCol.getIntersection(currentTable.getRange());
+    // Get the table header above the current cell by referencing its column.
+    const entireColumn = cell.getEntireColumn();
+    const intersect = entireColumn.getIntersection(currentTable.getRange());
     console.log(intersect.getAddress());
 
     const headerCellValue = intersect.getCell(0,0).getValue() as string;
     console.log(headerCellValue);
 
-    // Get column.
-    const col = currentTable.getColumnByName(headerCellValue);
+    // Get the TableColumn object matching that header.
+    const tableColumn = currentTable.getColumnByName(headerCellValue);
 
-    // Clear filter.
-    col.getFilter().clear();
+    // Clear the filter on that table column.
+    tableColumn.getFilter().clear();
 }
 ```
