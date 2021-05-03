@@ -19,7 +19,7 @@ You cannot explicitly declare a variable to be of type `any` in Office Scripts (
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit 'any' message in the code editor's hover text":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Explicit Any error in the console window.":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Explicit Any error in the console window":::
 
 In the previous screenshot `[5, 16] Explicit Any is not allowed` indicates that line #5, column #16 defines `any` type. This helps you locate the error.
 

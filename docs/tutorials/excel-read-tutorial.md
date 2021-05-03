@@ -138,10 +138,10 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
     Your banking statement should now look like this:
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values.":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values":::
 
 ## Next steps
 
-Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel on the web](../resources/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
+Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel on the web](../resources/samples/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
 
 The next series of Office Scripts tutorials focus on using Office Scripts with Power Automate. Learn more about the advantages combining the two platforms in [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) or try the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial to create a Power Automate flow that uses an Office Script.

@@ -1,7 +1,7 @@
 ---
 title: 'Basic scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 04/01/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -291,7 +291,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 
-:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -319,7 +319,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
 
-:::image type="content" source="../images/sample-data-validation.png" alt-text="A worksheet showing a range of three cells containing color choices 'red, blue, green' and next to it, the same choices shown in a drop-down list.":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="A worksheet showing a range of three cells containing color choices 'red, blue, green' and next to it, the same choices shown in a drop-down list":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -413,4 +413,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Suggest new samples
 
-We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section below.
+We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.
+
+## See also
+
+* [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
+* [Office Scripts samples and scenarios](samples-overview.md)
+* [Record, edit, and create Office Scripts in Excel on the web](../../tutorials/excel-tutorial.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Analyze web downloads'
 description: 'A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.'
-ms.date: 12/17/2020
+ms.date: 04/27/2021
 localization_priority: Normal
 ---
 
@@ -19,15 +19,6 @@ You'll develop a script that analyzes weekly downloads data in the active worksh
 - Subfunctions in scripts
 - Conditional formatting
 - Tables
-
-## Demo video
-
-This sample was demoed as part of the Office Add-ins developer community call for February 2020.
-
-> [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
-
-> [!NOTE]
-> The code shown in this video uses an older API model (the [Office Scripts Async APIs](../../develop/excel-async-model.md)). The sample presented on this page has been updated, but the code looks a little different from the recording. The changes don't affect the behavior of the script or the other content in the presenter's demo.
 
 ## Setup instructions
 
@@ -221,10 +212,10 @@ Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloa
 
 ### Before running the script
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="A worksheet that shows raw web traffic data.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="A worksheet that shows raw web traffic data":::
 
 ### After running the script
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="A worksheet that shows formatted IP location information with the previous web traffic rows.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="A worksheet that shows formatted IP location information with the previous web traffic rows":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="The summary table and chart that summarizes the worksheets on which the script has been run.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="The summary table and chart that summarizes the worksheets on which the script has been run":::

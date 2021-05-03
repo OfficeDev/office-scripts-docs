@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables using Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -244,4 +244,4 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 
 ## Training video: Move rows across tables
 
-[![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/_3t3Pk4i2L0).

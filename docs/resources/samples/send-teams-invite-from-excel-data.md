@@ -1,7 +1,7 @@
 ---
 title: 'Send a Teams meeting from Excel data'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -225,4 +225,4 @@ interface InterviewInvite  {
 
 ## Training video: Send a Teams meeting from Excel data
 
-[![Watch step-by-step video on how to send a Teams meeting from Excel data](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Step-by-step video on how to send a Teams meeting from Excel data")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/HyBdx52NOE8).

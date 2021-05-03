@@ -102,7 +102,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The [Work with dates](../resources/excel-samples.md#dates) section of the samples has more date-related scripts.
+The [Work with dates](../resources/samples/excel-samples.md#dates) section of the samples has more date-related scripts.
 
 ## Math
 

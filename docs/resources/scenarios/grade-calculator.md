@@ -177,8 +177,8 @@ Run the **Grade Calculator** script on the only worksheet. The script will total
 
 ### Before running the script
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="A worksheet that shows rows of scores for students.":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="A worksheet that shows rows of scores for students":::
 
 ### After running the script
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="A worksheet that shows the student score data with invalid cells in red totals for valid student rows.":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="A worksheet that shows the student score data with invalid cells in red totals for valid student rows":::

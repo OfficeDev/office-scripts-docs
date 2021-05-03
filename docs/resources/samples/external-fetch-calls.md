@@ -1,7 +1,7 @@
 ---
 title: 'Use external fetch calls in Office Scripts'
 description: 'Learn how to make external API calls in Office Scripts.'
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -46,4 +46,4 @@ interface License {
 
 ## Training video: How to make external API calls
 
-[![Watch video on how to make external API calls](../../images/api-vid.png)](https://youtu.be/fulP29J418E "Video on how to make external API calls")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/fulP29J418E).
