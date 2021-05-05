@@ -1,7 +1,7 @@
 ---
 title: 'Manage calculation mode in Excel'
 description: 'Learn how to use Office Scripts to manage the calculation mode in Excel on the web.'
-ms.date: 03/18/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -33,4 +33,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Training video: Manage calculation mode
 
-[![Watch step-by-step video on how to manage calculation mode in Excel on the web](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Step-by-step video on how to manage calculation mode in Excel on the web")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/iw6O8QH01CI).

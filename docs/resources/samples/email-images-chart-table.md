@@ -1,7 +1,7 @@
 ---
 title: 'Email the images of an Excel chart and table'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -18,15 +18,15 @@ This sample uses Office Scripts and Power Automate to create a chart. It then em
 
 _Input data_
 
-:::image type="content" source="../../images/input-data.png" alt-text="A worksheet showing a table of input data.":::
+:::image type="content" source="../../images/input-data.png" alt-text="A worksheet showing a table of input data":::
 
 _Output chart_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="The column chart created showing amount due by customer.":::
+:::image type="content" source="../../images/chart-created.png" alt-text="The column chart created showing amount due by customer":::
 
 _Email that was received through Power Automate flow_
 
-:::image type="content" source="../../images/email-received.png" alt-text="The email sent by the flow showing the Excel chart embedded in the body.":::
+:::image type="content" source="../../images/email-received.png" alt-text="The email sent by the flow showing the Excel chart embedded in the body":::
 
 ## Solution
 
@@ -96,7 +96,7 @@ This flow runs the script and emails the returned images.
     * **File**: Your workbook ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
     * **Script**: Your script name
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="The completed Excel Online (Business) connector in Power Automate":::
 1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action:
     * **To**: Your test email account (or personal email)
     * **Subject**: Please Review Report Data
@@ -116,9 +116,9 @@ This flow runs the script and emails the returned images.
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="The completed Office 365 Outlook connector in Power Automate":::
 1. Save the flow and try it out.
 
 ## Training video: Extract and email images of chart and table
 
-[![Watch step-by-step video on how to extract and email images of chart and table](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Step-by-step video on how to extract and email images of chart and table")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/152GJyqc-Kw).

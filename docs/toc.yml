@@ -59,15 +59,13 @@ items:
     - name: Basics
       items:
       - name: Scripting basics
-        href: resources/excel-samples.md
-      - name: Range basics
-        href: resources/samples/range-basics.md
-    - name: Beyond the basics
-      items:
+        href: resources/samples/excel-samples.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
+    - name: Beyond the basics
+      items:
       - name: Count blank rows in worksheets
         href: resources/samples/count-blank-rows.md
       - name: Cross-reference and format Excel files

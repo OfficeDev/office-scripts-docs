@@ -1,7 +1,7 @@
 ---
 title: 'Performance optimization when writing a large dataset'
 description: 'Learn how to optimize performance when writing a large dataset in Office Scripts.'
-ms.date: 03/04/2021
+ms.date: 04/28/2021
 localization_priority: Normal
 ---
 
@@ -148,4 +148,4 @@ function getRandomString(length: number): string {
 
 ## Training video: Optimize performance when writing a large dataset
 
-[![Watch video on how to optimize performance when writing a large dataset](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "Video on how to optimize performance when writing a large dataset")
+[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).
