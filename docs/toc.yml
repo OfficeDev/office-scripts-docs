@@ -70,8 +70,6 @@ items:
         href: resources/samples/count-blank-rows.md
       - name: Cross-reference and format Excel files
         href: resources/samples/excel-cross-reference.md
-      - name: Document number generator
-        href: resources/samples/document-number-generator.md
       - name: Email images of chart and table
         href: resources/samples/email-images-chart-table.md
       - name: Filter table and get visible range

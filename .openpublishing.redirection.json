@@ -16,6 +16,10 @@
       {
         "source_path": "docs/resources/samples/range-basics.md",
         "redirect_url": "/office/dev/scripts/resources/samples/excel-samples"
+      },
+      {
+        "source_path": "docs/resources/samples/document-number-generator.md",
+        "redirect_url": "/office/dev/scripts/resources/samples/samples-overview"
       }
     ] 
 }
