@@ -36,8 +36,6 @@ function main(workbook: ExcelScript.Workbook) {
   if (!updated) {
     console.log(`Update did not take place or complete. Check and run again.`)
   }
-
-  return;
 }
 
 function updateRangeInChunks(

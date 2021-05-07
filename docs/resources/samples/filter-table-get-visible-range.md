@@ -1,7 +1,7 @@
 ---
 title: 'Filter Excel table and get visible range'
 description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
-ms.date: 04/28/2021
+ms.date: 05/06/2021
 localization_priority: Normal
 ---
 
@@ -23,47 +23,63 @@ Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and u
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
+  // Get the "Station" column to use a key values in the filter.
   const table1 = workbook.getTable("Table1");
-  const keyColumnValues: string [] = table1.getColumnByName('Station').getRangeBetweenHeaderAndTotal().getValues().map(v => v[0] as string);
-  const uniqueKeys = keyColumnValues.filter((v, i, a) => a.indexOf(v) === i);
+  const keyColumnValues: string [] = table1.getColumnByName('Station').getRangeBetweenHeaderAndTotal().getValues().map(value => value[0] as string);
 
+  // Filter out repeated keys. This call to `filter` only returns the first instance of every unique element in the array.
+  const uniqueKeys = keyColumnValues.filter((value, index, array) => array.indexOf(value) === index);
   console.log(uniqueKeys);
-  const returnObj: ReturnTemplate = {}
 
+  const stationData: ReturnTemplate = {};
+
+  // Filter the table to show only rows corresponding to each key.
   uniqueKeys.forEach((key: string) => {
     table1.getColumnByName('Station').getFilter()
       .applyValuesFilter([key]);
+    
+    // Get the visible when a single filter is active.
     const rangeView = table1.getRange().getVisibleView();
-    returnObj[key] = returnObjectFromValues(rangeView.getValues() as string[][]);
-  })
+
+    // Create a JSON object with every visible row.
+    stationData[key] = returnObjectFromValues(rangeView.getValues() as string[][]);
+  });
+
+  // Remove the filters.
   table1.getColumnByName('Station').getFilter().clear();
-  console.log(JSON.stringify(returnObj));
-  return returnObj
+
+  // Log the information and return it for a Power Automate flow.
+  console.log(JSON.stringify(stationData));
+  return stationData;
 }
 
-function returnObjectFromValues(values: string[][]): BasicObj[] {
-  let objArray = [];
-  let objKeys: string[] = [];
-  for (let i=0; i < values.length; i++) {
-    if (i===0) {
-      objKeys = values[i]
+// This function converts a 2D-array of values into a generic JSON object.
+function returnObjectFromValues(values: string[][]): BasicObject[] {
+  let objectArray = [];
+  let objectKeys: string[] = [];
+  for (let i = 0; i < values.length; i++) {
+    if (i === 0) {
+      objectKeys = values[i]
       continue;
     }
-    let obj = {}
-    for (let j=0; j < values[i].length; j++) {
-      obj[objKeys[j]] = values[i][j]
+
+    let object = {}
+    for (let j = 0; j < values[i].length; j++) {
+      object[objectKeys[j]] = values[i][j]
     }
-    objArray.push(obj);
+
+    objectArray.push(object);
   }
-  return objArray;
+
+  return objectArray;
 }
 
-interface BasicObj {
+interface BasicObject {
   [key: string] : string
 }
 
 interface ReturnTemplate {
-  [key: string]: BasicObj[]
+  [key: string]: BasicObject[]
 }
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: 'Email the images of an Excel chart and table'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
-ms.date: 04/28/2021
+ms.date: 05/06/2021
 localization_priority: Normal
 ---
 
@@ -43,13 +43,15 @@ Download the sample file <a href="email-chart-table.xlsx">email-chart-table.xlsx
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
-
+  // Recalculate the workbook to ensure all tables and charts are updated.
   workbook.getApplication().calculate(ExcelScript.CalculationType.full);
   
+  // Get the data from the "InvoiceAmounts" table.
   let sheet1 = workbook.getWorksheet("Sheet1");
   const table = workbook.getWorksheet('InvoiceAmounts').getTables()[0];
   const rows = table.getRange().getTexts();
 
+  // Get only the "Customer Name" and "Amount due" columns, then remove the "Total" row.
   const selectColumns = rows.map((row) => {
     return [row[2], row[5]];
   });
@@ -57,27 +59,25 @@ function main(workbook: ExcelScript.Workbook): ReportImages {
   selectColumns.splice(selectColumns.length-1, 1);
   console.log(selectColumns);
 
+  // Delete the "ChartSheet" worksheet if it's present, then recreate it.
   workbook.getWorksheet('ChartSheet')?.delete();
   const chartSheet = workbook.addWorksheet('ChartSheet');
-  const targetRange = updateRange(chartSheet, selectColumns);
 
-  // Insert chart on sheet 'Sheet1'.
+  // Add the selected data to the new worksheet.
+  const targetRange = chartSheet.getRange('A1').getResizedRange(selectColumns.length-1, selectColumns[0].length-1);
+  targetRange.setValues(selectColumns);
+
+  // Insert the chart on sheet 'ChartSheet' at cell "D1".
   let chart_2 = chartSheet.addChart(ExcelScript.ChartType.columnClustered, targetRange);
   chart_2.setPosition('D1');
+
+  // Get images of the chart and table, then return them for a Power Automate flow.
   const chartImage = chart_2.getImage();
   const tableImage = table.getRange().getImage();
-  return {
-    chartImage,
-    tableImage
-  }
+  return {chartImage, tableImage};
 }
 
-function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScript.Range {
-  const targetRange = sheet.getRange('A1').getResizedRange(data.length-1, data[0].length-1);
-  targetRange.setValues(data);
-  return targetRange;
-}
-
+// The interface for table and chart images.
 interface ReportImages {
   chartImage: string
   tableImage: string
