@@ -1,7 +1,7 @@
 ---
 title: 'Output Excel data as JSON'
 description: 'Learn how to output Excel table data as JSON to use in Power Automate.'
-ms.date: 03/18/2021
+ms.date: 05/06/2021
 localization_priority: Normal
 ---
 
@@ -34,37 +34,44 @@ Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hype
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
+  // Get the first table in the "PlainTable" worksheet.
+  // If you know the table name, use `workbook.getTable('TableName')` instead.
   const table = workbook.getWorksheet('PlainTable').getTables()[0];
-  // If you know the table name, you can also do the following:
-  // const table = workbook.getTable('Table13436');
+
+  // Get all the values from the table as text.
   const texts = table.getRange().getTexts();
+
+  // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
   if (table.getRowCount() > 0)  {
     returnObjects = returnObjectFromValues(texts);
-  } 
+  }
+
+  // Log the information and return it for a Power Automate flow.
   console.log(JSON.stringify(returnObjects));  
   return returnObjects
 }
 
+// This function converts a 2D-array of values into a generic JSON object.
+// In this case, we have defined the TableData object, but any similar interface would work.
 function returnObjectFromValues(values: string[][]): TableData[] {
-  let objArray = [];
-  let objKeys: string[] = [];
+  let objectArray = [];
+  let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
-      objKeys = values[i]
+      objectKeys = values[i]
       continue;
     }
-    let obj = {}
-    for (let j = 0; j < values[i].length; j++) {
-      obj[objKeys[j]] = values[i][j]
-    }
-    objArray.push(obj);
-  }
-  return objArray as TableData[];
-}
 
-interface BasicObj {
-  [key: string]: string
+    let object = {}
+    for (let j = 0; j < values[i].length; j++) {
+      object[objectKeys[j]] = values[i][j]
+    }
+
+    objectArray.push(object);
+  }
+
+  return objectArray as TableData[];
 }
 
 interface TableData {
@@ -76,7 +83,7 @@ interface TableData {
 }
 ```
 
-### Sample output
+### Sample output from the "PlainTable" worksheet
 
 ```json
 [{
@@ -137,43 +144,47 @@ interface TableData {
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
+  // Get the first table in the "WithHyperLink" worksheet.
+  // If you know the table name, use `workbook.getTable('TableName')` instead.
   const table = workbook.getWorksheet('WithHyperLink').getTables()[0];
+
+  // Get all the values from the table as text.
   const range = table.getRange();
-  // If you know the table name, you can also do the following:
-  // const table = workbook.getTable('Table13436');
-  const texts = table.getRange().getTexts();
+
+  // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
   if (table.getRowCount() > 0)  {
-    returnObjects = returnObjectFromValues(texts, range);
-  } 
+    returnObjects = returnObjectFromValues(range);
+  }
+
+  // Log the information and return it for a Power Automate flow.
   console.log(JSON.stringify(returnObjects));  
   return returnObjects
 }
 
-function returnObjectFromValues(values: string[][], range: ExcelScript.Range): TableData[] {
-  let objArray = [];
-  let objKeys: string[] = [];
+function returnObjectFromValues(range: ExcelScript.Range): TableData[] {
+  let values = range.getTexts();
+  let objectArray = [];
+  let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
-      objKeys = values[i]
+      objectKeys = values[i]
       continue;
     }
-    let obj = {}
+
+    let object = {}
     for (let j = 0; j < values[i].length; j++) {
       // For the 4th column (0 index), extract the hyperlink and use that instead of text. 
       if (j === 4) {
-        obj[objKeys[j]] = range.getCell(i, j).getHyperlink().address;
+        object[objectKeys[j]] = range.getCell(i, j).getHyperlink().address;
       } else {
-        obj[objKeys[j]] = values[i][j];
+        object[objectKeys[j]] = values[i][j];
       }
     }
-    objArray.push(obj);
-  }
-  return objArray as TableData[];
-}
 
-interface BasicObj {
-  [key: string]: string
+    objectArray.push(object);
+  }
+  return objectArray as TableData[];
 }
 
 interface TableData {
@@ -186,7 +197,7 @@ interface TableData {
 }
 ```
 
-### Sample output
+### Sample output from the "WithHyperLink" worksheet
 
 ```json
 [{

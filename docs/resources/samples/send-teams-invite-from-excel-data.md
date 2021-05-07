@@ -1,7 +1,7 @@
 ---
 title: 'Send a Teams meeting from Excel data'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
-ms.date: 04/28/2021
+ms.date: 05/06/2021
 localization_priority: Normal
 ---
 
@@ -34,50 +34,49 @@ Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this s
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
-  console.log("Current date time: " + new Date().toUTCString())
+  console.log("Current date time: " + new Date().toUTCString());
   const MEETING_DURATION = workbook.getNamedItem('MeetingDuration').getRange().getValue() as number;
+
+  // Get the interview candidate information.
   const sheet = workbook.getWorksheet('Interviews');
   const table = sheet.getTables()[0];
-  const dataRows: string[][] = table.getRange().getTexts();
-  // OR use the following statement if there's no table:
-  // let dataRows = sheet.getUsedRange().getValues();
-  const selectedRows = dataRows.filter((row, i) => {
-    // Select header row and any data row with the status column equal to approach value.
-    return (row[1] === 'FALSE' || i === 0)
-  })
-  const recordDetails: RecordDetail[] = returnObjectFromValues(selectedRows as string[][]);
+  const dataRows: string[][] = table.getRangeBetweenHeaderAndTotal().getTexts();
+
+  // Convert the table rows into InterviewInvite objects for the flow.
+  const recordDetails: RecordDetail[] = returnObjectFromValues(dataRows);
   const inviteRecords = generateInterviewRecords(recordDetails, MEETING_DURATION);
   console.log(JSON.stringify(inviteRecords));
   return inviteRecords;
 }
 
 /**
- * This helper function converts table values into an object array.
+ * Converts table values into a RecordDetail array.
  */
 function returnObjectFromValues(values: string[][]): RecordDetail[] {
-  let objArray: BasicObj[] = [];
-  let objKeys: string[] = [];
+  let objectArray: BasicObj[] = [];
+  let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
-      objKeys = values[i]
+      objectKeys = values[i]
       continue;
     }
-    let obj = {}
+
+    let object = {}
     for (let j = 0; j < values[i].length; j++) {
-      obj[objKeys[j]] = values[i][j]
+      object[objectKeys[j]] = values[i][j]
     }
-    objArray.push(obj);
+    objectArray.push(object);
   }
-  return objArray as RecordDetail[];
+  return objectArray as RecordDetail[];
 }
 
 /**
  * Generate interview records by selecting required columns.
- * @param records Input records
- * @param mins Number of minutes to add to the start date-time
+ * @param records Input records from the table of interviews.
+ * @param mins Number of minutes to add to the start date-time.
  */
 function generateInterviewRecords(records: RecordDetail[], mins: number): InterviewInvite[] {
-  const interviewInvites: InterviewInvite[] = []
+  const interviewInvites: InterviewInvite[] = [];
 
   records.forEach((record) => {
     // Interviewer 1
@@ -96,9 +95,9 @@ function generateInterviewRecords(records: RecordDetail[], mins: number): Interv
         InterviewerEmail: record['Interviewer1 email'],
         StartTime: startTime,
         FinishTime: finishTime
-      })
+      });
     } else {
-      console.log("Rejected " + (new Date(record['Start time1']).toUTCString()))
+      console.log("Rejected " + (new Date(record['Start time1']).toUTCString()));
     }
     // Interviewer 2 
     // If the start date-time is greater than current date-time, add to output records.
@@ -174,27 +173,27 @@ interface InterviewInvite extends BasicObj {
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
     completedInvitesString = `[
-  {
-    "ID": "10",
-    "Candidate": "Adele ",
-    "CandidateEmail": "AdeleV@M365x904181.OnMicrosoft.com",
-    "CandidateContact": "1234567899",
-    "Interviewer": "Megan",
-    "InterviewerEmail": "MeganB@M365x904181.OnMicrosoft.com",
-    "StartTime": "2020-11-03T18:30:00Z",
-    "FinishTime": "2020-11-03T22:45:00Z"
-  },
-  {
-    "ID": "30",
-    "Candidate": "Allan ",
-    "CandidateEmail": "AllanD@M365x904181.OnMicrosoft.com",
-    "CandidateContact": "1234567978",
-    "Interviewer": "Raul",
-    "InterviewerEmail": "RaulR@M365x904181.OnMicrosoft.com",
-    "StartTime": "2020-11-03T23:00:00Z",
-    "FinishTime": "2020-11-03T23:45:00Z"
-  }
-]`;
+      {
+        "ID": "10",
+        "Candidate": "Adele ",
+        "CandidateEmail": "AdeleV@M365x904181.OnMicrosoft.com",
+        "CandidateContact": "1234567899",
+        "Interviewer": "Megan",
+        "InterviewerEmail": "MeganB@M365x904181.OnMicrosoft.com",
+        "StartTime": "2020-11-03T18:30:00Z",
+        "FinishTime": "2020-11-03T22:45:00Z"
+      },
+      {
+        "ID": "30",
+        "Candidate": "Allan ",
+        "CandidateEmail": "AllanD@M365x904181.OnMicrosoft.com",
+        "CandidateContact": "1234567978",
+        "Interviewer": "Raul",
+        "InterviewerEmail": "RaulR@M365x904181.OnMicrosoft.com",
+        "StartTime": "2020-11-03T23:00:00Z",
+        "FinishTime": "2020-11-03T23:45:00Z"
+      }
+    ]`;
     let completedInvites = JSON.parse(completedInvitesString) as InterviewInvite[];
     const sheet = workbook.getWorksheet('Interviews');
     const range = sheet.getTables()[0].getRange();
