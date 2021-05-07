@@ -34,7 +34,7 @@ Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this s
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
-  console.log("Current date time: " + new Date().toUTCString())
+  console.log("Current date time: " + new Date().toUTCString());
   const MEETING_DURATION = workbook.getNamedItem('MeetingDuration').getRange().getValue() as number;
 
   // Get the interview candidate information.
@@ -97,7 +97,7 @@ function generateInterviewRecords(records: RecordDetail[], mins: number): Interv
         FinishTime: finishTime
       });
     } else {
-      console.log("Rejected " + (new Date(record['Start time1']).toUTCString()))
+      console.log("Rejected " + (new Date(record['Start time1']).toUTCString()));
     }
     // Interviewer 2 
     // If the start date-time is greater than current date-time, add to output records.

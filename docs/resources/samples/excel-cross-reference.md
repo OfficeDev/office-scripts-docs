@@ -48,11 +48,11 @@ function main(workbook: ExcelScript.Workbook): EventData[] {
   }
 
   // Log the event data to the console and return it for a flow.
-  console.log(JSON.stringify(records))
+  console.log(JSON.stringify(records));
   return records;
 }
 
-// A row of event data.
+// An interface representing a row of event data.
 interface EventData {
   event: string
   date: number
@@ -135,7 +135,7 @@ function main(workbook: ExcelScript.Workbook, keys: string): string {
   return returnString;
 }
 
-// A row of event data.
+// An interface representing a row of event data.
 interface EventData {
   event: string
   date: number

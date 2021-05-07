@@ -40,7 +40,7 @@ function main(workbook: ExcelScript.Workbook) {
     // Get the first table associated with the active cell.
     const currentTable = tables[0];
 
-    // Log some information about the  table.
+    // Log key information about the table.
     console.log(currentTable.getName());
     console.log(currentTable.getRange().getAddress());
 

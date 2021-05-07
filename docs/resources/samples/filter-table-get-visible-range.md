@@ -23,7 +23,7 @@ Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and u
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
-  // Get the "Station" column to use a key values in the filter.
+  // Get the "Station" column to use as key values in the filter.
   const table1 = workbook.getTable("Table1");
   const keyColumnValues: string [] = table1.getColumnByName('Station').getRangeBetweenHeaderAndTotal().getValues().map(value => value[0] as string);
 
@@ -38,7 +38,7 @@ function main(workbook: ExcelScript.Workbook): ReturnTemplate {
     table1.getColumnByName('Station').getFilter()
       .applyValuesFilter([key]);
     
-    // Get the visible when a single filter is active.
+    // Get the visible view when a single filter is active.
     const rangeView = table1.getRange().getVisibleView();
 
     // Create a JSON object with every visible row.

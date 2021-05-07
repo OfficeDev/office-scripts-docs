@@ -47,7 +47,7 @@ function main(workbook: ExcelScript.Workbook) {
       console.log("Found a match " + employeeInfo);
       let adminNotes = scheduleData[i][4];
 
-      // Look for old comments to delete, so we avoid conflicts.
+      // Look for and delete old comments, so we avoid conflicts.
       let comment = workbook.getCommentByCell(range.getCell(i, 5));
       if (comment) {
         comment.delete();
@@ -57,7 +57,7 @@ function main(workbook: ExcelScript.Workbook) {
       workbook.addComment(range.getCell(i,5), {
         mentions: [{
           email: employeeInfo[1],
-          id: 0, // This ID maps this mention the `id=0` text in the comment.
+          id: 0, // This ID maps this mention to the `id=0` text in the comment.
           name: employeeInfo[2]
         }],
         richContent: `<at id=\"0\">${employeeInfo[2]}</at> ${adminNotes}`

@@ -20,7 +20,7 @@ Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-  // Delete the "Combined" worksheet, if it is present.
+  // Delete the "Combined" worksheet, if it's present.
   workbook.getWorksheet('Combined')?.delete();
 
   // Create a new worksheet named "Combined" for the combined table.
@@ -59,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Set the worksheet names to get tables from.
   const sheetNames = ['Sheet1', 'Sheet2', 'Sheet3'];
     
-  // Delete the "Combined" worksheet, if it is present.
+  // Delete the "Combined" worksheet, if it's present.
   workbook.getWorksheet('Combined')?.delete();
 
   // Create a new worksheet named "Combined" for the combined table.
@@ -79,7 +79,7 @@ function main(workbook: ExcelScript.Workbook) {
       let dataValues = table.getRangeBetweenHeaderAndTotal().getTexts();
       let rowCount = table.getRowCount();
 
-      // If there is data in the table, add it to the combined table.
+      // If there's data in the table, add it to the combined table.
       if (rowCount > 0) {
           combinedTable.addRows(-1, dataValues);
       }

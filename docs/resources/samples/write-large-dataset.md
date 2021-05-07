@@ -34,7 +34,7 @@ function main(workbook: ExcelScript.Workbook) {
   console.log(`Calling update range function...`);
   const updated = updateRangeInChunks(sheet.getRange("B2"), data);
   if (!updated) {
-    console.log(`Update did not take place or complete. Check and run again.`)
+    console.log(`Update did not take place or complete. Check and run again.`);
   }
 }
 

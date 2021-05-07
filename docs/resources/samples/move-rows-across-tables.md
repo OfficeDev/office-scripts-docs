@@ -89,7 +89,7 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Important: Remove the rows starting at the bottom of the table.
   // Otherwise, the lower rows change position before they are deleted.
-  console.log(`Removing ${rowAddressToRemove.length} rows from the source table. `)
+  console.log(`Removing ${rowAddressToRemove.length} rows from the source table.`);
   rowAddressToRemove.reverse().forEach((address) => {
     sheet.getRange(address).delete(ExcelScript.DeleteShiftDirection.up);
   });

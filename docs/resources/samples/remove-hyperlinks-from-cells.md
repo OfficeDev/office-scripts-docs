@@ -22,7 +22,7 @@ function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
   let sheet = workbook.getWorksheet(sheetName);
 
   // Get the used range to operate on.
-  // For large ranges (over 10000 entires), consider splitting the operation into batches for performance.
+  // For large ranges (over 10000 entries), consider splitting the operation into batches for performance.
   const targetRange = sheet.getUsedRange(true);
   console.log(`Target Range to clear hyperlinks from: ${targetRange.getAddress()}`);
 
@@ -30,7 +30,7 @@ function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
   const colCount = targetRange.getColumnCount();
   console.log(`Searching for hyperlinks in ${targetRange.getAddress()} which contains ${(rowCount * colCount)} cells`);
 
-  // Go through each individual cell looking fora hyperlink. 
+  // Go through each individual cell looking for a hyperlink. 
   // This allows us to limit the formatting changes to only the cells with hyperlink formatting.
   let clearedCount = 0;
   for (let i = 0; i < rowCount; i++) {
@@ -46,7 +46,7 @@ function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
     }
   }
 
-  console.log(`Done. Cleared hyperlinks in: ${clearedCount} cells`);
+  console.log(`Done. Cleared hyperlinks from ${clearedCount} cells`);
 }
 ```
 
