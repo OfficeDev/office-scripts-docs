@@ -111,7 +111,7 @@ function main(workbook: ExcelScript.Workbook): number
   }
 
   // Log the number of empty rows.
-  console.log(`Total empty rows: ${emptyRows}` );
+  console.log(`Total empty rows: ${emptyRows}`);
 
   // Return the number of empty rows for use in a Power Automate flow.
   return emptyRows;
