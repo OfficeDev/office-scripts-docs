@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 07/08/2020
+ms.date: 05/10/2021
 localization_priority: Priority
 ---
 
@@ -11,9 +11,15 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## `main` function
+## TypeScript: The language of Office Scripts
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, the Excel application invokes this `main` function by providing the workbook as its first parameter. Hence, it is important to not modify the basic signature of the `main` function once you have either recorded the script or created a new script from the code editor.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding-side of Office Scripts.
+
+[!INCLUDE [Preview note](../includes/coding-basics-reference.md)]
+
+## `main` function: The script's starting point
+
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, the Excel application invokes this `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -21,10 +27,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run.
+The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run. Scripts cannot invoke or call other Office Scripts.
 
-> [!CAUTION]
-> If your `main` function looks like `async function main(context: Excel.RequestContext)`, your script is using the older async API model. For more information (including how to convert your script to the current API model), refer to [Support older Office Scripts that use the Async APIs](excel-async-model.md).
+You can use [Power Automate](https://flow.microsoft.com) to connect scripts in flows. Add additional arguments to `main` for flows to pass information to your script. Return something from your script to pass information from the script to the flow. How to integrate Office Scripts with Power Automate is covered in detail in [Run Office Scripts with Power Automate](power-automate-integration.md).
 
 ## Object model
 
