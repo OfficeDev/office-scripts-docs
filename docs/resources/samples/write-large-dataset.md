@@ -9,7 +9,7 @@ localization_priority: Normal
 
 ## Basic performance optimization
 
-For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.
+For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
 ## Sample code: Optimize performance of a large dataset
 

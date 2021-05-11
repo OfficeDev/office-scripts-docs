@@ -85,7 +85,7 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 
 ## See also
 
-- [Best practices in Office Scripts](best-practices.md)
+- [Best practices in Office Scripts](../develop/best-practices.md)
 - [Platform Limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)
