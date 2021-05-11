@@ -15,7 +15,7 @@ Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/h
 
 Office Scripts are largely self-contained pieces of code. Only a small part of TypeScript's functionality is used. Therefore, you can edit scripts without having to learn the intricacies of TypeScript. The Code Editor also handles the installation, compilation, and execution of code, so you don't need to worry about anything but the script itself. It's possible to learn the language and create scripts without previous programming knowledge. However, if you're new to programming, we recommend learning some fundamentals before proceeding with Office Scripts:
 
-[!INCLUDE [Preview note](../includes/coding-basics-reference.md)]
+[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
 ## Office Scripts JavaScript API
 

@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Best practices in Office Scripts
 
-There are some common patterns you can follow in your Office Scripts to help ensure they run successfully.
+There are some patterns you can follow in your Office Scripts to help ensure they run successfully. These should help you avoid common pitfalls as you start automating your Excel workflow.
 
 ## Check if the object exists before using it
 
@@ -157,11 +157,11 @@ try {
 ```
 
 > [!NOTE]
-> Using `try..catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks) for more performance information.
+> Using `try..catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-try-catch-blocks) for more performance information.
 
 ## See also
 
-- [Troubleshooting Office Scripts](../troubleshooting/troubleshooting.md)
-- [Troubleshooting information for Power Automate with Office Scripts](../troubleshooting/power-automate-troubleshooting.md)
-- [Platform Limits with Office Scripts](../troubleshooting/platform-limits.md)
-- [Improve the performance of your Office Scripts](/web-client-performance.md)
+- [Troubleshooting Office Scripts](../testing/troubleshooting.md)
+- [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
+- [Platform Limits with Office Scripts](../testing/platform-limits.md)
+- [Improve the performance of your Office Scripts](web-client-performance.md)

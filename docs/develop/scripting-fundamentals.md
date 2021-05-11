@@ -15,7 +15,7 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding-side of Office Scripts.
 
-[!INCLUDE [Preview note](../includes/coding-basics-reference.md)]
+[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 
