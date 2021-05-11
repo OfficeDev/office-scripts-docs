@@ -1,30 +1,64 @@
 ---
 title: 'Troubleshooting Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 12/16/2020
+ms.date: 05/10/2021
 localization_priority: Normal
 ---
 
 # Troubleshooting Office Scripts
 
-As you develop Office Scripts, you may make mistakes. It's okay. We have tools that help find the problems and get your scripts working perfectly.
+As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
+
+## Types of errors
+
+Office Scripts errors fall into one of two categories:
+
+1. Compile-time errors or warnings.
+1. Runtime error.
+
+### Compile-time errors
+
+Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They are also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error will give more details about the problem and suggest solutions. Compile-time errors should be addressed before running the script.
+
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text":::
+
+You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely, though they may not actually be problems.
+
+### Runtime errors
+
+Runtime errors happen because of logic issues in the script. This could be because an object being used in the script isn't in the workbook, a table is formatted differently than anticipated, or some other slight discrepancy between the script's requirements and the current workbook. The following script generates an error when a worksheet named "TestSheet" is not present.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  let mySheet = workbook.getWorksheet('TestSheet');
+
+  // This will throw an error if there is no "TestSheet".
+  mySheet.getRange("A1");
+}
+```
+
+### Console messages
+
+Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind, the root cause of any issue may be a different line of code than what is indicated.
+
+The following image is the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Code Editor console displaying an explicit `any` error message":::
+
+The follow image is the console output for a runtime error. Here, the script is trying to add a worksheet with a the name of an existing worksheet. Again, note the "Line 2" preceding the error to show which line to investigate.
+:::image type="content" source="../images/runtime-error-console.png" alt-text="The Code Editor console displaying an error from the `addWorksheet` call":::
 
 ## Console logs
 
-Sometimes while troubleshooting, you'll want to print messages to the screen. These can show you the current value of variables or which code paths are being triggered. To do this, log text to the console.
+Print messages to the screen with the `console.log` statement. These logs can show you the current value of variables or which code paths are being triggered. To do this, call `console.log` with any object as a parameter (usually a `string` the easiest type to read in the console).
 
 ```TypeScript
 console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-Strings passed to `console.log` will be displayed in the Code Editor's logging console. To turn on the console, press the **Ellipses** button and select **Logs...**
+Strings passed to `console.log` will be displayed in the Code Editor's logging console, at the bottom of the task pane. Logs are under the **Output** tab, though the tab automatically gains focus when a log is written.
 
 Logs do not affect the workbook.
-
-## Error messages
-
-When your Excel Script encounters a problem running, it produces an error. You'll see a prompt pop-up asking if you want to **View Logs**. Press that button to open the console and display any errors.
 
 ## Automate tab not appearing or Office Scripts unavailable
 
@@ -51,8 +85,7 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/excel.md)
-- [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
+- [Best practices in Office Scripts](best-practices.md)
 - [Platform Limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)

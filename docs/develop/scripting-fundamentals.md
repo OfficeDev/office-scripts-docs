@@ -163,17 +163,18 @@ Running this script on the worksheet with the previous table creates the followi
 
 ### Collections and other object relations
 
-Any child object can be accessed through its parent object. For example, you can read `Worksheets` from the `Workbook` object. There will be a related `get` method on the parent class that (e.g., `Workbook.getWorksheets()` or `Workbook.getWorksheet(name)`). `get` methods that are singular return a single object and require an ID or name for the specific object (such as the name of a worksheet). `get` methods that are plural return the entire object collection as an array. If the collection is empty, you'll get an empty array (`[]`).
+Any child object can be accessed through its parent object. For example, you can read `Worksheets` from the `Workbook` object. There will be a related `get` method on the parent class that (e.g., `Workbook.getWorksheets()` or `Workbook.getWorksheet(name)`). `get` methods that are singular return a single object and require an ID or name for the specific object (such as the name of a worksheet). `get` methods that are plural (such as `getTables`) return the entire object collection as an array. If the collection is empty, you'll get an empty array (`[]`).
 
-Once the collection is retrieved, you can use regular array operations such as getting its `length` or use `for`, `for..of`, `while` loops for iteration or use TypeScript array methods such as `map`, `forEach` on them. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+Once the collection is retrieved, you can use regular array operations such as getting its `length` or use `for`, `for...of`, `while` loops for iteration or use TypeScript array methods such as `map`, `forEach` on them. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
 
 The following script gets all tables in the workbook. It then ensures the headers are displays, the filter buttons are visible, and the table style is set to "TableStyleLight1".
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-  /* Get table collection */
-  const tables = workbook.getTables();
-  /* Set table formatting properties */
+  // Get the table collection.
+  let tables = workbook.getTables();
+
+  // Set the table formatting properties for every table.
   tables.forEach(table => {
     table.setShowHeaders(true);
     table.setShowFilterButton(true);
@@ -182,11 +183,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-#### Adding Excel objects with a script
+#### Add Excel objects with a script
 
 You can programmatically add document objects, such as tables or charts, by calling the corresponding `add` method available on the parent object.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Do not manually add objects to collection arrays. Use the `add` methods on the parent objects For example, add a `Table` to a `Worksheet` with the `Worksheet.addTable` method.
 
 The following script creates a table in Excel on the first worksheet in the workbook. Note that the created table is returned by the `addTable` method.
@@ -196,15 +197,65 @@ function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
 
-    // Add a table that uses the data in C3:G10.
+    // Add a table that uses the data in A1:G10.
     let table = sheet.addTable(
-      "C3:G10",
+      "A1:G10",
        true /* True because the table has headers. */
     );
+    
+    // Give the table a name for easy reference in other scripts.
+    table.setName("MyTable");
 }
 ```
 
-## Removing Excel objects with a script
+> [!TIP]
+> Most Excel objects have a `setName` method. This gives you an easy way to access Excel objects later in the script or in other scripts for the same workbook.
+
+#### Check if an object exists in the collection
+
+Scripts often need to check if a table or similar object exists before continuing. You can use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
+
+The following script requests a table named "MyTable" and uses an `if/else` statement to check if the table was found.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table named "MyTable".
+  let myTable = workbook.getTable("MyTable");
+
+  // If the table is in the workbook, myTable will have a value.
+  // Otherwise, the variable will be undefined and go to the else clause.
+  if (myTable) {
+    let worksheetName = myTable.getWorksheet().getName();
+    console.log(`MyTable is on the ${worksheetName} worksheet`);
+  } else {
+    console.log(`MyTable is not in the workbook.`);
+  }
+}
+```
+
+A common pattern in Office Scripts is to recreate a table, chart, or other object every time the script is run. If you don't need the old data, it's best to delete the old object before creating the new one. This avoids name conflicts or other differences that may have been introduced by other users.
+
+The following script removes the table named "MyTable", if it is present, then adds a table with the same name.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table named "MyTable" from the first worksheet.
+  let sheet = workbook.getWorksheets()[0];
+  let tableName = "MyTable";
+  let oldTable = sheet.getTable(tableName);
+
+  // If the table exists, remove it.
+  if (oldTable) {
+    oldTable.delete();
+  }
+
+  // Add a new table with the same name.
+  let newTable = sheet.addTable("A1:G10", true);
+  newTable.setName(tableName);
+}
+```
+
+#### Remove Excel objects with a script
 
 To delete an object, call the object's `delete` method.
 
@@ -243,3 +294,4 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 - [Read workbook data with Office Scripts in Excel on the web](../tutorials/excel-read-tutorial.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
+- [Best practices in Office Scripts](best-practices.md)

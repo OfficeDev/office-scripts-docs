@@ -67,13 +67,9 @@ function main(workbook: ExcelScript.Workbook) {
 > [!NOTE]
 > As an experiment, try replacing `usedRangeValues` in the loop with `usedRange.getValues()`. You may notice the script takes considerably longer to run when dealing with large ranges.
 
-### Remove unnecessary `console.log` statements
+### Avoid using `try...catch` blocks in or around loops
 
-Console logging is a vital tool for [debugging your scripts](../testing/troubleshooting.md). However, it does force the script to synchronize with the workbook to ensure the logged information is up-to-date. Consider removing unnecessary logging statements (such as those used for testing) before sharing your script. This typically won't cause a noticeable performance issue, unless the `console.log()` statement is in a loop.
-
-### Avoid using try/catch blocks
-
-We don't recommend using [`try`/`catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) as part of a script's expected control flow. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
+We don't recommend using [`try...catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) in or around loops. This is for the same reason you should avoid reading data in a loop: each iteration forces the script to synchronize with the workbook to make sure no error has been thrown. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
 
 ```TypeScript
 /**
@@ -92,6 +88,10 @@ function main(workbook: ExcelScript.Workbook) {
   }
 }
 ```
+
+### Remove unnecessary `console.log` statements
+
+Console logging is a vital tool for [debugging your scripts](../testing/troubleshooting.md). However, it does force the script to synchronize with the workbook to ensure the logged information is up-to-date. Consider removing unnecessary logging statements (such as those used for testing) before sharing your script. This typically won't cause a noticeable performance issue, unless the `console.log()` statement is in a loop.
 
 ## Case-by-case help
 
