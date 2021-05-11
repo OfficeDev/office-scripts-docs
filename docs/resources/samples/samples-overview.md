@@ -22,7 +22,8 @@ We also welcome [contributions from the community](#community-contributions).
 | Project | Details |
 |---------|---------|
 | [Scripting basics](../excel-samples.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
-| [Add comments in Excel](add-excel-comments.md) | This sample shows how to add comments to a cell including @mentioning a colleague. |
+| [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
+| [Add images to a workbook](add-images-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 
 ## Beyond the basics
