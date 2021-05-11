@@ -157,7 +157,7 @@ try {
 ```
 
 > [!NOTE]
-> Using `try..catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-try-catch-blocks) for more performance information.
+> Using `try..catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks-in-or-around-loops) for more performance information.
 
 ## See also
 
