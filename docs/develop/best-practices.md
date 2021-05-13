@@ -13,7 +13,7 @@ There are some patterns you can follow in your Office Scripts to help ensure the
 
 Scripts often rely on a certain worksheet or table being present in the workbook. However, they might get renamed or removed between script runs. By checking if those tables or worksheets exist before calling methods on them, you can make sure the script doesn't end abruptly.
 
-The following sample code checks if the "Index" worksheet is present in the workbook. If it is, it gets a range and proceeds. If it isn't, it logs a custom error message.
+The following sample code checks if the "Index" worksheet is present in the workbook. If the worksheet is present, the script gets a range and proceeds. If it isn't present, the script logs a custom error message.
 
 ```TypeScript
 // Make sure the "Index" worksheet exists before using it.
@@ -26,7 +26,7 @@ if (indexSheet) {
 }
 ```
 
-You can also use the TypeScript `?` operator to check if the object exists before calling a method. This can make your code more streamlined if you don't need to do anything special if the object doesn't exist.
+You can also use the TypeScript `?` operator to check if the object exists before calling a method. This can make your code more streamlined if you don't need to do anything special when the object doesn't exist.
 
 ```TypeScript
 // The ? ensures that the delete() API is only called if the object exists.
@@ -37,7 +37,7 @@ workbook.getWorksheet('Index')?.delete();
 
 Make sure everything is in the workbook before working on the data. Using the previous pattern, you can check to see if all your worksheets, tables, shapes, and other objects are present and match your expectations. Doing this before any data is written ensures your script doesn't leave the workbook in a partial state.
 
-The following script requires two tables named "Table1" and "Table2" to be present. The script checks if they're there and ends with the `return` statement and an appropriate message if they are not.
+The following script requires two tables named "Table1" and "Table2" to be present. The script checks if the tables are present and then ends with the `return` statement and an appropriate message if they're not present.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -119,11 +119,11 @@ function main(workbook: ExcelScript.Workbook) {
   
 ```
 
-## How to use try..catch to handle errors
+## How to use try...catch to handle errors
 
 The [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) technique is a way to detect if an API call failed and handle that error in your script. It may be important to check the return value of an API to verify that it was completed successfully.
 
-Consider the following snippet that performs a large data update on a range:
+Consider the following snippet that performs a large data update on a range.
 
 ```TypeScript
 range.setValues(someLargeValues);
@@ -154,11 +154,11 @@ try {
 ```
 
 > [!NOTE]
-> Using `try..catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks-in-or-around-loops) for more performance information.
+> Using `try...catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks-in-or-around-loops) for more performance information.
 
 ## See also
 
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
-- [Platform Limits with Office Scripts](../testing/platform-limits.md)
+- [Platform limits with Office Scripts](../testing/platform-limits.md)
 - [Improve the performance of your Office Scripts](web-client-performance.md)

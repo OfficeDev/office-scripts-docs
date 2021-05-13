@@ -26,7 +26,7 @@ You may also see orange warning underlines and grey informational messages. Thes
 
 ### Runtime errors
 
-Runtime errors happen because of logic issues in the script. This could be because an object being used in the script isn't in the workbook, a table is formatted differently than anticipated, or some other slight discrepancy between the script's requirements and the current workbook. The following script generates an error when a worksheet named "TestSheet" is not present.
+Runtime errors happen because of logic issues in the script. This could be because an object used in the script isn't in the workbook, a table is formatted differently than anticipated, or some other slight discrepancy between the script's requirements and the current workbook. The following script generates an error when a worksheet named "TestSheet" is not present.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -39,7 +39,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Console messages
 
-Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind, the root cause of any issue may be a different line of code than what is indicated.
+Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind, the root cause of any issue may be a different line of code than what is indicated in the console.
 
 The following image is the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Code Editor console displaying an explicit `any` error message":::
@@ -86,7 +86,7 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 ## See also
 
 - [Best practices in Office Scripts](../develop/best-practices.md)
-- [Platform Limits with Office Scripts](platform-limits.md)
+- [Platform limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)
 - [Undo the effects of an Office Script](undo.md)
