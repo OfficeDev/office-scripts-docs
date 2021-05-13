@@ -13,13 +13,13 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 ## TypeScript: The language of Office Scripts
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding-side of Office Scripts.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
 [!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function is executed, the Excel application invokes this `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes this `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -215,7 +215,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Scripts often need to check if a table or similar object exists before continuing. You can use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
 
-The following script requests a table named "MyTable" and uses an `if/else` statement to check if the table was found.
+The following script requests a table named "MyTable" and uses an `if...else` statement to check if the table was found.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -235,7 +235,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 A common pattern in Office Scripts is to recreate a table, chart, or other object every time the script is run. If you don't need the old data, it's best to delete the old object before creating the new one. This avoids name conflicts or other differences that may have been introduced by other users.
 
-The following script removes the table named "MyTable", if it is present, then adds a table with the same name.
+The following script removes the table named "MyTable", if it is present, then adds a new table with the same name.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

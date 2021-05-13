@@ -12,7 +12,7 @@ This article will teach you how to maintain and update scripts that use the olde
 > [!IMPORTANT]
 > The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#converting-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
-## Older main` function signature
+## Older `main` function signature
 
 Scripts that use the async APIs have a different `main` function. It's an `async` function that has an `Excel.RequestContext` as the first parameter.
 
