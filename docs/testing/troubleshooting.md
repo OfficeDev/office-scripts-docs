@@ -22,7 +22,7 @@ Compile-time errors and warnings are initially shown in the Code Editor. These a
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text":::
 
-You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely, though your script could still be working as intended.
+You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely before dismissing them.
 
 ### Runtime errors
 
