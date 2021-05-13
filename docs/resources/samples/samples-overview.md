@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 05/11/2021
+ms.date: 05/13/2021
 localization_priority: Normal
 ---
 
@@ -22,7 +22,8 @@ We also welcome [contributions from the community](#community-contributions-and-
 | Project | Details |
 |---------|---------|
 | [Scripting basics](../excel-samples.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
-| [Add comments in Excel](add-excel-comments.md) | This sample shows how to add comments to a cell including @mentioning a colleague. |
+| [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
+| [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 
 ## Beyond the basics

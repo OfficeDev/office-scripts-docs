@@ -62,6 +62,8 @@ items:
         href: resources/samples/excel-samples.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
+      - name: Add images to a workbook
+        href: resources/samples/add-image-to-workbook.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
     - name: Beyond the basics
