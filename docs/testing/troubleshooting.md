@@ -13,8 +13,8 @@ As you develop Office Scripts, you may make mistakes. It's okay. You have the to
 
 Office Scripts errors fall into one of two categories:
 
-1. Compile-time errors or warnings.
-1. Runtime error.
+* Compile-time errors or warnings.
+* Runtime errors.
 
 ### Compile-time errors
 
@@ -22,7 +22,7 @@ Compile-time errors and warnings are initially shown in the Code Editor. These a
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text":::
 
-You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely, though they may not actually be problems.
+You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely, though your script could still be working as intended.
 
 ### Runtime errors
 

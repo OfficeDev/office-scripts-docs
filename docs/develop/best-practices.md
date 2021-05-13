@@ -41,8 +41,7 @@ The following script requires two tables named "Table1" and "Table2" to be prese
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-
-  // Tables that should be in the workbook for the script to work:
+  // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
 
@@ -76,8 +75,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 
 function inputPresent( workbook: ExcelScript.Workbook): boolean {
-
-  // Tables that should be in the workbook for the script to work:
+  // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
 
@@ -105,8 +103,7 @@ The following scripts shows how to use the `throw` statement in our table checki
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-
-  // Tables that should be in the workbook for the script to work:
+  // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
 
@@ -132,7 +129,7 @@ Consider the following snippet that performs a large data update on a range:
 range.setValues(someLargeValues);
 ```
 
-If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a runtime error. You may wish to handle this condition in your code. You could either customize the error message (the first of the following two snippets) or break up the update into smaller units (the second snippet). `try...catch` lets you handle this in the script, rather than letting the error surface.
+If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). You may wish to handle this condition in your code. You could either customize the error message (the first of the following two snippets) or break up the update into smaller units (the second snippet). `try...catch` lets you handle this in the script, rather than showing the default error to whoever is using your script.
 
 ```TypeScript
 try {
