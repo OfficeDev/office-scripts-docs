@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 05/07/2021
+ms.date: 05/13/2021
 localization_priority: Normal
 ---
 
@@ -13,7 +13,7 @@ For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-th
 
 In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
 
-We also welcome [contributions from the community](#community-contributions).
+We also welcome [contributions from the community](#community-contributions-and-fun-samples).
 
 [!INCLUDE [Preview note](../../includes/preview-note.md)]
 
@@ -22,7 +22,8 @@ We also welcome [contributions from the community](#community-contributions).
 | Project | Details |
 |---------|---------|
 | [Scripting basics](../excel-samples.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
-| [Add comments in Excel](add-excel-comments.md) | This sample shows how to add comments to a cell including @mentioning a colleague. |
+| [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
+| [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 
 ## Beyond the basics
@@ -54,12 +55,13 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 | [Grade calculator](../scenarios/grade-calculator.md) | This scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions. |
 | [Task reminders](../scenarios/task-reminders.md) | This scenario uses an Office Script in a Power Automate flow to send reminders to coworkers to update a project's status. It highlights the skills of Power Automate integration and data transfer to and from scripts. |
 
-## Community contributions
+## Community contributions and fun samples
 
 We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md) from our Office Scripts community! Feel free to create a pull request for review.
 
 | Project | Details |
 |---------|---------|
+| [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | The "Ready Player Zero" blog by Yutao Huang on the Excel Tech Community includes a script to model John Conway's [*The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). |
 | [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts. |
 
 ## Try it out
