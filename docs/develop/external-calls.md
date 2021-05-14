@@ -68,7 +68,7 @@ interface JSONData {
 
 ### Other `fetch` samples
 
-* The [Use external fetch calls in Office Scripts](../resources/scenarios/external-fetch-calls.md) sample shows how to get basic information about a user's GitHub repositories.
+* The [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md) sample shows how to get basic information about a user's GitHub repositories.
 * The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
 
 ## External calls from Power Automate
