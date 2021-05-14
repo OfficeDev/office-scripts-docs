@@ -3,6 +3,7 @@ title: 'Send a Teams meeting from Excel data'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
 ms.date: 05/06/2021
 localization_priority: Normal
+ROBOTS: NOINDEX
 ---
 
 # Send Teams meeting from Excel data
