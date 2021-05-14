@@ -1,7 +1,7 @@
 ---
 title: 'External API call support in Office Scripts'
 description: 'Support and guidance for making external API calls in an Office Script.'
-ms.date: 04/05/2021
+ms.date: 05/14/2021
 localization_priority: Normal
 ---
 
@@ -34,26 +34,42 @@ You'll need to learn the external service's interfaces to make calls to that ser
 * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
 * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
 
-### Working with `fetch`
+## Working with `fetch`
 
-The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you will need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
+The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
 
-The following script uses `fetch` to retrieve JSON data from the test server in the given URL.
+Any JSON data retrieved by `fetch` must match an interface defined in the script. The returned value must be assigned to a specific type because [Office Scripts do not support the `any` type](typescript-restrictions.md#no-any-type-in-office-scripts). You should refer to the documentation for your service to see what the names and types of the returned properties are. Then, add the matching interface or interfaces to your script.
+
+The following script uses `fetch` to retrieve JSON data from the test server in the given URL. Note the `JSONData` interface to store the data as a matching type.
 
 ```TypeScript
-async function main(workbook: ExcelScript.Workbook): Promise <void> {
-  /* 
-   * Retrieve JSON data from a test server.
-   */
+async function main(workbook: ExcelScript.Workbook): Promise<void> {
+  // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  let json = await fetchResult.json();
 
-  // Displays the content from https://jsonplaceholder.typicode.com/todos/1
+  // Convert the returned data to the expected JSON structure.
+  let json : JSONData = await fetchResult.json();
+
+  // Display the content in a readable format.
   console.log(JSON.stringify(json));
+}
+
+/**
+ * An interface that matches the returned JSON structure.
+ * The property names match exactly.
+ */
+interface JSONData {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
 }
 ```
 
-The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
+### Other `fetch` samples
+
+* The [Use external fetch calls in Office Scripts](../resources/scenarios/external-fetch-calls.md) sample shows how to get basic information about a user's GitHub repositories.
+* The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
 
 ## External calls from Power Automate
 
