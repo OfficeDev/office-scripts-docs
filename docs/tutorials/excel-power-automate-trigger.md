@@ -5,7 +5,7 @@ ms.date: 12/28/2020
 localization_priority: Priority
 ---
 
-# Pass data to scripts in an automatically-run Power Automate flow (preview)
+# Pass data to scripts in an automatically-run Power Automate flow
 
 This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
@@ -170,9 +170,9 @@ function main(
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate":::
 
-7. Under **Actions**, select **Run script (preview)**.
+7. Under **Actions**, select **Run script**.
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script (preview) action option in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate":::
 
 8. Next, you'll select the workbook, script, and script input arguments to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 

@@ -149,7 +149,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 10. Choose **Manually trigger a flow** from the options and press **Create**.
 
-11. The flow needs to call the **Get People** script to get all the employees with empty status fields. Press **New step** and select **Excel Online (Business)**. Under **Actions**, select **Run script (preview)**. Provide the following entries for the flow step:
+11. The flow needs to call the **Get People** script to get all the employees with empty status fields. Press **New step** and select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
@@ -208,7 +208,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **Update message**: Thank you for submitting your status report. Your response has been successfully added to the spreadsheet.
     - **Should update card**: Yes
 
-16. In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**. Select **Excel Online (Business)**. Under **Actions**, select **Run script (preview)**. Provide the following entries for the flow step:
+16. In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**. Select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
