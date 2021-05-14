@@ -57,7 +57,7 @@ All scripts recorded with the Action Recorder can be edited through the Code Edi
 
 One easy way to start learning the capabilities of Office Scripts is to record scripts in Excel on the web and view the resulting code. Another option is to follow our [tutorials](../tutorials/excel-tutorial.md) to learn in a more guided and structured way.
 
-After going through the tutorial, you can read more about the Code Editor and how to write and edit your own scripts. The article [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) helps with the basics of coding an Office Script. [Office Scripts Code Editor environment](code-editor-environment.md) describes the details of the Code Editor and how your script code is interpreted.
+After completing the tutorial, read [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
 
 ## Sharing scripts
 

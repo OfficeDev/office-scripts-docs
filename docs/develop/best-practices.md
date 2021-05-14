@@ -7,9 +7,9 @@ localization_priority: Normal
 
 # Best practices in Office Scripts
 
-There are some patterns you can follow in your Office Scripts to help ensure they run successfully. These should help you avoid common pitfalls as you start automating your Excel workflow.
+These patterns and practices are designed to help your scripts run successfully every time. Use them to avoid common pitfalls as you start automating your Excel workflow.
 
-## Check if the object exists before using it
+## Verify an object is present
 
 Scripts often rely on a certain worksheet or table being present in the workbook. However, they might get renamed or removed between script runs. By checking if those tables or worksheets exist before calling methods on them, you can make sure the script doesn't end abruptly.
 
@@ -26,14 +26,14 @@ if (indexSheet) {
 }
 ```
 
-You can also use the TypeScript `?` operator to check if the object exists before calling a method. This can make your code more streamlined if you don't need to do anything special when the object doesn't exist.
+The TypeScript `?` operator checks if the object exists before calling a method. This can make your code more streamlined if you don't need to do anything special when the object doesn't exist.
 
 ```TypeScript
 // The ? ensures that the delete() API is only called if the object exists.
 workbook.getWorksheet('Index')?.delete();
 ```
 
-## Check everything at the beginning of the script
+## Validate data and workbook state first
 
 Make sure all your worksheets, tables, shapes, and other objects are present before working on the data. Using the previous pattern, check to see if everything is in the workbook and matches your expectations. Doing this before any data is written ensures your script doesn't leave the workbook in a partial state.
 
@@ -119,9 +119,9 @@ function main(workbook: ExcelScript.Workbook) {
   
 ```
 
-## How to use try...catch to handle errors
+## When to use a `try...catch` statement
 
-The [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) technique is a way to detect if an API call failed and handle that error in your script. It may be important to check the return value of an API to verify that it was completed successfully.
+The [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) statement is a way to detect if an API call fails and continue running the script.
 
 Consider the following snippet that performs a large data update on a range.
 
@@ -129,7 +129,9 @@ Consider the following snippet that performs a large data update on a range.
 range.setValues(someLargeValues);
 ```
 
-If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). You may wish to handle this condition in your code. You could either customize the error message (the first of the following two snippets) or break up the update into smaller units (the second snippet). `try...catch` lets you handle this in the script, rather than showing the default error to whoever is using your script.
+If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). The `try...catch` statement lets your script recognize this condition, without immediately ending the script and showing the default error.
+
+One approach for giving the script user a better experience is to present them a custom error message. The following snippet shows a `try...catch` statement logging more error information to better help the reader.
 
 ```TypeScript
 try {
@@ -141,12 +143,14 @@ try {
 }
 ```
 
+Another approach to dealing with errors is to have fallback behavior that handles the error case. The following snippet uses the `catch` block to try an alternate method break up the update into smaller pieces and avoid the error.
+
 ```TypeScript
 try {
     range.setValues(someLargeValues);
 } catch (error) {
     console.log(`The script failed to update the values at location ${range.getAddress()}. Trying a different approach.`);
-    handleUpdatesInSmallerChunks(someLargeValues);
+    handleUpdatesInSmallerBatches(someLargeValues);
 }
 
 // Continue...

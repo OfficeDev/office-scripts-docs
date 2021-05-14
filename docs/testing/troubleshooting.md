@@ -39,7 +39,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Console messages
 
-Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind, the root cause of any issue may be a different line of code than what is indicated in the console.
+Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind that the root cause of any issue may be a different line of code than what is indicated in the console.
 
 The following image shows the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Code Editor console displaying an explicit `any` error message":::
