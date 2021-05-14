@@ -129,6 +129,9 @@ Consider the following snippet that performs a large data update on a range.
 range.setValues(someLargeValues);
 ```
 
+> [!NOTE]
+> For a full example on how to update a large range, see [Write a large dataset](../resources/samples/write-large-dataset.md).
+
 If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). You may wish to handle this condition in your code. You could either customize the error message (the first of the following two snippets) or break up the update into smaller units (the second snippet). `try...catch` lets you handle this in the script, rather than showing the default error to whoever is using your script.
 
 ```TypeScript

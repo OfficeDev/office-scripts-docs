@@ -43,6 +43,7 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
 | [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
 | [Send a Teams meeting from Excel data](send-teams-invite-from-excel-data.md) | This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel. |
+| [Write a large dataset](write-large-dataset.md) | This sample shows how to send a large range as smaller subranges. |
 
 ## Scenarios
 

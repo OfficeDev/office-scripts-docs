@@ -1,93 +1,92 @@
 ---
-title: 'Performance optimization when writing a large dataset'
-description: 'Learn how to optimize performance when writing a large dataset in Office Scripts.'
-ms.date: 04/28/2021
+title: 'Write a large dataset'
+description: 'Learn how to split a large dataset into smaller write operations in Office Scripts.'
+ms.date: 05/13/2021
 localization_priority: Normal
 ---
 
-# Performance optimization when writing a large dataset
+# Write a large dataset
 
-## Basic performance optimization
+The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, To reliably update a [large range](../../testing/platform-limits.md#), you'll need to write the data in smaller batches.
 
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
-## Sample code: Optimize performance of a large dataset
+## Sample code: Write a large dataset
 
-The `setValues()` Range API allows setting the values of a range. This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks. This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts. **Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script. As we have opportunity to test, we'll update with findings around how it performs for various data sizes.
+This script writes rows of a range in smaller parts. It selects 1000 cells to write at a time. Run the script on a blank worksheet to see the update batches in action. The console output gives further insight into what's happening.
 
-This script selects 1K cells per chunk but you can override to test out how it works for you. It updates 100k rows with 6 columns of data. Run this on a blank sheet to examine.
+> [!NOTE]
+> You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`. You can change the number of cells to write as a single action be changing the value of `CELLS_IN_BATCH`.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
+  const SAMPLE_ROWS = 100000;
+  const CELLS_IN_BATCH = 10000;
+
+  // Get the current worksheet.
   const sheet = workbook.getActiveWorksheet();
 
-  let data: (string | number | boolean)[][] = [];
-  // Number of rows in the random data (x 6 columns).
-  const sampleRows = 100000;
-
   console.log(`Generating data...`)
-  // Dynamically generate some random data for testing purpose. 
-  for (let i = 0; i < sampleRows; i++) {
+  let data: (string | number | boolean)[][] = [];
+  // Generate six columns of random data per row. 
+  for (let i = 0; i < SAMPLE_ROWS; i++) {
     data.push([i, ...[getRandomString(5), getRandomString(20), getRandomString(10), Math.random()], "Sample data"]);
   }
 
   console.log(`Calling update range function...`);
-  const updated = updateRangeInChunks(sheet.getRange("B2"), data);
+  const updated = updateRangeInBatches(sheet.getRange("B2"), data, CELLS_IN_BATCH);
   if (!updated) {
     console.log(`Update did not take place or complete. Check and run again.`);
   }
 }
 
-function updateRangeInChunks(
+function updateRangeInBatches(
   startCell: ExcelScript.Range,
   values: (string | boolean | number)[][],
-  cellsInChunk: number = 10000
+  cellsInBatch: number
 ): boolean {
 
   const startTime = new Date().getTime();
-  console.log(`Cells per chunk setting: ${cellsInChunk}`);
-  if (!values) {
-    console.log(`Invalid input values to update.`);
-    return false;
-  }
-  if (values.length === 0 || values[0].length === 0) {
-    console.log(`Empty data -- nothing to update.`);
-    return true;
-  }
-  const totalCells = values.length * values[0].length;
+  console.log(`Cells per batch setting: ${cellsInBatch}`);
 
+  // Determine the total number of cells to write.
+  const totalCells = values.length * values[0].length;
   console.log(`Total cells to update in the target range: ${totalCells}`);
-  if (totalCells <= cellsInChunk) {
-    console.log(`No need to chunk -- updating directly`);
+  if (totalCells <= cellsInBatch) {
+    console.log(`No need to batch -- updating directly`);
     updateTargetRange(startCell, values);
     return true;
   }
 
-  const rowsPerChunk = Math.floor(cellsInChunk / values[0].length);
-  console.log("Rows per chunk: " + rowsPerChunk);
+  // Determine how many rows to write at once.
+  const rowsPerBatch = Math.floor(cellsInBatch / values[0].length);
+  console.log("Rows per batch: " + rowsPerBatch);
   let rowCount = 0;
   let totalRowsUpdated = 0;
-  let chunkCount = 0;
+  let batchCount = 0;
 
+  // Write each batch of rows.
   for (let i = 0; i < values.length; i++) {
     rowCount++;
-    if (rowCount === rowsPerChunk) {
-      chunkCount++;
-      console.log(`Calling update next chunk function. Chunk#: ${chunkCount}`);
-      updateNextChunk(startCell, values, rowsPerChunk, totalRowsUpdated);
-      rowCount = 0;
-      totalRowsUpdated += rowsPerChunk;
-      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
+    if (rowCount === rowsPerBatch) {
+      batchCount++;
+      console.log(`Calling update next batch function. Batch#: ${batchCount}`);
+      updateNextBatch(startCell, values, rowsPerBatch, totalRowsUpdated);
 
+      // Write a completion percentage to help the user understand the progress.
+      rowCount = 0;
+      totalRowsUpdated += rowsPerBatch;
+      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
     }
   }
-  console.log(`Updating remaining rows -- last chunk: ${rowCount}`)
+  
+  console.log(`Updating remaining rows -- last batch: ${rowCount}`)
   if (rowCount > 0) {
-    updateNextChunk(startCell, values, rowCount, totalRowsUpdated);
+    updateNextBatch(startCell, values, rowCount, totalRowsUpdated);
   }
 
   let endTime = new Date().getTime();
-  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInChunk).toFixed(8)} seconds per ${cellsInChunk} cells-chunk.`);
+  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInBatch).toFixed(8)} seconds per ${cellsInBatch} cells-batch.`);
 
   return true;
 }
@@ -95,22 +94,20 @@ function updateRangeInChunks(
 /**
  * A helper function that computes the target range and updates. 
  */
-
-function updateNextChunk(
+function updateNextBatch(
   startingCell: ExcelScript.Range,
   data: (string | boolean | number)[][],
-  rowsPerChunk: number,
+  rowsPerBatch: number,
   totalRowsUpdated: number
 ) {
-
   const newStartCell = startingCell.getOffsetRange(totalRowsUpdated, 0);
-  const targetRange = newStartCell.getResizedRange(rowsPerChunk - 1, data[0].length - 1);
-  console.log(`Updating chunk at range ${targetRange.getAddress()}`);
-  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerChunk);
+  const targetRange = newStartCell.getResizedRange(rowsPerBatch - 1, data[0].length - 1);
+  console.log(`Updating batch at range ${targetRange.getAddress()}`);
+  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerBatch);
   try {
     targetRange.setValues(dataToUpdate);
   } catch (e) {
-    throw `Error while updating the chunk range: ${JSON.stringify(e)}`;
+    throw `Error while updating the batch range: ${JSON.stringify(e)}`;
   }
   return;
 }
@@ -144,6 +141,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## Training video: Optimize performance when writing a large dataset
+## Training video: Write a large dataset
 
 [Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).
