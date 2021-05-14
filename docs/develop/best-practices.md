@@ -145,6 +145,9 @@ try {
 
 Another approach to dealing with errors is to have fallback behavior that handles the error case. The following snippet uses the `catch` block to try an alternate method break up the update into smaller pieces and avoid the error.
 
+> [!TIP]
+> For a full example on how to update a large range, see [Write a large dataset](../resources/samples/write-large-dataset.md).
+
 ```TypeScript
 try {
     range.setValues(someLargeValues);

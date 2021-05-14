@@ -1,7 +1,7 @@
 ---
 title: 'Platform limits and requirements with Office Scripts'
 description: 'Resource limits and browser support for Office Scripts when used with Excel on the web'
-ms.date: 03/12/2021
+ms.date: 05/13/2021
 localization_priority: Normal
 ---
 
@@ -40,7 +40,7 @@ Excel for the web has the following limitations when making calls to the workboo
 - Requests and responses are limited to **5MB**.
 - A range is limited to **five million cells**.
 
-If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. You can also APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) to target specific cells instead of large ranges.
+If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. For an example, see the [Write a large dataset](../resources/samples/write-large-dataset.md) sample. You can also use APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) to target specific cells instead of large ranges.
 
 ### Power Automate
 
