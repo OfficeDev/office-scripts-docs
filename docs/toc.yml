@@ -22,6 +22,8 @@ items:
     href: develop/scripting-fundamentals.md
   - name: Concepts
     items:
+    - name: Best practices in Office Scripts
+      href: develop/best-practices.md
     - name: Built-in JavaScript objects
       href: develop/javascript-objects.md
     - name: Code Editor environment
