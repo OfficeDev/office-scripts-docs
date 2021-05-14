@@ -7,9 +7,9 @@ localization_priority: Normal
 
 # Office Scripts file storage and ownership
 
-Office Scripts are stored as **.osts** files in your Microsoft OneDrive. They are stored separately from a workbook. You can share the script with an Excel workbook to give others access. This means you are linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
+Office Scripts are stored as **.osts** files in your Microsoft OneDrive. They are stored separately from a workbook. To give others access, share the script with an Excel workbook. This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
-Unless you share your scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script if it is in your OneDrive folder or shared with the workbook.
+Unless you share your scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script if it's in your OneDrive folder or shared with the workbook.
 
 ## File storage
 

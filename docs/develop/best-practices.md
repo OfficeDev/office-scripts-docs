@@ -35,9 +35,9 @@ workbook.getWorksheet('Index')?.delete();
 
 ## Check everything at the beginning of the script
 
-Make sure everything is in the workbook before working on the data. Using the previous pattern, you can check to see if all your worksheets, tables, shapes, and other objects are present and match your expectations. Doing this before any data is written ensures your script doesn't leave the workbook in a partial state.
+Make sure all your worksheets, tables, shapes, and other objects are present before working on the data. Using the previous pattern, check to see if everything is in the workbook and matches your expectations. Doing this before any data is written ensures your script doesn't leave the workbook in a partial state.
 
-The following script requires two tables named "Table1" and "Table2" to be present. The script checks if the tables are present and then ends with the `return` statement and an appropriate message if they're not present.
+The following script requires two tables named "Table1" and "Table2" to be present. The script first checks if the tables are present and then ends with the `return` statement and an appropriate message if they're not.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -59,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-If the verification is happening in a separate function, you still have to end the script by issuing the `return` statement from the `main` function. Returning from the subfunction doesn't end the script.
+If the verification is happening in a separate function, you still must end the script by issuing the `return` statement from the `main` function. Returning from the subfunction doesn't end the script.
 
 The following script has the same behavior as the previous one. The difference is that the `main` function calls the `inputPresent` function to verify everything. `inputPresent` returns a boolean (`true` or `false`) to indicate whether all required inputs are present. The `main` function uses that boolean to decide on continuing or ending the script.
 
@@ -93,13 +93,13 @@ function inputPresent( workbook: ExcelScript.Workbook): boolean {
 }
 ```
 
-## When to use `throw` the script  
+## When to use a `throw` statement
 
-A [`throw` statement](https://developer.mozilla.org/docs/web/javascript/reference/statements/throw) indicates an unexpected error has occurred. It ends the code immediately. For the most part, you don't need to `throw` from your script. Usually, the script automatically informs the user that the script failed to run due to an issue. In most cases, it's sufficient to end the script with an error message and a `return` statement from the `main` function.
+A [`throw`](https://developer.mozilla.org/docs/web/javascript/reference/statements/throw) statement indicates an unexpected error has occurred. It ends the code immediately. For the most part, you don't need to `throw` from your script. Usually, the script automatically informs the user that the script failed to run due to an issue. In most cases, it's sufficient to end the script with an error message and a `return` statement from the `main` function.
 
 However, if your script is running as part of a Power Automate flow, you may want to stop the flow from continuing. A `throw` statement stops the script and tells the flow to stop as well.
 
-The following scripts shows how to use the `throw` statement in our table checking example.
+The following script shows how to use the `throw` statement in our table checking example.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -154,7 +154,7 @@ try {
 ```
 
 > [!NOTE]
-> Using `try...catch` inside or around a loop slows down your script. See [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks-in-or-around-loops) for more performance information.
+> Using `try...catch` inside or around a loop slows down your script. For more performance information, see [Avoid using `try...catch` blocks](web-client-performance.md#avoid-using-trycatch-blocks-in-or-around-loops).
 
 ## See also
 

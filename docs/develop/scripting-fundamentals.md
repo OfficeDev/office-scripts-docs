@@ -13,13 +13,13 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 ## TypeScript: The language of Office Scripts
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
 [!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes this `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -211,9 +211,9 @@ function main(workbook: ExcelScript.Workbook) {
 > [!TIP]
 > Most Excel objects have a `setName` method. This gives you an easy way to access Excel objects later in the script or in other scripts for the same workbook.
 
-#### Check if an object exists in the collection
+#### Verify an object exists in the collection
 
-Scripts often need to check if a table or similar object exists before continuing. You can use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
+Scripts often need to check if a table or similar object exists before continuing. Use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
 
 The following script requests a table named "MyTable" and uses an `if...else` statement to check if the table was found.
 
