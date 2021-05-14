@@ -67,9 +67,9 @@ function main(workbook: ExcelScript.Workbook) {
 > [!NOTE]
 > As an experiment, try replacing `usedRangeValues` in the loop with `usedRange.getValues()`. You may notice the script takes considerably longer to run when dealing with large ranges.
 
-### Avoid using `try...catch` blocks in or around loops
+### Avoid using `try...catch` blocks in or surrounding loops
 
-We don't recommend using [`try...catch` blocks](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) in or around loops. This is for the same reason you should avoid reading data in a loop: each iteration forces the script to synchronize with the workbook to make sure no error has been thrown. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
+We don't recommend using [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) statements either in loops or surrounding loops. This is for the same reason you should avoid reading data in a loop: each iteration forces the script to synchronize with the workbook to make sure no error has been thrown. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
 
 ```TypeScript
 /**

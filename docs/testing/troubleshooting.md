@@ -13,8 +13,8 @@ As you develop Office Scripts, you may make mistakes. It's okay. You have the to
 
 Office Scripts errors fall into one of two categories:
 
-* Compile-time errors or warnings.
-* Runtime errors.
+* Compile-time errors or warnings
+* Runtime errors
 
 ### Compile-time errors
 
@@ -39,24 +39,24 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Console messages
 
-Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind, the root cause of any issue may be a different line of code than what is indicated in the console.
+Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind that the root cause of any issue may be a different line of code than what is indicated in the console.
 
-The following image is the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
+The following image shows the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Code Editor console displaying an explicit `any` error message":::
 
-The follow image is the console output for a runtime error. Here, the script is trying to add a worksheet with a the name of an existing worksheet. Again, note the "Line 2" preceding the error to show which line to investigate.
+The follow image shows the console output for a runtime error. Here, the script tries to add a worksheet with a the name of an existing worksheet. Again, note the "Line 2" preceding the error to show which line to investigate.
 :::image type="content" source="../images/runtime-error-console.png" alt-text="The Code Editor console displaying an error from the `addWorksheet` call":::
 
 ## Console logs
 
-Print messages to the screen with the `console.log` statement. These logs can show you the current value of variables or which code paths are being triggered. To do this, call `console.log` with any object as a parameter (usually a `string` the easiest type to read in the console).
+Print messages to the screen with the `console.log` statement. These logs can show you the current value of variables or which code paths are being triggered. To do this, call `console.log` with any object as a parameter. Usually, a `string` is the easiest type to read in the console.
 
 ```TypeScript
 console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-Strings passed to `console.log` will be displayed in the Code Editor's logging console, at the bottom of the task pane. Logs are under the **Output** tab, though the tab automatically gains focus when a log is written.
+Strings passed to `console.log` are displayed in the Code Editor's logging console, at the bottom of the task pane. Logs are found on the **Output** tab, though the tab automatically gains focus when a log is written.
 
 Logs do not affect the workbook.
 

@@ -13,13 +13,13 @@ This article will introduce you to the technical aspects of Office Scripts. You'
 
 ## TypeScript: The language of Office Scripts
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you are familiar with JavaScript, your knowledge will carry over (much of your code is the same in both languages). We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
 [!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes this `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
+Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -29,9 +29,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run. Scripts cannot invoke or call other Office Scripts.
 
-You can use [Power Automate](https://flow.microsoft.com) to connect scripts in flows. Add additional arguments to `main` for flows to pass information to your script. Return something from your script to pass information from the script to the flow. How to integrate Office Scripts with Power Automate is covered in detail in [Run Office Scripts with Power Automate](power-automate-integration.md).
+[Power Automate](https://flow.microsoft.com) allows you to connect scripts in flows. Data is passed between the scripts and the flow through the parameters and returns of the`main` method. How to integrate Office Scripts with Power Automate is covered in detail in [Run Office Scripts with Power Automate](power-automate-integration.md).
 
-## Object model
+## Object model overview
 
 To write a script, you need to understand how the Office Script APIs fit together. The components of a workbook have specific relations to one another. In many ways, these relations match those of the Excel UI.
 
@@ -42,7 +42,7 @@ To write a script, you need to understand how the Office Script APIs fit togethe
 - A **Worksheet** contains collections of those data objects that are present in the individual sheet.
 - **Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.
 
-### Workbook
+## Workbook
 
 Every script is provided a `workbook` object of type `Workbook` by the `main` function. This represents the top level object through which your script interacts with the Excel workbook.
 
@@ -58,7 +58,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Ranges
+## Ranges
 
 A range is a group of contiguous cells in the workbook. Scripts typically use A1-style notation (e.g., **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.
 
@@ -66,7 +66,7 @@ Ranges have three core properties: values, formulas, and format. These propertie
 
 Ranges use two-dimensional arrays to manage information. Read the [Working with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-ranges) for more information on handling those arrays in the Office Scripts framework.
 
-#### Range sample
+### Range sample
 
 The following sample shows how to create sales records. This script uses `Range` objects to set the values, formulas, and parts of the format.
 
@@ -111,11 +111,11 @@ Running this script creates the following data in the current worksheet:
 
 :::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers":::
 
-### Charts, tables, and other data objects
+## Charts, tables, and other data objects
 
 Scripts can create and manipulate the data structures and visualizations within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more. These are stored in collections, which will be discussed later in this article.
 
-#### Creating a table
+### Creating a table
 
 Create tables by using data-filled ranges. Formatting and table controls (such as filters) are automatically applied to the range.
 
@@ -135,7 +135,7 @@ Running this script on the worksheet with the previous data creates the followin
 
 :::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record":::
 
-#### Creating a chart
+### Creating a chart
 
 Create charts to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
 
@@ -161,11 +161,13 @@ Running this script on the worksheet with the previous table creates the followi
 
 :::image type="content" source="../images/chart-sample.png" alt-text="A column chart showing quantities of three items from the previous sales record":::
 
-### Collections and other object relations
+## Collections
 
-Any child object can be accessed through its parent object. For example, you can read `Worksheets` from the `Workbook` object. There will be a related `get` method on the parent class that (e.g., `Workbook.getWorksheets()` or `Workbook.getWorksheet(name)`). `get` methods that are singular return a single object and require an ID or name for the specific object (such as the name of a worksheet). `get` methods that are plural (such as `getTables`) return the entire object collection as an array. If the collection is empty, you'll get an empty array (`[]`).
+When an Excel object has a collection of one or more objects of the same type, it stores them in an array. For example, a `Workbook` object contains a `Worksheet[]`. This array is accessed by the `Workbook.getWorksheets()` method. `get` methods that are plural, such as `Worksheet.getCharts()`, return the entire object collection as an array. You'll see this pattern throughout the Office Scripts APIs: the `Worksheet` object has a `getTables()` method that returns a `Table[]`, the `Table` object has a `getColumns()` method that returns a `TableColumn[]`, as so on.
 
-Once the collection is retrieved, you can use regular array operations such as getting its `length` or use `for`, `for...of`, `while` loops for iteration or use TypeScript array methods such as `map`, `forEach` on them. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+
+Individual objects are also accessed from the collection through a `get` method. `get` methods that are singular, such as `Worksheet.getTable(name)`, return a single object and require an ID or name for the specific object. This ID or name is usually set by the script or through the Excel UI.
 
 The following script gets all tables in the workbook. It then ensures the headers are displays, the filter buttons are visible, and the table style is set to "TableStyleLight1".
 
@@ -183,7 +185,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-#### Add Excel objects with a script
+## Add Excel objects with a script
 
 You can programmatically add document objects, such as tables or charts, by calling the corresponding `add` method available on the parent object.
 
@@ -211,9 +213,9 @@ function main(workbook: ExcelScript.Workbook) {
 > [!TIP]
 > Most Excel objects have a `setName` method. This gives you an easy way to access Excel objects later in the script or in other scripts for the same workbook.
 
-#### Check if an object exists in the collection
+### Verify an object exists in the collection
 
-Scripts often need to check if a table or similar object exists before continuing. You can use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
+Scripts often need to check if a table or similar object exists before continuing. Use the names given by scripts or through the Excel UI to identify necessary objects and act accordingly. `get` methods return `undefined` when the requested object is not in the collection.
 
 The following script requests a table named "MyTable" and uses an `if...else` statement to check if the table was found.
 
@@ -255,7 +257,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-#### Remove Excel objects with a script
+## Remove Excel objects with a script
 
 To delete an object, call the object's `delete` method.
 
@@ -274,7 +276,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Further reading on the object model
+## Further reading on the object model
 
 The [Office Scripts API reference documentation](/javascript/api/office-scripts/overview) is a comprehensive listing of the objects used in Office Scripts. There, you can use the table of contents to navigate to any class you'd like to learn more about. The following are several commonly viewed pages.
 
