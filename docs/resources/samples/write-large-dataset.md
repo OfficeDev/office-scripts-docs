@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Write a large dataset
 
-The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, To reliably update a [large range](../../testing/platform-limits.md#), you'll need to write the data in smaller batches.
+The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).
 
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
@@ -16,7 +16,7 @@ For performance basics in Office Scripts, please read [Improve the performance o
 This script writes rows of a range in smaller parts. It selects 1000 cells to write at a time. Run the script on a blank worksheet to see the update batches in action. The console output gives further insight into what's happening.
 
 > [!NOTE]
-> You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`. You can change the number of cells to write as a single action be changing the value of `CELLS_IN_BATCH`.
+> You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`. You can change the number of cells to write as a single action by changing the value of `CELLS_IN_BATCH`.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
