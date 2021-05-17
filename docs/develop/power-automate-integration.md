@@ -43,7 +43,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 2. Every parameter must have a type (such as `string` or `number`).
 
-3. The basic types `string`, `number`, `boolean`, `any`, `unknown`, `object`, and `undefined` are supported.
+3. The basic types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
 
 4. Arrays of the previously listed basic types are supported.
 
