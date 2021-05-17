@@ -53,7 +53,7 @@ For more context on the Power Automate limitation and a discussion of potential 
 
 Excel files don't have an inherent location or timezone. Every time a user opens the workbook, their session uses that user's local timezone for date calculations. Power Automate always uses UTC.
 
-If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://flow.microsoft.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [`main` Parameters: Passing data to a script](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script) to learn how to provide that time information for the script.
+If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://flow.microsoft.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [`main` Parameters: Pass data to a script](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) to learn how to provide that time information for the script.
 
 ## See also
 
