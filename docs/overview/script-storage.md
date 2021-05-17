@@ -1,13 +1,15 @@
 ---
 title: 'Office Scripts file storage and ownership'
 description: 'Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.'
-ms.date: 11/13/2020
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
 # Office Scripts file storage and ownership
 
-Office Scripts are stored as **.osts** files in your Microsoft OneDrive. This allows your scripts to exist outside any particular workbook. Your OneDrive settings control the shared access and permissions for all script **.osts** files; independent of any Excel settings.
+Office Scripts are stored as **.osts** files in your Microsoft OneDrive. They are stored separately from a workbook. To give others access, [share the script with an Excel workbook](excel.md#sharing-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
+
+Unless you share your scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations. Office Scripts only recognizes and runs a script if it's in your OneDrive folder or shared with the workbook.
 
 ## File storage
 
@@ -24,6 +26,8 @@ Adding folders to your OneDrive helps keep your scripts organized. Any folders u
 ## File ownership and retention
 
 Office Scripts are stored in a user's OneDrive. They follow the retention and deletion policies specified by Microsoft OneDrive. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
+
+During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
 
 ## See also
 

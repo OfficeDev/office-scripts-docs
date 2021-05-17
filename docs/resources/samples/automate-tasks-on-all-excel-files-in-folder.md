@@ -80,7 +80,7 @@ This flow runs the script on every workbook in the "Sales" folder.
     1. "xlsx".
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file":::
-1. Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script (preview)** action. Use the following values for the action:
+1. Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
     1. **Location**: OneDrive for Business
     1. **Document Library**: OneDrive
     1. **File**: **Id** (the OneDrive file ID value)

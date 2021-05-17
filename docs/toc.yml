@@ -22,6 +22,8 @@ items:
     href: develop/scripting-fundamentals.md
   - name: Concepts
     items:
+    - name: Best practices in Office Scripts
+      href: develop/best-practices.md
     - name: Built-in JavaScript objects
       href: develop/javascript-objects.md
     - name: Code Editor environment
@@ -90,6 +92,8 @@ items:
         href: resources/samples/send-teams-invite-from-excel-data.md
       - name: Use external fetch calls in Office Scripts
         href: resources/samples/external-fetch-calls.md
+      - name: Write a large dataset
+        href: resources/samples/write-large-dataset.md
     - name: Scenarios
       items:
       - name: Analyze web downloads

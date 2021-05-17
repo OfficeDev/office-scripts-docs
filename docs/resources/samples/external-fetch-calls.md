@@ -1,15 +1,15 @@
 ---
 title: 'Use external fetch calls in Office Scripts'
 description: 'Learn how to make external API calls in Office Scripts.'
-ms.date: 05/06/2021
+ms.date: 05/14/2021
 localization_priority: Normal
 ---
 
 # Use external fetch calls in Office Scripts
 
-This script gets basic information about a user's GitHub repositories. It shows how to use `fetch` in a simple scenario.
+This script gets basic information about a user's GitHub repositories. It shows how to use `fetch` in a simple scenario. For more information about using `fetch` or other external calls, read [External API call support in Office Scripts](../../develop/external-calls.md)
 
-You can learn more about the GItHub APIs being used in the [GitHub API reference](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user). You can also see the raw API call output by visiting `https://api.github.com/users/{USERNAME}/repos` in a web browser (be sure to replace the {USERNAME} placeholder with your Github ID).
+You can learn more about the GItHub APIs being used in the [GitHub API reference](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user). You can also see the raw API call output by visiting `https://api.github.com/users/{USERNAME}/repos` in a web browser (be sure to replace the {USERNAME} placeholder with your GitHub ID).
 
 ![Get repositories info example](../../images/git.png)
 
