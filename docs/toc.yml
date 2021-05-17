@@ -102,6 +102,8 @@ items:
         href: resources/scenarios/noaa-data-fetch.md
       - name: Grade calculator
         href: resources/scenarios/grade-calculator.md
+      - name: Schedule interviews in Teams
+        href: resources/scenarios/schedule-interviews-in-teams.md
       - name: Task reminders (with Power Automate)
         href: resources/scenarios/task-reminders.md
     - name: Community contributions

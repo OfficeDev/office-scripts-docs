@@ -1,12 +1,12 @@
 ---
-title: 'Send a Teams meeting from Excel data'
+title: 'Schedule interviews in Teams'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
-ms.date: 05/06/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
 ---
 
-# Send Teams meeting from Excel data
+# Schedule interviews in Teams
 
 This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel.
 
