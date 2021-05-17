@@ -53,7 +53,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 ## Create an Office Script
 
-Let's create a script that logs information from an email. We want to know how which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
+Let's create a script that logs information from an email. We want to know which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
 
 1. From within the **Code Editor** task pane, select **New Script**.
 

@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Undo the changes made by running an Office Script
 
-You cannot undo a script using the **Undo** command. Instead, you must restore a previous version of the workbook from your cloud storage.
+You cannot undo changes made to the Excel workbook by a script with the Excel's **Undo** command. Instead, you must restore a previous version of the workbook from your cloud storage.
 
 ## Version history
 
