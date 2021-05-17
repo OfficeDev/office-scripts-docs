@@ -1,16 +1,16 @@
 ---
 title: 'Support older Office Scripts that use the async APIs'
 description: 'A primer on the Office Scripts Async APIs and how to use the load/sync pattern for older scripts.'
-ms.date: 05/10/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
 # Support older Office Scripts that use the async APIs
 
-This article will teach you how to maintain and update scripts that use the older model's async APIs. These APIs have the same core functionality as the now-standard, synchronous Office Scripts APIs, but they require your script to control the data synchronization between the script and the workbook.
+This article teaches you how to maintain and update scripts that use the older model's async APIs. These APIs have the same core functionality as the now-standard, synchronous Office Scripts APIs, but they require your script to control the data synchronization between the script and the workbook.
 
 > [!IMPORTANT]
-> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#converting-async-scripts-to-the-current-model) section has advice on how to make this transition.
+> The async model can only be used with scripts created before the implementation of the current [API model](scripting-fundamentals.md). Scripts are permanently locked to the API model they have upon creation. This also means that if you want to convert an old script to the new model, you must create a brand new script. We recommend you update your old scripts to the new model when making changes, since the current model is easier to use. The [Converting async scripts to the current model](#convert-async-scripts-to-the-current-model) section has advice on how to make this transition.
 
 ## Older `main` function signature
 
@@ -28,7 +28,7 @@ The `main` function accepts an `Excel.RequestContext` parameter, named `context`
 
 The `context` object is necessary because the script and Excel are running in different processes and locations. The script will need to make changes to or query data from the workbook in the cloud. The `context` object manages those transactions.
 
-## Sync and Load
+## Sync and load
 
 Because your script and workbook run in different locations, any data transfer between the two takes time. In the async API, commands are queued up until the script explicitly calls the `sync` operation to synchronize the script and workbook. Your script can work independently until it needs to do either of the following:
 
@@ -41,7 +41,7 @@ The following image shows an example control flow between the script and workboo
 
 ### Sync
 
-Whenever your async script needs to read data from or write data to the workbook, call the `RequestContext.sync` method as shown here:
+Whenever your async script needs to read data from or write data to the workbook, call the `RequestContext.sync` method as shown in the following code snippet:
 
 ```TypeScript
 await context.sync();
@@ -132,9 +132,9 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## Converting async scripts to the current model
+## Convert async scripts to the current model
 
-The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
+The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Microsoft Q&A](/answers/topics/office-scripts-dev.html). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
 
 1. Create a new script and copy the old async code into it. Be sure not to include the old `main` method signature, using the current `function main(workbook: ExcelScript.Workbook)` instead.
 

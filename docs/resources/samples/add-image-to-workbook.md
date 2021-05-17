@@ -1,7 +1,7 @@
 ---
 title: 'Add images to a workbook'
 description: 'Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.'
-ms.date: 05/11/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -47,7 +47,7 @@ function main(workbook: ExcelScript.Workbook)
 }
 ```
 
-## Sample code: Add an image at a URL to a workbook
+## Sample code: Add an image from a URL to a workbook
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {

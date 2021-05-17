@@ -115,7 +115,7 @@ Running this script creates the following data in the current worksheet:
 
 Scripts can create and manipulate the data structures and visualizations within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more. These are stored in collections, which will be discussed later in this article.
 
-### Creating a table
+### Create a table
 
 Create tables by using data-filled ranges. Formatting and table controls (such as filters) are automatically applied to the range.
 
@@ -135,7 +135,7 @@ Running this script on the worksheet with the previous data creates the followin
 
 :::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record":::
 
-### Creating a chart
+### Create a chart
 
 Create charts to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
 

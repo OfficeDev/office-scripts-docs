@@ -17,12 +17,6 @@ You Office Scripts are stored in your OneDrive. The **.osts** files are found in
 
 Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
 
-### Script folders
-
-Adding folders to your OneDrive helps keep your scripts organized. Any folders under **/Documents/Office Scripts/** are displayed under the **My Scripts** section of the Code Editor. Please note that these folders cannot be created or deleted by using the Code Editor. Likewise, scripts cannot be placed in folders, or moved across folders by using the Code Editor.
-
-:::image type="content" source="../images/script-folders.png" alt-text="The New Script dialog in Code Editor showing scripts contained in folders, as displayed in task pane":::
-
 ## File ownership and retention
 
 Office Scripts are stored in a user's OneDrive. They follow the retention and deletion policies specified by Microsoft OneDrive. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
