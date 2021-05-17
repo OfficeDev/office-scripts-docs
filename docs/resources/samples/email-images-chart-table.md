@@ -90,7 +90,7 @@ This flow runs the script and emails the returned images.
 
 1. Create a new **Instant cloud flow**.
 1. Select **Manually trigger a flow** and press **Create**.
-1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script (preview)** action. Use the following values for the action:
+1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: Your workbook ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))

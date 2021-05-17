@@ -5,7 +5,7 @@ ms.date: 12/28/2020
 localization_priority: Priority
 ---
 
-# Call scripts from a manual Power Automate flow (preview)
+# Call scripts from a manual Power Automate flow
 
 This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
 
@@ -80,9 +80,9 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate":::
 
-7. Under **Actions**, select **Run script (preview)**.
+7. Under **Actions**, select **Run script**.
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script (preview) action option in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate":::
 
 8. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following settings for the **Run script** connector:
 
