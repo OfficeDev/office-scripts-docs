@@ -18,7 +18,7 @@ This tutorial teaches you how to run an Office Script for Excel on the web throu
 
 ## Prepare the workbook
 
-Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-using-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names that Power Automate can reference.
+Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names that Power Automate can reference.
 
 1. Create a new workbook named **MyWorkbook**.
 

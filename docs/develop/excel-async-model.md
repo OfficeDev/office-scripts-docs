@@ -134,7 +134,7 @@ async function main(context: Excel.RequestContext) {
 
 ## Convert async scripts to the current model
 
-The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Microsoft Q&A](https://docs.microsoft.com/answers/topics/office-scripts-dev.html). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
+The current API model doesn't use `load`, `sync`, or a `RequestContext`. This makes the scripts much easier to write and maintain. Your best resource for converting old scripts is [Microsoft Q&A](/answers/topics/office-scripts-dev.html). There, you can ask the community for help with specific scenarios. The following guidance should help outline the general steps you'll need to take.
 
 1. Create a new script and copy the old async code into it. Be sure not to include the old `main` method signature, using the current `function main(workbook: ExcelScript.Workbook)` instead.
 
