@@ -19,7 +19,7 @@ Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/h
 
 ## `main` function: The script's starting point
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
+Each script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -33,7 +33,7 @@ The code inside the `main` function runs when the script is run. `main` can call
 
 ## Object model overview
 
-To write a script, you need to understand how the Office Script APIs fit together. The components of a workbook have specific relations to one another. In many ways, these relations match those of the Excel UI.
+To write a script, you need to understand how the Office Scripts APIs fit together. The components of a workbook have specific relations to one another. In many ways, these relations match those of the Excel UI.
 
 - A **Workbook** contains one or more **Worksheets**.
 - A **Worksheet** gives access to cells through **Range** objects.
