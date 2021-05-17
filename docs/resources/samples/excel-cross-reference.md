@@ -3,6 +3,7 @@ title: 'Cross-reference and format an Excel file'
 description: 'Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.'
 ms.date: 05/06/2021
 localization_priority: Normal
+ROBOTS: NOINDEX
 ---
 
 # Cross-reference and format an Excel file
