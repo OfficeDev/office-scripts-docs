@@ -1,7 +1,7 @@
 ---
 title: 'Basic scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 04/28/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -15,7 +15,7 @@ The following samples are simple scripts for you to try on your own workbooks. T
 4. Replace the entire script with the sample of your choice.
 5. Press **Run** in the Code Editor's task pane.
 
-## Scripting basics
+## Script basics
 
 These samples demonstrate fundamental building blocks for Office Scripts. Add these to your scripts to extend your solution and solve common problems.
 
@@ -150,7 +150,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 These samples work with collections of objects in the workbook.
 
-### Iterating over collections
+### Iterate over collections
 
 This script gets and logs the names of all the worksheets in the workbook. It also sets the their tab colors to a random color.
 
@@ -177,7 +177,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Querying and deleting from a collection
+### Query and delete from a collection
 
 This script creates a new worksheet. It checks for an existing copy of the worksheet and deletes it before making a new sheet.
 
@@ -315,7 +315,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Use data validation to create a drop-down list
+### Create a drop-down list using data validation
 
 This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
 
@@ -377,7 +377,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Spilling results from a formula
+### Handle #SPILL! error returned from a formula
 
 This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function. If the transpose results in a #SPILL error, it clears the target range and applies the formula again.
 
