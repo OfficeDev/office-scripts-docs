@@ -1,11 +1,11 @@
 ---
-title: 'Troubleshooting Office Scripts'
+title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
 ms.date: 05/10/2021
 localization_priority: Normal
 ---
 
-# Troubleshooting Office Scripts
+# Troubleshoot Office Scripts
 
 As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
 
