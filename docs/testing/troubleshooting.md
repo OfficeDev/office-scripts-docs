@@ -71,9 +71,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## Power Automate troubleshooting
+## Troubleshoot scripts running in Power Automate
 
-For information specific to running scripts through Power Automate, see [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md).
+For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ## Help resources
 
@@ -88,5 +88,5 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Best practices in Office Scripts](../develop/best-practices.md)
 - [Platform limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
-- [Troubleshoot Office Scripts with PowerAutomate](power-automate-troubleshooting.md)
+- [Troubleshoot Office Scripts running in PowerAutomate](power-automate-troubleshooting.md)
 - [Undo the effects of an Office Script](undo.md)
