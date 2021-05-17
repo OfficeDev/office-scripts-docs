@@ -1,11 +1,11 @@
 ---
-title: 'Troubleshoot Office Scripts with Power Automate'
+title: 'Troubleshoot Office Scripts running Power Automate'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
 ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
-# Troubleshoot with Power Automate
+# Troubleshoot Office Scripts running in Power Automate
 
 Power Automate lets you take your Office Script automation to the next level. However, because Power Automate runs scripts on your behalf in independent Excel sessions, there are a few important things to note.
 
