@@ -64,7 +64,7 @@ A range is a group of contiguous cells in the workbook. Scripts typically use A1
 
 Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object comprised of several smaller objects that are individually set.
 
-Ranges use two-dimensional arrays to manage information. Read the [Work with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#work-with-ranges) for more information on handling those arrays in the Office Scripts framework.
+Ranges use two-dimensional arrays to manage information. For more information on handling arrays in the Office Scripts framework, see [Work with ranges](javascript-objects.md#work-with-ranges).
 
 ### Range sample
 
@@ -165,7 +165,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 When an Excel object has a collection of one or more objects of the same type, it stores them in an array. For example, a `Workbook` object contains a `Worksheet[]`. This array is accessed by the `Workbook.getWorksheets()` method. `get` methods that are plural, such as `Worksheet.getCharts()`, return the entire object collection as an array. You'll see this pattern throughout the Office Scripts APIs: the `Worksheet` object has a `getTables()` method that returns a `Table[]`, the `Table` object has a `getColumns()` method that returns a `TableColumn[]`, as so on.
 
-The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Work with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#work-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. For more information on using the built-in array functionality with the Office Scripts framework, see [Work with collections](javascript-objects.md#work-with-collections). 
 
 Individual objects are also accessed from the collection through a `get` method. `get` methods that are singular, such as `Worksheet.getTable(name)`, return a single object and require an ID or name for the specific object. This ID or name is usually set by the script or through the Excel UI.
 
