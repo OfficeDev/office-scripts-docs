@@ -1,7 +1,7 @@
 ---
 title: 'Record, edit, and create Office Scripts in Excel on the web'
 description: 'A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.'
-ms.date: 01/06/2021
+ms.date: 05/17/2021
 localization_priority: Priority
 ---
 
@@ -34,13 +34,6 @@ First, we'll need some data and a small starting script.
 4. Press the **Record Actions** button.
 5. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
 6. Stop the recording by pressing the **Stop** button.
-7. Fill in the **Script Name** field with a memorable name.
-8. *Optional:* Fill in the **Description** field with a meaningful description. This is used to provide context as to what the script does. For the tutorial, you can use "Color-codes rows of a table".
-
-   > [!TIP]
-   > You can edit a script's description later from the **Script Details** pane, which is located under the Code Editor's **...** menu.
-
-9. Save the script by pressing the **Save** button.
 
     Your worksheet should look like this (don't worry if the color is different):
 
