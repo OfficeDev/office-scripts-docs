@@ -3,23 +3,19 @@ title: 'Schedule interviews in Teams'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
 ms.date: 05/17/2021
 localization_priority: Normal
-ROBOTS: NOINDEX
 ---
 
-# Schedule interviews in Teams
+# Office Scripts sample scenario: Schedule interviews in Teams
 
-This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel.
+In this scenario, you're an HR recruiter scheduling interview meetings with candidates in Teams. You manage the interview schedule of candidates in an Excel file. You'll need to send the Teams meeting invite to both the candidate and interviewers. You then need to update the Excel file with the confirmation that Teams meetings have been sent.
 
-## Example scenario
+## Scripting skills covered
 
-* An HR recruiter manages the interview schedule of candidates in an Excel file.
-* The recruiter needs to send the Teams meeting invite to the candidate and interviewers. The business rules are to select:
+* Power Automate flows
+* Teams integration
+* Table parsing
 
-    (a) Invites to only those for whom the invite isn't already sent as recorded in the file column.
-
-    (b) Interview dates in the future (no past dates).
-
-* The recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.
+## Solution
 
 The solution has 3 parts:
 
