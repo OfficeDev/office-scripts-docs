@@ -64,7 +64,7 @@ A range is a group of contiguous cells in the workbook. Scripts typically use A1
 
 Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object comprised of several smaller objects that are individually set.
 
-Ranges use two-dimensional arrays to manage information. Read the [Working with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-ranges) for more information on handling those arrays in the Office Scripts framework.
+Ranges use two-dimensional arrays to manage information. For more information on handling arrays in the Office Scripts framework, see [Work with ranges](javascript-objects.md#work-with-ranges).
 
 ### Range sample
 
@@ -115,7 +115,7 @@ Running this script creates the following data in the current worksheet:
 
 Scripts can create and manipulate the data structures and visualizations within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more. These are stored in collections, which will be discussed later in this article.
 
-### Creating a table
+### Create a table
 
 Create tables by using data-filled ranges. Formatting and table controls (such as filters) are automatically applied to the range.
 
@@ -135,7 +135,7 @@ Running this script on the worksheet with the previous data creates the followin
 
 :::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record":::
 
-### Creating a chart
+### Create a chart
 
 Create charts to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
 
@@ -165,7 +165,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 When an Excel object has a collection of one or more objects of the same type, it stores them in an array. For example, a `Workbook` object contains a `Worksheet[]`. This array is accessed by the `Workbook.getWorksheets()` method. `get` methods that are plural, such as `Worksheet.getCharts()`, return the entire object collection as an array. You'll see this pattern throughout the Office Scripts APIs: the `Worksheet` object has a `getTables()` method that returns a `Table[]`, the `Table` object has a `getColumns()` method that returns a `TableColumn[]`, as so on.
 
-The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. For more information on using the built-in array functionality with the Office Scripts framework, see [Work with collections](javascript-objects.md#work-with-collections). 
 
 Individual objects are also accessed from the collection through a `get` method. `get` methods that are singular, such as `Worksheet.getTable(name)`, return a single object and require an ID or name for the specific object. This ID or name is usually set by the script or through the Excel UI.
 

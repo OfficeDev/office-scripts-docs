@@ -1,11 +1,11 @@
 ---
-title: 'Troubleshooting Office Scripts'
+title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
 ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
-# Troubleshooting Office Scripts
+# Troubleshoot Office Scripts
 
 As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
 
@@ -71,9 +71,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## Power Automate troubleshooting
+## Troubleshoot scripts in Power Automate
 
-For information specific to running scripts through Power Automate, see [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md).
+For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ## Help resources
 
@@ -88,5 +88,5 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Best practices in Office Scripts](../develop/best-practices.md)
 - [Platform limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
-- [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)
+- [Troubleshoot Office Scripts running in PowerAutomate](power-automate-troubleshooting.md)
 - [Undo the effects of Office Scripts](undo.md)

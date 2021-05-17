@@ -1,11 +1,11 @@
 ---
 title: 'Using built-in JavaScript objects in Office Scripts'
 description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
-ms.date: 07/16/2020
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
-# Using built-in JavaScript objects in Office Scripts
+# Use built-in JavaScript objects in Office Scripts
 
 JavaScript provides several built-in objects that you can use in your Office Scripts, regardless of whether you're scripting in JavaScript or [TypeScript](../overview/code-editor-environment.md) (a superset of JavaScript). This article describes how you can use some of the built-in JavaScript objects in Office Scripts for Excel on the web.
 
@@ -16,7 +16,7 @@ JavaScript provides several built-in objects that you can use in your Office Scr
 
 The [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) object provides a standardized way to work with arrays in your script. While arrays are standard JavaScript constructs, they relate to Office Scripts in two major ways: ranges and collections.
 
-### Working with ranges
+### Work with ranges
 
 Ranges contain several two-dimensional arrays that directly map to the cells in that range. These arrays contain specific information about each cell in that range. For example, `Range.getValues` returns all the values in those cells (with the rows and columns of the two-dimensional array mapping to the rows and columns of that worksheet subsection). `Range.getFormulas` and `Range.getNumberFormats` are other frequently used methods that return arrays like `Range.getValues`.
 
@@ -43,7 +43,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Working with collections
+### Work with collections
 
 Many Excel objects are contained in a collection. The collection is managed by the Office Scripts API and exposed as an array. For example, all [Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) in a worksheet are contained in a `Shape[]` that is returned by the `Worksheet.getShapes` method. You can use this array to read values from the collection, or you can access specific objects from the parent object's `get*` methods.
 
