@@ -71,7 +71,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## Troubleshoot scripts running in Power Automate
+## Troubleshoot scripts in Power Automate
 
 For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 

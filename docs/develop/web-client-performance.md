@@ -95,7 +95,7 @@ Console logging is a vital tool for [debugging your scripts](../testing/troubles
 
 ## Case-by-case help
 
-As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Microsoft Q&A](https://docs.microsoft.com/answers/topics/office-scripts-dev.html). Be sure to tag your question with "office-scripts-dev" so experts can find it and help. 
+As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Microsoft Q&A](/answers/topics/office-scripts-dev.html). Be sure to tag your question with "office-scripts-dev" so experts can find it and help.
 
 ## See also
 

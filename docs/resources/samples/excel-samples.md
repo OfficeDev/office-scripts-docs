@@ -377,9 +377,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Handle #SPILL! error returned from a formula
+### Handle a `#SPILL!` error returned from a formula
 
-This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function. If the transpose results in a #SPILL error, it clears the target range and applies the formula again.
+This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function. If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
