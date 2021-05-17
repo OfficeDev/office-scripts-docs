@@ -28,4 +28,4 @@ During editing, files are temporarily stored in the browser. You must save the s
 - [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Undo the effects of an Office Script](../testing/undo.md)
+- [Undo the effects of Office Scripts](../testing/undo.md)
