@@ -31,7 +31,7 @@ You'll need to learn the external service's interfaces to make calls to that ser
 
 * There is no way to sign in or use OAuth2 type of authentication flows. All keys and credentials have to be hardcoded (or read from another source).
 * There is no infrastructure to store API credentials and keys. This will have to be managed by the user.
-* Document cookies, `localStorage` and `sessionStorage` objects are not supported. 
+* Document cookies, `localStorage`, and `sessionStorage` objects are not supported. 
 * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
 * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
 
