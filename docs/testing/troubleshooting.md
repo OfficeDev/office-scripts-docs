@@ -89,4 +89,4 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Platform limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Troubleshoot Office Scripts running in PowerAutomate](power-automate-troubleshooting.md)
-- [Undo the effects of an Office Script](undo.md)
+- [Undo the effects of Office Scripts](undo.md)

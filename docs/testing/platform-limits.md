@@ -54,6 +54,6 @@ The Power Automate platform also has usage limitations, which can be found in th
 ## See also
 
 - [Troubleshoot Office Scripts](troubleshooting.md)
-- [Undo the effects of an Office Script](undo.md)
+- [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
