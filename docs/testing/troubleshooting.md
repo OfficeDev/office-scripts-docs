@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 05/10/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -88,5 +88,5 @@ If there is a problem with the Action Recorder or Editor, send feedback through 
 - [Best practices in Office Scripts](../develop/best-practices.md)
 - [Platform limits with Office Scripts](platform-limits.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
-- [Troubleshooting information for Power Automate with Office Scripts](power-automate-troubleshooting.md)
+- [Troubleshoot Office Scripts with PowerAutomate](power-automate-troubleshooting.md)
 - [Undo the effects of an Office Script](undo.md)
