@@ -74,7 +74,7 @@ interface JSONData {
 
 ## External calls from Power Automate
 
-Any external API calls fail when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel client and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
+All external API calls fail when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel application and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
 
 You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equivalent actions to pull data from or push it to an external service.
 
