@@ -23,7 +23,7 @@ Office Scripts use a specialized version the Office JavaScript APIs for [Office 
 
 ## External library support
 
-Office Scripts do not support the usage of external, third-party JavaScript libraries. Currently, you cannot call any library other than the Office Scripts APIs from a script. You do still have access to any [built-in JavaScript object](../develop/javascript-objects.md), such as [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math).
+Office Scripts does not support the usage of external, third-party JavaScript libraries. Currently, you cannot call any library other than the Office Scripts APIs from a script. You do still have access to any [built-in JavaScript object](../develop/javascript-objects.md), such as [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
 ## IntelliSense
 
