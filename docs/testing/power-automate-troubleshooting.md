@@ -1,18 +1,18 @@
 ---
-title: 'Troubleshooting information for Power Automate with Office Scripts'
+title: 'Troubleshoot Office Scripts with Power Automate'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
-ms.date: 01/14/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
-# Troubleshooting information for Power Automate with Office Scripts
+# Troubleshoot with Power Automate
 
 Power Automate lets you take your Office Script automation to the next level. However, because Power Automate runs scripts on your behalf in independent Excel sessions, there are a few important things to note.
 
 > [!TIP]
 > If you're just starting to use Office Scripts with Power Automate, please start with [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn about the platforms.
 
-## Avoid using relative references
+## Avoid relative references
 
 Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, may behave differently in Power Automate. This is because the APIs are based on a relative position of the user's view or cursor and that reference doesn't exist in a Power Automate flow.
 
@@ -57,6 +57,6 @@ If your script uses dates or times, there may be behavioral differences when the
 
 ## See also
 
-- [Troubleshooting Office Scripts](troubleshooting.md)
+- [Troubleshoot Office Scripts](troubleshooting.md)
 - [Run Office Scripts with Power Automate](../develop/power-automate-integration.md)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)
