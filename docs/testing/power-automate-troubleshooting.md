@@ -43,7 +43,7 @@ The following methods use a default behavior, in lieu of any user's current stat
 
 ## Data refresh not supported in Power Automate
 
-Office Scripts can't refresh data when run in Power Automate. Methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, any formula that uses a workbook link doesn't trigger a data refresh in Power Automate.
+Office Scripts can't refresh data when run in Power Automate. Methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
 
 ### Script methods that do nothing when run in Power Automate flows
 
