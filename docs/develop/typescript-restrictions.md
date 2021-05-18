@@ -7,11 +7,11 @@ localization_priority: Normal
 
 # TypeScript restrictions in Office Scripts
 
-Office Scripts use the TypeScript language. For the most part, any TypeScript or JavaScript code will work in an Office Script. However, there are a few restrictions enforced by the Code Editor to ensure your script works consistently and as intended with your Excel workbook.
+Office Scripts use the TypeScript language. For the most part, any TypeScript or JavaScript code will work in Office Scripts. However, there are a few restrictions enforced by the Code Editor to ensure your script works consistently and as intended with your Excel workbook.
 
 ## No 'any' type in Office Scripts
 
-Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) is optional in TypeScript, because the types can be inferred. However, Office Script requires that a variable can't be of [type any](https://www.typescriptlang.org/docs/handbook/basic-types.html#any). Both explicit and implicit `any` are not allowed in an Office Script. These cases are reported as errors.
+Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) is optional in TypeScript, because the types can be inferred. However, Office Scripts requires that a variable can't be of [type any](https://www.typescriptlang.org/docs/handbook/basic-types.html#any). Both explicit and implicit `any` are not allowed in Office Scripts. These cases are reported as errors.
 
 ### Explicit `any`
 

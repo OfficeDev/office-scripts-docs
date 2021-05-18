@@ -1,7 +1,7 @@
 ---
 title: 'Platform limits and requirements with Office Scripts'
 description: 'Resource limits and browser support for Office Scripts when used with Excel on the web'
-ms.date: 05/13/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -53,7 +53,7 @@ The Power Automate platform also has usage limitations, which can be found in th
 
 ## See also
 
-- [Troubleshooting Office Scripts](troubleshooting.md)
-- [Undo the effects of an Office Script](undo.md)
+- [Troubleshoot Office Scripts](troubleshooting.md)
+- [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
 - [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
