@@ -38,7 +38,7 @@ Office Scripts can be run through Power Automate. Your workbook can be updated t
 
 VBA doesn't have a Power Automate connector. All supported VBA scenarios involve a user attending to the macro's execution.
 
-Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md) tutorial to start learning about Power Automate. You can also check out the [Automated task reminders](./scenarios/task-reminders.md) sample to see Office Scripts connected to Teams through Power Automate in a real-world scenario.
+Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md) tutorial to start learning about Power Automate. You can also check out the [Automated task reminders](scenarios/task-reminders.md) sample to see Office Scripts connected to Teams through Power Automate in a real-world scenario.
 
 ## See also
 
