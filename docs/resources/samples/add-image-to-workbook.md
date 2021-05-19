@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook)
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
   // Fetch the image from a URL.
-  const link = "https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/images/git-octocat.png";
+  const link = "https://raw.githubusercontent.com/OfficeDev/office-scripts-docs/master/docs/images/git-octocat.png";
   const response = await fetch(link);
 
   // Store the response as an ArrayBuffer, since it is a raw image file.
