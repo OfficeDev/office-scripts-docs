@@ -30,7 +30,7 @@ Discover which tenants are using Office Scripts with the audit log in the compli
 To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
 
 > [!NOTE]
-> Running a script is currently not logged. Only the create, view, and modify actions are recorded.
+> Running a script is currently not logged. Only the create, view, and modify actions are logged.
 
 ## See also
 
