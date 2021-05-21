@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Priority
 ---
 
@@ -63,7 +63,7 @@ After completing the tutorial, read [Scripting fundamentals for Office Scripts i
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script Details page showing the 'Share with others in this workbook' option":::
 
-Office Scripts can be shared with other users of an Excel workbook. When you share a script with others in a workbook, the script is attached to the workbook. Your scripts are stored in your OneDrive, and when you share one, you create a link to it in the workbook you have open.
+Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script.
 
 More details about sharing and unsharing scripts can be in the article [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
 
@@ -76,7 +76,7 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 
 ## Next steps
 
-Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tutorial.md) to learn how to create your first Office Scripts.
+Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tutorial.md) to learn how to create your first script.
 
 ## See also
 
