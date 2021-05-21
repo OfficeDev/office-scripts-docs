@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts file storage and ownership'
 description: 'Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.'
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
 ---
 
@@ -22,6 +22,15 @@ Scripts that are shared with one of your workbooks remain in the script creator'
 Office Scripts are stored in a user's OneDrive. They follow the retention and deletion policies specified by Microsoft OneDrive. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
 
 During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
+
+## Audit Office Scripts usage at the admin level
+
+Discover which tenants are using Office Scripts with the audit log in the compliance center. To learn how to use this tool, visit [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log).
+
+To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
+
+> [!NOTE]
+> Running a script is currently not logged. Only the create, view, and modify actions are recorded.
 
 ## See also
 
