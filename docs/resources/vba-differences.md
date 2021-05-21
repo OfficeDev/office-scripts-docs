@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 05/18/2021
+ms.date: 05/21/2021
 localization_priority: Normal
 ---
 
@@ -24,7 +24,7 @@ Office Scripts use a universal runtime for JavaScript. This gives consistent beh
 
 VBA macros have the same security clearance as Excel. This gives them full access to your desktop. Office Scripts only have access to the workbook, not the machine hosting the workbook. Additionally, no JavaScript authentication tokens can be shared with scripts. This means the script has neither the tokens of the signed-in user nor are there any API capabilities for signing in to an external service, so they are unable to use existing tokens to make external calls on behalf of the user.
 
-Admins have three options for VBA macros: allow all macros on the tenant, allow no macros on the tenant, or allow only macros with signed certificates. This lack of granularity makes it hard to isolate a single bad actor. Currently, Office Scripts are either on or off for a tenant. However, we are working to give admins more control over individual scripts and script creators.
+Admins have three options for VBA macros: allow all macros on the tenant, allow no macros on the tenant, or allow only macros with signed certificates. This lack of granularity makes it hard to isolate a single bad actor. Currently, Office Scripts can be off for an entire tenant, on for an entire tenant, or on for a group of users in a tenant. Admins also have control over who can share scripts with others and who can use scripts in Power Automate.
 
 ## Coverage
 
