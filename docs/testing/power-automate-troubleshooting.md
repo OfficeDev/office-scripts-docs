@@ -18,7 +18,7 @@ Power Automate runs your script in the chosen Excel workbook on your behalf. The
 
 Some relative reference APIs throw errors in Power Automate. Others have a default behavior that implies a user's state. When designing your scripts, be sure to use absolute references for worksheets and ranges. This makes your Power Automate flow consistent, even if worksheets are rearranged.
 
-### Script methods that fail when run Power Automate flows
+### Script methods that fail when run in Power Automate flows
 
 The following methods throw an error and fail when called from a script in a Power Automate flow.
 
