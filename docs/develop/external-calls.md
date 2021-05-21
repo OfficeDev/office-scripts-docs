@@ -1,18 +1,19 @@
 ---
 title: 'External API call support in Office Scripts'
 description: 'Support and guidance for making external API calls in an Office Script.'
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
 ---
 
 # External API call support in Office Scripts
 
-Script authors shouldn't expect consistent behavior when using [external APIs](https://developer.mozilla.org/docs/Web/API) during the platform's preview phase. As such, do not rely on external APIs for critical script scenarios.
-
-Calls to external APIs can be only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
+Scripts support calls to external services. Use these services to supply data and other information to your workbook.
 
 > [!CAUTION]
 > External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish firewall protection against such calls.
+
+> [!IMPORTANT]
+> Calls to external APIs can be only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
 
 ## Configure your script for external calls
 
@@ -31,7 +32,7 @@ You'll need to learn the external service's interfaces to make calls to that ser
 
 * There is no way to sign in or use OAuth2 type of authentication flows. All keys and credentials have to be hardcoded (or read from another source).
 * There is no infrastructure to store API credentials and keys. This will have to be managed by the user.
-* Document cookies, `localStorage`, and `sessionStorage` objects are not supported. 
+* Document cookies, `localStorage`, and `sessionStorage` objects are not supported.
 * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
 * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
 
