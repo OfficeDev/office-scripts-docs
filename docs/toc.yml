@@ -52,8 +52,6 @@ items:
       href: develop/typescript-restrictions.md
     - name: Undo the effects of Office Scripts
       href: testing/undo.md
-    - name: Support older Office Scripts
-      href: develop/excel-async-model.md
   - name: Samples
     items:
     - name: Overview

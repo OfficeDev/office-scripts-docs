@@ -1,7 +1,7 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 05/10/2021
+ms.date: 05/21/2021
 localization_priority: Priority
 ---
 
@@ -86,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
     let productData = [
         ["Almonds", 6, 7.5],
         ["Coffee", 20, 34.5],
-        ["Chocolate", 10, 9.56],
+        ["Chocolate", 10, 9.54],
     ];
     let dataRange = sheet.getRange("B3:D5");
     dataRange.setValues(productData);
@@ -110,6 +110,32 @@ function main(workbook: ExcelScript.Workbook) {
 Running this script creates the following data in the current worksheet:
 
 :::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers":::
+
+### The types of Range values
+
+Each cell has value. This value is the underlying value entered into the cell, which may be different from the text displayed in Excel. For example, you might see "5/2/2021" displayed in the cell as a date, but the actual value is 44318. This display can be changed with the number format, but the actual value and type in the cell only changes when a new value is set.
+
+When you are using the cell value, it's important to tell TypeScript what value you are expecting to get from a cell or range. A cell contains one of the following types: `string`, `number`, or `boolean`. In order for your script to treat the returned values as one of those types, you must declare the type.
+
+The following script gets the average price from the table in the previous sample. Note the code `priceRange.getValues() as number[][]`. This [asserts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) the type of the range values to be a `number[][]`. All the values in that array can then be treated as numbers in the script.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active worksheet.
+  let sheet = workbook.getActiveWorksheet();
+
+  // Get the "Unit Price" column. 
+  // The result of calling getValues is declared to be a number[][] so that we can perform arithmetic operations.
+  let priceRange = sheet.getRange("D3:D5");
+  let prices = priceRange.getValues() as number[][];
+
+  // Get the average price.
+  let totalPrices = 0;
+  prices.forEach((price) => totalPrices += price[0]);
+  let averagePrice = totalPrices / prices.length;
+  console.log(averagePrice);
+}
+```
 
 ## Charts, tables, and other data objects
 

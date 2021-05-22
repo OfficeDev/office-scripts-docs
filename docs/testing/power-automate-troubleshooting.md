@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot Office Scripts running in Power Automate'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
-ms.date: 05/17/2021
+ms.date: 05/18/2021
 localization_priority: Normal
 ---
 
@@ -18,9 +18,9 @@ Power Automate runs your script in the chosen Excel workbook on your behalf. The
 
 Some relative reference APIs throw errors in Power Automate. Others have a default behavior that implies a user's state. When designing your scripts, be sure to use absolute references for worksheets and ranges. This makes your Power Automate flow consistent, even if worksheets are rearranged.
 
-### Script methods that fail when run Power Automate flows
+### Script methods that fail when run in Power Automate flows
 
-The following methods will throw an error and fail when called from a script in a Power Automate flow.
+The following methods throw an error and fail when called from a script in a Power Automate flow.
 
 | Class | Method |
 |--|--|
@@ -40,6 +40,21 @@ The following methods use a default behavior, in lieu of any user's current stat
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Returns either the first worksheet in the workbook or the worksheet currently activated by the `Worksheet.activate` method. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Marks the worksheet as the active worksheet for purposes of `Workbook.getActiveWorksheet`. |
+
+## Data refresh not supported in Power Automate
+
+Office Scripts can't refresh data when run in Power Automate. Methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
+
+### Script methods that do nothing when run in Power Automate flows
+
+The following methods do nothing in a script when called through Power Automate. They still return successfully and don't throw any errors.
+
+| Class | Method |
+|--|--|
+| [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
 ## Select workbooks with the file browser control
 
