@@ -115,7 +115,7 @@ Running this script creates the following data in the current worksheet:
 
 Each cell has value. This value is the underlying value entered into the cell, which may be different from the text displayed in Excel. For example, you might see "5/2/2021" displayed in the cell as a date, but the actual value is 44318. This display can be changed with the number format, but the actual value and type in the cell only changes when a new value is set.
 
-When you are using the cell value, it's important to tell TypeScript what value you are expecting to get from a cell or range. A cell contains one of the following types: `string`, `number`, `boolean`. In order for your script to treat the returned values as one of those types, you must declare the type.
+When you are using the cell value, it's important to tell TypeScript what value you are expecting to get from a cell or range. A cell contains one of the following types: `string`, `number`, or `boolean`. In order for your script to treat the returned values as one of those types, you must declare the type.
 
 The following script gets the average price from the table in the previous sample. Note the code `priceRange.getValues() as number[][]`. This [asserts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) the type of the range values to be a `number[][]`. All the values in that array can then be treated as numbers in the script.
 
