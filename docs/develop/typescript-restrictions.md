@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 02/05/2021
+ms.date: 05/24/2021
 localization_priority: Normal
 ---
 
@@ -15,19 +15,21 @@ Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-min
 
 ### Explicit `any`
 
-You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let someVariable: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
+You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let value: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit `any` message in the Code Editor's hover text":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit `any` error in the console window":::
 
-In the previous screenshot `[5, 16] Explicit Any is not allowed` indicates that line #5, column #16 defines `any` type. This helps you locate the error.
+In the previous screenshot, `[2, 14] Explicit Any is not allowed` indicates that line #5, column #16 defines `any` type. This helps you locate the error.
 
 To get around this issue, always define the type of the variable. If you are uncertain about the type of a variable, you can use a [union type](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be useful for variables that hold `Range` values, which can be of type `string`, `number`, or `boolean` (the type for `Range` values is a union of those: `string | number | boolean`).
 
 ### Implicit `any`
 
 TypeScript variable types can be [implicitly](https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
+
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="The implicit `any` message in the Code Editor's hover text":::
 
 The most common case on any implicit `any` is in a variable declaration, such as `let value;`. There are two ways to avoid this:
 
