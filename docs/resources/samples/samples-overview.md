@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 05/17/2021
+ms.date: 05/24/2021
 localization_priority: Normal
 ---
 
@@ -14,8 +14,6 @@ For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-th
 In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
 
 We also welcome [contributions from the community](#community-contributions-and-fun-samples).
-
-[!INCLUDE [Preview note](../../includes/preview-note.md)]
 
 ## Basics
 
