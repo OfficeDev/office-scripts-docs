@@ -1,21 +1,19 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 05/21/2021
+ms.date: 05/24/2021
 localization_priority: Priority
 ---
 
-# Scripting fundamentals for Office Scripts in Excel on the web (preview)
+# Scripting fundamentals for Office Scripts in Excel on the web
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn how the Excel objects work together and how the Code Editor synchronizes with a workbook.
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## TypeScript: The language of Office Scripts
 
 Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 

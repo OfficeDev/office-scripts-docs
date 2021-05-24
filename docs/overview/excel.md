@@ -1,11 +1,11 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 05/21/2021
+ms.date: 05/24/2021
 localization_priority: Priority
 ---
 
-# Office Scripts in Excel on the web (preview)
+# Office Scripts in Excel on the web
 
 Office Scripts in Excel on the web let you automate your day-to-day tasks. You can record your Excel actions with the Action Recorder, which creates a TypeScript language script. You can also create and edit scripts with the Code Editor. Your scripts can then be shared across your organization so your coworkers can also automate their workflows.
 
@@ -16,8 +16,6 @@ This series of documents teaches you how to use these tools. You'll be introduce
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
 ## Requirements
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 To use Office Scripts, you'll need the following.
 
