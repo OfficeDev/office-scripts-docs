@@ -30,7 +30,7 @@ First, we'll need some data and a small starting script.
     |Limes |600 |500 |
     |Grapefruits |900 |700 |
 
-3. Open the **Automate** tab. If you do not see the **Automate** tab, check the ribbon overflow by pressing the drop-down arrow. If it is still not there, follow the advice in the article [Troubleshoot Office Scripts](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
+3. Open the **Automate** tab. If you don't see the **Automate** tab, check the ribbon overflow by pressing the drop-down arrow. If it's still not there, follow the advice in the article [Troubleshoot Office Scripts](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
 4. Press the **Record Actions** button.
 5. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
 6. Stop the recording by pressing the **Stop** button.
