@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts file storage and ownership'
 description: 'Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.'
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
 ---
 
@@ -17,21 +17,24 @@ You Office Scripts are stored in your OneDrive. The **.osts** files are found in
 
 Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
 
-### Script folders
-
-Adding folders to your OneDrive helps keep your scripts organized. Any folders under **/Documents/Office Scripts/** are displayed under the **My Scripts** section of the Code Editor. Please note that these folders cannot be created or deleted by using the Code Editor. Likewise, scripts cannot be placed in folders, or moved across folders by using the Code Editor.
-
-:::image type="content" source="../images/script-folders.png" alt-text="The New Script dialog in Code Editor showing scripts contained in folders, as displayed in task pane":::
-
 ## File ownership and retention
 
 Office Scripts are stored in a user's OneDrive. They follow the retention and deletion policies specified by Microsoft OneDrive. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [OneDrive retention and deletion](/onedrive/retention-and-deletion).
 
 During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
 
+## Audit Office Scripts usage at the admin level
+
+Discover which tenants are using Office Scripts with the audit log in the compliance center. To learn how to use this tool, visit [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log).
+
+To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
+
+> [!NOTE]
+> Running a script is currently not logged. Only the create, view, and modify actions are logged.
+
 ## See also
 
 - [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Undo the effects of an Office Script](../testing/undo.md)
+- [Undo the effects of Office Scripts](../testing/undo.md)

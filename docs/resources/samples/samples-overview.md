@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 05/13/2021
+ms.date: 05/24/2021
 localization_priority: Normal
 ---
 
@@ -14,8 +14,6 @@ For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-th
 In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
 
 We also welcome [contributions from the community](#community-contributions-and-fun-samples).
-
-[!INCLUDE [Preview note](../../includes/preview-note.md)]
 
 ## Basics
 
@@ -33,7 +31,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | Project | Details |
 |---------|---------|
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
-| [Cross-reference and format an Excel file](excel-cross-reference.md) | This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [External fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
 | [Filter Excel table and get visible range](filter-table-get-visible-range.md) | This sample filters an Excel table and returns the visible range as a JSON object. This JSON could be provided to a Power Automate flow as part of a larger solution. |
@@ -42,7 +39,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
 | [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
-| [Send a Teams meeting from Excel data](send-teams-invite-from-excel-data.md) | This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel. |
 | [Write a large dataset](write-large-dataset.md) | This sample shows how to send a large range as smaller subranges. |
 
 ## Scenarios

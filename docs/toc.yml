@@ -50,10 +50,8 @@ items:
       href: testing/platform-limits.md
     - name: TypeScript restrictions
       href: develop/typescript-restrictions.md
-    - name: Undo the effects of an Office Script
+    - name: Undo the effects of Office Scripts
       href: testing/undo.md
-    - name: Support older Office Scripts
-      href: develop/excel-async-model.md
   - name: Samples
     items:
     - name: Overview
@@ -72,8 +70,6 @@ items:
       items:
       - name: Count blank rows in worksheets
         href: resources/samples/count-blank-rows.md
-      - name: Cross-reference and format Excel files
-        href: resources/samples/excel-cross-reference.md
       - name: Email images of chart and table
         href: resources/samples/email-images-chart-table.md
       - name: Filter table and get visible range
@@ -88,8 +84,6 @@ items:
         href: resources/samples/remove-hyperlinks-from-cells.md
       - name: Run a script on all Excel files in a folder
         href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
-      - name: Send Teams invite from Excel data
-        href: resources/samples/send-teams-invite-from-excel-data.md
       - name: Use external fetch calls in Office Scripts
         href: resources/samples/external-fetch-calls.md
       - name: Write a large dataset

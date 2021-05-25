@@ -1,7 +1,7 @@
 ---
 title: 'Add images to a workbook'
 description: 'Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.'
-ms.date: 05/11/2021
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -47,12 +47,12 @@ function main(workbook: ExcelScript.Workbook)
 }
 ```
 
-## Sample code: Add an image at a URL to a workbook
+## Sample code: Add an image from a URL to a workbook
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
   // Fetch the image from a URL.
-  const link = "https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/images/git-octocat.png";
+  const link = "https://raw.githubusercontent.com/OfficeDev/office-scripts-docs/master/docs/images/git-octocat.png";
   const response = await fetch(link);
 
   // Store the response as an ArrayBuffer, since it is a raw image file.

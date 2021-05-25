@@ -1,7 +1,7 @@
 ---
 title: 'Improve the performance of your Office Scripts'
 description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
-ms.date: 06/15/2020
+ms.date: 05/17/2021
 localization_priority: Normal
 ---
 
@@ -95,7 +95,7 @@ Console logging is a vital tool for [debugging your scripts](../testing/troubles
 
 ## Case-by-case help
 
-As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts). Be sure to tag your question with "office-scripts" so experts can find it and help.
+As the Office Scripts platform expands to work with [Power Automate](https://flow.microsoft.com/), [Adaptive Cards](/adaptive-cards), and other cross-product features, the details of the script-workbook communication become more intricate. If you need help making your script run faster, please reach out through [Microsoft Q&A](/answers/topics/office-scripts-dev.html). Be sure to tag your question with "office-scripts-dev" so experts can find it and help.
 
 ## See also
 

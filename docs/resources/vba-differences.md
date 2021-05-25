@@ -1,14 +1,14 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 12/14/2020
+ms.date: 05/21/2021
 localization_priority: Normal
 ---
 
 # Differences between Office Scripts and VBA macros
 
 Office Scripts and VBA macros have a lot in common. They both allow users to automate solutions through an easy-to-use action recorder and allow edits of those recordings. Both frameworks are designed to empower people who may not consider themselves programmers to create small programs in Excel.
-The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed with cross-platform support and security as the guiding principles. Currently, Office Scripts are only supported in Excel on the web.
+The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed for secure, cloud-based solutions. Currently, Office Scripts are only supported in Excel on the web.
 
 :::image type="content" source="../images/office-programmability-diagram.png" alt-text="A four-quadrant diagram showing the areas of focus for different Office extensibility solutions. Both Office Scripts and VBA macros are designed to help end users create solutions, but Office Scripts are built for the web and collaboration (whereas VBA is for the desktop)":::
 
@@ -24,7 +24,7 @@ Office Scripts use a universal runtime for JavaScript. This gives consistent beh
 
 VBA macros have the same security clearance as Excel. This gives them full access to your desktop. Office Scripts only have access to the workbook, not the machine hosting the workbook. Additionally, no JavaScript authentication tokens can be shared with scripts. This means the script has neither the tokens of the signed-in user nor are there any API capabilities for signing in to an external service, so they are unable to use existing tokens to make external calls on behalf of the user.
 
-Admins have three options for VBA macros: allow all macros on the tenant, allow no macros on the tenant, or allow only macros with signed certificates. This lack of granularity makes it hard to isolate a single bad actor. Currently, Office Scripts are either on or off for a tenant. However, we are working to give admins more control over individual scripts and script creators.
+Admins have three options for VBA macros: allow all macros on the tenant, allow no macros on the tenant, or allow only macros with signed certificates. This lack of granularity makes it hard to isolate a single bad actor. Currently, Office Scripts can be off for an entire tenant, on for an entire tenant, or on for a group of users in a tenant. Admins also have control over who can share scripts with others and who can use scripts in Power Automate.
 
 ## Coverage
 
@@ -36,11 +36,14 @@ Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/eve
 
 Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's desktop, Mac, or web client.
 
-VBA doesn't have a Power Automate connector. All supported VBA scenarios involved a user attending to the macro's execution.
+VBA doesn't have a Power Automate connector. All supported VBA scenarios involve a user attending to the macro's execution.
+
+Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md) tutorial to start learning about Power Automate. You can also check out the [Automated task reminders](scenarios/task-reminders.md) sample to see Office Scripts connected to Teams through Power Automate in a real-world scenario.
 
 ## See also
 
 - [Office Scripts in Excel on the web](../overview/excel.md)
+- [Run Office Scripts with Power Automate](../develop/power-automate-integration.md)
 - [Differences between Office Scripts and Office Add-ins](add-ins-differences.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Excel VBA reference](/office/vba/api/overview/excel)

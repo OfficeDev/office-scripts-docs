@@ -1,25 +1,23 @@
 ---
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Priority
 ---
 
-# Scripting fundamentals for Office Scripts in Excel on the web (preview)
+# Scripting fundamentals for Office Scripts in Excel on the web
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn how the Excel objects work together and how the Code Editor synchronizes with a workbook.
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## TypeScript: The language of Office Scripts
 
 Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## `main` function: The script's starting point
 
-Each Office Script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
+Each script must contain a `main` function with the `ExcelScript.Workbook` type as its first parameter. When the function runs, the Excel application invokes the `main` function by providing the workbook as its first parameter. An `ExcelScript.Workbook` should always be the first parameter.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -33,7 +31,7 @@ The code inside the `main` function runs when the script is run. `main` can call
 
 ## Object model overview
 
-To write a script, you need to understand how the Office Script APIs fit together. The components of a workbook have specific relations to one another. In many ways, these relations match those of the Excel UI.
+To write a script, you need to understand how the Office Scripts APIs fit together. The components of a workbook have specific relations to one another. In many ways, these relations match those of the Excel UI.
 
 - A **Workbook** contains one or more **Worksheets**.
 - A **Worksheet** gives access to cells through **Range** objects.
@@ -64,7 +62,7 @@ A range is a group of contiguous cells in the workbook. Scripts typically use A1
 
 Ranges have three core properties: values, formulas, and format. These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells. They are accessed through `getValues`, `getFormulas`, and `getFormat`. Values and formulas can be changed with `setValues` and `setFormulas`, while the format is a `RangeFormat` object comprised of several smaller objects that are individually set.
 
-Ranges use two-dimensional arrays to manage information. Read the [Working with ranges section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-ranges) for more information on handling those arrays in the Office Scripts framework.
+Ranges use two-dimensional arrays to manage information. For more information on handling arrays in the Office Scripts framework, see [Work with ranges](javascript-objects.md#work-with-ranges).
 
 ### Range sample
 
@@ -86,7 +84,7 @@ function main(workbook: ExcelScript.Workbook) {
     let productData = [
         ["Almonds", 6, 7.5],
         ["Coffee", 20, 34.5],
-        ["Chocolate", 10, 9.56],
+        ["Chocolate", 10, 9.54],
     ];
     let dataRange = sheet.getRange("B3:D5");
     dataRange.setValues(productData);
@@ -111,11 +109,37 @@ Running this script creates the following data in the current worksheet:
 
 :::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers":::
 
+### The types of Range values
+
+Each cell has value. This value is the underlying value entered into the cell, which may be different from the text displayed in Excel. For example, you might see "5/2/2021" displayed in the cell as a date, but the actual value is 44318. This display can be changed with the number format, but the actual value and type in the cell only changes when a new value is set.
+
+When you are using the cell value, it's important to tell TypeScript what value you are expecting to get from a cell or range. A cell contains one of the following types: `string`, `number`, or `boolean`. In order for your script to treat the returned values as one of those types, you must declare the type.
+
+The following script gets the average price from the table in the previous sample. Note the code `priceRange.getValues() as number[][]`. This [asserts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) the type of the range values to be a `number[][]`. All the values in that array can then be treated as numbers in the script.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active worksheet.
+  let sheet = workbook.getActiveWorksheet();
+
+  // Get the "Unit Price" column. 
+  // The result of calling getValues is declared to be a number[][] so that we can perform arithmetic operations.
+  let priceRange = sheet.getRange("D3:D5");
+  let prices = priceRange.getValues() as number[][];
+
+  // Get the average price.
+  let totalPrices = 0;
+  prices.forEach((price) => totalPrices += price[0]);
+  let averagePrice = totalPrices / prices.length;
+  console.log(averagePrice);
+}
+```
+
 ## Charts, tables, and other data objects
 
 Scripts can create and manipulate the data structures and visualizations within Excel. Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more. These are stored in collections, which will be discussed later in this article.
 
-### Creating a table
+### Create a table
 
 Create tables by using data-filled ranges. Formatting and table controls (such as filters) are automatically applied to the range.
 
@@ -135,7 +159,7 @@ Running this script on the worksheet with the previous data creates the followin
 
 :::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record":::
 
-### Creating a chart
+### Create a chart
 
 Create charts to visualize the data in a range. Scripts allow for dozens of chart varieties, each of which can be customized to suit your needs.
 
@@ -165,7 +189,7 @@ Running this script on the worksheet with the previous table creates the followi
 
 When an Excel object has a collection of one or more objects of the same type, it stores them in an array. For example, a `Workbook` object contains a `Worksheet[]`. This array is accessed by the `Workbook.getWorksheets()` method. `get` methods that are plural, such as `Worksheet.getCharts()`, return the entire object collection as an array. You'll see this pattern throughout the Office Scripts APIs: the `Worksheet` object has a `getTables()` method that returns a `Table[]`, the `Table` object has a `getColumns()` method that returns a `TableColumn[]`, as so on.
 
-The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. Read the [Working with collections section of Using built-in JavaScript objects in Office Scripts](javascript-objects.md#working-with-collections) to learn more about using built-in array functionality with the Office Scripts framework.
+The returned array is a normal array, so all the regular array operations are available for your script. You can also access individual objects within the collection using the array index value. For example, `workbook.getTables()[0]` returns the first table in the collection. For more information on using the built-in array functionality with the Office Scripts framework, see [Work with collections](javascript-objects.md#work-with-collections). 
 
 Individual objects are also accessed from the collection through a `get` method. `get` methods that are singular, such as `Worksheet.getTable(name)`, return a single object and require an ID or name for the specific object. This ID or name is usually set by the script or through the Excel UI.
 
