@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts Code Editor environment'
 description: 'The prerequisites and environment information for Office Scripts in Excel on the web.'
-ms.date: 05/24/2021
+ms.date: 05/27/2021
 localization_priority: Normal
 ---
 
@@ -27,9 +27,15 @@ Office Scripts does not support the usage of external, third-party JavaScript li
 
 ## IntelliSense
 
-IntelliSense is a Code Editor feature that helps prevent typos and syntax errors as you edit your script. It displays possible object and field names as you type, as well as inline documentation for every API.
+IntelliSense is a set of Code Editor features that help you write code. It provides auto-complete, syntax error highlighting, and inline API documentation.
 
-The Excel Code Editor uses the same IntelliSense engine as Visual Studio Code. To learn more about the feature, visit [Visual Studio Code's IntelliSense Features](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
+IntelliSense gives suggestions as you type, similar to the suggested text in Excel. Pressing **Tab** or **Enter** inserts the suggested member. Trigger IntelliSense at the current cursor location by pressing the Ctrl+Space. These suggestions are especially useful when completing a method. The displayed method signature contains a list of arguments it needs, each argument's type, whether a given argument is required or optional, and the return type of the method.
+
+Hover the cursor over a method, class, or other code object to see more information. Hover over a syntax error or code suggestion, represented by a red or yellow squiggly line, to see suggestions on how to fix the problem. Often, IntelliSense provides a "Quick Fix" option to automatically change the code.
+
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="An error message in the Code Editor's hover text with a 'Quick Fix' button":::
+
+The Office Scripts Code Editor uses the same IntelliSense engine as Visual Studio Code. To learn more about the feature, visit [Visual Studio Code's IntelliSense Features](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
 
 ## Keyboard shortcuts
 
