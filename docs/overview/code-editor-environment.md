@@ -29,7 +29,7 @@ Office Scripts does not support the usage of external, third-party JavaScript li
 
 IntelliSense is a set of Code Editor features that help you write code. It provides auto-complete, syntax error highlighting, and inline API documentation.
 
-IntelliSense gives suggestions as you type, similar to the suggested text in Excel. Pressing **Tab** or **Enter** inserts the suggested member. Trigger IntelliSense at the current cursor location by pressing the Ctrl+Space. These suggestions are especially useful when completing a method. The displayed method signature contains a list of arguments it needs, each argument's type, whether a given argument is required or optional, and the return type of the method.
+IntelliSense gives suggestions as you type, similar to the suggested text in Excel. Pressing the Tab or Enter key inserts the suggested member. Trigger IntelliSense at the current cursor location by pressing the Ctrl+Space keys. These suggestions are especially useful when completing a method. The method signature displayed by IntelliSense contains a list of arguments it needs, each argument's type, whether a given argument is required or optional, and the return type of the method.
 
 Hover the cursor over a method, class, or other code object to see more information. Hover over a syntax error or code suggestion, represented by a red or yellow squiggly line, to see suggestions on how to fix the problem. Often, IntelliSense provides a "Quick Fix" option to automatically change the code.
 
