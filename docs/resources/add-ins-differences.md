@@ -1,17 +1,17 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 06/01/2020
+ms.date: 06/02/2021
 localization_priority: Normal
 ---
 
 # Differences between Office Scripts and Office Add-ins
 
-Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook a JavaScript API. However, the Office Scripts APIs are a specialized, synchronous version of the Office JavaScript API.
+Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through JavaScript APIs. However, Office Scripts are designed to be quickly made by anyone looking to improve their workflow. Whereas Office Add-ins are larger-scale integrations for an Office host application.
 
 :::image type="content" source="../images/office-programmability-diagram.png" alt-text="A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers)":::
 
-Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins persist while their task panes are open. This means the add-ins can maintain state during a session, whereas Office Scripts do not maintain an internal state between runs. If you find that your Excel extension needs to exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
+Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins persist while their task panes are open. This means the add-ins maintain state during a session, whereas Office Scripts don't maintain an internal state between runs. If you find that your Excel extension needs exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
 
 The rest of this article describes on the main differences between Office Add-ins and Office Scripts.
 
@@ -23,11 +23,11 @@ Office Scripts are currently only supported by for Excel on the web. All recordi
 
 ## APIs
 
-While the Office JavaScript APIs for Office Add-ins and the Office Scripts APIs share some functionality, they are different platforms. The Office Scripts APIs are an optimized, synchronous version of the Excel JavaScript API model. The major difference is usage of the `load`/`sync` paradigm with add-ins. Additionally, add-ins offer APIs for events and a broader set of functionality outside of Excel, known as the Common APIs.
+While the Office JavaScript APIs for Office Add-ins and the Office Scripts APIs share some functionality, they are different platforms. The Office Scripts APIs are an optimized, synchronous subset of the Excel JavaScript API model. The major difference is usage of the `load`/`sync` paradigm with add-ins. Additionally, add-ins offer APIs for events and a broader set of functionality outside of Excel, known as the Common APIs.
 
 ### Events
 
-Office Scripts do not support [events](/office/dev/add-ins/excel/excel-add-ins-events). Every script runs the code in a single `main` method, then ends. It does not reactivate when events are triggered, and thus, cannot register events.
+Office Scripts do not support workbook-level [events](/office/dev/add-ins/excel/excel-add-ins-events). Scripts are either triggered by users pressing the **Run** button for a script or through Power Automate. Every script runs the code in a single `main` method, then ends.
 
 ### Common APIs
 
