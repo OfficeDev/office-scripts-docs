@@ -7,11 +7,11 @@ localization_priority: Normal
 
 # Differences between Office Scripts and Office Add-ins
 
-Office Add-ins and Office Scripts have a lot in common. They both offer automated control of an Excel workbook through JavaScript APIs. However, Office Scripts are designed to be quickly made by anyone looking to improve their workflow. Whereas Office Add-ins are larger-scale integrations for an Office host application.
+Understand the differences between Office Scripts and Office Add-ins to know when to use each one. Office Scripts are designed to be quickly made by anyone looking to improve their workflow. Office Add-ins integrate with the Office UI for a more interactive experience through ribbon buttons and task panes. Office Add-ins can also expand built-in Excel functions by providing custom functions.
 
 :::image type="content" source="../images/office-programmability-diagram.png" alt-text="A four-quadrant diagram showing the focus areas for different Office extensibility solutions. Both Office Scripts and Office Web Add-ins are focused on the web and collaboration, but Office Scripts cater to end users (whereas Office Web Add-ins target professional developers)":::
 
-Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins persist while their task panes are open. This means the add-ins maintain state during a session, whereas Office Scripts don't maintain an internal state between runs. If you find that your Excel extension needs exceed the scripting platform's capabilities, visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
+Office Scripts run to completion with a manual button press or as a step in [Power Automate](https://flow.microsoft.com/), whereas Office Add-ins continue running depending on how they are configured. For example, you can configure an Office Add-in to continue running even when its task pane is closed. This means that Office Add-ins maintain state during a session, whereas Office Scripts don't maintain an internal state between runs. If the solution you are building requires a maintained state, you should visit the [Office Add-ins documentation](/office/dev/add-ins) to learn more about Office Add-ins.
 
 The rest of this article describes on the main differences between Office Add-ins and Office Scripts.
 
