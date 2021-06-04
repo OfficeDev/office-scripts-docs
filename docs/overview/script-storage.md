@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts file storage and ownership'
 description: 'Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.'
-ms.date: 05/21/2021
+ms.date: 06/04/2021
 localization_priority: Normal
 ---
 
@@ -16,6 +16,14 @@ Unless you share your scripts, no one else can access them. Your OneDrive settin
 You Office Scripts are stored in your OneDrive. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery.
 
 Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
+
+### Restore deleted scripts
+
+When you delete a script in Excel, it goes to your OneDrive recycle bin. To restore a deleted script, follow the steps listed in [Restore deleted files or folders in OneDrive](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f). Restoring an **.osts** file returns it to the **All scripts** list.
+
+A deleted script in unshared with the workbook. When you restore a script, it does **not** retain it's script access. You will need to share the script again.
+
+Restored scripts still work as expected with Power Automate flows. You don't need to recreate the flow connector.
 
 ## File ownership and retention
 
