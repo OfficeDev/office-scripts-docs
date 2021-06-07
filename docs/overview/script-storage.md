@@ -21,7 +21,7 @@ Scripts that are shared with one of your workbooks remain in the script creator'
 
 When you delete a script in Excel, it goes to your OneDrive recycle bin. To restore a deleted script, follow the steps listed in [Restore deleted files or folders in OneDrive](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f). Restoring an **.osts** file returns it to the **All scripts** list.
 
-A deleted script in unshared with the workbook. When you restore a script, it does **not** retain it's script access. You will need to share the script again.
+A deleted script is unshared with the workbook. When you restore a script, it does **not** retain its script access. You will need to share the script again.
 
 Restored scripts still work as expected with Power Automate flows. You don't need to recreate the flow connector.
 
