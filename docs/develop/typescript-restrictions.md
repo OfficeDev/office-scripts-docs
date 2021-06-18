@@ -17,9 +17,9 @@ Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-min
 
 You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let value: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit `any` message in the Code Editor's hover text":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit `any` message in the Code Editor's hover text.":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit `any` error in the console window":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit `any` error in the console window.":::
 
 In the previous screenshot, `[2, 14] Explicit Any is not allowed` indicates that line #2, column #14 defines `any` type. This helps you locate the error.
 
@@ -29,7 +29,7 @@ To get around this issue, always define the type of the variable. If you are unc
 
 TypeScript variable types can be [implicitly](https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="The implicit `any` message in the Code Editor's hover text":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="The implicit `any` message in the Code Editor's hover text.":::
 
 The most common case on any implicit `any` is in a variable declaration, such as `let value;`. There are two ways to avoid this:
 

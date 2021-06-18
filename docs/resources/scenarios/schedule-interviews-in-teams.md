@@ -136,7 +136,7 @@ interface InterviewInvite {
     1. **Document Library**: OneDrive
     1. **File**: hr-interviews.xlsx *(Chosen through the file browser)*
     1. **Script**: Schedule Interviews
-    :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="Screenshot of the completed Excel Online (Business) connector to get interview data from the workbook in Power Automate":::
+    :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="Screenshot of the completed Excel Online (Business) connector to get interview data from the workbook in Power Automate.":::
 1. Add a **New step** that uses the **Create a Teams meeting** action. As you select dynamic content from the Excel connector, an **Apply to each** block will be generated for your flow. Complete the connector with the following values.
     1. **Calendar id**: Calendar
     1. **Subject**: Contoso Interview
@@ -145,14 +145,14 @@ interface InterviewInvite {
     1. **Start time**: **StartTime** (the Excel value)
     1. **End time**: **FinishTime** (the Excel value)
     1. **Required attendees**: **CandidateEmail** ; **InterviewerEmail** (the Excel values)
-    :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="Screenshot of the completed Teams connector to schedule meetings in Power Automate":::
+    :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="Screenshot of the completed Teams connector to schedule meetings in Power Automate.":::
 1. In the same **Apply to each** block, add another **Excel Online (Business)** connector with the **Run script** action. Use the following values.
     1. **Location**: OneDrive for Business
     1. **Document Library**: OneDrive
     1. **File**: hr-interviews.xlsx *(Chosen through the file browser)*
     1. **Script**: Record Sent Invites
     1. **invites**: **result** (the Excel value)
-    :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate":::
+    :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate.":::
 1. Save the flow and try it out.
 
 ## Training video: Send a Teams meeting from Excel data
