@@ -31,7 +31,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     > [!IMPORTANT]
     > The script you'll write uses the first matching entry in the table, so make sure your name is above any row with the current week.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="A worksheet containing the on-call rotation table data":::
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="A worksheet containing the on-call rotation table data.":::
 
 ## Create an Office Script
 
@@ -124,11 +124,11 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
 
-    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Create button in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Create button in Power Automate.":::
 
 1. Under the **Start from blank** section, select **Scheduled cloud flow**.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="The Scheduled cloud flow button in Power Automate":::
+    :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="The Scheduled cloud flow button in Power Automate.":::
 
 1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
 
@@ -137,7 +137,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     - **Repeat every**: 1 Week
     - **On these days**: M
 
-    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="The Power Automate 'Build a scheduled cloud flow' dialog showing options. The options include flow name, time to start, how often to repeat, and one which day of the week to run the flow":::
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="The Power Automate 'Build a scheduled cloud flow' dialog showing options. The options include flow name, time to start, how often to repeat, and one which day of the week to run the flow.":::
 
 1. Press **Create**.
 
@@ -145,11 +145,11 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Select the **Standard** tab, then select **Excel Online (Business)**.
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate.":::
 
 1. Under **Actions**, select **Run script**.
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate.":::
 
 1. Next, you'll select the workbook and script to use in the flow step. Use the **on-call-rotation.xlsx** workbook you created in your OneDrive. Specify the following settings for the **Run script** connector:
 
@@ -158,13 +158,13 @@ This tutorial teaches you how to return information from an Office Script for Ex
     - **File**: on-call-rotation.xlsx *(Chosen through the file browser)*
     - **Script**: Get On-Call Person
 
-    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script":::
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script.":::
 
 1. Press **New step**.
 
 1. We'll end the flow by sending the reminder email. Select **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options":::
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options.":::
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
@@ -175,7 +175,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 Your flow will run every Monday morning. You can test the script now by pressing the **Test** button in the upper-right corner of the screen. Select **Manually** and press **Run Test** to run the flow now and test the behavior. You may need to grant permissions to Excel and Outlook to continue.
 
-:::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="The Power Automate Test button":::
+:::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="The Power Automate Test button.":::
 
 > [!TIP]
 > If your flow fails to send an email, double-check in the spreadsheet that a valid email is listed for the current date range at the top of the table.

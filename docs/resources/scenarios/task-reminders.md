@@ -156,7 +156,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Get People
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="The Power Automate flow showing the first Run script flow step":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="The Power Automate flow showing the first Run script flow step.":::
 
 12. Next, the flow needs to process each Employee in the array returned by the script. Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.
 
@@ -217,7 +217,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **senderEmail**: email *(dynamic content from Excel)*
     - **statusReportResponse**: response *(dynamic content from Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="The Power Automate flow showing the apply-to-each step":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
 17. Save the flow.
 
@@ -229,12 +229,12 @@ You can either select **Test** from the flow designer, or run the flow from the 
 
 ### Before running the flow
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="A worksheet with a status report containing one missing status entry":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="A worksheet with a status report containing one missing status entry.":::
 
 ### Receiving the Adaptive Card
 
-:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="An Adaptive Card in Teams asking the employee for a status update":::
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="An Adaptive Card in Teams asking the employee for a status update.":::
 
 ### After running the flow
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="A worksheet with a status report with a now-filled-in status entry":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="A worksheet with a status report with a now-filled-in status entry.":::
