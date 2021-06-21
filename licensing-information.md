@@ -8316,8 +8316,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.220 - MIT
-
+@types/office-js-preview 1.0.224 - MIT
+https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 Copyright (c) Microsoft Corporation.
 
@@ -9604,26 +9604,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT
-https://github.com/chalk/ansi-regex#readme
-
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-
-MIT License
-
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 ansi-regex 2.1.1 - MIT
 https://github.com/chalk/ansi-regex#readme
 
@@ -9651,6 +9631,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+ansi-regex 3.0.0 - MIT
+https://github.com/chalk/ansi-regex#readme
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+
+MIT License
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ---------------------------------------------------------
@@ -11344,7 +11344,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-camelcase 5.0.0 - MIT
+camelcase 5.3.1 - MIT
 https://github.com/sindresorhus/camelcase#readme
 
 (c) Sindre Sorhus (https://sindresorhus.com)
@@ -11365,7 +11365,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-camelcase 5.3.1 - MIT
+camelcase 5.0.0 - MIT
 https://github.com/sindresorhus/camelcase#readme
 
 (c) Sindre Sorhus (https://sindresorhus.com)
@@ -12768,7 +12768,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT
+cssesc 3.0.0 - MIT
 https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -12799,7 +12799,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT
+cssesc 2.0.0 - MIT
 https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -13292,7 +13292,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-debug 4.1.1 - MIT
+debug 3.2.6 - MIT
 https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
@@ -13323,7 +13323,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-debug 3.2.6 - MIT
+debug 4.1.1 - MIT
 https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
@@ -16432,39 +16432,6 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 0.1.6 - MIT
-https://github.com/jonschlinkert/is-accessor-descriptor
-
-Copyright (c) 2015, Jon Schlinkert.
-Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
-
-The MIT License (MIT)
-
-Copyright (c) 2015, Jon Schlinkert.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 is-accessor-descriptor 1.0.0 - MIT
 https://github.com/jonschlinkert/is-accessor-descriptor
 
@@ -16498,7 +16465,40 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-isarray 1.0.0 - MIT
+is-accessor-descriptor 0.1.6 - MIT
+https://github.com/jonschlinkert/is-accessor-descriptor
+
+Copyright (c) 2015, Jon Schlinkert.
+Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
+
+The MIT License (MIT)
+
+Copyright (c) 2015, Jon Schlinkert.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+isarray 0.0.1 - MIT
 https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
@@ -16517,7 +16517,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-isarray 0.0.1 - MIT
+isarray 1.0.0 - MIT
 https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
@@ -16852,7 +16852,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT
+is-descriptor 1.0.2 - MIT
 https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
@@ -16884,7 +16884,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT
+is-descriptor 0.1.6 - MIT
 https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
@@ -17178,16 +17178,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT
+is-number 7.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert
-Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17212,15 +17211,16 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT
+is-number 3.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17779,19 +17779,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-json3 3.3.3 - MIT
-https://bestiejs.github.io/json3
+json3 3.3.0 - MIT
+http://bestiejs.github.io/json3
 
-Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io
-Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be
-Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org
-(c) 2012-2015 http://kitcambridge.be/' Kit Cambridge, https://d10.github.io/' Benjamin Tan
+Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be
+Copyright 2012-2014, Kit Cambridge http://kit.mit-license.org
 
-Copyright (c) 2012-2015 Kit Cambridge.
+Copyright (c) 2012-2014 Kit Cambridge.
 http://kitcambridge.be/
-
-Copyright (c) 2013-2015 Benjamin Tan.
-https://d10.github.io/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -17815,14 +17810,19 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-json3 3.3.0 - MIT
-http://bestiejs.github.io/json3
+json3 3.3.3 - MIT
+https://bestiejs.github.io/json3
 
-Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be
-Copyright 2012-2014, Kit Cambridge http://kit.mit-license.org
+Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io
+Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be
+Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org
+(c) 2012-2015 http://kitcambridge.be/' Kit Cambridge, https://d10.github.io/' Benjamin Tan
 
-Copyright (c) 2012-2014 Kit Cambridge.
+Copyright (c) 2012-2015 Kit Cambridge.
 http://kitcambridge.be/
+
+Copyright (c) 2013-2015 Benjamin Tan.
+https://d10.github.io/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -19560,7 +19560,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT
+monaco-editor 0.20.0 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -19608,7 +19608,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT
+monaco-editor 0.18.1 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -25570,37 +25570,6 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT
-https://github.com/webpack/schema-utils
-
-Copyright JS Foundation and other contributors
-
-Copyright JS Foundation and other contributors
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 schema-utils 1.0.0 - MIT
 https://github.com/webpack-contrib/schema-utils
 
@@ -25634,6 +25603,37 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 schema-utils 0.4.7 - MIT
 https://github.com/webpack-contrib/schema-utils
+
+Copyright JS Foundation and other contributors
+
+Copyright JS Foundation and other contributors
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+schema-utils 2.7.0 - MIT
+https://github.com/webpack/schema-utils
 
 Copyright JS Foundation and other contributors
 
@@ -26781,7 +26781,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 - MIT
+strip-ansi 4.0.0 - MIT
 https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
@@ -26801,7 +26801,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 - MIT
+strip-ansi 5.2.0 - MIT
 https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
