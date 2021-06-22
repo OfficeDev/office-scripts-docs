@@ -33,7 +33,7 @@ IntelliSense gives suggestions as you type, similar to the suggested text in Exc
 
 Hover the cursor over a method, class, or other code object to see more information. Hover over a syntax error or code suggestion, represented by a red or yellow squiggly line, to see suggestions on how to fix the problem. Often, IntelliSense provides a "Quick Fix" option to automatically change the code.
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="An error message in the Code Editor's hover text with a 'Quick Fix' button":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="An error message in the Code Editor's hover text with a 'Quick Fix' button.":::
 
 The Office Scripts Code Editor uses the same IntelliSense engine as Visual Studio Code. To learn more about the feature, visit [Visual Studio Code's IntelliSense Features](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
 

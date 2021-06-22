@@ -11,17 +11,17 @@ Excel table data can be represented as an array of objects in the form of JSON. 
 
 _Input table data_
 
-:::image type="content" source="../../images/table-input.png" alt-text="A worksheet showing input table data":::
+:::image type="content" source="../../images/table-input.png" alt-text="A worksheet showing input table data.":::
 
 A variation of this sample also includes the hyperlinks in one of the table columns. This allows additional levels of cell data to be surfaced in the JSON.
 
 _Input table data that includes hyperlinks_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="A worksheet showing a column of table data formatted as hyperlinks":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="A worksheet showing a column of table data formatted as hyperlinks.":::
 
 _Dialog to edit hyperlink_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="The Edit Hyperlink dialog box displaying options to change hyperlinks":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="The Edit Hyperlink dialog box displaying options to change hyperlinks.":::
 
 ## Sample Excel file
 
