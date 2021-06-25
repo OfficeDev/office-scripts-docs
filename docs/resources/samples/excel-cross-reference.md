@@ -141,7 +141,7 @@ interface EventData {
 
 This flow extracts the event information from the first workbook and uses that data to validate the second workbook.
 
-1. Create a new **Instant cloud flow**.
+1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
 1. Select **Manually trigger a flow** and press **Create**.
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
     * **Location**: OneDrive for Business
@@ -164,4 +164,4 @@ This flow extracts the event information from the first workbook and uses that d
     * **Body**: result (_dynamic content from **Run script 2**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
-1. Save the flow and try it out. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations** and rows in **event-data**. Open **speaker-registrations** to see several highlighted cells where there are potential problems with the speaker registration listings.
+1. Save the flow, then press **Test** to try it out. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations.xlsx** and rows in **event-data.xlsx**. Open **speaker-registrations.xlsx** to see several highlighted cells where there are potential problems with the speaker registration listings.
