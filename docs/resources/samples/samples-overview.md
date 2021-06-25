@@ -30,6 +30,7 @@ Check out the following end-to-end project that automates sample scenarios along
 
 | Project | Details |
 |---------|---------|
+| [Cross-reference workbooks](excel-cross-reference.md) | This sample Office Scripts and Power Automate to cross-reference and validate information in different workbooks. |
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [External fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
