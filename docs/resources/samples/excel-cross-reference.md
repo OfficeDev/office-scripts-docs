@@ -164,4 +164,4 @@ This flow extracts the event information from the first workbook and uses that d
     * **Body**: result (_dynamic content from **Run script 2**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
-1. Save the flow and try it out.
+1. Save the flow and try it out. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations** and rows in **event-data**. Open **speaker-registrations** to see several highlighted cells where there are potential problems with the speaker registration listings.
