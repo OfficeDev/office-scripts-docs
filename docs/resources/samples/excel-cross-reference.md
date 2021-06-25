@@ -162,5 +162,6 @@ This flow extracts the event information from the first workbook and uses that d
     * **To**: Your test email account (or personal email)
     * **Subject**: Event validation results
     * **Body**: result (_dynamic content from **Run script 2**_)
+
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
 1. Save the flow and try it out.
