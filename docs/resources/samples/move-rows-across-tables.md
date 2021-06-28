@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables using Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 06/21/2021
+ms.date: 06/25/2021
 localization_priority: Normal
 ---
 
