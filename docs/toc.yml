@@ -68,6 +68,8 @@ items:
         href: resources/samples/copy-tables-combine.md
     - name: Beyond the basics
       items:
+      - name: Cross-reference worksheets
+        href: resources/samples/excel-cross-reference.md
       - name: Count blank rows in worksheets
         href: resources/samples/count-blank-rows.md
       - name: Email images of chart and table
