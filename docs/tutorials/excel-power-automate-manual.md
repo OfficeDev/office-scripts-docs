@@ -1,7 +1,7 @@
 ---
 title: 'Call scripts from a manual Power Automate flow'
 description: 'A tutorial about using an Office Scripts in Power Automate through a manual trigger.'
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Priority
 ---
 
