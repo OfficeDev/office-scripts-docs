@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -21,9 +21,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
 
 1. Open the workbook with Excel on the web.
 
-1. Under the **Automate** tab, select **All Scripts**.
-
-1. In the **Code Editor** task pane, select **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 
     ```TypeScript
     /**

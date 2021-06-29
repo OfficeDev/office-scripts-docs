@@ -1,7 +1,7 @@
 ---
 title: 'Cross-reference Excel files with Power Automate'
 description: 'Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.'
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -15,10 +15,12 @@ You're an event coordinator who is scheduling speakers for upcoming conferences.
 
 ## Sample Excel files
 
-Download the following files used in this solution to try it out yourself!
+Download the following files to get ready-to-use workbooks for the sample.
 
 1. <a href="event-data.xlsx">event-data.xlsx</a>
 1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+
+Add the following scripts to try the sample yourself!
 
 ## Sample code: Get event data
 
@@ -142,7 +144,7 @@ interface EventData {
 This flow extracts the event information from the first workbook and uses that data to validate the second workbook.
 
 1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
-1. Select **Manually trigger a flow** and press **Create**.
+1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
@@ -164,4 +166,5 @@ This flow extracts the event information from the first workbook and uses that d
     * **Body**: result (_dynamic content from **Run script 2**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
-1. Save the flow, then select **Test** to try it out. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations.xlsx** and rows in **event-data.xlsx**. Open **speaker-registrations.xlsx** to see several highlighted cells where there are potential problems with the speaker registration listings.
+1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+1. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations.xlsx** and rows in **event-data.xlsx**. Open **speaker-registrations.xlsx** to see several highlighted cells where there are potential problems with the speaker registration listings.

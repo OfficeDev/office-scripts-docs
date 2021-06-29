@@ -1,7 +1,7 @@
 ---
 title: 'Basic scripts for Office Scripts in Excel on the web'
 description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -10,14 +10,13 @@ localization_priority: Normal
 The following samples are simple scripts for you to try on your own workbooks. To use them in Excel on the web:
 
 1. Open the **Automate** tab.
-2. Press **Code Editor**.
-3. Press **New Script** in the Code Editor's task pane.
-4. Replace the entire script with the sample of your choice.
-5. Press **Run** in the Code Editor's task pane.
+1. Select **New Script**.
+1. Replace the entire script with the sample of your choice.
+1. Select **Run** in the Code Editor's task pane.
 
 ## Script basics
 
-These samples demonstrate fundamental building blocks for Office Scripts. Add these to your scripts to extend your solution and solve common problems.
+These samples demonstrate fundamental building blocks for Office Scripts. Expand these scripts to extend your solution and solve common problems.
 
 ### Read and log one cell
 

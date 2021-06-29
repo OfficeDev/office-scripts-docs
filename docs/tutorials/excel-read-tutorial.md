@@ -65,8 +65,8 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 6. Run the script.
 7. You should see `[Array[1]]` in the console. This is not a number because ranges are two-dimensional arrays of data. That two-dimensional range is being logged to the console directly. Luckily, the Code Editor lets you see the contents of the array.
-8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by pressing the blue triangle.
-9. Expand the second level of the array by pressing the newly revealed blue triangle. You should now see this:
+8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by selecting the blue triangle.
+9. Expand the second level of the array by selecting the newly revealed blue triangle. You should now see this:
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="The console log displaying the the output '-20.05', nested under two arrays.":::
 

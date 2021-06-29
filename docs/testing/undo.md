@@ -17,7 +17,7 @@ From the Excel workbook in which the script was ran, use these steps to undo the
 
 1. Go to **File** > **Info** > **Version History**.
 2. Select a version saved prior to the running the script.
-3. Press **Restore**.
+3. Select **Restore**.
 
 ## See also
 

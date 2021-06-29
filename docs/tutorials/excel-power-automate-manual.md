@@ -7,7 +7,7 @@ localization_priority: Priority
 
 # Call scripts from a manual Power Automate flow
 
-This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is pressed. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
+This tutorial teaches you how to run an Office Script for Excel on the web through [Power Automate](https://flow.microsoft.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is selected. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
 
 > [!TIP]
 > If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
@@ -52,15 +52,15 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
     }
     ```
 
-4. Rename the script to **Set date and time**. Press the script name to change it.
+4. Rename the script to **Set date and time**. Select the script name to change it.
 
-5. Save the script by pressing **Save Script**.
+5. Save the script by selecting **Save Script**.
 
 ## Create an automated workflow with Power Automate
 
 1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
-2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
+2. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate 'Create' button.":::
 
@@ -68,13 +68,13 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-2.png" alt-text="The Power Automate Instant flow option for creating a new workflow.":::
 
-4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box, select **Manually trigger a flow** from the list of options under **Choose how to trigger the flow**, and press **Create**.
+4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box, select **Manually trigger a flow** from the list of options under **Choose how to trigger the flow**, and then select **Create**.
 
     :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="The Power Automate 'Manually trigger a flow' option.":::
 
     Note that a manually triggered flow is just one of many types of flows. In the next tutorial, you'll make a flow that automatically runs when you receive an email.
 
-5. Press **New step**.
+5. Select **New step**.
 
 6. Select the **Standard** tab, then select **Excel Online (Business)**.
 
@@ -93,7 +93,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="The Power Automate connector settings for running a script.":::
 
-9. Press **Save**.
+9. Select **Save**.
 
 Your flow is now ready to be run through Power Automate. You can test it using the **Test** button in the flow editor or follow the remaining tutorial steps to run the flow from your flow collection.
 
@@ -105,15 +105,15 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 2. Select **My tutorial flow** from the list of flows displayed in the **My flows** tab. This shows the details of the flow we previously created.
 
-3. Press **Run**.
+3. Select **Run**.
 
     :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text="The Run button in Power Automate.":::
 
-4. A task pane will appear for running the flow. If you are asked to **Sign in** to Excel Online, do so by pressing **Continue**.
+4. A task pane will appear for running the flow. If you are asked to **Sign in** to Excel Online, do so by selecting **Continue**.
 
-5. Press **Run flow**. This runs the flow, which runs the related Office Script.
+5. Select **Run flow**. This runs the flow, which runs the related Office Script.
 
-6. Press **Done**. You should see the **Runs** section update accordingly.
+6. Select **Done**. You should see the **Runs** section update accordingly.
 
 7. Refresh the page to see the results of the Power Automate. If it succeeded, go to the workbook to see the updated cells. If it failed, verify the flow's settings and run it a second time.
 
