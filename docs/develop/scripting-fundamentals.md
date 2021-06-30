@@ -316,6 +316,7 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 
 ## See also
 
+- [Office Scripts Dev Center](https://developer.microsoft.com/office-scripts)
 - [Record, edit, and create Office Scripts in Excel on the web](../tutorials/excel-tutorial.md)
 - [Read workbook data with Office Scripts in Excel on the web](../tutorials/excel-read-tutorial.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
