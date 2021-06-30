@@ -78,6 +78,7 @@ Complete the [Office Scripts in Excel on the web tutorial](../tutorials/excel-tu
 
 ## See also
 
+- [Office Scripts Dev Center](https://developer.microsoft.com/office-scripts)
 - [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
