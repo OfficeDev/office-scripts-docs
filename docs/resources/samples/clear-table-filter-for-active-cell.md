@@ -1,7 +1,7 @@
 ---
 title: 'Clear table column filter based on active cell location'
 description: 'Learn how to clear table column filter based on active cell location.'
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -19,9 +19,13 @@ _After clearing column filter_
 
 :::image type="content" source="../../images/after-filter-cleared.png" alt-text="An active cell after clearing column filter.":::
 
+## Sample Excel file
+
+Download <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+
 ## Sample code: Clear table column filter based on active cell
 
-The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table. For convenience, you can download and use <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>.
+The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

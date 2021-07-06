@@ -1,7 +1,7 @@
 ---
 title: 'Remove hyperlinks from each cell in an Excel worksheet'
 description: 'Learn how to use Office Scripts to remove hyperlinks from each cell in an Excel worksheet.'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -12,9 +12,11 @@ localization_priority: Normal
 > [!NOTE]
 > This only works if the cell count is < 10k.
 
-## Sample code: Remove hyperlinks
+## Sample Excel file
 
-Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!
+Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+
+## Sample code: Remove hyperlinks
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

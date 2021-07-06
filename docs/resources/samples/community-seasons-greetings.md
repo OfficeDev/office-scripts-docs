@@ -1,7 +1,7 @@
 ---
 title: 'Seasons greetings'
 description: 'Learn how to use Office Scripts to show a singing tree in Excel on the web.'
-ms.date: 04/28/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -15,7 +15,7 @@ Enjoy!
 
 ## Script
 
-Download the file <a href="happy-tree.xlsx">happy-tree.xlsx</a> used in this solution to try it out yourself!
+Download <a href="happy-tree.xlsx">happy-tree.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ```TypeScript
 /* Original version by Leslie Black.  */

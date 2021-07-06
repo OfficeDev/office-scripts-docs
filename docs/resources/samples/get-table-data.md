@@ -1,7 +1,7 @@
 ---
 title: 'Output Excel data as JSON'
 description: 'Learn how to output Excel table data as JSON to use in Power Automate.'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -25,7 +25,7 @@ _Dialog to edit hyperlink_
 
 ## Sample Excel file
 
-Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in these samples and try it out yourself!
+Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Return table data as JSON
 

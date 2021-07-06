@@ -1,7 +1,7 @@
 ---
 title: 'Add comments in Excel'
 description: 'Learn how to use Office Scripts to add comments in a worksheet.'
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -21,9 +21,11 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 1. The script then adds a comment (including the relevant employee email) to the appropriate cell in the shift record.
 1. Existing comments in the cell are removed before adding the new comment.
 
-## Sample code: Add comments
+## Sample Excel file
 
-Download the file <a href="excel-comments.xlsx">excel-comments.xlsx</a> used in this sample and try it out yourself!
+Download <a href="excel-comments.xlsx">excel-comments.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+
+## Sample code: Add comments
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

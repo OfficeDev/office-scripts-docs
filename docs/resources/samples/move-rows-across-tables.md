@@ -1,7 +1,7 @@
 ---
 title: 'Move rows across tables using Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -17,7 +17,7 @@ This script does the following:
 
 ## Sample Excel file
 
-Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!
+Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Move rows using range values
 

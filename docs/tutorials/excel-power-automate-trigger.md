@@ -1,7 +1,7 @@
 ---
 title: 'Pass data to scripts in an automatically-run Power Automate flow'
 description: 'A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.'
-ms.date: 12/28/2020
+ms.date: 06/29/2021
 localization_priority: Priority
 ---
 
@@ -26,7 +26,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 3. Select **New Script**.
 
-4. Replace the existing code with the following script and press **Run**. This will setup the workbook with consistent worksheet, table, and PivotTable names.
+4. Replace the existing code with the following script and select **Run**. This will setup the workbook with consistent worksheet, table, and PivotTable names.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -55,7 +55,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 Let's create a script that logs information from an email. We want to know which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
 
-1. From within the **Code Editor** task pane, select **New Script**.
+1. From within the Code Editor task pane, select **New Script**.
 
 2. The flow that we'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script:
 
@@ -111,7 +111,7 @@ Let's create a script that logs information from an email. We want to know which
     pivotTable.refresh();
     ```
 
-8. Rename your script **Record Email** and press **Save script**.
+8. Rename your script **Record Email** and select **Save script**.
 
 Your script is now ready for a Power Automate workflow. It should look like the following script:
 
@@ -149,7 +149,7 @@ function main(
 
 1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
-2. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
+2. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate Create button.":::
 
@@ -157,14 +157,14 @@ function main(
 
     :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text="The Automated flow option in Power Automate.":::
 
-4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Then select **When a new email arrives** from the list of options under **Choose your flow's trigger**. You may need to search for the option using the search box. Finally, press **Create**.
+4. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Then select **When a new email arrives** from the list of options under **Choose your flow's trigger**. You may need to search for the option using the search box. Finally, select **Create**.
 
     :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="Part of the Power Automate flow showing the 'flow name' and the 'choose your flow's trigger' options. The flow name is 'Record Email Flow' and the trigger is the 'When a new email arrives in Outlook' option.":::
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
 
-5. Press **New step**.
+5. Select **New step**.
 
 6. Select the **Standard** tab, then select **Excel Online (Business)**.
 
@@ -188,7 +188,7 @@ function main(
 
     :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="The Power Automate run script action showing the options that appear once the script is selected.":::
 
-9. Press **Save**.
+9. Select **Save**.
 
 Your flow is now enabled. It will automatically run your script each time you receive an email through Outlook.
 
@@ -198,7 +198,7 @@ Your flow is now enabled. It will automatically run your script each time you re
 
     :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="The My flows button in Power Automate.":::
 
-2. Select your flow. Here you can see the run history. You can refresh the page or press the refresh **All runs** button to update the history. The flow will trigger shortly after an email is received. Test the flow by sending yourself mail.
+2. Select your flow. Here you can see the run history. You can refresh the page or select the refresh **All runs** button to update the history. The flow will trigger shortly after an email is received. Test the flow by sending yourself mail.
 
 When the flow is triggered and successfully runs your script, you should see the workbook's table and PivotTable update.
 
