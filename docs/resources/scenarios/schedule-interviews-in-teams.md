@@ -1,7 +1,7 @@
 ---
 title: 'Schedule interviews in Teams'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
-ms.date: 05/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -27,7 +27,7 @@ Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this s
 
 ## Sample code: Extract table data to schedule invites
 
-Name this script **Schedule Interviews** for the flow.
+Add this script to your script collection. Name it **Schedule Interviews** for the flow.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -88,7 +88,7 @@ interface InterviewInvite {
 
 ## Sample code: Mark rows as invited
 
-Name this script **Record Sent Invites** for the flow.
+Add this script to your script collection. Name it **Record Sent Invites** for the flow.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, invites: InterviewInvite[]) {
@@ -130,7 +130,7 @@ interface InterviewInvite {
 ## Sample flow: Run the interview scheduling scripts and send the Teams meetings
 
 1. Create a new **Instant cloud flow**.
-1. Select **Manually trigger a flow** and press **Create**.
+1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** that uses the **Excel Online (Business)** connector and the **Run script** action. Complete the connector with the following values.
     1. **Location**: OneDrive for Business
     1. **Document Library**: OneDrive
@@ -153,7 +153,7 @@ interface InterviewInvite {
     1. **Script**: Record Sent Invites
     1. **invites**: **result** (the Excel value)
     :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate.":::
-1. Save the flow and try it out.
+1. Save the flow and try it out. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 
 ## Training video: Send a Teams meeting from Excel data
 

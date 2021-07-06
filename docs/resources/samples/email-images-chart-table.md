@@ -1,7 +1,7 @@
 ---
 title: 'Email the images of an Excel chart and table'
 description: 'Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -35,11 +35,11 @@ This solution has two parts:
 1. [An Office Script to calculate and extract Excel chart and table](#sample-code-calculate-and-extract-excel-chart-and-table)
 1. A Power Automate flow to invoke the script and email the results. For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
 
+## Sample Excel file
+
+Download <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+
 ## Sample code: Calculate and extract Excel chart and table
-
-The following script calculates and extracts an Excel chart and table.
-
-Download the sample file <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> and use it with this script to try it out yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -89,7 +89,7 @@ interface ReportImages {
 This flow runs the script and emails the returned images.
 
 1. Create a new **Instant cloud flow**.
-1. Select **Manually trigger a flow** and press **Create**.
+1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
@@ -117,7 +117,7 @@ This flow runs the script and emails the returned images.
     ```
 
     :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
-1. Save the flow and try it out.
+1. Save the flow and try it out. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 
 ## Training video: Extract and email images of chart and table
 

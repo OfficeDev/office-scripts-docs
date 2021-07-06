@@ -30,10 +30,10 @@ First, we'll need some data and a small starting script.
     |Limes |600 |500 |
     |Grapefruits |900 |700 |
 
-3. Open the **Automate** tab. If you don't see the **Automate** tab, check the ribbon overflow by pressing the drop-down arrow. If it's still not there, follow the advice in the article [Troubleshoot Office Scripts](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
-4. Press the **Record Actions** button.
+3. Open the **Automate** tab. If you don't see the **Automate** tab, check the ribbon overflow by selecting the drop-down arrow. If it's still not there, follow the advice in the article [Troubleshoot Office Scripts](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
+4. Select the **Record Actions** button.
 5. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
-6. Stop the recording by pressing the **Stop** button.
+6. Stop the recording by selecting the **Stop** button.
 
     Your worksheet should look like this (don't worry if the color is different):
 
@@ -43,7 +43,7 @@ First, we'll need some data and a small starting script.
 
 The previous script colored the "Oranges" row to be orange. Let's add a yellow row for the "Lemons".
 
-1. From the now-open **Details** pane, press the **Edit** button.
+1. From the now-open **Details** pane, select the **Edit** button.
 2. You should see something similar to this code:
 
     ```TypeScript
@@ -64,7 +64,7 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
     selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
     ```
 
-4. Test the script by pressing **Run**. Your workbook should now look like this:
+4. Test the script by selecting **Run**. Your workbook should now look like this:
 
     :::image type="content" source="../images/tutorial-2.png" alt-text="A worksheet showing the fruit sales data row with the 'Oranges' row highlighted in the color orange and the 'Lemons' row highlighted in the color yellow.":::
 

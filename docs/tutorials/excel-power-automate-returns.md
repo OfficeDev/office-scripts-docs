@@ -1,7 +1,7 @@
 ---
 title: 'Return data from a script to an automatically-run Power Automate flow'
 description: 'A tutorial that shows how to send reminder emails by running Office Scripts for Excel on the web through Power Automate.'
-ms.date: 12/15/2020
+ms.date: 06/29/2021
 localization_priority: Priority
 ---
 
@@ -122,7 +122,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Sign in to the [Power Automate site](https://flow.microsoft.com).
 
-1. In the menu that's displayed on the left side of the screen, press **Create**. This brings you to list of ways to create new workflows.
+1. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Create button in Power Automate.":::
 
@@ -139,9 +139,9 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="The Power Automate 'Build a scheduled cloud flow' dialog showing options. The options include flow name, time to start, how often to repeat, and one which day of the week to run the flow.":::
 
-1. Press **Create**.
+1. Select **Create**.
 
-1. Press **New step**.
+1. Select **New step**.
 
 1. Select the **Standard** tab, then select **Excel Online (Business)**.
 
@@ -160,7 +160,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script.":::
 
-1. Press **New step**.
+1. Select **New step**.
 
 1. We'll end the flow by sending the reminder email. Select **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
 
@@ -169,11 +169,11 @@ This tutorial teaches you how to return information from an Office Script for Ex
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
 
-1. Press **Save**.
+1. Select **Save**.
 
 ## Test the script in Power Automate
 
-Your flow will run every Monday morning. You can test the script now by pressing the **Test** button in the upper-right corner of the screen. Select **Manually** and press **Run Test** to run the flow now and test the behavior. You may need to grant permissions to Excel and Outlook to continue.
+Your flow will run every Monday morning. You can test the script now by selecting the **Test** button in the upper-right corner of the screen. Select **Manually**, then select **Run Test** to run the flow now and test the behavior. You may need to grant permissions to Excel and Outlook to continue.
 
 :::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="The Power Automate Test button.":::
 
