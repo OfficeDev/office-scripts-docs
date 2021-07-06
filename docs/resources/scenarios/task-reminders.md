@@ -82,7 +82,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 1. Save the script with the name **Get People**.
 
-1. Next, we need a second script to process the status report cards and put the new information in the spreadsheet. In the **Code Editor** task pane, select **New Script** and paste the following script into the editor.
+1. Next, we need a second script to process the status report cards and put the new information in the spreadsheet. In the Code Editor task pane, select **New Script** and paste the following script into the editor.
 
     ```TypeScript
     /**
