@@ -1,7 +1,7 @@
 ---
 title: 'Filter Excel table and get visible range'
 description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -15,11 +15,11 @@ This sample filters an Excel table and returns the visible range as a JSON objec
 * Extract the visible range after filtering.
 * Assemble and return an object with a [specific JSON structure](#sample-json).
 
+## Sample Excel file
+
+Download <a href="table-filter.xlsx">table-filter.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+
 ## Sample code: Filter a table and get visible range
-
-The following script filters a table and gets the visible range.
-
-Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and use it with this script to try it out yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {

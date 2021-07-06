@@ -1,7 +1,7 @@
 ---
 title: 'Add images to a workbook'
 description: 'Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.'
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -19,7 +19,7 @@ The second sample copies an image from a URL. This could be used to copy photos 
 
 ## Sample Excel file
 
-Download the file <a href="add-images.xlsx">add-images.xlsx</a> used in these samples and try it out yourself!
+Download <a href="add-images.xlsx">add-images.xlsx</a> for a ready-to-use workbook. Add the following scripts and try the sample yourself!
 
 ## Sample code: Copy an image across worksheets
 

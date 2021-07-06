@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: 'A sample that determines the percentage and letter grades for a class of students.'
-ms.date: 12/17/2020
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -22,11 +22,9 @@ You'll develop a script that totals the grades for each point category. It will 
 
 1. Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.
 
-2. Open the workbook with Excel for the web.
+1. Open the workbook with Excel for the web.
 
-3. Under the **Automate** tab, open **All Scripts**.
-
-4. In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -169,7 +167,7 @@ You'll develop a script that totals the grades for each point category. It will 
     }
     ```
 
-5. Rename the script to **Grade Calculator** and save it.
+1. Rename the script to **Grade Calculator** and save it.
 
 ## Running the script
 

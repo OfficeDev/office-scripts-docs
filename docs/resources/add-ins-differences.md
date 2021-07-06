@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 06/02/2021
+ms.date: 06/29/2021
 localization_priority: Normal
 ---
 
@@ -27,7 +27,7 @@ While the Office JavaScript APIs for Office Add-ins and the Office Scripts APIs 
 
 ### Events
 
-Office Scripts do not support workbook-level [events](/office/dev/add-ins/excel/excel-add-ins-events). Scripts are either triggered by users pressing the **Run** button for a script or through Power Automate. Every script runs the code in a single `main` method, then ends.
+Office Scripts do not support workbook-level [events](/office/dev/add-ins/excel/excel-add-ins-events). Scripts are either triggered by users selecting the **Run** button for a script or through Power Automate. Every script runs the code in a single `main` method, then ends.
 
 ### Common APIs
 
