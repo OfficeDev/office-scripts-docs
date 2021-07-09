@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 05/24/2021
+ms.date: 07/09/2021
 localization_priority: Priority
 ---
 
@@ -57,7 +57,7 @@ One easy way to start learning the capabilities of Office Scripts is to record s
 
 After completing the tutorial, read [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
 
-## Sharing scripts
+## Share scripts
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script Details page showing the 'Share with others in this workbook' option.":::
 
@@ -68,7 +68,13 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
 
-## Connecting Office Scripts to Power Automate
+### Create script buttons
+
+Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **...** menu and select **Add button**. This creates a button in the workbook that runs the associated script when pressed. It also shares the script with the workbook, so everyone with access can use your helpful automation.
+
+:::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the Code Editor's menu.":::
+
+## Connect Office Scripts to Power Automate
 
 [Power Automate](https://flow.microsoft.com/) is a service that helps you create automated workflows between multiple apps and services. Office Scripts can be used in these workflows, giving you control of your scripts outside of the workbook. You can run your scripts on a schedule, trigger them in response to emails, and much more. Visit the [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md) tutorial to learn the basics of connecting these automation services.
 
