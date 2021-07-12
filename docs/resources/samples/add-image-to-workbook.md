@@ -62,7 +62,7 @@ async function main(workbook: ExcelScript.Workbook) {
   const image = convertToBase64(data);
 
   // Add the image to a worksheet.
-  workbook.getWorksheet("WebSheet").addImage(image)
+  workbook.getWorksheet("WebSheet").addImage(image);
 }
 
 /**
