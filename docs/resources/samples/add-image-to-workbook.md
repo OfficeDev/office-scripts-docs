@@ -1,7 +1,7 @@
 ---
 title: 'Add images to a workbook'
 description: 'Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.'
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 localization_priority: Normal
 ---
 
@@ -62,7 +62,7 @@ async function main(workbook: ExcelScript.Workbook) {
   const image = convertToBase64(data);
 
   // Add the image to a worksheet.
-  workbook.getWorksheet("WebSheet").addImage(image)
+  workbook.getWorksheet("WebSheet").addImage(image);
 }
 
 /**
@@ -73,7 +73,7 @@ function convertToBase64(input: ArrayBuffer) {
   const count = uInt8Array.length;
 
   // Allocate the necessary space up front.
-  const charCodeArray = new Array(count) 
+  const charCodeArray = new Array(count) as string[];
   
   // Convert every entry in the array to a character.
   for (let i = count; i >= 0; i--) { 
