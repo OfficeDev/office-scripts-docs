@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 05/24/2021
+ms.date: 07/09/2021
 localization_priority: Normal
 ---
 
@@ -75,6 +75,10 @@ let filteredArray = myArray.filter((x) => {
   });
 */
 ```
+
+## Unions of `ExcelScript` types are not supported
+
+
 
 ## Performance warnings
 
