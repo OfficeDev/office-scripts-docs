@@ -8316,7 +8316,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.227 - MIT
+@types/office-js-preview 1.0.231 - MIT
 https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 Copyright (c) Microsoft Corporation.
@@ -12022,39 +12022,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-commander 2.20.3 - MIT
-https://github.com/tj/commander.js#readme
-
-Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
-(The MIT License)
-
-Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 commander 2.17.1 - MIT
 https://github.com/tj/commander.js#readme
 
@@ -12089,6 +12056,39 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---------------------------------------------------------
 
 commander 2.19.0 - MIT
+https://github.com/tj/commander.js#readme
+
+Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+(The MIT License)
+
+Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+commander 2.20.3 - MIT
 https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -12768,7 +12768,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT
+cssesc 3.0.0 - MIT
 https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -12799,7 +12799,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT
+cssesc 2.0.0 - MIT
 https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -13418,15 +13418,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-define-property 1.0.0 - MIT
+define-property 2.0.2 - MIT
 https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2015, 2017, Jon Schlinkert
+Copyright (c) 2015-2018, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -13451,15 +13451,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT
+define-property 1.0.0 - MIT
 https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015-2018, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2015, 2017, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17178,16 +17178,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT
+is-number 7.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert
-Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17212,15 +17211,16 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT
+is-number 3.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22936,7 +22936,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT
+postcss-selector-parser 6.0.2 - MIT
 https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
@@ -22969,7 +22969,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 - MIT
+postcss-selector-parser 5.0.0 - MIT
 https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
@@ -23715,7 +23715,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-punycode 1.4.1 - MIT
+punycode 1.3.2 - MIT
 https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -23746,7 +23746,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-punycode 1.3.2 - MIT
+punycode 1.4.1 - MIT
 https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -26642,7 +26642,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT
+string_decoder 1.3.0 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.
@@ -26701,7 +26701,7 @@ IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT
+string_decoder 1.1.1 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.
