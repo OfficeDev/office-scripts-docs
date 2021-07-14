@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 07/09/2021
+ms.date: 07/14/2021
 localization_priority: Normal
 ---
 
@@ -76,9 +76,30 @@ let filteredArray = myArray.filter((x) => {
 */
 ```
 
-## Unions of `ExcelScript` types are not supported
+## Unions of `ExcelScript` types and user-defined types aren't supported
 
+Office Scripts are converted at runtime from synchronous to asynchronous code blocks. The communication with the workbook through [Promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) is hidden from the script creator. This conversion doesn't support [union types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) that include `ExcelScript` types and user-defined types.
 
+The following code sample shows an unsupported union between `ExcelScript.Table` and a custom `MyTable` interface.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const selectedSheet = workbook.getActiveWorksheet();
+
+  // This union is not supported.
+  const tableOrMyTable: ExcelScript.Table | MyTable = selectedSheet.getTables()[0];
+
+  // getName returns a Promise that can't be resolved by the script.
+  const name = tableOrMyTable.getName();
+
+  // This logs "{}" instead of the table name.
+  console.log(name);
+}
+
+interface MyTable {
+  getName(): string
+}
+```
 
 ## Performance warnings
 
