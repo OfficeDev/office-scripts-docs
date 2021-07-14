@@ -78,7 +78,7 @@ let filteredArray = myArray.filter((x) => {
 
 ## Unions of `ExcelScript` types and user-defined types aren't supported
 
-Office Scripts are converted at runtime from synchronous to asynchronous code blocks. The communication with the workbook through [Promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) is hidden from the script creator. This conversion doesn't support [union types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) that include `ExcelScript` types and user-defined types.
+Office Scripts are converted at runtime from synchronous to asynchronous code blocks. The communication with the workbook through [Promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) is hidden from the script creator. This conversion doesn't support [union types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) that include `ExcelScript` types and user-defined types. In that case, the `Promise` is returned to the script, but the Office Script complier doesn't expect it and the script creator can't interact with the `Promise`.
 
 The following code sample shows an unsupported union between `ExcelScript.Table` and a custom `MyTable` interface.
 
