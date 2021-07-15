@@ -321,3 +321,4 @@ The [Office Scripts API reference documentation](/javascript/api/office-scripts/
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
 - [Best practices in Office Scripts](best-practices.md)
+- [Office Scripts Dev Center](https://developer.microsoft.com/office-scripts)
