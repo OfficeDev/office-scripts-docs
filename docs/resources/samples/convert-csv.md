@@ -83,4 +83,4 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     1. **Script**: Convert CSV
     1. **csv**: *File content* (dynamic content from **Get .csv file**)
 
-    :::image type="content" source=".../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
+    :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
