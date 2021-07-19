@@ -7,17 +7,17 @@ localization_priority: Normal
 
 # Convert CSV files to Excel workbooks
 
-Many services output data as comma-separated value (CSV) files. This solution automates the process of converting CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://flow.microsoft.com) flow to find .csv files in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
+Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://flow.microsoft.com) flow to find .csv files in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
 
 ## Solution
 
-1. Store the .csv files and a blank .xlsx file in a OneDrive folder.
+1. Store the .csv files and a blank "Template" .xlsx file in a OneDrive folder.
 1. Create an Office Script to parse the CSV data into a range.
 1. Create a Power Automate flow to read the .csv files and pass their contents to the script.
 
 ## Sample files
 
-Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">convert-csv-example.zip</a> to get the template .xlsx file and a .csv file. Extract the files into a folder in your OneDrive. This sample uses the folder name "output".
+Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">convert-csv-example.zip</a> to get the template .xlsx file and two sample .csv files. Extract the files into a folder in your OneDrive. This sample assumes the folder is named "output".
 
 ## Sample code: Insert comma-separated values into a workbook
 
@@ -32,8 +32,8 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
   let data : string[][] = [];
   rows.forEach((value) => {
     /*
-     *For each row, match the comma-separated sections.
-     * For more information using regular expressions to parse CSV files,
+     * For each row, match the comma-separated sections.
+     * For more information on how to use regular expressions to parse CSV files,
      * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
      */
     data.push(value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g));
@@ -54,14 +54,14 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 1. Set the flow to **Repeat every** "1" "Day" and select **Create**.
 1. Get the template Excel file. This is the basis for all the converted .csv files. Add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Provide the file path to the "Template.xlsx" file.
     1. **File**: /output/Template.xlsx
-1. Rename the **Get file content** step using the **...** menu's **Rename** option. Change the step name to "Get Excel template".
+1. Rename the **Get file content** step by going to the **...** menu and selecting the **Rename** option. Change the step name to "Get Excel template".
 
      :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate, renamed to be Get Excel template.":::
 1. Get all the files in the "output" folder. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action. Provide the folder path that contains the .csv files.
     1. **Folder**: /output
 
     :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the control. Note that when you select dynamic content with multiple results, an **Apply to each** control will surround the **Condition**.
+1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the control. Note that when you select dynamic content with multiple results, an **Apply to each** control surrounds the **Condition**.
     1. **Choose a value**: *Name* (dynamic content from **List files in folder**)
     1. **ends with** (from the dropdown list)
     1. **Choose a value**: .csv
