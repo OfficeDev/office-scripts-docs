@@ -1,4 +1,7 @@
 # Sending Emails Using Office Script & Power Automate
+By: Michael Huskey
+
+## Background
 
 ### What was the problem I was trying to solve 🧐?
 Because of the pandemic our team was spread out across the world. Part of the team in Southeastern Michigan, another group in Toronto, and the other part of the team in the UK. 
