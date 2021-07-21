@@ -53,34 +53,34 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Scheduled cloud flow**.
 1. Set the flow to **Repeat every** "1" "Day" and select **Create**.
 1. Get the template Excel file. This is the basis for all the converted .csv files. Add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Provide the file path to the "Template.xlsx" file.
-    1. **File**: /output/Template.xlsx
-1. Rename the **Get file content** step by going to the **...** menu and selecting the **Rename** option. Change the step name to "Get Excel template".
+    * **File**: /output/Template.xlsx
+1. Rename the **Get file content** step by going the **...** menu of that step (in the upper right corner of the connector) and selecting the **Rename** option. Change the step name to "Get Excel template".
 
      :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate, renamed to be Get Excel template.":::
 1. Get all the files in the "output" folder. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action. Provide the folder path that contains the .csv files.
-    1. **Folder**: /output
+    * **Folder**: /output
 
     :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
 1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the control. Note that when you select dynamic content with multiple results, an **Apply to each** control surrounds the **Condition**.
-    1. **Choose a value**: *Name* (dynamic content from **List files in folder**)
-    1. **ends with** (from the dropdown list)
-    1. **Choose a value**: .csv
+    * **Choose a value**: *Name* (dynamic content from **List files in folder**)
+    * **ends with** (from the dropdown list)
+    * **Choose a value**: .csv
 
     :::image type="content" source="../../images/convert-csv-flow-3.png" alt-text="The completed Condition control with the Apply to each control around it.":::
 1. Get the each .csv file. Under the **If yes** section, add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Use the **Id** from the dynamic content from **List files in folder**.
-    1. **File**: *Id* (dynamic content from the **List files in folder** step)
+    * **File**: *Id* (dynamic content from the **List files in folder** step)
 1. Rename the new **Get file content** step to "Get .csv file". This helps distinguish this file from the Excel template.
 1. Make the new .xlsx file, using the Excel template as the base content. Add a **New step** that uses the **OneDrive for Business** connector and the **Create file** action. Use the following values.
-    1. **Folder Path**: /output
-    1. **File Name**: *Name without extension*.xlsx (choose the *Name without extension* dynamic content from the **List files in folder** and manually type ".xlsx" after it)
-    1. **File Content**: *File content* (dynamic content from **Get Excel template**)
+    * **Folder Path**: /output
+    * **File Name**: *Name without extension*.xlsx (choose the *Name without extension* dynamic content from the **List files in folder** and manually type ".xlsx" after it)
+    * **File Content**: *File content* (dynamic content from **Get Excel template**)
 
      :::image type="content" source="../../images/convert-csv-flow-4.png" alt-text="The Get .csv file and Create file steps of the Power Automate flow.":::
 1. Run the script to copy data into the new workbook. Add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
-    1. **Location**: OneDrive for Business
-    1. **Document Library**: OneDrive
-    1. **File**: *Id* (dynamic content from **Create file**)
-    1. **Script**: Convert CSV
-    1. **csv**: *File content* (dynamic content from **Get .csv file**)
+    * **Location**: OneDrive for Business
+    * **Document Library**: OneDrive
+    * **File**: *Id* (dynamic content from **Create file**)
+    * **Script**: Convert CSV
+    * **csv**: *File content* (dynamic content from **Get .csv file**)
 
     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
