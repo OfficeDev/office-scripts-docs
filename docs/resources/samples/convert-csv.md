@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Convert CSV files to Excel workbooks
 
-Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://flow.microsoft.com) flow to find .csv files in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
+Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://flow.microsoft.com) flow to find files with the .csv extension in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
 
 ## Solution
 
@@ -23,7 +23,7 @@ Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/d
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, csv: string) {
-  /* Convert the csv data into a 2D array. */
+  /* Convert the CSV data into a 2D array. */
   // Trim the trailing new line.
   csv = csv.trim();
 
