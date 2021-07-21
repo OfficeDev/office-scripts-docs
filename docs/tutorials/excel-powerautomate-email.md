@@ -1,5 +1,11 @@
+
 # Sending Emails Using Office Script & Power Automate
 By: Michael Huskey
+
+Pre-Reqs
+* JavaScript/TypeScript Familiarity 
+* Power Automate Access
+* Excel Online
 
 ## Background
 
@@ -16,7 +22,7 @@ The old way to make sure everyone completed their tests was by checking an Excel
 
 Using the tools listed above I created a solution that would be able to automatically send reminder emails to teammates, which dramatically decreased our testing deliquency, eliminated the need for a team member to check and sped up the process of testing software versions.
 
-## What I am going to show you in this Tutorial
+## What I am going to show you in this Tutorial ✏️
 
 I don't think my management would be too happy if I showed everything that I did to speed up our internal process, but I can show you this one part that did make all the difference and that is using `Office Script + Power Automate` to send out automated email reminders.
 
@@ -159,5 +165,25 @@ interface OutputData {
 	versionNo: string;
 }
 ```
-### 5. Open Power Auto
-<img width="644" alt="Screen Shot 2021-07-21 at 2 57 39 PM" src="https://user-images.githubusercontent.com/40217812/126544421-4b57ad3a-2e90-4014-9d9f-50bbfb8ed856.png">
+### 5. Create a Power Automate Flow from the Script
+
+<img width="644" alt="Screen Shot 2021-07-21 at 3 55 02 PM" src="https://user-images.githubusercontent.com/40217812/126551636-7aeb6eb9-7222-4cda-a431-73fe4bb92525.png">
+
+### 6. Find the Excel File and Select the Script
+*Note to Microsoft: When you create a flow from a script auto populating the document & script would be an awesome feature*
+
+<img width="644" alt="Screen Shot 2021-07-21 at 3 56 10 PM" src="https://user-images.githubusercontent.com/40217812/126551781-7209885a-f34d-4019-9657-f6c9697e1994.png">
+
+### 7. Click `New Step` and type in `Send Email`
+<img width="644" alt="Screen Shot 2021-07-21 at 4 00 25 PM" src="https://user-images.githubusercontent.com/40217812/126552346-79fedfc9-cd98-44f6-9966-050eafdfc5ef.png">
+
+### 8. Add Dynamic Content
+When you add dynamic content you will see the values that we specified in the `outputData` object in Step 3. Also, when you add the dynamic content you will see `Apply to Each` show up for the step. This is saying that it will do this step for every object that the script outputs.
+
+<img width="635" alt="Screen Shot 2021-07-21 at 4 06 51 PM" src="https://user-images.githubusercontent.com/40217812/126553088-faf6d8f7-0d5c-47b9-8468-bfe8044116ac.png">
+
+### 9. Run Tests & Let it Automate Your Job!
+
+
+-------
+Thanks for reading this and I hope this was able to either directly help you automate part of your job or give you an idea of something else you could use these concepts to simplify.
