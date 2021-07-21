@@ -19,3 +19,10 @@ Using the tools listed above I created a solution that would be able to automati
 ## What I am going to show you in this Tutorial
 
 I don't think my management would be too happy if I showed everything that I did to speed up our internal process, but I can show you this one part that did make all the difference and that is using `Office Script + Power Automate` to send out automated email reminders.
+
+A look at the data. (Check Image Below 👇)
+
+<img width="1470" alt="Screen Shot 2021-07-21 at 12 22 28 PM" src="https://user-images.githubusercontent.com/40217812/126524112-0d95424d-333d-4249-9fef-d6773b4563d8.png">
+
+#### 1. Create Global Variables for my Script.
+Whenever I write an Office Script I will set up a global variables for my workbook, any worksheets I'm using, and column numbers of important data.
