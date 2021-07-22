@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
   return returnObjects
 }
 
-// This function converts a 2D-array of values into a generic JSON object.
+// This function converts a 2D array of values into a generic JSON object.
 // In this case, we have defined the TableData object, but any similar interface would work.
 function returnObjectFromValues(values: string[][]): TableData[] {
   let objectArray: TableData[] = [];
