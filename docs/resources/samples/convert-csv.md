@@ -67,7 +67,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     * **Choose a value**: .csv
 
     :::image type="content" source="../../images/convert-csv-flow-3.png" alt-text="The completed Condition control with the Apply to each control around it.":::
-1. Get the each .csv file. Under the **If yes** section, add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Use the **Id** from the dynamic content from **List files in folder**.
+1. The rest of the flow is under the **If yes** section, since we only want to act on .csv files. Get an individual .csv file by adding a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Use the **Id** from the dynamic content from **List files in folder**.
     * **File**: *Id* (dynamic content from the **List files in folder** step)
 1. Rename the new **Get file content** step to "Get .csv file". This helps distinguish this file from the Excel template.
 1. Make the new .xlsx file, using the Excel template as the base content. Add a **New step** that uses the **OneDrive for Business** connector and the **Create file** action. Use the following values.
