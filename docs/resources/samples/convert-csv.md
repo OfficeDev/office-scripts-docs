@@ -61,8 +61,8 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     * **Folder**: /output
 
     :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the control. Note that when you select dynamic content with multiple results, an **Apply to each** control surrounds the **Condition**.
-    * **Choose a value**: *Name* (dynamic content from **List files in folder**)
+1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the **Condition**.
+    * **Choose a value**: *Name* (dynamic content from **List files in folder**). Note that this dynamic content has multiple results, so an **Apply to each** *value* control surrounds the **Condition**.
     * **ends with** (from the dropdown list)
     * **Choose a value**: .csv
 
