@@ -86,3 +86,5 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     * **csv**: *File content* (dynamic content from **Get .csv file**)
 
     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
+1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+1. You should find new .xlsx files in the "output" folder, alongside the original .csv files. The new workbooks contain the same data as the CSV files.
