@@ -145,7 +145,7 @@ This flow extracts the event information from the first workbook and uses that d
 
 1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
+1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: event-data.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
@@ -153,14 +153,14 @@ This flow extracts the event information from the first workbook and uses that d
 
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="The completed Excel Online (Business) connector for the first script in Power Automate.":::
 
-1. Add a second **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action:
+1. Add a second **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: speaker-registration.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
     * **Script**: Validate speaker registration
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="The completed Excel Online (Business) connector for the second script in Power Automate.":::
-1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action:
+1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action.
     * **To**: Your test email account (or personal email)
     * **Subject**: Event validation results
     * **Body**: result (_dynamic content from **Run script 2**_)

@@ -76,7 +76,7 @@ This flow runs the script on every workbook in the "Sales" folder.
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
 1. Select the "Sales" folder with the extracted workbooks.
-1. To ensure only workbooks are selected, choose **New step**, then select **Condition**. Use the following values for the action.
+1. To ensure only workbooks are selected, choose **New step**, then select **Condition**. Use the following values for the condition.
     1. **Name** (the OneDrive file name value)
     1. "ends with"
     1. "xlsx".
