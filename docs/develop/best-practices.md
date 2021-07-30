@@ -74,7 +74,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Continue....
 }
 
-function inputPresent( workbook: ExcelScript.Workbook): boolean {
+function inputPresent(workbook: ExcelScript.Workbook): boolean {
   // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
