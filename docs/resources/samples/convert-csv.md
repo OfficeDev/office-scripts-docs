@@ -38,7 +38,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
      * For more information on how to use regular expressions to parse CSV files,
      * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
      */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g)
+    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
     
     // Remove the preceding comma.
     row.forEach((cell, index) => {
