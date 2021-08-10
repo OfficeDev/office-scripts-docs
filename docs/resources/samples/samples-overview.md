@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
-ms.date: 05/25/2021
+ms.date: 07/19/2021
 localization_priority: Normal
 ---
 
@@ -30,6 +30,7 @@ Check out the following end-to-end project that automates sample scenarios along
 
 | Project | Details |
 |---------|---------|
+| [Convert CSV files to Excel workbooks](convert-csv.md) | This sample uses Office Scripts and Power Automate to create .xlsx files from .csv files. |
 | [Cross-reference workbooks](excel-cross-reference.md) | This sample uses Office Scripts and Power Automate to cross-reference and validate information in different workbooks. |
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
