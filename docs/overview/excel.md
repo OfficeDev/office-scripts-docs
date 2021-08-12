@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 07/09/2021
+ms.date: 08/12/2021
 localization_priority: Priority
 ---
 
@@ -68,7 +68,9 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
 
-### Create script buttons
+### Create script buttons (preview)
+
+[!INCLUDE [Public preview](../includes/preview-note.md)]
 
 Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **...** menu and select **Add button**. This creates a button in the workbook that runs the associated script when pressed. It also shares the script with the workbook, so everyone with access can use your helpful automation.
 
