@@ -8316,7 +8316,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.227 - MIT
+@types/office-js-preview 1.0.231 - MIT
 https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 Copyright (c) Microsoft Corporation.
@@ -12022,7 +12022,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-commander 2.20.3 - MIT
+commander 2.19.0 - MIT
 https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -12088,7 +12088,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-commander 2.19.0 - MIT
+commander 2.20.3 - MIT
 https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -13418,15 +13418,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-define-property 1.0.0 - MIT
+define-property 2.0.2 - MIT
 https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2015, 2017, Jon Schlinkert
+Copyright (c) 2015-2018, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -13451,15 +13451,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT
+define-property 1.0.0 - MIT
 https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015-2018, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2015, 2017, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -14580,16 +14580,15 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-fill-range 4.0.0 - MIT
+fill-range 7.0.1 - MIT
 https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-2017, Jon Schlinkert
-Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -14614,15 +14613,16 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-fill-range 7.0.1 - MIT
+fill-range 4.0.0 - MIT
 https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17178,16 +17178,15 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT
+is-number 7.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert
-Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17212,15 +17211,16 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT
+is-number 3.0.0 - MIT
 https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19560,7 +19560,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT
+monaco-editor 0.20.0 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -19608,7 +19608,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT
+monaco-editor 0.18.1 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -23591,7 +23591,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-pump 2.0.1 - MIT
+pump 3.0.0 - MIT
 https://github.com/mafintosh/pump#readme
 
 Copyright (c) 2014 Mathias Buus
@@ -23622,7 +23622,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-pump 3.0.0 - MIT
+pump 2.0.1 - MIT
 https://github.com/mafintosh/pump#readme
 
 Copyright (c) 2014 Mathias Buus
@@ -24323,7 +24323,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-readable-stream 2.3.7 - MIT
+readable-stream 3.6.0 - MIT
 https://github.com/nodejs/readable-stream#readme
 
 Copyright Joyent, Inc. and other Node contributors.
@@ -24381,7 +24381,7 @@ IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-readable-stream 3.6.0 - MIT
+readable-stream 2.3.7 - MIT
 https://github.com/nodejs/readable-stream#readme
 
 Copyright Joyent, Inc. and other Node contributors.
@@ -25601,8 +25601,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-schema-utils 0.4.7 - MIT
-https://github.com/webpack-contrib/schema-utils
+schema-utils 2.7.0 - MIT
+https://github.com/webpack/schema-utils
 
 Copyright JS Foundation and other contributors
 
@@ -25632,8 +25632,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT
-https://github.com/webpack/schema-utils
+schema-utils 0.4.7 - MIT
+https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation and other contributors
 
@@ -26642,7 +26642,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT
+string_decoder 1.3.0 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.
@@ -26701,7 +26701,7 @@ IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT
+string_decoder 1.1.1 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.

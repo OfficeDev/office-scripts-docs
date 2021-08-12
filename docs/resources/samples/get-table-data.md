@@ -1,7 +1,7 @@
 ---
 title: 'Output Excel data as JSON'
 description: 'Learn how to output Excel table data as JSON to use in Power Automate.'
-ms.date: 06/29/2021
+ms.date: 07/22/2021
 localization_priority: Normal
 ---
 
@@ -43,19 +43,19 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
 
   // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
-  if (table.getRowCount() > 0)  {
+  if (table.getRowCount() > 0) {
     returnObjects = returnObjectFromValues(texts);
   }
 
   // Log the information and return it for a Power Automate flow.
-  console.log(JSON.stringify(returnObjects));  
+  console.log(JSON.stringify(returnObjects));
   return returnObjects
 }
 
-// This function converts a 2D-array of values into a generic JSON object.
+// This function converts a 2D array of values into a generic JSON object.
 // In this case, we have defined the TableData object, but any similar interface would work.
 function returnObjectFromValues(values: string[][]): TableData[] {
-  let objectArray = [];
+  let objectArray: TableData[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -68,10 +68,10 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object);
+    objectArray.push(object as TableData);
   }
 
-  return objectArray as TableData[];
+  return objectArray;
 }
 
 interface TableData {
@@ -153,18 +153,18 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
 
   // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
-  if (table.getRowCount() > 0)  {
+  if (table.getRowCount() > 0) {
     returnObjects = returnObjectFromValues(range);
   }
 
   // Log the information and return it for a Power Automate flow.
-  console.log(JSON.stringify(returnObjects));  
+  console.log(JSON.stringify(returnObjects));
   return returnObjects
 }
 
 function returnObjectFromValues(range: ExcelScript.Range): TableData[] {
   let values = range.getTexts();
-  let objectArray = [];
+  let objectArray : TableData[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -182,9 +182,9 @@ function returnObjectFromValues(range: ExcelScript.Range): TableData[] {
       }
     }
 
-    objectArray.push(object);
+    objectArray.push(object as TableData);
   }
-  return objectArray as TableData[];
+  return objectArray;
 }
 
 interface TableData {
