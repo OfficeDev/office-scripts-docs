@@ -81,7 +81,7 @@ For information specific to running scripts through Power Automate, see [Trouble
 
 To submit a feature request for Office Scripts, post your idea to our [User Voice page](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439), or if the feature request already exists there, add your vote for it. Be sure to file the request under Excel for the web in the "Macros, Scripts and Add-ins" category.
 
-If there is a problem with the Action Recorder or Editor, please let us know. In the Code Editor task pane's **...** menu, select the **Send feedback** button to share any issues.
+If there is a problem with the Action Recorder or Editor, please let us know. In the Code Editor task pane's **More options (…)** menu, select the **Send feedback** button to share any issues.
 
 :::image type="content" source="../images/code-editor-feedback.png" alt-text="The Code Editor overflow menu with the 'Send feedback' button.":::
 

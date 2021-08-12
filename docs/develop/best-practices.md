@@ -55,7 +55,7 @@ function main(workbook: ExcelScript.Workbook) {
     return;
   }
 
-  // Continue....
+  // Continue...
 }
 ```
 
@@ -71,7 +71,7 @@ function main(workbook: ExcelScript.Workbook) {
     return;
   }
 
-  // Continue....
+  // Continue...
 }
 
 function inputPresent(workbook: ExcelScript.Workbook): boolean {

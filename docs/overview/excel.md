@@ -72,7 +72,7 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 
 [!INCLUDE [Public preview](../includes/preview-note.md)]
 
-Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **...** menu and select **Add button**. This creates a button in the workbook that runs the associated script when pressed. It also shares the script with the workbook, so everyone with access can use your helpful automation.
+Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu and select **Add button**. This creates a button in the workbook that runs the associated script when pressed. It also shares the script with the workbook, so everyone with access can use your helpful automation.
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the Code Editor's menu.":::
 
