@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
-ms.date: 08/12/2021
+ms.date: 08/24/2021
 localization_priority: Priority
 ---
 
@@ -72,9 +72,11 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 
 [!INCLUDE [Public preview](../includes/preview-note.md)]
 
-Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu and select **Add button**. This creates a button in the workbook that runs the associated script when pressed. It also shares the script with the workbook, so everyone with access can use your helpful automation.
+Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu in the script's Details page and select **Add button**. This creates a button in the workbook that runs the associated script when selected. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the Code Editor's menu.":::
+
+You can also add a script button when creating a new script by selecting the **More options (…)** menu in the Code Editor and then selecting **Add button**.
 
 ## Connect Office Scripts to Power Automate
 
