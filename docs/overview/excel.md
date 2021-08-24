@@ -74,6 +74,8 @@ More details about sharing and unsharing scripts can be in the article [Sharing 
 
 Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu in the script's Details page and select **Add button**. This creates a button in the workbook that runs the associated script when selected. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
+The following screenshot shows the script Details page for a script titled **Create Report** and has the **Add button** option within the **More options (…)** menu highlighted.
+
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
 
 You can also add a script button when creating a new script by selecting the **More options (…)** menu in the Code Editor and then selecting **Add button**.
