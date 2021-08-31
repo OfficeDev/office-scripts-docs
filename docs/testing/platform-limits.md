@@ -25,7 +25,7 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 #### Instructions for adjusting cookie settings in popular browsers
 
 - [Chrome](https://support.google.com/chrome/answer/95647)
-- [Edge](https://support.microsoft.com/microsoft-edge/temporarily-allow-cookies-and-site-data-in-microsoft-edge-597f04f2-c0ce-f08c-7c2b-541086362bd2)
+- [Edge](https://support.microsoft.com/microsoft-edge/597f04f2-c0ce-f08c-7c2b-541086362bd2)
 - [Firefox](https://support.mozilla.org/kb/disable-third-party-cookies)
 - [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)
 
