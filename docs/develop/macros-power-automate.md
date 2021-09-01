@@ -14,7 +14,7 @@ In your flow, use the **Get File Metadata** action from either the [OneDrive for
 :::image type="content" source="../images/xlsm-in-power-automate.png" alt-text="A flow with a Get file metadata action passing the metadata of a macro file to a Run script action.":::
 
 > [!WARNING]
-> Some .xlsm files, especially the ones with ActiveX or Form controls, may not work in the Excel online connector. Be sure to test before deploying your solution.
+> Some .xlsm files, especially those with ActiveX or Form controls, may not work in the Excel online connector. Be sure to test before deploying your solution.
 
 ## Other resources
 
