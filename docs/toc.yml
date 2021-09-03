@@ -70,6 +70,8 @@ items:
         href: resources/samples/copy-tables-combine.md
     - name: Beyond the basics
       items:
+      - name: Combine worksheets into a single workbook
+        href: resources/samples/combine-worksheets-into-single-workbook.md
       - name: Convert CSV files
         href: resources/samples/convert-csv.md
       - name: Cross-reference worksheets
