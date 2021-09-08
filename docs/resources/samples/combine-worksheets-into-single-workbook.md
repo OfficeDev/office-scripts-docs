@@ -15,10 +15,10 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 ## Scenario
 
 1. Create a new Excel file in your OneDrive and add two scripts from this sample to it.
-1. Create a folder in your OneDrive and add at least one workbook with data to it.
-1. The flow you'll build gets all the files in a specified folder full of Excel workbooks.
-1. The **Return worksheet data** script gets the data from every worksheet in each of the workbooks.
-1. The **Add worksheets** script creates a new worksheet in a single workbook for every worksheet in all the other files.
+1. Create a folder in your OneDrive and add one or more workbooks with data to it.
+1. Build a flow to get all the files that folder.
+1. Use the **Return worksheet data** script to get the data from every worksheet in each of the workbooks.
+1. Use the **Add worksheets** script to create a new worksheet in a single workbook for every worksheet in all the other files.
 
 ## Sample code: Return worksheet data
 
@@ -99,5 +99,8 @@ interface WorksheetData {
     * **worksheetInformation**: *result* (dynamic content from **Run script**)
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
+    > [!NOTE]
+    > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array.
+    > :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. Your Excel file should now have new worksheets.
