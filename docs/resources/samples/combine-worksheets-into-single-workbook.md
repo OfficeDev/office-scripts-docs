@@ -17,10 +17,10 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 1. Create a new Excel file in your OneDrive and add two scripts from this sample to it.
 1. Create a folder in your OneDrive and add at least one workbook with data to it.
 1. The flow you'll build gets all the files in a specified folder full of Excel workbooks.
-1. The **Return Worksheet Data** script gets the data from every worksheet in each of the workbooks.
-1. The **Add Worksheets** script creates a new worksheet in a single workbook for every worksheet in all the other files.
+1. The **Return worksheet data** script gets the data from every worksheet in each of the workbooks.
+1. The **Add worksheets** script creates a new worksheet in a single workbook for every worksheet in all the other files.
 
-## Sample code: Return Worksheet Data
+## Sample code: Return worksheet data
 
 ```TypeScript
 /**
@@ -85,16 +85,16 @@ interface WorksheetData {
     * **Folder**: /output
 
     :::image type="content" source="../../images/combine-worksheets-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Run the **Return Worksheet Data** script to get all the data from each of the workbooks. Add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **Apply to each** control, so the action will be performed on every file.
+1. Run the **Return worksheet data** script to get all the data from each of the workbooks. Add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **Apply to each** control, so the action will be performed on every file.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: *Id* (dynamic content from **List files in folder**)
     * **Script**: Return Worksheet Data
-1. Run the **Add Worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. Run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: Your file
-    * **Script**: Add Worksheets
+    * **Script**: Add worksheets
     * **workbookName**: *Name* (dynamic content from **List files in folder**)
     * **worksheetInformation**: *result* (dynamic content from **Run script**)
 
