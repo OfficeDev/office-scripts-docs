@@ -2,7 +2,7 @@
 title: 'Remove hyperlinks from each cell in an Excel worksheet'
 description: 'Learn how to use Office Scripts to remove hyperlinks from each cell in an Excel worksheet.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Remove hyperlinks from each cell in an Excel worksheet

@@ -2,7 +2,7 @@
 title: 'Schedule interviews in Teams'
 description: 'Learn how to use Office Scripts to send a Teams meeting from Excel data.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Office Scripts sample scenario: Schedule interviews in Teams

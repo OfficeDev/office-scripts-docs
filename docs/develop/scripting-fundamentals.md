@@ -2,7 +2,7 @@
 title: 'Scripting fundamentals for Office Scripts in Excel on the web'
 description: 'Object model information and other basics to learn before writing Office Scripts.'
 ms.date: 05/24/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Scripting fundamentals for Office Scripts in Excel on the web

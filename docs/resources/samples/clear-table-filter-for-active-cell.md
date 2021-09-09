@@ -2,7 +2,7 @@
 title: 'Clear table column filter based on active cell location'
 description: 'Learn how to clear table column filter based on active cell location.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Clear table column filter based on active cell location
