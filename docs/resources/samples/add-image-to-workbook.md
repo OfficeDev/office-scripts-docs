@@ -2,7 +2,7 @@
 title: 'Add images to a workbook'
 description: 'Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.'
 ms.date: 07/12/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Add images to a workbook

@@ -2,7 +2,7 @@
 title: 'Troubleshoot Office Scripts running in Power Automate'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
 ms.date: 05/18/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Troubleshoot Office Scripts running in Power Automate

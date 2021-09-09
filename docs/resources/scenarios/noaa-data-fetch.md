@@ -2,7 +2,7 @@
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Office Scripts sample scenario: Fetch and graph water-level data from NOAA
