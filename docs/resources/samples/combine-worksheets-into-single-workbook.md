@@ -89,7 +89,7 @@ interface WorksheetData {
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: *Id* (dynamic content from **List files in folder**)
-    * **Script**: Return Worksheet Data
+    * **Script**: Return worksheet data
 1. Run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
