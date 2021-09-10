@@ -2,7 +2,7 @@
 title: 'Office Scripts file storage and ownership'
 description: 'Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.'
 ms.date: 06/04/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Office Scripts file storage and ownership

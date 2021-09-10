@@ -2,7 +2,7 @@
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
 ms.date: 05/21/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Differences between Office Scripts and VBA macros

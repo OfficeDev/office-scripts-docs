@@ -2,7 +2,7 @@
 title: 'Office Scripts samples'
 description: 'Available Office Scripts samples and scenarios.'
 ms.date: 09/03/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Office Scripts samples and scenarios

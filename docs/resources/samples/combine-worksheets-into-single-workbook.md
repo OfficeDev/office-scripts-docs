@@ -2,7 +2,7 @@
 title: 'Combine workbooks into a single workbook'
 description: 'Learn how to use Office Scripts and Power Automate to create merge worksheets from other workbooks into a single workbook.'
 ms.date: 09/03/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Combine worksheets into a single workbook
@@ -101,6 +101,7 @@ interface WorksheetData {
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
     > [!NOTE]
     > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array.
+    >
     > :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. Your Excel file should now have new worksheets.
