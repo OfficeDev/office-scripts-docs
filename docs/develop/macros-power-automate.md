@@ -2,7 +2,7 @@
 title: 'Use macro files in Power Automate flows'
 description: 'Learn how to use macro files or xlsm files in Power Automate flows.'
 ms.date: 09/01/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # How to use macro files in Power Automate flows
