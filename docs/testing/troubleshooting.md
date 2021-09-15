@@ -79,7 +79,7 @@ For information specific to running scripts through Power Automate, see [Trouble
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems. Often, you'll be able to find the solution to your problem through a quick Stack Overflow search. If not, ask your question and tag it with the "office-scripts" tag. Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.
 
-To submit a feature request for Office Scripts or to report an issue with the feature, use the feedback button in the Code Editor. In the Code Editor task pane's **More options** (**...**) menu, select the **Send feedback** button to share your experiences.
+To submit a feature request for Office Scripts or to report an issue with the feature, use the feedback button in the Code Editor. In the Code Editor task pane's **More options** (**...**) menu, select the **Send feedback** button to share your feature needs and other experiences.
 
 :::image type="content" source="../images/code-editor-feedback.png" alt-text="The Code Editor overflow menu with the 'Send feedback' button.":::
 
