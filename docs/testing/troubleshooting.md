@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 05/17/2021
+ms.date: 09/15/2021
 ms.localizationpriority: medium
 ---
 
@@ -79,9 +79,7 @@ For information specific to running scripts through Power Automate, see [Trouble
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems. Often, you'll be able to find the solution to your problem through a quick Stack Overflow search. If not, ask your question and tag it with the "office-scripts" tag. Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.
 
-To submit a feature request for Office Scripts, post your idea to our [User Voice page](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439), or if the feature request already exists there, add your vote for it. Be sure to file the request under Excel for the web in the "Macros, Scripts and Add-ins" category.
-
-If there is a problem with the Action Recorder or Editor, please let us know. In the Code Editor task pane's **...** menu, select the **Send feedback** button to share any issues.
+To submit a feature request for Office Scripts or to report an issue with the feature, use the feedback button in the Code Editor. In the Code Editor task pane's **More options** (**...**) menu, select the **Send feedback** button to share your experiences.
 
 :::image type="content" source="../images/code-editor-feedback.png" alt-text="The Code Editor overflow menu with the 'Send feedback' button.":::
 
