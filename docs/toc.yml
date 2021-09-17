@@ -38,6 +38,8 @@ items:
       href: overview/script-storage.md
     - name: Run scripts with Power Automate
       href: develop/power-automate-integration.md
+    - name: Use macro files in Power Automate flows
+      href: develop/macros-power-automate.md
   - name: Troubleshooting
     items:
     - name: Troubleshooting basics
@@ -68,6 +70,8 @@ items:
         href: resources/samples/copy-tables-combine.md
     - name: Beyond the basics
       items:
+      - name: Combine worksheets into a single workbook
+        href: resources/samples/combine-worksheets-into-single-workbook.md
       - name: Convert CSV files
         href: resources/samples/convert-csv.md
       - name: Cross-reference worksheets

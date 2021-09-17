@@ -2,7 +2,7 @@
 title: 'Manage calculation mode in Excel'
 description: 'Learn how to use Office Scripts to manage the calculation mode in Excel on the web.'
 ms.date: 05/06/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Manage calculation mode in Excel
@@ -13,7 +13,7 @@ This sample shows how to use the [calculation mode](/javascript/api/office-scrip
 
 Workbooks with large numbers of formulas can take a while to recalculate. Rather than letting Excel control when calculations happen, you can manage them as part of your script. This will help with performance in certain scenarios.
 
-The sample script sets the calculation mode to manual. This means that the workbook will only recalculate formulas when the script tells it to (or you [manually calculate through the UI](https://support.microsoft.com/office/change-formula-recalculation-iteration-or-precision-in-excel-73fc7dac-91cf-4d36-86e8-67124f6bcce4)). The script then displays the current calculation mode and fully recalculates the entire workbook.
+The sample script sets the calculation mode to manual. This means that the workbook will only recalculate formulas when the script tells it to (or you [manually calculate through the UI](https://support.microsoft.com/office/73fc7dac-91cf-4d36-86e8-67124f6bcce4)). The script then displays the current calculation mode and fully recalculates the entire workbook.
 
 ## Sample code: Control calculation mode
 

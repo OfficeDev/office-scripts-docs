@@ -2,18 +2,16 @@
 title: 'Move rows across tables using Office Scripts'
 description: 'Learn how to move rows across tables by saving filters, then processing and reapplying the filters.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
-# Move rows across tables by saving filters, then processing and reapplying the filters
+# Move rows across tables
 
 This script does the following:
 
-* Selects rows from the source table where the value in a column is equal to _some value_.
-* Moves all selected rows into another (target) table on another worksheet.
-* Reapplies the relevant filters on the source table.
-
-:::image type="content" source="../../images/table-filter-before-after.png" alt-text="Screenshots of workbook before and after.":::
+* Selects rows from the source table where the value in a column is equal to some value (`FILTER_VALUE` in the script).
+* Moves all selected rows into the target table in another worksheet.
+* Reapplies the relevant filters to the source table.
 
 ## Sample Excel file
 
@@ -25,29 +23,30 @@ Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a
 function main(workbook: ExcelScript.Workbook) {
 
   // You can change these names to match the data in your workbook.
-  const TargetTableName = 'Table1';
-  const SourceTableName = 'Table2';
-  const IndexOfColumnToFilterOn = 1;
-  const NameOfColumnToFilterOn = 'Category';
-  const ValueToFilterOn = 'Clothing';
+  const TARGET_TABLE_NAME = 'Table1';
+  const SOURCE_TABLE_NAME = 'Table2';
+
+  // Select what will be moved between tables.
+  const FILTER_COLUMN_INDEX = 1;
+  const FILTER_VALUE = 'Clothing';
 
   // Get the Table objects.
-  let targetTable = workbook.getTable(TargetTableName);
-  let sourceTable = workbook.getTable(SourceTableName);
+  let targetTable = workbook.getTable(TARGET_TABLE_NAME);
+  let sourceTable = workbook.getTable(SOURCE_TABLE_NAME);
 
   // If either table is missing, report that information and stop the script.
   if (!targetTable || !sourceTable) {
-    console.log(`Tables missing - Check to make sure both source (${TargetTableName}) and target table (${SourceTableName}) are present before running the script. `);
+    console.log(`Tables missing - Check to make sure both source (${TARGET_TABLE_NAME}) and target table (${SOURCE_TABLE_NAME}) are present before running the script. `);
     return;
   }
 
-  // Save the filter criteria.
-  const tableFilters = {};
+  // Save the filter criteria currently on the source table.
+  const originalTableFilters = {};
   // For each table column, collect the filter criteria on that column.
   sourceTable.getColumns().forEach((column) => {
-    let colFilterCriteria = column.getFilter().getCriteria();
-    if (colFilterCriteria) {
-      tableFilters[column.getName()] = colFilterCriteria;
+    let originalColumnFilter = column.getFilter().getCriteria();
+    if (originalColumnFilter) {
+      originalTableFilters[column.getName()] = originalColumnFilter;
     }
   });
 
@@ -61,7 +60,7 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Get the data values from the source table.
   for (let i = 0; i < dataRows.length; i++) { 
-    if (dataRows[i][IndexOfColumnToFilterOn] === ValueToFilterOn) {
+    if (dataRows[i][FILTER_COLUMN_INDEX] === FILTER_VALUE) {
       rowsToMoveValues.push(dataRows[i]);
 
       // Get the intersection between table address and the entire row where we found the match. This provides the address of the range to remove.
@@ -95,8 +94,8 @@ function main(workbook: ExcelScript.Workbook) {
   });
 
   // Reapply the original filters. 
-  Object.keys(tableFilters).forEach((columnName) => {
-      sourceTable.getColumnByName(columnName).getFilter().apply(tableFilters[columnName]);
+  Object.keys(originalTableFilters).forEach((columnName) => {
+      sourceTable.getColumnByName(columnName).getFilter().apply(originalTableFilters[columnName]);
     });
 }
 ```

@@ -2,7 +2,7 @@
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
 ms.date: 07/14/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # TypeScript restrictions in Office Scripts

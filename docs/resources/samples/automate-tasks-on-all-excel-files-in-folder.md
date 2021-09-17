@@ -2,7 +2,7 @@
 title: 'Run a script on all Excel files in a folder'
 description: 'Learn how to run a script on all the Excel files in a folder on OneDrive for Business.'
 ms.date: 06/29/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Run a script on all Excel files in a folder
