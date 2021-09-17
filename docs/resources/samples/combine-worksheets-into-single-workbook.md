@@ -1,7 +1,7 @@
 ---
 title: 'Combine workbooks into a single workbook'
 description: 'Learn how to use Office Scripts and Power Automate to create merge worksheets from other workbooks into a single workbook.'
-ms.date: 09/03/2021
+ms.date: 09/17/2021
 ms.localizationpriority: medium
 ---
 
@@ -96,7 +96,7 @@ interface WorksheetData {
     * **File**: Your file
     * **Script**: Add worksheets
     * **workbookName**: *Name* (dynamic content from **List files in folder**)
-    * **worksheetInformation**: *result* (dynamic content from **Run script**)
+    * **worksheetInformation** (after pressing the **Switch to input entire array** button - see the following note): *result* (dynamic content from **Run script**
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
     > [!NOTE]
