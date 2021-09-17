@@ -62,7 +62,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 1. Set the flow to **Repeat every** "1" "Day" and select **Create**.
 1. Get the template Excel file. This is the basis for all the converted .csv files. Add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Provide the file path to the "Template.xlsx" file.
     * **File**: /output/Template.xlsx
-1. Rename the **Get file content** step by going the **...** menu of that step (in the upper right corner of the connector) and selecting the **Rename** option. Change the step name to "Get Excel template".
+1. Rename the **Get file content** step by going to the **Menu for Get file content(…)** menu of that step (in the upper right corner of the connector) and selecting the **Rename** option. Change the step name to "Get Excel template".
 
      :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate, renamed to be Get Excel template.":::
 1. Get all the files in the "output" folder. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action. Provide the folder path that contains the .csv files.
