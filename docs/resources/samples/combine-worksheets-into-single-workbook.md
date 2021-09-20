@@ -96,7 +96,7 @@ interface WorksheetData {
     * **File**: Your file
     * **Script**: Add worksheets
     * **workbookName**: *Name* (dynamic content from **List files in folder**)
-    * **worksheetInformation** (after pressing the **Switch to input entire array** button - see the following note): *result* (dynamic content from **Run script**)
+    * **worksheetInformation** (after selecting the **Switch to input entire array** button, see the note following the next image): *result* (dynamic content from **Run script**)
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
     > [!NOTE]
