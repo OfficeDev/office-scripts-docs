@@ -8559,9 +8559,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.242 - MIT
+@types/office-js-preview 1.0.247 - MIT
 https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
+Copyright (c) Microsoft Corporation.
 
 MIT License
 
@@ -14822,16 +14823,15 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-fill-range 4.0.0 - MIT
+fill-range 7.0.1 - MIT
 https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-2017, Jon Schlinkert
-Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -14856,15 +14856,16 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-fill-range 7.0.1 - MIT
+fill-range 4.0.0 - MIT
 https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19802,7 +19803,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT
+monaco-editor 0.20.0 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -19850,7 +19851,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT
+monaco-editor 0.18.1 - MIT
 https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015
@@ -23178,7 +23179,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 - MIT
+postcss-selector-parser 5.0.0 - MIT
 https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
@@ -23211,7 +23212,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT
+postcss-selector-parser 6.0.2 - MIT
 https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
@@ -23891,7 +23892,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-punycode 1.3.2 - MIT
+punycode 1.4.1 - MIT
 https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -23922,7 +23923,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-punycode 1.4.1 - MIT
+punycode 1.3.2 - MIT
 https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
@@ -24615,37 +24616,6 @@ IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-readdirp 2.2.1 - MIT
-https://github.com/paulmillr/readdirp
-
-Copyright (c) 2012-2015 Thorsten Lorenz
-
-This software is released under the MIT license:
-
-Copyright (c) 2012-2015 Thorsten Lorenz
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 readdirp 3.4.0 - MIT
 https://github.com/paulmillr/readdirp
 
@@ -24673,6 +24643,37 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+readdirp 2.2.1 - MIT
+https://github.com/paulmillr/readdirp
+
+Copyright (c) 2012-2015 Thorsten Lorenz
+
+This software is released under the MIT license:
+
+Copyright (c) 2012-2015 Thorsten Lorenz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ---------------------------------------------------------
@@ -25777,8 +25778,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-schema-utils 0.4.7 - MIT
-https://github.com/webpack-contrib/schema-utils
+schema-utils 2.7.0 - MIT
+https://github.com/webpack/schema-utils
 
 Copyright JS Foundation and other contributors
 
@@ -25808,8 +25809,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT
-https://github.com/webpack/schema-utils
+schema-utils 0.4.7 - MIT
+https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation and other contributors
 
@@ -26818,7 +26819,7 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT
+string_decoder 1.1.1 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.
@@ -26877,7 +26878,7 @@ IN THE SOFTWARE.
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT
+string_decoder 1.3.0 - MIT
 https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. and other Node contributors.
