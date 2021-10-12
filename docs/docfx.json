@@ -37,6 +37,7 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "office-scripts",
+      "searchScope": ["Office Scripts"],
       "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
