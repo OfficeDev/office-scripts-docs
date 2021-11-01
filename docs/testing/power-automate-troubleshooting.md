@@ -78,7 +78,7 @@ If your script uses dates or times, there may be behavioral differences when the
 
 ## Script parameter fields or returned output not appearing in Power Automate
 
-There are two reasons that the input or output of a script are not accurately reflected in the Power Automate flow builder.
+There are two reasons that the parameters or returned data of a script is not accurately reflected in the Power Automate flow builder.
 
 - The script signature (the parameters or return value) has changed since the **Excel Business (Online)** connector was added.
 - The script signature uses unsupported types. Verify your types against the lists under the [parameters](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) and [returns](../develop/power-automate-integration.md#return-data-from-a-script) sections of [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) article.
