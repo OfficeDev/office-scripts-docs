@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot Office Scripts running in Power Automate'
 description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
-ms.date: 05/18/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
 ---
 
@@ -64,11 +64,26 @@ When building the **Run script** step of a Power Automate flow, you need to sele
 
 For more context on the Power Automate limitation and a discussion of potential workarounds for the dynamic selection of workbooks, see [this thread in the Microsoft Power Automate Community](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#).
 
+## Pass entire arrays as script parameters
+
+Power Automate allows users to pass arrays to connectors as a variable or as single elements in the array. The default is to pass single elements, which builds the array in the flow. For scripts or other connectors that take entire arrays as arguments, you need to press the **Switch to input entire array** button to pass the array an one complete object.
+
+:::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
+
 ## Time zone differences
 
 Excel files don't have an inherent location or timezone. Every time a user opens the workbook, their session uses that user's local timezone for date calculations. Power Automate always uses UTC.
 
 If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://flow.microsoft.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [`main` Parameters: Pass data to a script](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) to learn how to provide that time information for the script.
+
+## Script parameter fields or returned output not appearing in Power Automate
+
+There are two reasons that the input or output of a script are not accurately reflected in the Power Automate flow builder.
+
+- The script signature (the parameters or return value) has changed since the **Excel Business (Online)** connector was added.
+- The script signature uses unsupported types. Verify your types against the lists under the [parameters](../develop/power-automate-integration.md#-main-parameters-pass-data-to-a-script) and [returns](../develop/power-automate-integration.md#return-data-from-a-script) sections of [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) article.
+
+THe signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
 
 ## See also
 
