@@ -1,7 +1,7 @@
 ---
 title: 'Convert CSV files to Excel workbooks'
 description: 'Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.'
-ms.date: 07/19/2021
+ms.date: 11/02/2021
 ms.localizationpriority: medium
 ---
 
@@ -94,3 +94,43 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. You should find new .xlsx files in the "output" folder, alongside the original .csv files. The new workbooks contain the same data as the CSV files.
+
+## Troubleshooting
+
+The script expects the comma-separated values to make a rectangular range. If your .csv file contains rows with different numbers of columns, you will get an error that says "The number of rows or columns in the input array doesn't match the size or dimensions of the range." If the data cannot be made to conform to a rectangular shape, use the following script instead. This script adds the data one row at a time, instead of as a single range. This script is less efficient and is noticeably slower with large data sets.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook, csv: string) {
+  let sheet = workbook.getWorksheet("Sheet1");
+
+  /* Convert the CSV data into a 2D array. */
+  // Trim the trailing new line.
+  csv = csv.trim();
+
+  // Split each line into a row.
+  let rows = csv.split("\r\n");
+  rows.forEach((value, index) => {
+    /*
+     * For each row, match the comma-separated sections.
+     * For more information on how to use regular expressions to parse CSV files,
+     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+     */
+    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
+
+    // Remove the preceding comma.
+    row.forEach((cell, index) => {
+      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+    });
+
+  // Create a 2D-array with one row.
+    let data: string[][] = [];
+    data.push(row);
+
+    // Put the data in the worksheet.
+    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+    range.setValues(data);
+  });
+
+  // Add any formatting or table creation that you want.
+}
+```
