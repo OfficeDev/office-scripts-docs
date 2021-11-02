@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
 ---
 
@@ -41,17 +41,19 @@ When adding input parameters to a script's `main` function, consider the followi
 
 1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name does not matter.
 
-2. Every parameter must have a type (such as `string` or `number`).
+1. Every parameter must have a type (such as `string` or `number`).
 
-3. The basic types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
+1. The basic types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
 
-4. Arrays of the previously listed basic types are supported.
+1. Arrays (`[]`) of the previously listed basic types are supported.
+    > [!IMPORTANT]
+    > Please note that the object `Array<T>` is not a supported parameter type.
 
-5. Nested arrays are supported as parameters (but not as return types).
+1. Nested arrays are supported as parameters (but not as return types).
 
-6. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
+1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
 
-7. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
+1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
 
     ```TypeScript
     // Office Scripts can return an Employee object because Position only contains strings and numbers.
@@ -66,15 +68,15 @@ When adding input parameters to a script's `main` function, consider the followi
     }
     ```
 
-8. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example:
+1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example:
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. Optional parameters are allowed and can be denoted as such by using the optional modifier `?` (for example, `function main(workbook: ExcelScript.Workbook, Name?: string)`).
+1. Optional parameters are allowed and can be denoted as such by using the optional modifier `?` (for example, `function main(workbook: ExcelScript.Workbook, Name?: string)`).
 
-10. Default parameter values are allowed (for example `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
+1. Default parameter values are allowed (for example `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
 
 ### Return data from a script
 
@@ -82,13 +84,15 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 1. The basic types `string`, `number`, `boolean`, `void`, and `undefined` are supported.
 
-2. Union types used as return types follow the same restrictions as they do when used as script parameters.
+1. Union types used as return types follow the same restrictions as they do when used as script parameters.
 
-3. Array types are allowed if they are of type `string`, `number`, or `boolean`. They are also allowed if the type is a supported union or supported literal type.
+1. Array types (`[]`) are allowed if they are of type `string`, `number`, or `boolean`. They are also allowed if the type is a supported union or supported literal type.
+    > [!IMPORTANT]
+    > Please note that the object `Array<T>` is not a supported return type.
 
-4. Object types used as return types follow the same restrictions as they do when used as script parameters.
+1. Object types used as return types follow the same restrictions as they do when used as script parameters.
 
-5. Implicit typing is supported, though it must follow the same rules as a defined type.
+1. Implicit typing is supported, though it must follow the same rules as a defined type.
 
 ## Example
 
