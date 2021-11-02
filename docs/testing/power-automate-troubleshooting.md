@@ -66,7 +66,7 @@ For more context on the Power Automate limitation and a discussion of potential 
 
 ## Pass entire arrays as script parameters
 
-Power Automate allows users to pass arrays to connectors as a variable or as single elements in the array. The default is to pass single elements, which builds the array in the flow. For scripts or other connectors that take entire arrays as arguments, you need to press the **Switch to input entire array** button to pass the array an one complete object.
+Power Automate allows users to pass arrays to connectors as a variable or as single elements in the array. The default is to pass single elements, which builds the array in the flow. For scripts or other connectors that take entire arrays as arguments, you need to select the **Switch to input entire array** button to pass the array as one complete object.
 
 :::image type="content" source="../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 
@@ -78,12 +78,12 @@ If your script uses dates or times, there may be behavioral differences when the
 
 ## Script parameter fields or returned output not appearing in Power Automate
 
-There are two reasons that the parameters or returned data of a script is not accurately reflected in the Power Automate flow builder.
+There are two reasons that the parameters or returned data of a script are not accurately reflected in the Power Automate flow builder.
 
 - The script signature (the parameters or return value) has changed since the **Excel Business (Online)** connector was added.
 - The script signature uses unsupported types. Verify your types against the lists under the [parameters](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) and [returns](../develop/power-automate-integration.md#return-data-from-a-script) sections of [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) article.
 
-THe signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
+The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
 
 ## See also
 
