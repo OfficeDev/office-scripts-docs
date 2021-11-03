@@ -97,7 +97,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ## Troubleshooting
 
-The script expects the comma-separated values to make a rectangular range. If your .csv file contains rows with different numbers of columns, you will get an error that says "The number of rows or columns in the input array doesn't match the size or dimensions of the range." If the data cannot be made to conform to a rectangular shape, use the following script instead. This script adds the data one row at a time, instead of as a single range. This script is less efficient and is noticeably slower with large data sets.
+The script expects the comma-separated values to make a rectangular range. If your .csv file contains rows with different numbers of columns, you will get an error that says, "The number of rows or columns in the input array doesn't match the size or dimensions of the range." If the data cannot be made to conform to a rectangular shape, use the following script instead. This script adds the data one row at a time, instead of as a single range. This script is less efficient and is noticeably slower with large data sets.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, csv: string) {
@@ -122,7 +122,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
       row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
     });
 
-  // Create a 2D-array with one row.
+    // Create a 2D-array with one row.
     let data: string[][] = [];
     data.push(row);
 
