@@ -29,13 +29,13 @@ Formatting can be applied with Power Query through [templates](https://templates
 
 We recommend using Office Scripts if you need to deploy and maintain automation solutions across your team or organization.
 
-When [attached to workbooks](../overview/excel#share-scripts), Office Scripts give all users of the workbook shared access to the script. All users are running the same script and cannot be on different versions. Updates are automatically made after the creator edits the script.
+When [attached to workbooks](../overview/excel.md#share-scripts), Office Scripts give all users of the workbook shared access to the script. All users are running the same script and cannot be on different versions. Updates are automatically made after the creator edits the script.
 
 ## Power Automate integrations
 
 Office Scripts offer more options for Power Automate integration. Scripts are tailored to your solutions. You define the [input and output of the script](../develop/power-automate-integration.md#data-transfer-in-flows-for-scripts), so it works with any other connector or data in the flow.
 
-:::image type="content" source="../images/scenario-task-reminders-adaptive-cards.png" alt-text="The Excel Online (Business) connector in the flow designer showing the Office Scripts option.":::
+:::image type="content" source="../images/scenario-task-reminders-adaptive-card.png" alt-text="The Excel Online (Business) connector in the flow designer showing the Office Scripts option.":::
 
 Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) Power Automate connector. The [Transform data using Power Query](/connectors/sql/#transform-data-using-power-query) action lets you build a query in Power Automate. While this is a powerful tool for use with SQL Server, it does limit Power Query to that input source.
 
