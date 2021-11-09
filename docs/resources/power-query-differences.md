@@ -1,35 +1,35 @@
 ---
 title: 'When to use Power Query or Office Scripts'
 description: 'The scenarios that are best suited for both the Power Query and Office Scripts platforms.'
-ms.date: 11/05/2021
+ms.date: 11/09/2021
 ms.localizationpriority: medium
 ---
 
 # When to use Power Query or Office Scripts
 
-[Power Query](https://powerquery.microsoft.com) and Office Scripts are both powerful automation solutions for Excel. This article provides a general overview of when you might favor one platform over the other. In general, Power Query is good for pulling and transforming data from large, external data sources and Office Scripts are good for quick, Excel-centric solutions and Power Automate integrations.
+[Power Query](https://powerquery.microsoft.com) and Office Scripts are both powerful automation solutions for Excel. Both solutions let Excel users clean and transform data in workbooks. A single Power Query or Office Script can be refreshed and rerun on new data to produce consistent results, which saves you time and lets you work with the resulting information faster.
 
-## Large data sources: Power Query
+This article provides a general overview of when you might favor one platform over the other. In general, Power Query is good for pulling and transforming data from large, external data sources and Office Scripts are good for quick, Excel-centric solutions and [Power Automate integrations](../develop/power-automate-integrations.md).
 
-We recommend Power Query when dealing with large data sources in supported platforms.
+## Large data sources and data retrieval: Power Query
 
-Power Query has [built-in data connections](https://powerquery.microsoft.com/connectors/) to hundreds of sources. These connections are designed for large datasets. They do not have the same transfer limits as Power Automate or Excel for the web.
+We recommend Power Query when dealing with data sources from supported platforms.
 
-For smaller data sources or data sources not covered by Power Query connectors, Office Scripts offer a lightweight solution. This includes [using `fetch` or REST APIs](../develop/external-calls.md) or getting information from ad-hoc data sources, such as a [Teams adaptive card](../resources/scenarios/task-reminders.md).
+Power Query has [built-in data connections](https://powerquery.microsoft.com/connectors/) to hundreds of sources. Power Query is specially designed for data retrieval, transformation, and combination tasks. When you need data from one of those sources, Power Query gives you a no-code way of bringing that data into Excel in the shape you need.
 
-## Formatting and programmatic control: Office Scripts
+These Power Query connections are designed for large datasets. They do not have the same [transfer limits](../testing/platform-limits.md) as Power Automate or Excel for the web.
 
-We recommend Office Scripts for formatting workbooks, particularly in scenarios with conditional logic.
+Office Scripts offer a lightweight solution for smaller data sources or data sources not covered by Power Query connectors. This includes [using `fetch` or REST APIs](../develop/external-calls.md) or getting information from ad-hoc data sources, such as a [Teams adaptive card](../resources/scenarios/task-reminders.md).
 
-Office Scripts are great for applying a standard format to workbooks. The inclusion of TypeScript code gives you a high degree of customization.
+## Formatting, visualizations, and programmatic control: Office Scripts
 
-Formatting can be applied with Power Query through [templates](https://templates.office.com/power-query-tutorial-tm11414620). However, templates cannot be automatically updated for your entire organization. New versions of templates must be distributed and adopted, whereas Office Scripts are attached ot workbooks and automatically updated when the script creator edits them.
+We recommend Office Scripts when your needs go beyond data importing and transformation.
 
-## Team deployment: Office Scripts
+Nearly everything you can do manually through the Excel UI is doable with Office Scripts. They are great for applying consistent formatting to workbooks. They create charts, PivotTables, shapes, images, and other worksheet visualizations. When you're  
 
-We recommend using Office Scripts if you need to deploy and maintain automation solutions across your team or organization.
+The inclusion of TypeScript code gives you a high degree of customization. Control logic like `if...else` statements makes your script robust. This lets you do things like conditionally read data without relying on complex Excel formulas or scan the workbook for unexpected changes before changing the workbook.
 
-When [attached to workbooks](../overview/excel.md#share-scripts), Office Scripts give all users of the workbook shared access to the script. All users are running the same script and cannot be on different versions. Updates are automatically made after the creator edits the script.
+Formatting can be applied with Power Query through [templates](https://templates.office.com/power-query-tutorial-tm11414620). However, templates are updated at the individual or organization level, whereas Office Scripts offer more granular access control.
 
 ## Power Automate integrations
 
