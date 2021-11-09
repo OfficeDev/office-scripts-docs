@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 [Power Query](https://powerquery.microsoft.com) and Office Scripts are both powerful automation solutions for Excel. Both solutions let Excel users clean and transform data in workbooks. A single Power Query or Office Script can be refreshed and rerun on new data to produce consistent results, which saves you time and lets you work with the resulting information faster.
 
-This article provides a general overview of when you might favor one platform over the other. In general, Power Query is good for pulling and transforming data from large, external data sources and Office Scripts are good for quick, Excel-centric solutions and [Power Automate integrations](../develop/power-automate-integrations.md).
+This article provides a general overview of when you might favor one platform over the other. In general, Power Query is good for pulling and transforming data from large, external data sources and Office Scripts are good for quick, Excel-centric solutions and [Power Automate integrations](../develop/power-automate-integration.md).
 
 ## Large data sources and data retrieval: Power Query
 
