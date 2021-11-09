@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
