@@ -1,13 +1,16 @@
 ---
 title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 09/15/2021
+ms.date: 11/10/2021
 ms.localizationpriority: medium
 ---
 
 # Troubleshoot Office Scripts
 
 As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
+
+> [!NOTE]
+> For troubleshooting advice specific to Office Scripts with Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ## Types of errors
 
