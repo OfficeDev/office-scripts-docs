@@ -108,11 +108,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="develop/power-automate-integrate.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="develop/power-automate-integrate.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
                     </div>
                 </div>
             </div>
