@@ -69,7 +69,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
 
 <h2>Other resources</h2>
 <p>Use the following resources to learn about the APIs that Office Scripts use to interact with workbooks in Excel on the web, ask questions about Office Scripts in Excel on the web, or request features for Office Scripts in Excel on the web.</p>
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
