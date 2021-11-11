@@ -105,7 +105,7 @@ interface MyTable {
 
 `console` statements and many Office Scripts APIs require synchronization with the Excel workbook. These synchronizations use `await` statements in compiled runtime version of the script. `await` is not supported in [constructors](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes/constructor). If you need classes with constructors, avoid using Office Scripts APIs or `console` statements in those code blocks.
 
-The following code sample demonstrates this scenario. It generates an error that says "failed to load \[code\] \[library\]".
+The following code sample demonstrates this scenario. It generates an error that says `failed to load [code] [library]`.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
