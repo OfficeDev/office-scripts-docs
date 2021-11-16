@@ -9,6 +9,9 @@ ms.localizationpriority: medium
 
 As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
 
+> [!NOTE]
+> For troubleshooting advice specific to Office Scripts with Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
+
 ## Types of errors
 
 Office Scripts errors fall into one of two categories:
@@ -70,10 +73,6 @@ The following steps should help troubleshoot any problems related to the **Autom
 1. [Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
-
-## Troubleshoot scripts in Power Automate
-
-For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ## Help resources
 
