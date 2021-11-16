@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 07/14/2021
+ms.date: 11/09/2021
 ms.localizationpriority: medium
 ---
 
@@ -98,6 +98,25 @@ function main(workbook: ExcelScript.Workbook) {
 
 interface MyTable {
   getName(): string
+}
+```
+
+## Constructors don't support Office Scripts APIs and `console` statements
+
+`console` statements and many Office Scripts APIs require synchronization with the Excel workbook. These synchronizations use `await` statements in compiled runtime version of the script. `await` is not supported in [constructors](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes/constructor). If you need classes with constructors, avoid using Office Scripts APIs or `console` statements in those code blocks.
+
+The following code sample demonstrates this scenario. It generates an error that says `failed to load [code] [library]`.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  class MyClass {
+    constructor() {
+      // Console statements and Office Scripts APIs aren't supported in constructors.
+      console.log("This won't print.");
+    }
+  }
+
+  let test = new MyClass();
 }
 ```
 
