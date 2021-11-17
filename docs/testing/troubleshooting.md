@@ -1,13 +1,16 @@
 ---
 title: 'Troubleshoot Office Scripts'
 description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
-ms.date: 09/15/2021
+ms.date: 11/11/2021
 ms.localizationpriority: medium
 ---
 
 # Troubleshoot Office Scripts
 
 As you develop Office Scripts, you may make mistakes. It's okay. You have the tools to help find the problems and get your scripts working perfectly.
+
+> [!NOTE]
+> For troubleshooting advice specific to Office Scripts with Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ## Types of errors
 
@@ -71,17 +74,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## Troubleshoot scripts in Power Automate
-
-For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
-
 ## Help resources
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems. Often, you'll be able to find the solution to your problem through a quick Stack Overflow search. If not, ask your question and tag it with the "office-scripts" tag. Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.
-
-To submit a feature request for Office Scripts or to report an issue with the feature, use the feedback button in the Code Editor. In the Code Editor task pane's  **More options (…)** menu, select the **Send feedback** button to share your feature needs and other experiences.
-
-:::image type="content" source="../images/code-editor-feedback.png" alt-text="The Code Editor overflow menu with the 'Send feedback' button.":::
 
 ## See also
 

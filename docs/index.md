@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -69,7 +69,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
 
 <h2>Other resources</h2>
 <p>Use the following resources to learn about the APIs that Office Scripts use to interact with workbooks in Excel on the web, ask questions about Office Scripts in Excel on the web, or request features for Office Scripts in Excel on the web.</p>
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -108,6 +108,22 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
                         </div>
                     </div>
@@ -124,11 +140,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Ask questions</h3></a>
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Licensing information</h3></a>
                     </div>
                 </div>
             </div>
@@ -140,11 +156,11 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Licensing information</h3></a>
+                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Ask questions</h3></a>
                     </div>
                 </div>
             </div>
