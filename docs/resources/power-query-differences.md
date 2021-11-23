@@ -1,7 +1,7 @@
 ---
 title: 'When to use Power Query or Office Scripts'
 description: 'The scenarios that are best suited for both the Power Query and Office Scripts platforms.'
-ms.date: 11/09/2021
+ms.date: 11/23/2021
 ms.localizationpriority: medium
 ---
 
@@ -25,21 +25,21 @@ Office Scripts offer a lightweight solution for smaller data sources or data sou
 
 We recommend Office Scripts when your needs go beyond data importing and transformation.
 
-Nearly everything you can do manually through the Excel UI is doable with Office Scripts. They are great for applying consistent formatting to workbooks. They create charts, PivotTables, shapes, images, and other worksheet visualizations. When you're  
+Nearly everything you can do manually through the Excel UI is doable with Office Scripts. They're great for applying consistent formatting to workbooks. Scripts create charts, PivotTables, shapes, images, and other worksheet visualizations. Scripts also give you precise control over the positions, sizes, colors, and other attributes of these visualizations.
 
 The inclusion of TypeScript code gives you a high degree of customization. Control logic like `if...else` statements makes your script robust. This lets you do things like conditionally read data without relying on complex Excel formulas or scan the workbook for unexpected changes before changing the workbook.
 
-Formatting can be applied with Power Query through [templates](https://templates.office.com/power-query-tutorial-tm11414620). However, templates are updated at the individual or organization level, whereas Office Scripts offer more granular access control.
+Formatting can be applied with Power Query through Excel [templates](https://templates.office.com/power-query-tutorial-tm11414620). However, templates are updated at the individual or organization level, whereas Office Scripts offer more granular access control.
 
 ## Power Automate integrations
 
 Office Scripts offer more options for Power Automate integration. Scripts are tailored to your solutions. You define the [input and output of the script](../develop/power-automate-integration.md#data-transfer-in-flows-for-scripts), so it works with any other connector or data in the flow.
 
-:::image type="content" source="../images/scenario-task-reminders-last-flow-step.png" alt-text="The Excel Online (Business) connector in the flow designer showing the Office Scripts option.":::
+:::image type="content" source="../images/scenario-task-reminders-last-flow-step.png" alt-text="A screenshot that shows the Excel Online (Business) connector in the flow designer. The connector is using the Office Scripts action to take input from a Teams Adaptive Card and provide it to a script.":::
 
 Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) Power Automate connector. The [Transform data using Power Query](/connectors/sql/#transform-data-using-power-query) action lets you build a query in Power Automate. While this is a powerful tool for use with SQL Server, it does limit Power Query to that input source.
 
-:::image type="content" source="../images/power-query-flow-option.png" alt-text="The SQL Server connector in the flow designer showing the Power Query option.":::
+:::image type="content" source="../images/power-query-flow-option.png" alt-text="A screenshot that shows the SQL Server connector in the flow designer. The connector is using the Transform data using Power Query action.":::
 
 ## Platform dependencies
 
