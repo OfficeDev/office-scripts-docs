@@ -27,7 +27,7 @@ We recommend Office Scripts when your needs go beyond data importing and transfo
 
 Nearly everything you can do manually through the Excel UI is doable with Office Scripts. They are great for applying consistent formatting to workbooks. They create charts, PivotTables, shapes, images, and other worksheet visualizations. When you're  
 
-The inclusion of TypeScript code gives you a high degree of customization. Control logic like `if...else` statements makes your script robust. This lets you do things like conditionally read data without relying on complex Excel formulas or scan the workbook for unexpected changes before changing the workbook.
+The inclusion of TypeScript code gives you a high degree of customization. Programmatic control logic like `if...else` statements makes your script robust. This lets you do things like conditionally read data without relying on complex Excel formulas, or scan the workbook for unexpected changes before changing the workbook.
 
 Formatting can be applied with Power Query through [templates](https://templates.office.com/power-query-tutorial-tm11414620). However, templates are updated at the individual or organization level, whereas Office Scripts offer more granular access control.
 
@@ -43,7 +43,7 @@ Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) 
 
 ## Platform dependencies
 
-Office Scripts is currently only for Excel on the web. Power Query is currently only for Excel on Desktop. Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
+Office Scripts is currently only available for Excel on the web. Power Query is currently only available for Excel on Desktop. Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
 
 ## See also
 
