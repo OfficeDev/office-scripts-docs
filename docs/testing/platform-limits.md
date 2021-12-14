@@ -1,7 +1,7 @@
 ---
 title: 'Platform limits and requirements with Office Scripts'
 description: 'Resource limits and browser support for Office Scripts when used with Excel on the web'
-ms.date: 05/17/2021
+ms.date: 12/14/2021
 ms.localizationpriority: medium
 ---
 
@@ -46,10 +46,13 @@ If you're encountering errors when dealing with large datasets, try using multip
 
 When using Office Scripts with Power Automate, each user is limited to **800 calls to the Run Script action per day**. This limit resets at 12:00 AM UTC.
 
-The Power Automate platform also has usage limitations, which can be found in the following articles:
+The Power Automate platform also has usage limitations, which can be found in the following articles.
 
 - [Limits and configuration in Power Automate](/power-automate/limits-and-config)
 - [Known issues and limitations for the Excel Online (Business) connector](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+
+> [!NOTE]
+> If you have a long-running script, be aware of the [120-second timeout for synchronous Power Automate operations](/power-automate/limits-and-config#timeout). You'll need to either [optimize your script](../develop/web-client-performance.md) or split your Excel automation into multiple scripts.
 
 ## See also
 
