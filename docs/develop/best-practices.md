@@ -11,7 +11,7 @@ These patterns and practices are designed to help your scripts run successfully 
 
 ## Use the Action Recorder to learn new features
 
-Excel does a lot of things. Most of them can be scripted. The Action Recorder records your Excel actions and translates them into code. This is the easiest way to learn about how different features work Office Scripts. If you need code for a specific action, switch to the Action Recorder, perform the actions, select **Copy as code**, and paste the resulting code into your script.
+Excel does a lot of things. Most of them can be scripted. The Action Recorder records your Excel actions and translates them into code. This is the easiest way to learn about how different features work with Office Scripts. If you need code for a specific action, switch to the Action Recorder, perform the actions, select **Copy as code**, and paste the resulting code into your script.
 
 :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
 

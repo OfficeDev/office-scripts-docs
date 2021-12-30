@@ -55,7 +55,8 @@ The Action Recorder records actions you take in Excel and saves them as a script
 All scripts recorded with the Action Recorder can be edited through the Code Editor. This lets you tweak and customize the script to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
 > [!TIP]
-> The Action Recorder has a **Copy as code** button to actions into script code without saving the entire script.
+> The Action Recorder has a **Copy as code** button to record actions into script code without saving the entire script.
+>
 > :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
 
 Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
