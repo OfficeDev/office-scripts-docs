@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Create a workbook table of contents
 
-This sample shows how to create a table of contents for the workbook. Each entry in the table of contents is a link to one of the worksheets in the workbook.
+This sample shows how to create a table of contents for the workbook. Each entry in the table of contents is a hyperlink to one of the worksheets in the workbook.
 
 ## Sample Excel file
 
