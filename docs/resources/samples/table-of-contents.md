@@ -9,6 +9,8 @@ ms.localizationpriority: medium
 
 This sample shows how to create a table of contents for the workbook. Each entry in the table of contents is a hyperlink to one of the worksheets in the workbook.
 
+:::image type="content" source="../../images/table-of-contents-sample.png" alt-text="The table of contents worksheet showing links to the other worksheets.":::
+
 ## Sample Excel file
 
 Download <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> for a ready-to-use workbook. Add the following script and try the sample yourself!
