@@ -8,6 +8,7 @@ ms.localizationpriority: medium
 # Differences between Office Scripts and VBA macros
 
 Office Scripts and VBA macros have a lot in common. They both allow users to automate solutions through an easy-to-use action recorder and allow edits of those recordings. Both frameworks are designed to empower people who may not consider themselves programmers to create small programs in Excel.
+
 The fundamental difference is that VBA macros are developed for desktop solutions and Office Scripts are designed for secure, cloud-based solutions. Currently, Office Scripts are only supported in Excel on the web.
 
 :::image type="content" source="../images/office-programmability-diagram.png" alt-text="A four-quadrant diagram showing the areas of focus for different Office extensibility solutions. Both Office Scripts and VBA macros are designed to help end users create solutions, but Office Scripts are built for the web and collaboration (whereas VBA is for the desktop).":::
@@ -16,9 +17,13 @@ This article describes the main differences between VBA macros (as well as VBA i
 
 ## Platform and ecosystem
 
-VBA is designed for the desktop and Office Scripts are designed for the web. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet.
+VBA is supported by Excel on Windows and Mac. Office Scripts is supported by Excel on the web.
 
-Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
+The two solutions were designed for their respective platforms. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
+
+### Script support for Excel on Windows (preview)
+
+[!INCLUDE [Run-from-button support](../includes/run-from-button-desktop-support.md)]
 
 ## Security
 
