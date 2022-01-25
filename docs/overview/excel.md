@@ -84,10 +84,10 @@ The following screenshot shows the script Details page for a script titled **Cre
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
 
-These scripts buttons also work on Windows. Create the button in Excel on the web and users with Excel on Windows as part of a Microsoft 365 subscription. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web client.
+These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the press of a button. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web client.
 
 > [!NOTE]
-> Unsupported platforms or older Office versions display the shape used for the script button, but it's not clickable.
+> To use this feature on Windows, you need a copy of Excel connected to a Microsoft 365 subscription. Unsupported platforms or older Office versions display the shape used for the script button, but it's not clickable.
 
 To stop sharing a script through a button, go to the **More options (…)** menu in the script's Details page and select **Stop Sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
