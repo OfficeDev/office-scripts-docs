@@ -67,7 +67,7 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script.
 
-More details about sharing and unsharing scripts can be in the article [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).

@@ -64,6 +64,8 @@ items:
         href: resources/samples/add-image-to-workbook.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
+      - name: Create a workbook table of contents
+        href: resources/samples/table-of-contents.md
     - name: Beyond the basics
       items:
       - name: Combine worksheets into a single workbook
