@@ -84,7 +84,7 @@ The following screenshot shows the script Details page for a script titled **Cre
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
 
-These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the press of a button. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web client.
+These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the press of a button. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web application.
 
 > [!NOTE]
 > To use this feature on Windows, you need a copy of Excel connected to a Microsoft 365 subscription. Unsupported platforms or older Office versions display the shape used for the script button, but it's not clickable.
