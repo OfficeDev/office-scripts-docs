@@ -2,7 +2,7 @@
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
 ms.topic: overview
-ms.date: 12/29/2021
+ms.date: 01/24/2022
 ms.localizationpriority: high
 ---
 
@@ -76,11 +76,18 @@ For more details about sharing and unsharing scripts, see [Sharing Office Script
 
 [!INCLUDE [Public preview](../includes/preview-note.md)]
 
+:::image type="content" source="../images/run-from-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
+
 Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu in either the script's Details page or the Code Editor's task pane and select **Add button**. This creates a button in the workbook that runs the associated script when selected. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
 The following screenshot shows the script Details page for a script titled **Create Report** and has the **Add button** option within the **More options (…)** menu highlighted.
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
+
+These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the press of a button. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web application.
+
+> [!NOTE]
+> To use this feature on Windows, you need a copy of Excel connected to a Microsoft 365 subscription. Unsupported platforms or older Office versions display the shape used for the script button, but it's not clickable.
 
 To stop sharing a script through a button, go to the **More options (…)** menu in the script's Details page and select **Stop Sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
