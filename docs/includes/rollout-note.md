@@ -1,2 +1,2 @@
 > [!NOTE]
-> This feature is being rolled out and is not available to everyone. It is slowly released to larger numbers of users to ensure things are working smoothly. This feature is subject to change based on your feedback.
+> This feature is being rolled out and is not available to everyone. It's slowly released to larger numbers of users to ensure that it's working as expected. This feature is subject to change based on your feedback.
