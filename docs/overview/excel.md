@@ -2,7 +2,7 @@
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
 ms.topic: overview
-ms.date: 01/24/2022
+ms.date: 02/04/2022
 ms.localizationpriority: high
 ---
 
@@ -72,9 +72,9 @@ For more details about sharing and unsharing scripts, see [Sharing Office Script
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
 
-### Create script buttons (preview)
+### Create script buttons
 
-[!INCLUDE [Public preview](../includes/preview-note.md)]
+[!INCLUDE [Rollout information](../includes/rollout-note.md)]
 
 :::image type="content" source="../images/run-from-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
