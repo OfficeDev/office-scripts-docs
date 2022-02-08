@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and VBA macros'
 description: 'The behavior and API differences between Office Scripts and Excel VBA macros.'
-ms.date: 05/21/2021
+ms.date: 02/04/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ VBA is supported by Excel on Windows and Mac. Office Scripts is supported by Exc
 
 The two solutions were designed for their respective platforms. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
 
-### Script support for Excel on Windows (preview)
+### Script support for Excel on Windows
 
 [!INCLUDE [Run-from-button support](../includes/run-from-button-desktop-support.md)]
 

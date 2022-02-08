@@ -1,7 +1,7 @@
 ---
 title: 'Differences between Office Scripts and Office Add-ins'
 description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
-ms.date: 01/24/2022
+ms.date: 02/04/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ Office Add-ins are cross-platform. They work across Windows desktop, Mac, iOS, a
 
 Office Scripts are currently only supported by for Excel on the web. All recording, editing, and script management is done on the web platform.
 
-### Script support for Excel on Windows (preview)
+### Script support for Excel on Windows
 
 [!INCLUDE [Run-from-button support](../includes/run-from-button-desktop-support.md)]
 

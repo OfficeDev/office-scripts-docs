@@ -44,7 +44,7 @@ If you're encountering errors when dealing with large datasets, try using multip
 
 ### Power Automate
 
-When using Office Scripts with Power Automate, each user is limited to **800 calls to the Run Script action per day**. This limit resets at 12:00 AM UTC.
+When using Office Scripts with Power Automate, each user is limited to **1,600 calls to the Run Script action per day**. This limit resets at 12:00 AM UTC.
 
 The Power Automate platform also has usage limitations, which can be found in the following articles.
 
