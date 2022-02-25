@@ -67,7 +67,7 @@ Office Scripts can be shared with other users of an Excel workbook. When you sha
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script Details page showing the 'Share with others in this workbook' option.":::
 
-Add buttons that run scripts to help your colleagues discover your helpful solutions. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
+Add buttons that run scripts to help your colleagues discover your valuable solutions. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
 :::image type="content" source="../images/add-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
