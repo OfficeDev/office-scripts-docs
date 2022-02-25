@@ -1,7 +1,7 @@
 ---
 title: 'Convert CSV files to Excel workbooks'
 description: 'Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.'
-ms.date: 11/02/2021
+ms.date: 02/25/2022
 ms.localizationpriority: medium
 ---
 
@@ -39,6 +39,11 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
      * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
      */
     let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
+
+    // Check for blanks at the start of the row.
+    if (row[0].charAt(0) === ',') {
+      row.unshift("");
+    }
     
     // Remove the preceding comma.
     row.forEach((cell, index) => {
@@ -116,6 +121,11 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
      * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
      */
     let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
+
+    // Check for blanks at the start of the row.
+    if (row[0].charAt(0) === ',') {
+      row.unshift("");
+    }
 
     // Remove the preceding comma.
     row.forEach((cell, index) => {
