@@ -61,7 +61,7 @@ All scripts recorded with the Action Recorder can be edited through the Code Edi
 
 Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
 
-## Share scripts
+## Share Office Scripts
 
 Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
