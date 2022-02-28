@@ -2,7 +2,7 @@
 title: 'Office Scripts in Excel on the web'
 description: 'A brief introduction to the Action Recorder and Code Editor for Office Scripts.'
 ms.topic: overview
-ms.date: 02/08/2022
+ms.date: 02/25/2022
 ms.localizationpriority: high
 ---
 
@@ -61,33 +61,18 @@ All scripts recorded with the Action Recorder can be edited through the Code Edi
 
 Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Scripting fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
 
-## Share scripts
+## Share Office Scripts
+
+Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script Details page showing the 'Share with others in this workbook' option.":::
 
-Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script.
+Add buttons that run scripts to help your colleagues discover your valuable solutions. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
-For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+:::image type="content" source="../images/add-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
-
-### Create script buttons
-
-:::image type="content" source="../images/run-from-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
-
-Help your colleagues find and run your scripts by adding script buttons to a workbook. With any script, go to the **More options (…)** menu in either the script's Details page or the Code Editor's task pane and select **Add button**. This creates a button in the workbook that runs the associated script when selected. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
-
-The following screenshot shows the script Details page for a script titled **Create Report** and has the **Add button** option within the **More options (…)** menu highlighted.
-
-:::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
-
-These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the press of a button. Please note that only running the button is supported on Windows. If you need to edit the script, you need to do that through the web application.
-
-> [!NOTE]
-> This feature is being rolled out to users with a Microsoft 365 subscription and is not available to everyone. It's slowly released to larger numbers of users to ensure that it's working as expected. This feature is subject to change based on your feedback. Unsupported platforms or Office versions without the feature will display the shape used for the script button, but the button won't be clickable.
-
-To stop sharing a script through a button, go to the **More options (…)** menu in the script's Details page and select **Stop Sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
 ## Connect Office Scripts to Power Automate
 
