@@ -32,6 +32,8 @@ items:
       href: develop/external-calls.md
     - name: File storage and ownership
       href: overview/script-storage.md
+    - name: Run scripts with buttons
+      href: develop/script-buttons.md
     - name: Run scripts with Power Automate
       href: develop/power-automate-integration.md
     - name: Use macro files in Power Automate flows
