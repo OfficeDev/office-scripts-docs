@@ -38,14 +38,14 @@ You'll need to learn the external service's interfaces to make calls to that ser
 
 ## Retrieve information with `fetch`
 
-The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you need to adjust the `main` signature of your script. Make the `main` function `async` and have it return a `Promise<void>`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
+The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves information from external services. It is an `async` API, so you need to adjust the `main` signature of your script. Make the `main` function `async`. You should also be sure to `await` the `fetch` call and `json` retrieval. This ensures those operations complete before the script ends.
 
 Any JSON data retrieved by `fetch` must match an interface defined in the script. The returned value must be assigned to a specific type because [Office Scripts do not support the `any` type](typescript-restrictions.md#no-any-type-in-office-scripts). You should refer to the documentation for your service to see what the names and types of the returned properties are. Then, add the matching interface or interfaces to your script.
 
 The following script uses `fetch` to retrieve JSON data from the test server in the given URL. Note the `JSONData` interface to store the data as a matching type.
 
 ```TypeScript
-async function main(workbook: ExcelScript.Workbook): Promise<void> {
+async function main(workbook: ExcelScript.Workbook){
   // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
 
