@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 11/01/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
 ---
 
@@ -56,7 +56,7 @@ When adding input parameters to a script's `main` function, consider the followi
 1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
 
     ```TypeScript
-    // Office Scripts can return an Employee object because Position only contains strings and numbers.
+    // Office Scripts can use an Employee object because Position only contains strings and numbers.
     interface Employee {
         name: string;
         job: Position;
@@ -84,13 +84,11 @@ Scripts can return data from the workbook to be used as dynamic content in a Pow
 
 1. The basic types `string`, `number`, `boolean`, `void`, and `undefined` are supported.
 
-1. Union types used as return types follow the same restrictions as they do when used as script parameters.
+1. Object and union types used as return types follow the same restrictions as they do when used as script parameters.
 
-1. Array types (`[]`) are allowed if they are of type `string`, `number`, or `boolean`. They are also allowed if the type is a supported union or supported literal type.
+1. Array types (`[]`) are allowed if they are of type `string`, `number`, `boolean`. They are also allowed if the type is a supported object, union, or literal type.
     > [!IMPORTANT]
     > Please note that the object `Array<T>` is not a supported return type.
-
-1. Object types used as return types follow the same restrictions as they do when used as script parameters.
 
 1. Implicit typing is supported, though it must follow the same rules as a defined type.
 
