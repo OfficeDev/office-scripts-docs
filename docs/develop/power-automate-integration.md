@@ -49,7 +49,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left", 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
 
-1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
+1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
 
     ```TypeScript
     // Office Scripts can use an Employee object because Position is also supported.
@@ -64,7 +64,7 @@ When adding input parameters to a script's `main` function, consider the followi
     }
     ```
 
-1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example:
+1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
