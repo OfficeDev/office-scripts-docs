@@ -41,11 +41,11 @@ When you're configuring a flow in Power Automate, you can specify script input a
 
 When adding input parameters to a script's `main` function, consider the following allowances and restrictions. These also apply to the return type of the script.
 
-1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name does not matter.
+1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name doesn't matter.
 
 1. The types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
 
-1. Arrays (both `[]` and `Array<T>` style) of the previously listed types are supported. Nested arrays are also supported.
+1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
 
 1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left", 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
 
@@ -78,7 +78,7 @@ When adding input parameters to a script's `main` function, consider the followi
 
 ### Return data from a script
 
-Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. The same type restrictions listed above apply to the return type. To return an object, add the return type syntax to the `main` function. For example, if you wanted to return a `string` value from the script, your `main` signature would be `function main(workbook: ExcelScript.Workbook): string`.
+Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. The [same type restrictions listed previously](#type-restrictions) apply to the return type. To return an object, add the return type syntax to the `main` function. For example, if you wanted to return a `string` value from the script, your `main` signature would be `function main(workbook: ExcelScript.Workbook): string`.
 
 ## Example
 
