@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: 'A sample that fetches JSON data from a NOAA database and uses it to create a chart.'
-ms.date: 06/29/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
 ---
 
@@ -28,7 +28,7 @@ You'll develop a script that uses the `fetch` command to query the [NOAA Tides a
      * Gets data from the National Oceanic and Atmospheric Administration's Tides and Currents database. 
      * That data is used to make a chart.
      */
-    async function main(workbook: ExcelScript.Workbook): Promise<void> {
+    async function main(workbook: ExcelScript.Workbook) {
       // Get the current sheet.
       let currentSheet = workbook.getActiveWorksheet();
     
