@@ -1,7 +1,7 @@
 ---
 title: 'Run Office Scripts with Power Automate'
 description: 'How to get Office Scripts for Excel on the web working with a Power Automate workflow.'
-ms.date: 11/01/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
 ---
 
@@ -37,26 +37,22 @@ All script input is specified as additional parameters for the `main` function. 
 
 When you're configuring a flow in Power Automate, you can specify script input as static values, [expressions](/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](/connectors/).
 
-When adding input parameters to a script's `main` function, consider the following allowances and restrictions.
+#### Type restrictions
 
-1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name does not matter.
+When adding input parameters to a script's `main` function, consider the following allowances and restrictions. These also apply to the return type of the script.
 
-1. Every parameter must have a type (such as `string` or `number`).
+1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name doesn't matter.
 
-1. The basic types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
+1. The types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
 
-1. Arrays (`[]`) of the previously listed basic types are supported.
-    > [!IMPORTANT]
-    > Please note that the object `Array<T>` is not a supported parameter type.
+1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
 
-1. Nested arrays are supported as parameters (but not as return types).
+1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left", 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
 
-1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
-
-1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types:
+1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
 
     ```TypeScript
-    // Office Scripts can return an Employee object because Position only contains strings and numbers.
+    // The Employee object is supported because Position is also composed of supported types.
     interface Employee {
         name: string;
         job: Position;
@@ -68,31 +64,21 @@ When adding input parameters to a script's `main` function, consider the followi
     }
     ```
 
-1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example:
+1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-1. Optional parameters are allowed and can be denoted as such by using the optional modifier `?` (for example, `function main(workbook: ExcelScript.Workbook, Name?: string)`).
+#### Optional and default parameters
 
-1. Default parameter values are allowed (for example `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
+1. Optional parameters are allowed and are denoted with the optional modifier `?` (for example, `function main(workbook: ExcelScript.Workbook, Name?: string)`).
+
+1. Default parameter values are allowed (for example `function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
 
 ### Return data from a script
 
-Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. As with input parameters, Power Automate places some restrictions on the return type.
-
-1. The basic types `string`, `number`, `boolean`, `void`, and `undefined` are supported.
-
-1. Union types used as return types follow the same restrictions as they do when used as script parameters.
-
-1. Array types (`[]`) are allowed if they are of type `string`, `number`, or `boolean`. They are also allowed if the type is a supported union or supported literal type.
-    > [!IMPORTANT]
-    > Please note that the object `Array<T>` is not a supported return type.
-
-1. Object types used as return types follow the same restrictions as they do when used as script parameters.
-
-1. Implicit typing is supported, though it must follow the same rules as a defined type.
+Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. The [same type restrictions listed previously](#type-restrictions) apply to the return type. To return an object, add the return type syntax to the `main` function. For example, if you wanted to return a `string` value from the script, your `main` signature would be `function main(workbook: ExcelScript.Workbook): string`.
 
 ## Example
 

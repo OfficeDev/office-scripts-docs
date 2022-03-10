@@ -1,7 +1,7 @@
 ---
 title: 'Filter Excel table and get visible range'
 description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
-ms.date: 06/29/2021
+ms.date: 03/10/2022
 ms.localizationpriority: medium
 ---
 
@@ -55,7 +55,7 @@ function main(workbook: ExcelScript.Workbook): ReturnTemplate {
 
 // This function converts a 2D-array of values into a generic JSON object.
 function returnObjectFromValues(values: string[][]): BasicObject[] {
-  let objectArray = [];
+  let objectArray: BasicObject[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {

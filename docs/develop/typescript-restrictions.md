@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript restrictions in Office Scripts'
 description: 'The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.'
-ms.date: 11/09/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
 ---
 
@@ -51,7 +51,7 @@ Office Scripts APIs cannot be used in the following:
 
 The JavaScript [eval function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval) is not supported for security reasons.
 
-## Restricted identifers
+## Restricted identifiers
 
 The following words can't be used as identifiers in a script. They are reserved terms.
 
