@@ -52,7 +52,7 @@ When adding input parameters to a script's `main` function, consider the followi
 1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
 
     ```TypeScript
-    // Office Scripts can use an Employee object because Position is also supported.
+    // The Employee object is supported because Position is also composed of supported types.
     interface Employee {
         name: string;
         job: Position;
