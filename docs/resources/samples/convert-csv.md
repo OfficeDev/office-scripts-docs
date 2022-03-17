@@ -1,7 +1,7 @@
 ---
 title: 'Convert CSV files to Excel workbooks'
 description: 'Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.'
-ms.date: 02/25/2022
+ms.date: 03/17/2022
 ms.localizationpriority: medium
 ---
 
@@ -25,37 +25,42 @@ Add the following script and build a flow using the steps given to try the sampl
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, csv: string) {
+  let sheet = workbook.getWorksheet("Sheet1");
+
   /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
+  // Remove any Windows \r characters
+  csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
-  let rows = csv.split("\r\n");
-  let data : string[][] = [];
-  rows.forEach((value) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
+  let rows = csv.split("\n");
+  rows.forEach((value, index) => {
+    if (value.length > 0) {
+        /*
+         * For each row, match the comma-separated sections.
+         * For more information on how to use regular expressions to parse CSV files,
+         * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+         */
+        let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
     
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-    data.push(row);
+        // Check for blanks at the start of the row.
+        if (row[0].charAt(0) === ',') {
+          row.unshift("");
+        }
+    
+        // Remove the preceding comma.
+        row.forEach((cell, index) => {
+          row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+        });
+    
+        // Create a 2D-array with one row.
+        let data: string[][] = [];
+        data.push(row);
+    
+        // Put the data in the worksheet.
+        let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+        range.setValues(data);
+    }
   });
-
-  // Put the data in the worksheet.
-  let sheet = workbook.getWorksheet("Sheet1");
-  let range = sheet.getRangeByIndexes(0, 0, data.length, data[0].length);
-  range.setValues(data);
 
   // Add any formatting or table creation that you want.
 }
@@ -102,45 +107,57 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ## Troubleshooting
 
-The script expects the comma-separated values to make a rectangular range. If your .csv file contains rows with different numbers of columns, you will get an error that says, "The number of rows or columns in the input array doesn't match the size or dimensions of the range." If the data cannot be made to conform to a rectangular shape, use the following script instead. This script adds the data one row at a time, instead of as a single range. This script is less efficient and is noticeably slower with large data sets.
+### Script testing
+
+To test the script without using Power Automate, assign a value to `csv` before using it. Try adding the following code as the first line of the `main` function and pressing **Run**.
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, csv: string) {
-  let sheet = workbook.getWorksheet("Sheet1");
-
-  /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
-
-  // Split each line into a row.
-  let rows = csv.split("\r\n");
-  rows.forEach((value, index) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
-
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-
-    // Create a 2D-array with one row.
-    let data: string[][] = [];
-    data.push(row);
-
-    // Put the data in the worksheet.
-    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
-    range.setValues(data);
-  });
-
-  // Add any formatting or table creation that you want.
-}
+  csv = `1, 2, 3
+         4, 5, 6
+         7, 8, 9`;
 ```
+
+### Semicolon-separated files and other alternative separators
+
+Some regions use semicolons (';') to separate cell values instead of commas. In this case, you need to change the following lines in the script.
+
+1. Replace the commas with semicolons in the regular expression statement. This starts with `let row = value.match`.
+
+    ```TypeScript
+    let row = value.match(/(?:;|\n|^)("(?:(?:"")*[^"]*)*"|[^";\n]*|(?:\n|$))/g);
+    ```
+
+1. Replace the comma with a semicolon at in the check for the blank first cell. This starts with `if (row[0].charAt(0)`.
+
+    ```TypeScript
+    if (row[0].charAt(0) === ';') {
+    ```
+
+1. Replace the comma with a semicolon in the line that removes the separation character from the displayed text. This starts with `row[index] = cell.indexOf`.
+
+   ```TypeScript
+      row[index] = cell.indexOf(";") === 0 ? cell.substr(1) : cell;
+    ```
+
+If your file uses tabs or any other character to separate the values, replace the `;` in the above substitutions with `\t` or whatever character is being used.
+
+### Large CSV files
+
+If your file has hundreds of thousands of cells, you could reach the [Excel data transfer limit](../../testing/platform-limits.md#excel). You'll need to force the script to synchronize with Excel periodically. The easiest way to do this is to call `console.log` after a batch of rows has been processed. Add the following lines of code to make this happen.
+
+1. Before `rows.forEach((value, index) => {`, add the following line.
+
+    ```TypeScript
+      let rowCount = 0;
+    ```
+
+1. After `range.setValues(data);`, add the following code. Note that depending on the number of columns, you may need to reduce `5000` to a lower number.
+
+    ```TypeScript
+      rowCount++;
+      if (rowCount % 5000 === 0) {
+        console.log("Syncing 5000 rows.");
+      }
+    ```
+
+If your CSV file is very large, you may have problems [timing out in Power Automate](../../testing/platform-limits.md#power-automate). You'll need to divide the CSV data into multiple files before converting them into Excel workbooks.
