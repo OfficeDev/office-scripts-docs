@@ -1,6 +1,6 @@
 ---
-title: 'Basic scripts for Office Scripts in Excel on the web'
-description: 'A collection of code samples to use with Office Scripts in Excel on the web.'
+title: Basic scripts for Office Scripts in Excel on the web
+description: A collection of code samples to use with Office Scripts in Excel on the web.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

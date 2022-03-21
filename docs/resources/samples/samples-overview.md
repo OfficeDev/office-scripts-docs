@@ -1,6 +1,6 @@
 ---
-title: 'Office Scripts samples'
-description: 'Available Office Scripts samples and scenarios.'
+title: Office Scripts samples
+description: Available Office Scripts samples and scenarios.
 ms.date: 01/20/2022
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,7 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
-description: 'Resources for learning Office Scripts in Excel on the web, including tutorials, conceptual articles, and code samples.'
+description: Resources for learning Office Scripts in Excel on the web, including tutorials, conceptual articles, and code samples.
 ms.date: 05/24/2021
 ms.localizationpriority: high
 ---

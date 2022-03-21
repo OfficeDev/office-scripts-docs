@@ -1,6 +1,6 @@
 ---
-title: 'When to use Power Query or Office Scripts'
-description: 'The scenarios that are best suited for both the Power Query and Office Scripts platforms.'
+title: When to use Power Query or Office Scripts
+description: The scenarios that are best suited for both the Power Query and Office Scripts platforms.
 ms.date: 11/23/2021
 ms.localizationpriority: medium
 ---
