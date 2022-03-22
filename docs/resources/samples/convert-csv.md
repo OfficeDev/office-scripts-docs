@@ -24,11 +24,13 @@ Add the following script and build a flow using the steps given to try the sampl
 ## Sample code: Insert comma-separated values into a workbook
 
 ```TypeScript
+/**
+ * Convert incoming CSV data into a range and add it to the workbook.
+ */
 function main(workbook: ExcelScript.Workbook, csv: string) {
   let sheet = workbook.getWorksheet("Sheet1");
 
-  /* Convert the CSV data into a 2D array. */
-  // Remove any Windows \r characters
+  // Remove any Windows \r characters.
   csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
@@ -139,7 +141,8 @@ Some regions use semicolons (';') to separate cell values instead of commas. In 
       row[index] = cell.indexOf(";") === 0 ? cell.substr(1) : cell;
     ```
 
-If your file uses tabs or any other character to separate the values, replace the `;` in the above substitutions with `\t` or whatever character is being used.
+> [!NOTE]
+> If your file uses tabs or any other character to separate the values, replace the `;` in the above substitutions with `\t` or whatever character is being used.
 
 ### Large CSV files
 
@@ -160,4 +163,5 @@ If your file has hundreds of thousands of cells, you could reach the [Excel data
       }
     ```
 
-If your CSV file is very large, you may have problems [timing out in Power Automate](../../testing/platform-limits.md#power-automate). You'll need to divide the CSV data into multiple files before converting them into Excel workbooks.
+> [!WARNING]
+> If your CSV file is very large, you may have problems [timing out in Power Automate](../../testing/platform-limits.md#power-automate). You'll need to divide the CSV data into multiple files before converting them into Excel workbooks.
