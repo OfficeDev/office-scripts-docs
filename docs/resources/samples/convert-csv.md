@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
           row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
         });
     
-        // Create a 2D-array with one row.
+        // Create a 2D array with one row.
         let data: string[][] = [];
         data.push(row);
     
@@ -127,7 +127,7 @@ Some regions use semicolons (';') to separate cell values instead of commas. In 
     let row = value.match(/(?:;|\n|^)("(?:(?:"")*[^"]*)*"|[^";\n]*|(?:\n|$))/g);
     ```
 
-1. Replace the comma with a semicolon at in the check for the blank first cell. This starts with `if (row[0].charAt(0)`.
+1. Replace the comma with a semicolon in the check for the blank first cell. This starts with `if (row[0].charAt(0)`.
 
     ```TypeScript
     if (row[0].charAt(0) === ';') {
