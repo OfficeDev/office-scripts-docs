@@ -1,6 +1,6 @@
 ---
-title: 'Undo the changes made by Office Scripts'
-description: 'Use the version history of Excel on the web to undo the changes made by running a script.'
+title: Undo the changes made by Office Scripts
+description: Use the version history of Excel on the web to undo the changes made by running a script.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

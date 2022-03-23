@@ -1,6 +1,6 @@
 ---
-title: 'Record, edit, and create Office Scripts in Excel on the web'
-description: 'A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.'
+title: Record, edit, and create Office Scripts in Excel on the web
+description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
 ms.date: 05/23/2021
 ms.localizationpriority: high
 ---

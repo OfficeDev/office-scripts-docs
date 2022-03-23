@@ -1,6 +1,6 @@
 ---
-title: 'Using built-in JavaScript objects in Office Scripts'
-description: 'How to call built-in JavaScript APIs from an Office Script in Excel on the web.'
+title: Using built-in JavaScript objects in Office Scripts
+description: How to call built-in JavaScript APIs from an Office Script in Excel on the web.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
 ---

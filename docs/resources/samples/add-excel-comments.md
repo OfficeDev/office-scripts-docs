@@ -1,6 +1,6 @@
 ---
-title: 'Add comments in Excel'
-description: 'Learn how to use Office Scripts to add comments in a worksheet.'
+title: Add comments in Excel
+description: Learn how to use Office Scripts to add comments in a worksheet.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

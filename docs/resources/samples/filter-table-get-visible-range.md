@@ -1,6 +1,6 @@
 ---
-title: 'Filter Excel table and get visible range'
-description: 'Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.'
+title: Filter Excel table and get visible range
+description: Learn how to use Office Scripts to filter an Excel table and get the visible range as an array of objects.
 ms.date: 03/10/2022
 ms.localizationpriority: medium
 ---
