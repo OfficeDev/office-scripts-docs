@@ -1,6 +1,6 @@
 ---
-title: 'Differences between Office Scripts and Office Add-ins'
-description: 'The behavior and API differences between Office Scripts and Office Add-ins.'
+title: Differences between Office Scripts and Office Add-ins
+description: The behavior and API differences between Office Scripts and Office Add-ins.
 ms.date: 02/04/2022
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,17 @@
 ---
+<<<<<<< HEAD
 title: 'Convert CSV files to Excel workbooks'
 description: 'Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.'
 ms.date: 03/17/2022
+||||||| 5a621b3
+title: 'Convert CSV files to Excel workbooks'
+description: 'Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.'
+ms.date: 02/25/2022
+=======
+title: Convert CSV files to Excel workbooks
+description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
+ms.date: 02/25/2022
+>>>>>>> main
 ms.localizationpriority: medium
 ---
 

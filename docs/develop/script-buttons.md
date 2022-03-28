@@ -1,5 +1,5 @@
 ---
-title: 'Run Office Scripts in Excel with buttons'
+title: Run Office Scripts in Excel with buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
 ms.date: 02/25/2022

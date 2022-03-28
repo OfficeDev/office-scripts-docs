@@ -1,6 +1,6 @@
 ---
-title: 'Best practices in Office Scripts'
-description: 'How to prevent common problems and write robust Office Scripts that can handle unexpected input or data.'
+title: Best practices in Office Scripts
+description: How to prevent common problems and write robust Office Scripts that can handle unexpected input or data.
 ms.date: 12/29/2021
 ms.localizationpriority: medium
 ---
