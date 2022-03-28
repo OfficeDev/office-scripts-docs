@@ -1,7 +1,7 @@
 ---
 title: Basic scripts for Office Scripts in Excel on the web
 description: A collection of code samples to use with Office Scripts in Excel on the web.
-ms.date: 06/29/2021
+ms.date: 03/24/2022
 ms.localizationpriority: medium
 ---
 
@@ -228,7 +228,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object. It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.
+The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object. It uses the date's numeric serial number as input for the JavaScript Date. This serial number is described in the [NOW() function](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) article.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
