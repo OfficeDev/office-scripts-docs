@@ -28,13 +28,13 @@ Add the following script and build a flow using the steps given to try the sampl
  * Convert incoming CSV data into a range and add it to the workbook.
  */
 function main(workbook: ExcelScript.Workbook, csv: string) {
-  const sheet = workbook.getWorksheet("Sheet1");
+  let sheet = workbook.getWorksheet("Sheet1");
 
   // Remove any Windows \r characters.
   csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
-  const rows = csv.split("\n");
+  let rows = csv.split("\n");
   /*
    * For each row, match the comma-separated sections.
    * For more information on how to use regular expressions to parse CSV files,
