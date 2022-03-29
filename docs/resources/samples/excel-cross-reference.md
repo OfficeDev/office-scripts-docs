@@ -1,6 +1,6 @@
 ---
-title: 'Cross-reference Excel files with Power Automate'
-description: 'Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.'
+title: Cross-reference Excel files with Power Automate
+description: Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

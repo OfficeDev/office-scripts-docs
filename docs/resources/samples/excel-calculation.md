@@ -1,6 +1,6 @@
 ---
-title: 'Manage calculation mode in Excel'
-description: 'Learn how to use Office Scripts to manage the calculation mode in Excel on the web.'
+title: Manage calculation mode in Excel
+description: Learn how to use Office Scripts to manage the calculation mode in Excel on the web.
 ms.date: 05/06/2021
 ms.localizationpriority: medium
 ---

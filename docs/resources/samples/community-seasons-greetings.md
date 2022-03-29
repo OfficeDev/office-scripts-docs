@@ -1,6 +1,6 @@
 ---
-title: 'Seasons greetings'
-description: 'Learn how to use Office Scripts to show a singing tree in Excel on the web.'
+title: Seasons greetings
+description: Learn how to use Office Scripts to show a singing tree in Excel on the web.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

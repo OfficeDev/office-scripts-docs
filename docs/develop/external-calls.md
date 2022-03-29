@@ -1,6 +1,6 @@
 ---
-title: 'External API call support in Office Scripts'
-description: 'Support and guidance for making external API calls in an Office Script.'
+title: External API call support in Office Scripts
+description: Support and guidance for making external API calls in an Office Script.
 ms.date: 05/21/2021
 ms.localizationpriority: medium
 ---
