@@ -41,4 +41,4 @@ Let's look at how these relationships work in practice. The following data descr
 
 :::image type="content" source="../images/pivottable-showas-percentage.png" alt-text="A PivotTable showing the percentages of fruit sales relative to the grand total for both individual farms and individual fruit types within each farm.":::
 
-:::image type="content" source="../images/pivottable-showas-differencefrom.png" alt-text="A PivotTable showing the differences of fruit sales between "A Farms" and the others. This shows both the difference in total fruit sales of the farms and the sales of types of fruit. If "A Farms" did not sell a particular type of fruit, "#N/A" is displayed.":::
+:::image type="content" source="../images/pivottable-showas-differencefrom.png" alt-text="A PivotTable showing the differences of fruit sales between 'A Farms' and the others. This shows both the difference in total fruit sales of the farms and the sales of types of fruit. If 'A Farms' did not sell a particular type of fruit, '#N/A' is displayed.":::
