@@ -25,20 +25,20 @@ The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottab
 - The [PivotLayout defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) filter data from the [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) using different criteria.
 
-Let's look at how these relationships work in practice. The following data describes fruit sales from various farms. It will be the example throughout this article.
+Let's look at how these relationships work in practice. The following data describes fruit sales from various farms. It will be the example throughout this article. Use <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> to follow along with the samples in the article.
 
-![A collection of fruit sales of different types from different farms.](../images/pivottable-raw-data.png)
+:::image type="content" source="../images/pivottable-raw-data.png" alt-text="A collection of fruit sales of different types from different farms.":::
 
-![A selection of fruit sales data next to a PivotTable with row, data, and filter hierarchies.](../images/pivottable-and-data.png)
+:::image type="content" source="../images/pivottable-and-data.png" alt-text="A selection of fruit sales data next to a PivotTable with row, data, and filter hierarchies.":::
 
-![A PivotTable with a Farm column and Type and Classification rows.](../images/pivottable-rows-and-columns.png)
+:::image type="content" source="../images/pivottable-rows-and-columns.png" alt-text="A PivotTable with a Farm column and Type and Classification rows.":::
 
-![A PivotTable showing the total sales of different fruit based on the farm they came from.](../images/pivottable-data-hierarchy.png)
+:::image type="content" source="../images/pivottable-data-hierarchy.png" alt-text="A PivotTable showing the total sales of different fruit based on the farm they came from.":::
 
-![A diagram showing which sections of a PivotTable are returned by the layout's get range functions.](../images/pivottable-layout-breakdown.png)
+:::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="A diagram showing which sections of a PivotTable are returned by the layout's get range functions.":::
 
-![A slicer filtering data on a PivotTable.](../images/slicer.png)
+:::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
 
-![A PivotTable showing the percentages of fruit sales relative to the grand total for both individual farms and individual fruit types within each farm.](../images/excel-pivots-showas-percentage.png)
+:::image type="content" source="../images/pivottable-showas-percentage.png" alt-text="A PivotTable showing the percentages of fruit sales relative to the grand total for both individual farms and individual fruit types within each farm.":::
 
-![A PivotTable showing the differences of fruit sales between "A Farms" and the others. This shows both the difference in total fruit sales of the farms and the sales of types of fruit. If "A Farms" did not sell a particular type of fruit, "#N/A" is displayed.](../images/excel-pivots-showas-differencefrom.png)
+:::image type="content" source="../images/pivottable-showas-differencefrom.png" alt-text="A PivotTable showing the differences of fruit sales between "A Farms" and the others. This shows both the difference in total fruit sales of the farms and the sales of types of fruit. If "A Farms" did not sell a particular type of fruit, "#N/A" is displayed.":::
