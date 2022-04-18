@@ -1,6 +1,6 @@
 ---
-title: 'Improve the performance of your Office Scripts'
-description: 'Create faster scripts by understanding the communication between the Excel workbook and your script.'
+title: Improve the performance of your Office Scripts
+description: Create faster scripts by understanding the communication between the Excel workbook and your script.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
 ---

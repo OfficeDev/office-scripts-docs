@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot Office Scripts running in Power Automate'
-description: 'Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.'
+title: Troubleshoot Office Scripts running in Power Automate
+description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.date: 11/01/2021
 ms.localizationpriority: medium
 ---

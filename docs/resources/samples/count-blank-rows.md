@@ -1,6 +1,6 @@
 ---
-title: 'Count blank rows on sheets'
-description: 'Learn how to use Office Scripts to detect if there are any blank rows instead of data in worksheets and then report the blank row count to be used in a Power Automate flow.'
+title: Count blank rows on sheets
+description: Learn how to use Office Scripts to detect if there are any blank rows instead of data in worksheets and then report the blank row count to be used in a Power Automate flow.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,7 @@
 ---
-title: 'Return data from a script to an automatically-run Power Automate flow'
-description: 'A tutorial that shows how to send reminder emails by running Office Scripts for Excel on the web through Power Automate.'
-ms.date: 06/29/2021
+title: Return data from a script to an automatically-run Power Automate flow
+description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel on the web through Power Automate.
+ms.date: 04/12/2022
 ms.localizationpriority: high
 ---
 
@@ -130,10 +130,10 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="The Scheduled cloud flow button in Power Automate.":::
 
-1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
+1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2022. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
 
     - **Flow name**: Notify On-Call Person
-    - **Starting**: 1/4/21 at 1:00am
+    - **Starting**: 1/3/22 at 1:00am
     - **Repeat every**: 1 Week
     - **On these days**: M
 

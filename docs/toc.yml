@@ -36,7 +36,7 @@ items:
       href: develop/script-buttons.md
     - name: Run scripts with Power Automate
       href: develop/power-automate-integration.md
-    - name: Use macro files in Power Automate flows
+    - name: Use .xlsm files in Power Automate flows
       href: develop/macros-power-automate.md
     - name: Work with PivotTables
       href: develop/pivottables.md

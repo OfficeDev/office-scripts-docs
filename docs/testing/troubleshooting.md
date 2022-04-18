@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot Office Scripts'
-description: 'Debugging tips and techniques for Office Scripts, as well as help resources.'
+title: Troubleshoot Office Scripts
+description: Debugging tips and techniques for Office Scripts, as well as help resources.
 ms.date: 11/11/2021
 ms.localizationpriority: medium
 ---
