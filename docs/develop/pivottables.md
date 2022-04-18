@@ -20,6 +20,7 @@ The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottab
 
 - The [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) object has a collection of all the [PivotTables](/javascript/api/office-scripts/excelscript/excelscript.pivottable). Each [Worksheet also contains a PivotTable collection that's local to that sheet.
 - A [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) contains [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy). A hierarchy can be thought of as a column in a table.
+- [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) can be added as rows or columns ([RowColumnPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.rowcolumnpivothierarchy)), data ([DataPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.datapivothierarchy)), or filters ([FilterPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)).
 - Each [PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) contains one and only one [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield). PivotTable structures outside of Excel may contain multiple fields pet hierarchy, so this design exists to support future options. For Office Scripts, fields and hierarchies map to the same information.
 - A [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) contains multiple [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem). Each PivotItem is a unique value in the field. Think of each item as a value in the table column. Items could also be aggregated values, such as sums, if the field is being used for data.
 - The [PivotLayout defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
@@ -29,15 +30,51 @@ Let's look at how these relationships work in practice. The following data descr
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="A collection of fruit sales of different types from different farms.":::
 
-:::image type="content" source="../images/pivottable-and-data.png" alt-text="A selection of fruit sales data next to a PivotTable with row, data, and filter hierarchies.":::
+## Create a PivotTable with fields
 
-:::image type="content" source="../images/pivottable-rows-and-columns.png" alt-text="A PivotTable with a Farm column and Type and Classification rows.":::
+PivotTables are created with references to existing data. Both ranges and tables can be the source for a PivotTable. They also need a place to exist in the workbook. Since the size of PivotTable is dynamic, only the upper-left corner of the destination range is specified.
+
+The following code snippet creates a PivotTable based on a range of data. The PivotTable has no hierarchies, so the data is not yet grouped in any way.
+
+```typescript
+  const dataSheet = workbook.getWorksheet("Data");
+  const pivotSheet = workbook.getWorksheet("Pivot");
+
+  const farmPivot = pivotSheet.addPivotTable(
+    "Farm Pivot", /* The name of the PivotTable. */
+    dataSheet.getUsedRange(), /* The source data range. */
+    pivotSheet.getRange("A1") /* The location to put the new PivotTable. */);
+```
+
+:::image type="content" source="../images/pivottable-empty.png" alt-text="A PivotTable named 'Farm Pivot' with no hierarchies.":::
+
+### Hierarchies and fields
+
+PivotTables are organized through hierarchies. There are four types of hierarchies.
+
+- **Row**: Displays items in horizontal rows.
+- **Column**: Displays items in vertical columns.
+- **Data**: Displays aggregates of values based on the rows and columns.
+- **Filter**: Add or removes items from the PivotTable.
+
+```typescript
+  farmPivot.addRowHierarchy(farmPivot.getHierarchy("Farm"));
+  farmPivot.addRowHierarchy(farmPivot.getHierarchy("Type"));
+  farmPivot.addDataHierarchy(farmPivot.getHierarchy("Crates Sold at Farm"));
+  farmPivot.addDataHierarchy(farmPivot.getHierarchy("Crates Sold Wholesale"));
+```
 
 :::image type="content" source="../images/pivottable-data-hierarchy.png" alt-text="A PivotTable showing the total sales of different fruit based on the farm they came from.":::
 
+## Layout ranges
+
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="A diagram showing which sections of a PivotTable are returned by the layout's get range functions.":::
 
+## Filters and slicers
+
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
+
+## Change aggregation function and calculations
 
 :::image type="content" source="../images/pivottable-showas-percentage.png" alt-text="A PivotTable showing the percentages of fruit sales relative to the grand total for both individual farms and individual fruit types within each farm.":::
 
