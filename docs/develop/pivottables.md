@@ -1,7 +1,7 @@
 ---
 title: 'Work with PivotTables in Office Scripts'
 description: 'The object model for PivotTables in the Office Scripts JavaScript API'
-ms.date: 04/15/2022
+ms.date: 04/19/2022
 ms.localizationpriority: medium
 ---
 
@@ -50,12 +50,14 @@ The following code snippet creates a PivotTable based on a range of data. The Pi
 
 ### Hierarchies and fields
 
-PivotTables are organized through hierarchies. There are four types of hierarchies.
+PivotTables are organized through hierarchies. Every field is in exactly one hierarchy. Those hierarchies are used to pivot data when added as a specific type of hierarchy. There are four types of hierarchies.
 
 - **Row**: Displays items in horizontal rows.
 - **Column**: Displays items in vertical columns.
 - **Data**: Displays aggregates of values based on the rows and columns.
 - **Filter**: Add or removes items from the PivotTable.
+
+A PivotTable can have as many or as few of its fields assigned to these specific hierarchy. Generally, a useful PivotTable needs at least one data hierarchy to show and at least one row or column to pivot on. The following code snippet adds two row hierarchies and two data hierarchies.
 
 ```typescript
   farmPivot.addRowHierarchy(farmPivot.getHierarchy("Farm"));
@@ -68,9 +70,19 @@ PivotTables are organized through hierarchies. There are four types of hierarchi
 
 ## Layout ranges
 
+Each part of the PivotTable maps to a range. This lets your script get data from the PivotTable, so it can be used later in the script or returned for a [Power Automate flow](power-automate-integration.md). These ranges are accessed through the [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) object, acquired from `PivotTable.getLayout()`. The following diagram shows the ranges that are returned by the methods in `PivotLayout`.
+
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="A diagram showing which sections of a PivotTable are returned by the layout's get range functions.":::
 
 ## Filters and slicers
+
+There are three ways to filter a PivotTable.
+
+- [FilterPivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)
+- [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters)
+- [Slicers](/javascript/api/office-scripts/excelscript/excelscript.slicer)
+ 
+
 
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
 
