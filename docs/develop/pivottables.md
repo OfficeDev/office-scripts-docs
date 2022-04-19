@@ -81,8 +81,28 @@ There are three ways to filter a PivotTable.
 - [FilterPivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters)
 - [Slicers](/javascript/api/office-scripts/excelscript/excelscript.slicer)
- 
 
+### FilterPivotHierarchies
+
+`FilterPivotHierarchies` add an additional hierarchy to filter every data row. Any row with an item that is filtered out is excluded from the PivotTable and its summaries. Since these filters are based on items, they only work on discrete values. If "Classification" is a filter hierarchy in our sample, users can select the values of "Organic" and "Conventional" for the filter. Similarly, if "Crates Sold Wholesale" is selected, the filter options would be the individual numbers, such as 120 and 150, instead of numerical ranges.
+
+FilterPivotHierarchies are created with all values selected. This means that nothing is filtered until the user manually interacts with the filter control or a `PivotManualFilter` is set on the field belonging to the `FilterPivotHierarchy`.
+
+This following code snippet adds "Classification" as a filter hierarchy.
+
+```typescript
+  farmPivot.addFilterHierarchy(farmPivot.getHierarchy("Classification"));
+```
+
+:::image type="content" source="../images/pivottable-filter-hierarchy.png" alt-text="A filter control that uses 'Classification' for a PivotTable.":::
+
+### PivotFilters
+
+`PivotFilters` is a collection of filters applied to a single field. Typically, only one of the four types of filter is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
+
+...
+
+### Slicers
 
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
 
