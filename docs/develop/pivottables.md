@@ -7,26 +7,26 @@ ms.localizationpriority: medium
 
 # Work with PivotTables in Office Scripts
 
-PivotTables let you analyze large collections of data faster. With their power comes complexity. The Office Scripts APIs let you customize a PivotTable to suit your needs, but the scope of the API set makes getting started a challenge. This article demonstrates how to perform common PivotTable tasks and explains the important classes and methods that are frequently used.
+PivotTables let you analyze large collections of data faster. With their power comes complexity. The Office Scripts APIs let you customize a PivotTable to suit your needs, but the scope of the API set makes getting started a challenge. This article demonstrates how to perform common PivotTable tasks and explains important classes and methods.
 
 > [!NOTE]
-> To better understand context for the terms used by the APIs, please read Excel's PivotTable documentation first, starting with [Create a PivotTable to analyze worksheet data](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
+> To better understand context for the terms used by the APIs, please read Excel's PivotTable documentation first. Start with [Create a PivotTable to analyze worksheet data](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
 
 ## Object model
 
 :::image type="content" source="../images/pivottable-object-model.png" alt-text="A simplified picture of the classes, methods, and properties used when working with PivotTables.":::
 
-The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) is the central object for PivotTables in the Office JavaScript API.
+The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) is the central object for PivotTables in the Office Scripts API.
 
-- The [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) object has a collection of all the [PivotTables](/javascript/api/office-scripts/excelscript/excelscript.pivottable). Each [Worksheet also contains a PivotTable collection that's local to that sheet.
+- The [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) object has a collection of all the [PivotTables](/javascript/api/office-scripts/excelscript/excelscript.pivottable). Each [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) also contains a PivotTable collection that's local to that sheet.
 - A [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) contains [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy). A hierarchy can be thought of as a column in a table.
 - [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) can be added as rows or columns ([RowColumnPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.rowcolumnpivothierarchy)), data ([DataPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.datapivothierarchy)), or filters ([FilterPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)).
-- Each [PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) contains one and only one [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield). PivotTable structures outside of Excel may contain multiple fields pet hierarchy, so this design exists to support future options. For Office Scripts, fields and hierarchies map to the same information.
+- Each [PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) contains one and only one [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield). PivotTable structures outside of Excel may contain multiple fields per hierarchy, so this design exists to support future options. For Office Scripts, fields and hierarchies map to the same information.
 - A [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) contains multiple [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem). Each PivotItem is a unique value in the field. Think of each item as a value in the table column. Items could also be aggregated values, such as sums, if the field is being used for data.
-- The [PivotLayout defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
+- The [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) filter data from the [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) using different criteria.
 
-Let's look at how these relationships work in practice. The following data describes fruit sales from various farms. It will be the example throughout this article. Use <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> to follow along with the samples in the article.
+Let's look at how these relationships work in practice. The following data describes fruit sales from various farms. It is the base for all the examples in this article. Use <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> to follow along.
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="A collection of fruit sales of different types from different farms.":::
 
@@ -50,14 +50,14 @@ The following code snippet creates a PivotTable based on a range of data. The Pi
 
 ### Hierarchies and fields
 
-PivotTables are organized through hierarchies. Every field is in exactly one hierarchy. Those hierarchies are used to pivot data when added as a specific type of hierarchy. There are four types of hierarchies.
+PivotTables are organized through hierarchies. Those hierarchies are used to pivot data when added as a specific type of hierarchy. There are four types of hierarchies.
 
 - **Row**: Displays items in horizontal rows.
 - **Column**: Displays items in vertical columns.
 - **Data**: Displays aggregates of values based on the rows and columns.
 - **Filter**: Add or removes items from the PivotTable.
 
-A PivotTable can have as many or as few of its fields assigned to these specific hierarchy. Generally, a useful PivotTable needs at least one data hierarchy to show and at least one row or column to pivot on. The following code snippet adds two row hierarchies and two data hierarchies.
+A PivotTable can have as many or as few of its fields assigned to these specific hierarchies. Generally, a useful PivotTable needs at least one data hierarchy to show and at least one row or column to pivot on. The following code snippet adds two row hierarchies and two data hierarchies.
 
 ```typescript
   farmPivot.addRowHierarchy(farmPivot.getHierarchy("Farm"));
@@ -70,7 +70,7 @@ A PivotTable can have as many or as few of its fields assigned to these specific
 
 ## Layout ranges
 
-Each part of the PivotTable maps to a range. This lets your script get data from the PivotTable, so it can be used later in the script or returned for a [Power Automate flow](power-automate-integration.md). These ranges are accessed through the [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) object, acquired from `PivotTable.getLayout()`. The following diagram shows the ranges that are returned by the methods in `PivotLayout`.
+Each part of the PivotTable maps to a range. This lets your script get data from the PivotTable for use later in the script or to be returned in a [Power Automate flow](power-automate-integration.md). These ranges are accessed through the [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) object acquired from `PivotTable.getLayout()`. The following diagram shows the ranges that are returned by the methods in `PivotLayout`.
 
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="A diagram showing which sections of a PivotTable are returned by the layout's get range functions.":::
 
@@ -98,16 +98,16 @@ This following code snippet adds "Classification" as a filter hierarchy.
 
 ### PivotFilters
 
-`PivotFilters` is a collection of filters applied to a single field. There are four filter types.
+The `PivotFilters` object is a collection of filters applied to a single field. Since each hierarchy has exactly one field, you should always use the first field in `PivotHierarchy.getFields()` when applying filters. There are four filter types.
 
 **Date Filter**: Calendar date-based filtering.
 **Label Filter**: Text comparison filtering.
 **Manual Filter**: Custom input filtering.
 **Value Filter**: Number comparison filtering. This compares items in the associated hierarchy with values in a specified data hierarchy.
 
-Typically, only one of the four types of filter is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
+Typically, only one of the four types of filters is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
 
-The following code snippet adds two filters. The first is a manual filter that selects items in an existing "Classification" filter hierarchy. The second filter removes any farms that have fewer than 300 "Crates Sold Wholesale". Note that this filters out the "Sum" of those farms, and not the individual rows from the original data.
+The following code snippet adds two filters. The first is a manual filter that selects items in an existing "Classification" filter hierarchy. The second filter removes any farms that have fewer than 300 "Crates Sold Wholesale". Note that this filters out the "Sum" of those farms, not the individual rows from the original data.
 
 ```typescript
   const classificationField = farmPivot.getFilterHierarchy("Classification").getFields()[0];
@@ -131,7 +131,7 @@ The following code snippet adds two filters. The first is a manual filter that s
 
 ### Slicers
 
-[Slicers](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) filter data in a PivotTable (or standard table).They are a moveable object in the worksheet that allows for quick filtering selections. A slicer operates in a similar fashion to the manual filter and `PivotFilterHierarchy`. Items from the `PivotField` are toggled to include or exclude them from the PivotTable.
+[Slicers](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) filter data in a PivotTable (or standard table). They are moveable objects in the worksheet that allow for quick filtering selections. A slicer operates in a similar fashion to the manual filter and `PivotFilterHierarchy`. Items from the `PivotField` are toggled to include or exclude them from the PivotTable.
 
 The following code snippet adds a slicer for the "Type" field. It then sets the selected items to be "Lemon" and "Lime", then moves the slicer 400 pixels to the left.
 
@@ -145,3 +145,8 @@ The following code snippet adds a slicer for the "Type" field. It then sets the 
 ```
 
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
+
+## See also
+
+- [Scripting Fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Office Scripts API reference](/javascript/api/office-scripts/overview)
