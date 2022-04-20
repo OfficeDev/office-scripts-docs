@@ -98,9 +98,36 @@ This following code snippet adds "Classification" as a filter hierarchy.
 
 ### PivotFilters
 
-`PivotFilters` is a collection of filters applied to a single field. Typically, only one of the four types of filter is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
+`PivotFilters` is a collection of filters applied to a single field. There are four filter types.
 
-...
+**Date Filter**: Calendar date-based filtering.
+**Label Filter**: Text comparison filtering.
+**Manual Filter**: Custom input filtering.
+**Value Filter**: Number comparison filtering. This compares items in the associated hierarchy with values in a specified data hierarchy.
+
+Typically, only one of the four types of filter is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
+
+The following code snippet adds two filters. The first is a manual filter that selects items in an existing "Classification" filter hierarchy. The second filter removes any farms that have fewer than 300 "Crates Sold Wholesale". Note that this filters out the "Sum" of those farms, and not the individual rows from the original data.
+
+```typescript
+  const classificationField = farmPivot.getFilterHierarchy("Classification").getFields()[0];
+  classificationField.applyFilter({
+    manualFilter: { 
+      selectedItems: ["Organic"] /* The included items. */
+    }
+  });
+
+  const farmField = farmPivot.getHierarchy("Farm").getFields()[0];
+  farmField.applyFilter({
+    valueFilter: {
+      condition: ExcelScript.ValueFilterCondition.greaterThan, /* The relationship of the value to the comparator. */
+      comparator: 300, /* The value to which items are compared. */
+      value: "Sum of Crates Sold Wholesale" /* The name of the data hierarchy. Note the "Sum of" prefix. */
+      }
+  });
+```
+
+:::image type="content" source="../images/pivottable-filters.png" alt-text="A PivotTable after the value filter and manual filter were applied.":::
 
 ### Slicers
 
