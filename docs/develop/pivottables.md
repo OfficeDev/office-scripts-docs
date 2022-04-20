@@ -1,7 +1,7 @@
 ---
 title: 'Work with PivotTables in Office Scripts'
 description: 'The object model for PivotTables in the Office Scripts JavaScript API'
-ms.date: 04/19/2022
+ms.date: 04/20/2022
 ms.localizationpriority: medium
 ---
 
@@ -131,10 +131,17 @@ The following code snippet adds two filters. The first is a manual filter that s
 
 ### Slicers
 
+[Slicers](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) filter data in a PivotTable (or standard table).They are a moveable object in the worksheet that allows for quick filtering selections. A slicer operates in a similar fashion to the manual filter and `PivotFilterHierarchy`. Items from the `PivotField` are toggled to include or exclude them from the PivotTable.
+
+The following code snippet adds a slicer for the "Type" field. It then sets the selected items to be "Lemon" and "Lime", then moves the slicer 400 pixels to the left.
+
+```typescript
+  const fruitSlicer = pivotSheet.addSlicer(
+    farmPivot, /* The table or PivotTale to be sliced. */
+    farmPivot.getHierarchy("Type").getFields()[0] /* What source to use as the slicer options. */
+  );
+  fruitSlicer.selectItems(["Lemon", "Lime"]);
+  fruitSlicer.setLeft(400);
+```
+
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
-
-## Change aggregation function and calculations
-
-:::image type="content" source="../images/pivottable-showas-percentage.png" alt-text="A PivotTable showing the percentages of fruit sales relative to the grand total for both individual farms and individual fruit types within each farm.":::
-
-:::image type="content" source="../images/pivottable-showas-differencefrom.png" alt-text="A PivotTable showing the differences of fruit sales between 'A Farms' and the others. This shows both the difference in total fruit sales of the farms and the sales of types of fruit. If 'A Farms' did not sell a particular type of fruit, '#N/A' is displayed.":::
