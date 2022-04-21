@@ -32,7 +32,7 @@ Let's look at how these relationships work in practice. The following data descr
 
 ## Create a PivotTable with fields
 
-PivotTables are created with references to existing data. Both ranges and tables can be the source for a PivotTable. They also need a place to exist in the workbook. Since the size of PivotTable is dynamic, only the upper-left corner of the destination range is specified.
+PivotTables are created with references to existing data. Both ranges and tables can be the source for a PivotTable. They also need a place to exist in the workbook. Since the size of a PivotTable is dynamic, only the upper-left corner of the destination range is specified.
 
 The following code snippet creates a PivotTable based on a range of data. The PivotTable has no hierarchies, so the data is not yet grouped in any way.
 
@@ -86,9 +86,9 @@ There are three ways to filter a PivotTable.
 
 `FilterPivotHierarchies` add an additional hierarchy to filter every data row. Any row with an item that is filtered out is excluded from the PivotTable and its summaries. Since these filters are based on items, they only work on discrete values. If "Classification" is a filter hierarchy in our sample, users can select the values of "Organic" and "Conventional" for the filter. Similarly, if "Crates Sold Wholesale" is selected, the filter options would be the individual numbers, such as 120 and 150, instead of numerical ranges.
 
-FilterPivotHierarchies are created with all values selected. This means that nothing is filtered until the user manually interacts with the filter control or a `PivotManualFilter` is set on the field belonging to the `FilterPivotHierarchy`.
+`FilterPivotHierarchies` are created with all values selected. This means that nothing is filtered until the user manually interacts with the filter control or a `PivotManualFilter` is set on the field belonging to the `FilterPivotHierarchy`.
 
-This following code snippet adds "Classification" as a filter hierarchy.
+The following code snippet adds "Classification" as a filter hierarchy.
 
 ```typescript
   farmPivot.addFilterHierarchy(farmPivot.getHierarchy("Classification"));
@@ -133,7 +133,7 @@ The following code snippet adds two filters. The first is a manual filter that s
 
 [Slicers](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) filter data in a PivotTable (or standard table). They are moveable objects in the worksheet that allow for quick filtering selections. A slicer operates in a similar fashion to the manual filter and `PivotFilterHierarchy`. Items from the `PivotField` are toggled to include or exclude them from the PivotTable.
 
-The following code snippet adds a slicer for the "Type" field. It then sets the selected items to be "Lemon" and "Lime", then moves the slicer 400 pixels to the left.
+The following code snippet adds a slicer for the "Type" field. It sets the selected items to be "Lemon" and "Lime", then moves the slicer 400 pixels to the left.
 
 ```typescript
   const fruitSlicer = pivotSheet.addSlicer(
@@ -148,5 +148,5 @@ The following code snippet adds a slicer for the "Type" field. It then sets the 
 
 ## See also
 
-- [Scripting Fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
