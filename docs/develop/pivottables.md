@@ -57,7 +57,7 @@ PivotTables are organized through hierarchies. Those hierarchies are used to piv
 - **Data**: Displays aggregates of values based on the rows and columns.
 - **Filter**: Add or removes items from the PivotTable.
 
-A PivotTable can have as many or as few of its fields assigned to these specific hierarchies. Generally, a useful PivotTable needs at least one data hierarchy to show and at least one row or column to pivot on. The following code snippet adds two row hierarchies and two data hierarchies.
+A PivotTable can have as many or as few of its fields assigned to these specific hierarchies. A PivotTable needs at least one data hierarchy to show summarized numerical data and at least one row or column to pivot that summary on. The following code snippet adds two row hierarchies and two data hierarchies.
 
 ```typescript
   farmPivot.addRowHierarchy(farmPivot.getHierarchy("Farm"));
@@ -100,12 +100,12 @@ The following code snippet adds "Classification" as a filter hierarchy.
 
 The `PivotFilters` object is a collection of filters applied to a single field. Since each hierarchy has exactly one field, you should always use the first field in `PivotHierarchy.getFields()` when applying filters. There are four filter types.
 
-**Date Filter**: Calendar date-based filtering.
-**Label Filter**: Text comparison filtering.
-**Manual Filter**: Custom input filtering.
-**Value Filter**: Number comparison filtering. This compares items in the associated hierarchy with values in a specified data hierarchy.
+- **Date filter**: Calendar date-based filtering.
+- **Label filter**: Text comparison filtering.
+- **Manual filter**: Custom input filtering.
+- **Value filter**: Number comparison filtering. This compares items in the associated hierarchy with values in a specified data hierarchy.
 
-Typically, only one of the four types of filters is created and applied to the field. If the script tries to use incompatible filters, an exception is thrown.
+Typically, only one of the four types of filters is created and applied to the field. If the script tries to use incompatible filters, an error is thrown with the text "The argument is invalid or missing or has an incorrect format."
 
 The following code snippet adds two filters. The first is a manual filter that selects items in an existing "Classification" filter hierarchy. The second filter removes any farms that have fewer than 300 "Crates Sold Wholesale". Note that this filters out the "Sum" of those farms, not the individual rows from the original data.
 
