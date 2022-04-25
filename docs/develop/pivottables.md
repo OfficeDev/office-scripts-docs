@@ -1,6 +1,6 @@
 ---
 title: 'Work with PivotTables in Office Scripts'
-description: 'The object model for PivotTables in the Office Scripts JavaScript API'
+description: 'Learn about the object model for PivotTables in the Office Scripts JavaScript API.'
 ms.date: 04/20/2022
 ms.localizationpriority: medium
 ---
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 PivotTables let you analyze large collections of data faster. With their power comes complexity. The Office Scripts APIs let you customize a PivotTable to suit your needs, but the scope of the API set makes getting started a challenge. This article demonstrates how to perform common PivotTable tasks and explains important classes and methods.
 
 > [!NOTE]
-> To better understand context for the terms used by the APIs, please read Excel's PivotTable documentation first. Start with [Create a PivotTable to analyze worksheet data](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
+> To better understand context for the terms used by the APIs, read Excel's PivotTable documentation first. Start with [Create a PivotTable to analyze worksheet data](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
 
 ## Object model
 
@@ -26,7 +26,7 @@ The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottab
 - The [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) filter data from the [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) using different criteria.
 
-Let's look at how these relationships work in practice. The following data describes fruit sales from various farms. It is the base for all the examples in this article. Use <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> to follow along.
+Look at how these relationships work in practice. The following data describes fruit sales from various farms. It's the base for all the examples in this article. Use <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> to follow along.
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="A collection of fruit sales of different types from different farms.":::
 
