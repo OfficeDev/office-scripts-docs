@@ -38,6 +38,8 @@ items:
       href: develop/power-automate-integration.md
     - name: Use .xlsm files in Power Automate flows
       href: develop/macros-power-automate.md
+    - name: Work with PivotTables
+      href: develop/pivottables.md
   - name: Troubleshooting
     items:
     - name: Troubleshooting basics
