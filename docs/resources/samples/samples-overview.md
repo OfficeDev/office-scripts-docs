@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 01/20/2022
+ms.date: 04/26/2022
 ms.localizationpriority: medium
 ---
 
@@ -54,6 +54,7 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 | [Analyze web downloads](../scenarios/analyze-web-downloads.md) | This scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables. |
 | [Fetch and graph water-level data from NOAA](../scenarios/noaa-data-fetch.md) | This scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/)) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts. |
 | [Grade calculator](../scenarios/grade-calculator.md) | This scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions. |
+| [Punch clock button](../scenarios/punch-clock.md) | This scenario features a script and a script button that records the current time. |
 | [Schedule interviews in Teams](../scenarios/schedule-interviews-in-teams.md) | This scenario shows how to use an Excel spreadsheet to manage interview meeting times and make a flow to schedules meetings in Teams. |
 | [Task reminders](../scenarios/task-reminders.md) | This scenario uses an Office Script in a Power Automate flow to send reminders to coworkers to update a project's status. It highlights the skills of Power Automate integration and data transfer to and from scripts. |
 
