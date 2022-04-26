@@ -11,6 +11,8 @@ In this scenario, you're setting up a time sheet for an employee. You want to le
 
 You'll develop a script and a [button](../../develop/script-buttons.md) that records when the user presses the button. Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out).
 
+:::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration' and a button labeled 'Punch clock' in the workbook.":::
+
 ## Scripting skills covered
 
 - Script buttons
