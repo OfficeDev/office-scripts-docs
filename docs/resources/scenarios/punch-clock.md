@@ -13,6 +13,8 @@ You'll develop a script and a [button](../../develop/script-buttons.md) that rec
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration' and a button labeled 'Punch clock' in the workbook.":::
 
+The scenario idea and script used in this sample was contributed by Office Scripts community member [Brian Gonzalez](https://github.com/b-gonzalez).
+
 ## Scripting skills covered
 
 - Script buttons
@@ -32,8 +34,6 @@ You'll develop a script and a [button](../../develop/script-buttons.md) that rec
     /**
      * This script records either the start or end time of a shift, depending on what is filled out in the table. 
      * It is intended to be used with a Script Button.
-     * 
-     * Thank you Brian Gonzalez (@b-gonzalez on GitHub) for providing the scenario and script.
      */
     function main(workbook: ExcelScript.Workbook) {
       // Get the first table in the timeSheet.
