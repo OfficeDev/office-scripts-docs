@@ -32,7 +32,8 @@ The scenario idea and script used in this sample was contributed by Office Scrip
 
     ```typescript
     /**
-     * This script records either the start or end time of a shift, depending on what is filled out in the table. 
+     * This script records either the start or end time of a shift, 
+     * depending on what is filled out in the table. 
      * It is intended to be used with a Script Button.
      */
     function main(workbook: ExcelScript.Workbook) {
