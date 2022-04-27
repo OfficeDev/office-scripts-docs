@@ -106,14 +106,14 @@ items:
         href: resources/scenarios/noaa-data-fetch.md
       - name: Grade calculator
         href: resources/scenarios/grade-calculator.md
-      - name: Punch clock button
-        href: resources/scenarios/punch-clock.md
       - name: Schedule interviews in Teams
         href: resources/scenarios/schedule-interviews-in-teams.md
       - name: Task reminders (with Power Automate)
         href: resources/scenarios/task-reminders.md
     - name: Community contributions
       items:
+      - name: Punch clock button
+        href: resources/scenarios/punch-clock.md
       - name: Seasons greetings
         href: resources/samples/community-seasons-greetings.md
   - name: Office Scripts and other platforms

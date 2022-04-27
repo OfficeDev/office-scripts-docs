@@ -54,7 +54,6 @@ Office Scripts can automate parts of your daily routine. These day-to-day tasks 
 | [Analyze web downloads](../scenarios/analyze-web-downloads.md) | This scenario features a script that parses web traffic records to determine a user's country of origin. It showcases the skills of text parsing, using subfunctions in scripts, applying conditional formatting, and working with tables. |
 | [Fetch and graph water-level data from NOAA](../scenarios/noaa-data-fetch.md) | This scenario uses an Office Script to pull data from an external source (the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/)) and graph the resulting information. It highlights the skills of using `fetch` to get data and using charts. |
 | [Grade calculator](../scenarios/grade-calculator.md) | This scenario features a script that validates an instructor's record for their class's grades. It showcases the skills of error checking, cell formatting, and regular expressions. |
-| [Punch clock button](../scenarios/punch-clock.md) | This scenario features a script and a script button that records the current time. |
 | [Schedule interviews in Teams](../scenarios/schedule-interviews-in-teams.md) | This scenario shows how to use an Excel spreadsheet to manage interview meeting times and make a flow to schedules meetings in Teams. |
 | [Task reminders](../scenarios/task-reminders.md) | This scenario uses an Office Script in a Power Automate flow to send reminders to coworkers to update a project's status. It highlights the skills of Power Automate integration and data transfer to and from scripts. |
 
@@ -65,6 +64,7 @@ We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob
 | Project | Details |
 |---------|---------|
 | [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | The "Ready Player Zero" blog by Yutao Huang on the Excel Tech Community includes a script to model John Conway's [*The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). |
+| [Punch clock button](../scenarios/punch-clock.md) | This script was contributed by [Brian Gonzalez](https://github.com/b-gonzalez). The scenario features a script and a script button that records the current time. |
 | [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts. |
 
 ## Try it out
