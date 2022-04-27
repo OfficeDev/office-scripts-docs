@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Office Scripts sample scenario: Punch clock button
 
-In this scenario, you're setting up a time sheet for an employee. You want to let them record their start and end times with the press of a button, whether they're not Excel for the web or Excel for Desktop.
+In this scenario, you're setting up a time sheet for an employee. You want to let them record their start and end times with the press of a button, whether they're on Excel for the web or Excel for Desktop.
 
 You'll develop a script and a [button](../../develop/script-buttons.md) that records when the user presses the button. Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out).
 
@@ -20,7 +20,7 @@ You'll develop a script and a [button](../../develop/script-buttons.md) that rec
 
 ## Setup instructions
 
-1. Download <a href="punch-clock-sample.xlsx">grade-calculator.xlsx</a> to your OneDrive.
+1. Download <a href="punch-clock-sample.xlsx">punch-clock-sample.xlsx</a> to your OneDrive.
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration'.":::
 
