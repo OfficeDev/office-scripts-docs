@@ -112,6 +112,8 @@ items:
         href: resources/scenarios/task-reminders.md
     - name: Community contributions
       items:
+      - name: Punch clock button
+        href: resources/scenarios/punch-clock.md
       - name: Seasons greetings
         href: resources/samples/community-seasons-greetings.md
   - name: Office Scripts and other platforms
