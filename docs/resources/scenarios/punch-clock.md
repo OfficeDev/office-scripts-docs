@@ -1,5 +1,5 @@
 ---
-title: 'Office Scripts sample scenario: Punch clock button'
+title: 'Office Scripts sample scenario: Punch time clock button'
 description: A sample that lets a user press a button to record the current time.
 ms.date: 04/26/2022
 ms.localizationpriority: medium
@@ -9,16 +9,12 @@ ms.localizationpriority: medium
 
 The scenario idea and script used in this sample was contributed by Office Scripts community member [Brian Gonzalez](https://github.com/b-gonzalez).
 
-In this scenario, you're setting up a time sheet for an employee. You want to let them record their start and end times with the press of a button, whether they're using Excel on the web or on Windows.
+In this scenario, you will create a time sheet for an employee that allows them to record their start and end times with the press of a [button](../../develop/script-buttons.md). Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out). The sample works for both Excel on the web or on Windows.
 
-You'll develop a script and a [button](../../develop/script-buttons.md) that records when the user presses the button. Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out).
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns ('Clock In', 'Clock Out', and 'Duration') and a button labeled 'Punch clock' in the workbook.":::
 
-## Scripting skills covered
 
-- Script buttons
-- Dates and times
 
 ## Setup instructions
 
@@ -127,13 +123,13 @@ You'll develop a script and a [button](../../develop/script-buttons.md) that rec
 
 1. In the workbook, select cell **E2**.
 
-1. Add a script button. Go to the **More options (…)** menu in the **Script details** page and select **Add button***.
+1. Add a script button. Go to the **More options (…)** menu in the **Script details** page and select **Add button**.
 
     :::image type="content" source="../../images/punch-clock-sample-2.png" alt-text="The 'More options' menu and the 'Add button' button.":::
 
 1. Save the workbook.
 
-## Running the script
+## Run the script
 
 Press the **Punch clock** button to run the script. It either logs the current time under "Clock In" or "Clock Out", depending on what was previously entered.
 
