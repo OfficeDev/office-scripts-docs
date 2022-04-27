@@ -7,11 +7,11 @@ ms.localizationpriority: medium
 
 # Office Scripts sample scenario: Punch clock button
 
-In this scenario, you're setting up a time sheet for an employee. You want to let them record their start and end times with the press of a button, whether they're on Excel for the web or Excel for Desktop.
+In this scenario, you're setting up a time sheet for an employee. You want to let them record their start and end times with the press of a button, whether they're using Excel on the web or on Windows.
 
 You'll develop a script and a [button](../../develop/script-buttons.md) that records when the user presses the button. Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out).
 
-:::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration' and a button labeled 'Punch clock' in the workbook.":::
+:::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns ('Clock In', 'Clock Out', and 'Duration') and a button labeled 'Punch clock' in the workbook.":::
 
 The scenario idea and script used in this sample was contributed by Office Scripts community member [Brian Gonzalez](https://github.com/b-gonzalez).
 
@@ -26,7 +26,7 @@ The scenario idea and script used in this sample was contributed by Office Scrip
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration'.":::
 
-1. Open the workbook with Excel for the web.
+1. Open the workbook in Excel on the web.
 
 1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 
@@ -37,16 +37,16 @@ The scenario idea and script used in this sample was contributed by Office Scrip
      * It is intended to be used with a Script Button.
      */
     function main(workbook: ExcelScript.Workbook) {
-      // Get the first table in the timeSheet.
+      // Get the first table in the timesheet.
       const timeSheet = workbook.getWorksheet("MyTimeSheet");
       const timeTable = timeSheet.getTables()[0];
     
       // Get the appropriate table columns.
-      const clockInColumn = timeTable.getColumnByName("Clock in");
+      const clockInColumn = timeTable.getColumnByName("Clock In");
       const clockOutColumn = timeTable.getColumnByName("Clock Out");
       const durationColumn = timeTable.getColumnByName("Duration");
     
-      // Get the last rows for the clock in and out columns.
+      // Get the last rows for the Clock In and Clock Out columns.
       let clockInLastRow = clockInColumn.getRangeBetweenHeaderAndTotal().getLastRow();
       let clockOutLastRow = clockOutColumn.getRangeBetweenHeaderAndTotal().getLastRow();
     
