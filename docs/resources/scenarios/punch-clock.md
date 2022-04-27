@@ -1,6 +1,6 @@
 ---
-title: 'Office Scripts sample scenario: Punch time clock button'
-description: A sample that lets a user press a button to record the current time.
+title: 'Office Scripts sample scenario: Punch clock button'
+description: This sample adds a punch clock button and allows a user to clock in and clock out using the current time.
 ms.date: 04/26/2022
 ms.localizationpriority: medium
 ---
@@ -9,12 +9,9 @@ ms.localizationpriority: medium
 
 The scenario idea and script used in this sample was contributed by Office Scripts community member [Brian Gonzalez](https://github.com/b-gonzalez).
 
-In this scenario, you will create a time sheet for an employee that allows them to record their start and end times with the press of a [button](../../develop/script-buttons.md). Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out). The sample works for both Excel on the web or on Windows.
-
+In this scenario, you'll create a time sheet for an employee that allows them to record their start and end times with the press of a [button](../../develop/script-buttons.md). Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out). The sample works for both Excel on the web or on Windows.
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns ('Clock In', 'Clock Out', and 'Duration') and a button labeled 'Punch clock' in the workbook.":::
-
-
 
 ## Setup instructions
 
@@ -117,7 +114,7 @@ In this scenario, you will create a time sheet for an employee that allows them 
     }
     ```
 
-1. Rename the script to "Punch clock"
+1. Rename the script to "Punch clock".
 
 1. Save the script.
 
