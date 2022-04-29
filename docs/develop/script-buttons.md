@@ -16,13 +16,13 @@ Help your colleagues find and run your scripts by adding script buttons to a wor
 
 With any script, go to the **More options (…)** menu in either the script's details page or the Code Editor's task pane and select **Add button**. This creates a button in the workbook that runs the associated script when selected. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
-The following screenshot shows the script Details page for a script titled **Create PivotTable** and has the **Add button** option within the **More options (…)** menu highlighted.
+The following screenshot shows the script details page for a script titled **Create PivotTable** and has the **Add button** option within the **More options (…)** menu highlighted.
 
-:::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script Details page menu.":::
+:::image type="content" source="../images/add-button.png" alt-text="The 'Add button' option in the script details page menu.":::
 
 ## Remove script buttons
 
-To stop sharing a script through a button, go to the **More options (…)** menu in the script's Details page and select **Stop sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
+To stop sharing a script through a button, go to the **More options (…)** menu in the script details page and select **Stop sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
 ## Script buttons on Excel for Windows
 
