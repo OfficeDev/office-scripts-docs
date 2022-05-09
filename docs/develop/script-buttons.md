@@ -2,7 +2,7 @@
 title: Run Office Scripts in Excel with buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 04/28/2022
+ms.date: 05/09/2022
 ms.localizationpriority: medium
 ---
 
@@ -27,3 +27,5 @@ To stop sharing a script through a button, go to the **More options (…)** menu
 ## Script buttons on Excel for Windows
 
 These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the click of a button. Please note that you cannot edit scripts in Excel on Windows. You can only edit scripts in Excel on the web.
+
+Some Office Scripts APIs may not be supported by Excel for Windows, especially on older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the script doesn't run and, instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."  

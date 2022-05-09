@@ -47,7 +47,7 @@ Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-powe
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/excel.md)
+- [Office Scripts in Excel](../overview/excel.md)
 - [Run Office Scripts with Power Automate](../develop/power-automate-integration.md)
 - [Differences between Office Scripts and Office Add-ins](add-ins-differences.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
