@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 06/04/2021
+ms.date: 05/10/2022
 ms.localizationpriority: medium
 ---
 
@@ -36,9 +36,6 @@ During editing, files are temporarily stored in the browser. You must save the s
 Discover which tenants are using Office Scripts with the audit log in the compliance center. To learn how to use this tool, visit [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log).
 
 To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
-
-> [!NOTE]
-> Running a script is currently not logged. Only the create, view, and modify actions are logged.
 
 ## See also
 
