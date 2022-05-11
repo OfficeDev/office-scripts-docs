@@ -2,14 +2,14 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
-description: Resources for learning Office Scripts in Excel on the web, including tutorials, conceptual articles, and code samples.
+description: Resources for learning Office Scripts in Excel, including tutorials, conceptual articles, and code samples.
 ms.date: 05/24/2021
 ms.localizationpriority: high
 ---
 
 # Office Scripts documentation
 
-Use Office Scripts in Excel on the web to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
+Use Office Scripts in Excel to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
@@ -68,7 +68,7 @@ Use Office Scripts in Excel on the web to automate your common tasks. Explore th
 ---
 
 <h2>Other resources</h2>
-<p>Use the following resources to learn about the APIs that Office Scripts use to interact with workbooks in Excel on the web, ask questions about Office Scripts in Excel on the web, or request features for Office Scripts in Excel on the web.</p>
+<p>Use the following resources to learn about the APIs that Office Scripts use, ask questions about Office Scripts, or request features for Office Scripts.</p>
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">

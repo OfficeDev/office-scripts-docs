@@ -1,14 +1,15 @@
 ---
-title: Basic scripts for Office Scripts in Excel on the web
-description: A collection of code samples to use with Office Scripts in Excel on the web.
+title: Basic scripts for Office Scripts in Excel
+description: A collection of code samples to use with Office Scripts in Excel.
 ms.date: 03/24/2022
 ms.localizationpriority: medium
 ---
 
-# Basic scripts for Office Scripts in Excel on the web
+# Basic scripts for Office Scripts in Excel
 
-The following samples are simple scripts for you to try on your own workbooks. To use them in Excel on the web:
+The following samples are simple scripts for you to try on your own workbooks. To use them in Excel:
 
+1. Open a workbook in Excel on the web.
 1. Open the **Automate** tab.
 1. Select **New Script**.
 1. Replace the entire script with the sample of your choice.

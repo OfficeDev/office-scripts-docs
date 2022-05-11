@@ -56,7 +56,7 @@ The previous script colored the "Oranges" row to be orange. Let's add a yellow r
 
     This code gets the current worksheet from the workbook. Then, it sets the fill color of the range **A2:C2**.
 
-    Ranges are a fundamental part of Office Scripts in Excel on the web. A range is a contiguous, rectangular block of cells that contains values, formula, and formatting. They are the basic structure of cells through which you'll perform most of your scripting tasks.
+    Ranges are a fundamental part of Office Scripts in Excel. A range is a contiguous, rectangular block of cells that contains values, formula, and formatting. They are the basic structure of cells through which you'll perform most of your scripting tasks.
 
 3. Add the following line to the end of the script (between where the `color` is set and the closing `}`):
 
