@@ -39,7 +39,7 @@ Office Scripts cannot use [Common APIs](/javascript/api/office). If you need aut
 
 ## See also
 
-- [Office Scripts in Excel on the web](../overview/excel.md)
+- [Office Scripts in Excel](../overview/excel.md)
 - [Differences between Office Scripts and VBA macros](vba-differences.md)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Build an Excel task pane add-in](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)

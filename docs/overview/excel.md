@@ -1,14 +1,14 @@
 ---
-title: Office Scripts in Excel on the web
+title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
 ms.date: 02/25/2022
 ms.localizationpriority: high
 ---
 
-# Office Scripts in Excel on the web
+# Office Scripts in Excel
 
-Office Scripts in Excel on the web let you automate your day-to-day tasks. You can record your Excel actions with the Action Recorder, which creates a TypeScript language script. You can also create and edit scripts with the Code Editor. Your scripts can then be shared across your organization so your coworkers can also automate their workflows.
+Office Scripts in Excel let you automate your day-to-day tasks. Inside Excel on the web, you can record your actions with the Action Recorder. This creates a TypeScript language script that can be run again any time. You can also create and edit scripts with the Code Editor. Your scripts can then be shared across your organization so your coworkers can also automate their workflows.
 
 This series of documents teaches you how to use these tools. You'll be introduced to the Action Recorder and see how to record your frequent Excel actions. You'll also learn how to make or update your own scripts with the Code Editor.
 
@@ -20,7 +20,7 @@ This series of documents teaches you how to use these tools. You'll be introduce
 
 To use Office Scripts, you'll need the following.
 
-1. [Excel on the web](https://www.office.com/launch/excel) (other platforms, such as desktop, are not supported).
+1. [Excel on the web](https://www.office.com/launch/excel) (Excel for Windows can only use Office Scripts with [script buttons](../develop/script-buttons.md)).
 1. OneDrive for Business.
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
 
@@ -67,7 +67,7 @@ Office Scripts can be shared with other users of an Excel workbook. When you sha
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script details page showing the 'Share with others in this workbook' option.":::
 
-Add buttons that run scripts to help your colleagues discover your valuable solutions. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
+Add buttons that run scripts to help your colleagues discover your valuable solutions and let them run scripts in Excel on Desktop. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
 :::image type="content" source="../images/add-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
@@ -76,7 +76,7 @@ Add buttons that run scripts to help your colleagues discover your valuable solu
 
 ## Connect Office Scripts to Power Automate
 
-[Power Automate](https://flow.microsoft.com/) is a service that helps you create automated workflows between multiple apps and services. Office Scripts can be used in these workflows, giving you control of your scripts outside of the workbook. You can run your scripts on a schedule, trigger them in response to emails, and much more. Visit the [Run Office Scripts in Excel on the web with Power Automate](../tutorials/excel-power-automate-manual.md) tutorial to learn the basics of connecting these automation services.
+[Power Automate](https://flow.microsoft.com/) is a service that helps you create automated workflows between multiple apps and services. Office Scripts can be used in these workflows, giving you control of your scripts outside of the workbook. You can run your scripts on a schedule, trigger them in response to emails, and much more. Visit the [Run Office Scripts with Power Automate](../tutorials/excel-power-automate-manual.md) tutorial to learn the basics of connecting these automation services.
 
 ## Next steps
 
