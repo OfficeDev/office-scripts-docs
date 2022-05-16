@@ -1,15 +1,18 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 05/13/2022
+ms.date: 05/15/2022
 ms.localizationpriority: medium
 ---
 
 # Office Scripts file storage and ownership
 
+> [!IMPORTANT]
+> SharePoint support for Office Scripts is being rolled out and is not available to everyone. It's slowly released to larger numbers of users to ensure that it's working as expected. This feature is subject to change based on your feedback.
+
 Office Scripts are stored as **.osts** files in your Microsoft OneDrive or a team SharePoint folder. They are stored separately from a workbook. To give others access, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
-Office Scripts only recognizes and runs a script if it's in your OneDrive folder, a team Sharepoint folder, or shared with the workbook.
+Excel only recognizes and runs a script if it's in your OneDrive folder, a team Sharepoint folder, or shared with the workbook.
 
 ## OneDrive
 
@@ -21,10 +24,17 @@ Unless you share your personal scripts, no one else can access them. Your OneDri
 
 ## SharePoint
 
+Office Scripts that are saved to a SharePoint site become team scripts. You and members of your organization with the appropriate access can run and edit scripts from SharePoint. You'll also see team scripts appear in the **Automate** tab's Script Gallery.
 
+To load a script from SharePoint, go to **All scripts** and select **View more scripts** at the bottom of the list. This brings up a file picker where you can choose **.osts** files from any SharePoint site. Note that team scripts you've already opened will be displayed in the list of recent scripts.
+
+To save a script to SharePoint, go to the **More options (…)** menu and select **Save as**. This creates a copy of the script on the SharePoint site. The original version is still on your OneDrive or other SharePoint location.
 
 > [!IMPORTANT]
-> Scripts with [external calls](../develop/external-calls.md) can't be run from SharePoint.
+> Scripts with [external calls](../develop/external-calls.md) can't be run from SharePoint. You'll receive an error saying "Network access calls are not supported at this time for scripts saved to a SharePoint site".
+
+> [!IMPORTANT]
+> Power Automate does **not** support scripts stored on SharePoint at this time.
 
 ## Restore deleted scripts
 
