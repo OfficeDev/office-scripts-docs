@@ -46,7 +46,7 @@ Restored scripts still work as expected with Power Automate flows. You don't nee
 
 ## File ownership and retention
 
-Office Scripts follow the retention and deletion policies specified by Microsoft OneDrive and Microsoft SharePoint. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [Learn about retention for SharePoint and OneDrive](/microsoft-365/compliance/retention-policies-sharepoint?view=o365-worldwide).
+Office Scripts follow the retention and deletion policies specified by Microsoft OneDrive and Microsoft SharePoint. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [Learn about retention for SharePoint and OneDrive](/microsoft-365/compliance/retention-policies-sharepoint?view=o365-worldwide&preserve-view=true).
 
 During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
 
