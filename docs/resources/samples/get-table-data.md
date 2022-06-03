@@ -1,7 +1,7 @@
 ---
 title: Output Excel data as JSON
 description: Learn how to output Excel table data as JSON to use in Power Automate.
-ms.date: 03/18/2022
+ms.date: 06/02/2022
 ms.localizationpriority: medium
 ---
 
@@ -57,12 +57,12 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       continue;
     }
 
-    let object = {}
+    let object: {[key: string]: string} = {}
     for (let j = 0; j < values[i].length; j++) {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object as TableData);
+    objectArray.push(object as unknown as TableData);
   }
 
   return objectArray;
