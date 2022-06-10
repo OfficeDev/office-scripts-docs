@@ -151,7 +151,7 @@ The rows and columns of a worksheet often imply relationships between their data
 |4  |6/6/2022 |$86.95 |Coho Vineyard                 |
 |5  |6/7/2022 |$13.64 |Liberty Bakery and Cafe       |
 
-Each transaction, each row, has a set of properties associated with it: "ID", "Date", "Amount", and "Vendor". This can be modeled in an Office Script as an object.
+Each transaction (each row) has a set of properties associated with it: "ID", "Date", "Amount", and "Vendor". This can be modeled in an Office Script as an object.
 
 ```typescript
 // An interface that wraps transaction details as JSON.
