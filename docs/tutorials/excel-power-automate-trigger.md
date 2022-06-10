@@ -1,7 +1,7 @@
 ---
 title: Pass data to scripts in an automatically-run Power Automate flow
 description: A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.
-ms.date: 06/29/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
 ---
 
@@ -205,6 +205,18 @@ When the flow is triggered and successfully runs your script, you should see the
 :::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="A worksheet showing the email table after the flow has run three times.":::
 
 :::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="A worksheet showing the PivotTable after the flow has run three times.":::
+
+## Troubleshooting
+
+Receiving multiple emails at the same time can cause merge conflicts in Excel. This risk is mitigated by setting the email connector to only act on one email at a time. To do this:
+
+1. Under the **Menu(…)** of the email connector, select **Settings**.
+
+    :::image type="content" source="../images/outlook-connector-settings-1.png" alt-text="The settings option highlighted in the connector menu.":::
+
+1. In the **Settings** options that pop up, set **Concurrency Control** to **On**. Then, set the **Degree of Parallelism** to **1**.
+
+    :::image type="content" source="../images/outlook-connector-settings-2.png" alt-text="The concurrency options in the settings menu.":::
 
 ## Next steps
 
