@@ -7,13 +7,13 @@ ms.localizationpriority: medium
 
 # Use JSON to pass data to and from Office Scripts
 
-[JSON (JavaScript Object Notation)](https://www.w3schools.com/whatis/whatis_json.asp) is a format for storing and transferring data. Each JSON object is a collection of name/value pairs that can be defined when created. JSON is useful with Office Scripts because it can handle the arbitrary complexity of ranges, tables, and other data patterns in Excel. JSON lets you parse incoming data from [web services](external-calls.md) and pass complex objects through a [Power Automate flow](power-automate-integration.md).
+[JSON (JavaScript Object Notation)](https://www.w3schools.com/whatis/whatis_json.asp) is a format for storing and transferring data. Each JSON object is a collection of name/value pairs that can be defined when created. JSON is useful with Office Scripts because it can handle the arbitrary complexity of ranges, tables, and other data patterns in Excel. JSON lets you parse incoming data from [web services](external-calls.md) and pass complex objects through [Power Automate flows](power-automate-integration.md).
 
-This article focuses on using JSON with Office Scripts. We recommend learning more about the format first, from articles such as this [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp) from W3 Schools.
+This article focuses on using JSON with Office Scripts. We recommend you first learn more about the format from articles such [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp) from W3 Schools.
 
 ## Parse JSON data into a range or table
 
-Arrays of JSON objects provide an easy way to pass rows of table data between applications and web services. In these cases, each JSON object represents a row, while the properties represent the columns. An Office Script can loop over an JSON array and reassemble it as a 2D array. This array is then set as the values of a range and stored in a workbook.
+Arrays of JSON objects provide a consistent way to pass rows of table data between applications and web services. In these cases, each JSON object represents a row, while the properties represent the columns. An Office Script can loop over an JSON array and reassemble it as a 2D array. This array is then set as the values of a range and stored in a workbook. The property names can also be added as headers to create a table.
 
 The following script shows JSON data being converted to a table. Note that the data is not taken from an external source. That is covered later in this article.
 

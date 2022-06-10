@@ -84,7 +84,7 @@ You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equiv
 
 ## See also
 
-* [Use JSON to pass data to and from Office Scripts](use-json.md)
+* [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md)
 * [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
 * [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md)
 * [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)

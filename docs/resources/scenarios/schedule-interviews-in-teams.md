@@ -15,7 +15,7 @@ The solution has three steps that are combined in a single Power Automate flow.
 1. The data is then sent to the Teams **Create a Teams meeting** action to send invites.
 1. The same JSON data is sent to another script to update the status of the invitation.
 
-For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](use-json.md).
+For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ## Scripting skills covered
 

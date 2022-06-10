@@ -85,7 +85,7 @@ interface ReturnTemplate {
 
 ### Sample JSON
 
-Each key represents a unique value of a table. Each array instance represents the row that is visible when the corresponding filter is applied. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](use-json.md).
+Each key represents a unique value of a table. Each array instance represents the row that is visible when the corresponding filter is applied. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ```json
 {
