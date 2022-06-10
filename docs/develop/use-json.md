@@ -23,13 +23,17 @@ The following script shows JSON data being converted to a table. Note that the d
  * parameters getting data from Power Automate in a production script.
  */
 const jsonData = [
-  { "Event": "Edit", "N": 3370, "Percent": 17.85 },
-  { "Event": "Paste", "N": 1171, "Percent": 6.2 },
-  { "Event": "Clear", "N": 599, "Percent": 3.17 },
-  { "Event": "Insert", "N": 352, "Percent": 1.86 },
-  { "Event": "Delete", "N": 350, "Percent": 1.85 },
-  { "Event": "Refresh", "N": 314, "Percent": 1.66 },
-  { "Event": "Fill", "N": 286, "Percent": 1.51 },
+  { "Action": "Edit", /* Action property with value of "Edit". */
+    "N": 3370, /* N property with value of 3370. */
+    "Percent": 17.85 /* Percent property with value of 17.85. */
+  },
+  // The rest of the object entries follow the same pattern.
+  { "Action": "Paste", "N": 1171, "Percent": 6.2 },
+  { "Action": "Clear", "N": 599, "Percent": 3.17 },
+  { "Action": "Insert", "N": 352, "Percent": 1.86 },
+  { "Action": "Delete", "N": 350, "Percent": 1.85 },
+  { "Action": "Refresh", "N": 314, "Percent": 1.66 },
+  { "Action": "Fill", "N": 286, "Percent": 1.51 },
 ];
 
 /**
@@ -85,21 +89,21 @@ function getPropertiesFromJson(obj: object) {
 ```
 
 > [!TIP]
-> If you know the structure of the JSON, you can create your own interface to make getting specific properties easier. You can replace the JSON-to-array conversion steps with type-safe references. The following code snippet shows those steps (now commented out) replaced by calls that use a new `EventRow` interface. Note that this makes the `convertJsonToRow` function no longer necessary.
+> If you know the structure of the JSON, you can create your own interface to make getting specific properties easier. You can replace the JSON-to-array conversion steps with type-safe references. The following code snippet shows those steps (now commented out) replaced by calls that use a new `ActionRow` interface. Note that this makes the `convertJsonToRow` function no longer necessary.
 >
 > ```typescript
 >   // const tableValues = jsonData.map(row => convertJsonToRow(row));
 >   // newTable.addRows(-1, tableValues);
 >   // }
 >
->      const eventRows: EventRow[] = jsonData as EventRow[];
+>      const actionRows: ActionRow[] = jsonData as ActionRow[];
 >      // Add each object in the array of JSON objects to the table.
->      const tableValues = eventRows.map(row => [row.Event, row.N, row.Percent]);
+>      const tableValues = actionRows.map(row => [row.Action, row.N, row.Percent]);
 >      newTable.addRows(-1, tableValues);
 >    }
 >    
->    interface EventRow {
->      Event: string;
+>    interface ActionRow {
+>      Action: string;
 >      N: number;
 >      Percent: number;
 >    }
