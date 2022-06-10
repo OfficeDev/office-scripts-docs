@@ -163,7 +163,7 @@ interface Transaction {
 }
 ```
 
-Since the rows in the earlier table contain those fields, a script can easily convert each row into a `Transaction` object. This is useful when outputting the data for Power Automate. The following script iterates over each row in the table and adds it to a `Transaction[]`.
+The rows in the sample table correspond to the properties in the interface, so a script can easily convert each row into a `Transaction` object. This is useful when outputting the data for Power Automate. The following script iterates over each row in the table and adds it to a `Transaction[]`.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
