@@ -19,7 +19,7 @@ You can learn more about the GItHub APIs being used in the [GitHub API reference
 async function main(workbook: ExcelScript.Workbook) {
   // Call the GitHub REST API.
   // Replace the {USERNAME} placeholder with your GitHub username.
-  const response = await fetch('https://api.github.com/users/AlexJerabek/repos');
+  const response = await fetch('https://api.github.com/users/{USERNAME}/repos');
   const repos: Repository[] = await response.json();
 
   // Create an array to hold the returned values.
