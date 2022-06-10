@@ -9,6 +9,8 @@ ms.localizationpriority: medium
 
 This solution shows how to compare data across two Excel files to find discrepancies. It uses Office Scripts to analyze data and Power Automate to communicate between the workbooks.
 
+This sample passes data between workbooks using [JSON](https://www.w3schools.com/whatis/whatis_json.asp) objects. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](use-json.md).
+
 ## Example scenario
 
 You're an event coordinator who is scheduling speakers for upcoming conferences. You keep the event data in one spreadsheet and the speaker registrations in another. To ensure the two workbooks are kept in sync, you use a flow with Office Scripts to highlight any potential problems.

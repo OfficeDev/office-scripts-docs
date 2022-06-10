@@ -1,7 +1,7 @@
 ---
 title: Use JSON to pass data to and from Office Scripts
 description: Learn how to structure data into JSON objects for use with external calls and Power Automate
-ms.date: 05/17/2022
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 
