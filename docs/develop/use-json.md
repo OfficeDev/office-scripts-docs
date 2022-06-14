@@ -116,7 +116,7 @@ There are two ways to import JSON data into your workbook through an Office Scri
 - As a [parameter](power-automate-integration.md#main-parameters-pass-data-to-a-script) with a Power Automate flow.
 - With a `fetch` call to an [external web service](external-calls.md).
 
-#### Modifying the sample to work with Power Automate
+#### Modify the sample to work with Power Automate
 
 JSON data in Power Automate can be passed as a generic object array. Add an `object[]` property to the script to accept that data.
 
@@ -130,7 +130,7 @@ You'll then see an option in the Power Automate connector to add `jsonData` to t
 
 :::image type="content" source="../images/json-parameter-power-automate.png" alt-text="An Excel Online (Business) connector showing a Run script action with the jsonData parameter.":::
 
-#### Modifying the sample to use a `fetch` call
+#### Modify the sample to use a `fetch` call
 
 Web services can reply to `fetch` calls with JSON data. This gives your script the data it needs while keeping you in Excel. Learn more about `fetch` and external calls by reading [External API call support in Office Scripts](external-calls.md).
 
