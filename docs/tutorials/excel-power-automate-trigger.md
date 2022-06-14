@@ -210,7 +210,7 @@ When the flow is triggered and successfully runs your script, you should see the
 
 Receiving multiple emails at the same time can cause merge conflicts in Excel. This risk is mitigated by setting the email connector to only act on one email at a time. To do this:
 
-1. Under the **Menu(…)** of the email connector, select **Settings**.
+1. Select the **Menu (…)** button in the email connector, and then select **Settings**.
 
     :::image type="content" source="../images/outlook-connector-settings-1.png" alt-text="The settings option highlighted in the connector menu.":::
 
