@@ -1,7 +1,7 @@
 ---
 title: External API call support in Office Scripts
 description: Support and guidance for making external API calls in an Office Script.
-ms.date: 05/21/2021
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 
@@ -45,7 +45,7 @@ Any JSON data retrieved by `fetch` must match an interface defined in the script
 The following script uses `fetch` to retrieve JSON data from the test server in the given URL. Note the `JSONData` interface to store the data as a matching type.
 
 ```TypeScript
-async function main(workbook: ExcelScript.Workbook){
+async function main(workbook: ExcelScript.Workbook) {
   // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
 
@@ -84,6 +84,7 @@ You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equiv
 
 ## See also
 
+* [Use JSON to pass data to and from Office Scripts](use-json.md)
 * [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)
 * [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md)
 * [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md)
