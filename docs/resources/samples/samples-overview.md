@@ -16,7 +16,7 @@ In [Scenarios](#scenarios), we have included a few larger scenario samples that 
 We also welcome [contributions from the community](#community-contributions-and-fun-samples). These samples are open source.
 
 > [!IMPORTANT]
-> Be sure you meet the prerequisites for using Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found [Office Scripts for Excel overview](../../overview/excel.md#requirements) "Requirements" section.
+> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under the [Office Scripts for Excel overview "Requirements" section](../../overview/excel.md#requirements).
 
 ## Basics
 
