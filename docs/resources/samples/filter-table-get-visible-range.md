@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Filter Excel table and get visible range as a JSON object
 
-This sample filters an Excel table and returns the visible range as a JSON object. This JSON could be provided to a Power Automate flow as part of a larger solution.
+This sample filters an Excel table and returns the visible range as a [JSON](https://www.w3schools.com/whatis/whatis_json.asp) object. This JSON could be provided to a Power Automate flow as part of a larger solution.
 
 ## Example scenario
 
@@ -85,7 +85,7 @@ interface ReturnTemplate {
 
 ### Sample JSON
 
-Each key represents a unique value of a table. Each array instance represents the row that is visible when the corresponding filter is applied.
+Each key represents a unique value of a table. Each array instance represents the row that is visible when the corresponding filter is applied. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ```json
 {

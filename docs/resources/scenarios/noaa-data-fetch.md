@@ -9,7 +9,9 @@ ms.localizationpriority: medium
 
 In this scenario, you need to plot the water level at the [National Oceanic and Atmospheric Administration's Seattle station](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130). You'll use external data to populate a spreadsheet and create a chart.
 
-You'll develop a script that uses the `fetch` command to query the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/). That will get the water level recorded across a given time span. The information will be returned as JSON, so part of the script will translate that into range values. Once the data is in the spreadsheet, it will be used to make a chart.
+You'll develop a script that uses the `fetch` command to query the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/). That will get the water level recorded across a given time span. The information will be returned as [JSON](https://www.w3schools.com/whatis/whatis_json.asp), so part of the script will translate that into range values. Once the data is in the spreadsheet, it will be used to make a chart.
+
+For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ## Scripting skills covered
 
