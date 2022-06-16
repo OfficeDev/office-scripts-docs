@@ -13,7 +13,7 @@ Scripts support calls to external services. Use these services to supply data an
 > External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish firewall protection against such calls.
 
 > [!IMPORTANT]
-> Calls to external APIs can be only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate).
+> Calls to external APIs can only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate). External calls are also not supported for scripts stored on a SharePoint site.
 
 ## Configure your script for external calls
 
