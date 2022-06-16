@@ -11,9 +11,11 @@ In this scenario, you're an HR recruiter scheduling interview meetings with cand
 
 The solution has three steps that are combined in a single Power Automate flow.
 
-1. A script extracts data from a table and returns an array of objects as JSON data.
+1. A script extracts data from a table and returns an array of objects as [JSON](https://www.w3schools.com/whatis/whatis_json.asp) data.
 1. The data is then sent to the Teams **Create a Teams meeting** action to send invites.
 1. The same JSON data is sent to another script to update the status of the invitation.
+
+For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ## Scripting skills covered
 

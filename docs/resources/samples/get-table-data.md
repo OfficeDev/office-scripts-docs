@@ -1,13 +1,13 @@
 ---
 title: Output Excel data as JSON
 description: Learn how to output Excel table data as JSON to use in Power Automate.
-ms.date: 03/18/2022
+ms.date: 06/02/2022
 ms.localizationpriority: medium
 ---
 
 # Output Excel table data as JSON for usage in Power Automate
 
-Excel table data can be represented as an array of objects in the form of JSON. Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows.
+Excel table data can be represented as an array of objects in the form of [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows. 
 
 ## Sample Excel file
 
@@ -24,7 +24,7 @@ A variation of this sample also includes the hyperlinks in one of the table colu
 Add the following script to try the sample yourself!
 
 > [!NOTE]
-> You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample.
+> You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -57,12 +57,12 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       continue;
     }
 
-    let object = {}
+    let object: {[key: string]: string} = {}
     for (let j = 0; j < values[i].length; j++) {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object as TableData);
+    objectArray.push(object as unknown as TableData);
   }
 
   return objectArray;

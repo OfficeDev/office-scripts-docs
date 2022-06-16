@@ -1,13 +1,15 @@
 ---
 title: Cross-reference Excel files with Power Automate
 description: Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.
-ms.date: 06/29/2021
+ms.date: 06/06/2022
 ms.localizationpriority: medium
 ---
 
 # Cross-reference Excel files with Power Automate
 
 This solution shows how to compare data across two Excel files to find discrepancies. It uses Office Scripts to analyze data and Power Automate to communicate between the workbooks.
+
+This sample passes data between workbooks using [JSON](https://www.w3schools.com/whatis/whatis_json.asp) objects. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).
 
 ## Example scenario
 
@@ -153,14 +155,15 @@ This flow extracts the event information from the first workbook and uses that d
 
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="The completed Excel Online (Business) connector for the first script in Power Automate.":::
 
-1. Add a second **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. Add a second **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. This uses the returned values from the **Get event data** script as input for the **Validate event data** script. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: speaker-registration.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
     * **Script**: Validate speaker registration
+    * **keys**: result (_dynamic content from **Run script**_)
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="The completed Excel Online (Business) connector for the second script in Power Automate.":::
-1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action.
+1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. This uses the returned values from the **Validate speaker registration** script as the email body content. Use the following values for the action.
     * **To**: Your test email account (or personal email)
     * **Subject**: Event validation results
     * **Body**: result (_dynamic content from **Run script 2**_)

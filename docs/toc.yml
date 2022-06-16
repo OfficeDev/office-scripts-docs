@@ -2,7 +2,7 @@ items:
 - name: Office Scripts documentation
   href: index.md
 
-- name: Office Scripts in Excel on the web
+- name: Office Scripts in Excel
   items:
   - name: Overview
     href: overview/excel.md
@@ -36,6 +36,8 @@ items:
       href: develop/script-buttons.md
     - name: Run scripts with Power Automate
       href: develop/power-automate-integration.md
+    - name: Use JSON to pass data
+      href: develop/use-json.md
     - name: Use .xlsm files in Power Automate flows
       href: develop/macros-power-automate.md
     - name: Work with PivotTables

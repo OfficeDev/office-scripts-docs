@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 04/26/2022
+ms.date: 06/14/2022
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,10 @@ For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-th
 
 In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
 
-We also welcome [contributions from the community](#community-contributions-and-fun-samples).
+We also welcome [contributions from the community](#community-contributions-and-fun-samples). These samples are open source.
+
+> [!IMPORTANT]
+> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under the [Office Scripts for Excel overview "Requirements" section](../../overview/excel.md#requirements).
 
 ## Basics
 
@@ -66,10 +69,6 @@ We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob
 | [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | The "Ready Player Zero" blog by Yutao Huang on the Excel Tech Community includes a script to model John Conway's [*The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). |
 | [Punch clock button](../scenarios/punch-clock.md) | This script was contributed by [Brian Gonzalez](https://github.com/b-gonzalez). The scenario features a script and a script button that records the current time. |
 | [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts. |
-
-## Try it out
-
-These samples are open source. Try them out yourself. You'll need a Microsoft work or school account from work or school with a license to Microsoft 365 subscription (E3 or above). Just head over to https://office.com to sign in to your account and get started.
 
 ## Leave a comment
 
