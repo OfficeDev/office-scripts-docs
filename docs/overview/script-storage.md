@@ -52,7 +52,19 @@ During editing, files are temporarily stored in the browser. You must save the s
 
 ## Audit Office Scripts usage at the admin level
 
-Discover which tenants are using Office Scripts with the audit log in the compliance center. To learn how to use this tool, visit [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log).
+Discover who is using Office Scripts in your organization with the compliance center audit log. Details about the audit log are found in [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log).
+
+To specifically audit Office Scripts related activity as an admin, take the following steps.
+
+1. In a InPrivate browser window (or Incognito or other browser-specific limited-tracking mode), open and log into the [Compliance center](https://compliance.microsoft.com/).
+1. Go to the **Audit** page.
+1. *(One time only)* Create a new audit retention policy. Go to **Audit retention policies** and select **Create audit retention policy**. Choose you own values for the fields as you see fit, but select the following to track Office Scripts.
+    1. **Record type**: OfficeScriptsRunAction
+    1. **Activities**: Ran script on workbook
+
+    :::image type="content" source="../images/audit-retention-policy.png" alt-text="A taskpane showing an audit retention policy named 'Office Scripts Audit Policy'.":::
+
+1. *(One time only)* Return to the **Search** tab and select **Start recording user and admin activity**.
 
 To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
 
