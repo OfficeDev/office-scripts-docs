@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 06/01/2022
+ms.date: 06/21/2022
 ms.localizationpriority: medium
 ---
 
@@ -58,15 +58,14 @@ To specifically audit Office Scripts related activity as an admin, take the foll
 
 1. In a InPrivate browser window (or Incognito or other browser-specific limited-tracking mode), open and log into the [Compliance center](https://compliance.microsoft.com/).
 1. Go to the **Audit** page.
-1. *(One time only)* Create a new audit retention policy. Go to **Audit retention policies** and select **Create audit retention policy**. Choose you own values for the fields as you see fit, but select the following to track Office Scripts.
-    1. **Record type**: OfficeScriptsRunAction
-    1. **Activities**: Ran script on workbook
+1. *(One time only)* On the **Search** tab, select **Start recording user and admin activity**.
 
-    :::image type="content" source="../images/audit-retention-policy.png" alt-text="A taskpane showing an audit retention policy named 'Office Scripts Audit Policy'.":::
+    > [!IMPORTANT]
+    > It may take an hour or two after turning on recording before all activities across the tenant are recorded.
 
-1. *(One time only)* Return to the **Search** tab and select **Start recording user and admin activity**.
+1. Set the desired search options and press **Search**. Filter **Activities** to **Ran script on workbook** to see any time a script was run. You can also filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
 
-To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
+    :::image type="content" source="../images/audit-log-example.png" alt-text="A few rows of audit log search results, including the 'Ran script on workbook' action and the upload and modification of an .osts file.":::
 
 ## See also
 
