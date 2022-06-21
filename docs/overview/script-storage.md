@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 06/01/2022
+ms.date: 06/21/2022
 ms.localizationpriority: medium
 ---
 
@@ -52,9 +52,20 @@ During editing, files are temporarily stored in the browser. You must save the s
 
 ## Audit Office Scripts usage at the admin level
 
-Discover which tenants are using Office Scripts with the audit log in the compliance center. To learn how to use this tool, visit [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log).
+Discover who is using Office Scripts in your organization with the compliance center audit log. Details about the audit log are found in [Search the audit log in the Security & Compliance Center](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log).
 
-To find who is using Office Scripts with the search tool, add `.osts` in the **File, folder, or site** field. This searches for all files with the Office Scripts file extension. If anyone in your organization has used the Office Scripts feature, the user activity shows up in the audit log search results.
+To specifically audit Office Scripts related activity as an admin, take the following steps.
+
+1. In a InPrivate browser window (or Incognito or other browser-specific limited-tracking mode), open and log into the [Compliance center](https://compliance.microsoft.com/).
+1. Go to the **Audit** page.
+1. *(One time only)* On the **Search** tab, select **Start recording user and admin activity**.
+
+    > [!IMPORTANT]
+    > It may take an hour or two after turning on recording before all activities across the tenant are recorded.
+
+1. Set the desired search options and press **Search**. Filter **Activities** to **Ran script on workbook** to see any time a script was run. You can also filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
+
+    :::image type="content" source="../images/audit-log-example.png" alt-text="A few rows of audit log search results, including the 'Ran script on workbook' action and the upload and modification of an .osts file.":::
 
 ## See also
 
