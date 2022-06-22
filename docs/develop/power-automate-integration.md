@@ -1,7 +1,7 @@
 ---
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel on the web working with a Power Automate workflow.
-ms.date: 06/16/2022
+ms.date: 06/22/2022
 ms.localizationpriority: medium
 ---
 
@@ -27,9 +27,12 @@ You can get started with Power Automate in Excel with a variety of flow template
 
 :::image type="content" source="../images/automate-a-task-button.png" alt-text="The 'Automate a Task' button in the ribbon.":::
 
-This opens a task pane with several options to begin connecting your Office Scripts to larger automated solutions. Select any option to begin.
+This opens a task pane with several options to begin connecting your Office Scripts to larger automated solutions. Select any option to begin. Your flow is supplied with the current workbook.
 
 :::image type="content" source="../images/automate-a-task-choices.png" alt-text="A task panes showing flow template options such as 'Schedule an Office Scripts to run in Excel and then send an email' and 'Run and Office Script in Excel when a Microsoft Forms response is received'.":::
+
+> [!TIP]
+> You can also start making a flow from the **More options (…)** menu on an individual script.
 
 ## Excel Online (Business) connector
 
@@ -37,6 +40,9 @@ This opens a task pane with several options to begin connecting your Office Scri
 
 > [!IMPORTANT]
 > The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
+
+> [!IMPORTANT]
+> Power Automate does **not** support scripts stored on SharePoint at this time.
 
 ## Data transfer in flows for scripts
 
