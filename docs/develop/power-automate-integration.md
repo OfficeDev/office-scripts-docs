@@ -29,7 +29,7 @@ You can get started with Power Automate in Excel with a variety of flow template
 
 This opens a task pane with several options to begin connecting your Office Scripts to larger automated solutions. Select any option to begin. Your flow is supplied with the current workbook.
 
-:::image type="content" source="../images/automate-a-task-choices.png" alt-text="A task panes showing flow template options such as 'Schedule an Office Scripts to run in Excel and then send an email' and 'Run and Office Script in Excel when a Microsoft Forms response is received'.":::
+:::image type="content" source="../images/automate-a-task-choices.png" alt-text="A task pane showing flow template options such as 'Schedule an Office Script to run in Excel and then send an email' and 'Run an Office Script in Excel when a Microsoft Forms response is received'.":::
 
 > [!TIP]
 > You can also start making a flow from the **More options (…)** menu on an individual script.
