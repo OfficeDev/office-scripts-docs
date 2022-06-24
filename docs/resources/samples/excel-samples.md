@@ -1,7 +1,7 @@
 ---
 title: Basic scripts for Office Scripts in Excel
 description: A collection of code samples to use with Office Scripts in Excel.
-ms.date: 03/24/2022
+ms.date: 06/24/2022
 ms.localizationpriority: medium
 ---
 
@@ -408,6 +408,27 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Select the transposed range to highlight it.
   targetRange.select();
+}
+```
+
+### Replace all formulas with their result values
+
+This script replaces every cell in the current worksheet that contains a formula with the result of that formula. This means there won't be any formulas after the script is run, only values.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the ranges with formulas.
+    let sheet = workbook.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaCells = usedRange.getSpecialCells(ExcelScript.SpecialCellType.formulas);
+
+    // In each formula range: get the current value, clear the contents, and set the value as the old one.
+    // This removes the formula but keeps the result.
+    formulaCells.getAreas().forEach((range) => {
+      let currentValues = range.getValues();
+      range.clear(ExcelScript.ClearApplyTo.contents);
+      range.setValues(currentValues);
+    });
 }
 ```
 
