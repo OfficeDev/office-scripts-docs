@@ -40,7 +40,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [External fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
-| [Filter Excel table and get visible range](filter-table-get-visible-range.md) | This sample filters an Excel table and returns the visible range as a JSON object. This JSON could be provided to a Power Automate flow as part of a larger solution. |
 | [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel on the web using Office Scripts. |
 | [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
