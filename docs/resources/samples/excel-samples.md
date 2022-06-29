@@ -289,7 +289,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Filter a table
 
-This sample filters a table using the values in one of the columns.
+This sample filters an existing table using the values in one of the columns.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
