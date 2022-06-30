@@ -84,8 +84,6 @@ items:
         href: resources/samples/count-blank-rows.md
       - name: Email images of chart and table
         href: resources/samples/email-images-chart-table.md
-      - name: Filter table and get visible range
-        href: resources/samples/filter-table-get-visible-range.md
       - name: Manage calculation mode
         href: resources/samples/excel-calculation.md
       - name: Move selected rows across tables

@@ -287,6 +287,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Filter a table
+
+This sample filters an existing table using the values in one of the columns.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table in the workbook named "StationTable".
+  const table = workbook.getTable("StationTable");
+
+  // Get the "Station" table column for the filter.
+  const stationColumn = table.getColumnByName("Station");
+
+  // Apply a filter to the table that will only show rows 
+  // with a value of "Station-1" in the "Station" column.
+  stationColumn.getFilter().applyValuesFilter(["Station-1"]);
+}
+```
+
+> [!TIP]
+> Copy the filtered information across the workbook by using `Range.copyFrom`. Add the following line to the end of the script to create a new worksheet with the filtered data.
+>
+> ```typescript
+>   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
+> ```
+
 ### Log the "Grand Total" values from a PivotTable
 
 This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).

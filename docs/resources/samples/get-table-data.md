@@ -1,13 +1,13 @@
 ---
 title: Output Excel data as JSON
 description: Learn how to output Excel table data as JSON to use in Power Automate.
-ms.date: 06/02/2022
+ms.date: 06/27/2022
 ms.localizationpriority: medium
 ---
 
 # Output Excel table data as JSON for usage in Power Automate
 
-Excel table data can be represented as an array of objects in the form of [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows. 
+Excel table data can be represented as an array of objects in the form of [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows.
 
 ## Sample Excel file
 
