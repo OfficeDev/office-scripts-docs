@@ -192,8 +192,8 @@ function main(workbook: ExcelScript.Workbook) {
     const selectedRange = workbook.getSelectedRange();
 
     // If no cells are selected, end the script. 
-    if (selectedRange == null) {
-      console.log(`No cells in worksheet selected.`);
+    if (!selectedRange) {
+      console.log(`No cells in the worksheet are selected.`);
       return;
     }
 
