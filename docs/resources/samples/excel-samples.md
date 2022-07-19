@@ -177,7 +177,7 @@ function main(workbook: ExcelScript.Workbook) {
     } else {
       range.setRowHidden(false);
     }
-```
+}
 
 ### Freeze Currently Selected Cells
 
