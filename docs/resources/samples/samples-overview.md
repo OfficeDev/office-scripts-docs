@@ -27,6 +27,7 @@ We also welcome [contributions from the community](#community-contributions-and-
 | [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
+| [Remove table column filters](clear-table-filter-for-active-cell.md) | This sample clears all of the filters from a table column. |
 
 ## Beyond the basics
 
