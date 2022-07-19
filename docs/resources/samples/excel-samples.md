@@ -208,8 +208,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-
-
 ## Collections
 
 These samples work with collections of objects in the workbook.
