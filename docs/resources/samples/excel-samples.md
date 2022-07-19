@@ -164,9 +164,6 @@ function main(workbook: ExcelScript.Workbook) {
       return;
     }
 
-    // Log the address of the used range.
-    console.log(`Used range for the worksheet: ${range.getAddress()}`);
-
     // If no columns are hidden, log message, else, unhide columns
     if (range.getColumnHidden() == false) {
       console.log(`No columns hidden`);
