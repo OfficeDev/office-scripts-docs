@@ -72,6 +72,8 @@ items:
         href: resources/samples/copy-tables-combine.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
+      - name: Remove table column filters
+        href: resources/samples/clear-table-filter-for-active-cell.md
     - name: Beyond the basics
       items:
       - name: Combine worksheets into a single workbook

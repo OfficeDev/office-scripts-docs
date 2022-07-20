@@ -146,6 +146,65 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Unhide All Rows and Columns
+
+This script get the worksheet's used range, checks if there are any hidden rows and columns, and unhides them. 
+
+```Typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the currently selected sheet.
+    const selectedSheet = workbook.getActiveWorksheet();
+
+    // Get the entire data range.
+    const range = selectedSheet.getUsedRange();
+
+    // If the used range is empty, end the script.
+    if (!range) {
+      console.log(`No data on this sheet.`)
+      return;
+    }
+
+    // If no columns are hidden, log message, else, unhide columns
+    if (range.getColumnHidden() == false) {
+      console.log(`No columns hidden`);
+    } else {
+      range.setColumnHidden(false);
+    }
+
+    // If no rows are hidden, log message, else, unhide rows.
+    if (range.getRowHidden() == false) {
+      console.log(`No rows hidden`);
+    } else {
+      range.setRowHidden(false);
+    }
+}
+
+### Freeze Currently Selected Cells
+
+This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
+
+```Typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the currently selected sheet.
+    const selectedSheet = workbook.getActiveWorksheet();
+
+    // Get the current selected range.
+    const selectedRange = workbook.getSelectedRange();
+
+    // If no cells are selected, end the script. 
+    if (!selectedRange) {
+      console.log(`No cells in the worksheet are selected.`);
+      return;
+    }
+
+    // Log the address of the selected range
+    console.log(`Selected range for the worksheet: ${selectedRange.getAddress()}`);
+
+    // Freeze the selected range.
+    selectedSheet.getFreezePanes().freezeAt(selectedRange);
+}
+```
+
 ## Collections
 
 These samples work with collections of objects in the workbook.
