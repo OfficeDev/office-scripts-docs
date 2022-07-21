@@ -77,7 +77,7 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 1. We'll use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script:
 
     ```TypeScript
-    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    // Run the `Math.abs` method with the value at D2 and apply that value back to D2.
     let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
