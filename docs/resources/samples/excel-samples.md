@@ -178,12 +178,13 @@ function main(workbook: ExcelScript.Workbook) {
       range.setRowHidden(false);
     }
 }
+```
 
 ### Freeze Currently Selected Cells
 
 This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
 
-```Typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the currently selected sheet.
     const selectedSheet = workbook.getActiveWorksheet();
