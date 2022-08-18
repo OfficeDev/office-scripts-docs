@@ -1,8 +1,8 @@
 # Office Scripts documentation
 
-Welcome to the Office Scripts documentation repository. In this repo, you can find the documentation source files for Office Scripts tutorials and how-to guides. For the best experience, we recommend you view this content on [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts).
+Welcome to the Office Scripts documentation repository. In this repo, you can find the documentation source files for Office Scripts tutorials and how-to guides. For the best experience, we recommend you review the [Office Scripts documentation](https://docs.microsoft.com/office/dev/scripts).
 
-> **Note**: You can find the reference documentation source files for the Office Scripts API in the [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) repository. These APIs contain all the potential operations for your scripts.
+> **NOTE**: You can find the reference documentation source files for the Office Scripts API in the [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) repository. These APIs contain all the potential operations for your scripts.
 
 ## Give us your feedback
 
@@ -23,7 +23,7 @@ We also encourage you to fork, make the fix, and do a pull request of your propo
 
 If your issue is not related to the Office Scripts documentation, please post it to one of the following channels instead:
 
-- To ask a question about designing Office Scripts or the Office.js API that runs Office Scripts, post your question to Stack Overflow and tag it with the "office-scripts" tag (https://stackoverflow.com/questions/tagged/office-scripts).
+- To ask a question about designing Office Scripts or the Office.js API that runs Office Scripts, post your question to Stack Overflow and tag it with the ["office-scripts" tag](https://stackoverflow.com/questions/tagged/office-scripts).
 - To report an issue with the Office.js API, create the issue in the [OfficeDev/office-js repository](https://github.com/OfficeDev/office-js), which members of the product team monitor for customer-reported issues.
 
 ## Copyright
