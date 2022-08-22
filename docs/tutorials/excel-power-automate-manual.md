@@ -1,7 +1,7 @@
 ---
 title: Call scripts from a manual Power Automate flow
 description: A tutorial about using an Office Scripts in Power Automate through a manual trigger.
-ms.date: 06/29/2021
+ms.date: 08/22/2022
 ms.localizationpriority: high
 ---
 
@@ -115,9 +115,13 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 6. Select **Done**. You should see the **Runs** section update accordingly.
 
-7. Refresh the page to see the results of the Power Automate. If it succeeded, go to the workbook to see the updated cells. If it failed, verify the flow's settings and run it a second time.
+7. Refresh the page to see the results of the Power Automate. If it failed, verify the flow's settings and run it a second time.
 
     :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="Power Automate output showing a successful flow run.":::
+
+8. Open the workbook to see the updated cells. You should see the current date in cell **A1** and the current time in cell **B1**. Power Automate uses Coordinated Universal Time (UTC), so the time will likely be offset from your current time zone.
+
+    :::image type="content" source="../images/power-automate-tutorial-10.png" alt-text="The workbook showing date and time values in cells A1 and B1.":::
 
 ## Next steps
 
