@@ -74,6 +74,8 @@ items:
         href: resources/samples/table-of-contents.md
       - name: Remove table column filters
         href: resources/samples/clear-table-filter-for-active-cell.md
+      - name: Report day-to-day changes in Power Automate
+        href: resources/samples/report-day-to-day-changes.md
     - name: Beyond the basics
       items:
       - name: Combine worksheets into a single workbook
