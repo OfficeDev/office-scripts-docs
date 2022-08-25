@@ -60,7 +60,7 @@ Follow these steps to build a [Power Automate](https://powerautomate.microsoft.c
     1. **newData**: Input *(dynamic content)*
 
     :::image type="content" source="../../images/day-to-day-changes-flow-3.png" alt-text="The Run script action with the given values.":::
-1. The script returns the daily reading difference as dynamic content named "result". As an example, you an email the information to yourself. Create a new step that uses the **Outlook** connector with the **Send an email (V2)** action (or whatever email client you prefer). Use the following values to complete the action.
+1. The script returns the daily reading difference as dynamic content named "result". For the sample, you can email the information to yourself. Create a new step that uses the **Outlook** connector with the **Send an email (V2)** action (or whatever email client you prefer). Use the following values to complete the action.
     1. **To**: Your email address
     1. **Subject**: Daily reading change
     1. **Body**: "Difference from yesterday" result *(dynamic content from Excel)*
