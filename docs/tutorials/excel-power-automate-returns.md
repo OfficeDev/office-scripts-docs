@@ -22,7 +22,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 ## Prepare the workbook
 
-1. Download the workbook <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.
+1. Download the workbook [on-call-rotation.xlsx](on-call-rotation.xlsx) to your OneDrive.
 
 1. Open **on-call-rotation.xlsx** in Excel on the web.
 

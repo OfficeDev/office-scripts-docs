@@ -25,7 +25,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 ## Setup instructions
 
-1. Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.
+1. Download [task-reminders.xlsx](task-reminders.xlsx) to your OneDrive.
 
 1. Open the workbook in Excel on the web.
 

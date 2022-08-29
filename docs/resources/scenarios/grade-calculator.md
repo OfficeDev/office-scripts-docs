@@ -20,7 +20,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
 ## Setup instructions
 
-1. Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.
+1. Download [grade-calculator.xlsx](grade-calculator.xlsx) to your OneDrive.
 
 1. Open the workbook with Excel for the web.
 

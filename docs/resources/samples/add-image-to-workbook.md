@@ -19,7 +19,7 @@ The second sample copies an image from a URL. This could be used to copy photos 
 
 ## Sample Excel file
 
-Download <a href="add-images.xlsx">add-images.xlsx</a> for a ready-to-use workbook. Add the following scripts and try the sample yourself!
+Download [add-images.xlsx](add-images.xlsx) for a ready-to-use workbook. Add the following scripts and try the sample yourself!
 
 ## Sample code: Copy an image across worksheets
 
