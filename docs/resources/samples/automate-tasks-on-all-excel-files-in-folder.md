@@ -12,7 +12,7 @@ It performs calculations on the Excel files, adds formatting, and inserts a comm
 
 ## Sample Excel files
 
-Download [highlight-alert-excel-files.zip](highlight-alert-excel-files.zip) for all the workbooks you'll need for this sample. Extract those files to a folder titled **Sales**. Add the following script to your script collection to try the sample yourself!
+Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a> for all the workbooks you'll need for this sample. Extract those files to a folder titled **Sales**. Add the following script to your script collection to try the sample yourself!
 
 ## Sample code: Add formatting and insert comment
 
