@@ -1,11 +1,11 @@
 ---
-title: Record day-to-day changes in a workbook and report them with a flow
+title: Record day-to-day changes in Excel and report them with a Power Automate flow
 description: Learn how to use Office Scripts and Power Automate to track value changes in a workbook
 ms.date: 08/25/2022
 ms.localizationpriority: medium
 ---
 
-# Record day-to-day changes in a workbook and report them with a flow
+# Record day-to-day changes in Excel and report them with a Power Automate flow
 
 Power Automate and Office Scripts combine to handle repetitive tasks for you. In this sample, you're tasked with recording a single numerical reading in a workbook every day and reporting the change since yesterday. You'll build a flow to get that reading, log it in the workbook, and report the change through an email.
 
