@@ -41,7 +41,7 @@ function main(workbook: ExcelScript.Workbook, newData: string): string {
 
 Follow these steps to build a [Power Automate](https://powerautomate.microsoft.com/) flow for the sample.
 
-1. Create a new **Schedule cloud flow**.
+1. Create a new **Scheduled cloud flow**.
 1. Schedule the flow to repeat every **1 Day**.
 
     :::image type="content" source="../../images/day-to-day-changes-flow-1.png" alt-text="The flow creation step showing it will repeat every day.":::
