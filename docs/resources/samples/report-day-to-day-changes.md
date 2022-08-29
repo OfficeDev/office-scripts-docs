@@ -11,7 +11,7 @@ Power Automate and Office Scripts combine to handle repetitive tasks for you. In
 
 ## Sample Excel file
 
-Download <a href="daily-readings.xlsx">daily-readings.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+Download [daily-readings.xlsx](daily-readings.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Record and report daily readings
 
@@ -46,7 +46,7 @@ Follow these steps to build a [Power Automate](https://powerautomate.microsoft.c
 
     :::image type="content" source="../../images/day-to-day-changes-flow-1.png" alt-text="The flow creation step showing it will repeat every day.":::
 1. Select **Create**.
-1. In a real flow, you would add a step that gets your data. This could be from another workbook, a Teams adaptive card, or any other source. To test the sample, make a test number. Add a new step with the **Initialize variable** action. Give it the following values.
+1. In a real flow, you'll add a step that gets your data. The data can come from another workbook, a Teams adaptive card, or any other source. To test the sample, make a test number. Add a new step with the **Initialize variable** action. Give it the following values.
     1. **Name**: Input
     1. **Type**: Integer
     1. **Value**: 190000
