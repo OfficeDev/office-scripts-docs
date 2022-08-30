@@ -22,7 +22,7 @@ You'll develop a script that analyzes weekly downloads data in the active worksh
 
 ## Setup instructions
 
-1. Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.
+1. Download [analyze-web-downloads.xlsx](analyze-web-downloads.xlsx) to your OneDrive.
 
 1. Open the workbook with Excel for the web.
 

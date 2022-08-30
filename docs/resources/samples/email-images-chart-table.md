@@ -37,7 +37,7 @@ This solution has two parts:
 
 ## Sample Excel file
 
-Download <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+Download [email-chart-table.xlsx](email-chart-table.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Calculate and extract Excel chart and table
 

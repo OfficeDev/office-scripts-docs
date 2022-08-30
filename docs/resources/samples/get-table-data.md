@@ -11,7 +11,7 @@ Excel table data can be represented as an array of objects in the form of [JSON]
 
 ## Sample Excel file
 
-Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> for a ready-to-use workbook.
+Download the file [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) for a ready-to-use workbook.
 
 :::image type="content" source="../../images/table-input.png" alt-text="A worksheet showing input table data.":::
 

@@ -13,7 +13,7 @@ This sample shows how to create a table of contents for the workbook. Each entry
 
 ## Sample Excel file
 
-Download <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> for a ready-to-use workbook. Add the following script and try the sample yourself!
+Download [table-of-contents.xlsx](table-of-contents.xlsx) for a ready-to-use workbook. Add the following script and try the sample yourself!
 
 ## Sample code: Create a workbook table of contents
 

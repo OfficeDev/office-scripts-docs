@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 06/14/2022
+ms.date: 08/25/2022
 ms.localizationpriority: medium
 ---
 
@@ -28,6 +28,7 @@ We also welcome [contributions from the community](#community-contributions-and-
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
 | [Remove table column filters](clear-table-filter-for-active-cell.md) | This sample clears all of the filters from a table column. |
+| [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
 
 ## Beyond the basics
 
