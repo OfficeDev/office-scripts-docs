@@ -15,7 +15,7 @@ Enjoy!
 
 ## Script
 
-Download <a href="happy-tree.xlsx">happy-tree.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+Download [happy-tree.xlsx](happy-tree.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ```TypeScript
 /* Original version by Leslie Black.  */

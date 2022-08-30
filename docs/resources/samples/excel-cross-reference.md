@@ -19,8 +19,8 @@ You're an event coordinator who is scheduling speakers for upcoming conferences.
 
 Download the following files to get ready-to-use workbooks for the sample.
 
-1. <a href="event-data.xlsx">event-data.xlsx</a>
-1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+1. [event-data.xlsx](event-data.xlsx)
+1. [speaker-registrations.xlsx](speaker-registrations.xlsx)
 
 Add the following scripts to try the sample yourself!
 

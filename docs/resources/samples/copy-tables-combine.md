@@ -16,7 +16,7 @@ There are two variations of this script:
 
 ## Sample Excel file
 
-Download <a href="tables-copy.xlsx">tables-copy.xlsx</a> for a ready-to-use workbook. Add the following scripts to try the sample yourself!
+Download [tables-copy.xlsx](tables-copy.xlsx) for a ready-to-use workbook. Add the following scripts to try the sample yourself!
 
 ## Sample code: Combine data from multiple Excel tables into a single table
 
@@ -54,7 +54,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Sample code: Combine data from multiple Excel tables in select worksheets into a single table
 
-Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!
+Download the sample file [tables-select-copy.xlsx](tables-select-copy.xlsx) and use it with the following script to try it out yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

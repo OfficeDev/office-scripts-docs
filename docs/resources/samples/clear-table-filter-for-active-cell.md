@@ -13,7 +13,7 @@ If you wish to learn more about how to save the filter prior to clearing it (and
 
 ## Sample Excel file
 
-Download <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> for a ready-to-use workbook. Add the following script to try the sample yourself!
+Download [table-with-filter.xlsx](table-with-filter.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Clear table column filter based on active cell
 

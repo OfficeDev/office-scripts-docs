@@ -25,7 +25,7 @@ For more information about working with JSON, read [Use JSON to pass data to and
 
 ## Sample Excel file
 
-Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this solution and try it out yourself! Be sure to change at least one of the email addresses so that you receive an invite.
+Download the file [hr-schedule.xlsx](hr-schedule.xlsx) used in this solution and try it out yourself! Be sure to change at least one of the email addresses so that you receive an invite.
 
 ## Sample code: Extract table data to schedule invites
 
