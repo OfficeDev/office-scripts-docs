@@ -23,7 +23,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <h3>Overview</h3>
-                        <p><a href="overview/excel.md">Learn about the components of Office Scripts in Excel on the web: the Action Recorder and the Code Editor.</a></p>
+                        <p><a href="overview/excel.md">Learn about the components of Office Scripts in Excel: the Action Recorder and the Code Editor.</a></p>
                     </div>
                 </div>
             </div>
