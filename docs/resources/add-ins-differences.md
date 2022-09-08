@@ -21,10 +21,6 @@ Office Add-ins are cross-platform. They work across Windows desktop, Mac, iOS, a
 
 Office Scripts are currently only supported by for Excel on the web. All recording, editing, and script management is done on the web platform.
 
-### Script support for Excel on Windows
-
-[!INCLUDE [Run-from-button support](../includes/run-from-button-desktop-support.md)]
-
 ## APIs
 
 While the Office JavaScript APIs for Office Add-ins and the Office Scripts APIs share some functionality, they are different platforms. The Office Scripts APIs are an optimized, synchronous subset of the Excel JavaScript API model. The major difference is usage of the `load`/`sync` paradigm with add-ins. Additionally, add-ins offer APIs for events and a broader set of functionality outside of Excel, known as the Common APIs.

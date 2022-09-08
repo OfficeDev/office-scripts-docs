@@ -21,10 +21,6 @@ VBA is supported by Excel on Windows and Mac. Office Scripts is supported by Exc
 
 The two solutions were designed for their respective platforms. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to other web services.
 
-### Script support for Excel on Windows
-
-[!INCLUDE [Run-from-button support](../includes/run-from-button-desktop-support.md)]
-
 ## Security
 
 VBA macros have the same security clearance as Excel. This gives them full access to your desktop. Office Scripts only have access to the workbook, not the machine hosting the workbook. Additionally, no JavaScript authentication tokens can be shared with scripts. This means the script has neither the tokens of the signed-in user nor are there any API capabilities for signing in to an external service, so they are unable to use existing tokens to make external calls on behalf of the user.
