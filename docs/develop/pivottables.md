@@ -1,7 +1,7 @@
 ---
 title: 'Work with PivotTables in Office Scripts'
 description: 'Learn about the object model for PivotTables in the Office Scripts JavaScript API.'
-ms.date: 04/20/2022
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -148,5 +148,5 @@ The following code snippet adds a slicer for the "Type" field. It sets the selec
 
 ## See also
 
-- [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Scripting fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)

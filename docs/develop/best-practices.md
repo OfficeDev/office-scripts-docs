@@ -15,6 +15,9 @@ Excel does a lot of things. Most of them can be scripted. The Action Recorder re
 
 :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
 
+> [!IMPORTANT]
+> Occasionally, the Action Recorder may use an API that's not supported outside of Excel on the Web. Users of that script on other platforms receive a warning when viewing that script.
+
 ## Verify an object is present
 
 Scripts often rely on a certain worksheet or table being present in the workbook. However, they might get renamed or removed between script runs. By checking if those tables or worksheets exist before calling methods on them, you can make sure the script doesn't end abruptly.
@@ -135,7 +138,7 @@ Consider the following snippet that performs a large data update on a range.
 range.setValues(someLargeValues);
 ```
 
-If `someLargeValues` is [larger than Excel for the web can handle](../testing/platform-limits.md#data-limits), the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). The `try...catch` statement lets your script recognize this condition, without immediately ending the script and showing the default error.
+If `someLargeValues` is [larger than Excel on the web can handle](../testing/platform-limits.md#data-limits), the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). The `try...catch` statement lets your script recognize this condition, without immediately ending the script and showing the default error.
 
 One approach for giving the script user a better experience is to present them a custom error message. The following snippet shows a `try...catch` statement logging more error information to better help the reader.
 

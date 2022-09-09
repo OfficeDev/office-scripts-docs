@@ -1,7 +1,7 @@
 ---
 title: Office Scripts Code Editor environment
-description: The prerequisites and environment information for Office Scripts in Excel on the web.
-ms.date: 05/27/2021
+description: The prerequisites and environment information for Office Scripts in Excel.
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,7 @@ Office Scripts are written in either TypeScript or JavaScript and use the Office
 
 Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). The Action Recorder generates code in TypeScript and the Office Scripts documentation uses TypeScript. Since TypeScript is a superset of JavaScript, any scripting code that you write in JavaScript will work just fine.
 
-Office Scripts are largely self-contained pieces of code. Only a small part of TypeScript's functionality is used. Therefore, you can edit scripts without having to learn the intricacies of TypeScript. The Code Editor also handles the installation, compilation, and execution of code, so you don't need to worry about anything but the script itself. It's possible to learn the language and create scripts without previous programming knowledge. However, if you're new to programming, we recommend learning some fundamentals before proceeding with Office Scripts:
+Office Scripts are largely self-contained pieces of code. Only a small part of TypeScript's functionality is used. Therefore, you can edit scripts without having to learn the intricacies of TypeScript. The Code Editor also handles the installation, compilation, and execution of code, so you don't need to worry about anything but the script itself. It's possible to learn the language and create scripts without previous programming knowledge. However, if you're new to programming, we recommend learning some fundamentals before proceeding with Office Scripts.
 
 [!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 

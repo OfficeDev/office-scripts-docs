@@ -1,11 +1,11 @@
 ---
-title: Scripting fundamentals for Office Scripts in Excel on the web
+title: Scripting fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
-ms.date: 05/24/2021
+ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
-# Scripting fundamentals for Office Scripts in Excel on the web
+# Scripting fundamentals for Office Scripts in Excel
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn the critical parts of the TypeScript-based script code and how the Excel objects and APIs work together.
 
@@ -318,8 +318,8 @@ For information specific to the PivotTable object model, see [Work with PivotTab
 
 ## See also
 
-- [Record, edit, and create Office Scripts in Excel on the web](../tutorials/excel-tutorial.md)
-- [Read workbook data with Office Scripts in Excel on the web](../tutorials/excel-read-tutorial.md)
+- [Record, edit, and create Office Scripts in Excel](../tutorials/excel-tutorial.md)
+- [Read workbook data with Office Scripts in Excel](../tutorials/excel-read-tutorial.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Work with PivotTables in Office Scripts](pivottables.md)
 - [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)

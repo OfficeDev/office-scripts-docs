@@ -1,7 +1,7 @@
 ---
 title: Improve the performance of your Office Scripts
 description: Create faster scripts by understanding the communication between the Excel workbook and your script.
-ms.date: 05/17/2021
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 The purpose of Office Scripts is to automate commonly performed series of tasks to save you time. A slow script can feel like it doesn't speed up your workflow. Most of the time, your script will be perfectly fine and run as expected. However, there are a few, avoidable scenarios that can affect performance.
 
-The most common reason for a slow script is excessive communication with the workbook. Your script runs on your local machine, while the workbook exists in the cloud. At certain times, your script synchronizes its local data with that of the workbook. This means that any write operations (such as `workbook.addWorksheet()`) are only applied to the workbook when this behind-the-scenes synchronization happens. Likewise, any read operations (such as `myRange.getValues()`) only get data from the workbook for the script at those times. In either case, the script fetches information before it acts on the data. For example, the following code will accurately log the number of rows in the used range.
+The most common reason for a slow script is excessive communication with the workbook. This is particularly noticeable when using Excel on the web. At certain times, your script synchronizes its local data with that of the workbook. This means that any write operations (such as `workbook.addWorksheet()`) are only applied to the workbook when this behind-the-scenes synchronization happens. Likewise, any read operations (such as `myRange.getValues()`) only get data from the workbook for the script at those times. In either case, the script fetches information before it acts on the data. For example, the following code will accurately log the number of rows in the used range.
 
 ```TypeScript
 let usedRange = workbook.getActiveWorksheet().getUsedRange();
@@ -99,5 +99,5 @@ As the Office Scripts platform expands to work with [Power Automate](https://flo
 
 ## See also
 
-- [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+- [Scripting fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 - [MDN web docs: Loops and iteration](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)

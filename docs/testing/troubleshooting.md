@@ -40,6 +40,8 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+Some runtime errors are caused by exceeding the limits of the platform, such as trying to write too much data at once with Excel on the web. See [Platform limits and requirements with Office Scripts](platform-limits.md) for a full list of potential pitfalls.
+
 ### Console messages
 
 Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind that the root cause of any issue may be a different line of code than what is indicated in the console.

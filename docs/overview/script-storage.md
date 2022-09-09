@@ -66,7 +66,7 @@ To specifically audit Office Scripts related activity as an admin, take the foll
 
 ## See also
 
-- [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](/microsoft-365/admin/manage/manage-office-scripts-settings)
 - [Undo the effects of Office Scripts](../testing/undo.md)

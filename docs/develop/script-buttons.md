@@ -24,9 +24,6 @@ The following screenshot shows the script details page for a script titled **Cre
 
 To stop sharing a script through a button, go to the **More options (…)** menu in the script details page and select **Stop sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
-## Script buttons with Excel on Windows and Mac
+## See also
 
-Some Office Scripts APIs may not be supported by Excel on Windows or Mac, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the Code Editor displays a warning. If you try to run such a script, it won't run and, instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."  
-
-> [!IMPORTANT]
-> Script buttons require [WebView2](/deployoffice/webview2-install) to work with Excel on Windows. This is installed by default with the latest versions of Excel on Windows, but if you're unable to click script buttons, visit [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) and download the browser engine.
+- [Platform limits and requirements with Office Scripts](../testing/platform-limits.md)

@@ -20,7 +20,7 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 To use Office Scripts, you'll need the following.
 
-1. Excel on the web, Windows, or Mac.
+1. Excel on Windows, Mac, or the web.
 1. OneDrive for Business.
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
 
@@ -63,7 +63,7 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 ## Share Office Scripts
 
-Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script details page showing the 'Share with others in this workbook' option.":::
 
