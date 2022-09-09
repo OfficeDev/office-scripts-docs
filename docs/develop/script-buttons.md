@@ -2,7 +2,7 @@
 title: Run Office Scripts in Excel with buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 05/09/2022
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -24,11 +24,9 @@ The following screenshot shows the script details page for a script titled **Cre
 
 To stop sharing a script through a button, go to the **More options (…)** menu in the script details page and select **Stop sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
 
-## Script buttons with Excel on Windows
+## Script buttons with Excel on Windows and Mac
 
-These script buttons also work on Windows. Create the button in Excel on the web and users on Windows can run your script with the click of a button. Please note that you cannot edit scripts in Excel on Windows. You can only edit scripts in Excel on the web.
-
-Some Office Scripts APIs may not be supported by Excel on Windows, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the script doesn't run and, instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."  
+Some Office Scripts APIs may not be supported by Excel on Windows or Mac, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the Code Editor displays a warning. If you try to run such a script, it won't run and, instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."  
 
 > [!IMPORTANT]
-> Script buttons require [WebView2](/deployoffice/webview2-install) to work with Excel on Windows. This is installed by default with the latest versions of Excel on Desktop, but if you're unable to click scripts buttons, visit [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) and download the browser engine.
+> Script buttons require [WebView2](/deployoffice/webview2-install) to work with Excel on Windows. This is installed by default with the latest versions of Excel on Windows, but if you're unable to click script buttons, visit [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) and download the browser engine.

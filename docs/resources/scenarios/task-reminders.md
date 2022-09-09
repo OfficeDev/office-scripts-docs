@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.
-ms.date: 06/29/2021
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -27,7 +27,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 1. Download [task-reminders.xlsx](task-reminders.xlsx) to your OneDrive.
 
-1. Open the workbook in Excel on the web.
+1. Open the workbook in Excel.
 
 1. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 

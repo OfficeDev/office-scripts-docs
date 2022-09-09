@@ -1,13 +1,13 @@
 ---
 title: Manage calculation mode in Excel
-description: Learn how to use Office Scripts to manage the calculation mode in Excel on the web.
+description: Learn how to use Office Scripts to manage the calculation mode in Excel.
 ms.date: 05/06/2021
 ms.localizationpriority: medium
 ---
 
 # Manage calculation mode in Excel
 
-This sample shows how to use the [calculation mode](/javascript/api/office-scripts/excelscript/excelscript.calculationmode) and calculate methods in Excel on the web using Office Scripts. You can try the script on any Excel file.
+This sample shows how to use the [calculation mode](/javascript/api/office-scripts/excelscript/excelscript.calculationmode) and calculate methods in Excel using Office Scripts. You can try the script on any Excel file.
 
 ## Scenario
 

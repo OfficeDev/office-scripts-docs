@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
-ms.date: 11/11/2021
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ Office Scripts errors fall into one of two categories:
 
 ### Compile-time errors
 
-Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They are also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error will give more details about the problem and suggest solutions. Compile-time errors should be addressed before running the script.
+Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They are also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error gives more details about the problem and suggests solutions. Compile-time errors should be addressed before running the script.
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text.":::
 

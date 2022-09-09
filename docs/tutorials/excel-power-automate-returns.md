@@ -1,16 +1,16 @@
 ---
 title: Return data from a script to an automatically-run Power Automate flow
-description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel on the web through Power Automate.
-ms.date: 04/12/2022
+description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel through Power Automate.
+ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
 # Return data from a script to an automatically-run Power Automate flow
 
-This tutorial teaches you how to return information from an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
+This tutorial teaches you how to return information from an Office Script for Excel as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.
+> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial.
 >
 > If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials.
 >
@@ -24,7 +24,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Download the workbook [on-call-rotation.xlsx](on-call-rotation.xlsx) to your OneDrive.
 
-1. Open **on-call-rotation.xlsx** in Excel on the web.
+1. Open **on-call-rotation.xlsx** in Excel.
 
 1. Add a row to the table with your name, email address, and start and end dates that overlap with the current date.
 
@@ -61,7 +61,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     let tableValues = table.getRangeBetweenHeaderAndTotal().getValues();
     ```
 
-1. The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487). We need to convert those dates to JavaScript dates in order to compare them. We'll add a helper function to our script. Add the following code outside of the `main` function:
+1. The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487). We need to convert those dates to JavaScript dates in order to compare them. We'll add a helper function to our script. Add the following code outside of the `main` function.
 
     ```TypeScript
     // Convert the Excel date to a JavaScript Date object.

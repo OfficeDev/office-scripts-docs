@@ -55,7 +55,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     }
     ```
 
-5. Now let's read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`):
+5. Now let's read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`).
 
     ```TypeScript
     // Get the value of cell D2.
@@ -74,7 +74,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
-1. We'll use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script:
+1. We'll use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script.
 
     ```TypeScript
     // Run the `Math.abs` method with the value at D2 and apply that value back to D2.
@@ -136,12 +136,12 @@ Now that we know how to read and write to a single cell, let's generalize the sc
 
 3. Run the script.
 
-    Your banking statement should now look like this:
+    Your banking statement should now have properly formatted positive numbers.
 
     :::image type="content" source="../images/tutorial-5.png" alt-text="A worksheet showing the banking statement as a formatted table with only positive values.":::
 
 ## Next steps
 
-Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel](../resources/samples/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
+Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel](../resources/samples/excel-samples.md). You can also visit [Scripting Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
 
 The next series of Office Scripts tutorials focus on using Office Scripts with Power Automate. Learn more about the advantages combining the two platforms in [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) or try the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial to create a Power Automate flow that uses an Office Script.

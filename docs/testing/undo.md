@@ -1,7 +1,7 @@
 ---
 title: Undo the changes made by Office Scripts
-description: Use the version history of Excel on the web to undo the changes made by running a script.
-ms.date: 06/29/2021
+description: Use the version history of Excel to undo the changes made by running a script.
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
