@@ -65,11 +65,10 @@ Logs do not affect the workbook.
 
 ## Automate tab not appearing or Office Scripts unavailable
 
-The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.
+The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel.
 
 1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
-1. [Check that your browser is supported](platform-limits.md#browser-support).
-1. [Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).
+1. [Ensure third-party cookies are enabled (when using Excel on the Web)](platform-limits.md#third-party-cookies-for-excel-on-the-web).
 1. [Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. Ensure you're not logged in as an external or guest user to your tenant.
 
