@@ -19,11 +19,7 @@ This article describes the main differences between VBA macros (as well as VBA i
 
 The following shows which features are supported by which platforms and products.
 
-| | Excel on the Web | Excel on Windows | Excel on Mac | Excel on iOS | Other Office products | Power Automate |
-|-|-|-|-|-|-|-|
-| **VBA Macros** | No | Yes | Yes | No | Yes | No |
-| **Office Scripts** | Yes | Yes | Yes | No | No | Yes |
-| **Office Scripts Action Recorder** | Yes | No | No | No | No | No |
+[!INCLUDE [Platform support table](../includes/platform-support-table.md)]
 
 VBA as designed to be desktop-centric. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to [a limited set of web services](../develop/external-calls.md).
 
@@ -41,7 +37,7 @@ Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/eve
 
 ## Power Automate
 
-Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's Windows, Mac, or web client.
+Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's Windows or web client.
 
 VBA doesn't have a Power Automate connector. All supported VBA scenarios involve a user attending to the macro's execution.
 

@@ -19,11 +19,7 @@ The rest of this article describes on the main differences between Office Add-in
 
 The following shows which features are supported by which platforms and products.
 
-| | Excel on the Web | Excel on Windows | Excel on Mac | Excel on iOS | Other Office products | Power Automate |
-|-|-|-|-|-|-|-|
-| **Office Add-ins** | Yes | Yes | Yes | Yes | Yes | No |
-| **Office Scripts** | Yes | Yes | Yes | No | No | Yes |
-| **Office Scripts Action Recorder** | Yes | No | No | No | No | No |
+[!INCLUDE [Platform support table](../includes/platform-support-table.md)]
 
 ## APIs
 
