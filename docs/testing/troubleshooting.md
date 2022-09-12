@@ -73,6 +73,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 1. [Ensure third-party cookies are enabled (when using Excel on the Web)](platform-limits.md#third-party-cookies-for-excel-on-the-web).
 1. [Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. Ensure you're not logged in as an external or guest user to your tenant.
+1. For Excel on Windows, ensure [WebView2 is installed](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
