@@ -76,7 +76,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 > [!NOTE]
-> There is a known issue that can prevent scripts stored in SharePoint from being displayed in the ribbon. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible through the file dialog and are able to be run and edited.
+> There is a known issue that prevents scripts stored in SharePoint from displaying in the ribbon. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
 
 ## Help resources
 
