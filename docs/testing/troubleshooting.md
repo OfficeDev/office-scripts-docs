@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
-ms.date: 11/11/2021
+ms.date: 09/16/2022
 ms.localizationpriority: medium
 ---
 
@@ -74,6 +74,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 1. Ensure you're not logged in as an external or guest user to your tenant.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
+
+> [!NOTE]
+> There is a known issue that can prevent scripts stored in SharePoint from being displayed in the ribbon. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible through the file dialog and are able to be run and edited.
 
 ## Help resources
 
