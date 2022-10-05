@@ -20,7 +20,7 @@ This series of documents teaches you how to use these tools. You'll be introduce
 
 To use Office Scripts, you'll need the following.
 
-1. [Excel on the web](https://www.office.com/launch/excel) (Excel for Windows can only use Office Scripts with [script buttons](../develop/script-buttons.md)).
+1. [Excel on the web](https://www.office.com/launch/excel) (Excel on Windows can only use Office Scripts with [script buttons](../develop/script-buttons.md)).
 
     > [!TIP]
     > Office Scripts are now available for Office on Windows and Mac for [Office Insiders](https://insider.office.com/).
