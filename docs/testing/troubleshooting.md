@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
-ms.date: 09/16/2022
+ms.date: 10/05/2022
 ms.localizationpriority: medium
 ---
 
@@ -76,7 +76,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 > [!NOTE]
-> There is a known issue that prevents scripts stored in SharePoint from displaying in the ribbon. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
+> There is a known issue that prevents scripts stored in SharePoint from being listed as recently used. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog. Such scripts will display in the recently used list until the workbook is closed.
 
 ## Help resources
 
