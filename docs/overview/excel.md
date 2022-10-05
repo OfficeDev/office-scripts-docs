@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 02/25/2022
+ms.date: 10/05/2022
 ms.localizationpriority: high
 ---
 
@@ -21,6 +21,10 @@ This series of documents teaches you how to use these tools. You'll be introduce
 To use Office Scripts, you'll need the following.
 
 1. [Excel on the web](https://www.office.com/launch/excel) (Excel for Windows can only use Office Scripts with [script buttons](../develop/script-buttons.md)).
+
+    > [!TIP]
+    > Office Scripts are now available for Office on Windows and Mac for [Office Insiders](https://insider.office.com/).
+
 1. OneDrive for Business.
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
 
