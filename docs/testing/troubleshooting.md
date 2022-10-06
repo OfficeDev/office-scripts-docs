@@ -76,7 +76,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 > [!NOTE]
-> There is a known issue that prevents scripts stored in SharePoint from being listed as recently used. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog. Such scripts will display in the recently used list until the workbook is closed.
+> There is a known issue that prevents scripts stored in SharePoint from always appearing in the recently used list. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
 
 ## Help resources
 
