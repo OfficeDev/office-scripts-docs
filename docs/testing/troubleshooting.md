@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
-ms.date: 11/11/2021
+ms.date: 10/05/2022
 ms.localizationpriority: medium
 ---
 
@@ -74,6 +74,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 1. Ensure you're not logged in as an external or guest user to your tenant.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
+
+> [!NOTE]
+> There is a known issue that prevents scripts stored in SharePoint from always appearing in the recently used list. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
 
 ## Help resources
 
