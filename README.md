@@ -1,6 +1,6 @@
 # Office Scripts documentation
 
-Welcome to the Office Scripts documentation repository. In this repo, you can find the documentation source files for Office Scripts tutorials and how-to guides. For the best experience, we recommend you view this content on [Microsoft Docs](https://docs.microsoft.com/office/dev/scripts).
+Welcome to the Office Scripts documentation repository. In this repo, you can find the documentation source files for Office Scripts tutorials and how-to guides. For the best experience, we recommend you view this content on [Microsoft Learn](https://learn.microsoft.com/office/dev/scripts).
 
 > **NOTE**: You can find the reference documentation source files for the Office Scripts API in the [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) repository. These APIs contain all the potential operations for your scripts.
 
