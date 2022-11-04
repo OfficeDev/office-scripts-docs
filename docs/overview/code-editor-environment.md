@@ -1,7 +1,7 @@
 ---
 title: Office Scripts Code Editor environment
 description: The prerequisites and environment information for Office Scripts in Excel on the web.
-ms.date: 05/27/2021
+ms.date: 11/04/2022
 ms.localizationpriority: medium
 ---
 
@@ -49,3 +49,4 @@ Most of the keyboard shortcuts for Visual Studio Code also work in the Office Sc
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md)
+- [Visual Studio Code for Office Scripts (preview)](../develop/vscode-for-scripts.md)
