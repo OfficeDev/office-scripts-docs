@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 :::image type="content" source="../images/vscode-script-editor.png" alt-text="An Excel on the web window with the Code Editor open next to a VS Code on the web window with an open script.":::
 
-Visual Studio Code as a few advantages over the built-in Code Editor.
+Visual Studio Code has a few advantages over the built-in Code Editor.
 
 - Full-screen editing! Your script doesn’t have to share screen space with the workbook any more.
 - Edit multiple scripts at once! Quickly switch between scripts to share code from your other automations.
