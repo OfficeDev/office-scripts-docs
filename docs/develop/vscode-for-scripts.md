@@ -21,7 +21,7 @@ Visual Studio Code as a few advantages over the built-in Code Editor.
 > This feature is in preview. It's subject to change based on feedback. If you encounter any issues, please report them through the **Feedback** button in Excel. The following are known issues with the current version of the feature.
 >
 > - Visual Studio Code can only be connected to Office Scripts through Excel on the web.
-> - This Office Scripts connection is only available with English-language clients.
+> - This Office Scripts connection is only available with English-language Excel clients.
 
 ## Connect Visual Studio Code to Office Scripts
 
