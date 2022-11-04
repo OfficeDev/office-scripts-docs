@@ -18,7 +18,10 @@ Visual Studio Code as a few advantages over the built-in Code Editor.
 - Extensions! Use your favorite VS Code extensions for spell checking, formatting, and whatever else helps you get the job done.
 
 > [!NOTE]
-> This feature is in preview. It is subject to change based on feedback. If you encounter any issues, please report them through the **Send feedback** button in Excel.
+> This feature is in preview. It is subject to change based on feedback. If you encounter any issues, please report them through the **Send feedback** button in Excel. The following are known issues with the current version of the feature.
+>
+> - It can only be done through Excel on the web.
+> - It is only available with English-language clients.
 
 ## Connect Visual Studio Code to Office Scripts
 
