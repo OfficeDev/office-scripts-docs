@@ -29,7 +29,7 @@ Follow these one-time steps to connect Visual Studio Code and Excel on the web.
 
 1. Open the Office Scripts **Code Editor**.
 2. Under the **More options (…)** menu, select **Editor settings**.
-3. Select **Visual Studio Code connection**.
+3. Select **(Preview) Visual Studio Code connection**.
 
 :::image type="content" source="../images/vscode-enable-option.png" alt-text="The editor settings task pane showing a checkbox labeled Visual Studio Code connection.":::
 
