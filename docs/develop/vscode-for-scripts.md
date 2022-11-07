@@ -1,13 +1,13 @@
 ---
 title: Visual Studio Code for Office Scripts (preview)
-description: How to setup the Office Scripts Code Editor to connect with VS Code on the web.
+description: How to setup the Office Scripts Code Editor to connect with VS Code for the Web.
 ms.date: 11/04/2022
 ms.localizationpriority: medium
 ---
 
 # Visual Studio Code for Office Scripts (preview)
 
-[Visual Studio Code on the web](https://vscode.dev/) lets users edit anything from anywhere. Connect your Office Scripts experience to this popular code editor to start scripting outside of the workbook.
+[Visual Studio Code for the Web](https://vscode.dev/) lets users edit anything from anywhere. Connect your Office Scripts experience to this popular code editor to start scripting outside of the workbook.
 
 :::image type="content" source="../images/vscode-script-editor.png" alt-text="An Excel on the web window with the Code Editor open next to a VS Code on the web window with an open script.":::
 
