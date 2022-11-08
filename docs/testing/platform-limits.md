@@ -1,7 +1,7 @@
 ---
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel on the web.
-ms.date: 01/31/2022
+ms.date: 11/07/2022
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,8 @@ Excel for the web has the following limitations when making calls to the workboo
 
 If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. For an example, see the [Write a large dataset](../resources/samples/write-large-dataset.md) sample. You can also use APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) to target specific cells instead of large ranges.
 
+Excel limits that aren't specific to Office Scripts can be found in the article [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).
+
 ### Power Automate
 
 When using Office Scripts with Power Automate, each user is limited to **1,600 calls to the Run Script action per day**. This limit resets at 12:00 AM UTC.
@@ -56,7 +58,7 @@ The Power Automate platform also has usage limitations, which can be found in th
 
 ## See also
 
+- [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
 - [Troubleshoot Office Scripts](troubleshooting.md)
 - [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
-- [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
