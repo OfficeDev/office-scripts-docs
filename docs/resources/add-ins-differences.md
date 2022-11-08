@@ -33,7 +33,7 @@ Office Scripts do not support workbook-level [events](/office/dev/add-ins/excel/
 
 ### UX/UI controls
 
-Office Scripts can only interact with the workbook, not the task pane. If you need authentication, dialog windows, or additional UX/UI controls, you'll need to create an Office Add-in instead of an Office Script.
+Office Scripts can only interact with the workbook, not the task pane. If you need authentication, dialog windows, or additional UX and UI controls, you'll need to create an Office Add-in instead of an Office Script.
 
 ## See also
 

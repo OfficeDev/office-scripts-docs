@@ -1,7 +1,7 @@
 ---
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
-ms.date: 10/01/2022
+ms.date: 11/07/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,6 +21,8 @@ Excel for the web has the following limitations when making calls to the workboo
 - A range is limited to **five million cells**.
 
 If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. For an example, see the [Write a large dataset](../resources/samples/write-large-dataset.md) sample. You can also use APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) to target specific cells instead of large ranges.
+
+Excel limits that aren't specific to Office Scripts can be found in the article [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).
 
 ### Power Automate
 
@@ -58,7 +60,13 @@ Some Office Scripts APIs may not be supported by Excel for Windows or Excel for 
 
 ## See also
 
+- [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
 - [Troubleshoot Office Scripts](troubleshooting.md)
 - [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
+<<<<<<< HEAD
 - [Scripting Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
+||||||| d84f097
+- [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
+=======
+>>>>>>> main
