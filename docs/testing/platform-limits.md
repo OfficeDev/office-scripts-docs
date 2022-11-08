@@ -64,9 +64,3 @@ Some Office Scripts APIs may not be supported by Excel for Windows or Excel for 
 - [Troubleshoot Office Scripts](troubleshooting.md)
 - [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
-<<<<<<< HEAD
-- [Scripting Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
-||||||| d84f097
-- [Scripting Fundamentals for Office Scripts in Excel on the web](../develop/scripting-fundamentals.md)
-=======
->>>>>>> main
