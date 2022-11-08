@@ -17,7 +17,7 @@ The rest of this article describes on the main differences between Office Add-in
 
 ## Platform Support
 
-The following shows which features are supported by which platforms and products.
+The following table shows which features are supported by which platforms and products.
 
 [!INCLUDE [Platform support table](../includes/platform-support-table.md)]
 
@@ -31,7 +31,7 @@ Office Add-ins offer greater connectivity to external web services and libraries
 
 Office Scripts do not support workbook-level [events](/office/dev/add-ins/excel/excel-add-ins-events). Scripts are either triggered by users selecting the **Run** button for a script or through Power Automate. Every script runs the code in a single `main` function, then ends.
 
-### UX/UI controls
+### UX and UI controls
 
 Office Scripts can only interact with the workbook, not the task pane. If you need authentication, dialog windows, or additional UX and UI controls, you'll need to create an Office Add-in instead of an Office Script.
 
