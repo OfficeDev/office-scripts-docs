@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 The scenario idea and script used in this sample was contributed by Office Scripts community member [Brian Gonzalez](https://github.com/b-gonzalez).
 
-In this scenario, you'll create a time sheet for an employee that allows them to record their start and end times with the press of a [button](../../develop/script-buttons.md). Based on what's previously been recorded, pressing the button will either start their day (clock in) or end their day (clock out).
+In this scenario, you'll create a time sheet for an employee that allows them to record their start and end times with a [button](../../develop/script-buttons.md). Based on what's previously been recorded, selecting the button will either start their day (clock in) or end their day (clock out).
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="A table with three columns ('Clock In', 'Clock Out', and 'Duration') and a button labeled 'Punch clock' in the workbook.":::
 
@@ -128,7 +128,7 @@ In this scenario, you'll create a time sheet for an employee that allows them to
 
 ## Run the script
 
-Press the **Punch clock** button to run the script. It either logs the current time under "Clock In" or "Clock Out", depending on what was previously entered.
+Select the **Punch clock** button to run the script. It either logs the current time under "Clock In" or "Clock Out", depending on what was previously entered.
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="The table and the 'Punch clock' button in the workbook.":::
 
