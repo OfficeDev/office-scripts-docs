@@ -15,7 +15,7 @@ There are limits on how much Excel data can be transferred at once and how many 
 
 ### Excel
 
-Excel for the web has the following limitations when making calls to the workbook through a script.
+Excel on the web has the following limitations when making calls to the workbook through a script.
 
 - Requests and responses are limited to **5MB**.
 - A range is limited to **five million cells**.
