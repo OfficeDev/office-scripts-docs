@@ -112,7 +112,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ### Script testing
 
-To test the script without using Power Automate, assign a value to `csv` before using it. Try adding the following code as the first line of the `main` function and selecting **Run**.
+To test the script without using Power Automate, assign a value to `csv` before using it. Add the following code as the first line of the `main` function and select **Run**.
 
 ```TypeScript
   csv = `1, 2, 3
