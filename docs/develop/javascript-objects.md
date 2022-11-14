@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Use built-in JavaScript objects in Office Scripts
 
-JavaScript provides several built-in objects that you can use in your Office Scripts, regardless of whether you're scripting in JavaScript or [TypeScript](../overview/code-editor-environment.md) (a superset of JavaScript). This article describes how you can use some of the built-in JavaScript objects in Office Scripts for Excel.
+JavaScript provides several built-in objects that you can use in your Office Scripts, regardless of whether you're scripting in JavaScript or [TypeScript](../overview/code-editor-environment.md) (a superset of JavaScript). This article describes how to use some of the built-in JavaScript objects in Office Scripts for Excel.
 
 > [!NOTE]
 > For a complete list of all built-in JavaScript objects, see Mozilla's [Standard built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) article.

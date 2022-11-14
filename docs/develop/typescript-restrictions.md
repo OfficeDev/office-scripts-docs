@@ -130,5 +130,5 @@ See [External API call support in Office Scripts](external-calls.md) for more in
 
 ## See also
 
-* [Scripting fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
+* [Fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 * [Improve the performance of your Office Scripts](web-client-performance.md)

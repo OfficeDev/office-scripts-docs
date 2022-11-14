@@ -48,7 +48,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     }
     ```
 
-1. Next, we need to get all the data from the table. That lets us look through each row with the script. Add the following code inside the `main` function.
+1. Next, you need to get all the data from the table. That lets us look through each row with the script. Add the following code inside the `main` function.
 
     ```TypeScript
     // Get the H1 worksheet.
@@ -71,7 +71,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
     }
     ```
 
-1. Now, we need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address. Add the following code to the end of the `main` function.
+1. Now, you need to figure out which person is on call right now. Their row will have a start and end date surrounding the current date. We'll write the script to assume only one person is on call at a time. Scripts can return arrays to handle multiple values, but you can return the first matching email address for this tutorial. Add the following code to the end of the `main` function.
 
     ```TypeScript
     // Look for the first row where today's date is between the row's start and end dates.
@@ -130,7 +130,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="The Scheduled cloud flow button in Power Automate.":::
 
-1. Now we need to set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2022. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
+1. Next, set the schedule for this flow. Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2022. Let's set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
 
     - **Flow name**: Notify On-Call Person
     - **Starting**: 1/3/22 at 1:00am

@@ -18,7 +18,7 @@ This tutorial teaches you how to use an Office Script for Excel with an automate
 
 ## Prepare the workbook
 
-Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
+Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, you need a workbook and worksheet with consistent names for Power Automate to reference.
 
 1. Create a new workbook named **MyWorkbook**.
 
@@ -57,7 +57,7 @@ Let's create a script that logs information from an email. We want to know which
 
 1. From within the Code Editor task pane, select **New Script**.
 
-2. The flow that we'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
+2. The flow that you'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
 
     ```TypeScript
     function main(
@@ -81,7 +81,7 @@ Let's create a script that logs information from an email. We want to know which
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
-4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
+4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
       // Parse the received date string to determine the day of the week.
