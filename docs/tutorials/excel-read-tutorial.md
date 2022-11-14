@@ -74,7 +74,7 @@ Over the rest of the tutorial, you'll normalize this data using a script. First,
 
 Now that your script can read data, use that data to modify the workbook. Make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
-1. Yse `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script.
+1. Use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script.
 
     ```TypeScript
     // Run the `Math.abs` method with the value at D2 and apply that value back to D2.
