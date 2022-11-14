@@ -15,7 +15,7 @@ Office Scripts run to completion with a manual button selection or as a step in 
 
 The rest of this article describes on the main differences between Office Add-ins and Office Scripts.
 
-## Platform Support
+## Platform support
 
 The following table shows which features are supported by which platforms and products.
 
