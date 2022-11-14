@@ -169,11 +169,11 @@ You'll develop a script that totals the grades for each point category. It will 
 
 1. Rename the script to **Grade Calculator** and save it.
 
-## Running the script
+## Run the script
 
 Run the **Grade Calculator** script on the only worksheet. The script totals the grades and assigns each student a letter grade. If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated. Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.
 
-### Before running the script
+### Before you run the script
 
 :::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="A worksheet that shows rows of scores for students.":::
 

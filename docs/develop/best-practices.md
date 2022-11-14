@@ -1,6 +1,6 @@
 ---
 title: Best practices in Office Scripts
-description: How to prevent common problems and write robust Office Scripts that can handle unexpected input or data.
+description: How to prevent common problems and write robust Office Scripts to handle unexpected input or data.
 ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
@@ -16,7 +16,7 @@ Excel does a lot of things. Most of them can be scripted. The Action Recorder re
 :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
 
 > [!IMPORTANT]
-> Occasionally, the Action Recorder may use an API that's not supported outside of Excel on the Web. Users of that script on other platforms receive a warning when viewing that script.
+> Occasionally, the Action Recorder may use an API that isn't supported outside of Excel on the web. Users of that script on other platforms receive a warning when viewing that script.
 
 ## Verify an object is present
 
