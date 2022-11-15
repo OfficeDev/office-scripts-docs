@@ -1,6 +1,6 @@
 ---
 title: Call scripts from a manual Power Automate flow
-description: A tutorial about using an Office Scripts in Power Automate through a manual trigger.
+description: A tutorial about how to use an Office Script in Power Automate through a manual trigger.
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
@@ -18,7 +18,7 @@ This tutorial teaches you how to run an Office Script for Excel through [Power A
 
 ## Prepare the workbook
 
-Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names that Power Automate can reference.
+Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, you need a workbook and worksheet with consistent names that Power Automate can reference.
 
 1. Create a new workbook named **MyWorkbook**.
 

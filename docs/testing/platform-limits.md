@@ -15,7 +15,7 @@ There are limits on how much Excel data can be transferred at once and how many 
 
 ### Excel
 
-Excel for the web has the following limitations when making calls to the workbook through a script.
+Excel on the web has the following limitations when making calls to the workbook through a script.
 
 - Requests and responses are limited to **5MB**.
 - A range is limited to **five million cells**.
@@ -47,7 +47,7 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 > [!NOTE]
 > Some browsers refer to this setting as "all cookies", instead of "third-party cookies".
 
-### Instructions for adjusting cookie settings in popular browsers
+### How to adjust cookie settings in popular browsers
 
 - [Chrome](https://support.google.com/chrome/answer/95647)
 - [Edge](https://support.microsoft.com/microsoft-edge/597f04f2-c0ce-f08c-7c2b-541086362bd2)

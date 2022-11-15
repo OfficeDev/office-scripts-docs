@@ -18,7 +18,7 @@ This tutorial teaches you the basics of recording, editing, and writing an Offic
 
 ## Add data and record a basic script
 
-First, we'll need some data and a small starting script.
+First, you'll need some data and a small starting script.
 
 1. Create a new workbook in [Excel for the Web](https://www.office.com/launch/excel).
 2. Copy the following fruit sales data and paste it into the worksheet, starting at cell **A1**.
@@ -97,7 +97,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
     }
     ```
 
-    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, we only have one sorting criteria, so we only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
+    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, you only have one sorting criteria, so you only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
 
 3. Run the script. You should see a table like this:
 

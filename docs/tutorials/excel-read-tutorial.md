@@ -10,7 +10,7 @@ ms.localizationpriority: high
 This tutorial teaches you how to read data from a workbook with an Office Script for Excel. You'll be writing a new script that formats a bank statement and normalizes the data in that statement. As part of that data clean-up, your script will read values from the transaction cells, apply a simple formula to each value, and write the resulting answer to the workbook. Reading data from the workbook lets you automate some of your decision making processes in the script.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ This tutorial teaches you how to read data from a workbook with an Office Script
 
 Scripts made with the Action Recorder can only write information to the workbook. With the Code Editor, you can edit and make scripts that also read data from a workbook.
 
-Let's make a script that reads data and acts based on what was read. We're going to work with a sample banking statement. This statement is a combined checking and credit statement. Unfortunately, they report balance changes differently. The checking statement gives income as positive credit and costs as negative debit. The credit statement does the opposite.
+Start by making a script that reads data and acts based on what was read. Throughout the tutorial, you'll work with a sample banking statement. This statement is a combined checking and credit statement. Unfortunately, the bank reports balance changes differently. The checking statement gives income as positive credit and costs as negative debit. The credit statement does the opposite.
 
-Over the rest of the tutorial, we will normalize this data using a script. First, let's learn how to read data from the workbook.
+Over the rest of the tutorial, you'll normalize this data using a script. First, you need to read data from the workbook.
 
 1. Create a new worksheet in the workbook you've used for the rest of the tutorial.
 2. Copy the following data and paste it into the new worksheet, starting at cell **A1**.
@@ -38,7 +38,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     |11/01/2019 |Checking |External Deposit | |1000 |
 
 3. Open **All Scripts** and select **New Script**.
-4. Let's clean up the formatting. This is a financial document, so let's change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Let's also fit the column width to the data.
+4. Clean up the formatting. This is a financial document, so have your script change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Also have your script fit the column width to the data.
 
     Replace the script contents with the following code:
 
@@ -55,7 +55,7 @@ Over the rest of the tutorial, we will normalize this data using a script. First
     }
     ```
 
-5. Now let's read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`).
+5. Now read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`).
 
     ```TypeScript
     // Get the value of cell D2.
@@ -72,9 +72,9 @@ Over the rest of the tutorial, we will normalize this data using a script. First
 
 ## Modify the value of a cell
 
-Now that we can read data, let's use that data to modify the workbook. We'll make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
+Now that your script can read data, use that data to modify the workbook. Make the value of the cell **D2** positive with the `Math.abs` function. The [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) object contains many functions to which your scripts have access. More information about `Math` and other built-in objects can be found at [Using built-in JavaScript objects in Office Scripts](../develop/javascript-objects.md).
 
-1. We'll use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script.
+1. Use `getValue` and `setValue` methods to change the value of the cell. These methods work on a single cell. When handling multi-cell ranges, you'll want to use `getValues` and `setValues`. Add the following code to the end of the script.
 
     ```TypeScript
     // Run the `Math.abs` method with the value at D2 and apply that value back to D2.
@@ -89,7 +89,7 @@ Now that we can read data, let's use that data to modify the workbook. We'll mak
 
 ## Modify the values of a column
 
-Now that we know how to read and write to a single cell, let's generalize the script to work on the entire **Debit** and **Credit** columns.
+Now that you know how to read and write to a single cell, you can generalize the script to work on the entire **Debit** and **Credit** columns.
 
 1. Remove the code that affects only a single cell (the previous absolute value code), such that your script now looks like this:
 
@@ -132,7 +132,7 @@ Now that we know how to read and write to a single cell, let's generalize the sc
     }
     ```
 
-    This portion of the script does several important tasks. First, it gets the values and row count of the used range. This lets us look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. We're avoiding zeroes so we can leave the blank cells as they were.
+    This portion of the script does several important tasks. First, it gets the values and row count of the used range. This lets the script look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. The script ignores zeroes, so you can leave the blank cells as they were.
 
 3. Run the script.
 
