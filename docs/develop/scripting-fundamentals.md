@@ -1,11 +1,11 @@
 ---
-title: Scripting fundamentals for Office Scripts in Excel
+title: Fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
-# Scripting fundamentals for Office Scripts in Excel
+# Fundamentals for Office Scripts in Excel
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn the critical parts of the TypeScript-based script code and how the Excel objects and APIs work together.
 

@@ -37,11 +37,9 @@ Office Scripts don't support Excel-level [events](/office/vba/excel/concepts/eve
 
 ## Power Automate
 
-Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. This means that as long as your workbook is stored in OneDrive (and accessible to Power Automate), a flow can run your scripts regardless of whether you and your organization use Excel's Windows or web application.
-
 VBA doesn't have a Power Automate connector. All supported VBA scenarios involve a user attending to the macro's execution.
 
-Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md) tutorial to start learning about Power Automate. You can also check out the [Automated task reminders](scenarios/task-reminders.md) sample to see Office Scripts connected to Teams through Power Automate in a real-world scenario.
+Office Scripts can be run through Power Automate. Your workbook can be updated through scheduled or event-driven flows, letting you automate workflows without even opening Excel. Try the [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md) tutorial to start learning about Power Automate. You can also check out the [Automated task reminders](scenarios/task-reminders.md) sample to see Office Scripts connected to Teams through Power Automate in a real-world scenario.
 
 ## See also
 

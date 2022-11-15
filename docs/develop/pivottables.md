@@ -148,5 +148,5 @@ The following code snippet adds a slicer for the "Type" field. It sets the selec
 
 ## See also
 
-- [Scripting fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
+- [Fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)

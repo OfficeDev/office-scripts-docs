@@ -99,5 +99,5 @@ As the Office Scripts platform expands to work with [Power Automate](https://flo
 
 ## See also
 
-- [Scripting fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
+- [Fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 - [MDN web docs: Loops and iteration](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)

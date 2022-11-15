@@ -20,11 +20,7 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 To use Office Scripts, you'll need the following.
 
-1. Excel for Windows or Excel on the web.
-
-    > [!TIP]
-    > Office Scripts are now available in Office on Mac for [Office Insiders](https://insider.office.com/).
-
+1. Excel for Windows, for Mac, or on the web.
 1. OneDrive for Business.
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
 
@@ -56,14 +52,14 @@ The Action Recorder records actions you take in Excel and saves them as a script
 
 :::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code used in this tutorial.":::
 
-Use the Code Editor to edit scripts recorded with the Action Recorder or make a brand to script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
+Use the Code Editor to edit scripts recorded with the Action Recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
 > [!TIP]
 > The Action Recorder has a **Copy as code** button to record actions into script code without saving the entire script.
 >
 > :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
 
-Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Scripting fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
+Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
 
 ## Share Office Scripts
 
@@ -88,7 +84,7 @@ Complete the [Office Scripts in Excel tutorial](../tutorials/excel-tutorial.md) 
 
 ## See also
 
-- [Scripting fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
+- [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
