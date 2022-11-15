@@ -1,7 +1,7 @@
 ---
 title: When to use Power Query or Office Scripts
 description: The scenarios that are best suited for both the Power Query and Office Scripts platforms.
-ms.date: 11/23/2021
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -43,7 +43,7 @@ Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) 
 
 ## Platform dependencies
 
-Office Scripts is currently only available for Excel on the web. Power Query is currently only available for Excel on Desktop. Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
+Office Scripts is currently available for Excel for Windows, for Mac, and on the web.. The full Power Query experience is currently [only available for Excel for Windows](/power-query/power-query-what-is-power-query#where-can-you-use-power-query). Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
 
 ## See also
 

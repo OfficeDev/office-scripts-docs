@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 The following samples are simple scripts for you to try on your own workbooks. To use them in Excel:
 
-1. Open a workbook in Excel on the web.
+1. Open a workbook in Excel.
 1. Open the **Automate** tab.
 1. Select **New Script**.
 1. Replace the entire script with the sample of your choice.
@@ -525,4 +525,4 @@ We welcome suggestions for new samples. If there is a common scenario that would
 
 * [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
 * [Office Scripts samples and scenarios](samples-overview.md)
-* [Record, edit, and create Office Scripts in Excel on the web](../../tutorials/excel-tutorial.md)
+* [Record, edit, and create Office Scripts in Excel](../../tutorials/excel-tutorial.md)

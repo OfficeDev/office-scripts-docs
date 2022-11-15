@@ -1,13 +1,13 @@
 ---
 title: Seasons greetings
-description: Learn how to use Office Scripts to show a singing tree in Excel on the web.
+description: Learn how to use Office Scripts to show a singing tree in Excel.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---
 
 # Seasons greetings
 
-This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing tree in Excel on the web using Office Scripts.
+This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing tree in Excel using Office Scripts.
 
 Enjoy!
 

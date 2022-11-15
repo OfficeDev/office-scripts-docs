@@ -1,11 +1,11 @@
 ---
-title: Record, edit, and create Office Scripts in Excel on the web
+title: Record, edit, and create Office Scripts in Excel
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
-ms.date: 05/23/2021
+ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
-# Record, edit, and create Office Scripts in Excel on the web
+# Record, edit, and create Office Scripts in Excel
 
 This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web. You'll record a script that applies some formatting to a sales record worksheet. You'll then edit the recorded script to apply more formatting, create a table, and sort that table. This record-then-edit pattern is an important tool to see what your Excel actions look like as code.
 
@@ -18,9 +18,9 @@ This tutorial teaches you the basics of recording, editing, and writing an Offic
 
 ## Add data and record a basic script
 
-First, we'll need some data and a small starting script.
+First, you'll need some data and a small starting script.
 
-1. Create a new workbook in Excel for the Web.
+1. Create a new workbook in [Excel for the Web](https://www.office.com/launch/excel).
 2. Copy the following fruit sales data and paste it into the worksheet, starting at cell **A1**.
 
     |Fruit |2018 |2019 |
@@ -97,7 +97,7 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
     }
     ```
 
-    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, we only have one sorting criteria, so we only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
+    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, you only have one sorting criteria, so you only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
 
 3. Run the script. You should see a table like this:
 
@@ -114,4 +114,4 @@ Let's convert this fruit sales data into a table. We'll use our script for the e
 
 ## Next steps
 
-Complete the [Read workbook data with Office Scripts in Excel on the web](excel-read-tutorial.md) tutorial. It teaches you how to read data from a workbook with an Office Script.
+Complete the [Read workbook data with Office Scripts in Excel](excel-read-tutorial.md) tutorial. It teaches you how to read data from a workbook with an Office Script.

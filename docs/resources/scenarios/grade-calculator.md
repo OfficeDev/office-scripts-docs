@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: A sample that determines the percentage and letter grades for a class of students.
-ms.date: 06/29/2021
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
 1. Download [grade-calculator.xlsx](grade-calculator.xlsx) to your OneDrive.
 
-1. Open the workbook with Excel for the web.
+1. Open the workbook in Excel.
 
 1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 
@@ -169,11 +169,11 @@ You'll develop a script that totals the grades for each point category. It will 
 
 1. Rename the script to **Grade Calculator** and save it.
 
-## Running the script
+## Run the script
 
-Run the **Grade Calculator** script on the only worksheet. The script will total the grades and assign each student a letter grade. If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated. Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.
+Run the **Grade Calculator** script on the only worksheet. The script totals the grades and assigns each student a letter grade. If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated. Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.
 
-### Before running the script
+### Before you run the script
 
 :::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="A worksheet that shows rows of scores for students.":::
 

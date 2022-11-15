@@ -1,7 +1,7 @@
 ---
 title: TypeScript restrictions in Office Scripts
 description: The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.
-ms.date: 03/08/2022
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -130,5 +130,5 @@ See [External API call support in Office Scripts](external-calls.md) for more in
 
 ## See also
 
-* [Scripting fundamentals for Office Scripts in Excel on the web](scripting-fundamentals.md)
+* [Fundamentals for Office Scripts in Excel](scripting-fundamentals.md)
 * [Improve the performance of your Office Scripts](web-client-performance.md)

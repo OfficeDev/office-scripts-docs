@@ -18,7 +18,7 @@ items:
       href: tutorials/excel-power-automate-trigger.md
     - name: Pass data from a script to Power Automate flow
       href: tutorials/excel-power-automate-returns.md
-  - name: Scripting fundamentals
+  - name: Script fundamentals
     href: develop/scripting-fundamentals.md
   - name: Concepts
     items:
