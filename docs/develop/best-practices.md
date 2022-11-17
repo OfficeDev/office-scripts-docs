@@ -1,7 +1,7 @@
 ---
 title: Best practices in Office Scripts
-description: How to prevent common problems and write robust Office Scripts that can handle unexpected input or data.
-ms.date: 12/29/2021
+description: How to prevent common problems and write robust Office Scripts to handle unexpected input or data.
+ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---
 
@@ -9,11 +9,14 @@ ms.localizationpriority: medium
 
 These patterns and practices are designed to help your scripts run successfully every time. Use them to avoid common pitfalls as you start automating your Excel workflow.
 
-## Use the Action Recorder to learn new features
+## Use the Action Recorder to learn new features (web-only)
 
 Excel does a lot of things. Most of them can be scripted. The Action Recorder records your Excel actions and translates them into code. This is the easiest way to learn about how different features work with Office Scripts. If you need code for a specific action, switch to the Action Recorder, perform the actions, select **Copy as code**, and paste the resulting code into your script.
 
 :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
+
+> [!IMPORTANT]
+> Occasionally, the Action Recorder may use an API that isn't supported outside of Excel on the web. Users of that script on other platforms receive a warning when viewing that script.
 
 ## Verify an object is present
 
@@ -135,7 +138,7 @@ Consider the following snippet that performs a large data update on a range.
 range.setValues(someLargeValues);
 ```
 
-If `someLargeValues` is larger than Excel for the web can handle, the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). The `try...catch` statement lets your script recognize this condition, without immediately ending the script and showing the default error.
+If `someLargeValues` is [larger than Excel on the web can handle](../testing/platform-limits.md#data-limits), the `setValues()` call fails. The script then also fails with a [runtime error](../testing/troubleshooting.md#runtime-errors). The `try...catch` statement lets your script recognize this condition, without immediately ending the script and showing the default error.
 
 One approach for giving the script user a better experience is to present them a custom error message. The following snippet shows a `try...catch` statement logging more error information to better help the reader.
 

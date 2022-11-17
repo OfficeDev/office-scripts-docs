@@ -21,7 +21,7 @@ Office Scripts errors fall into one of two categories:
 
 ### Compile-time errors
 
-Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They are also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error will give more details about the problem and suggest solutions. Compile-time errors should be addressed before running the script.
+Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They're also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error gives more details about the problem and suggests solutions. Compile-time errors should be addressed before running the script.
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text.":::
 
@@ -39,6 +39,8 @@ function main(workbook: ExcelScript.Workbook) {
   mySheet.getRange("A1");
 }
 ```
+
+Some runtime errors are caused by exceeding the limits of the platform, such as trying to write too much data at once with Excel on the web. See [Platform limits and requirements with Office Scripts](platform-limits.md) for a full list of potential pitfalls.
 
 ### Console messages
 
@@ -65,12 +67,13 @@ Logs do not affect the workbook.
 
 ## Automate tab not appearing or Office Scripts unavailable
 
-The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.
+The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel.
 
 1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
-1. [Check that your browser is supported](platform-limits.md#browser-support).
-1. [Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).
+1. [Ensure third-party cookies are enabled (when using Excel on the web)](platform-limits.md#third-party-cookies-for-excel-on-the-web).
 1. [Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).
+1. [Ensure that your admin has not configured a group policy to block Office Scripts (Windows only)](/deployoffice/configure-update-settings-microsoft-365-apps#use-group-policy-to-configure-update-settings-for-microsoft-365-apps).
+1. [Install WebView2 (Windows only)](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 1. Ensure you're not logged in as an external or guest user to your tenant.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]

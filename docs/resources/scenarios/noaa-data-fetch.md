@@ -21,7 +21,7 @@ For more information about working with JSON, read [Use JSON to pass data to and
 
 ## Setup instructions
 
-1. Open the workbook with Excel on the web.
+1. Open the workbook in Excel.
 
 1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 

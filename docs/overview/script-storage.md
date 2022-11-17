@@ -60,13 +60,13 @@ To specifically audit Office Scripts related activity as an admin, take the foll
     > [!IMPORTANT]
     > It may take an hour or two after turning on recording before all activities across the tenant are recorded.
 
-1. Set the desired search options and press **Search**. Filter **Activities** to **Ran script on workbook** to see any time a script was run. You can also filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
+1. Set the desired search options and select **Search**. Filter **Activities** to **Ran script on workbook** to see any time a script was run. You can also filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
 
     :::image type="content" source="../images/audit-log-example.png" alt-text="A few rows of audit log search results, including the 'Ran script on workbook' action and the upload and modification of an .osts file.":::
 
 ## See also
 
-- [Sharing Office Scripts in Excel for the Web](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](/microsoft-365/admin/manage/manage-office-scripts-settings)
 - [Undo the effects of Office Scripts](../testing/undo.md)

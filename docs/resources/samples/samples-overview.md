@@ -42,7 +42,7 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [External fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
-| [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel on the web using Office Scripts. |
+| [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel using Office Scripts. |
 | [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
@@ -69,7 +69,7 @@ We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob
 |---------|---------|
 | [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | The "Ready Player Zero" blog by Yutao Huang on the Excel Tech Community includes a script to model John Conway's [*The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). |
 | [Punch clock button](../scenarios/punch-clock.md) | This script was contributed by [Brian Gonzalez](https://github.com/b-gonzalez). The scenario features a script and a script button that records the current time. |
-| [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel on the web using Office Scripts. |
+| [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel using Office Scripts. |
 
 ## Leave a comment
 

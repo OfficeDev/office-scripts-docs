@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning Office Scripts in Excel, including tutorials, conceptual articles, and code samples.
-ms.date: 09/12/2022
+ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
@@ -23,7 +23,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <h3>Overview</h3>
-                        <p><a href="overview/excel.md">Learn about the components of Office Scripts in Excel on the web: the Action Recorder and the Code Editor.</a></p>
+                        <p><a href="overview/excel.md">Learn about the components of Office Scripts in Excel: the Action Recorder and the Code Editor.</a></p>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <h3>Getting started</h3>
-                        <p><a href="tutorials/excel-tutorial.md">Complete the tutorial to learn how to record, edit, and create Office Scripts in Excel on the web.</a></p>
+                        <p><a href="tutorials/excel-tutorial.md">Complete the tutorial to learn how to record, edit, and create Office Scripts in Excel.</a></p>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <h3>Scripting fundamentals</h3>
-                        <p><a href="develop/scripting-fundamentals.md">Learn the fundamental concepts of scripting with Office Scripts in Excel on the web.</a></p>
+                        <p><a href="develop/scripting-fundamentals.md">Learn the fundamental concepts of scripting with Office Scripts in Excel.</a></p>
                     </div>
                 </div>
             </div>

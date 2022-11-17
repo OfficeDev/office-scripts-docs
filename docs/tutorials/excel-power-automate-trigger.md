@@ -1,16 +1,16 @@
 ---
 title: Pass data to scripts in an automatically-run Power Automate flow
-description: A tutorial about running Office Scripts for Excel on the web through Power Automate when mail is received and passing flow data to the script.
-ms.date: 06/10/2022
+description: A tutorial about running Office Scripts for Excel through Power Automate when mail is received and passing flow data to the script.
+ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
 
 # Pass data to scripts in an automatically-run Power Automate flow
 
-This tutorial teaches you how to use an Office Script for Excel on the web with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
+This tutorial teaches you how to use an Office Script for Excel with an automated [Power Automate](https://flow.microsoft.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial. If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial. If you're new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This tutorial teaches you how to use an Office Script for Excel on the web with 
 
 ## Prepare the workbook
 
-Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, we need a workbook and worksheet with consistent names for Power Automate to reference.
+Power Automate shouldn't use [relative references](../testing/power-automate-troubleshooting.md#avoid-relative-references) like `Workbook.getActiveWorksheet` to access workbook components. So, you need a workbook and worksheet with consistent names for Power Automate to reference.
 
 1. Create a new workbook named **MyWorkbook**.
 
@@ -57,7 +57,7 @@ Let's create a script that logs information from an email. We want to know which
 
 1. From within the Code Editor task pane, select **New Script**.
 
-2. The flow that we'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script:
+2. The flow that you'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
 
     ```TypeScript
     function main(
@@ -69,7 +69,7 @@ Let's create a script that logs information from an email. We want to know which
     }
     ```
 
-3. The script needs access to the workbook's table and PivotTable. Add the following code to the body of the script, after the opening `{`:
+3. The script needs access to the workbook's table and PivotTable. Add the following code to the body of the script, after the opening `{`.
 
     ```TypeScript
     // Get the email table.
@@ -81,7 +81,7 @@ Let's create a script that logs information from an email. We want to know which
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
-4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so we can easily get the day of the week. After doing that, we'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`:
+4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
       // Parse the received date string to determine the day of the week.
@@ -89,7 +89,7 @@ Let's create a script that logs information from an email. We want to know which
       let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
     ```
 
-5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`:
+5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Remove the reply tag from the email subject to group emails on the same thread.
@@ -97,7 +97,7 @@ Let's create a script that logs information from an email. We want to know which
     subjectText = subjectText.replace("RE: ", "");
     ```
 
-6. Now that the email data has been formatted to our liking, let's add a row to the email table. Add the following code to the end of your script, before the closing `}`:
+6. Now that the email data has been formatted to our liking, let's add a row to the email table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Add the parsed text to the table.
@@ -113,7 +113,7 @@ Let's create a script that logs information from an email. We want to know which
 
 8. Rename your script **Record Email** and select **Save script**.
 
-Your script is now ready for a Power Automate workflow. It should look like the following script:
+Your script is now ready for a Power Automate workflow. It should look like the following script.
 
 ```TypeScript
 function main(
