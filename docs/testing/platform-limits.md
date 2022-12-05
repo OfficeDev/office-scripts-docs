@@ -28,8 +28,8 @@ Excel limits that aren't specific to Office Scripts can be found in the article 
 
 The following limitations with the Power Automate platform are the ones you'll most likely encounter.
 
-- Each user is limited to **1,600 calls** to the Run Script action per day. This limit resets at 12:00 AM UTC.
-- There is a **120-second timeout** for [synchronous Power Automate operations](/power-automate/limits-and-config#timeout). For long-running scripts, you must either [optimize your script](../develop/web-client-performance.md) or split your Excel automation into multiple scripts.
+- Each user is limited to **1,600 calls** to the Run script action per day. This limit resets at 12:00 AM UTC.
+- There's a **120-second timeout** for [synchronous Power Automate operations](/power-automate/limits-and-config#timeout). For long-running scripts, you must either [optimize your script](../develop/web-client-performance.md) or split your Excel automation into multiple scripts.
 - The maximum size of parameters passed to the Run script action is **30,000,000 bytes (28.6MB)**.
 
 Additional Power Automate platform usage limitations can be found in the following articles.
