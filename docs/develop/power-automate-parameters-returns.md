@@ -1,6 +1,6 @@
 ---
 title: Script parameter and return types in Power Automate
-description: 
+description: How and why to pass data to and from Office Scripts with Power Automate.
 ms.date: 12/19/2022
 ms.localizationpriority: medium
 ---
