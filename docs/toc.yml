@@ -20,6 +20,8 @@ items:
       href: tutorials/excel-power-automate-returns.md
   - name: Script fundamentals
     href: develop/scripting-fundamentals.md
+  - name: Run scripts with Power Automate
+    href: develop/power-automate-integration.md
   - name: Concepts
     items:
     - name: Best practices in Office Scripts
@@ -32,10 +34,10 @@ items:
       href: develop/external-calls.md
     - name: File storage and ownership
       href: overview/script-storage.md
+    - name: Parameter and return types in Power Automate
+      href: develop/power-automate-parameters-returns.md
     - name: Run scripts with buttons
       href: develop/script-buttons.md
-    - name: Run scripts with Power Automate
-      href: develop/power-automate-integration.md
     - name: Use JSON to pass data
       href: develop/use-json.md
     - name: Use .xlsm files in Power Automate flows

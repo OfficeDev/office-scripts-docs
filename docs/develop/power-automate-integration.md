@@ -1,7 +1,7 @@
 ---
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
-ms.date: 10/01/2022
+ms.date: 12/19/2022
 ms.localizationpriority: medium
 ---
 
@@ -46,61 +46,13 @@ This opens a task pane with several options to begin connecting your Office Scri
 
 ## Data transfer in flows for scripts
 
-Power Automate lets you pass pieces of data between steps of your flow. Scripts can be configured to accept whatever types of information you need and return anything from your workbook that you want in your flow. Input for your script is specified by adding parameters to the `main` function (in addition to `workbook: ExcelScript.Workbook`). Output from the script is declared by adding a return type to `main`.
+Power Automate lets you pass pieces of data between steps of your flow. Scripts can be configured to accept whatever types of information you need and return anything from your workbook that you want in your flow.
 
-> [!NOTE]
-> When you create a "Run Script" block in your flow, the accepted parameters and returned types are populated. If you change the parameters or return types of your script, you'll need to redo the "Run script" block of your flow. This ensures the data is being parsed correctly.
+Learn the details how to pass data to and from your scripts with the following documentation.
 
-The following sections cover the details of input and output for scripts used in Power Automate. If you'd like a hands-on approach to learning this topic, try out the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) tutorial or explore the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario.
-
-### `main` Parameters: Pass data to a script
-
-All script input is specified as additional parameters for the `main` function. For example, if you wanted a script to accept a `string` that represents a name as input, you would change the `main` signature to `function main(workbook: ExcelScript.Workbook, name: string)`.
-
-When you're configuring a flow in Power Automate, you can specify script input as static values, [expressions](/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](/connectors/).
-
-#### Type restrictions
-
-When adding input parameters to a script's `main` function, consider the following allowances and restrictions. These also apply to the return type of the script.
-
-1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name doesn't matter.
-
-1. The types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported.
-
-1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
-
-1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left", 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
-
-1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
-
-    ```TypeScript
-    // The Employee object is supported because Position is also composed of supported types.
-    interface Employee {
-        name: string;
-        job: Position;
-    }
-
-    interface Position {
-        id: number;
-        title: string;
-    }
-    ```
-
-1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example.
-
-    ```TypeScript
-    function main(workbook: ExcelScript.Workbook): {name: string, email: string}
-    ```
-
-#### Optional and default parameters
-
-1. Optional parameters are allowed and are denoted with the optional modifier `?` (for example, `function main(workbook: ExcelScript.Workbook, Name?: string)`).
-
-1. Default parameter values are allowed (for example `function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`.
-
-### Return data from a script
-
-Scripts can return data from the workbook to be used as dynamic content in a Power Automate flow. The [same type restrictions listed previously](#type-restrictions) apply to the return type. To return an object, add the return type syntax to the `main` function. For example, if you wanted to return a `string` value from the script, your `main` signature would be `function main(workbook: ExcelScript.Workbook): string`.
+- Learn by doing with the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) and [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md) tutorials.
+- Try the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario
+- Read [Script parameter and return types in Power Automate](power-automate-parameters-returns.md) for the technical TypeScript details.
 
 ## Example
 
@@ -132,8 +84,7 @@ function main(
 ## See also
 
 - [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
-- [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md)
-- [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md)
+- [Script parameter and return types in Power Automate](power-automate-parameters-returns.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
 - [Get started with Power Automate](/power-automate/getting-started)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)
