@@ -78,5 +78,5 @@ When adding input parameters and return values, consider the following allowance
 ## See also
 
 - [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
-- [Run Office Scripts with Power Automate](power-automate-integration.md.md)
+- [Run Office Scripts with Power Automate](power-automate-integration.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
