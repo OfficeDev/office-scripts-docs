@@ -7,14 +7,14 @@ ms.localizationpriority: medium
 
 # Script parameter and return types in Power Automate
 
-Power Automate chains together separate programs into a single automated workflow. Each connector has different parameters it accepts and different values it returns. Your scripts can be written to expand the Run script Power Automate action to get additional input or give output.
+Power Automate chains together separate programs into a single automated workflow. Each connector has different parameters it accepts and different values it returns. Your scripts can be written to expand the "Run script" Power Automate action to get additional input or give output.
 
 Input for your script is specified by adding parameters to the `main` function. Output from the script is declared by adding a return type to `main`.
 
 > [!NOTE]
 > When you create a "Run script" block in your flow, the accepted parameters and returned types are populated. If you change the parameters or return types of your script, you'll need to redo the "Run script" block of your flow. This ensures the data is being parsed correctly.
 
-## `main` Parameters: Pass data to a script
+## `main` parameters: Pass data to a script
 
 All script input is specified as additional parameters for the `main` function. New parameters are added after the mandatory `workbook: ExcelScript.Workbook` parameter. For example, if you wanted a script to accept a `string` that represents a name as input, you would change the `main` signature to `function main(workbook: ExcelScript.Workbook, name: string)`.
 
