@@ -113,7 +113,7 @@ function getPropertiesFromJson(obj: object) {
 
 There are two ways to import JSON data into your workbook through an Office Script.
 
-- As a [parameter](power-automate-integration.md#main-parameters-pass-data-to-a-script) with a Power Automate flow.
+- As a [parameter](power-automate-parameters-returns.md) with a Power Automate flow.
 - With a `fetch` call to an [external web service](external-calls.md).
 
 #### Modify the sample to work with Power Automate

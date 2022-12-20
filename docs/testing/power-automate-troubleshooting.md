@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
-ms.date: 11/01/2021
+ms.date: 12/19/2022
 ms.localizationpriority: medium
 ---
 
@@ -74,14 +74,14 @@ Power Automate allows users to pass arrays to connectors as a variable or as sin
 
 Excel files don't have an inherent location or timezone. Every time a user opens the workbook, their session uses that user's local timezone for date calculations. Power Automate always uses UTC.
 
-If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://flow.microsoft.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [`main` Parameters: Pass data to a script](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) to learn how to provide that time information for the script.
+If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://flow.microsoft.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [Script parameter and return types in Power Automate](../develop/power-automate-parameters-returns.md) to learn how to provide that time information for the script.
 
 ## Script parameter fields or returned output not appearing in Power Automate
 
 There are two reasons that the parameters or returned data of a script are not accurately reflected in the Power Automate flow builder.
 
 - The script signature (the parameters or return value) has changed since the **Excel Business (Online)** connector was added.
-- The script signature uses unsupported types. Verify your types against the lists under the [parameters](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script) and [returns](../develop/power-automate-integration.md#return-data-from-a-script) sections of [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) article.
+- The script signature uses unsupported types. Verify your types against the [restrictions for Office Scripts parameter and return types](../develop/power-automate-parameters-returns.md).
 
 The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
 
