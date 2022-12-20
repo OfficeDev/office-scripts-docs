@@ -48,7 +48,7 @@ This opens a task pane with several options to begin connecting your Office Scri
 
 Power Automate lets you pass pieces of data between flow actions. Scripts can be configured to accept the information you need and return what you want from your workbook to your flow. Data is passed to scripts as static values, [expressions](/power-automate/use-expressions-in-conditions), or dynamic content. Details on an individual service's connector can be found in the [Power Automate Connector documentation](/connectors/).
 
-Learn the details how to pass data to and from your scripts with the following documentation.
+Learn the details of how to pass data to and from your scripts with the following documentation.
 
 - Learn by doing with the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) and [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md) tutorials.
 - Try the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario to see everything in action.
