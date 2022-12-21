@@ -15,11 +15,12 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 ## Solution
 
 1. Create a new Excel file in your OneDrive. The file name "Combination.xlsx" is used in this sample.
-1. Add the two scripts from this sample to the new file.
+1. Create and save the two scripts from this sample.
 1. Create a folder in your OneDrive and add one or more workbooks with data to it. The folder name "output" is used in this sample.
-1. Build a flow (as described later) to get all the files that folder.
-1. Use the **Return worksheet data** script to get the data from every worksheet in each of the workbooks.
-1. Use the **Add worksheets** script to create a new worksheet in a single workbook for every worksheet in all the other files.
+1. Build a flow (as described later) to perform these steps:
+    1. Get all the files the "output" folder.
+    1. Use the **Return worksheet data** script to get the data from every worksheet in each of the workbooks.
+    1. Use the **Add worksheets** script to create a new worksheet in the "Combination.xlsx" workbook for every worksheet in all the other files.
 
 ## Sample code: Return worksheet data
 
@@ -61,8 +62,7 @@ function main(workbook: ExcelScript.Workbook, workbookName: string, worksheetInf
 {
   // Add each new worksheet.
   worksheetInformation.forEach((value) => {
-    let worksheetName = `${workbookName}.${value.name}`;
-    let sheet = workbook.addWorksheet(worksheetName);
+    let sheet = workbook.addWorksheet(`${workbookName}.${value.name}`);
 
     // If there was any data in the worksheet, add it to a new range.
     if (value.data) {
@@ -109,8 +109,8 @@ interface WorksheetData {
 
 ## Troubleshooting
 
-- **A resource with the same name or identifier already exists**: This error likely indicates the "Combination.xlsx" workbook already ha a worksheet with the same name. This will happen if you run the flow multiple times with the same workbooks. Create a new workbook to store the combined data each time or use different file names in the "output" folder.
-- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't match [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. One solution is to replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string.
+- **A resource with the same name or identifier already exists**: This error likely indicates the "Combination.xlsx" workbook already has a worksheet with the same name. This will happen if you run the flow multiple times with the same workbooks. Create a new workbook each time to store the combined data or use different file names in the "output" folder.
+- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. One solution is to replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
 
   ```TypeScript
   let worksheetNumber = 1;
