@@ -110,10 +110,17 @@ interface WorksheetData {
 ## Troubleshooting
 
 - **A resource with the same name or identifier already exists**: This error likely indicates the "Combination.xlsx" workbook already has a worksheet with the same name. This will happen if you run the flow multiple times with the same workbooks. Create a new workbook each time to store the combined data or use different file names in the "output" folder.
-- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. One solution is to replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
+- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. If the worksheet names are more than 30 characters replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
 
   ```TypeScript
   let worksheetNumber = 1;
   let worksheetName = `${workbookName}.${value.name}`;
   let sheet = workbook.addWorksheet(`${worksheetName.substr(0,30)}${worksheetNumber++}`);
   ```
+
+  Additionally, if the workbook names are longer than 30 characters, you'll need to shorten them in the flow. First, you must create a variable in the flow to track the workbook count. This will avoid identical shortened names being passed to the script. Add an **Initialize variable** action before the flow (of **Type** "Integer") and an **Increment variable** action between the two **Run script** actions. Then, instead of using *Name* as the **workbookName** in "Run script 2", use the expression `substring(items('Apply_to_each')?['Name'],0,25)` and the dynamic content from your variable. This shortens the workbook names to 25 characters and appends the current workbook number to the string being passed to the script.
+
+  :::image type="content" source="../../images/combine-worksheets-flow-workbook-name-shorten.png" alt-text="The Initialize variable and Increment variable steps added to the flow.":::
+
+  > [!NOTE]
+  > Rather than making the flow and script more complicated, it might be easier to guarantee the file and worksheet names are short enough.
