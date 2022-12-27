@@ -1,7 +1,7 @@
 ---
 title: Combine workbooks into a single workbook
 description: Learn how to use Office Scripts and Power Automate to create merge worksheets from other workbooks into a single workbook.
-ms.date: 12/21/2022
+ms.date: 12/27/2022
 ms.localizationpriority: medium
 ---
 
@@ -110,7 +110,7 @@ interface WorksheetData {
 ## Troubleshooting
 
 - **A resource with the same name or identifier already exists**: This error likely indicates the "Combination.xlsx" workbook already has a worksheet with the same name. This will happen if you run the flow multiple times with the same workbooks. Create a new workbook each time to store the combined data or use different file names in the "output" folder.
-- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. If the worksheet names are more than 30 characters replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
+- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. If the worksheet names will be more than 30 characters replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
 
   ```TypeScript
   let worksheetNumber = 1;
