@@ -101,7 +101,7 @@ interface WorksheetData {
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
     > [!NOTE]
-    > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array.
+    > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array. Do this before entering *result*.
     >
     > :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
