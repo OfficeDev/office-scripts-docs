@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 10/05/2022
+ms.date: 01/09/2023
 ms.localizationpriority: high
 ---
 
@@ -48,6 +48,8 @@ As an example, imagine at the start of each work day you open a .csv file from a
 
 The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
+More information about the Action Recorder can be found in the article [Record your actions as Office Script](https://support.microsoft.com/office/record-your-actions-as-office-scripts-453ab58d-708f-40a9-ab87-99a743bfa69a).
+
 ## Code Editor
 
 :::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code used in this tutorial.":::
@@ -88,6 +90,4 @@ Complete the [Office Scripts in Excel tutorial](../tutorials/excel-tutorial.md) 
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Troubleshooting Office Scripts](../testing/troubleshooting.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Introduction to Office Scripts in Excel](https://support.microsoft.com/office/9fbe283d-adb8-4f13-a75b-a81c6baf163a)
 - [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
-- [Office Scripts Dev Center](https://developer.microsoft.com/office-scripts)
