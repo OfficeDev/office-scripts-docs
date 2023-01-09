@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning Office Scripts in Excel, including tutorials, conceptual articles, and code samples.
-ms.date: 10/01/2022
+ms.date: 01/09/2023
 ms.localizationpriority: high
 ---
 
@@ -124,11 +124,11 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
+                            <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><img src="images/index-landing-page/i_share.svg" alt="How to share scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>Admin settings</h3></a>
+                        <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><h3>How to share scripts</h3></a>
                     </div>
                 </div>
             </div>
@@ -140,11 +140,11 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Licensing information</h3></a>
+                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>Admin settings</h3></a>
                     </div>
                 </div>
             </div>
