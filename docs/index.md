@@ -124,11 +124,11 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://support.microsoft.com/en-us/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><img src="images/index-landing-page/i_share.svg" alt="How to share scripts" /></a>
+                            <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><img src="images/index-landing-page/i_share.svg" alt="How to share scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://support.microsoft.com/en-us/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><h3>How to share scripts</h3></a>
+                        <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><h3>How to share scripts</h3></a>
                     </div>
                 </div>
             </div>
