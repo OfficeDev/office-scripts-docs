@@ -1,7 +1,7 @@
 ---
 title: Combine workbooks into a single workbook
 description: Learn how to use Office Scripts and Power Automate to create merge worksheets from other workbooks into a single workbook.
-ms.date: 12/21/2022
+ms.date: 12/27/2022
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 1. Create and save the two scripts from this sample.
 1. Create a folder in your OneDrive and add one or more workbooks with data to it. The folder name "output" is used in this sample.
 1. Build a flow (as described in the [Power Automate flow](#power-automate-flow-combine-worksheets-into-a-single-workbook) section of this article) to perform these steps:
-    1. Get all the files the "output" folder.
+    1. List all the files the "output" folder.
     1. Use the **Return worksheet data** script to get the data from every worksheet in each of the workbooks.
     1. Use the **Add worksheets** script to create a new worksheet in the "Combination.xlsx" workbook for every worksheet in all the other files.
 
@@ -101,7 +101,7 @@ interface WorksheetData {
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
     > [!NOTE]
-    > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array.
+    > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array. Do this before entering *result*.
     >
     > :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
@@ -110,10 +110,19 @@ interface WorksheetData {
 ## Troubleshooting
 
 - **A resource with the same name or identifier already exists**: This error likely indicates the "Combination.xlsx" workbook already has a worksheet with the same name. This will happen if you run the flow multiple times with the same workbooks. Create a new workbook each time to store the combined data or use different file names in the "output" folder.
-- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. One solution is to replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name.
+- **The argument is invalid or missing or has an incorrect format**: This error can mean that the generated  worksheet name doesn't meet [Excel's requirements](https://support.microsoft.com/office/rename-a-worksheet-3f1f7148-ee83-404d-8ef0-9ff99fbad1f9). This is likely because the name is too long. If the worksheet names will be more than 30 characters replace the code in "Add worksheets" that calls `addWorksheet` with something that shortens the string. Since the workbook name itself might be too long, add an incrementing number to the end of the worksheet name. Declare this number outside of the `forEach` loop.
 
   ```TypeScript
   let worksheetNumber = 1;
-  let worksheetName = `${workbookName}.${value.name}`;
-  let sheet = workbook.addWorksheet(`${worksheetName.substr(0,30)}${worksheetNumber++}`);
+  // Add each new worksheet.
+  worksheetInformation.forEach((value) => {
+      let worksheetName = `${workbookName}.${value.name}`;
+      let sheet = workbook.addWorksheet(`${worksheetName.substr(0,30)}${worksheetNumber++}`);
   ```
+
+  Additionally, if the workbook names are longer than 30 characters, you'll need to shorten them in the flow. First, you must create a variable in the flow to track the workbook count. This will avoid identical shortened names being passed to the script. Add an **Initialize variable** action before the flow (of **Type** "Integer") and an **Increment variable** action between the two **Run script** actions. Then, instead of using *Name* as the **workbookName** in "Run script 2", use the expression `substring(items('Apply_to_each')?['Name'],0,min(length(items('Apply_to_each')?['Name']),20))` and the dynamic content from your variable. This shortens the workbook names to 20 characters and appends the current workbook number to the string being passed to the script.
+
+  :::image type="content" source="../../images/combine-worksheets-flow-workbook-name-shorten.png" alt-text="The Initialize variable and Increment variable steps added to the flow.":::
+
+  > [!NOTE]
+  > Rather than making the flow and script more complicated, it might be easier to guarantee the file and worksheet names are short enough.
