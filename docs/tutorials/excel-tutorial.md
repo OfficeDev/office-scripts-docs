@@ -20,7 +20,7 @@ This tutorial teaches you the basics of recording, editing, and writing an Offic
 
 First, you'll need some data and a small starting script.
 
-1. Create a new workbook in [Excel for the Web](https://www.office.com/launch/excel). The Action Recorder is currently only available in Excel for the web, so that's where you must start this tutorial.
+1. Create a new workbook in [Excel on the web](https://www.office.com/launch/excel). The Action Recorder is currently only available in Excel on the web, so that's where you must start this tutorial.
 2. Copy the following fruit sales data and paste it into the worksheet, starting at cell **A1**.
 
     |Fruit |2018 |2019 |

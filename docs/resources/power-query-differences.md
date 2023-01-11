@@ -17,7 +17,7 @@ We recommend Power Query when dealing with data sources from supported platforms
 
 Power Query has [built-in data connections](https://powerquery.microsoft.com/connectors/) to hundreds of sources. Power Query is specially designed for data retrieval, transformation, and combination tasks. When you need data from one of those sources, Power Query gives you a no-code way of bringing that data into Excel in the shape you need.
 
-These Power Query connections are designed for large datasets. They do not have the same [transfer limits](../testing/platform-limits.md) as Power Automate or Excel for the web.
+These Power Query connections are designed for large datasets. They do not have the same [transfer limits](../testing/platform-limits.md) as Power Automate or Excel on the web.
 
 Office Scripts offer a lightweight solution for smaller data sources or data sources not covered by Power Query connectors. This includes [using `fetch` or REST APIs](../develop/external-calls.md) or getting information from ad-hoc data sources, such as a [Teams adaptive card](../resources/scenarios/task-reminders.md).
 
