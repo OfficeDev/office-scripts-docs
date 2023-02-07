@@ -1,13 +1,17 @@
 ---
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
-ms.date: 12/05/2022
+ms.date: 02/07/2023
 ms.localizationpriority: medium
 ---
 
 # Platform limits and requirements with Office Scripts
 
 There are some platform limitations of which you should be aware when developing Office Scripts. This article details the browser support and data limits for Office Scripts for Excel.
+
+## Platform support
+
+[!INCLUDE [Platform requirements](../includes/platform-requirements.md)]
 
 ## Data limits
 
