@@ -486,6 +486,7 @@ function main(workbook: ExcelScript.Workbook) {
 #### Before the script
 
 | Month | Price | Units Sold | Total |
+|--|--|--|--|
 | Jan | 45 | 5 |  |
 | Feb | 45 | 3 |  |
 | Mar | 45 | 6 |  |
@@ -493,6 +494,7 @@ function main(workbook: ExcelScript.Workbook) {
 #### After the script
 
 | Month | Price | Units Sold | Total |
+|--|--|--|--|
 | Jan | 45 | 5 | 225 |
 | Feb | 45 | 3 | 135 |
 | Mar | 45 | 6 | 270 |
