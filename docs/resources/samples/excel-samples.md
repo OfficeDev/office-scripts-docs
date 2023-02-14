@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Add data to a range
 
-This script adds a set of values to a new worksheet. The values start in cell **A1**. The data used in this script is pre-defined, but could be sourced from other places in or out of the workbook.
+This script adds a set of values to a new worksheet. The values start in cell **A1**. The data used in this script is predefined, but could be sourced from other places in or out of the workbook.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -277,7 +277,7 @@ function main(workbook: ExcelScript.Workbook) {
       return;
     }
 
-    // If no columns are hidden, log message, else, show columns
+    // If no columns are hidden, log message, else show columns.
     if (range.getColumnHidden() == false) {
       console.log(`No columns hidden`);
     } else {
@@ -477,9 +477,10 @@ function main(workbook: ExcelScript.Workbook) {
   const nameOfColumn2 = table.getColumn(2).getName();
   const nameOfColumn3 = table.getColumn(3).getName();
 
-  // Set the formula of the fourth column to be that row's column 2 and 3 values.
+  // Set the formula of the fourth column to be the product of the values found
+  // in that row's second and third columns.
   const combinedColumn = table.getColumn(4).getRangeBetweenHeaderAndTotal();
-  combinedColumn.setFormula(`=[@[${nameOfColumn2}]]*[@[${nameOfColumn3}]]`)
+  combinedColumn.setFormula(`=[@[${nameOfColumn2}]]*[@[${nameOfColumn3}]]`);
 }
 ```
 
