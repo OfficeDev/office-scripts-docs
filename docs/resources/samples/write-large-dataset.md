@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 05/13/2021
+ms.date: 02/22/2023
 ms.localizationpriority: medium
 ---
 
@@ -9,9 +9,11 @@ ms.localizationpriority: medium
 
 The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).
 
+The first part of the sample shows how to write a large dataset only within Excel. The second part expands the example to be part ofa Power Automate flow. This is necessary if your script takes longer to run that the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
+
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
-## Sample code: Write a large dataset
+## Sample 1: Write a large dataset in batches
 
 This script writes rows of a range in smaller parts. It selects 1000 cells to write at a time. Run the script on a blank worksheet to see the update batches in action. The console output gives further insight into what's happening.
 
@@ -141,6 +143,21 @@ function getRandomString(length: number): string {
 }
 ```
 
-## Training video: Write a large dataset
+### Training video: Write a large dataset
 
 [Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).
+
+## Sample 2: Write data in batches from a Power Automate flow
+
+For this sample, you'll need to complete the following steps.
+
+1. Create a workbook in OneDrive named **SampleData.xlsx**.
+1. Create a second workbook in OneDrive named **TargetWorkbook.xlsx**.
+
+
+### Sample code: Read part of a workbook
+
+### Sample code: Write part of a workbook
+
+### Power Automate flow: Read and write data in a loop
+
