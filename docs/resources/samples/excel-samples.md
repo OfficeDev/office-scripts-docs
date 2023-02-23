@@ -1,7 +1,7 @@
 ---
 title: Basic scripts for Office Scripts in Excel
 description: A collection of code samples to use with Office Scripts in Excel.
-ms.date: 02/08/2023
+ms.date: 02/13/2023
 ms.localizationpriority: medium
 ---
 
@@ -47,6 +47,99 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Log that cell's value.
   console.log(`The current cell's value is ${cell.getValue()}`);
+}
+```
+
+### Add data to a range
+
+This script adds a set of values to a new worksheet. The values start in cell **A1**. The data used in this script is predefined, but could be sourced from other places in or out of the workbook.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // The getData call could be replaced by input from Power Automate or a fetch call.
+  const data = getData();
+
+  // Create a new worksheet and switch to it.
+  const newWorksheet = workbook.addWorksheet("DataSheet");
+  newWorksheet.activate();
+
+  // Get a range matching the size of the data.
+  const dataRange = newWorksheet.getRangeByIndexes(
+    0,
+    0,
+    data.length,
+    data[0].length);
+
+  // Set the data as the values in the range.
+  dataRange.setValues(data);
+}
+
+function getData(): string[][] {
+  return [["Abbreviation", "State/Province", "Country"],
+          ["AL", "Alabama", "USA"],
+          ["AK", "Alaska", "USA"],
+          ["AZ", "Arizona", "USA"],
+          ["AR", "Arkansas", "USA"],
+          ["CA", "California", "USA"],
+          ["CO", "Colorado", "USA"],
+          ["CT", "Connecticut", "USA"],
+          ["DE", "Delaware", "USA"],
+          ["DC", "District of Columbia", "USA"],
+          ["FL", "Florida", "USA"],
+          ["GA", "Georgia", "USA"],
+          ["HI", "Hawaii", "USA"],
+          ["ID", "Idaho", "USA"],
+          ["IL", "Illinois", "USA"],
+          ["IN", "Indiana", "USA"],
+          ["IA", "Iowa", "USA"],
+          ["KS", "Kansas", "USA"],
+          ["KY", "Kentucky", "USA"],
+          ["LA", "Louisiana", "USA"],
+          ["ME", "Maine", "USA"],
+          ["MD", "Maryland", "USA"],
+          ["MA", "Massachusetts", "USA"],
+          ["MI", "Michigan", "USA"],
+          ["MN", "Minnesota", "USA"],
+          ["MS", "Mississippi", "USA"],
+          ["MO", "Missouri", "USA"],
+          ["MT", "Montana", "USA"],
+          ["NE", "Nebraska", "USA"],
+          ["NV", "Nevada", "USA"],
+          ["NH", "New Hampshire", "USA"],
+          ["NJ", "New Jersey", "USA"],
+          ["NM", "New Mexico", "USA"],
+          ["NY", "New York", "USA"],
+          ["NC", "North Carolina", "USA"],
+          ["ND", "North Dakota", "USA"],
+          ["OH", "Ohio", "USA"],
+          ["OK", "Oklahoma", "USA"],
+          ["OR", "Oregon", "USA"],
+          ["PA", "Pennsylvania", "USA"],
+          ["RI", "Rhode Island", "USA"],
+          ["SC", "South Carolina", "USA"],
+          ["SD", "South Dakota", "USA"],
+          ["TN", "Tennessee", "USA"],
+          ["TX", "Texas", "USA"],
+          ["UT", "Utah", "USA"],
+          ["VT", "Vermont", "USA"],
+          ["VA", "Virginia", "USA"],
+          ["WA", "Washington", "USA"],
+          ["WV", "West Virginia", "USA"],
+          ["WI", "Wisconsin", "USA"],
+          ["WY", "Wyoming", "USA"],
+          ["AB", "Alberta", "CAN"],
+          ["BC", "British Columbia", "CAN"],
+          ["MB", "Manitoba", "CAN"],
+          ["NB", "New Brunswick", "CAN"],
+          ["NL", "Newfoundland and Labrador", "CAN"],
+          ["NT", "Northwest Territory", "CAN"],
+          ["NS", "Nova Scotia", "CAN"],
+          ["NU", "Nunavut Territory", "CAN"],
+          ["ON", "Ontario", "CAN"],
+          ["PE", "Prince Edward Island", "CAN"],
+          ["QC", "Quebec", "CAN"],
+          ["SK", "Saskatchewan", "CAN"],
+          ["YT", "Yukon Territory", "CAN"]];
 }
 ```
 
@@ -146,11 +239,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Unhide All Rows and Columns
+## Row and column visibility
 
-This script get the worksheet's used range, checks if there are any hidden rows and columns, and unhides them. 
+These samples demonstrate how to show, hide, and freeze rows and columns.
 
-```Typescript
+### Hide columns
+
+This script hides columns "D", "F", and "J".
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the current worksheet.
+  const sheet = workbook.getActiveWorksheet();
+
+  // Hide columns D, F, and J.
+  sheet.getRange("D:D").setColumnHidden(true);
+  sheet.getRange("F:F").setColumnHidden(true);
+  sheet.getRange("J:J").setColumnHidden(true);
+}
+```
+
+### Show all rows and columns
+
+This script get the worksheet's used range, checks if there are any hidden rows and columns, and shows them.
+
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the currently selected sheet.
     const selectedSheet = workbook.getActiveWorksheet();
@@ -164,14 +277,14 @@ function main(workbook: ExcelScript.Workbook) {
       return;
     }
 
-    // If no columns are hidden, log message, else, unhide columns
+    // If no columns are hidden, log message, else show columns.
     if (range.getColumnHidden() == false) {
       console.log(`No columns hidden`);
     } else {
       range.setColumnHidden(false);
     }
 
-    // If no rows are hidden, log message, else, unhide rows.
+    // If no rows are hidden, log message, else, show rows.
     if (range.getRowHidden() == false) {
       console.log(`No rows hidden`);
     } else {
@@ -180,7 +293,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Freeze Currently Selected Cells
+### Freeze currently selected cells
 
 This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
 
@@ -303,31 +416,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Display data
+## Tables
 
-These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
-
-### Apply conditional formatting
-
-This sample applies conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the current worksheet.
-  let selectedSheet = workbook.getActiveWorksheet();
-
-  // Get the used range in the worksheet.
-  let range = selectedSheet.getUsedRange();
-
-  // Set the fill color to green for the top 10% of values in the range.
-  let conditionalFormat = range.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom)
-  conditionalFormat.getTopBottom().getFormat().getFill().setColor("green");
-  conditionalFormat.getTopBottom().setRule({
-    rank: 10, // The percentage threshold.
-    type: ExcelScript.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
-  });
-}
-```
+The samples in this section showcase common interactions with Excel tables.
 
 ### Create a sorted table
 
@@ -368,9 +459,72 @@ function main(workbook: ExcelScript.Workbook) {
 > [!TIP]
 > Copy the filtered information across the workbook by using `Range.copyFrom`. Add the following line to the end of the script to create a new worksheet with the filtered data.
 >
-> ```typescript
+> ```TypeScript
 >   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
 > ```
+
+### Dynamically reference table values
+
+This script uses the "@COLUMN_NAME" syntax to set formulas in a table column. The column names in the table can be changed without changing this script.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the current worksheet.
+  const table = workbook.getTable("Profits");
+
+  // Get the column names for columns 2 and 3.
+  // Note that these are 1-based indices.
+  const nameOfColumn2 = table.getColumn(2).getName();
+  const nameOfColumn3 = table.getColumn(3).getName();
+
+  // Set the formula of the fourth column to be the product of the values found
+  // in that row's second and third columns.
+  const combinedColumn = table.getColumn(4).getRangeBetweenHeaderAndTotal();
+  combinedColumn.setFormula(`=[@[${nameOfColumn2}]]*[@[${nameOfColumn3}]]`);
+}
+```
+
+#### Before the script
+
+| Month | Price | Units Sold | Total |
+|--|--|--|--|
+| Jan | 45 | 5 |  |
+| Feb | 45 | 3 |  |
+| Mar | 45 | 6 |  |
+
+#### After the script
+
+| Month | Price | Units Sold | Total |
+|--|--|--|--|
+| Jan | 45 | 5 | 225 |
+| Feb | 45 | 3 | 135 |
+| Mar | 45 | 6 | 270 |
+
+## Display data
+
+These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
+
+### Apply conditional formatting
+
+This sample applies conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the current worksheet.
+  let selectedSheet = workbook.getActiveWorksheet();
+
+  // Get the used range in the worksheet.
+  let range = selectedSheet.getUsedRange();
+
+  // Set the fill color to green for the top 10% of values in the range.
+  let conditionalFormat = range.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom)
+  conditionalFormat.getTopBottom().getFormat().getFill().setColor("green");
+  conditionalFormat.getTopBottom().setRule({
+    rank: 10, // The percentage threshold.
+    type: ExcelScript.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
+  });
+}
+```
 
 ### Log the "Grand Total" values from a PivotTable
 
