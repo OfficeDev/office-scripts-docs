@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).
 
-The first part of the sample shows how to write a large dataset only within Excel. The second part expands the example to be part ofa Power Automate flow. This is necessary if your script takes longer to run that the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
+The first part of the sample shows how to write a large dataset in Excel. The second part expands the example to be part of a Power Automate flow. This is necessary if your script takes longer to run that the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
 
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
@@ -161,7 +161,7 @@ For this sample, you'll need to complete the following steps.
 ### Sample code: Read part of a workbook
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, startRow: number = 0, batchSize: number = 10000) : string[][] {
+function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: number) : string[][] {
     // This sample only reads the first worksheet in the workbook.
     const sheet = workbook.getWorksheets()[0];
 
