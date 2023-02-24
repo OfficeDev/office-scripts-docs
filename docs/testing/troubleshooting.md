@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
-ms.date: 10/05/2022
+ms.date: 02/24/2023
 ms.localizationpriority: medium
 ---
 
@@ -80,6 +80,10 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 > [!NOTE]
 > There is a known issue that prevents scripts stored in SharePoint from always appearing in the recently used list. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
+
+## Platform limits
+
+For a detailed list of limitations on the Office Scripts platform due to Excel, Power Automate, or other tools, see [Platform limits and requirements with Office Scripts](./platform-limits.md).
 
 ## Help resources
 
