@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 The `Range.setValues()` API puts data in a range. This API has limitations depending on various factors, such as data size and network settings. This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).
 
-The first part of the sample shows how to write a large dataset in Excel. The second part expands the example to be part of a Power Automate flow. This is necessary if your script takes longer to run that the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
+The first part of the sample shows how to write a large dataset in Excel. The second part expands the example to be part of a Power Automate flow. This is necessary if your script takes longer to run than the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
 
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
 
