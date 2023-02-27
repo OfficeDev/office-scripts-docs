@@ -166,7 +166,7 @@ function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: numbe
     const sheet = workbook.getWorksheets()[0];
 
     // Get the boundaries of the range.
-    // Note that we're assuming usedRange is too big to read or write as a single Range.
+    // Note that we're assuming usedRange is too big to read or write as a single range.
     const usedRange = sheet.getUsedRange();
     const lastColumnIndex = usedRange.getLastColumn().getColumnIndex();
     const lastRowindex = usedRange.getLastRow().getRowIndex();
@@ -211,7 +211,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **Value**: 0
 
     :::image type="content" source="../../images/write-large-dataset-1.png" alt-text="The completed 'Initialize variable' step for the 'currentRow'.":::
-1. Add a **New step** to set the number of rows to be read in a single batch. Depending on the number of columns, this made need to be smaller to avoid the data transfer limits. Make a new **Initialize variable** action with the following values.
+1. Add a **New step** to set the number of rows to be read in a single batch. Depending on the number of columns, this may need to be smaller to avoid the data transfer limits. Make a new **Initialize variable** action with the following values.
     * **Name**: batchSize
     * **Type**: Integer
     * **Value**: 10000
@@ -223,7 +223,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * *Second value*: -1
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
-1. The remaining steps are added inside the **Do until** control, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "SampleData.xlsx" (as selected by the file picker)
@@ -246,7 +246,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **Value**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Initialize variable' step for the 'batchSize'.":::
-1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's all the end of the data set. Create the **Condition** control with the following values.
+1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
     * *First value*: *result* (dynamic content from **Run script**)
     * *Condition*: is equal to
     * *Second value*: *true* (expression)
