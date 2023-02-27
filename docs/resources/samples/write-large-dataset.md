@@ -245,7 +245,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **Name**: currentRow
     * **Value**: *batchSize* (dynamic content)
 
-    :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Initialize variable' step for the 'batchSize'.":::
+    :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
 1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
     * *First value*: *result* (dynamic content from **Run script**)
     * *Condition*: is equal to
