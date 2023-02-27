@@ -218,9 +218,9 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
 
     :::image type="content" source="../../images/write-large-dataset-2.png" alt-text="The completed 'Initialize variable' step for the 'batchSize'.":::
 1. Add a **Do until** control. The flow will read chunks of the data until it has all been copied. You'll use the value of **-1** to indicate the end of the data has been reached. Give the control the following values.
-    * *First value*: *currentRow* (dynamic content)
-    * *Condition*: is equal to
-    * *Second value*: -1
+    * **Choose a value**: *currentRow* (dynamic content)
+    * **is equal to** (from the dropdown list)
+    * **Choose a value**: -1
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
 1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
@@ -247,9 +247,9 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
 1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
-    * *First value*: *result* (dynamic content from **Run script**)
-    * *Condition*: is equal to
-    * *Second value*: *true* (expression)
+    * **Choose a value**: *result* (dynamic content from **Run script**)
+    * **is equal to** (from the dropdown list)
+    * **Choose a value**: *true* (expression)
 
     :::image type="content" source="../../images/write-large-dataset-7.png" alt-text="The completed 'Condition' control.":::
 1. Under the **If yes** section of the **Condition** control, set the **currentRow** variable to be **-1**. Create a **Set variable** action with the following values.
