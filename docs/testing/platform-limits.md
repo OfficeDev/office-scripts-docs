@@ -1,7 +1,7 @@
 ---
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
-ms.date: 02/24/2023
+ms.date: 03/10/2023
 ms.localizationpriority: medium
 ---
 
