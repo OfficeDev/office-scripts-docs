@@ -26,7 +26,7 @@ To stop sharing a script through a button, go to the **More options (…)** menu
 
 ## Older versions of Excel
 
-Script buttons won't work when opened in [versions of Excel that don't support Office Scripts](../testing/platform-limits.md#platform-support). In that case, the button still appears, but pressing it has no effect.
+Script buttons won't work when opened in [versions of Excel that don't support Office Scripts](../testing/platform-limits.md#platform-support). In that case, the button still appears, but selecting it has no effect.
 
 ## See also
 
