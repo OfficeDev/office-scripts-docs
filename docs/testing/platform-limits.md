@@ -59,9 +59,9 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 - [Firefox](https://support.mozilla.org/kb/disable-third-party-cookies)
 - [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)
 
-## Cross-platform API support
+## API support on older Excel versions
 
-Some Office Scripts APIs may not be supported by Excel for Windows or Excel for Mac, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the Code Editor displays a warning. If you try to run such a script, it won't run and, instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."
+Some Office Scripts APIs may not be supported by Excel for Windows or Excel for Mac, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the Code Editor displays a warning. If you try to run such a script, it won't run. Instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."
 
 ## See also
 
