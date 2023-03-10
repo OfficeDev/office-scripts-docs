@@ -63,6 +63,8 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 
 Some Office Scripts APIs may not be supported by Excel for Windows or Excel for Mac, especially older builds. These include newer APIs and APIs for web-only features. If a script contains unsupported APIs, the Code Editor displays a warning. If you try to run such a script, it won't run. Instead, the **Script Run Status** task pane displays a warning message that says, "This script currently must be run on Excel for the web. Open the workbook in the browser then try again, or contact the script owner for help."
 
+Using an older version of Excel to open workbooks with scripts shared in them has no effect on the script itself.
+
 ## See also
 
 - [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
