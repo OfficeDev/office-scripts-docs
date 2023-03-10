@@ -2,7 +2,7 @@
 title: Run Office Scripts in Excel with buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 10/01/2022
+ms.date: 03/10/2023
 ms.localizationpriority: medium
 ---
 
@@ -23,6 +23,10 @@ The following screenshot shows the script details page for a script titled **Cre
 ## Remove script buttons
 
 To stop sharing a script through a button, go to the **More options (…)** menu in the script details page and select **Stop sharing**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
+
+## Older versions of Excel
+
+Script buttons won't work when opened in [versions of Excel that don't support Office Scripts](../testing/platform-limits.md#platform-support). In that case, the button still appears, but selecting it has no effect.
 
 ## See also
 
