@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 08/31/2022
+ms.date: 03/14/2022
 ms.localizationpriority: medium
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 Office Scripts are stored as **.osts** files in your Microsoft OneDrive or a SharePoint folder. They are stored separately from a workbook. To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
-Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook.
+Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
 ## OneDrive
 
