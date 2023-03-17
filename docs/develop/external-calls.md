@@ -1,7 +1,7 @@
 ---
 title: External API call support in Office Scripts
 description: Support and guidance for making external API calls in an Office Script.
-ms.date: 06/10/2022
+ms.date: 03/15/2023
 ms.localizationpriority: medium
 ---
 
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 Scripts support calls to external services. Use these services to supply data and other information to your workbook.
 
 > [!CAUTION]
-> External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish firewall protection against such calls.
+> External calls may result in sensitive data being exposed to undesirable endpoints. Your admin can establish Information Rights Management (IRM) or firewall protection against such calls.
 
 > [!IMPORTANT]
 > Calls to external APIs can only be made through the Excel application, not through Power Automate [under normal circumstances](#external-calls-from-power-automate). External calls are also not supported for scripts stored on a SharePoint site.
@@ -72,6 +72,10 @@ interface JSONData {
 
 * The [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md) sample shows how to get basic information about a user's GitHub repositories.
 * The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
+
+## Restrict external calls with Information Rights Management (IRM)
+
+You can [apply IRM settings](/microsoft-365/compliance/apply-irm-to-a-list-or-library) to a workbook to prevent external calls being made by scripts. Disable the [**Copy**/**EXTRACT** policy](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) to prevent this behavior.
 
 ## External calls from Power Automate
 
