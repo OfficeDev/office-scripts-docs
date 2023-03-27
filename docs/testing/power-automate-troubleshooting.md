@@ -85,9 +85,9 @@ There are two reasons that the parameters or returned data of a script are not a
 
 The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
 
-## ISO Strict Open XML workbooks aren't supported
+## ISO strict Open XML workbooks aren't supported
 
-The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks made with ISO Strict Open XML. Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel workbook format for use with Power Automate.
+The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks with ISO strict version of the Excel Workbook file format. Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel Workbook format for use with Power Automate.
 
 ## See also
 
