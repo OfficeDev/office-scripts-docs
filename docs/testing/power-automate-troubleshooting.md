@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
-ms.date: 12/19/2022
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -84,6 +84,10 @@ There are two reasons that the parameters or returned data of a script are not a
 - The script signature uses unsupported types. Verify your types against the [restrictions for Office Scripts parameter and return types](../develop/power-automate-parameters-returns.md).
 
 The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
+
+## ISO Strict Open XML workbooks aren't supported
+
+The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks made with ISO Strict Open XML. Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel workbook format for use with Power Automate.
 
 ## See also
 
