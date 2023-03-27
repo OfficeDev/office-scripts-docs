@@ -43,7 +43,7 @@ Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) 
 
 ## Platform dependencies
 
-Office Scripts is currently available for Excel for Windows, for Mac, and on the web.. The full Power Query experience is currently [only available for Excel for Windows](/power-query/power-query-what-is-power-query#where-can-you-use-power-query). Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
+Office Scripts is currently available for Excel for Windows, for Mac, and on the web. The full Power Query experience is currently [only available for Excel for Windows](/power-query/power-query-what-is-power-query#where-can-you-use-power-query). Both can be used through Power Automate, which lets the flow work with Excel workbooks stored in OneDrive.
 
 ## See also
 

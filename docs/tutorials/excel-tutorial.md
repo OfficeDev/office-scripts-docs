@@ -1,13 +1,13 @@
 ---
 title: Record, edit, and create Office Scripts in Excel
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
-ms.date: 01/11/2023
+ms.date: 03/27/2023
 ms.localizationpriority: high
 ---
 
 # Record, edit, and create Office Scripts in Excel
 
-This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel on the web. You'll record a script that applies some formatting to a sales record worksheet. You'll then edit the recorded script to apply more formatting, create a table, and sort that table. This record-then-edit pattern is an important tool to see what your Excel actions look like as code.
+This tutorial teaches you the basics of recording, editing, and writing an Office Script for Excel. You'll record a script that applies some formatting to a sales record worksheet. You'll then edit the recorded script to apply more formatting, create a table, and sort that table. This record-then-edit pattern is an important tool to see what your Excel actions look like as code.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This tutorial teaches you the basics of recording, editing, and writing an Offic
 
 First, you'll need some data and a small starting script.
 
-1. Create a new workbook in [Excel on the web](https://www.office.com/launch/excel). The Action Recorder is currently only available in Excel on the web, so that's where you must start this tutorial.
+1. Create a new Excel workbook.
 2. Copy the following fruit sales data and paste it into the worksheet, starting at cell **A1**.
 
     |Fruit |2018 |2019 |
