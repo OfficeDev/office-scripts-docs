@@ -1,6 +1,7 @@
 ---
 title: Fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
+ms.topic: get-started
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---

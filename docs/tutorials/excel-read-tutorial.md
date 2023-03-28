@@ -1,6 +1,7 @@
 ---
 title: Read workbook data with Office Scripts in Excel
 description: An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.
+ms.topic: tutorial
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---

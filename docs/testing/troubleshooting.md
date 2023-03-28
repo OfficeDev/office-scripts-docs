@@ -1,6 +1,7 @@
 ---
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
+ms.topic: troubleshooting-general
 ms.date: 02/24/2023
 ms.localizationpriority: medium
 ---

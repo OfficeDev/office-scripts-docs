@@ -1,6 +1,7 @@
 ---
 title: Record day-to-day changes in Excel and report them with a Power Automate flow
 description: Learn how to use Office Scripts and Power Automate to track value changes in a workbook
+ms.topic: sample
 ms.date: 08/25/2022
 ms.localizationpriority: medium
 ---

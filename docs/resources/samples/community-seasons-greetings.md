@@ -1,6 +1,7 @@
 ---
 title: Seasons greetings
 description: Learn how to use Office Scripts to show a singing tree in Excel.
+ms.topic: sample
 ms.date: 06/29/2021
 ms.localizationpriority: medium
 ---
