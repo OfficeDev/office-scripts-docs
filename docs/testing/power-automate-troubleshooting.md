@@ -87,7 +87,7 @@ The signature of a script is stored with the **Excel Business (Online)** connect
 
 ## ISO strict Open XML workbooks aren't supported
 
-The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks with [ISO strict version of the Excel Workbook file format](https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml). Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel Workbook format for use with Power Automate.
+The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks with the [ISO strict version of the Excel Workbook file format](https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml). Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel Workbook format for use with Power Automate.
 
 ## See also
 
