@@ -1,7 +1,6 @@
 ---
 title: Use external fetch calls in Office Scripts
 description: Learn how to make external API calls in Office Scripts.
-ms.topic: sample
 ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---

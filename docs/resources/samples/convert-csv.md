@@ -1,7 +1,6 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.topic: sample
 ms.date: 03/28/2022
 ms.localizationpriority: medium
 ---

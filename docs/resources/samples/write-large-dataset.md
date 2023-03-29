@@ -1,7 +1,6 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.topic: sample
 ms.date: 02/24/2023
 ms.localizationpriority: medium
 ---

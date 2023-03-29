@@ -1,7 +1,6 @@
 ---
 title: Output Excel data as JSON
 description: Learn how to output Excel table data as JSON to use in Power Automate.
-ms.topic: sample
 ms.date: 11/04/2022
 ms.localizationpriority: medium
 ---

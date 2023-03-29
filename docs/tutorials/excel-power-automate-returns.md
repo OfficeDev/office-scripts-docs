@@ -1,7 +1,6 @@
 ---
 title: Return data from a script to an automatically-run Power Automate flow
 description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel through Power Automate.
-ms.topic: tutorial
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---

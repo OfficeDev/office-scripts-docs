@@ -1,7 +1,6 @@
 ---
 title: 'Office Scripts sample scenario: Punch clock button'
 description: This sample adds a punch clock button and allows a user to clock in and clock out using the current time.
-ms.topic: sample
 ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---

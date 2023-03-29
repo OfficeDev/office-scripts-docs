@@ -1,7 +1,6 @@
 ---
 title: Basic scripts for Office Scripts in Excel
 description: A collection of code samples to use with Office Scripts in Excel.
-ms.topic: sample
 ms.date: 02/13/2023
 ms.localizationpriority: medium
 ---

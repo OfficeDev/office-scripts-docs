@@ -1,7 +1,6 @@
 ---
 title: Record, edit, and create Office Scripts in Excel
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
-ms.topic: tutorial
 ms.date: 01/11/2023
 ms.localizationpriority: high
 ---

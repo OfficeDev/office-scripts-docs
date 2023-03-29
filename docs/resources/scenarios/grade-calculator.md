@@ -1,7 +1,6 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: A sample that determines the percentage and letter grades for a class of students.
-ms.topic: sample
 ms.date: 10/01/2022
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,6 @@
 ---
 title: Remove table column filters
 description: Learn how to clear table column filter based on active cell location.
-ms.topic: sample
 ms.date: 07/15/2022
 ms.localizationpriority: medium
 ---

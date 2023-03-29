@@ -1,7 +1,6 @@
 ---
 title: Pass data to scripts in an automatically-run Power Automate flow
 description: A tutorial about running Office Scripts for Excel through Power Automate when mail is received and passing flow data to the script.
-ms.topic: tutorial
 ms.date: 10/01/2022
 ms.localizationpriority: high
 ---
