@@ -1,6 +1,7 @@
 ---
 title: Best practices in Office Scripts
 description: How to prevent common problems and write robust Office Scripts to handle unexpected input or data.
+ms.topic: best-practice
 ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---

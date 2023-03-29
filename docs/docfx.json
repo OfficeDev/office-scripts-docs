@@ -59,6 +59,8 @@
         "testing/*.md": "excel"
       },
       "ms.topic": {
+        "resources/samples/*.md": "sample",
+        "resources/scenarios/*.md": "sample",
         "tutorials/*.md": "tutorial"
       },
       "ms.custom": {
