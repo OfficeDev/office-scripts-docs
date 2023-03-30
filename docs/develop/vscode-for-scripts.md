@@ -1,6 +1,7 @@
 ---
 title: Visual Studio Code for Office Scripts (preview)
 description: How to setup the Office Scripts Code Editor to connect with VS Code for the Web.
+ms.topic: integration
 ms.date: 11/04/2022
 ms.localizationpriority: medium
 ---

@@ -2,13 +2,13 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 03/10/2023
+ms.date: 03/27/2023
 ms.localizationpriority: high
 ---
 
 # Office Scripts in Excel
 
-Office Scripts in Excel let you automate your day-to-day tasks. You can create and edit scripts with the Code Editor. Run a series of Excel steps with a single button. Then, share that script with coworkers so everyone can improve their workflow. Inside Excel on the web, you have an additional tool: the Action Recorder. This turns your manual steps into Office Scripts without having to look at any code.
+Office Scripts in Excel let you automate your day-to-day tasks. Use the Action Recorder to turn manual steps into reusable scripts. Edit those scripts or create new ones with the Code Editor. Let others in the workbook run these scripts with a single button. Then, share them with coworkers so everyone can improve their workflow.
 
 This series of documents teaches you how to use these tools. You'll find a wealth of samples covering different Excel scenarios. Use the tutorials to introduce yourself to the Action Recorder and Code Editor. These provide step-by-step guidance on how to record your frequent Excel actions, edit those scripts, and create new scripts from scratch.
 
