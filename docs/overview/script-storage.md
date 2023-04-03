@@ -15,7 +15,7 @@ Excel only recognizes and runs a script if it's in your OneDrive folder, a Share
 
 The default behavior is that Office Scripts are stored in your OneDrive. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery.
 
-Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
+Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The move button of the script renaming callout moves a script to a new location. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
 
 Unless you share your personal scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations.
 
@@ -25,13 +25,12 @@ Office Scripts that are saved to a SharePoint site are owned by your team. You a
 
 To load a script from SharePoint, go to **All scripts** and select **View more scripts** at the bottom of the list. This brings up a file picker where you can choose **.osts** files from any SharePoint site to which you have access. Note that scripts from SharePoint that you've already opened will be displayed in the list of recent scripts.
 
-To save a script to SharePoint, go to the **More options (…)** menu and select **Save as**. This opens a file picker where you can select folders in your SharePoint site. Saving to a new location creates a copy of the script at that location. The original version is still on your OneDrive or other SharePoint location.
+To move a script to SharePoint, open a script in the editor and click on the script name. This will open a callout. In the callout, click the move button. This opens a file picker where you can select folders in your SharePoint site. Saving to a new location moves the script to that location. This can take up to a minute.
+
+To save a copy of a script to SharePoint, go to the **More options (…)** menu and select **Save as**. This opens a file picker where you can select folders in your SharePoint site. Saving to a new location creates a copy of the script at that location. The original version is still on your OneDrive or other SharePoint location.
 
 > [!IMPORTANT]
 > Scripts with [external calls](../develop/external-calls.md) can't be run from SharePoint. You'll receive an error saying "Network access calls are not supported at this time for scripts saved to a SharePoint site".
-
-> [!IMPORTANT]
-> Power Automate does **not** support scripts stored on SharePoint at this time.
 
 ## Restore deleted scripts
 
