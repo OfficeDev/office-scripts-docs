@@ -1,6 +1,7 @@
 To use Office Scripts, you'll need the following.
 
 1. Excel for Windows (version 2210 or higher), Excel for Mac, or Excel on the web.
+    *The [Action Recorder](../overview/excel.md#action-recorder) is only partially available on Windows and Mac. It is being gradually rolled out to wider audiences over the coming weeks.*
 1. OneDrive for Business.
 1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
     - Office 365 Business
