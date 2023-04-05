@@ -24,7 +24,7 @@ The following table shows which features are supported by which platforms and pr
 
 VBA is designed to be desktop-centric. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to [a limited set of web services](../develop/external-calls.md).
 
-Office Scripts require an enterprise or educational license to use or create. The full list of supported licenses is under [Platform Support](../testing/platform-limits.md#platform-support). VBA is built-in to the desktop versions of Excel and requires no special licensing.
+Users require an enterprise or educational license to use or create Office Scripts. For the full list of supported licenses, see [Platform support](../testing/platform-limits.md#platform-support). VBA is built-in to the desktop versions of Excel and requires no special licensing.
 
 ## Security
 
