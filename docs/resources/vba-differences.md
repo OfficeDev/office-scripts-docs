@@ -2,7 +2,7 @@
 title: Differences between Office Scripts and VBA macros
 description: The behavior and API differences between Office Scripts and Excel VBA macros.
 ms.topic: product-comparison
-ms.date: 02/13/2023
+ms.date: 04/05/2023
 ms.localizationpriority: medium
 ---
 
@@ -23,6 +23,8 @@ The following table shows which features are supported by which platforms and pr
 [!INCLUDE [Platform support table](../includes/platform-support-table.md)]
 
 VBA is designed to be desktop-centric. VBA can interact with a user's desktop to connect with similar technologies, such as COM and OLE. However, VBA has no convenient way to call out to the internet. Office Scripts use a universal runtime for JavaScript. This gives consistent behavior and accessibility, regardless of the machine being used to run the script. They can also make calls to [a limited set of web services](../develop/external-calls.md).
+
+Office Scripts require an enterprise or educational license to use or create. The full list of supported licenses is under [Platform Support](../testing/platform-limits.md#platform-support). VBA is built-in to the desktop versions of Excel and requires no special licensing.
 
 ## Security
 
