@@ -203,6 +203,24 @@ interface Transaction {
 
 :::image type="content" source="../images/create-json-console-output.png" alt-text="The console output from the previous script that shows the property values of the object.":::
 
+### Export JSON with `fetch`
+
+Much like importing data with `fetch`, you can post data from your workbook. A `POST` command takes any stringified JSON data, assuming the endpoint is expecting the same format.
+
+To see this in action, replace the `console.log(transactions);` line with the following code. This issues a `POST` command to a testing server, then reads the data back.
+
+```typescript
+const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify(transactions),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+});
+const jsonData: object[] = await response.json();
+console.log(jsonData);
+```
+
 ### Use a generic object
 
 The previous sample assumes the table header values are consistent. If your table has variable columns, you'll need to create a generic JSON object. The following script shows a script that logs any table as JSON.
