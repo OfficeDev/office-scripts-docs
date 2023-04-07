@@ -205,20 +205,20 @@ interface Transaction {
 
 ### Export JSON with `fetch`
 
-Much like importing data with `fetch`, you can post data from your workbook. A `POST` command takes any stringified JSON data, assuming the endpoint is expecting the same format.
+Much like importing data with `fetch`, you can send data from your workbook with a similar command. A `POST` command takes any stringified JSON data and sends it to the specified endpoint.
 
-To see this in action, replace the `console.log(transactions);` line with the following code. This issues a `POST` command to a testing server, then reads the data back.
+To see this in action, replace the `console.log(transactions);` line in the previous sample with the following code. This issues a `POST` command to a testing server, then reads the data back.
 
 ```typescript
-const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify(transactions),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-});
-const jsonData: object[] = await response.json();
-console.log(jsonData);
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(transactions),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  const jsonData: object[] = await response.json();
+  console.log(jsonData);
 ```
 
 ### Use a generic object
