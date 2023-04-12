@@ -47,17 +47,11 @@
       "ms.author": "o365devx",
       "author": "o365devx",
       "ms.topic": "conceptual",
-      "ms.technology": "scripts",
-      "ms.prod": "excel",
+      "ms.subservice": "scripts",
+      "ms.service": "excel",
       "titleSuffix": "Office Scripts"
     },
     "fileMetadata": {
-      "ms.prod": {
-        "develop/*.md": "excel",
-        "overview/*.md": "excel",
-        "resources/*.md": "excel",
-        "testing/*.md": "excel"
-      },
       "ms.topic": {
         "resources/samples/*.md": "sample",
         "resources/scenarios/*.md": "sample",
