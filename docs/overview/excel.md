@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.localizationpriority: high
 ---
 
