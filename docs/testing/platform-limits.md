@@ -2,7 +2,7 @@
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 04/11/2023
+ms.date: 04/20/2023
 ms.localizationpriority: medium
 ---
 
@@ -41,6 +41,22 @@ Additional Power Automate platform usage limitations can be found in the followi
 
 - [Limits and configuration in Power Automate](/power-automate/limits-and-config)
 - [Known issues and limitations for the Excel Online (Business) connector](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+
+## Power Automate specific restrictions
+
+There are a few important differences between running a script in the Excel application and running a script as part of a Power Automate flow.
+
+### No external calls from a script
+
+[!INCLUDE [External calls in Power Automate](../includes/external-calls-power-automate.md)]
+
+### API behavior differences
+
+Some APIs behave differently when run Power Automate. Others fail due to their reliance on the UI. This full lists are found in [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
+
+### ISO strict Open XML workbooks aren't supported
+
+The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks with the [ISO strict version of the Excel Workbook file format](https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml). Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel Workbook format for use with Power Automate.
 
 ## Teams support
 
