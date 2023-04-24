@@ -52,7 +52,7 @@ There are a few important differences between running a script in the Excel appl
 
 ### API behavior differences
 
-Some APIs behave differently when run Power Automate. Others fail due to their reliance on the UI. This full lists are found in [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
+Some APIs behave differently when run with Power Automate. Others fail due to their reliance on the Excel UI. The full lists are found in [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).
 
 ### ISO strict Open XML workbooks aren't supported
 
