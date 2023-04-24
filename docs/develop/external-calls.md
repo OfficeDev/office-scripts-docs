@@ -1,7 +1,7 @@
 ---
 title: External API call support in Office Scripts
 description: Support and guidance for making external API calls in an Office Script.
-ms.date: 03/15/2023
+ms.date: 04/20/2023
 ms.localizationpriority: medium
 ---
 
@@ -79,12 +79,7 @@ You can [apply IRM settings](/microsoft-365/compliance/apply-irm-to-a-list-or-li
 
 ## External calls from Power Automate
 
-Any external API call fails when a script is run with Power Automate. This is a behavioral difference between running a script through the Excel application and through Power Automate. Be sure to check your scripts for such references before building them into a flow.
-
-You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equivalent actions to pull data from or push it to an external service.
-
-> [!WARNING]
-> External calls made through the Power Automate [Excel Online connector](/connectors/excelonlinebusiness) fail in order to help uphold existing data loss prevention policies. However, scripts that are run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
+[!INCLUDE [External calls in Power Automate](../includes/external-calls-power-automate.md)]
 
 ## See also
 

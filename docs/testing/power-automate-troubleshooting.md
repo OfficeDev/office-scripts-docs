@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 03/27/2023
+ms.date: 04/20/2023
 ms.localizationpriority: medium
 ---
 
@@ -32,6 +32,7 @@ The following methods throw an error and fail when called from a script in a Pow
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 
 ### Script methods with a default behavior in Power Automate flows
 
@@ -42,9 +43,9 @@ The following methods use a default behavior, in lieu of any user's current stat
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Returns either the first worksheet in the workbook or the worksheet currently activated by the `Worksheet.activate` method. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Marks the worksheet as the active worksheet for purposes of `Workbook.getActiveWorksheet`. |
 
-## Data refresh not supported in Power Automate
+## PivotTable refresh not supported in Power Automate
 
-Office Scripts can't refresh data when run in Power Automate. Methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
+Office Scripts can't refresh data when run in Power Automate. PivotTable methods such as `PivotTable.refresh` do nothing when called in a flow. `Workbook.refreshAllDataConnections` throws an error. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
 
 ### Script methods that do nothing when run in Power Automate flows
 
@@ -53,7 +54,6 @@ The following methods do nothing in a script when called through Power Automate.
 | Class | Method |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
@@ -85,10 +85,6 @@ There are two reasons that the parameters or returned data of a script are not a
 - The script signature uses unsupported types. Verify your types against the [restrictions for Office Scripts parameter and return types](../develop/power-automate-parameters-returns.md).
 
 The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
-
-## ISO strict Open XML workbooks aren't supported
-
-The **Excel Business (Online)** connector's **Run script** action doesn't support workbooks with the [ISO strict version of the Excel Workbook file format](https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml). Flows with this type of workbook return a "BadGateway" error when trying to run a script. This is due to coauthoring restrictions. Please save workbooks as the standard Excel Workbook format for use with Power Automate.
 
 ## See also
 
