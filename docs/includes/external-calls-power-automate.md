@@ -1,0 +1,6 @@
+External API calls fail when a script is run through Power Automate. A `fetch` call will give the error message "Runtime error: Line X: fetch is not defined". Be sure to check your scripts for such references before building them into a flow.
+
+You'll have to use [HTTP with Azure AD](/connectors/webcontents/) or other equivalent actions to pull data from or push it to an external service.
+
+> [!WARNING]
+> External calls made through the Power Automate [Excel Online connector](/connectors/excelonlinebusiness) fail in order to help uphold existing data loss prevention policies. However, scripts that are run through Power Automate are done so outside of your organization, and outside of your organization's firewalls. For additional protection from malicious users in this external environment, your admin can control the use of Office Scripts. Your admin can either disable the Excel Online connector in Power Automate or turn off Office Scripts for Excel through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
