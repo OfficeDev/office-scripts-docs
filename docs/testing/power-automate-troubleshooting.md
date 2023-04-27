@@ -32,7 +32,6 @@ The following methods throw an error and fail when called from a script in a Pow
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 
 ### Script methods with a default behavior in Power Automate flows
 
@@ -43,9 +42,9 @@ The following methods use a default behavior, in lieu of any user's current stat
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Returns either the first worksheet in the workbook or the worksheet currently activated by the `Worksheet.activate` method. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Marks the worksheet as the active worksheet for purposes of `Workbook.getActiveWorksheet`. |
 
-## PivotTable refresh not supported in Power Automate
+## Refresh not supported in Power Automate
 
-Office Scripts can't refresh data when run in Power Automate. PivotTable methods such as `PivotTable.refresh` do nothing when called in a flow. `Workbook.refreshAllDataConnections` throws an error. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
+Office Scripts can't refresh data when run in Power Automate. Refresh methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
 
 ### Script methods that do nothing when run in Power Automate flows
 
@@ -54,6 +53,7 @@ The following methods do nothing in a script when called through Power Automate.
 | Class | Method |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
