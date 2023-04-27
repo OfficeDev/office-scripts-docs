@@ -1,7 +1,7 @@
 ---
 title: Add images to a workbook
 description: Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.
-ms.date: 04/20/2023
+ms.date: 04/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ Images help with branding, visual identity, and templates. They help make a work
 
 The first sample copies an image from one worksheet to another. This could be used to put your company's logo in the same position on every sheet.
 
-The second sample copies an image from a URL. This could be used to copy photos that a colleague stored in a shared folder to a related workbook.
+The second sample copies an image from a URL. This could be used to copy photos that a colleague stored in a shared folder to a related workbook. Please note that this sample can't be adapted to work with a local image file, as that isn't supported by Office Scripts.
 
 ## Sample Excel file
 
@@ -49,7 +49,7 @@ function main(workbook: ExcelScript.Workbook)
 
 ## Sample code: Add an image from a URL to a workbook
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > This sample won't work in Power Automate because of the [`fetch` call](../../develop/external-calls.md#external-calls-from-power-automate).
 
 ```TypeScript
