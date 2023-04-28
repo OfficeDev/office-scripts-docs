@@ -1,7 +1,7 @@
 ---
 title: External API call support in Office Scripts
 description: Support and guidance for making external API calls in an Office Script.
-ms.date: 04/20/2023
+ms.date: 04/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -71,7 +71,9 @@ interface JSONData {
 ### Other `fetch` samples
 
 * The [Use external fetch calls in Office Scripts](../resources/samples/external-fetch-calls.md) sample shows how to get basic information about a user's GitHub repositories.
-* The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the fetch command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
+* Samples in the [Use JSON to pass data to and from Office Scripts](use-json.md) article show how to pass data to and from `fetch` commands as JSON.
+* The [Office Scripts sample scenario: Graph water-level data from NOAA](../resources/scenarios/noaa-data-fetch.md) demonstrates the `fetch` command being used to retrieve records from the National Oceanic and Atmospheric Administration's Tides and Currents database.
+* The second sample in [Add images to a workbook](../resources/samples/add-image-to-workbook.md) contains a `fetch` call to get an image from a website.
 
 ## Restrict external calls with Information Rights Management (IRM)
 
