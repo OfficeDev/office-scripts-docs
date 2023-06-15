@@ -2,7 +2,7 @@
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
 ms.topic: integration
-ms.date: 12/19/2022
+ms.date: 06/15/2023
 ms.localizationpriority: medium
 ---
 
@@ -42,8 +42,8 @@ This opens a task pane with several options to begin connecting your Office Scri
 > [!IMPORTANT]
 > The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
-> [!IMPORTANT]
-> Power Automate does **not** support scripts stored on SharePoint at this time.
+> [!NOTE]
+> Power Automate supports running scripts stored on SharePoint with the **Run script from SharePoint library** flow. This flow is currently in preview and is subject to change based on feedback. If you encounter any issues with this flow, please report them through the **Help > Give Feedback** option in Power Automate.
 
 ## Data transfer in flows for scripts
 
