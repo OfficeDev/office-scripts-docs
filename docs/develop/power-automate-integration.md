@@ -43,7 +43,7 @@ This opens a task pane with several options to begin connecting your Office Scri
 > The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 > [!NOTE]
-> Power Automate supports running scripts stored on SharePoint with the **Run script from SharePoint library (Preview)** action. This action is currently in preview and is subject to change based on feedback. If you encounter any issues with this action, please report them through the **Help > Give Feedback** option in Power Automate.
+> Power Automate supports running scripts stored on SharePoint with the **Run script from SharePoint library (Preview)** action. This action is currently in preview and is subject to change based on feedback. If you encounter any issues with this action, please report them through the **Help** > **Give Feedback** option in Power Automate.
 
 ## Data transfer in flows for scripts
 
