@@ -1,7 +1,7 @@
 ---
 title: Create a workbook table of contents
 description: Learn how to create a table of contents with links to each worksheet.
-ms.date: 01/20/2022
+ms.date: 08/08/2023
 ms.localizationpriority: medium
 ---
 
