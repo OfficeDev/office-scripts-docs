@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Convert CSV files to Excel workbooks
 
-Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://flow.microsoft.com) flow to find files with the .csv extension in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
+Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://make.powerautomate.com) flow to find files with the .csv extension in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
 
 ## Solution
 
@@ -71,7 +71,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ## Power Automate flow: Create new .xlsx files
 
-1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Scheduled cloud flow**.
+1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Scheduled cloud flow**.
 1. Set the flow to **Repeat every** "1" "Day" and select **Create**.
 1. Get the template Excel file. This is the basis for all the converted .csv files. Add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Provide the file path to the "Template.xlsx" file.
     * **File**: /output/Template.xlsx
