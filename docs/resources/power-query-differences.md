@@ -36,7 +36,7 @@ Formatting can be applied with Power Query through Excel [templates](https://tem
 
 Office Scripts offer more options for Power Automate integration. Scripts are tailored to your solutions. You define the [input and output of the script](../develop/power-automate-integration.md#data-transfer-in-flows-for-scripts), so it works with any other connector or data in the flow. The following screenshot shows an example Power Automate flow that passes data from a Teams Adaptive Card to an Office Script.
 
-:::image type="content" source="../images/scenario-task-reminders-last-flow-step.png" alt-text="A screenshot that shows the Excel Online (Business) connector in the flow designer. The connector is using the Run script action to take input from a Teams Adaptive Card and provide it to a script.":::
+:::image type="content" source="../images/scenario-task-reminders-3.png" alt-text="A screenshot that shows the Excel Online (Business) connector in the flow designer. The connector is using the Run script action to take input from a Teams Adaptive Card and provide it to a script.":::
 
 Power Query is used in the [SQL Server](https://powerquery.microsoft.com/flow/) Power Automate connector. The [Transform data using Power Query](/connectors/sql/#transform-data-using-power-query) action lets you build a query in Power Automate. While this is a powerful tool for use with SQL Server, it does limit Power Query to that input source, as shown in the following flow screenshot.
 

@@ -81,7 +81,7 @@ interface WorksheetData {
 
 ## Power Automate flow: Combine worksheets into a single workbook
 
-1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
+1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** to get all the workbooks you want to combine from their folder. Use the **OneDrive for Business** connector and the **List files in folder** action. For the **Folder** field, use the file picker to select the "output" folder.
 

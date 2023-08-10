@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Return data from a script to an automatically-run Power Automate flow
 
-This tutorial teaches you how to return information from an Office Script for Excel as part of an automated [Power Automate](https://flow.microsoft.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
+This tutorial teaches you how to return information from an Office Script for Excel as part of an automated [Power Automate](https://make.powerautomate.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
 > [!TIP]
 > If you're new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial.
@@ -120,7 +120,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 ## Create an automated workflow with Power Automate
 
-1. Sign in to the [Power Automate site](https://flow.microsoft.com).
+1. Sign in to the [Power Automate site](https://make.powerautomate.com).
 
 1. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
 

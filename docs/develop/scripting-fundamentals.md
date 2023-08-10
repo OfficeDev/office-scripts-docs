@@ -28,7 +28,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 The code inside the `main` function runs when the script is run. `main` can call other functions in your script, but code that's not contained in a function will not run. Scripts cannot invoke or call other Office Scripts.
 
-[Power Automate](https://flow.microsoft.com) allows you to connect scripts in flows. Data is passed between the scripts and the flow through the parameters and returns of the`main` function. How to integrate Office Scripts with Power Automate is covered in detail in [Run Office Scripts with Power Automate](power-automate-integration.md).
+[Power Automate](https://make.powerautomate.com) allows you to connect scripts in flows. Data is passed between the scripts and the flow through the parameters and returns of the`main` function. How to integrate Office Scripts with Power Automate is covered in detail in [Run Office Scripts with Power Automate](power-automate-integration.md).
 
 ## Object model overview
 

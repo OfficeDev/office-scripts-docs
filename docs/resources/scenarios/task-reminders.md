@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.
-ms.date: 10/01/2022
+ms.date: 08/10/2023
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ You'll create a Power Automate flow to message people with missing status fields
 
 ## Prerequisites
 
-This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+This scenario uses [Power Automate](https://make.powerautomate.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
 
 ## Setup instructions
 
@@ -138,12 +138,12 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
 
 1. Save the script with the name **Save Status**.
 
-1. Now, we need to create the flow. Open [Power Automate](https://flow.microsoft.com/).
+1. Now, we need to create the flow. Open the [Power Automate **Create** tab](https://make.powerautomate.com/create).
 
     > [!TIP]
     > If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.
 
-1. Create a new **Instant flow**.
+1. Create a new **Instant cloud flow**.
 
 1. Choose **Manually trigger a flow** from the options and select **Create**.
 
@@ -154,11 +154,9 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Get People
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="The Power Automate flow showing the first Run script flow step.":::
+    :::image type="content" source="../../images/scenario-task-reminders-1.png" alt-text="The Power Automate flow showing the first Run script flow step.":::
 
-1. Next, the flow needs to process each Employee in the array returned by the script. Select **New step**, then choose **Post an Adaptive Card to a Teams user and wait for a response**.
-
-1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by an **Apply to each** block. That means the array will be iterated over by Power Automate.
+1. Next, the flow needs to process each Employee in the array returned by the script. Select **New step**, search for **Post adaptive card and wait for a response**, and select that Microsoft Teams connector action.
 
 1. Sending an Adaptive Card requires the card's [JSON](https://www.w3schools.com/whatis/whatis_json.asp) to be provided as the **Message**. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards. For this sample, use the following JSON.  
 
@@ -201,12 +199,17 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     }
     ```
 
+1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by an **Apply to each** block. That means the array will be iterated over by Power Automate.
+
 1. Fill out the remaining fields as follows:
 
+    - **Post as**: Flow bot
+    - **Post in**: Chat with Flow bot
     - **Update message**: Thank you for submitting your status report. Your response has been successfully added to the spreadsheet.
-    - **Should update card**: Yes
 
-1. In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, select **Add an action**. Select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
+    :::image type="content" source="../../images/scenario-task-reminders-2.png" alt-text="The Power Automate flow showing the completed adaptive card action.":::
+
+1. In the **Apply to each** block, following the **Post adaptive card and wait for a response**, select **Add an action**. Select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
@@ -215,7 +218,7 @@ This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft T
     - **senderEmail**: email *(dynamic content from Excel)*
     - **statusReportResponse**: response *(dynamic content from Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
+    :::image type="content" source="../../images/scenario-task-reminders-3.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
 1. Save the flow.
 
