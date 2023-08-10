@@ -145,7 +145,7 @@ interface EventData {
 
 This flow extracts the event information from the first workbook and uses that data to validate the second workbook.
 
-1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
+1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business

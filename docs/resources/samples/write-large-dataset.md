@@ -203,7 +203,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
 
 ### Power Automate flow: Read and write data in a loop
 
-1. Sign into [Power Automate](https://flow.microsoft.com) and create a new **Instant cloud flow**.
+1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
 1. Add a **New step** to track the current row being read and written. Make a new **Initialize variable** action with the following values.
     * **Name**: currentRow
