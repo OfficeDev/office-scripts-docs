@@ -38,6 +38,9 @@ function main(workbook: ExcelScript.Workbook) {
   const range = table.getRangeBetweenHeaderAndTotal();
   const scheduleData = range.getTexts();
 
+  // Find old comments, so we can delete them later.
+  const oldCommentAddresses = scheduleSheet.getComments().map(oldComment => oldComment.getLocation().getAddress());
+
   // Look through the schedule for a matching employee.
   for (let i = 0; i < scheduleData.length; i++) {
     const employeeId = scheduleData[i][3];
@@ -48,8 +51,7 @@ function main(workbook: ExcelScript.Workbook) {
       const adminNotes = scheduleData[i][4];
       const commentCell = range.getCell(i, 5);
 
-      // Look for and delete old comments, so we avoid conflicts.
-      const oldCommentAddresses = scheduleSheet.getComments().map(oldComment => oldComment.getLocation().getAddress());
+      // Delete old comments, so we avoid conflicts.
       if (oldCommentAddresses.find(oldCommentAddress => oldCommentAddress === commentCell.getAddress())) {
         const comment = workbook.getCommentByCell(commentCell);
         comment.delete();
