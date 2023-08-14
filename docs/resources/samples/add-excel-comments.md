@@ -40,18 +40,18 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Look through the schedule for a matching employee.
   for (let i = 0; i < scheduleData.length; i++) {
-    let employeeId = scheduleData[i][3];
+    const employeeId = scheduleData[i][3];
 
     // Compare the employee ID in the schedule against the employee information table.
-    let employeeInfo = employees.find(employeeRow => employeeRow[0] === employeeId);
+    const employeeInfo = employees.find(employeeRow => employeeRow[0] === employeeId);
     if (employeeInfo) {
-      let adminNotes = scheduleData[i][4];
+      const adminNotes = scheduleData[i][4];
       const commentCell = range.getCell(i, 5);
 
       // Look for and delete old comments, so we avoid conflicts.
-      let oldCommentAddresses = scheduleSheet.getComments().map(oldComment => oldComment.getLocation().getAddress());
+      const oldCommentAddresses = scheduleSheet.getComments().map(oldComment => oldComment.getLocation().getAddress());
       if (oldCommentAddresses.find(oldCommentAddress => oldCommentAddress === commentCell.getAddress())) {
-        let comment = workbook.getCommentByCell(commentCell);
+        const comment = workbook.getCommentByCell(commentCell);
         comment.delete();
       }
 
