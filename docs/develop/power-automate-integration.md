@@ -53,7 +53,7 @@ Learn the details of how to pass data to and from your scripts with the followin
 
 - Learn by doing with the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) and [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md) tutorials.
 - Try the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario to see everything in action.
-- Read [Script parameter and return types in Power Automate](power-automate-parameters-returns.md) for more usage scenarios and the technical TypeScript details.
+- Read [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md) for more usage scenarios and the technical TypeScript details.
 
 ## Example
 
@@ -85,7 +85,7 @@ function main(
 ## See also
 
 - [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
-- [Script parameter and return types in Power Automate](power-automate-parameters-returns.md)
+- [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
 - [Get started with Power Automate](/power-automate/getting-started)
 - [Excel Online (Business) connector reference documentation](/connectors/excelonlinebusiness/)

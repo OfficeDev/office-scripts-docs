@@ -1,0 +1,83 @@
+---
+title: Get user input for scripts
+description: Add parameters to Office Scripts so users can control their experience. 
+ms.date: 08/15/2023
+ms.localizationpriority: medium
+---
+
+# Get user input for scripts
+
+Adding parameters to your script lets other users provide data for the script, without needing to edit code. When your script is run through the ribbon or a button, a prompt pops up that asks for input.
+
+TK: Image: JSDOC not present?
+
+## Example - TK
+
+## `main` parameters: Pass data to a script
+
+All script input is specified as additional parameters for the `main` function. New parameters are added after the mandatory `workbook: ExcelScript.Workbook` parameter. For example, if you wanted a script to accept a `string` that represents a name as input, you would change the `main` signature to `function main(workbook: ExcelScript.Workbook, name: string)`.
+
+### Optional parameters
+
+Optional parameters don't need the user to provide a value. This implies your script either has default behavior or this parameter is only needed in a corner-case. They are denoted in your script with the [optional modifier](https://www.typescriptlang.org/docs/handbook/2/functions.html#optional-parameters) `?`. For example, in `function main(workbook: ExcelScript.Workbook, Name?: string)` the parameter `Name` is optional.
+
+### Default parameter values
+
+[Default parameter values](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#default-values) automatically fill the action's field with a value. To set a default value, assign a value to the parameter in the `main` signature. For example, in `function main(workbook: ExcelScript.Workbook, location: string = "Seattle")` the parameter `location` has the value `"Seattle"` unless something else is provided.
+
+### Drop-down lists for parameters
+
+Help others using your script in their flow by providing a list of acceptable parameter choices. If there is a small subset of values that your script uses, create a parameter that is those literal values. Do this by declaring the parameter type to be a [union of literal values](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types). For example, in `function main(workbook: ExcelScript.Workbook, location: "Seattle" | "Redmond")` the parameter `location` can only be `"Seattle"` or `"Redmond"`. When the script is run, users get a drop-down list with those two options.
+
+### Document parameters
+
+Use [JSDoc](https://en.wikipedia.org/wiki/JSDoc) to describe what input is expected for the script. To best help other people who run the script, describe the purpose of the input and any restrictions. The following sample JSDoc shows how to document a script with a `number` parameter called `taxRate`.
+
+```TypeScript
+/**
+ * A script to apply the current tax rate to sales figures.
+ * @param {taxRate} The current sales tax rate in the region as a decimal number (enter 12% as .12).
+ */
+function main(workbook: ExcelScript.Workbook, taxRate: number)
+```
+
+> [!NOTE]
+> You don't need to document the `ExcelScript.Workbook` parameter in every script.
+
+## Type restrictions
+
+When adding input parameters and return values, consider the following allowances and restrictions.
+
+1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name doesn't matter.
+
+1. The types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported. `undefined` won't display any input field.
+
+1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
+
+1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left" | 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
+
+1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
+
+    ```TypeScript
+    // The Employee object is supported because Position is also composed of supported types.
+    interface Employee {
+        name: string;
+        job: Position;
+    }
+
+    interface Position {
+        id: number;
+        title: string;
+    }
+    ```
+
+1. Objects must have their interface or class definition defined in the script. An object can also be defined anonymously inline, as in the following example.
+
+    ```TypeScript
+    function main(workbook: ExcelScript.Workbook, contact: {name: string, email: string})
+    ```
+
+## See also
+
+- [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md)
+- [Run Office Scripts in Excel with buttons](script-buttons.md)
