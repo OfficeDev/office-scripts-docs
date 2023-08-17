@@ -12,7 +12,7 @@ Adding parameters to your script lets other users provide data for the script, w
 TK: Image
 
 > [!IMPORTANT]
-> Currently users will only be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
+> Currently, users will only be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
 ## Example - TK
 
@@ -32,9 +32,9 @@ Optional parameters don't need the user to provide a value. This implies your sc
 
 Help others using your script in their flow by providing a list of acceptable parameter choices. If there is a small subset of values that your script uses, create a parameter that is those literal values. Do this by declaring the parameter type to be a [union of literal values](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types). For example, in `function main(workbook: ExcelScript.Workbook, location: "Seattle" | "Redmond")` the parameter `location` can only be `"Seattle"` or `"Redmond"`. When the script is run, users get a drop-down list with those two options.
 
-### Document parameters
+### Document the script
 
-Use [JSDoc](https://en.wikipedia.org/wiki/JSDoc) to describe what input is expected for the script. To best help other people who run the script, describe the purpose of the input and any restrictions. The following sample JSDoc shows how to document a script with a `number` parameter called `taxRate`.
+Code comments that follow [JSDoc](https://en.wikipedia.org/wiki/JSDoc) standards will be shown to people when they run your script. The more details you put in the descriptions, the easier it'll be for others to the scripts. Describe the purpose of each input parameter and any restrictions or limits. The following sample JSDoc shows how to document a script with a `number` parameter called `taxRate`.
 
 ```TypeScript
 /**
@@ -53,11 +53,11 @@ When adding input parameters and return values, consider the following allowance
 
 1. The first parameter must be of type `ExcelScript.Workbook`. Its parameter name doesn't matter.
 
-1. The types `string`, `number`, `boolean`, `unknown`, `object`, and `undefined` are supported. `undefined` won't display any input field.
+1. The types `string`, `number`, `boolean`, `unknown`, and `object`.
 
 1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
 
-1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left" | 5`). Unions of a supported type with undefined are also supported (such as `string | undefined`).
+1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left" | 5`).
 
 1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
 
