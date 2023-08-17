@@ -9,7 +9,10 @@ ms.localizationpriority: medium
 
 Adding parameters to your script lets other users provide data for the script, without needing to edit code. When your script is run through the ribbon or a button, a prompt pops up that asks for input.
 
-TK: Image: JSDOC not present?
+TK: Image
+
+> [!IMPORTANT]
+> Currently users will only be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
 ## Example - TK
 
@@ -36,7 +39,7 @@ Use [JSDoc](https://en.wikipedia.org/wiki/JSDoc) to describe what input is expec
 ```TypeScript
 /**
  * A script to apply the current tax rate to sales figures.
- * @param {taxRate} The current sales tax rate in the region as a decimal number (enter 12% as .12).
+ * @param taxRate The current sales tax rate in the region as a decimal number (enter 12% as .12).
  */
 function main(workbook: ExcelScript.Workbook, taxRate: number)
 ```
