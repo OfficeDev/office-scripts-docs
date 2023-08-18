@@ -75,7 +75,7 @@ Power Automate allows users to pass arrays to connectors as a variable or as sin
 
 Excel files don't have an inherent location or timezone. Every time a user opens the workbook, their session uses that user's local timezone for date calculations. Power Automate always uses UTC.
 
-If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://make.powerautomate.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [Script parameter and return types in Power Automate](../develop/power-automate-parameters-returns.md) to learn how to provide that time information for the script.
+If your script uses dates or times, there may be behavioral differences when the script is tested locally versus when it is run through Power Automate. Power Automate allows you to convert, format, and adjust times. See [Working with Dates and Times inside of your flows](https://make.powerautomate.com/blog/working-with-dates-and-times/) for instructions on how to use those functions in Power Automate and [Pass data to and from scripts in Power Automate](../develop/power-automate-parameters-returns.md) to learn how to provide that time information for the script.
 
 ## Script parameter fields or returned output not appearing in Power Automate
 
