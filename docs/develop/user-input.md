@@ -16,11 +16,7 @@ Adding parameters to your script lets other users provide data for the script, w
 
 ## Example - Highlight large values
 
-The following example shows a script that takes a number and string from the user. To test it, open an empty workbook and paste the following values in the worksheet.
-
-| 9 | 100 | 44 |
-| 24 | 30 | 39 |
-| 65 | 57 | 78 |
+The following example shows a script that takes a number and string from the user. To test it, open an empty workbook and enter some numbers into several cells.
 
 ```TypeScript
 /**
