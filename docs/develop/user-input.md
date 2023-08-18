@@ -9,12 +9,45 @@ ms.localizationpriority: medium
 
 Adding parameters to your script lets other users provide data for the script, without needing to edit code. When your script is run through the ribbon or a button, a prompt pops up that asks for input.
 
-TK: Image
+:::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
 > [!IMPORTANT]
 > Currently, users will only be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
-## Example - TK
+## Example - Highlight large values
+
+The following example shows a script that takes a number and string from the user. To test it, open an empty workbook and paste the following values in the worksheet.
+
+| 9 | 100 | 44 |
+| 24 | 30 | 39 |
+| 65 | 57 | 78 |
+
+```TypeScript
+/**
+ * This script applies a background color to cells over a certain value.
+ * @param highlightThreshold The value used for comparisons.
+ * @param color A string representing the color to make the high value cells. 
+ *   This must be a color code representing the color of the background, 
+ *   in the form #RRGGBB (e.g., "FFA500") or a named HTML color (e.g., "orange").
+ */
+function main(
+  workbook: ExcelScript.Workbook, 
+  highlightThreshold: number, 
+  color: string) {
+    // Get the used cells in th1e current worksheet.
+    const currentSheet = workbook.getActiveWorksheet();
+    const usedRange = currentSheet.getUsedRange();
+    
+    const rangeValues = usedRange.getValues();
+    for (let row = 0; row < rangeValues.length; row++) {
+        for (let column = 0; column < rangeValues[row].length; column++) {
+        if (rangeValues[row][column] >= highlightThreshold) {
+            usedRange.getCell(row, column).getFormat().getFill().setColor(color);
+        }
+        }
+    }
+}
+```
 
 ## `main` parameters: Pass data to a script
 
