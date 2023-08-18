@@ -30,7 +30,7 @@ function main(
   workbook: ExcelScript.Workbook, 
   highlightThreshold: number, 
   color: string) {
-    // Get the used cells in th1e current worksheet.
+    // Get the used cells in the current worksheet.
     const currentSheet = workbook.getActiveWorksheet();
     const usedRange = currentSheet.getUsedRange();
     
@@ -51,15 +51,15 @@ All script input is specified as additional parameters for the `main` function. 
 
 ### Optional parameters
 
-Optional parameters don't need the user to provide a value. This implies your script either has default behavior or this parameter is only needed in a corner-case. They are denoted in your script with the [optional modifier](https://www.typescriptlang.org/docs/handbook/2/functions.html#optional-parameters) `?`. For example, in `function main(workbook: ExcelScript.Workbook, Name?: string)` the parameter `Name` is optional.
+Optional parameters don't need the user to provide a value. This implies your script either has default behavior or this parameter is only needed in a corner case. They're denoted in your script with the [optional modifier](https://www.typescriptlang.org/docs/handbook/2/functions.html#optional-parameters) `?`. For example, in `function main(workbook: ExcelScript.Workbook, Name?: string)` the parameter `Name` is optional.
 
 ### Default parameter values
 
 [Default parameter values](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#default-values) automatically fill the action's field with a value. To set a default value, assign a value to the parameter in the `main` signature. For example, in `function main(workbook: ExcelScript.Workbook, location: string = "Seattle")` the parameter `location` has the value `"Seattle"` unless something else is provided.
 
-### Drop-down lists for parameters
+### Dropdown lists for parameters
 
-Help others using your script in their flow by providing a list of acceptable parameter choices. If there is a small subset of values that your script uses, create a parameter that is those literal values. Do this by declaring the parameter type to be a [union of literal values](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types). For example, in `function main(workbook: ExcelScript.Workbook, location: "Seattle" | "Redmond")` the parameter `location` can only be `"Seattle"` or `"Redmond"`. When the script is run, users get a drop-down list with those two options.
+Help others using your script in their flow by providing a list of acceptable parameter choices. If there's a small subset of values that your script uses, create a parameter that is those literal values. Do this by declaring the parameter type to be a [union of literal values](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types). For example, in `function main(workbook: ExcelScript.Workbook, location: "Seattle" | "Redmond")` the parameter `location` can only be `"Seattle"` or `"Redmond"`. When the script is run, users get a dropdown list with those two options.
 
 ### Document the script
 
@@ -86,7 +86,7 @@ When adding input parameters and return values, consider the following allowance
 
 1. Arrays (both `[]` and `Array<T>` styles) of the previously listed types are supported. Nested arrays are also supported.
 
-1. Union types are allowed if they are a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left" | 5`).
+1. Union types are allowed if they're a union of literals belonging to a single type (such as `"Left" | "Right"`, not `"Left" | 5`).
 
 1. Object types are allowed if they contain properties of type `string`, `number`, `boolean`, supported arrays, or other supported objects. The following example shows nested objects that are supported as parameter types.
 

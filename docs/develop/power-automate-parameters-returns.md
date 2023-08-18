@@ -16,13 +16,13 @@ Input for your script is specified by adding parameters to the `main` function. 
 
 ## Pass data to scripts with parameters
 
-Add parameters to scripts to provide input from other parts of the flow. It is the same process to add parameters for flow-based scripts as it is for scripts run through the Excel client. Learn about providing input to scripts in [Get user input for scripts](user-input.md).
+Add parameters to scripts to provide input from other parts of the flow. It's the same process to add parameters for flow-based scripts as it is for scripts run through the Excel client. Learn about providing input to scripts in [Get user input for scripts](user-input.md).
 
 The following screenshot shows what a script with the signature `function main(workbook: ExcelScript.Workbook, location: string = "Seattle")` would display.
 
 :::image type="content" source="../images/power-automate-default-parameter.png" alt-text="The Run script action showing an additional parameter field called 'Location' with a pre-populated value of 'Seattle'.":::
 
-The [drop-down menus created by type unions](user-input.md#dropdown-lists-for-parameters) also function the same in Power Automate.
+The [dropdown menus created by type unions](user-input.md#dropdown-lists-for-parameters) also function the same in Power Automate.
 
 :::image type="content" source="../images/power-automate-drop-down-parameter-choices.png" alt-text="The Run script action showing an additional parameter field called 'Location' with choices between 'Seattle' and 'Redmond'.":::
 
