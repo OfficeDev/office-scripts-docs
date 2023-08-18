@@ -22,7 +22,7 @@ The following screenshot shows what a script with the signature `function main(w
 
 :::image type="content" source="../images/power-automate-default-parameter.png" alt-text="The Run script action showing an additional parameter field called 'Location' with a pre-populated value of 'Seattle'.":::
 
-The [drop-down menus created by type unions](user-input.md#drop-down-lists-for-parameters) also function the same in Power Automate.
+The [drop-down menus created by type unions](user-input.md#dropdown-lists-for-parameters) also function the same in Power Automate.
 
 :::image type="content" source="../images/power-automate-drop-down-parameter-choices.png" alt-text="The Run script action showing an additional parameter field called 'Location' with choices between 'Seattle' and 'Redmond'.":::
 
