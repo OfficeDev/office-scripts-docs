@@ -1,7 +1,7 @@
 ---
 title: Add comments in Excel
 description: Learn how to use Office Scripts to add comments in a worksheet.
-ms.date: 06/29/2021
+ms.date: 08/14/2023
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 
 ## Sample Excel file
 
-Download [excel-comments.xlsx](excel-comments.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+Download [add-excel-comments.xlsx](add-excel-comments.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
 ## Sample code: Add comments
 
@@ -31,47 +31,44 @@ Download [excel-comments.xlsx](excel-comments.xlsx) for a ready-to-use workbook.
 function main(workbook: ExcelScript.Workbook) {
   // Get the list of employees.
   const employees = workbook.getWorksheet('Employees').getUsedRange().getTexts();
-  console.log(employees); 
-  
+
   // Get the schedule information from the schedule table.
   const scheduleSheet = workbook.getWorksheet('Schedule');
   const table = scheduleSheet.getTables()[0];
   const range = table.getRangeBetweenHeaderAndTotal();
   const scheduleData = range.getTexts();
 
+  // Find old comments, so we can delete them later.
+  const oldCommentAddresses = scheduleSheet.getComments().map(oldComment => oldComment.getLocation().getAddress());
+
   // Look through the schedule for a matching employee.
   for (let i = 0; i < scheduleData.length; i++) {
-    let employeeId = scheduleData[i][3];
+    const employeeId = scheduleData[i][3];
 
     // Compare the employee ID in the schedule against the employee information table.
-    let employeeInfo = employees.find(employeeRow => employeeRow[0] === employeeId);
+    const employeeInfo = employees.find(employeeRow => employeeRow[0] === employeeId);
     if (employeeInfo) {
-      console.log("Found a match " + employeeInfo);
-      let adminNotes = scheduleData[i][4];
+      const adminNotes = scheduleData[i][4];
+      const commentCell = range.getCell(i, 5);
 
-      // Look for and delete old comments, so we avoid conflicts.
-      let comment = workbook.getCommentByCell(range.getCell(i, 5));
-      if (comment) {
+      // Delete old comments, so we avoid conflicts.
+      if (oldCommentAddresses.find(oldCommentAddress => oldCommentAddress === commentCell.getAddress())) {
+        const comment = workbook.getCommentByCell(commentCell);
         comment.delete();
       }
 
       // Add a comment using the admin notes as the text.
-      workbook.addComment(range.getCell(i,5), {
+      workbook.addComment(commentCell, {
         mentions: [{
           email: employeeInfo[1],
           id: 0, // This ID maps this mention to the `id=0` text in the comment.
           name: employeeInfo[2]
         }],
         richContent: `<at id=\"0\">${employeeInfo[2]}</at> ${adminNotes}`
-      }, ExcelScript.ContentType.mention);        
-      
+      }, ExcelScript.ContentType.mention);
     } else {
       console.log("No match for: " + employeeId);
     }
   }
 }
 ```
-
-## Training video: Add comments
-
-[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/CpR78nkaOFw).
