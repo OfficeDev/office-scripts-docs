@@ -37,9 +37,9 @@ function main(
     const rangeValues = usedRange.getValues();
     for (let row = 0; row < rangeValues.length; row++) {
         for (let column = 0; column < rangeValues[row].length; column++) {
-        if (rangeValues[row][column] >= highlightThreshold) {
-            usedRange.getCell(row, column).getFormat().getFill().setColor(color);
-        }
+          if (rangeValues[row][column] >= highlightThreshold) {
+              usedRange.getCell(row, column).getFormat().getFill().setColor(color);
+          }
         }
     }
 }
