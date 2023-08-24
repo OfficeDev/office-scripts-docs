@@ -1,7 +1,7 @@
 ---
 title: Get user input for scripts
 description: Add parameters to Office Scripts so users can control their experience. 
-ms.date: 08/15/2023
+ms.date: 08/22/2023
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,7 @@ Adding parameters to your script lets other users provide data for the script, w
 :::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
 > [!IMPORTANT]
-> Currently, users will only be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
+> Currently, only select users in preview will be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
 ## Example - Highlight large values
 
@@ -37,9 +37,9 @@ function main(
     const rangeValues = usedRange.getValues();
     for (let row = 0; row < rangeValues.length; row++) {
         for (let column = 0; column < rangeValues[row].length; column++) {
-        if (rangeValues[row][column] >= highlightThreshold) {
-            usedRange.getCell(row, column).getFormat().getFill().setColor(color);
-        }
+          if (rangeValues[row][column] >= highlightThreshold) {
+              usedRange.getCell(row, column).getFormat().getFill().setColor(color);
+          }
         }
     }
 }
