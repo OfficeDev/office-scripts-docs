@@ -34,7 +34,9 @@ items:
       href: develop/external-calls.md
     - name: File storage and ownership
       href: overview/script-storage.md
-    - name: Parameter and return types in Power Automate
+    - name: Get user input for scripts
+      href: develop/user-input.md
+    - name: Pass data in Power Automate
       href: develop/power-automate-parameters-returns.md
     - name: Run scripts with buttons
       href: develop/script-buttons.md
