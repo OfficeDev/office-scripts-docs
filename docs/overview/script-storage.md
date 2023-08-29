@@ -62,7 +62,7 @@ To specifically audit Office Scripts related activity as an admin, take the foll
     > [!IMPORTANT]
     > It may take an hour or two after turning on recording before all activities across the tenant are recorded.
 
-1. Set the desired search options and select **Search**. You can filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
+1. Set the desired search options and select **Search**. Filter the **File, folder, or site** field to `.osts`. This reveals who in your organization is creating or modifying scripts.
 
     :::image type="content" source="../images/audit-log-example.png" alt-text="A few rows of audit log search results, including the 'Ran script on workbook' action and the upload and modification of an .osts file.":::
 
