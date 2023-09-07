@@ -247,7 +247,7 @@ function main(
     * **File**: "TargetWorkbook.xlsx" (as selected by the file picker)
     * **Script**: Write data at row location
     * **data**: *result* (dynamic content from **Read data**)
-      * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting#pass-entire-arrays-as-script-parameters)** first.
+      * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting.md#pass-entire-arrays-as-script-parameters)** first.
     * **startRow**: *currentRow* (dynamic content)
     * **batchSize**: *batchSize* (dynamic content)
 
