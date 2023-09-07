@@ -43,7 +43,7 @@ function main(
   }
 
   // Remove the worksheet name from the address to create a relative formula.
-  let formula = "=$" + adjacentColumn.substring(adjacentColumn.indexOf("!") + 1);
+  let formula = "=$" + adjacentColumn.substring(adjacentColumn.lastIndexOf("!") + 1);
 
   // Set the conditional formatting based on the user's color choices.
   setConditionalFormatting(
