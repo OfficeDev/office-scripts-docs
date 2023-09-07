@@ -161,25 +161,29 @@ For this sample, you'll need to complete the following steps.
 ### Sample code: Read part of a workbook
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: number) : string[][] {
-    // This sample only reads the first worksheet in the workbook.
-    const sheet = workbook.getWorksheets()[0];
+function main(
+  workbook: ExcelScript.Workbook, 
+  startRow: number, 
+  batchSize: number
+): string[][] {
+  // This sample only reads the first worksheet in the workbook.
+  const sheet = workbook.getWorksheets()[0];
 
-    // Get the boundaries of the range.
-    // Note that we're assuming usedRange is too big to read or write as a single range.
-    const usedRange = sheet.getUsedRange();
-    const lastColumnIndex = usedRange.getLastColumn().getColumnIndex();
-    const lastRowindex = usedRange.getLastRow().getRowIndex();
+  // Get the boundaries of the range.
+  // Note that we're assuming usedRange is too big to read or write as a single range.
+  const usedRange = sheet.getUsedRange();
+  const lastColumnIndex = usedRange.getLastColumn().getColumnIndex();
+  const lastRowindex = usedRange.getLastRow().getRowIndex();
 
-    // If we're starting past the last row, exit the script.
-    if (startRow > lastRowindex) {
-        return [[]];
-    }
+  // If we're starting past the last row, exit the script.
+  if (startRow > lastRowindex) {
+      return [[]];
+  }
 
-    // Get the next batch or the rest of the rows, whichever is smaller.
-    const rowCountToRead = Math.min(batchSize, (lastRowindex - startRow + 1));
-    const rangeToRead = sheet.getRangeByIndexes(startRow, 0, rowCountToRead, lastColumnIndex + 1);
-    return rangeToRead.getValues() as string[][];
+  // Get the next batch or the rest of the rows, whichever is smaller.
+  const rowCountToRead = Math.min(batchSize, (lastRowindex - startRow + 1));
+  const rangeToRead = sheet.getRangeByIndexes(startRow, 0, rowCountToRead, lastColumnIndex + 1);
+  return rangeToRead.getValues() as string[][];
 }
 
 ```
@@ -187,7 +191,12 @@ function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: numbe
 ### Sample code: Write part of a workbook
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: number, batchSize: number): boolean {
+function main(
+  workbook: ExcelScript.Workbook, 
+  data: string[][], 
+  currentRow: number, 
+  batchSize: number
+): boolean {
   // Get the first worksheet.
   const sheet = workbook.getWorksheets()[0];
 
@@ -196,7 +205,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     sheet.getRangeByIndexes(currentRow, 0, data.length, data[0].length).setValues(data);
   }
 
-  // If we wrote less data than the batch size, signal the end of the flow.
+  // If the script wrote less data than the batch size, signal the end of the flow.
   return batchSize > data.length;
 }
 ```
