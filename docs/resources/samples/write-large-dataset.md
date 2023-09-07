@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 02/24/2023
+ms.date: 09/07/2023
 ms.localizationpriority: medium
 ---
 
@@ -223,7 +223,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **Choose a value**: -1
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
-1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Rename it to **Read data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "SampleData.xlsx" (as selected by the file picker)
@@ -232,11 +232,13 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **batchSize**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-4.png" alt-text="The completed 'Run script' action for the script that reads the data.":::
-1. Call the script to write the data. Add a second **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. Call the script to write the data. Add a second **Excel Online (Business)** connector with the **Run script** action. Rename it to **Write data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "TargetWorkbook.xlsx" (as selected by the file picker)
     * **Script**: Write data at row location
+    * **data**: *result* (dynamic content from **Read data**)
+      * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting#pass-entire-arrays-as-script-parameters)** first.
     * **startRow**: *currentRow* (dynamic content)
     * **batchSize**: *batchSize* (dynamic content)
 
@@ -247,7 +249,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
 1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
-    * **Choose a value**: *result* (dynamic content from **Run script**)
+    * **Choose a value**: *result* (dynamic content from **Write data**)
     * **is equal to** (from the dropdown list)
     * **Choose a value**: *true* (expression)
 
