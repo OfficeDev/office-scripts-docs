@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 08/29/2023
+ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
 
@@ -10,6 +10,9 @@ ms.localizationpriority: medium
 Office Scripts are stored as **.osts** files in your Microsoft OneDrive or a SharePoint folder. They are stored separately from a workbook. To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
 Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
+
+> [!NOTE]
+> Admin settings for Conditional Access in OneDrive and SharePoint affect Office Scripts. For more information, see the [Conditional Access section of Platform limits and requirements with Office Scripts](../testing/platform-limits.md#conditional-access)
 
 ## OneDrive
 
@@ -37,7 +40,7 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 
 ## Restore deleted scripts
 
-When you delete a script in Excel, it goes to your OneDrive or SharePoint recycle bin. To restore a deleted script, follow the steps listed in [How to recover missing, deleted or corrupted items in SharePoint and OneDrive for work or school](https://support.microsoft.com/office/how-to-recover-missing-deleted-or-corrupted-items-in-sharepoint-and-onedrive-for-work-or-school-3d748edf-c072-46c9-81a4-4989056ebc87). Restoring an **.osts** file returns it to the **All scripts** list.
+When you delete a script in Excel, it goes to your OneDrive or SharePoint recycle bin. To restore a deleted script, follow the steps listed in [How to recover missing, deleted or corrupted items in SharePoint and OneDrive for work or school](https://support.microsoft.com/office/3d748edf-c072-46c9-81a4-4989056ebc87). Restoring an **.osts** file returns it to the **All scripts** list.
 
 A deleted script is unshared with the workbook. When you restore a script, it does **not** retain its script access. You will need to share the script again.
 
