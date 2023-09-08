@@ -1,6 +1,6 @@
 ---
 title: Table samples
-description: A collection of samples how to interact with Excel tables.
+description: A collection of samples showing how to interact with Excel tables.
 ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
@@ -54,7 +54,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Remove table column filters
 
-This sample removes the filters from a table column, based on the active cell location. The script detects if the cell is part of a table, determines the table column, and clears any filter that are applied on it.
+This sample removes the filters from a table column, based on the active cell location. The script detects if the cell is part of a table, determines the table column, and clears any filters that are applied on it.
 
 Download [table-with-filter.xlsx](table-with-filter.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
 
@@ -67,7 +67,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Since tables can't overlap, this will be one table at most.
   const currentTable = cell.getTables()[0];
 
-  // If there is no table on the selection, end the script.
+  // If there's no table on the selection, end the script.
   if (!currentTable) {
     console.log("The selection is not in a table.");
     return;

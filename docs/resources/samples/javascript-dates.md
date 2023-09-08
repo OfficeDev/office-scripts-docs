@@ -32,7 +32,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Read an Excel date
 
-This sample reads a date that's stored in Excel and translates it to a JavaScript `Date` object. It uses the date's numeric serial number as input for the JavaScript `Date`. This serial number is described in the [NOW() function](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) article.
+This sample reads a date that's stored in Excel and translates it to a JavaScript `Date` object. It uses the date's numeric serial number as input for the JavaScript `Date`. This serial number is described in the [NOW() function](https://support.microsoft.com/office/3337fd29-145a-4347-b2e6-20c904739c46) article.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

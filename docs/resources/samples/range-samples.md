@@ -135,7 +135,7 @@ function getData(): string[][] {
 
 ## Change an adjacent cell
 
-This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
+This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails because it references the cell above the currently selected one.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -185,7 +185,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Change each individual cell in a range
 
-This script loops over the currently select range. It clears the current formatting and sets the fill color in each cell to a random color.
+This script loops over the currently selected range. It clears the current formatting and sets the fill color in each cell to a random color.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -196,16 +196,16 @@ function main(workbook: ExcelScript.Workbook) {
   let rows = range.getRowCount();
   let cols = range.getColumnCount();
 
-  // Clear any existing formatting
+  // Clear any existing formatting.
   range.clear(ExcelScript.ClearApplyTo.formats);
 
   // Iterate over the range.
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
-      // Generate a random color hex-code.
+      // Generate a random hexadecimal color code.
       let colorString = `#${Math.random().toString(16).substr(-6)}`;
 
-      // Set the color of the current cell to that random hex-code.
+      // Set the color of the current cell to that random hexadecimal code.
       range.getCell(row, col).getFormat().getFill().setColor(colorString);
     }
   }
@@ -246,7 +246,7 @@ function main(workbook: ExcelScript.Workbook) {
   a1.setValue(2);
 
   // Set B1 to the formula =(2*A1), which should equal 4.
-  let b1 = selectedSheet.getRange("B1")
+  let b1 = selectedSheet.getRange("B1");
   b1.setFormula("=(2*A1)");
 
   // Log the current results for `getFormula` and `getValue` at B1.
@@ -311,7 +311,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Suggest new samples
 
-We welcome suggestions for new samples. If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.
+We welcome suggestions for new samples. If there's a common scenario that would help other script developers, please tell us in the Feedback section at the bottom of the page.
 
 ## See also
 

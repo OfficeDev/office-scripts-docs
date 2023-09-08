@@ -1,6 +1,6 @@
 ---
-title: 'Work with PivotTables in Office Scripts'
-description: 'Learn about the object model for PivotTables in the Office Scripts JavaScript API.'
+title: Work with PivotTables in Office Scripts
+description: Learn about the object model for PivotTables in the Office Scripts JavaScript API.
 ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
@@ -76,7 +76,7 @@ Each part of the PivotTable maps to a range. This lets your script get data from
 
 ### PivotTable total output
 
-The location of the total row is based on the layout. Use [`PivotLayout.getBodyAndTotalRange`](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout#excelscript-excelscript-pivotlayout-getbodyandtotalrange-member(1)) and get the last row of column to use the data from the PivotTable in your script.
+The location of the total row is based on the layout. Use [`PivotLayout.getBodyAndTotalRange`](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout#excelscript-excelscript-pivotlayout-getbodyandtotalrange-member(1)) and get the last row of the column to use the data from the PivotTable in your script.
 
 The following sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 

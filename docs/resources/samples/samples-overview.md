@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Office Scripts samples and scenarios
 
-This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
+This section contains [Office Scripts](../../overview/excel.md) based solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
 
 - [Basics](#basics) showcase common examples that make up larger scripts. Most don't need a specific workbook or dataset and can be run in the workbook of your choice.
 - [Beyond the basics](#beyond-the-basics) are samples that are more involved or solve a particular problem. Some use Power Automate with an Office Script as a integral part of the flow.

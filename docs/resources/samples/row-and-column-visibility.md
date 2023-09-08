@@ -1,6 +1,6 @@
 ---
 title: Row and column visibility samples
-description: A collection of samples that show the basics of Excel visibility.
+description: A collection of samples that show the basics of visibility in Excel.
 ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
@@ -27,7 +27,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Show all rows and columns
 
-This script get the worksheet's used range, checks if there are any hidden rows and columns, and shows them.
+This script gets the worksheet's used range, checks if there are any hidden rows and columns, and shows them.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
