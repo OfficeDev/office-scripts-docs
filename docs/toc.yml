@@ -76,12 +76,20 @@ items:
         href: resources/samples/add-image-to-workbook.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
+      - name: Create a drop-down list using data validation
+        href: data-validation-samples.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
+      - name: JavaScript Dates
+        href: resources/samples/javascript-dates.md
       - name: Remove table column filters
         href: resources/samples/clear-table-filter-for-active-cell.md
       - name: Report day-to-day changes in Power Automate
         href: resources/samples/report-day-to-day-changes.md
+      - name: Row and column visibility
+        href: resources/samples/row-and-column-visibility.md
+      - name: Tables
+        href: table-samples.md
     - name: Beyond the basics
       items:
       - name: Combine worksheets into a single workbook

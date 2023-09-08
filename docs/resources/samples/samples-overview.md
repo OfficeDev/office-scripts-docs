@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Office Scripts samples and scenarios
 
-This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that business users face and provides detailed solutions along with step-by-step instructional video links.
+This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that  users face and provides detailed solutions.
 
 For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-the-basics), check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
 
@@ -22,13 +22,16 @@ We also welcome [contributions from the community](#community-contributions-and-
 
 | Project | Details |
 |---------|---------|
-| [Scripting basics](excel-samples.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
+| [First scripts](firs-.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
 | [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
 | [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
+| [JavaScript `Date` samples](javascript-date.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
 | [Remove table column filters](clear-table-filter-for-active-cell.md) | This sample clears all of the filters from a table column. |
 | [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
+| [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
+| [Table samples](table-samples.md) | A collection of samples that show common interactions with Excel tables.
 
 ## Beyond the basics
 

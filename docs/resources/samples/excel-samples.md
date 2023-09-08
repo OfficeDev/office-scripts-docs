@@ -1,13 +1,13 @@
 ---
-title: Basic scripts for Office Scripts in Excel
-description: A collection of code samples to use with Office Scripts in Excel.
+title: First scripts for Excel
+description: A collection of basic code samples to use with Office Scripts in Excel.
 ms.date: 02/13/2023
 ms.localizationpriority: medium
 ---
 
-# Basic scripts for Office Scripts in Excel
+# First scripts for Excel
 
-The following samples are simple scripts for you to try on your own workbooks. To use them in Excel:
+The following samples are simple scripts for you to try on your own workbooks. They form the building blocks to larger solutions. To use them in Excel:
 
 1. Open a workbook in Excel.
 1. Open the **Automate** tab.
@@ -239,86 +239,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Row and column visibility
-
-These samples demonstrate how to show, hide, and freeze rows and columns.
-
-### Hide columns
-
-This script hides columns "D", "F", and "J".
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the current worksheet.
-  const sheet = workbook.getActiveWorksheet();
-
-  // Hide columns D, F, and J.
-  sheet.getRange("D:D").setColumnHidden(true);
-  sheet.getRange("F:F").setColumnHidden(true);
-  sheet.getRange("J:J").setColumnHidden(true);
-}
-```
-
-### Show all rows and columns
-
-This script get the worksheet's used range, checks if there are any hidden rows and columns, and shows them.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-    // Get the currently selected sheet.
-    const selectedSheet = workbook.getActiveWorksheet();
-
-    // Get the entire data range.
-    const range = selectedSheet.getUsedRange();
-
-    // If the used range is empty, end the script.
-    if (!range) {
-      console.log(`No data on this sheet.`)
-      return;
-    }
-
-    // If no columns are hidden, log message, else show columns.
-    if (range.getColumnHidden() == false) {
-      console.log(`No columns hidden`);
-    } else {
-      range.setColumnHidden(false);
-    }
-
-    // If no rows are hidden, log message, else, show rows.
-    if (range.getRowHidden() == false) {
-      console.log(`No rows hidden`);
-    } else {
-      range.setRowHidden(false);
-    }
-}
-```
-
-### Freeze currently selected cells
-
-This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-    // Get the currently selected sheet.
-    const selectedSheet = workbook.getActiveWorksheet();
-
-    // Get the current selected range.
-    const selectedRange = workbook.getSelectedRange();
-
-    // If no cells are selected, end the script. 
-    if (!selectedRange) {
-      console.log(`No cells in the worksheet are selected.`);
-      return;
-    }
-
-    // Log the address of the selected range
-    console.log(`Selected range for the worksheet: ${selectedRange.getAddress()}`);
-
-    // Freeze the selected range.
-    selectedSheet.getFreezePanes().freezeAt(selectedRange);
-}
-```
-
 ## Collections
 
 These samples work with collections of objects in the workbook.
@@ -379,127 +299,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Dates
-
-The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.
-
-The following sample gets the current date and time and then writes those values to two cells in the active worksheet.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the cells at A1 and B1.
-  let dateRange = workbook.getActiveWorksheet().getRange("A1");
-  let timeRange = workbook.getActiveWorksheet().getRange("B1");
-
-  // Get the current date and time with the JavaScript Date object.
-  let date = new Date(Date.now());
-
-  // Add the date string to A1.
-  dateRange.setValue(date.toLocaleDateString());
-
-  // Add the time string to B1.
-  timeRange.setValue(date.toLocaleTimeString());
-}
-```
-
-The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object. It uses the date's numeric serial number as input for the JavaScript Date. This serial number is described in the [NOW() function](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) article.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Read a date at cell A1 from Excel.
-  let dateRange = workbook.getActiveWorksheet().getRange("A1");
-
-  // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.getValue() as number;
-  let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
-  console.log(javaScriptDate);
-}
-```
-
-## Tables
-
-The samples in this section showcase common interactions with Excel tables.
-
-### Create a sorted table
-
-This sample creates a table from the current worksheet's used range, then sorts it based on the first column.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the current worksheet.
-  let selectedSheet = workbook.getActiveWorksheet();
-
-  // Create a table with the used cells.
-  let usedRange = selectedSheet.getUsedRange();
-  let newTable = selectedSheet.addTable(usedRange, true);
-
-  // Sort the table using the first column.
-  newTable.getSort().apply([{ key: 0, ascending: true }]);
-}
-```
-
-### Filter a table
-
-This sample filters an existing table using the values in one of the columns.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the table in the workbook named "StationTable".
-  const table = workbook.getTable("StationTable");
-
-  // Get the "Station" table column for the filter.
-  const stationColumn = table.getColumnByName("Station");
-
-  // Apply a filter to the table that will only show rows 
-  // with a value of "Station-1" in the "Station" column.
-  stationColumn.getFilter().applyValuesFilter(["Station-1"]);
-}
-```
-
-> [!TIP]
-> Copy the filtered information across the workbook by using `Range.copyFrom`. Add the following line to the end of the script to create a new worksheet with the filtered data.
->
-> ```TypeScript
->   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
-> ```
-
-### Dynamically reference table values
-
-This script uses the "@COLUMN_NAME" syntax to set formulas in a table column. The column names in the table can be changed without changing this script.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the current worksheet.
-  const table = workbook.getTable("Profits");
-
-  // Get the column names for columns 2 and 3.
-  // Note that these are 1-based indices.
-  const nameOfColumn2 = table.getColumn(2).getName();
-  const nameOfColumn3 = table.getColumn(3).getName();
-
-  // Set the formula of the fourth column to be the product of the values found
-  // in that row's second and third columns.
-  const combinedColumn = table.getColumn(4).getRangeBetweenHeaderAndTotal();
-  combinedColumn.setFormula(`=[@[${nameOfColumn2}]]*[@[${nameOfColumn3}]]`);
-}
-```
-
-#### Before the script
-
-| Month | Price | Units Sold | Total |
-|--|--|--|--|
-| Jan | 45 | 5 |  |
-| Feb | 45 | 3 |  |
-| Mar | 45 | 6 |  |
-
-#### After the script
-
-| Month | Price | Units Sold | Total |
-|--|--|--|--|
-| Jan | 45 | 5 | 225 |
-| Feb | 45 | 3 | 135 |
-| Mar | 45 | 6 | 270 |
-
 ## Display data
 
 These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
@@ -551,43 +350,6 @@ function main(workbook: ExcelScript.Workbook) {
     console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
     // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
-}
-```
-
-### Create a drop-down list using data validation
-
-This script creates a drop-down selection list for a cell. It uses the existing values of the selected range as the choices for the list.
-
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="A worksheet showing a range of three cells containing color choices 'red, blue, green' and next to it, the same choices shown in a drop-down list.":::
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the values for data validation.
-  let selectedRange = workbook.getSelectedRange();
-  let rangeValues = selectedRange.getValues();
-
-  // Convert the values into a comma-delimited string.
-  let dataValidationListString = "";
-  rangeValues.forEach((rangeValueRow) => {
-    rangeValueRow.forEach((value) => {
-      dataValidationListString += value + ",";
-    });
-  });
-
-  // Clear the old range.
-  selectedRange.clear(ExcelScript.ClearApplyTo.contents);
-
-  // Apply the data validation to the first cell in the selected range.
-  let targetCell = selectedRange.getCell(0,0);
-  let dataValidation = targetCell.getDataValidation();
-
-  // Set the content of the drop-down list.
-  dataValidation.setRule({
-      list: {
-        inCellDropDown: true,
-        source: dataValidationListString
-      }
-    });
 }
 ```
 
