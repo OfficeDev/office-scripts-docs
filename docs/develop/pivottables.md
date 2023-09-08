@@ -76,7 +76,7 @@ Each part of the PivotTable maps to a range. This lets your script get data from
 
 ### PivotTable total output
 
-The location of the total row is based on the layout. Use [`PivotLayout.getBodyAndTotalRange`](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout?view=office-scripts#excelscript-excelscript-pivotlayout-getbodyandtotalrange-member(1)) and get the last row of column to use the data from the PivotTable in your script.
+The location of the total row is based on the layout. Use [`PivotLayout.getBodyAndTotalRange`](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout#excelscript-excelscript-pivotlayout-getbodyandtotalrange-member(1)) and get the last row of column to use the data from the PivotTable in your script.
 
 The following sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 
