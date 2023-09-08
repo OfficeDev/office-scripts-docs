@@ -2,7 +2,7 @@
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 04/20/2023
+ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
 
@@ -75,6 +75,15 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 - [Edge](https://support.microsoft.com/microsoft-edge/597f04f2-c0ce-f08c-7c2b-541086362bd2)
 - [Firefox](https://support.mozilla.org/kb/disable-third-party-cookies)
 - [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)
+
+## Conditional Access
+
+[Conditional Access](/azure/active-directory/conditional-access/overview) policies can restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
+
+If you script is blocked by Conditional Access policies, you'll receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
+
+- "Due to organizational policies, you can’t access this resource from this untrusted device."
+- "We weren't able to load your script. Please try again." (If your version of Excel is older.)
 
 ## API support on older Excel versions
 
