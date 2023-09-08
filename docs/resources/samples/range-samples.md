@@ -1,25 +1,15 @@
 ---
-title: First scripts for Excel
-description: A collection of basic code samples to use with Office Scripts in Excel.
-ms.date: 02/13/2023
+title: Ranges in Office Scripts
+description: A collection of code samples showing how to work with Excel ranges in Office Scripts.
+ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
 
-# First scripts for Excel
+# Ranges in Office Scripts
 
-The following samples are simple scripts for you to try on your own workbooks. They form the building blocks to larger solutions. To use them in Excel:
+The following samples are simple scripts for you to try on your own workbooks. They form the building blocks to larger solutions. Expand these scripts to extend your solution and solve common problems.
 
-1. Open a workbook in Excel.
-1. Open the **Automate** tab.
-1. Select **New Script**.
-1. Replace the entire script with the sample of your choice.
-1. Select **Run** in the Code Editor's task pane.
-
-## Script basics
-
-These samples demonstrate fundamental building blocks for Office Scripts. Expand these scripts to extend your solution and solve common problems.
-
-### Read and log one cell
+## Read and log one cell
 
 This sample reads the value of **A1** and prints it to the console.
 
@@ -36,7 +26,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Read the active cell
+## Read the active cell
 
 This script logs the value of the current active cell. If multiple cells are selected, the top-leftmost cell will be logged.
 
@@ -50,7 +40,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Add data to a range
+## Add data to a range
 
 This script adds a set of values to a new worksheet. The values start in cell **A1**. The data used in this script is predefined, but could be sourced from other places in or out of the workbook.
 
@@ -143,7 +133,7 @@ function getData(): string[][] {
 }
 ```
 
-### Change an adjacent cell
+## Change an adjacent cell
 
 This script gets adjacent cells using relative references. Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.
 
@@ -170,7 +160,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Change all adjacent cells
+## Change all adjacent cells
 
 This script copies the formatting in the active cell to the neighboring cells. Note that this script only works when the active cell isn't on an edge of the worksheet.
 
@@ -193,7 +183,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Change each individual cell in a range
+## Change each individual cell in a range
 
 This script loops over the currently select range. It clears the current formatting and sets the fill color in each cell to a random color.
 
@@ -222,7 +212,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Get groups of cells based on special criteria
+## Get groups of cells based on special criteria
 
 This script gets all the blank cells in the current worksheet's used range. It then highlights all those cells with a yellow background.
 
@@ -239,123 +229,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Collections
-
-These samples work with collections of objects in the workbook.
-
-### Iterate over collections
-
-This script gets and logs the names of all the worksheets in the workbook. It also sets the their tab colors to a random color.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get all the worksheets in the workbook.
-  let sheets = workbook.getWorksheets();
-
-  // Get a list of all the worksheet names.
-  let names = sheets.map ((sheet) => sheet.getName());
-
-  // Write in the console all the worksheet names and the total count.
-  console.log(names);
-  console.log(`Total worksheets inside of this workbook: ${sheets.length}`);
-  
-  // Set the tab color each worksheet to a random color
-  for (let sheet of sheets) {
-    // Generate a random color hex-code.
-    let colorString = `#${Math.random().toString(16).substr(-6)}`;
-
-    // Set the color of the current worksheet's tab to that random hex-code.
-    sheet.setTabColor(colorString);
-  }
-}
-```
-
-### Query and delete from a collection
-
-This script creates a new worksheet. It checks for an existing copy of the worksheet and deletes it before making a new sheet.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Name of the worksheet to be added.
-  let name = "Index";
-
-  // Get any worksheet with that name.
-  let sheet = workbook.getWorksheet("Index");
-  
-  // If `null` wasn't returned, then there's already a worksheet with that name.
-  if (sheet) {
-    console.log(`Worksheet by the name ${name} already exists. Deleting it.`);
-    // Delete the sheet.
-    sheet.delete();
-  }
-  
-  // Add a blank worksheet with the name "Index".
-  // Note that this code runs regardless of whether an existing sheet was deleted.
-  console.log(`Adding the worksheet named ${name}.`);
-  let newSheet = workbook.addWorksheet("Index");
-
-  // Switch to the new worksheet.
-  newSheet.activate();
-}
-```
-
-## Display data
-
-These samples demonstrate how to work with worksheet data and provide users with a better view or organization.
-
-### Apply conditional formatting
-
-This sample applies conditional formatting to the currently used range in the worksheet. The conditional formatting is a green fill for the top 10% of values.
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the current worksheet.
-  let selectedSheet = workbook.getActiveWorksheet();
-
-  // Get the used range in the worksheet.
-  let range = selectedSheet.getUsedRange();
-
-  // Set the fill color to green for the top 10% of values in the range.
-  let conditionalFormat = range.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom)
-  conditionalFormat.getTopBottom().getFormat().getFill().setColor("green");
-  conditionalFormat.getTopBottom().setRule({
-    rank: 10, // The percentage threshold.
-    type: ExcelScript.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
-  });
-}
-```
-
-### Log the "Grand Total" values from a PivotTable
-
-This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
-
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
-
-```TypeScript
-function main(workbook: ExcelScript.Workbook) {
-  // Get the first PivotTable in the workbook.
-  let pivotTable = workbook.getPivotTables()[0];
-
-  // Get the names of each data column in the PivotTable.
-  let pivotColumnLabelRange = pivotTable.getLayout().getColumnLabelRange();
-
-  // Get the range displaying the pivoted data.
-  let pivotDataRange = pivotTable.getLayout().getBodyAndTotalRange();
-
-  // Get the range with the "grand totals" for the PivotTable columns.
-  let grandTotalRange = pivotDataRange.getLastRow();
-
-  // Print each of the "Grand Totals" to the console.
-  grandTotalRange.getValues()[0].forEach((column, columnIndex) => {
-    console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
-    // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
-  });
-}
-```
-
 ## Formulas
 
-These samples use Excel formulas and show how to work with them in scripts.
+Ranges have both values and formulas. The formula is the expression to be evaluated. The value is the result of that expression.
 
 ### Single formula
 

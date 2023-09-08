@@ -1,19 +1,18 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 08/25/2022
+ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
 
 # Office Scripts samples and scenarios
 
-This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that  users face and provides detailed solutions.
+This section contains [Office Scripts](../../overview/excel.md) based automation solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
 
-For each of the projects in [Basics](#basics) and [Beyond the basics](#beyond-the-basics), check out the source code, step-by-step [**YouTube videos**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0), and more.
-
-In [Scenarios](#scenarios), we have included a few larger scenario samples that demonstrate real-world use cases.
-
-We also welcome [contributions from the community](#community-contributions-and-fun-samples). These samples are open source.
+- [Basics](#basics) showcase common examples that make up larger scripts. Most don't need a specific workbook or dataset and can be run in the workbook of your choice.
+- [Beyond the basics](#beyond-the-basics) are samples that are more involved or solve a particular problem. Some use Power Automate with an Office Script as a integral part of the flow.
+- [Scenarios](#scenarios) are a few larger samples that demonstrate real-world use cases.
+- [Contributions from the community](#community-contributions-and-fun-samples) are samples from members of the Office Scripts community, often light-hearted in nature.
 
 > [!IMPORTANT]
 > Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under the [Office Scripts for Excel overview "Requirements" section](../../overview/excel.md#requirements).
@@ -22,16 +21,15 @@ We also welcome [contributions from the community](#community-contributions-and-
 
 | Project | Details |
 |---------|---------|
-| [First scripts](firs-.md) | These samples demonstrate fundamental building blocks for Office Scripts. |
+| [Range samples](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
+| [Table samples](table-samples.md) | A collection of samples that show common interactions with Excel tables.
 | [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
 | [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
 | [JavaScript `Date` samples](javascript-date.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
-| [Remove table column filters](clear-table-filter-for-active-cell.md) | This sample clears all of the filters from a table column. |
 | [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
 | [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
-| [Table samples](table-samples.md) | A collection of samples that show common interactions with Excel tables.
 
 ## Beyond the basics
 

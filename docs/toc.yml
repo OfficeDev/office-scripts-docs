@@ -68,8 +68,10 @@ items:
       href: resources/samples/samples-overview.md
     - name: Basics
       items:
-      - name: Scripting basics
-        href: resources/samples/excel-samples.md
+      - name: Ranges
+        href: resources/samples/range-samples.md
+      - name: Tables
+        href: table-samples.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
       - name: Add images to a workbook
@@ -88,8 +90,6 @@ items:
         href: resources/samples/report-day-to-day-changes.md
       - name: Row and column visibility
         href: resources/samples/row-and-column-visibility.md
-      - name: Tables
-        href: table-samples.md
     - name: Beyond the basics
       items:
       - name: Combine worksheets into a single workbook
