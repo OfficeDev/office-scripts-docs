@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Troubleshoot Office Scripts running in Power Automate
 
-Power Automate runs scripts on your behalf in independent Excel sessions. This causes some behavioral changes that may create issues with certain scripts or scenarios. There are also limitations and behaviors from the Power Automate platform script writers should know. Be sure read the articles [Troubleshoot Office Scripts](troubleshooting.md) and [Platform limits and requirements with Office Scripts](platform-limits.md), as much of that information also applies to scripts in flows.
+Power Automate runs scripts on your behalf in independent Excel sessions. This causes some behavioral changes that may create issues with certain scripts or scenarios. There are also limitations and behaviors from the Power Automate platform script writers should know. Be sure to read the articles [Troubleshoot Office Scripts](troubleshooting.md) and [Platform limits and requirements with Office Scripts](platform-limits.md), as much of that information also applies to scripts in flows.
 
 > [!TIP]
 > If you're just starting to use Office Scripts with Power Automate, please start with [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn about the platforms.
