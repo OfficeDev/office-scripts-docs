@@ -27,7 +27,7 @@ This section contains [Office Scripts](../../overview/excel.md) based automation
 | [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
-| [JavaScript `Date` samples](javascript-date.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
+| [JavaScript `Date` samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
 | [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
 | [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
 

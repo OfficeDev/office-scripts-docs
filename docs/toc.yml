@@ -71,7 +71,7 @@ items:
       - name: Ranges
         href: resources/samples/range-samples.md
       - name: Tables
-        href: table-samples.md
+        href: resources/samples/table-samples.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
       - name: Add images to a workbook
@@ -79,7 +79,7 @@ items:
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
       - name: Create a drop-down list using data validation
-        href: data-validation-samples.md
+        href: resources/samples/data-validation-samples.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
       - name: JavaScript Dates

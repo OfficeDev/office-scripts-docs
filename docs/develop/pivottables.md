@@ -80,7 +80,7 @@ The location of the total row is based on the layout. Use [`PivotLayout.getBodyA
 
 The following sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
+:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
