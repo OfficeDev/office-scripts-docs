@@ -84,7 +84,6 @@ If you script is blocked by Conditional Access policies, you'll receive one of t
 
 - "Due to organizational policies, you can’t access this resource from this untrusted device."
 - "We can't find this script. It may have been deleted by another user." (If your version of Excel is older.)
-- "We weren't able to load your script. Please try again." (If your version of Excel is older.)
 
 ## API support on older Excel versions
 
