@@ -13,7 +13,7 @@ This sample shows how to apply conditional formatting to a range. The conditions
 
 ```TypeScript
 /**
- * Format a range on the current sheet based on values in an adjacent column.
+ * Formats a range on the current sheet based on values in an adjacent column.
  * @param rangeAddress The A1-notation range to format.
  * @param compareTo The adjacent column to compare against.
  * @param colorIfGreater The color of the cell if the value is greater than the adjacent column.
