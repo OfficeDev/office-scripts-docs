@@ -2,7 +2,15 @@
     "redirections": [      
       {
         "source_path": "docs/resources/excel-samples.md",
-        "redirect_url": "/office/dev/scripts/resources/samples/excel-samples"
+        "redirect_url": "/office/dev/scripts/resources/samples/samples-overview"
+      },    
+      {
+        "source_path": "docs/resources/samples/excel-samples.md",
+        "redirect_url": "/office/dev/scripts/resources/samples/samples-overview"
+      },
+      {
+        "source_path": "docs/resources/samples/clear-table-filter-for-active-cell.md",
+        "redirect_url": "/office/dev/scripts/resources/samples/table-samples"
       },
       {
         "source_path": "docs/resources/samples/document-number-generator.md",

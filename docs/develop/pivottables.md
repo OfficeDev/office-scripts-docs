@@ -1,7 +1,7 @@
 ---
-title: 'Work with PivotTables in Office Scripts'
-description: 'Learn about the object model for PivotTables in the Office Scripts JavaScript API.'
-ms.date: 10/01/2022
+title: Work with PivotTables in Office Scripts
+description: Learn about the object model for PivotTables in the Office Scripts JavaScript API.
+ms.date: 09/08/2023
 ms.localizationpriority: medium
 ---
 
@@ -73,6 +73,36 @@ A PivotTable can have as many or as few of its fields assigned to these specific
 Each part of the PivotTable maps to a range. This lets your script get data from the PivotTable for use later in the script or to be returned in a [Power Automate flow](power-automate-integration.md). These ranges are accessed through the [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) object acquired from `PivotTable.getLayout()`. The following diagram shows the ranges that are returned by the methods in `PivotLayout`.
 
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="A diagram showing which sections of a PivotTable are returned by the layout's get range functions.":::
+
+### PivotTable total output
+
+The location of the total row is based on the layout. Use [`PivotLayout.getBodyAndTotalRange`](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout#excelscript-excelscript-pivotlayout-getbodyandtotalrange-member(1)) and get the last row of the column to use the data from the PivotTable in your script.
+
+The following sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).
+
+:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the first PivotTable in the workbook.
+  const pivotTable = workbook.getPivotTables()[0];
+
+  // Get the names of each data column in the PivotTable.
+  const pivotColumnLabelRange = pivotTable.getLayout().getColumnLabelRange();
+
+  // Get the range displaying the pivoted data.
+  const pivotDataRange = pivotTable.getLayout().getBodyAndTotalRange();
+
+  // Get the range with the "grand totals" for the PivotTable columns.
+  const grandTotalRange = pivotDataRange.getLastRow();
+
+  // Print each of the "Grand Totals" to the console.
+  grandTotalRange.getValues()[0].forEach((column, columnIndex) => {
+    console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
+    // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
+  });
+}
+```
 
 ## Filters and slicers
 
