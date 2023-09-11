@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 02/24/2023
+ms.date: 09/07/2023
 ms.localizationpriority: medium
 ---
 
@@ -161,25 +161,29 @@ For this sample, you'll need to complete the following steps.
 ### Sample code: Read part of a workbook
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: number) : string[][] {
-    // This sample only reads the first worksheet in the workbook.
-    const sheet = workbook.getWorksheets()[0];
+function main(
+  workbook: ExcelScript.Workbook, 
+  startRow: number, 
+  batchSize: number
+): string[][] {
+  // This sample only reads the first worksheet in the workbook.
+  const sheet = workbook.getWorksheets()[0];
 
-    // Get the boundaries of the range.
-    // Note that we're assuming usedRange is too big to read or write as a single range.
-    const usedRange = sheet.getUsedRange();
-    const lastColumnIndex = usedRange.getLastColumn().getColumnIndex();
-    const lastRowindex = usedRange.getLastRow().getRowIndex();
+  // Get the boundaries of the range.
+  // Note that we're assuming usedRange is too big to read or write as a single range.
+  const usedRange = sheet.getUsedRange();
+  const lastColumnIndex = usedRange.getLastColumn().getColumnIndex();
+  const lastRowindex = usedRange.getLastRow().getRowIndex();
 
-    // If we're starting past the last row, exit the script.
-    if (startRow > lastRowindex) {
-        return [[]];
-    }
+  // If we're starting past the last row, exit the script.
+  if (startRow > lastRowindex) {
+      return [[]];
+  }
 
-    // Get the next batch or the rest of the rows, whichever is smaller.
-    const rowCountToRead = Math.min(batchSize, (lastRowindex - startRow + 1));
-    const rangeToRead = sheet.getRangeByIndexes(startRow, 0, rowCountToRead, lastColumnIndex + 1);
-    return rangeToRead.getValues() as string[][];
+  // Get the next batch or the rest of the rows, whichever is smaller.
+  const rowCountToRead = Math.min(batchSize, (lastRowindex - startRow + 1));
+  const rangeToRead = sheet.getRangeByIndexes(startRow, 0, rowCountToRead, lastColumnIndex + 1);
+  return rangeToRead.getValues() as string[][];
 }
 
 ```
@@ -187,7 +191,12 @@ function main(workbook: ExcelScript.Workbook, startRow: number, batchSize: numbe
 ### Sample code: Write part of a workbook
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: number, batchSize: number): boolean {
+function main(
+  workbook: ExcelScript.Workbook, 
+  data: string[][], 
+  currentRow: number, 
+  batchSize: number
+): boolean {
   // Get the first worksheet.
   const sheet = workbook.getWorksheets()[0];
 
@@ -196,7 +205,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     sheet.getRangeByIndexes(currentRow, 0, data.length, data[0].length).setValues(data);
   }
 
-  // If we wrote less data than the batch size, signal the end of the flow.
+  // If the script wrote less data than the batch size, signal the end of the flow.
   return batchSize > data.length;
 }
 ```
@@ -223,7 +232,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **Choose a value**: -1
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
-1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Rename it to **Read data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "SampleData.xlsx" (as selected by the file picker)
@@ -232,11 +241,13 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
     * **batchSize**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-4.png" alt-text="The completed 'Run script' action for the script that reads the data.":::
-1. Call the script to write the data. Add a second **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. Call the script to write the data. Add a second **Excel Online (Business)** connector with the **Run script** action. Rename it to **Write data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "TargetWorkbook.xlsx" (as selected by the file picker)
     * **Script**: Write data at row location
+    * **data**: *result* (dynamic content from **Read data**)
+      * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting.md#pass-entire-arrays-as-script-parameters)** first.
     * **startRow**: *currentRow* (dynamic content)
     * **batchSize**: *batchSize* (dynamic content)
 
@@ -247,7 +258,7 @@ function main(workbook: ExcelScript.Workbook, data: string[][], currentRow: numb
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
 1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
-    * **Choose a value**: *result* (dynamic content from **Run script**)
+    * **Choose a value**: *result* (dynamic content from **Write data**)
     * **is equal to** (from the dropdown list)
     * **Choose a value**: *true* (expression)
 
