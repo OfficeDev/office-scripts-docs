@@ -12,7 +12,7 @@ Adding parameters to your script lets other users provide data for the script, w
 :::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
 > [!IMPORTANT]
-> Currently, only Excel on the web users will be prompted to enter data for parameterized scripts in . Power Automate flows also support giving data to scripts through parameters.
+> Currently, only Excel on the web users will be prompted to enter data for parameterized scripts. Power Automate flows also support giving data to scripts through parameters.
 
 ## Example - Highlight large values
 
