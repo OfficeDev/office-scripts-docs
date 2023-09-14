@@ -113,3 +113,4 @@ When adding input parameters and return values, consider the following allowance
 
 - [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md)
 - [Run Office Scripts in Excel with buttons](script-buttons.md)
+- [Set conditional formatting for cross-column comparisons](../resources/samples/conditional-formatting-parameters.md)
