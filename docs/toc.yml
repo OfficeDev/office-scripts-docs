@@ -68,20 +68,28 @@ items:
       href: resources/samples/samples-overview.md
     - name: Basics
       items:
-      - name: Scripting basics
-        href: resources/samples/excel-samples.md
+      - name: Ranges
+        href: resources/samples/range-samples.md
+      - name: Tables
+        href: resources/samples/table-samples.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
       - name: Add images to a workbook
         href: resources/samples/add-image-to-workbook.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
+      - name: Create a drop-down list using data validation
+        href: resources/samples/data-validation-samples.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
+      - name: JavaScript Dates
+        href: resources/samples/javascript-dates.md
       - name: Remove table column filters
         href: resources/samples/clear-table-filter-for-active-cell.md
       - name: Report day-to-day changes in Power Automate
         href: resources/samples/report-day-to-day-changes.md
+      - name: Row and column visibility
+        href: resources/samples/row-and-column-visibility.md
       - name: Set conditional formatting for cross-column comparisons
         href: resources/samples/conditional-formatting-parameters.md
     - name: Beyond the basics
