@@ -1,7 +1,7 @@
 ---
 title: Get user input for scripts
 description: Add parameters to Office Scripts so users can control their experience. 
-ms.date: 08/22/2023
+ms.date: 09/14/2023
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,7 @@ Adding parameters to your script lets other users provide data for the script, w
 :::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
 > [!IMPORTANT]
-> Currently, only select users in preview will be prompted to enter data for parameterized scripts in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
+> Currently, only Excel on the web users will be prompted to enter data for parameterized scripts. Power Automate flows also support giving data to scripts through parameters.
 
 ## Example - Highlight large values
 
@@ -113,3 +113,4 @@ When adding input parameters and return values, consider the following allowance
 
 - [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md)
 - [Run Office Scripts in Excel with buttons](script-buttons.md)
+- [Set conditional formatting for cross-column comparisons](../resources/samples/conditional-formatting-parameters.md)
