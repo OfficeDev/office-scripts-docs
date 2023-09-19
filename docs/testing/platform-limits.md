@@ -78,12 +78,15 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 
 ## Conditional Access
 
-[Conditional Access](/azure/active-directory/conditional-access/overview) policies can restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
+[Conditional Access](/azure/active-directory/conditional-access/overview) policies restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
 
 If you script is blocked by Conditional Access policies, you'll receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
 
 - "Due to organizational policies, you can’t access this resource from this untrusted device."
 - "We can't find this script. It may have been deleted by another user." (If your version of Excel is older.)
+
+> [!IMPORTANT]
+> Administrators should consider blocking all access to Power Automate from unmanaged devices. This process is detailed in the blog post [Control Access to Power Apps and Power Automate with Azure AD Conditional Access Policies](https://devblogs.microsoft.com/premier-developer/control-access-to-power-apps-and-power-automate-with-azure-ad-conditional-access-policies/).
 
 ## API support on older Excel versions
 
