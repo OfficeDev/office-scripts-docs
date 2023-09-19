@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 09/08/2023
+ms.date: 09/15/2023
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ Power Automate runs your script in the chosen Excel workbook on your behalf. The
 
 Some relative reference APIs throw errors in Power Automate. Others have a default behavior that implies a user's state. When designing your scripts, be sure to use absolute references for worksheets and ranges. This makes your Power Automate flow consistent, even if worksheets are rearranged.
 
-### Script methods that fail when run in Power Automate flows
+### Script methods that fail in Power Automate flows
 
 The following methods throw an error and fail when called from a script in a Power Automate flow.
 
@@ -42,11 +42,11 @@ The following methods use a default behavior, in lieu of any user's current stat
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Returns either the first worksheet in the workbook or the worksheet currently activated by the `Worksheet.activate` method. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Marks the worksheet as the active worksheet for purposes of `Workbook.getActiveWorksheet`. |
 
-## Refresh not supported in Power Automate
+## Refresh not fully supported in Power Automate
 
-Office Scripts can't refresh data when run in Power Automate. Refresh methods such as `PivotTable.refresh` do nothing when called in a flow. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
+Office Scripts can't refresh most data when run in Power Automate. Most refresh methods, such as `PivotTable.refresh`, do nothing when called in a flow. `Workbook.refreshAllDataConnections` only refreshes when PowerBI is the source. Additionally, Power Automate doesn't trigger a data refresh for formulas that use workbook links.
 
-### Script methods that do nothing when run in Power Automate flows
+### Script methods that do nothing in Power Automate flows
 
 The following methods do nothing in a script when called through Power Automate. They still return successfully and don't throw any errors.
 
@@ -56,6 +56,14 @@ The following methods do nothing in a script when called through Power Automate.
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
+
+### Script methods with a different behavior in Power Automate
+
+The following methods act differently in Power Automate flows than they do when run through Excel.
+
+| Class | Method | Power Automate behavior |
+|--|--|--|
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. |
 
 ## Select workbooks with the file browser control
 
