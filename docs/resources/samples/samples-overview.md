@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 09/08/2023
+ms.date: 09/20/2023
 ms.localizationpriority: medium
 ---
 
@@ -26,6 +26,7 @@ This section contains [Office Scripts](../../overview/excel.md) based solutions 
 | [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
 | [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
+| [Data validation: dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
 | [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
 | [JavaScript `Date` samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
 | [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
