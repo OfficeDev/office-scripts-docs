@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Data validation: dropdown lists, prompts, and warning pop-ups
 
-Data validation helps the user ensure consistency in a worksheet. Use these features to limit what can be entered into a cell and provide warnings or errors to users when those conditions aren't met. To learn more about data validation in Excel, see [Apply data validation to cells](https://support.microsoft.com/office/29fecbcc-d1b9-42c1-9d76-eff3ce5f7249)
+Data validation helps the user ensure consistency in a worksheet. Use these features to limit what can be entered into a cell and provide warnings or errors to users when those conditions aren't met. To learn more about data validation in Excel, see [Apply data validation to cells](https://support.microsoft.com/office/29fecbcc-d1b9-42c1-9d76-eff3ce5f7249).
 
 ## Create a dropdown list using data validation
 
@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Add a prompt to a range
 
-This example create a prompt note that appears when a user enters the given cells. This is used to remind users about input requirements, without strict enforcement.
+This example creates a prompt note that appears when a user enters the given cells. This is used to remind users about input requirements, without strict enforcement.
 
 :::image type="content" source="../../images/data-validation-prompt.png" alt-text="A prompt with the title 'First names only' and the message 'Only enter the first name of the employee, not the full name.' next to a worksheet with some names in cells.":::
 
@@ -76,9 +76,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Alert the user when invalid data is entered
 
-The follow sample script prevents the user from entering anything other than positive numbers into a range. If they try to put anything else, an error message pops up and indicates the problem.
+The following sample script prevents the user from entering anything other than positive numbers into a range. If they try to put anything else, an error message pops up and indicates the problem.
 
-:::image type="content" source="../../images/data-validation-error.png" alt-text="A error message with the title 'Invalid data' and the message 'Positive numbers only.' next to a cell with a negative number.":::
+:::image type="content" source="../../images/data-validation-error.png" alt-text="An error message with the title 'Invalid data' and the message 'Positive numbers only.' next to a cell with a negative number.":::
 
 ```TypeScript
 /**
