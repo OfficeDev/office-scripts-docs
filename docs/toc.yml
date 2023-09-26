@@ -78,7 +78,7 @@ items:
         href: resources/samples/add-image-to-workbook.md
       - name: Copy multiple tables into single table
         href: resources/samples/copy-tables-combine.md
-      - name: Create a drop-down list using data validation
+      - name: "Data validation: dropdown lists, prompts, and warning pop-ups"
         href: resources/samples/data-validation-samples.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
