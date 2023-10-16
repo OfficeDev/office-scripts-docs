@@ -62,7 +62,7 @@ The following methods act differently in Power Automate flows than they do when 
 
 | Class | Method | Power Automate behavior |
 |--|--|--|
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | only refreshes PowerBI sources. For other sources, the method returns successfully but does nothing. |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. For other sources, the method returns successfully but does nothing. |
 
 ## Select workbooks with the file browser control
 
