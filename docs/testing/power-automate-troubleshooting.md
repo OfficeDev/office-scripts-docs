@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 09/15/2023
+ms.date: 10/13/2023
 ms.localizationpriority: medium
 ---
 
@@ -62,7 +62,7 @@ The following methods act differently in Power Automate flows than they do when 
 
 | Class | Method | Power Automate behavior |
 |--|--|--|
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. For other sources, the method returns successfully but does nothing. |
 
 ## Select workbooks with the file browser control
 
