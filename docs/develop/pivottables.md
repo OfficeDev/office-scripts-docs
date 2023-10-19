@@ -28,7 +28,8 @@ The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottab
 
 Look at how these relationships work in practice. The following data describes fruit sales from various farms. It's the base for all the examples in this article and the content in the sample workbook.
 
-<button href="pivottable-sample.xlsx"> Download the sample workbook </button>
+> [!div class="nextstepaction"]
+> [Download the sample workbook](pivottable-sample.xlsx)
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="A collection of fruit sales of different types from different farms.":::
 
