@@ -14,7 +14,10 @@ ms.localizationpriority: medium
 
 ## Sample Excel file
 
-Download the file [remove-hyperlinks.xlsx](remove-hyperlinks.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+> [!div class="nextstepaction"]
+> [Download the sample workbook](remove-hyperlinks.xlsx)
+
+Add the following script to try the sample yourself!
 
 ## Sample code: Remove hyperlinks
 

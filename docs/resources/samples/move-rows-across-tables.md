@@ -15,7 +15,10 @@ This script does the following:
 
 ## Sample Excel file
 
-Download the file [input-table-filters.xlsx](input-table-filters.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+> [!div class="nextstepaction"]
+> [Download the sample workbook](input-table-filters.xlsx)
+
+Add the following script to try the sample yourself!
 
 ## Sample code: Move rows using range values
 

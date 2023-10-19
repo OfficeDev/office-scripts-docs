@@ -11,7 +11,10 @@ Power Automate and Office Scripts combine to handle repetitive tasks for you. In
 
 ## Sample Excel file
 
-Download [daily-readings.xlsx](daily-readings.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+> [!div class="nextstepaction"]
+> [Download the sample workbook](daily-readings.xlsx)
+
+Add the following script to try the sample yourself!
 
 ## Sample code: Record and report daily readings
 

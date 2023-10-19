@@ -23,7 +23,10 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 
 ## Sample Excel file
 
-Download [add-excel-comments.xlsx](add-excel-comments.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+> [!div class="nextstepaction"]
+> [Download the sample workbook](add-excel-comments.xlsx)
+
+Add the following script to try the sample yourself!
 
 ## Sample code: Add comments
 

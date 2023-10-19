@@ -1,7 +1,7 @@
 ---
 title: Work with PivotTables in Office Scripts
 description: Learn about the object model for PivotTables in the Office Scripts JavaScript API.
-ms.date: 09/08/2023
+ms.date: 10/19/2023
 ms.localizationpriority: medium
 ---
 

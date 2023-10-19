@@ -16,7 +16,10 @@ There are two variations of this script:
 
 ## Sample Excel file
 
-Download [tables-copy.xlsx](tables-copy.xlsx) for a ready-to-use workbook. Add the following scripts to try the sample yourself!
+> [!div class="nextstepaction"]
+> [Download the sample workbook](tables-copy.xlsx)
+
+Add the following scripts to try the sample yourself!
 
 ## Sample code: Combine data from multiple Excel tables into a single table
 
