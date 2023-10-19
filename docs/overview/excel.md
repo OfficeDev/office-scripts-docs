@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 04/11/2023
+ms.date: 10/13/2023
 ms.localizationpriority: high
 ---
 
@@ -49,7 +49,7 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 ## Share Office Scripts
 
-Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+Office Scripts can be shared with other users in your organization. When you share a script in a shared workbook, team members with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 :::image type="content" source="../images/script-sharing.png" alt-text="The script details page showing the 'Share with others in this workbook' option.":::
 

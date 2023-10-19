@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 09/15/2023
+ms.date: 10/13/2023
 ms.localizationpriority: medium
 ---
 
@@ -12,6 +12,8 @@ Power Automate runs scripts on your behalf in independent Excel sessions. This c
 
 > [!TIP]
 > If you're just starting to use Office Scripts with Power Automate, please start with [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn about the platforms.
+
+[!INCLUDE [Power Automate needs a business license](../includes/power-automate-needs-business.md)]
 
 ## Avoid relative references
 
