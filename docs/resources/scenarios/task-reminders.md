@@ -25,7 +25,9 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 ## Setup instructions
 
-1. Download [task-reminders.xlsx](task-reminders.xlsx) to your OneDrive.
+1. Download the sample workbook to your OneDrive.
+    > [!div class="nextstepaction"]
+    > [Download the sample workbook](task-reminders.xlsx)
 
 1. Open the workbook in Excel.
 

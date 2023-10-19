@@ -15,7 +15,9 @@ In this scenario, you'll create a time sheet for an employee that allows them to
 
 ## Setup instructions
 
-1. Download [punch-clock-sample.xlsx](punch-clock-sample.xlsx) to your OneDrive.
+1. Download the sample workbook to your OneDrive.
+    > [!div class="nextstepaction"]
+    > [Download the sample workbook](punch-clock-sample.xlsx)
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="A table with three columns: 'Clock In', 'Clock Out', and 'Duration'.":::
 
