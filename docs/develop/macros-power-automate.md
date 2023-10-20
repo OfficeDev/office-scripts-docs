@@ -1,23 +1,23 @@
 ---
 title: Use macro-enabled files in Power Automate flows
 description: Learn how to use macro-enabled files, or .xlsm files, in Power Automate flows.
-ms.date: 08/09/2023
+ms.date: 10/19/2023
 ms.localizationpriority: medium
 ---
 
 # How to use macro-enabled files in Power Automate flows
 
-You can integrate your .xlsm files with a Power Automate flow. This lets you start to convert your existing automation solutions to web-based formats. Please note that the macros contained in the .xlsm files cannot be run through Power Automate. Only Office Scripts are enabled there.
+[Power Automate](https://make.powerautomate.com/) flows support .xlsm files in the [Excel Online (Business) connector](https://make.powerautomate.com/connectors/shared_excelonlinebusiness/excel-online-business/).
 
-The [Excel Online (Business) connector](https://make.powerautomate.com/connectors/shared_excelonlinebusiness/excel-online-business/) in [Power Automate](https://make.powerautomate.com/) is typically limited to files in the Microsoft Excel Open XML Spreadsheet (.xlsx) format. Its file browser only lets you select .xlsx files. However, macro-enabled files are compatible with the connector's **Run script** action if the file metadata is used.
+> [!IMPORTANT]
+> The macros contained in the .xlsm files cannot be run through Power Automate. Only Office Scripts are enabled there.
 
-In your flow, use the **Get File Metadata** action from either the [OneDrive for Business](https://make.powerautomate.com/connectors/shared_onedriveforbusiness/onedrive-for-business/) or [SharePoint](https://make.powerautomate.com/connectors/shared_sharepointonline/sharepoint/) connectors. The **Run script** action accepts this metadata as a valid file. Use the *ID* dynamic content returned from the **Get file metadata** action as the "File" argument when running the script. The following screenshot shows a flow providing the metadata for a file called "Test Macro File.xlsm" to a **Run script** action.
-
-:::image type="content" source="../images/xlsm-in-power-automate.png" alt-text="A flow with a Get file metadata action passing the metadata of a macro file to a Run script action.":::
+The **Run script** action lets you select .xlsm files. Other connector actions require you use the file ID. Get this ID with the **Get File Metadata** action from either the [OneDrive for Business](https://make.powerautomate.com/connectors/shared_onedriveforbusiness/onedrive-for-business/) or [SharePoint](https://make.powerautomate.com/connectors/shared_sharepointonline/sharepoint/) connectors. Use the *ID* dynamic content returned from the **Get file metadata** action as the "File" argument for Excel connector actions.
 
 > [!WARNING]
 > Some .xlsm files, especially those with ActiveX or Form controls, may not work in the Excel online connector. Be sure to test before deploying your solution.
 
-## Other resources
+## See also
 
-[Watch Sudhi Ramamurthy's YouTube video on how use an .xlsm file in a Run Script action](https://youtu.be/o-H9BbywJQQ).
+- [Excel Online (Business) connector reference](/connectors/excelonlinebusiness/)
+- [Run Office Scripts with Power Automate](power-automate-integration.md)
