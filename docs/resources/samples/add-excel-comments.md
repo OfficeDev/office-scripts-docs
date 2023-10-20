@@ -11,7 +11,7 @@ This sample shows how to add comments to a cell including [@mentioning](https://
 
 ## Example scenario
 
-The team lead maintains the shift schedule. The they assign an employee ID to the shift record. If the team lead wishes to notify the employee, they add a comment that @mentions the employee. The employee is emailed with a custom message from the worksheet. Subsequently, the employee can view the workbook and respond to the comment at their convenience.
+The team lead maintains the shift schedule. They assign an employee ID to the shift record. If the team lead wishes to notify the employee, they add a comment that @mentions the employee. The employee is emailed with a custom message from the worksheet. Subsequently, the employee can view the workbook and respond to the comment at their convenience.
 
 ## Solution
 
