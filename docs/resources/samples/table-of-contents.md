@@ -11,14 +11,16 @@ This sample shows how to create a table of contents for the workbook. Each entry
 
 :::image type="content" source="../../images/table-of-contents-sample.png" alt-text="The table of contents worksheet showing links to the other worksheets.":::
 
-## Sample Excel file
+## Setup: Sample Excel file
+
+This workbook contains the data, objects, and formatting expected by the script.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](table-of-contents.xlsx)
 
-Add the following script and try the sample yourself!
-
 ## Sample code: Create a workbook table of contents
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

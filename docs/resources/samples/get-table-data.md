@@ -9,7 +9,9 @@ ms.localizationpriority: medium
 
 Excel table data can be represented as an array of objects in the form of [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Each object represents a row in the table. This helps extract the data from Excel in a consistent format that is visible to the user. The data can then be given to other systems through Power Automate flows.
 
-## Sample Excel file
+## Setup: Sample Excel file
+
+This workbook contains the data, objects, and formatting expected by the script.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](table-data-with-hyperlinks.xlsx)
@@ -22,7 +24,7 @@ A variation of this sample also includes the hyperlinks in one of the table colu
 
 ## Sample code: Return table data as JSON
 
-Add the following script to try the sample yourself!
+Add the following script to the sample workbook and try the sample yourself!
 
 > [!NOTE]
 > You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).

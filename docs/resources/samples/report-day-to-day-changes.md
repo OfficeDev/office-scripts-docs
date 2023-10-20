@@ -9,14 +9,16 @@ ms.localizationpriority: medium
 
 Power Automate and Office Scripts combine to handle repetitive tasks for you. In this sample, you're tasked with recording a single numerical reading in a workbook every day and reporting the change since yesterday. You'll build a flow to get that reading, log it in the workbook, and report the change through an email.
 
-## Sample Excel file
+## Setup: Sample Excel file
+
+This workbook contains the data, objects, and formatting expected by the script.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](daily-readings.xlsx)
 
-Add the following script to try the sample yourself!
-
 ## Sample code: Record and report daily readings
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, newData: string): string {

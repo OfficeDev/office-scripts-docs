@@ -25,11 +25,15 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 ## Setup instructions
 
+### Download the workbook
+
 1. Download the sample workbook to your OneDrive.
     > [!div class="nextstepaction"]
     > [Download the sample workbook](task-reminders.xlsx)
 
 1. Open the workbook in Excel.
+
+### Create the scripts
 
 1. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
 
@@ -140,7 +144,9 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 1. Save the script with the name **Save Status**.
 
-1. Now, we need to create the flow. Open the [Power Automate **Create** tab](https://make.powerautomate.com/create).
+### Create the Power Automate flow
+
+1. Open the [Power Automate **Create** tab](https://make.powerautomate.com/create).
 
     > [!TIP]
     > If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.

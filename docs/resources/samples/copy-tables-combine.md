@@ -14,14 +14,16 @@ There are two variations of this script:
 1. The [first script](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) combines all tables in the Excel file.
 1. The [second script](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) selectively gets tables within a set of worksheets.
 
-## Sample Excel file
+## Setup: Sample Excel file
+
+This workbook contains the data, objects, and formatting expected by the script.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](tables-copy.xlsx)
 
-Add the following scripts to try the sample yourself!
-
 ## Sample code: Combine data from multiple Excel tables into a single table
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

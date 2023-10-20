@@ -23,16 +23,21 @@ For more information about working with JSON, read [Use JSON to pass data to and
 * Teams integration
 * Table parsing
 
-## Sample Excel file
+## Setup instructions
 
-> [!div class="nextstepaction"]
-> [Download the sample workbook](hr-schedule.xlsx)
+### Download the workbook
 
-Download the workbook used in this solution and try it out yourself! Be sure to change at least one of the email addresses so that you receive an invite.
+1. Download the sample workbook to your OneDrive.
+    > [!div class="nextstepaction"]
+    > [Download the sample workbook](hr-schedule.xlsx)
 
-## Sample code: Extract table data to schedule invites
+1. Open the workbook in Excel.
 
-Add this script to your script collection. Name it **Schedule Interviews** for the flow.
+1. Change at least one of the email addresses to your own so that you receive an invite.
+
+### Create the scripts
+
+1. Under the **Automate** tab, select **New Script** and paste the following script into the editor. This will extract table data to schedule invites.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -91,9 +96,9 @@ interface InterviewInvite {
 }
 ```
 
-## Sample code: Mark rows as invited
+1. Name the script **Schedule Interviews** for the flow.
 
-Add this script to your script collection. Name it **Record Sent Invites** for the flow.
+1. Create another new script with the following code. This will mark rows as invited.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, invites: InterviewInvite[]) {
@@ -132,7 +137,11 @@ interface InterviewInvite {
 }
 ```
 
-## Sample flow: Run the interview scheduling scripts and send the Teams meetings
+1. Name the second script **Record Sent Invites** for the flow.
+
+### Create the Power Automate flow
+
+This flow run the interview scheduling scripts, send the Teams meetings, and record the activity back in the workbook.
 
 1. Create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.

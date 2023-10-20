@@ -35,14 +35,16 @@ This solution has two parts:
 1. [An Office Script to calculate and extract Excel chart and table](#sample-code-calculate-and-extract-excel-chart-and-table)
 1. A Power Automate flow to invoke the script and email the results. For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
 
-## Sample Excel file
+## Setup: Sample Excel file
+
+This workbook contains the data, objects, and formatting expected by the script.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](email-chart-table.xlsx)
 
-Add the following script to try the sample yourself!
-
 ## Sample code: Calculate and extract Excel chart and table
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
