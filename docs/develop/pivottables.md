@@ -26,7 +26,7 @@ The [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottab
 - The [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) defines how the [PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) and [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) are displayed.
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) filter data from the [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) using different criteria.
 
-Look at how these relationships work in practice. The following data describes fruit sales from various farms. It's the base for all the examples in this article and the content in the sample workbook.
+To look at how these relationships work in practice, start by downloading the sample workbook. That data describes fruit sales from various farms. It's the base for all the examples in this article. Run the sample scripts throughout the article to create and explore PivotTables.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](pivottable-sample.xlsx)
