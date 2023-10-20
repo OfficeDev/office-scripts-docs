@@ -1,19 +1,19 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 10/13/2023
+ms.date: 10/20/2023
 ms.localizationpriority: medium
 ---
 
 # Office Scripts file storage and ownership
-
-Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
 The details of how scripts are stored and shared depend on your Microsoft 365 subscription. Select the relevant tab to learn more.
 
 ## File storage
 
 # [For business](#tab/business)
+
+Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
 ### OneDrive
 
@@ -39,9 +39,11 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 
 # [For home](#tab/home)
 
-Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Move** button shown when renaming a script moves the script to a new location. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
+Scripts are stored in your local Office cache. The cache is in the following folder.
 
-Unless you share your personal scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations.
+```
+%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
+```
 
 ## Share scripts
 
@@ -53,6 +55,7 @@ To give users who are outside of the SharePoint site access to the script, [shar
 > Admin settings for Conditional Access in OneDrive and SharePoint affect Office Scripts. For more information, see the [Conditional Access section of Platform limits and requirements with Office Scripts](../testing/platform-limits.md#conditional-access).
 
 # [For home](#tab/home)
+
 Scripts can't be shared through workbooks with a home or family account. You can manually share the script files, but there are no in-client support options or change notifications.
 
 ## Restore deleted scripts
@@ -67,7 +70,7 @@ Restored scripts still work as expected with Power Automate flows. You don't nee
 
 # [For home](#tab/home)
 
-When you delete a script in Excel, it goes to your recycle bin. To restore a deleted script, follow the steps listed in [Find lost or missing files in OneDrive](https://support.microsoft.com/office/0d929e0d-8682-4295-982b-4bd75a3daa01). Restoring an **.osts** file returns it to the **All scripts** list.
+When you delete a script in Excel, it goes to your recycle bin. Restoring an **.osts** file returns it to the **All scripts** list.
 
 ## File ownership and retention
 
@@ -79,7 +82,7 @@ During editing, files are temporarily stored in the browser. You must save the s
 
 # [For home](#tab/home)
 
-During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
+Clearing the Office cache will remove all your scripts. Be sure to manually save your scripts elsewhere if the cache needs to be cleared.
 
 ## Audit Office Scripts usage at the admin level
 
