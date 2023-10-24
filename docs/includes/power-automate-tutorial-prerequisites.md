@@ -1,5 +1,1 @@
-Before starting this tutorial, you'll need access to the following:
-
-- [Power Automate](/power-automate/organization-q-and-a).
-- Excel for Windows, for Mac, or on the web.
-- [A Microsoft 365 commercial or EDU plan that includes Office Scripts](/microsoft-365/admin/manage/manage-office-scripts-settings).
+You'll need access to Office Scripts and Power Automate for this tutorial. Please review the [Platform support](../platform-limits#platform-support) if the Automate tab doesn't appear. The [Power Automate sign-up FAQ](/power-automate/organization-q-and-a has information on getting started with Power Automate.

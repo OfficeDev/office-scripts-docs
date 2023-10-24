@@ -2,13 +2,15 @@
 title: Fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
 ms.topic: get-started
-ms.date: 10/01/2022
+ms.date: 10/24/2023
 ms.localizationpriority: high
 ---
 
 # Fundamentals for Office Scripts in Excel
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn the critical parts of the TypeScript-based script code and how the Excel objects and APIs work together.
+
+If you would prefer to get started with an interactive experience, try the tutorial [Record, edit, and create Office Scripts in Excel](../tutorials/excel-tutorial.md) or visit our [samples](../resources/samples/samples-overview.md).
 
 ## TypeScript: The language of Office Scripts
 
@@ -40,6 +42,8 @@ To write a script, you need to understand how the Office Scripts APIs fit togeth
 - **Ranges** are used to create and place **Tables**, **Charts**, **Shapes**, and other data visualization or organization objects.
 - A **Worksheet** contains collections of those data objects that are present in the individual sheet.
 - **Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.
+
+The complete list of Office Scripts API objects is detailed in the [ExcelScript package](/javascript/api/office-scripts/excelscript?view=office-scripts).
 
 ## Workbook
 
