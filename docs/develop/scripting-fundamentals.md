@@ -43,7 +43,7 @@ To write a script, you need to understand how the Office Scripts APIs fit togeth
 - A **Worksheet** contains collections of those data objects that are present in the individual sheet.
 - **Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.
 
-The complete list of Office Scripts API objects is detailed in the [ExcelScript package](/javascript/api/office-scripts/excelscript?view=office-scripts).
+The complete list of Office Scripts API objects is detailed in the [ExcelScript package](/javascript/api/office-scripts/excelscript).
 
 ## Workbook
 

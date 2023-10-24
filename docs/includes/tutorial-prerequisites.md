@@ -1,1 +1,1 @@
-You'll need access to Office Scripts for this tutorial. Please review the [Platform support](../platform-limits#platform-support) if the Automate tab doesn't appear.
+You'll need access to Office Scripts for this tutorial. Please review the [Platform support](/office/dev/scripts/testing/platform-limits#platform-support) if the Automate tab doesn't appear.
