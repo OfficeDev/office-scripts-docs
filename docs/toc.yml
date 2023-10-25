@@ -38,7 +38,7 @@ items:
       href: develop/user-input.md
     - name: Pass data in Power Automate
       href: develop/power-automate-parameters-returns.md
-    - name: Run scripts with buttons
+    - name: Run scripts from buttons
       href: develop/script-buttons.md
     - name: Use JSON to pass data
       href: develop/use-json.md
@@ -128,7 +128,7 @@ items:
         href: resources/scenarios/grade-calculator.md
       - name: Schedule interviews in Teams
         href: resources/scenarios/schedule-interviews-in-teams.md
-      - name: Task reminders (with Power Automate)
+      - name: Task reminders as Teams cards
         href: resources/scenarios/task-reminders.md
     - name: Community contributions
       items:
