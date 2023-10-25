@@ -17,11 +17,16 @@ The first sample copies an image from one worksheet to another. This could be us
 
 The second sample copies an image from a URL. This could be used to copy photos that a colleague stored in a shared folder to a related workbook. Please note that this sample can't be adapted to work with a local image file, as that isn't supported by Office Scripts.
 
-## Sample Excel file
+## Setup: Sample Excel file
 
-Download [add-images.xlsx](add-images.xlsx) for a ready-to-use workbook. Add the following scripts and try the sample yourself!
+This workbook contains the data, objects, and formatting expected by the script.
+
+> [!div class="nextstepaction"]
+> [Download the sample workbook](add-images.xlsx)
 
 ## Sample code: Copy an image across worksheets
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 /**

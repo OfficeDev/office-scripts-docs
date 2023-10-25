@@ -12,11 +12,16 @@ ms.localizationpriority: medium
 > [!NOTE]
 > This only works if the cell count is < 10k.
 
-## Sample Excel file
+## Setup: Sample Excel file
 
-Download the file [remove-hyperlinks.xlsx](remove-hyperlinks.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+This workbook contains the data, objects, and formatting expected by the script.
+
+> [!div class="nextstepaction"]
+> [Download the sample workbook](remove-hyperlinks.xlsx)
 
 ## Sample code: Remove hyperlinks
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
