@@ -39,7 +39,6 @@
       "uhfHeaderId": "office-scripts",
       "searchScope": ["Office Scripts"],
       "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "OfficeDev/office-scripts-docs",
       "feedback_product_url": "/answers/tags/321/office-development",
