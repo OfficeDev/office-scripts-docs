@@ -1,7 +1,3 @@
-- name: Office
+- name: Microsoft 365
   tocHref: /office/
-  topicHref: /office/index
-  items:
-  - name: Scripts
-    tocHref: /office/dev/scripts
-    topicHref: /office/dev/scripts
+  topicHref: /microsoft-365/index
