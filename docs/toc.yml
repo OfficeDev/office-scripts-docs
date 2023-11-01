@@ -44,8 +44,6 @@ items:
       href: develop/use-json.md
     - name: Use .xlsm files in Power Automate flows
       href: develop/macros-power-automate.md
-    - name: VS Code for Office Scripts (preview)
-      href: develop/vscode-for-scripts.md
     - name: Work with PivotTables
       href: develop/pivottables.md
   - name: Troubleshooting

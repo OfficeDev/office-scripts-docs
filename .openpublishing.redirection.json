@@ -1,5 +1,9 @@
 { 
-    "redirections": [      
+    "redirections": [
+      {
+        "source_path": "docs/develop/vscode-for-scripts.md",
+        "redirect_url": "/office/dev/scripts"
+      },    
       {
         "source_path": "docs/resources/excel-samples.md",
         "redirect_url": "/office/dev/scripts/resources/samples/samples-overview"
