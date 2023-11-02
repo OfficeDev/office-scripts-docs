@@ -1,7 +1,7 @@
 ---
 title: Table samples
 description: A collection of samples showing how to interact with Excel tables.
-ms.date: 09/08/2023
+ms.date: 10/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -51,6 +51,44 @@ function main(workbook: ExcelScript.Workbook) {
 > ```TypeScript
 >   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
 > ```
+
+### Filter out one value
+
+The previous sample filters a table based on a list of included values. To exclude a particular value from the table, you need to provide the list of every other value in the column. This sample uses a function `columnToSet` to convert a column into a set of unique values. That set then has the excluded value ("Station-1") removed.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table in the workbook named "StationTable".
+  const table = workbook.getTable("StationTable");
+
+  // Get the "Station" table column for the filter.
+  const stationColumn = table.getColumnByName("Station");
+
+  // Get a list of unique values in the station column.
+  const stationSet = columnToSet(stationColumn);
+
+  // Apply a filter to the table that will only show rows
+  // that don't have a value of "Station-1" in the "Station" column. 
+  stationColumn.getFilter().applyValuesFilter(stationSet.filter((value) => {
+      return value !== "Station-1";
+  }));
+}
+
+/**
+ * Convert a column into a set so it only contains unique values.
+ */
+function columnToSet(column: ExcelScript.TableColumn): string[] {
+    const range = column.getRangeBetweenHeaderAndTotal().getValues() as string[][];
+    const columnSet: string[] = [];
+    range.forEach((value) => {
+        if (!columnSet.includes(value[0])) {
+            columnSet.push(value[0]);
+        }
+    });
+
+    return columnSet;
+}
+```
 
 ## Remove table column filters
 
