@@ -2,7 +2,7 @@
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
 ms.topic: integration
-ms.date: 09/19/2023
+ms.date: 11/10/2023
 ms.localizationpriority: medium
 ---
 
@@ -35,12 +35,26 @@ This opens a task pane with several options to begin connecting your Office Scri
 > [!TIP]
 > You can also start making a flow from the **More options (…)** menu on an individual script.
 
-## Excel Online (Business) connector
+## Excel connector
 
-[Connectors](/connectors/connectors) are the bridges between Power Automate and applications. The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. The "Run script" action lets you call any Office Script accessible through the selected workbook. You can also give your scripts input parameters so data can be provided by the flow, or have your script return information for later steps in the flow.
+The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. There are two actions that call Office Scripts.
 
-> [!NOTE]
-> The **Run script** Power Automate action only supports scripts stored in your OneDrive. To run scripts shared in SharePoint libraries, use the **Run script from SharePoint library (Preview)** action. This action is currently in preview and is subject to change based on feedback. If you encounter any issues with this action, please report them through the **Help** > **Give Feedback** option in Power Automate.
+- **Run script**. This is the action to use with scripts stored in the [default location of your OneDrive](../overview/script-storage.md#onedrive).
+- **Run script from SharePoint library**. This is the action to use when scripts are stored in your team's SharePoint site.
+
+# [Run script](#tab/run-script)
+
+For the **Run script** action, the script location is always in your OneDrive.
+
+:::image type="content" source="../images/run-script.png" alt-text="The Run script action with completed fields that show the location is 'OneDrive for Business', the document library is 'OneDrive', the file is 'daily-readings.xlsx', and the script is named 'Format Table'.":::
+
+# [Run script from SharePoint library](#tab/run-script-sp)
+
+For the **Run script from SharePoint library** action, you specify the location of the workbook and script separately.
+
+:::image type="content" source="../images/run-script-from-sp-library.png" alt-text="The Run script from SharePoint library action with completed fields that show the workbook location is 'OneDrive for Business', the workbook library is 'OneDrive', the workbook is 'daily-readings.xlsx', the script location is 'Group - Office Platform', the script library is 'Documents', and the script is named 'Format Table'.":::
+
+---
 
 ### Data security in Office Scripts with Power Automate
 
