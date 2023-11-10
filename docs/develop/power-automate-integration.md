@@ -39,8 +39,8 @@ This opens a task pane with several options to begin connecting your Office Scri
 
 The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. There are two actions that call Office Scripts.
 
-- **Run script**. This is the standard action to use with scripts stored in your OneDrive.
-- **Run script from SharePoint library**. This action lets you user scripts stored in your team's SharePoint site.
+- **Run script**. This is the action to use with scripts stored in the [default location of your OneDrive](../overview/script-storage.md#onedrive).
+- **Run script from SharePoint library**. This is the action to use when scripts are stored in your team's SharePoint site.
 
 # [Run script](#tab/run-script)
 
