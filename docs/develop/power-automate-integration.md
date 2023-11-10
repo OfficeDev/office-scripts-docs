@@ -54,6 +54,8 @@ For the **Run script from SharePoint library** action, you specify the location 
 
 :::image type="content" source="../images/run-script-from-sp-library.png" alt-text="The Run script from SharePoint library action with completed fields that show the workbook location is 'OneDrive for Business', the workbook library is 'OneDrive', the workbook is 'daily-readings.xlsx', the script location is 'Group - Office Platform', the script library is 'Documents', and the script is named 'Format Table'.":::
 
+---
+
 ### Data security in Office Scripts with Power Automate
 
 The "Run script" action gives people who use the Excel connector significant access to your workbook and its data. Additionally, there are security risks with scripts that make external API calls, as explained in [External calls from Power Automate](external-calls.md). If your admin is concerned with the exposure of highly sensitive data, they can either turn off the Excel Online connector or restrict access to Office Scripts through the [Office Scripts administrator controls](/microsoft-365/admin/manage/manage-office-scripts-settings).
