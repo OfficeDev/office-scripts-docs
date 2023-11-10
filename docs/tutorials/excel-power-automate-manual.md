@@ -1,7 +1,7 @@
 ---
 title: Call scripts from a manual Power Automate flow
 description: A tutorial about how to use an Office Script in Power Automate through a manual trigger.
-ms.date: 10/01/2022
+ms.date: 11/10/2023
 ms.localizationpriority: high
 ---
 
@@ -64,7 +64,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate 'Create' button.":::
 
-3. In the **Start from blank** section, select **Instant flow**. This creates a manually activated workflow.
+3. In the **Start from blank** section, select **Instant flow**. This creates a manually activated workflow. You can also make scheduled flows and flows that start based on events. These are covered in the next tutorials.
 
     :::image type="content" source="../images/power-automate-tutorial-2.png" alt-text="The Power Automate Instant flow option for creating a new workflow.":::
 
@@ -80,7 +80,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate.":::
 
-7. Under **Actions**, select **Run script**.
+7. Under **Actions**, select **Run script**. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 
     :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate.":::
 

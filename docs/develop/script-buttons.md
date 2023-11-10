@@ -1,12 +1,12 @@
 ---
-title: Run Office Scripts in Excel with buttons
+title: Run Office Scripts in Excel from buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 03/10/2023
+ms.date: 10/24/2023
 ms.localizationpriority: medium
 ---
 
-# Run Office Scripts in Excel with buttons
+# Run Office Scripts in Excel from buttons
 
 Help your colleagues find and run your scripts by adding script buttons to a workbook.
 

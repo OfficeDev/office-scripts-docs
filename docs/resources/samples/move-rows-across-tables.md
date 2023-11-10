@@ -13,11 +13,16 @@ This script does the following:
 * Moves all selected rows into the target table in another worksheet.
 * Reapplies the relevant filters to the source table.
 
-## Sample Excel file
+## Setup: Sample Excel file
 
-Download the file [input-table-filters.xlsx](input-table-filters.xlsx) for a ready-to-use workbook. Add the following script to try the sample yourself!
+This workbook contains the data, objects, and formatting expected by the script.
+
+> [!div class="nextstepaction"]
+> [Download the sample workbook](input-table-filters.xlsx)
 
 ## Sample code: Move rows using range values
+
+Add the following script to the sample workbook and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

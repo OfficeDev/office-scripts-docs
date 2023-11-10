@@ -1,2 +1,1 @@
-> [!IMPORTANT]
-> Before you start, make sure you can use Office Scripts. For details, see [Platform support](/office/dev/scripts/testing/platform-limits).
+You'll need access to Office Scripts for this tutorial. Please review the [Platform support](/office/dev/scripts/testing/platform-limits#platform-support) if the Automate tab doesn't appear.

@@ -55,7 +55,6 @@ The following methods do nothing in a script when called through Power Automate.
 | Class | Method |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
@@ -65,7 +64,7 @@ The following methods act differently in Power Automate flows than they do when 
 
 | Class | Method | Power Automate behavior |
 |--|--|--|
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` | Only refreshes PowerBI sources. For other sources, the method returns successfully but does nothing. |
 
 ## Select workbooks with the file browser control
 
