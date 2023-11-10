@@ -80,7 +80,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate.":::
 
-7. Under **Actions**, select **Run script**. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you'd use the **Run script from a SharePoint library** action.
+7. Under **Actions**, select **Run script**. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 
     :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate.":::
 
