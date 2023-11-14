@@ -20,7 +20,7 @@ There are three step-by-step tutorials for Power Automate and Office Scripts. Th
 
 - [Tutorial: Update a spreadsheet from a Power Automate flow](../tutorials/excel-power-automate-manual.md)
 - [Tutorial: Automatically save content from emails in a workbook](../tutorials/excel-power-automate-trigger.md)
-- [Tutorial: Send email reminders every week based on spreadsheet data](../tutorials//excel-power-automate-returns.md)
+- [Tutorial: Send weekly email reminders based on spreadsheet data](../tutorials//excel-power-automate-returns.md)
 
 ### Create a flow from Excel
 
@@ -68,7 +68,7 @@ Power Automate lets you pass pieces of data between flow actions. Scripts can be
 
 Learn the details of how to pass data to and from your scripts with the following documentation.
 
-- Learn by doing with the [Tutorial: Automatically save content from emails in a workbook](../tutorials/excel-power-automate-trigger.md) and [Tutorial: Send email reminders every week based on spreadsheet data](../tutorials/excel-power-automate-returns.md) tutorials.
+- Learn by doing with the [Tutorial: Automatically save content from emails in a workbook](../tutorials/excel-power-automate-trigger.md) and [Tutorial: Send weekly email reminders based on spreadsheet data](../tutorials/excel-power-automate-returns.md) tutorials.
 - Try the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario to see everything in action.
 - Read [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md) for more usage scenarios and the technical TypeScript details.
 

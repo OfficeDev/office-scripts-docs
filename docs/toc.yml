@@ -16,7 +16,7 @@ items:
       href: tutorials/excel-power-automate-manual.md
     - name: Automatically save content from emails in a workbook
       href: tutorials/excel-power-automate-trigger.md
-    - name: Send email reminders every week based on spreadsheet data
+    - name: Send weekly email reminders based on spreadsheet data
       href: tutorials/excel-power-automate-returns.md
   - name: Script fundamentals
     href: develop/scripting-fundamentals.md

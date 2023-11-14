@@ -220,6 +220,6 @@ Receiving multiple emails at the same time can cause merge conflicts in Excel. T
 
 ## Next steps
 
-Complete the [Tutorial: Send email reminders every week based on spreadsheet data](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
+Complete the [Tutorial: Send weekly email reminders based on spreadsheet data](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
 
 You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.

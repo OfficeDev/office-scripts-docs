@@ -1,11 +1,11 @@
 ---
-title: 'Tutorial: Send email reminders every week based on spreadsheet data'
+title: 'Tutorial: Send weekly email reminders based on spreadsheet data'
 description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel through Power Automate.
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Tutorial: Send email reminders every week based on spreadsheet data
+# Tutorial: Send weekly email reminders based on spreadsheet data
 
 This tutorial teaches you how to return information from an Office Script for Excel as part of an automated [Power Automate](https://make.powerautomate.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
