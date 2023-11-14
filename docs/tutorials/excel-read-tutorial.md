@@ -1,16 +1,16 @@
 ---
-title: Read workbook data with Office Scripts in Excel
+title: 'Tutorial: Clean and normalize Excel workbook data'
 description: An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.
-ms.date: 10/01/2022
+ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Read workbook data with Office Scripts in Excel
+# Tutorial: Clean and normalize Excel workbook data
 
 This tutorial teaches you how to read data from a workbook with an Office Script for Excel. You'll be writing a new script that formats a bank statement and normalizes the data in that statement. As part of that data clean-up, your script will read values from the transaction cells, apply a simple formula to each value, and write the resulting answer to the workbook. Reading data from the workbook lets you automate some of your decision making processes in the script.
 
 > [!TIP]
-> If you're new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, we recommend starting with the [Tutorial: Create and format an Excel table](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -144,4 +144,4 @@ Now that you know how to read and write to a single cell, you can generalize the
 
 Open the Code Editor and try out some of our [Sample scripts for Office Scripts in Excel](../resources/samples/excel-samples.md). You can also visit [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about creating Office Scripts.
 
-The next series of Office Scripts tutorials focus on using Office Scripts with Power Automate. Learn more about the advantages combining the two platforms in [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) or try the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial to create a Power Automate flow that uses an Office Script.
+The next series of Office Scripts tutorials focus on using Office Scripts with Power Automate. Learn more about the advantages combining the two platforms in [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) or try the [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md) tutorial to create a Power Automate flow that uses an Office Script.

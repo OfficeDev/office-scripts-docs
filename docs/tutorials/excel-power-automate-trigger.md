@@ -1,16 +1,16 @@
 ---
-title: Pass data to scripts in an automatically-run Power Automate flow
+title: 'Tutorial: Automatically save content from emails in a workbook'
 description: A tutorial about running Office Scripts for Excel through Power Automate when mail is received and passing flow data to the script.
-ms.date: 10/01/2022
+ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Pass data to scripts in an automatically-run Power Automate flow
+# Tutorial: Automatically save content from emails in a workbook
 
 This tutorial teaches you how to use an Office Script for Excel with an automated [Power Automate](https://make.powerautomate.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
 > [!TIP]
-> If you're new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel](excel-tutorial.md) tutorial. If you're new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, we recommend starting with the [Tutorial: Create and format an Excel table](excel-tutorial.md) tutorial. If you're new to Power Automate, we recommend starting with the [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
-      // Add a new worksheet to store our email table
+      // Add a new worksheet to store the email table
       let emailsSheet = workbook.addWorksheet("Emails");
 
       // Add data and create a table
@@ -53,11 +53,11 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 ## Create an Office Script
 
-Let's create a script that logs information from an email. We want to know which days of the week we receive the most mail and how many unique senders are sending that mail. Our workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Our worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). We'll have our script refresh that PivotTable after updating the email table.
+Create a script that logs information from an email. You'll want to track which days of the week you receive the most mail and how many unique senders are sending that mail. Your workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Your worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). The script will refresh that PivotTable after it updates the email table.
 
 1. From within the Code Editor task pane, select **New Script**.
 
-2. The flow that you'll create later in the tutorial will send our script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
+2. The flow that you'll create later in the tutorial sends the script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
 
     ```TypeScript
     function main(
@@ -81,7 +81,7 @@ Let's create a script that logs information from an email. We want to know which
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
-4. The `dateReceived` parameter is of type `string`. Let's convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
+4. The `dateReceived` parameter is of type `string`. Convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
       // Parse the received date string to determine the day of the week.
@@ -89,7 +89,7 @@ Let's create a script that logs information from an email. We want to know which
       let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
     ```
 
-5. The `subject` string may include the "RE:" reply tag. Let's remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`.
+5. The `subject` string may include the "RE:" reply tag. Remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Remove the reply tag from the email subject to group emails on the same thread.
@@ -97,14 +97,14 @@ Let's create a script that logs information from an email. We want to know which
     subjectText = subjectText.replace("RE: ", "");
     ```
 
-6. Now that the email data has been formatted to our liking, let's add a row to the email table. Add the following code to the end of your script, before the closing `}`.
+6. Now that the email data has been formatted, add a row to the email table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Add the parsed text to the table.
     table.addRow(-1, [dateReceived, dayName, from, subjectText]);
     ```
 
-7. Finally, let's make sure the PivotTable is refreshed. Add the following code to the end of your script, before the closing `}`:
+7. Finally, make sure the PivotTable is refreshed. Add the following code to the end of your script, before the closing `}`:
 
     ```TypeScript
     // Refresh the PivotTable to include the new row.
@@ -220,6 +220,6 @@ Receiving multiple emails at the same time can cause merge conflicts in Excel. T
 
 ## Next steps
 
-Complete the [Return data from a script to an automatically-run Power Automate flow](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
+Complete the [Tutorial: Send email reminders every week based on spreadsheet data](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
 
 You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.
