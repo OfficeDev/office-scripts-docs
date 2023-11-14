@@ -1,4 +1,4 @@
---- 
+---
 title: "Tutorial: Create and format an Excel table"
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
 ms.date: 11/14/2023
