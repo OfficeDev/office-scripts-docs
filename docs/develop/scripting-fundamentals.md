@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn the critical parts of the TypeScript-based script code and how the Excel objects and APIs work together.
 
-If you would prefer to get started with an interactive experience, try the tutorial [Tutorial: Create and format an Excel table](../tutorials/excel-tutorial.md) or visit our [samples](../resources/samples/samples-overview.md).
+If you would prefer to get started with an interactive experience, try [Tutorial: Create and format an Excel table](../tutorials/excel-tutorial.md) or visit our [samples](../resources/samples/samples-overview.md).
 
 ## TypeScript: The language of Office Scripts
 

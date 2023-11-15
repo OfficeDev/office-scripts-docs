@@ -10,7 +10,7 @@ ms.localizationpriority: high
 This tutorial teaches you how to use an Office Script for Excel with an automated [Power Automate](https://make.powerautomate.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
 > [!TIP]
-> If you're new to Office Scripts, we recommend starting with the [Tutorial: Create and format an Excel table](excel-tutorial.md) tutorial. If you're new to Power Automate, we recommend starting with the [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, we recommend starting with [Tutorial: Create and format an Excel table](excel-tutorial.md). If you're new to Power Automate, we recommend starting with [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md). [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
-      // Add a new worksheet to store the email table
+      // Add a new worksheet to store the email table.
       let emailsSheet = workbook.addWorksheet("Emails");
 
       // Add data and create a table
@@ -220,6 +220,6 @@ Receiving multiple emails at the same time can cause merge conflicts in Excel. T
 
 ## Next steps
 
-Complete the [Tutorial: Send weekly email reminders based on spreadsheet data](excel-power-automate-returns.md) tutorial. It teaches you how to return data from a script to the flow.
+Complete [Tutorial: Send weekly email reminders based on spreadsheet data](excel-power-automate-returns.md). It teaches you how to return data from a script to the flow.
 
 You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.

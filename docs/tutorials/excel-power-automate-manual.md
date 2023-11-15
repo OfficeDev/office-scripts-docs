@@ -10,7 +10,7 @@ ms.localizationpriority: high
 This tutorial teaches you how to run an Office Script for Excel through [Power Automate](https://make.powerautomate.com). You'll make a script that updates the values of two cells with the current time. You'll then connect that script to a manually triggered Power Automate flow, so that the script is run whenever a button in Power Automate is selected. Once you understand the basic pattern, you can expand the flow to include other applications and automate more of your daily workflow.
 
 > [!TIP]
-> If you are new to Office Scripts, we recommend starting with the [Tutorial: Create and format an Excel table](excel-tutorial.md) tutorial. [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you are new to Office Scripts, we recommend starting with [Tutorial: Create and format an Excel table](excel-tutorial.md). [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -125,4 +125,4 @@ Your flow is now ready to be run through Power Automate. You can test it using t
 
 ## Next steps
 
-Complete the [Tutorial: Automatically save content from emails in a workbook](excel-power-automate-trigger.md) tutorial. It teaches you how to pass data from a workflow service to your Office Script and run the Power Automate flow when certain events occur.
+Complete [Tutorial: Automatically save content from emails in a workbook](excel-power-automate-trigger.md). It teaches you how to pass data from a workflow service to your Office Script and run the Power Automate flow when certain events occur.

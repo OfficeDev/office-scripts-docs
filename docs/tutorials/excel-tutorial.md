@@ -114,4 +114,4 @@ Next, convert this fruit sales data into a table. You'll keep modifying the firs
 
 ## Next steps
 
-Complete the [Tutorial: Clean and normalize Excel workbook data](excel-read-tutorial.md) tutorial. It teaches you how to read data from a workbook with an Office Script.
+Complete [Tutorial: Clean and normalize Excel workbook data](excel-read-tutorial.md). It teaches you how to read data from a workbook with an Office Script.

@@ -10,9 +10,9 @@ ms.localizationpriority: high
 This tutorial teaches you how to return information from an Office Script for Excel as part of an automated [Power Automate](https://make.powerautomate.com) workflow. You'll make a script that looks through a schedule and works with a flow to send reminder emails. This flow will run on a regular schedule, providing these reminders on your behalf.
 
 > [!TIP]
-> If you're new to Office Scripts, we recommend starting with the [Tutorial: Create and format an Excel table](excel-tutorial.md) tutorial.
+> If you're new to Office Scripts, we recommend starting with [Tutorial: Create and format an Excel table](excel-tutorial.md).
 >
-> If you're new to Power Automate, we recommend starting with the [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md) and [Tutorial: Automatically save content from emails in a workbook](excel-power-automate-trigger.md) tutorials.
+> If you're new to Power Automate, we recommend starting with [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md) and [Tutorial: Automatically save content from emails in a workbook](excel-power-automate-trigger.md).
 >
 > [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
