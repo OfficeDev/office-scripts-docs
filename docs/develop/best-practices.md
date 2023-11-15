@@ -109,7 +109,7 @@ A [`throw`](https://developer.mozilla.org/docs/web/javascript/reference/statemen
 
 However, if your script is running as part of a Power Automate flow, you may want to stop the flow from continuing. A `throw` statement stops the script and tells the flow to stop as well.
 
-The following script shows how to use the `throw` statement in our table checking example.
+The following script shows how to use the `throw` statement in the table-checking example.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
