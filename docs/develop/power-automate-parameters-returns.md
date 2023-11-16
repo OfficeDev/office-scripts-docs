@@ -38,7 +38,7 @@ Acceptable types for returning data are the same as for parameters. Details on t
 
 ## See also
 
-- [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
+- [Tutorial: Update a spreadsheet from a Power Automate flow](../tutorials/excel-power-automate-manual.md)
 - [Get user input for scripts](user-input.md)
 - [Run Office Scripts with Power Automate](power-automate-integration.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)

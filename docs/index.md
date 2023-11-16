@@ -40,7 +40,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <h3>Getting started</h3>
-                        <p><a href="tutorials/excel-tutorial.md">Complete the tutorial to learn how to record, edit, and create Office Scripts in Excel.</a></p>
+                        <p><a href="tutorials/excel-tutorial.md">Create and format a table with Office Scripts.</a></p>
                     </div>
                 </div>
             </div>

@@ -117,7 +117,7 @@ There are three ways to filter a PivotTable.
 
 ### FilterPivotHierarchies
 
-`FilterPivotHierarchies` add an additional hierarchy to filter every data row. Any row with an item that is filtered out is excluded from the PivotTable and its summaries. Since these filters are based on items, they only work on discrete values. If "Classification" is a filter hierarchy in our sample, users can select the values of "Organic" and "Conventional" for the filter. Similarly, if "Crates Sold Wholesale" is selected, the filter options would be the individual numbers, such as 120 and 150, instead of numerical ranges.
+`FilterPivotHierarchies` add an additional hierarchy to filter every data row. Any row with an item that is filtered out is excluded from the PivotTable and its summaries. Since these filters are based on items, they only work on discrete values. If "Classification" is a filter hierarchy in the sample, users can select the values of "Organic" and "Conventional" for the filter. Similarly, if "Crates Sold Wholesale" is selected, the filter options would be the individual numbers, such as 120 and 150, instead of numerical ranges.
 
 `FilterPivotHierarchies` are created with all values selected. This means that nothing is filtered until the user manually interacts with the filter control or a `PivotManualFilter` is set on the field belonging to the `FilterPivotHierarchy`.
 

@@ -13,7 +13,7 @@ This project includes two scripts:
 * [Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.
 
 > [!NOTE]
-> For our script, a blank row is any row where there's no data. The row can have formatting.
+> For your script, a blank row is any row where there's no data. The row can have formatting.
 
 _This sheet returns count of 4 blank rows_
 

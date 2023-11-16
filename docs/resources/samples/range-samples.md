@@ -317,4 +317,4 @@ We welcome suggestions for new samples. If there's a common scenario that would 
 
 * [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
 * [Office Scripts samples and scenarios](samples-overview.md)
-* [Record, edit, and create Office Scripts in Excel](../../tutorials/excel-tutorial.md)
+* [Tutorial: Create and format an Excel table](../../tutorials/excel-tutorial.md)
