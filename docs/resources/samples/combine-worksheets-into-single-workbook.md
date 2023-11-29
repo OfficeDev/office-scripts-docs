@@ -1,7 +1,7 @@
 ---
 title: Combine workbooks into a single workbook
 description: Learn how to use Office Scripts and Power Automate to create merge worksheets from other workbooks into a single workbook.
-ms.date: 12/27/2022
+ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 
@@ -28,8 +28,7 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 /**
  * This script returns the values from the used ranges on each worksheet.
  */
-function main(workbook: ExcelScript.Workbook): WorksheetData[]
-{
+function main(workbook: ExcelScript.Workbook): WorksheetData[] {
   // Create an object to return the data from each worksheet.
   let worksheetInformation: WorksheetData[] = [];
 
@@ -58,8 +57,7 @@ interface WorksheetData {
 /**
  * This script creates a new worksheet in the current workbook for each WorksheetData object provided.
  */
-function main(workbook: ExcelScript.Workbook, workbookName: string, worksheetInformation: WorksheetData[])
-{
+function main(workbook: ExcelScript.Workbook, workbookName: string, worksheetInformation: WorksheetData[]) {
   // Add each new worksheet.
   worksheetInformation.forEach((value) => {
     let sheet = workbook.addWorksheet(`${workbookName}.${value.name}`);
@@ -83,15 +81,19 @@ interface WorksheetData {
 
 1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** to get all the workbooks you want to combine from their folder. Use the **OneDrive for Business** connector and the **List files in folder** action. For the **Folder** field, use the file picker to select the "output" folder.
+1. Get all the workbooks you want to combine from their folder. Add an action and choose the **OneDrive for Business** connector's **List files in folder** action. For the **Folder** field, use the file picker to select the "output" folder.
 
     :::image type="content" source="../../images/combine-worksheets-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Add a **New step** to run the **Return worksheet data** script to get all the data from each of the workbooks. Use the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **Apply to each** control, so the action will be performed on every file.
+
+1. Add an action to run the **Return worksheet data** script to get all the data from each of the workbooks. Choose the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **Apply to each** control, so the action will be performed on every file.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: *Id* (dynamic content from **List files in folder**)
     * **Script**: Return worksheet data
-1. Add a **New step** to run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+
+    :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The completed Run script action in the action task pane.":::
+
+1. Add an action to run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an action that uses the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "Combination.xlsx" (your file, as selected by the file picker)
@@ -99,12 +101,17 @@ interface WorksheetData {
     * **workbookName**: *Name* (dynamic content from **List files in folder**)
     * **worksheetInformation** (see the note following the next image): *result* (dynamic content from **Run script**)
 
-    :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The two Run script actions inside the Apply to each control.":::
+    :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The second Run script action inside the Apply to each control.":::
     > [!NOTE]
     > Select the **Switch to input entire array** button to add the array object directly, instead of individual items for the array. Do this before entering *result*.
     >
-    > :::image type="content" source="../../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
-1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+    > :::image type="content" source="../../images/combine-worksheets-flow-4.png" alt-text="The button to switch to input an entire array in a control field input box.":::
+
+1. Save the flow. It should look like this:
+
+    :::image type="content" source="../../images/combine-worksheets-flow-5.png" alt-text="The flow designer showing the two Run script actions inside a For each control loop.":::
+  
+1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. The "Combination.xlsx" file should now have new worksheets.
 
 ## Troubleshooting
@@ -120,9 +127,11 @@ interface WorksheetData {
       let sheet = workbook.addWorksheet(`${worksheetName.substr(0,30)}${worksheetNumber++}`);
   ```
 
-  Additionally, if the workbook names are longer than 30 characters, you'll need to shorten them in the flow. First, you must create a variable in the flow to track the workbook count. This will avoid identical shortened names being passed to the script. Add an **Initialize variable** action before the flow (of **Type** "Integer") and an **Increment variable** action between the two **Run script** actions. Then, instead of using *Name* as the **workbookName** in "Run script 2", use the expression `substring(items('Apply_to_each')?['Name'],0,min(length(items('Apply_to_each')?['Name']),20))` and the dynamic content from your variable. This shortens the workbook names to 20 characters and appends the current workbook number to the string being passed to the script.
+  Additionally, if the workbook names are longer than 30 characters, you'll need to shorten them in the flow. First, you must create a variable in the flow to track the workbook count. This will avoid identical shortened names being passed to the script. Add an **Initialize variable** action before the flow (of **Type** "Integer") and an **Increment variable** action between the two **Run script** actions. Then, instead of using *Name* as the **workbookName** in "Run script 1", use the expression `substring(items('Apply_to_each')?['Name'],0,min(length(items('Apply_to_each')?['Name']),20))` and the dynamic content from your variable. This shortens the workbook names to 20 characters and appends the current workbook number to the string being passed to the script.
 
-  :::image type="content" source="../../images/combine-worksheets-flow-workbook-name-shorten.png" alt-text="The Initialize variable and Increment variable steps added to the flow.":::
+  :::image type="content" source="../../images/combine-worksheets-flow-workbook-name-shorten.png" alt-text="The second Run script action with the changes to the workbook name parameter..":::
+
+  :::image type="content" source="../../images/combine-worksheets-flow-workbook-name-shorten-flow.png" alt-text="The Initialize variable and Increment variable steps added to the flow.":::
 
   > [!NOTE]
   > Rather than making the flow and script more complicated, it might be easier to guarantee the file and worksheet names are short enough.
