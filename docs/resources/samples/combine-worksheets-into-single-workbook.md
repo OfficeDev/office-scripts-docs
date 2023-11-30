@@ -85,7 +85,7 @@ interface WorksheetData {
 
     :::image type="content" source="../../images/combine-worksheets-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
 
-1. Add an action to run the **Return worksheet data** script to get all the data from each of the workbooks. Choose the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **Apply to each** control, so the action will be performed on every file.
+1. Add an action to run the **Return worksheet data** script to get all the data from each of the workbooks. Choose the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action. Note that when you add the *Id* for the file, Power Automate will wrap the action in an **For each** control, so the action will be performed on every file.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: *Id* (dynamic content from **List files in folder**)
@@ -93,7 +93,7 @@ interface WorksheetData {
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="The completed Run script action in the action task pane.":::
 
-1. Add an action to run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **Apply to each** control, add an action that uses the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
+1. Add an action to run the **Add worksheets** script on the new Excel file you created. This will add the data from all the other workbooks. After the previous **Run script** action and inside the **For each** control, add an action that uses the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "Combination.xlsx" (your file, as selected by the file picker)

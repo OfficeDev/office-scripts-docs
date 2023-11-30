@@ -1,7 +1,7 @@
 ---
 title: Run a script on all Excel files in a folder
 description: Learn how to run a script on all the Excel files in a folder on OneDrive for Business.
-ms.date: 06/29/2021
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -16,12 +16,12 @@ Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/d
 
 ## Sample code: Add formatting and insert comment
 
-This is the script that runs on each individual workbook.
+This is the script that runs on each individual workbook. Add it to the sample workbook. Save it as **Review script** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the table named "Table1" in the workbook.
-  let table1 = workbook.getTable("Table1");
+  const table1 = workbook.getTable("Table1");
 
   // If the table is empty, end the script.
   const rowCount = table1.getRowCount();
@@ -49,10 +49,7 @@ function main(workbook: ExcelScript.Workbook) {
   let highestAmountDue = table1.getColumn("Amount due").getRangeBetweenHeaderAndTotal().getRow(row);
 
   // Set the fill color to yellow for the cell with the highest value in the "Amount Due" column.
-  highestAmountDue
-    .getFormat()
-    .getFill()
-    .setColor("FFFF00");
+  highestAmountDue.getFormat().getFill().setColor("FFFF00");
 
   // Insert an @mention comment in the cell.
   workbook.addComment(highestAmountDue, {
@@ -72,24 +69,31 @@ This flow runs the script on every workbook in the "Sales" folder.
 
 1. Create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action.
+1. In the flow builder, select the **+** button and **Add an action**. Use the **OneDrive for Business** connector's **List files in folder** action. Use the following values for the action.
+    * **Folder**: /Sales (selected by the file picker)
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Select the "Sales" folder with the extracted workbooks.
-1. To ensure only workbooks are selected, choose **New step**, then select **Condition**. Use the following values for the condition.
-    1. **Name** (the OneDrive file name value)
-    1. "ends with"
-    1. "xlsx"
+
+1. Ensure only workbooks are selected. Add a new **Condition** control action. Use the following values for the condition.
+    * **Choose a value**: Name (_dynamic content from **List files in folder**_)
+    * **ends with**: (from the dropdown list)
+    * **Choose a value**: .xlsx
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
-1. Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
-    1. **Location**: OneDrive for Business
-    1. **Document Library**: OneDrive
-    1. **File**: **Id** (the OneDrive file ID value)
-    1. **Script**: Your script name
+
+1. Under the **True** branch, add a new action. Select the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
+    * **Location**: OneDrive for Business
+    * **Document Library**: OneDrive
+    * **File**: Id (_dynamic content from **List files in folder**_)
+    * **Script**: Review script
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
-1. Save the flow and try it out. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+
+1. Save the flow. The flow designer show look like the following image.
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-4.png" alt-text="A diagram of the completed flow that shows two steps before a condition and one step under the true path of the condition.":::
+
+1. Try it out! Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 
 ## Training video: Run a script on all Excel files in a folder
 

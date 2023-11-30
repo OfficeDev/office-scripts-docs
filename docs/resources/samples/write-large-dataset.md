@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 09/07/2023
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -188,7 +188,7 @@ function main(
 
 ```
 
-### Sample code: Write part of a workbook
+### Sample code: Read selected rows
 
 ```TypeScript
 function main(
@@ -220,18 +220,21 @@ function main(
     * **Value**: 0
 
     :::image type="content" source="../../images/write-large-dataset-1.png" alt-text="The completed 'Initialize variable' step for the 'currentRow'.":::
+
 1. Add a **New step** to set the number of rows to be read in a single batch. Depending on the number of columns, this may need to be smaller to avoid the data transfer limits. Make a new **Initialize variable** action with the following values.
     * **Name**: batchSize
     * **Type**: Integer
     * **Value**: 10000
 
     :::image type="content" source="../../images/write-large-dataset-2.png" alt-text="The completed 'Initialize variable' step for the 'batchSize'.":::
+
 1. Add a **Do until** control. The flow will read chunks of the data until it has all been copied. You'll use the value of **-1** to indicate the end of the data has been reached. Give the control the following values.
     * **Choose a value**: *currentRow* (dynamic content)
     * **is equal to** (from the dropdown list)
     * **Choose a value**: -1
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
+
 1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Rename it to **Read data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
@@ -252,21 +255,25 @@ function main(
     * **batchSize**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-5.png" alt-text="The completed 'Run script' action for the script that writes the data.":::
+
 1. Update the current row to reflect that a batch of data has been read and written. Add an **Increment variable** action with the following values.
     * **Name**: currentRow
     * **Value**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
+
 1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
     * **Choose a value**: *result* (dynamic content from **Write data**)
     * **is equal to** (from the dropdown list)
     * **Choose a value**: *true* (expression)
 
     :::image type="content" source="../../images/write-large-dataset-7.png" alt-text="The completed 'Condition' control.":::
+
 1. Under the **If yes** section of the **Condition** control, set the **currentRow** variable to be **-1**. Create a **Set variable** action with the following values.
     * **Name**: currentRow
     * **Value**: -1
 
     :::image type="content" source="../../images/write-large-dataset-8.png" alt-text="The 'If yes' path with the completed 'Set variable' control.":::
+
 1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. The "TargetWorkbook.xlsx" file should now have the data from "SampleData.xlsx".

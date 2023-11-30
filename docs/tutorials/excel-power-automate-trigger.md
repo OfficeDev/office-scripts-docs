@@ -162,7 +162,7 @@ function main(
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
 
-1. In the flow builder, select the **+** button **Add an action**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
 1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 

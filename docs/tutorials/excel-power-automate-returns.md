@@ -139,7 +139,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Select **Create**.
 
-1. In the flow builder, select the **+** button **Add an action**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
 1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 
@@ -156,7 +156,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script.":::
 
-1. In the flow builder, select the **+** button **Add an action**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
 1. End the flow by sending the reminder email. In the **Add an action** task pane, search for "send an email". Choose the **Office 365 Outlook** connector's **Send an email (V2)** action.
 

@@ -88,6 +88,8 @@ items:
         href: resources/samples/report-day-to-day-changes.md
       - name: Row and column visibility
         href: resources/samples/row-and-column-visibility.md
+      - name: Run a script on all Excel files in a folder
+        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Set conditional formatting for cross-column comparisons
         href: resources/samples/conditional-formatting-parameters.md
     - name: Beyond the basics
@@ -110,8 +112,6 @@ items:
         href: resources/samples/get-table-data.md
       - name: Remove hyperlinks from Excel cells
         href: resources/samples/remove-hyperlinks-from-cells.md
-      - name: Run a script on all Excel files in a folder
-        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Use external fetch calls in Office Scripts
         href: resources/samples/external-fetch-calls.md
       - name: Write a large dataset

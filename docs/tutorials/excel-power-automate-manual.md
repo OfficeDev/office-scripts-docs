@@ -72,7 +72,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
     Note that a manually triggered flow is just one of many types of flows. In the next tutorial, you'll make a flow that automatically runs when you receive an email.
 
-1. In the flow builder, select the **+** button **Add an action**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
 1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 
