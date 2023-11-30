@@ -1,7 +1,7 @@
 ---
 title: Schedule interviews in Teams
 description: Learn how to use Office Scripts to send a Teams meeting from Excel data.
-ms.date: 06/29/2021
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -145,29 +145,37 @@ This flow run the interview scheduling scripts, send the Teams meetings, and rec
 
 1. Create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** that uses the **Excel Online (Business)** connector and the **Run script** action. Complete the connector with the following values.
-    1. **Location**: OneDrive for Business
-    1. **Document Library**: OneDrive
-    1. **File**: hr-interviews.xlsx *(Chosen through the file browser)*
-    1. **Script**: Schedule Interviews
-    :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="Screenshot of the completed Excel Online (Business) connector to get interview data from the workbook in Power Automate.":::
-1. Add a **New step** that uses the **Create a Teams meeting** action. As you select dynamic content from the Excel connector, an **Apply to each** block will be generated for your flow. Complete the connector with the following values.
-    1. **Calendar id**: Calendar
-    1. **Subject**: Contoso Interview
-    1. **Message**: **Message** (the Excel value)
-    1. **Time zone**: Pacific Standard Time
-    1. **Start time**: **StartTime** (the Excel value)
-    1. **End time**: **FinishTime** (the Excel value)
-    1. **Required attendees**: **CandidateEmail** ; **InterviewerEmail** (the Excel values)
-    :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="Screenshot of the completed Teams connector to schedule meetings in Power Automate.":::
-1. In the same **Apply to each** block, add another **Excel Online (Business)** connector with the **Run script** action. Use the following values.
-    1. **Location**: OneDrive for Business
-    1. **Document Library**: OneDrive
-    1. **File**: hr-interviews.xlsx *(Chosen through the file browser)*
-    1. **Script**: Record Sent Invites
-    1. **invites**: **result** (the Excel value)
-    :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate.":::
-1. Save the flow and try it out. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+1. In the flow builder, select the **+** button and **Add an action**. Use the **Excel Online (Business)** connector's **Run script** action. Complete the action with the following values.
+    * **Location**: OneDrive for Business
+    * **Document Library**: OneDrive
+    * **File**: hr-interviews.xlsx *(Chosen through the file browser)*
+    * **Script**: Schedule Interviews
+    :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="The completed Run script action to get interview data from the workbook.":::
+
+1. Add a action that uses the **Microsoft Teams** connector's **Create a Teams meeting** action. As you select dynamic content from the Excel connector, a **For each** block will be generated for your flow. Complete the connector with the following values.
+    * **Subject**: Contoso Interview
+    * **Message**: *Message* (dynamic content from **Run script**)
+    * **Time zone**: Pacific Standard Time
+    * **Start time**: *StartTime* (dynamic content from **Run script**)
+    * **End time**: *FinishTime* (dynamic content from **Run script**)
+    * **Calendar id**: Calendar
+    * **Required attendees**: *CandidateEmail* ; *InterviewerEmail* (dynamic content from **Run script** - note the ';' separating the values)
+    :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="The completed Teams action to schedule meetings.":::
+
+1. In the same **For each** block, add another **Run script** action. Use the following values.
+    * **Location**: OneDrive for Business
+    * **Document Library**: OneDrive
+    * **File**: hr-interviews.xlsx *(Chosen through the file browser)*
+    * **Script**: Record Sent Invites
+    * **invites**: *result* (dynamic content from **Run script**)
+        * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting.md#pass-entire-arrays-as-script-parameters)** first.
+    :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="The completed Excel Online (Business) connector to record that invites have been sent.":::
+
+1. Save the flow. The flow designer show look like the following image.
+
+    :::image type="content" source="../../images/schedule-interviews-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
+
+1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 
 ## Training video: Send a Teams meeting from Excel data
 

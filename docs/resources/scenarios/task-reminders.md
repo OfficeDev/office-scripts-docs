@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.
-ms.date: 08/10/2023
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -155,16 +155,15 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 1. Choose **Manually trigger a flow** from the options and select **Create**.
 
-1. The flow needs to call the **Get People** script to get all the employees with empty status fields. Select **New step**, then select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
-
+1. The flow needs to call the **Get People** script to get all the employees with empty status fields. In the flow builder, select the **+** button and **Add an action**. Select the **Excel Online (Business)** connector's **Run script** action. Provide the following entries for the flow step:
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
     - **File**: task-reminders.xlsx *(Chosen through the file browser)*
     - **Script**: Get People
 
-    :::image type="content" source="../../images/scenario-task-reminders-1.png" alt-text="The Power Automate flow showing the first Run script flow step.":::
+    :::image type="content" source="../../images/scenario-task-reminders-1.png" alt-text="The completed Run script action.":::
 
-1. Next, the flow needs to process each Employee in the array returned by the script. Select **New step**, search for **Post adaptive card and wait for a response**, and select that Microsoft Teams connector action.
+1. Next, the flow needs to process each Employee in the array returned by the script. Add the **Microsoft Teams** connector's **Post adaptive card and wait for a response** action.
 
 1. Sending an Adaptive Card requires the card's [JSON](https://www.w3schools.com/whatis/whatis_json.asp) to be provided as the **Message**. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards. For this sample, use the following JSON.  
 
@@ -207,7 +206,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
     }
     ```
 
-1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by an **Apply to each** block. That means the array will be iterated over by Power Automate.
+1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by an **For each** block. That means the array will be iterated over by Power Automate.
 
 1. Fill out the remaining fields as follows:
 
@@ -217,7 +216,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
     :::image type="content" source="../../images/scenario-task-reminders-2.png" alt-text="The Power Automate flow showing the completed adaptive card action.":::
 
-1. In the **Apply to each** block, following the **Post adaptive card and wait for a response**, select **Add an action**. Select **Excel Online (Business)**. Under **Actions**, select **Run script**. Provide the following entries for the flow step:
+1. In the **For each** block, following the **Post adaptive card and wait for a response** action, add a new action. Select the **Excel Online (Business)** connector's **Run script** action. Provide the following entries for the flow step:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
@@ -228,7 +227,9 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
     :::image type="content" source="../../images/scenario-task-reminders-3.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
-1. Save the flow.
+1. Save the flow. The flow designer show look like the following image.
+
+    :::image type="content" source="../../images/scenario-task-reminders-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
 
 ## Running the flow
 

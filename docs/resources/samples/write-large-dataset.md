@@ -214,14 +214,14 @@ function main(
 
 1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** to track the current row being read and written. Make a new **Initialize variable** action with the following values.
+1. Create a variable to track the current row being read and written. In the flow builder, select the **+** button and **Add an action**. Select the **Initialize variable** action and give it the following values.
     * **Name**: currentRow
     * **Type**: Integer
     * **Value**: 0
 
     :::image type="content" source="../../images/write-large-dataset-1.png" alt-text="The completed 'Initialize variable' step for the 'currentRow'.":::
 
-1. Add a **New step** to set the number of rows to be read in a single batch. Depending on the number of columns, this may need to be smaller to avoid the data transfer limits. Make a new **Initialize variable** action with the following values.
+1. Add an action to set the number of rows to be read in a single batch. Depending on the number of columns, this may need to be smaller to avoid the data transfer limits. Make a new **Initialize variable** action with the following values.
     * **Name**: batchSize
     * **Type**: Integer
     * **Value**: 10000
@@ -235,7 +235,7 @@ function main(
 
     :::image type="content" source="../../images/write-large-dataset-3.png" alt-text="The completed 'Do until' control.":::
 
-1. The remaining steps are added inside the **Do until** control. Next, call the script to read the data. Add an **Excel Online (Business)** connector with the **Run script** action. Rename it to **Read data**. Use the following values for the action.
+1. The remaining steps are added inside the **Do** control. Next, call the script to read the data. Add the **Excel Online (Business)** connector's **Run script** action. Rename it to **Read data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "SampleData.xlsx" (as selected by the file picker)
@@ -244,7 +244,8 @@ function main(
     * **batchSize**: *batchSize* (dynamic content)
 
     :::image type="content" source="../../images/write-large-dataset-4.png" alt-text="The completed 'Run script' action for the script that reads the data.":::
-1. Call the script to write the data. Add a second **Excel Online (Business)** connector with the **Run script** action. Rename it to **Write data**. Use the following values for the action.
+
+1. Call the script to write the data. Add a second **Run script** action. Rename it to **Write data**. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: "TargetWorkbook.xlsx" (as selected by the file picker)
@@ -262,18 +263,22 @@ function main(
 
     :::image type="content" source="../../images/write-large-dataset-6.png" alt-text="The completed 'Increment variable' step for the 'currentRow'.":::
 
-1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control with the following values.
+1. Add a **Condition** control to check if the scripts have read everything. The "Write data at row location" script returns true when it has written fewer rows than the batch size allows. This means it's at the end of the data set. Create the **Condition** control action with the following values.
     * **Choose a value**: *result* (dynamic content from **Write data**)
     * **is equal to** (from the dropdown list)
     * **Choose a value**: *true* (expression)
 
     :::image type="content" source="../../images/write-large-dataset-7.png" alt-text="The completed 'Condition' control.":::
 
-1. Under the **If yes** section of the **Condition** control, set the **currentRow** variable to be **-1**. Create a **Set variable** action with the following values.
+1. Under the **True** section of the **Condition** control, set the **currentRow** variable to be **-1**. Add a **Set variable** action with the following values.
     * **Name**: currentRow
     * **Value**: -1
 
-    :::image type="content" source="../../images/write-large-dataset-8.png" alt-text="The 'If yes' path with the completed 'Set variable' control.":::
+    :::image type="content" source="../../images/write-large-dataset-8.png" alt-text="The completed 'Set variable' control.":::
 
-1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+1. Save the flow. The flow designer show look like the following image.
+
+    :::image type="content" source="../../images/write-large-dataset-9.png" alt-text="A diagram of the completed flow that shows the read and write data steps inside a do/do until control.":::
+
+1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. The "TargetWorkbook.xlsx" file should now have the data from "SampleData.xlsx".
