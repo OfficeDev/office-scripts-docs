@@ -74,7 +74,7 @@ Learn the details of how to pass data to and from your scripts with the followin
 
 ## Example
 
-The following screenshot shows a Power Automate flow that's triggered whenever a new response to a Form is submitted. The flow runs a script that adds the satisfaction value from the form to a table. The current average satisfaction is returned and sent as an email.
+The following screenshot shows a Power Automate flow that's triggered whenever a new response to a Form is submitted. The flow runs a script that adds the satisfaction value from the Form to a table. The current average satisfaction is returned and sent as an email.
 
 :::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="The Power Automate flow editor showing the example flow.":::
 
