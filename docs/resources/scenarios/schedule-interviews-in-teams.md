@@ -152,7 +152,7 @@ This flow run the interview scheduling scripts, send the Teams meetings, and rec
     * **Script**: Schedule Interviews
     :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="The completed Run script action to get interview data from the workbook.":::
 
-1. Add a action that uses the **Microsoft Teams** connector's **Create a Teams meeting** action. As you select dynamic content from the Excel connector, a **For each** block will be generated for your flow. Complete the connector with the following values.
+1. Add an action that uses the **Microsoft Teams** connector's **Create a Teams meeting** action. As you select dynamic content from the Excel connector, a **For each** block will be generated for your flow. Complete the connector with the following values.
     * **Subject**: Contoso Interview
     * **Message**: *Message* (dynamic content from **Run script**)
     * **Time zone**: Pacific Standard Time
@@ -171,7 +171,7 @@ This flow run the interview scheduling scripts, send the Teams meetings, and rec
         * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting.md#pass-entire-arrays-as-script-parameters)** first.
     :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="The completed Excel Online (Business) connector to record that invites have been sent.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/schedule-interviews-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
 

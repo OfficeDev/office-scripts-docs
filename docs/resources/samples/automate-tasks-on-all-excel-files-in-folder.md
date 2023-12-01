@@ -89,7 +89,7 @@ This flow runs the script on every workbook in the "Sales" folder.
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-4.png" alt-text="A diagram of the completed flow that shows two steps before a condition and one step under the true path of the condition.":::
 

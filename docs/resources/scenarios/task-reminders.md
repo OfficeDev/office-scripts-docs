@@ -206,7 +206,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
     }
     ```
 
-1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by an **For each** block. That means the array will be iterated over by Power Automate.
+1. For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it). Adding **email** causes the flow step to be surrounded by a **For each** block. That means the array will be iterated over by Power Automate.
 
 1. Fill out the remaining fields as follows:
 
@@ -227,7 +227,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
     :::image type="content" source="../../images/scenario-task-reminders-3.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/scenario-task-reminders-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
 

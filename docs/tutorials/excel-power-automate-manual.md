@@ -58,7 +58,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 1. Sign in to the [Power Automate site](https://make.powerautomate.com).
 
-1. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
+1. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to a list of ways to create new workflows.
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate 'Create' button.":::
 
