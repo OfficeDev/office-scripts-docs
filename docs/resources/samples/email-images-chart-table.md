@@ -1,7 +1,7 @@
 ---
 title: Email the images of an Excel chart and table
 description: Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.
-ms.date: 06/29/2021
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -16,15 +16,15 @@ This sample uses Office Scripts and Power Automate to create a chart. It then em
 * Get chart and table images.
 * Email the images with Power Automate.
 
-_Input data_
+### Input data
 
 :::image type="content" source="../../images/input-data.png" alt-text="A worksheet showing a table of input data.":::
 
-_Output chart_
+### Output chart
 
 :::image type="content" source="../../images/chart-created.png" alt-text="The column chart created showing amount due by customer.":::
 
-_Email that was received through Power Automate flow_
+### Email that was received through Power Automate flow
 
 :::image type="content" source="../../images/email-received.png" alt-text="The email sent by the flow showing the Excel chart embedded in the body.":::
 
@@ -44,15 +44,15 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Calculate and extract Excel chart and table
 
-Add the following script to the sample workbook and try the sample yourself!
+Add the following script to the sample workbook. Save it as **Get chart image** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
   // Recalculate the workbook to ensure all tables and charts are updated.
   workbook.getApplication().calculate(ExcelScript.CalculationType.full);
-  
+
   // Get the data from the "InvoiceAmounts" table.
-  let sheet1 = workbook.getWorksheet("Sheet1");
+  const sheet1 = workbook.getWorksheet("Sheet1");
   const table = workbook.getWorksheet('InvoiceAmounts').getTables()[0];
   const rows = table.getRange().getTexts();
 
@@ -61,7 +61,7 @@ function main(workbook: ExcelScript.Workbook): ReportImages {
     return [row[2], row[5]];
   });
   table.setShowTotals(true);
-  selectColumns.splice(selectColumns.length-1, 1);
+  selectColumns.splice(selectColumns.length - 1, 1);
   console.log(selectColumns);
 
   // Delete the "ChartSheet" worksheet if it's present, then recreate it.
@@ -69,17 +69,17 @@ function main(workbook: ExcelScript.Workbook): ReportImages {
   const chartSheet = workbook.addWorksheet('ChartSheet');
 
   // Add the selected data to the new worksheet.
-  const targetRange = chartSheet.getRange('A1').getResizedRange(selectColumns.length-1, selectColumns[0].length-1);
+  const targetRange = chartSheet.getRange('A1').getResizedRange(selectColumns.length - 1, selectColumns[0].length - 1);
   targetRange.setValues(selectColumns);
 
   // Insert the chart on sheet 'ChartSheet' at cell "D1".
-  let chart_2 = chartSheet.addChart(ExcelScript.ChartType.columnClustered, targetRange);
-  chart_2.setPosition('D1');
+  const chart = chartSheet.addChart(ExcelScript.ChartType.columnClustered, targetRange);
+  chart.setPosition('D1');
 
   // Get images of the chart and table, then return them for a Power Automate flow.
-  const chartImage = chart_2.getImage();
+  const chartImage = chart.getImage();
   const tableImage = table.getRange().getImage();
-  return {chartImage, tableImage};
+  return { chartImage, tableImage };
 }
 
 // The interface for table and chart images.
@@ -95,13 +95,17 @@ This flow runs the script and emails the returned images.
 
 1. Create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
+1. This sample requires Power Automate features that aren't supported in the [new flow designer](/power-automate/flows-designer) (adding HTML to an email). Switch to the old designer with the toggle in the upper-right corner of the screen.
+    :::image type="content" source="../../images/new-designer-off.png" alt-text="The toggle to use the new flow designer in the off state.":::
+
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
-    * **File**: Your workbook ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
-    * **Script**: Your script name
+    * **File**: email-chart-table.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
+    * **Script**: Get chart image
 
     :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
+
 1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action.
     * **To**: Your test email account (or personal email)
     * **Subject**: Please Review Report Data
@@ -122,6 +126,7 @@ This flow runs the script and emails the returned images.
     ```
 
     :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
+
 1. Save the flow and try it out. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 
 ## Training video: Extract and email images of chart and table
