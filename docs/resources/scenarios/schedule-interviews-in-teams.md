@@ -152,7 +152,7 @@ This flow run the interview scheduling scripts, send the Teams meetings, and rec
     * **Script**: Schedule Interviews
     :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="The completed Run script action to get interview data from the workbook.":::
 
-1. Add a action that uses the **Microsoft Teams** connector's **Create a Teams meeting** action. As you select dynamic content from the Excel connector, a **For each** block will be generated for your flow. Complete the connector with the following values.
+1. Add an action that uses the **Microsoft Teams** connector's **Create a Teams meeting** action. As you select dynamic content from the Excel connector, a **For each** block will be generated for your flow. Complete the connector with the following values.
     * **Subject**: Contoso Interview
     * **Message**: *Message* (dynamic content from **Run script**)
     * **Time zone**: Pacific Standard Time

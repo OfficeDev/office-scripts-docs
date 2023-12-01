@@ -86,7 +86,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in the action task pane.":::
 
 1. Add a condition so that the flow only operates on .csv files. Add the **Condition** control action. Use the following values for the **Condition**.
-    * **Choose a value**: *Name* (dynamic content from **List files in folder**). Note that this dynamic content has multiple results, so an **For each** control surrounds the **Condition**.
+    * **Choose a value**: *Name* (dynamic content from **List files in folder**). Note that this dynamic content has multiple results, so a **For each** control surrounds the **Condition**.
     * **ends with** (from the dropdown list)
     * **Choose a value**: .csv
 
