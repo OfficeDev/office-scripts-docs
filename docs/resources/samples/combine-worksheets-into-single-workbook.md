@@ -107,7 +107,7 @@ interface WorksheetData {
     >
     > :::image type="content" source="../../images/combine-worksheets-flow-4.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/combine-worksheets-flow-5.png" alt-text="The flow designer showing the two Run script actions inside a For each control loop.":::
   

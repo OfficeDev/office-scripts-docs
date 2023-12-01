@@ -276,9 +276,9 @@ function main(
 
     :::image type="content" source="../../images/write-large-dataset-8.png" alt-text="The completed 'Set variable' control.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
-    :::image type="content" source="../../images/write-large-dataset-9.png" alt-text="A diagram of the completed flow that shows the read and write data steps inside a do/do until control.":::
+    :::image type="content" source="../../images/write-large-dataset-9.png" alt-text="A diagram of the completed flow that shows the read and write data steps inside a Do until control.":::
 
 1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. The "TargetWorkbook.xlsx" file should now have the data from "SampleData.xlsx".

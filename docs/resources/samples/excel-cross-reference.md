@@ -173,7 +173,7 @@ This flow extracts the event information from the first workbook and uses that d
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/cross-reference-flow-4.png" alt-text="A diagram of the completed flow that shows four steps.":::
 

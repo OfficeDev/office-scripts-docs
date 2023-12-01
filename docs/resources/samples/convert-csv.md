@@ -115,7 +115,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
     :::image type="content" source="../../images/convert-csv-flow-6.png" alt-text="The completed Run script step in the action task pane.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/convert-csv-flow-7.png" alt-text="A diagram of the completed flow that shows three steps before a for each control, a condition control inside the for each, and three steps under the true path of the condition.":::
 

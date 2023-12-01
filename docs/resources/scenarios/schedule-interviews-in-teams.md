@@ -171,7 +171,7 @@ This flow run the interview scheduling scripts, send the Teams meetings, and rec
         * Press **[Switch input to entire array](../../testing/power-automate-troubleshooting.md#pass-entire-arrays-as-script-parameters)** first.
     :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="The completed Excel Online (Business) connector to record that invites have been sent.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/schedule-interviews-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
 

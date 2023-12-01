@@ -227,7 +227,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
     :::image type="content" source="../../images/scenario-task-reminders-3.png" alt-text="The Power Automate flow showing the apply-to-each step.":::
 
-1. Save the flow. The flow designer show look like the following image.
+1. Save the flow. The flow designer should look like the following image.
 
     :::image type="content" source="../../images/scenario-task-reminders-4.png" alt-text="A diagram of the completed flow that shows two steps leading to a For each control and two steps inside the For each control.":::
 
