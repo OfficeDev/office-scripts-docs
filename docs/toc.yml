@@ -68,14 +68,14 @@ items:
       items:
       - name: 'Ranges: work with the grid'
         href: resources/samples/range-samples.md
-      - name: Comments
-        href: resources/samples/add-excel-comments.md
       - name: "Data validation: dropdown lists, prompts, and warning pop-ups"
         href: resources/samples/data-validation-samples.md
       - name: Dates
         href: resources/samples/javascript-dates.md
       - name: Images
         href: resources/samples/add-image-to-workbook.md
+      - name: Row and column visibility
+        href: resources/samples/row-and-column-visibility.md
       - name: Tables
         href: resources/samples/table-samples.md
     - name: Quick scenarios
@@ -90,6 +90,8 @@ items:
         href: resources/samples/excel-calculation.md
       - name: Move selected rows across tables
         href: resources/samples/move-rows-across-tables.md
+      - name: Notify people with comments
+        href: resources/samples/add-excel-comments.md
       - name: Output table data as JSON
         href: resources/samples/get-table-data.md
       - name: Remove hyperlinks from Excel cells
@@ -98,8 +100,6 @@ items:
         href: resources/samples/clear-table-filter-for-active-cell.md
       - name: Set conditional formatting for cross-column comparisons
         href: resources/samples/conditional-formatting-parameters.md
-      - name: Set row and column visibility
-        href: resources/samples/row-and-column-visibility.md
       - name: Use external fetch calls in Office Scripts
         href: resources/samples/external-fetch-calls.md
     - name: Cross-application scenarios
