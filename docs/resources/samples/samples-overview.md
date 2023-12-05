@@ -31,6 +31,7 @@ This section contains [Office Scripts](../../overview/excel.md) based solutions 
 | [JavaScript `Date` samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
 | [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
 | [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
+| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
 | [Set conditional formatting for cross-column comparisons](conditional-formatting-parameters.md) | This sample applies formatting based on values in adjacent columns. It also gets user input through script parameters. |
 
 ## Beyond the basics
@@ -48,7 +49,6 @@ Check out the following end-to-end project that automates sample scenarios along
 | [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
-| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
 | [Use external fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
 | [Write a large dataset](write-large-dataset.md) | This sample shows how to send a large range as smaller subranges. |
 

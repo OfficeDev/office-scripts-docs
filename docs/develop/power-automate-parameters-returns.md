@@ -1,7 +1,7 @@
 ---
 title: Pass data to and from scripts in Power Automate
 description: How and why to use parameters and return values in Office Scripts with Power Automate.
-ms.date: 08/15/2023
+ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 

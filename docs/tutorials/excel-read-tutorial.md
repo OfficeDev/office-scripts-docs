@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Clean and normalize Excel workbook data'
 description: An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.
-ms.date: 11/14/2023
+ms.date: 11/29/2023
 ms.localizationpriority: high
 ---
 
@@ -25,7 +25,7 @@ Start by making a script that reads data and acts based on what was read. Throug
 Over the rest of the tutorial, you'll normalize this data using a script. First, you need to read data from the workbook.
 
 1. Create a new worksheet in the workbook you've used for the rest of the tutorial.
-2. Copy the following data and paste it into the new worksheet, starting at cell **A1**.
+1. Copy the following data and paste it into the new worksheet, starting at cell **A1**.
 
     |Date |Account |Description |Debit |Credit |
     |:--|:--|:--|:--|:--|
@@ -37,8 +37,8 @@ Over the rest of the tutorial, you'll normalize this data using a script. First,
     |10/25/2019 |Checking |Best For You Organics Company | -85.64 | |
     |11/01/2019 |Checking |External Deposit | |1000 |
 
-3. Open **All Scripts** and select **New Script**.
-4. Clean up the formatting. This is a financial document, so have your script change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Also have your script fit the column width to the data.
+1. Go to the **Automate** tab and select **New Script**.
+1. Clean up the formatting. This is a financial document, so have your script change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Also have your script fit the column width to the data.
 
     Replace the script contents with the following code:
 
@@ -55,7 +55,7 @@ Over the rest of the tutorial, you'll normalize this data using a script. First,
     }
     ```
 
-5. Now read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`).
+1. Now read a value from one of the number columns. Add the following code to the end of the script (before the closing `}`).
 
     ```TypeScript
     // Get the value of cell D2.
@@ -63,10 +63,10 @@ Over the rest of the tutorial, you'll normalize this data using a script. First,
     console.log(range.getValues());
     ```
 
-6. Run the script.
-7. You should see `[Array[1]]` in the console. This is not a number because ranges are two-dimensional arrays of data. That two-dimensional range is being logged to the console directly. Luckily, the Code Editor lets you see the contents of the array.
-8. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by selecting the blue triangle.
-9. Expand the second level of the array by selecting the newly revealed blue triangle. You should now see this:
+1. Run the script.
+1. You should see `[Array[1]]` in the console. This is not a number because ranges are two-dimensional arrays of data. That two-dimensional range is being logged to the console directly. Luckily, the Code Editor lets you see the contents of the array.
+1. When a two-dimensional array is logged to the console, it groups column values under each row. Expand the array log by selecting the blue triangle.
+1. Expand the second level of the array by selecting the newly revealed blue triangle. You should now see this:
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="The console log displaying the the output '-20.05', nested under two arrays.":::
 
@@ -85,7 +85,7 @@ Now that your script can read data, use that data to modify the workbook. Make t
     > [!NOTE]
     > We are [casting](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) the returned value of `range.getValue()` to a `number` by using the `as` keyword. This is necessary because a range could be strings, numbers, or booleans. In this instance, we explicitly need a number.
 
-2. The value of cell **D2** should now be positive.
+1. The value of cell **D2** should now be positive.
 
 ## Modify the values of a column
 
@@ -106,7 +106,7 @@ Now that you know how to read and write to a single cell, you can generalize the
     }
     ```
 
-2. Add a loop to the end of the script that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value.
+1. Add a loop to the end of the script that iterates through the rows in the last two columns. For each cell, the script sets the value to the current value's absolute value.
 
     Note that the array defining cell locations is zero-based. That means cell **A1** is `range[0][0]`.
 
@@ -134,7 +134,7 @@ Now that you know how to read and write to a single cell, you can generalize the
 
     This portion of the script does several important tasks. First, it gets the values and row count of the used range. This lets the script look at values and know when to stop. Second, it iterates through the used range, checking each cell in the **Debit** or **Credit** columns. Finally, if the value in the cell is not 0, it is replaced by its absolute value. The script ignores zeroes, so you can leave the blank cells as they were.
 
-3. Run the script.
+1. Run the script.
 
     Your banking statement should now have properly formatted positive numbers.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Send weekly email reminders based on spreadsheet data'
 description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel through Power Automate.
-ms.date: 11/14/2023
+ms.date: 11/29/2023
 ms.localizationpriority: high
 ---
 
@@ -35,9 +35,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 ## Create an Office Script
 
-1. Go to the **Automate** tab and select **All Scripts**.
-
-1. Select **New Script**.
+1. Go to the **Automate** tab and select **New Script**.
 
 1. Name the script **Get On-Call Person**.
 
@@ -130,10 +128,10 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="The Scheduled cloud flow button in Power Automate.":::
 
-1. Next, set the schedule for this flow. Your spreadsheet has a new on-call assignment starting every Monday in the first half of 2022. Set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
+1. Next, set the schedule for this flow. Your spreadsheet has a new on-call assignment starting every Monday in the first half of 2024. Set the flow to run first thing Monday mornings. Use the following options to configure the flow to run on Monday each week.
 
     - **Flow name**: Notify On-Call Person
-    - **Starting**: 1/3/22 at 1:00am
+    - **Starting**: 11/27/23 at 1:00am
     - **Repeat every**: 1 Week
     - **On these days**: M
 
@@ -141,17 +139,15 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 1. Select **Create**.
 
-1. Select **New step**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
-1. Select the **Standard** tab, then select **Excel Online (Business)**.
+1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Excel Online (Business) option in Power Automate.":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="The action selection task pane showing actions for the Excel Online (Business) connector. The Run script action is highlighted.":::
 
-1. Under **Actions**, select **Run script**.
+1. You may be asked to sign in to your Microsoft 365 account. Do so to continue the tutorial.
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Run script action option in Power Automate.":::
-
-1. Next, you'll select the workbook and script to use in the flow step. Use the **on-call-rotation.xlsx** workbook you created in your OneDrive. Specify the following settings for the **Run script** connector:
+1. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following parameters for the **Run script** action:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
@@ -160,14 +156,18 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="The Power Automate connector settings for running a script.":::
 
-1. Select **New step**.
+1. In the flow builder, select the **+** button and **Add an action**.
 
-1. End the flow by sending the reminder email. Select **Send an email (V2)** by using the connector's search bar. Use the **Add dynamic content** control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
+1. End the flow by sending the reminder email. In the **Add an action** task pane, search for "send an email". Choose the **Office 365 Outlook** connector's **Send an email (V2)** action.
 
-    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options.":::
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The action selection task pane showing actions for the Office 365 Outlook connector. The Send an email (V2) action is highlighted.":::
 
     > [!NOTE]
     > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
+
+1. For the **To** parameter, select the text box and select **Enter custom value**. Use the dynamic content control to add the email address returned by the script. This will be labelled **result** with the Excel icon next to it. You can provide whatever subject and body text you'd like.
+
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="The Power Automate Outlook connector settings for sending an email. The options include the file to send, the subject of the email, and the body of the email as well as advanced options.":::
 
 1. Select **Save**.
 
