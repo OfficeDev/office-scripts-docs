@@ -1,7 +1,7 @@
 ---
 title: Cross-reference Excel files with Power Automate
 description: Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.
-ms.date: 06/06/2022
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -147,27 +147,35 @@ This flow extracts the event information from the first workbook and uses that d
 
 1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Instant cloud flow**.
 1. Choose **Manually trigger a flow** and select **Create**.
-1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+1. In the flow builder, select the **+** button and **Add an action**. Select the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: event-data.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
     * **Script**: Get event data
 
+1. Rename this step. Select the current name "Run script" in the task pane and change it to "Get event data".
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="The completed Excel Online (Business) connector for the first script in Power Automate.":::
 
-1. Add a second **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. This uses the returned values from the **Get event data** script as input for the **Validate event data** script. Use the following values for the action.
+1. Add a second action that uses the **Excel Online (Business)** connector's **Run script** action. This action uses the returned values from the **Get event data** script as input for the **Validate event data** script. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: speaker-registration.xlsx ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
     * **Script**: Validate speaker registration
-    * **keys**: result (_dynamic content from **Run script**_)
+    * **keys**: result (_dynamic content from **Get event data**_)
 
+1. Rename this step as well. Select the current name "Run script 1" in the task pane and change it to "Validate speaker registration".
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="The completed Excel Online (Business) connector for the second script in Power Automate.":::
-1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. This uses the returned values from the **Validate speaker registration** script as the email body content. Use the following values for the action.
+
+1. This sample uses Outlook as the email client. For this sample, add the **Office 365 Outlook** connector's **Send and email (V2)** action. You could use any email connector that Power Automate supports. This action uses the returned values from the **Validate speaker registration** script as the email body content. Use the following values for the action.
     * **To**: Your test email account (or personal email)
     * **Subject**: Event validation results
-    * **Body**: result (_dynamic content from **Run script 2**_)
+    * **Body**: result (_dynamic content from **Validate speaker registration**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="The completed Office 365 Outlook connector in Power Automate.":::
-1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+
+1. Save the flow. The flow designer should look like the following image.
+
+    :::image type="content" source="../../images/cross-reference-flow-4.png" alt-text="A diagram of the completed flow that shows four steps.":::
+
+1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. You should receive an email saying "Mismatch found. Data requires your review." This indicates there are differences between rows in **speaker-registrations.xlsx** and rows in **event-data.xlsx**. Open **speaker-registrations.xlsx** to see several highlighted cells where there are potential problems with the speaker registration listings.

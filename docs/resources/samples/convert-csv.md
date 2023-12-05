@@ -1,7 +1,7 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.date: 03/28/2022
+ms.date: 11/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ Many services export data as comma-separated value (CSV) files. This solution au
 
 Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/convert-csv-example.zip?raw=true">convert-csv-example.zip</a> to get the Template.xlsx file and two sample .csv files. Extract the files into a folder in your OneDrive. This sample assumes the folder is named "output".
 
-Add the following script and build a flow using the steps given to try the sample yourself!
+Add the following script to the sample workbook. Save it as **Convert CSV** and try the sample yourself!
 
 ## Sample code: Insert comma-separated values into a workbook
 
@@ -73,39 +73,53 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 1. Sign into [Power Automate](https://make.powerautomate.com/create) and create a new **Scheduled cloud flow**.
 1. Set the flow to **Repeat every** "1" "Day" and select **Create**.
-1. Get the template Excel file. This is the basis for all the converted .csv files. Add a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Provide the file path to the "Template.xlsx" file.
+1. Get the template Excel file. This is the basis for all the converted .csv files. In the flow builder, select the **+** button and **Add an action**. Select the **OneDrive for Business** connector's **Get file content** action. Provide the file path to the "Template.xlsx" file.
     * **File**: /output/Template.xlsx
-1. Rename the **Get file content** step by going to the **Menu for Get file content(…)** menu of that step (in the upper right corner of the connector) and selecting the **Rename** option. Change the step name to "Get Excel template".
 
-     :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="The completed OneDrive for Business connector in Power Automate, renamed to be Get Excel template.":::
-1. Get all the files in the "output" folder. Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action. Provide the folder path that contains the .csv files.
+1. Rename the **Get file content** step. Select the current title, "Get file content", in the action task pane. Change the name to "Get Excel template".
+
+     :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="The completed OneDrive for Business connector in the action task pane, renamed to be Get Excel template.":::
+
+1. Add an action that gets all the files in the "output" folder. Choose the **OneDrive for Business** connector's **List files in folder** action. Provide the folder path that contains the .csv files.
     * **Folder**: /output
 
-    :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in Power Automate.":::
-1. Add a condition so that the flow only operates on .csv files. Add a **New step** that is the **Condition** control. Use the following values for the **Condition**.
-    * **Choose a value**: *Name* (dynamic content from **List files in folder**). Note that this dynamic content has multiple results, so an **Apply to each** *value* control surrounds the **Condition**.
+    :::image type="content" source="../../images/convert-csv-flow-2.png" alt-text="The completed OneDrive for Business connector in the action task pane.":::
+
+1. Add a condition so that the flow only operates on .csv files. Add the **Condition** control action. Use the following values for the **Condition**.
+    * **Choose a value**: *Name* (dynamic content from **List files in folder**). Note that this dynamic content has multiple results, so a **For each** control surrounds the **Condition**.
     * **ends with** (from the dropdown list)
     * **Choose a value**: .csv
 
-    :::image type="content" source="../../images/convert-csv-flow-3.png" alt-text="The completed Condition control with the Apply to each control around it.":::
-1. The rest of the flow is under the **If yes** section, since we only want to act on .csv files. Get an individual .csv file by adding a **New step** that uses the **OneDrive for Business** connector and the **Get file content** action. Use the **Id** from the dynamic content from **List files in folder**.
+    :::image type="content" source="../../images/convert-csv-flow-3.png" alt-text="The completed Condition control in the action task pane.":::
+
+1. The rest of the flow is under the **If yes** section, since we only want to act on .csv files. Get an individual .csv file by adding an action that uses the **OneDrive for Business** connector's **Get file content** action. Use the **Id** from the dynamic content from **List files in folder**.
     * **File**: *Id* (dynamic content from the **List files in folder** step)
+
 1. Rename the new **Get file content** step to "Get .csv file". This helps distinguish this file from the Excel template.
-1. Make the new .xlsx file, using the Excel template as the base content. Add a **New step** that uses the **OneDrive for Business** connector and the **Create file** action. Use the following values.
+
+     :::image type="content" source="../../images/convert-csv-flow-4.png" alt-text="The completed Get .csv file action in the action task pane.":::
+
+1. Make the new .xlsx file, using the Excel template as the base content. Add an action that uses the **OneDrive for Business** connector's **Create file** action. Use the following values.
     * **Folder Path**: /output
     * **File Name**: *Name without extension*.xlsx (choose the *Name without extension* dynamic content from the **List files in folder** and manually type ".xlsx" after it)
     * **File Content**: *File content* (dynamic content from **Get Excel template**)
 
-     :::image type="content" source="../../images/convert-csv-flow-4.png" alt-text="The Get .csv file and Create file steps of the Power Automate flow.":::
-1. Run the script to copy data into the new workbook. Add the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Create file step in the action task pane.":::
+
+1. Run the script to copy data into the new workbook. Add the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
     * **Document Library**: OneDrive
     * **File**: *Id* (dynamic content from **Create file**)
     * **Script**: Convert CSV
     * **csv**: *File content* (dynamic content from **Get .csv file**)
 
-    :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="The completed Excel Online (Business) connector in Power Automate.":::
-1. Save the flow. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
+    :::image type="content" source="../../images/convert-csv-flow-6.png" alt-text="The completed Run script step in the action task pane.":::
+
+1. Save the flow. The flow designer should look like the following image.
+
+    :::image type="content" source="../../images/convert-csv-flow-7.png" alt-text="A diagram of the completed flow that shows three steps before a for each control, a condition control inside the for each, and three steps under the true path of the condition.":::
+
+1. Use the **Test** button on the flow editor page or run the flow through your **My flows** tab. Be sure to allow access when prompted.
 1. You should find new .xlsx files in the "output" folder, alongside the original .csv files. The new workbooks contain the same data as the CSV files.
 
 ## Troubleshooting

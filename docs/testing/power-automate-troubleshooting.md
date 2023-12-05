@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 10/13/2023
+ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 
@@ -78,7 +78,7 @@ For more context on the Power Automate limitation and a discussion of potential 
 
 Power Automate allows users to pass arrays to connectors as a variable or as single elements in the array. The default is to pass single elements, which builds the array in the flow. For scripts or other connectors that take entire arrays as arguments, you need to select the **Switch to input entire array** button to pass the array as one complete object. This button is in the upper-right corner of each array parameter input field.
 
-:::image type="content" source="../images/combine-worksheets-flow-3.png" alt-text="The button to switch to input an entire array in a control field input box.":::
+:::image type="content" source="../images/combine-worksheets-flow-4.png" alt-text="The button to switch to input an entire array in a control field input box.":::
 
 ## Time zone differences
 

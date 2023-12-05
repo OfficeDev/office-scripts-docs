@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 This article will introduce you to the technical aspects of Office Scripts. You'll learn the critical parts of the TypeScript-based script code and how the Excel objects and APIs work together.
 
-If you would prefer to get started with an interactive experience, try the tutorial [Record, edit, and create Office Scripts in Excel](../tutorials/excel-tutorial.md) or visit our [samples](../resources/samples/samples-overview.md).
+If you would prefer to get started with an interactive experience, try [Tutorial: Create and format an Excel table](../tutorials/excel-tutorial.md) or visit our [samples](../resources/samples/samples-overview.md).
 
 ## TypeScript: The language of Office Scripts
 
@@ -323,8 +323,8 @@ For information specific to the PivotTable object model, see [Work with PivotTab
 
 ## See also
 
-- [Record, edit, and create Office Scripts in Excel](../tutorials/excel-tutorial.md)
-- [Read workbook data with Office Scripts in Excel](../tutorials/excel-read-tutorial.md)
+- [Tutorial: Create and format an Excel table](../tutorials/excel-tutorial.md)
+- [Tutorial: Clean and normalize Excel workbook data](../tutorials/excel-read-tutorial.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Work with PivotTables in Office Scripts](pivottables.md)
 - [Using built-in JavaScript objects in Office Scripts](javascript-objects.md)

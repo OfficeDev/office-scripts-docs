@@ -1,7 +1,7 @@
 ---
 title: Record day-to-day changes in Excel and report them with a Power Automate flow
 description: Learn how to use Office Scripts and Power Automate to track value changes in a workbook
-ms.date: 08/25/2022
+ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Record and report daily readings
 
-Add the following script to the sample workbook and try the sample yourself!
+Add the following script to the sample workbook. Save it as **Record daily value** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, newData: string): string {
@@ -50,25 +50,29 @@ Follow these steps to build a [Power Automate](https://powerautomate.microsoft.c
 1. Schedule the flow to repeat every **1 Day**.
 
     :::image type="content" source="../../images/day-to-day-changes-flow-1.png" alt-text="The flow creation step showing it will repeat every day.":::
+
 1. Select **Create**.
-1. In a real flow, you'll add a step that gets your data. The data can come from another workbook, a Teams adaptive card, or any other source. To test the sample, make a test number. Add a new step with the **Initialize variable** action. Give it the following values.
+1. In a real flow, you'll add a step that gets your data. The data can come from another workbook, a Teams adaptive card, or any other source. To test the sample, make a test number. Add an action and choose the **Initialize variable** action. Give it the following values.
     1. **Name**: Input
     1. **Type**: Integer
     1. **Value**: 190000
 
     :::image type="content" source="../../images/day-to-day-changes-flow-2.png" alt-text="The Initialize variable action with the given values.":::
-1. Add a new step with the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
+
+1. Add an action and choose the **Excel Online (Business)** connector's **Run script** action. Use the following values for the action.
     1. **Location**: OneDrive for Business
     1. **Document Library**: OneDrive
     1. **File**: daily-readings.xlsx *(Chosen through the file browser)*
-    1. **Script**: Your script name
+    1. **Script**: Record daily value
     1. **newData**: Input *(dynamic content)*
 
     :::image type="content" source="../../images/day-to-day-changes-flow-3.png" alt-text="The Run script action with the given values.":::
-1. The script returns the daily reading difference as dynamic content named "result". For the sample, you can email the information to yourself. Create a new step that uses the **Outlook** connector with the **Send an email (V2)** action (or whatever email client you prefer). Use the following values to complete the action.
+
+1. The script returns the daily reading difference as dynamic content named "result". For the sample, you can email the information to yourself. Add an action and choose the **Outlook** connector's **Send an email (V2)** action (or whatever email client you prefer). Use the following values to complete the action.
     1. **To**: Your email address
     1. **Subject**: Daily reading change
-    1. **Body**: "Difference from yesterday" result *(dynamic content from Excel)*
+    1. **Body**: "Difference from yesterday:" result *(dynamic content from Excel)*
 
     :::image type="content" source="../../images/day-to-day-changes-flow-4.png" alt-text="The completed Outlook connector in Power Automate.":::
+
 1. Save the flow and try it out. Use the **Test** button on the flow editor page. Be sure to allow access when prompted.

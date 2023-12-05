@@ -8,15 +8,15 @@ items:
     href: overview/excel.md
   - name: Tutorials
     items:
-    - name: Learn the basics of Office Scripts
+    - name: Create and format an Excel table
       href: tutorials/excel-tutorial.md
-    - name: Read workbook data with a script
+    - name: Clean and normalize Excel workbook data
       href: tutorials/excel-read-tutorial.md
-    - name: Call scripts from a manual Power Automate flow
+    - name: Update a spreadsheet from a Power Automate flow
       href: tutorials/excel-power-automate-manual.md
-    - name: Use data in a script from an automatically-run Power Automate flow
+    - name: Automatically save content from emails in a workbook
       href: tutorials/excel-power-automate-trigger.md
-    - name: Pass data from a script to Power Automate flow
+    - name: Send weekly email reminders based on spreadsheet data
       href: tutorials/excel-power-automate-returns.md
   - name: Script fundamentals
     href: develop/scripting-fundamentals.md
@@ -70,6 +70,8 @@ items:
         href: resources/samples/range-samples.md
       - name: Tables
         href: resources/samples/table-samples.md
+      - name: Dates
+        href: resources/samples/javascript-dates.md
       - name: Add comments
         href: resources/samples/add-excel-comments.md
       - name: Add images to a workbook
@@ -80,14 +82,14 @@ items:
         href: resources/samples/data-validation-samples.md
       - name: Create a workbook table of contents
         href: resources/samples/table-of-contents.md
-      - name: JavaScript Dates
-        href: resources/samples/javascript-dates.md
       - name: Remove table column filters
         href: resources/samples/clear-table-filter-for-active-cell.md
       - name: Report day-to-day changes in Power Automate
         href: resources/samples/report-day-to-day-changes.md
       - name: Row and column visibility
         href: resources/samples/row-and-column-visibility.md
+      - name: Run a script on all Excel files in a folder
+        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Set conditional formatting for cross-column comparisons
         href: resources/samples/conditional-formatting-parameters.md
     - name: Beyond the basics
@@ -110,8 +112,6 @@ items:
         href: resources/samples/get-table-data.md
       - name: Remove hyperlinks from Excel cells
         href: resources/samples/remove-hyperlinks-from-cells.md
-      - name: Run a script on all Excel files in a folder
-        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Use external fetch calls in Office Scripts
         href: resources/samples/external-fetch-calls.md
       - name: Write a large dataset

@@ -2,13 +2,13 @@
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
 ms.topic: integration
-ms.date: 11/10/2023
+ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 
 # Run Office Scripts with Power Automate
 
-[Power Automate](https://make.powerautomate.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
+[Power Automate](https://make.powerautomate.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate to do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
 
 [!INCLUDE [Power Automate needs a business license](../includes/power-automate-needs-business.md)]
 
@@ -20,9 +20,9 @@ If you are new to Power Automate, we recommend visiting [Get started with Power 
 
 There are three step-by-step tutorials for Power Automate and Office Scripts. These show how to combine the automate services and pass data between a workbook and a flow.
 
-- [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
-- [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md)
-- [Return data from a script to an automatically-run Power Automate flow](../tutorials//excel-power-automate-returns.md)
+- [Tutorial: Update a spreadsheet from a Power Automate flow](../tutorials/excel-power-automate-manual.md)
+- [Tutorial: Automatically save content from emails in a workbook](../tutorials/excel-power-automate-trigger.md)
+- [Tutorial: Send weekly email reminders based on spreadsheet data](../tutorials//excel-power-automate-returns.md)
 
 ### Create a flow from Excel
 
@@ -70,40 +70,45 @@ Power Automate lets you pass pieces of data between flow actions. Scripts can be
 
 Learn the details of how to pass data to and from your scripts with the following documentation.
 
-- Learn by doing with the [Pass data to scripts in an automatically-run Power Automate flow](../tutorials/excel-power-automate-trigger.md) and [Return data from a script to an automatically-run Power Automate flow](../tutorials/excel-power-automate-returns.md) tutorials.
+- Learn by doing with [Tutorial: Automatically save content from emails in a workbook](../tutorials/excel-power-automate-trigger.md) and [Tutorial: Send weekly email reminders based on spreadsheet data](../tutorials/excel-power-automate-returns.md).
 - Try the [Automated task reminders](../resources/scenarios/task-reminders.md) sample scenario to see everything in action.
 - Read [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md) for more usage scenarios and the technical TypeScript details.
 
 ## Example
 
-The following screenshot shows a Power Automate flow that's triggered whenever a [GitHub](https://github.com/) issue is assigned to you. The flow runs a script that adds the issue to a table in an Excel workbook. If there are five or more issues in that table, the flow sends an email reminder.
+The following screenshot shows a Power Automate flow that's triggered whenever a new response to a Form is submitted. The flow runs a script that adds the satisfaction value from the Form to a table. The current average satisfaction is returned and sent as an email.
 
 :::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="The Power Automate flow editor showing the example flow.":::
 
-The `main` function of the script specifies the issue ID and issue title as input parameters, and the script returns the number of rows in the issue table.
+The `main` function of the script specifies the new satisfaction value as an input parameter (`newData`). The script returns the average satisfaction value from the table.
 
 ```TypeScript
-function main(
-  workbook: ExcelScript.Workbook,
-  issueId: string,
-  issueTitle: string): number {
-  // Get the "GitHub" worksheet.
-  let worksheet = workbook.getWorksheet("GitHub");
+function main(workbook: ExcelScript.Workbook, newData: string): number {
+  // Add the new data to the table.
+  const table = workbook.getTable("SurveyTable");
+  table.addRow(-1, [newData]);
 
-  // Get the first table in this worksheet, which contains the table of GitHub issues.
-  let issueTable = worksheet.getTables()[0];
+  // Get the current satisfaction total.
+  const satisfactionColumn = table.getColumnByName("Current Satisfaction");
+  const values = satisfactionColumn.getRangeBetweenHeaderAndTotal().getValues();
+  let total = 0.0;
+  values.forEach((value) => {
+    total += value[0] as number;
+  });
 
-  // Add the issue ID and issue title as a row.
-  issueTable.addRow(-1, [issueId, issueTitle]);
-
-  // Return the number of rows in the table, which represents how many issues are assigned to this user.
-  return issueTable.getRangeBetweenHeaderAndTotal().getRowCount();
+  // Return the average satisfaction.
+  return total / values.length;
 }
 ```
 
+> [!NOTE]
+> The script parameter is of type `string` because that is the type the Forms action returns for all values.
+
+Find full examples with step-by-step walkthroughs in [Office Scripts samples and scenarios](../resources/samples/samples-overview.md). Many use Office Scripts in the center of Power Automate flows.
+
 ## See also
 
-- [Call scripts from a manual Power Automate flow](../tutorials/excel-power-automate-manual.md)
+- [Tutorial: Update a spreadsheet from a Power Automate flow](../tutorials/excel-power-automate-manual.md)
 - [Pass data to and from scripts in Power Automate](power-automate-parameters-returns.md)
 - [Troubleshooting information for Power Automate with Office Scripts](../testing/power-automate-troubleshooting.md)
 - [Get started with Power Automate](/power-automate/getting-started)
