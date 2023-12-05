@@ -48,7 +48,7 @@ Be sure to download the sample workbooks included with each sample. That lets yo
 
 ## Cross-application scenarios
 
-Use [Power Automate](https://make.powerautomate.com/) to connect other applications to Excel. Have your scripts power emails, forms, Teams messages, and more.
+Use [Power Automate](https://make.powerautomate.com/) to connect other applications to Excel. Have your scripts power emails, forms, Teams messages, and more. These samples include step-by-step instructions to create each Power Automate flow.
 
 | Project | Details |
 |---------|---------|
