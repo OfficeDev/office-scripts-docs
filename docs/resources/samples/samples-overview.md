@@ -57,8 +57,8 @@ Use [Power Automate](https://make.powerautomate.com/) to connect other applicati
 | [Cross-reference workbooks](excel-cross-reference.md) | This sample uses Office Scripts and Power Automate to cross-reference and validate information in different workbooks. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
 | [Record day-to-day changes in Excel and report them with a flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
-| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
-| [Write a large dataset](write-large-dataset.md) | This sample shows how to send a large range as smaller subranges. |
+| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This sample performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
+| [Write a large dataset](write-large-dataset.md) | This sample shows how to work with a large range as smaller subranges. This helps flows handle data transfer limits and operation timeouts. |
 
 ## Real-world scenarios
 
