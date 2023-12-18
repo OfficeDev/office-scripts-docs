@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 This section contains [Office Scripts](../../overview/excel.md) based solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
 
-- [Basics](#basics) showcase common examples that make up larger scripts. They are categorized based on a common Excel feature.
+- [Basics](#basics) showcase common examples that make up larger scripts. They're categorized based on a common Excel feature.
 - [Quick scenarios](#quick-scenarios) are samples that are more involved or solve a particular problem.
 - [Cross-application scenarios](#cross-application-scenarios) are samples that use Power Automate with one or more Office Scripts as integral parts of the flow.
 - [Real-world scenarios](#real-world-scenarios) are a few larger samples framed as complete, real-world solutions.
@@ -22,8 +22,8 @@ This section contains [Office Scripts](../../overview/excel.md) based solutions 
 
 | Project | Details |
 |---------|---------|
-| [Ranges: work with the grid](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
-| [Data validation samples: dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
+| [Ranges: Work with the grid](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
+| [Data validation samples: Dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
 | [Date samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
 | [Image samples](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
