@@ -66,9 +66,9 @@ items:
       href: resources/samples/samples-overview.md
     - name: Basics
       items:
-      - name: 'Ranges: work with the grid'
+      - name: 'Ranges: Work with the grid'
         href: resources/samples/range-samples.md
-      - name: "Data validation: dropdown lists, prompts, and warning pop-ups"
+      - name: 'Data validation: Dropdown lists, prompts, and warning pop-ups'
         href: resources/samples/data-validation-samples.md
       - name: Dates
         href: resources/samples/javascript-dates.md
