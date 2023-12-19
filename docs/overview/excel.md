@@ -51,8 +51,6 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
-:::image type="content" source="../images/script-sharing.png" alt-text="The script details page showing the 'Share with others in this workbook' option.":::
-
 Add buttons that run scripts to help your colleagues discover your valuable solutions and let them run scripts straight from the workbook. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the 'Create Report' script details page with a button named 'Create Report' shown in the Excel grid.":::
