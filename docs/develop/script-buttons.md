@@ -16,7 +16,7 @@ Help your colleagues find and run your scripts by adding script buttons to a wor
 
 When viewing a script, select **Add in workbook**. This creates a button in the workbook that runs the associated script. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
-:::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the script details page.":::
+:::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the 'Create Report' script details page with a button named 'Create Report' shown in the Excel grid.":::
 
 ## Remove script buttons
 
