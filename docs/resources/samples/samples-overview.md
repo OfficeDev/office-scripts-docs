@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 09/20/2023
+ms.date: 12/05/2023
 ms.localizationpriority: medium
 ---
 
@@ -9,9 +9,10 @@ ms.localizationpriority: medium
 
 This section contains [Office Scripts](../../overview/excel.md) based solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
 
-- [Basics](#basics) showcase common examples that make up larger scripts. Most don't need a specific workbook or dataset and can be run in the workbook of your choice.
-- [Beyond the basics](#beyond-the-basics) are samples that are more involved or solve a particular problem. Some use Power Automate with an Office Script as a integral part of the flow.
-- [Scenarios](#scenarios) are a few larger samples that demonstrate real-world use cases.
+- [Basics](#basics) showcase common examples that make up larger scripts. They're categorized based on a common Excel feature.
+- [Quick scenarios](#quick-scenarios) are samples that are more involved or solve a particular problem.
+- [Cross-application scenarios](#cross-application-scenarios) are samples that use Power Automate with one or more Office Scripts as integral parts of the flow.
+- [Real-world scenarios](#real-world-scenarios) are a few larger samples framed as complete, real-world solutions.
 - [Contributions from the community](#community-contributions-and-fun-samples) are samples from members of the Office Scripts community, often light-hearted in nature.
 
 > [!IMPORTANT]
@@ -21,38 +22,45 @@ This section contains [Office Scripts](../../overview/excel.md) based solutions 
 
 | Project | Details |
 |---------|---------|
-| [Range samples](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
-| [Table samples](table-samples.md) | A collection of samples that show common interactions with Excel tables.
-| [Add comments in Excel](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
-| [Add images to a workbook](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
-| [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
-| [Data validation: dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
-| [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
-| [JavaScript `Date` samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
-| [Record day-to-day changes in Excel and report them with a Power Automate flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
+| [Ranges: Work with the grid](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
+| [Data validation samples: Dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
+| [Date samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |
+| [Image samples](add-image-to-workbook.md) | This sample adds an image to a workbook and copies an image across sheets.|
 | [Row and column visibility samples](row-and-column-visibility.md) | A collection of samples that demonstrate how to show, hide, and freeze rows and columns. |
-| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
+| [Table samples](table-samples.md) | A collection of samples that show common interactions with Excel tables. |
+
+## Quick scenarios
+
+Be sure to download the sample workbooks included with each sample. That lets you skip setup and understand the core concept the sample demonstrates.
+
+| Project | Details |
+|---------|---------|
+| [Copy multiple Excel tables into a single table](copy-tables-combine.md) | This sample combines data from multiple Excel tables into a single table that includes all the rows. |
+| [Create a workbook table of contents](table-of-contents.md) | This sample creates a table of contents with links to each worksheet. |
+| [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
+| [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel using Office Scripts. |
+| [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |
+| [Notify people with comments](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
+| [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
+| [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
 | [Set conditional formatting for cross-column comparisons](conditional-formatting-parameters.md) | This sample applies formatting based on values in adjacent columns. It also gets user input through script parameters. |
+| [Use external fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
 
-## Beyond the basics
+## Cross-application scenarios
 
-Check out the following end-to-end project that automates sample scenarios along with full scripts, sample Excel files used, and [videos (hosted on YouTube)](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0).
+Use [Power Automate](https://make.powerautomate.com/) to connect other applications to Excel. Have your scripts power emails, forms, Teams messages, and more. These samples include step-by-step instructions to create each Power Automate flow.
 
 | Project | Details |
 |---------|---------|
 | [Combine worksheets into a single workbook](combine-worksheets-into-single-workbook.md) | This sample uses Office Scripts and Power Automate to pull data from other workbooks into a single workbook. |
 | [Convert CSV files to Excel workbooks](convert-csv.md) | This sample uses Office Scripts and Power Automate to create .xlsx files from .csv files. |
 | [Cross-reference workbooks](excel-cross-reference.md) | This sample uses Office Scripts and Power Automate to cross-reference and validate information in different workbooks. |
-| [Count blank rows in a specific sheet or in all sheets](count-blank-rows.md) | This sample detects if there are any blank rows in sheets where you anticipate data to be present and then report the blank row count for usage in a Power Automate flow. |
 | [Email chart and table images](email-images-chart-table.md) | This sample uses Office Scripts and Power Automate actions to create a chart and send that chart as an image by email. |
-| [Manage calculation mode in Excel](excel-calculation.md) | This sample shows how to use the calculation mode and calculate methods in Excel using Office Scripts. |
-| [Move rows across tables](move-rows-across-tables.md) | This sample shows how to move rows across tables by saving filters, then processing and reapplying the filters. |
-| [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
-| [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
-| [Use external fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
-| [Write a large dataset](write-large-dataset.md) | This sample shows how to send a large range as smaller subranges. |
+| [Record day-to-day changes in Excel and report them with a flow](report-day-to-day-changes.md) | This sample uses a scheduled Power Automate flow to record daily readings and report the changes. |
+| [Run a script on all Excel files in a folder](automate-tasks-on-all-excel-files-in-folder.md) | This sample performs a set of automation tasks on all files situated in a folder on OneDrive for Business (can also be used for a SharePoint folder). It performs calculations on the Excel files, adds formatting, and inserts a comment that @mentions a colleague. |
+| [Write a large dataset](write-large-dataset.md) | This sample shows how to work with a large range as smaller subranges. This helps flows handle data transfer limits and operation timeouts. |
 
-## Scenarios
+## Real-world scenarios
 
 Office Scripts can automate parts of your daily routine. These day-to-day tasks often exist in unique ecosystems, with Excel workbooks that are set up in particular ways. These larger scenario samples demonstrate such real-world use-cases. They include both the Office Scripts and the workbooks, so you can see the scenario from end to end.
 

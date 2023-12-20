@@ -1,11 +1,11 @@
 ---
-title: Add comments in Excel
-description: Learn how to use Office Scripts to add comments in a worksheet.
-ms.date: 10/20/2023
+title: Notify people with comments
+description: Learn how to use Office Scripts to add comments in a worksheet that notify users with @mentions.
+ms.date: 12/05/2023
 ms.localizationpriority: medium
 ---
 
-# Add comments in Excel
+# Notify people with comments
 
 This sample shows how to add comments to a cell including [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.
 

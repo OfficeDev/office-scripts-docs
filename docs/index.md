@@ -39,7 +39,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Getting started</h3>
+                        <h3>Get started</h3>
                         <p><a href="tutorials/excel-tutorial.md">Create and format a table with Office Scripts.</a></p>
                     </div>
                 </div>
@@ -56,8 +56,8 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Scripting fundamentals</h3>
-                        <p><a href="develop/scripting-fundamentals.md">Learn the fundamental concepts of scripting with Office Scripts in Excel.</a></p>
+                        <h3>Script fundamentals</h3>
+                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
                     </div>
                 </div>
             </div>
