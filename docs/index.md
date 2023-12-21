@@ -3,7 +3,7 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office Scripts documentation
 description: Resources for learning Office Scripts in Excel, including tutorials, conceptual articles, and code samples.
-ms.date: 01/09/2023
+ms.date: 12/21/2023
 ms.localizationpriority: high
 ---
 
@@ -67,7 +67,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
 ---
 
 <h2>Samples</h2>
-<p>TK</p>
+<p>Try these scripts and Power Automate flows to see Office Scripts in action.</p>
 <ul class="panelContent cardsF cols cols3 rows1">
     <li>
         <div class="cardSize">
@@ -147,6 +147,23 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="develop/scripting-fundamentals.md" target="_blank"><img src="images/index-landing-page/i_code-blocks.svg" alt="Script fundamentals" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Script fundamentals</h3>
+                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="resources/samples/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
@@ -168,23 +185,6 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><h3>How to share scripts</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="develop/scripting-fundamentals.md" target="_blank"><img src="images/index-landing-page/i_code-blocks.svg" alt="Script fundamentals" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Script fundamentals</h3>
-                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
                     </div>
                 </div>
             </div>
