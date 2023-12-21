@@ -56,7 +56,8 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
+                        <h3>Integrate with Power Automate</h3>
+                        <p><a href="tutorials/excel-tutorial.md">Connect Excel to your entire automated workflow.</a></p>
                     </div>
                 </div>
             </div>
@@ -151,8 +152,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Script fundamentals</h3>
-                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
+                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>Script fundamentals</h3></a>
                     </div>
                 </div>
             </div>
