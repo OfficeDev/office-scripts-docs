@@ -35,7 +35,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="tutorials/excel-tutorial.md" target="_blank"><img src="images/index-landing-page/i_get-started.svg" alt="Getting started" /></a>
+                            <a href="tutorials/excel-tutorial.md" target="_blank"><img src="images/index-landing-page/i_get-started.svg" alt="Get started" /></a>
                         </div>
                     </div>
                     <div class="cardText">
@@ -52,18 +52,73 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="develop/scripting-fundamentals.md" target="_blank"><img src="images/index-landing-page/i_code-blocks.svg" alt="Scripting fundamentals" /></a>
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Script fundamentals</h3>
-                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
                     </div>
                 </div>
             </div>
         </div>
     </li>
 </ul>
+
+---
+
+<h2>Samples</h2>
+<p>TK</p>
+<ul class="panelContent cardsF cols cols3 rows1">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="resources/samples/convert-csv.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Convert CSV files to Excel workbooks" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="resources/samples/convert-csv.md" target="_blank"><h3>Convert CSV files to Excel workbooks</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="resources/samples/conditional-formatting-parameters.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Set conditional formatting for cross-column comparisons" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="resources/samples/conditional-formatting-parameters.md" target="_blank"><h3>Set conditional formatting for cross-column comparisons</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="resources/samples/email-images-chart-table.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Email images of a chart and table"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="resources/samples/email-images-chart-table.md" target="_blank"><h3>Email images of a chart and table</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
 
 ---
 
@@ -96,23 +151,7 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>Sample scripts</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Integrate with Power Automate</h3></a>
+                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>More sample scripts</h3></a>
                     </div>
                 </div>
             </div>
@@ -129,6 +168,23 @@ Use Office Scripts in Excel to automate your common tasks. Explore the following
                     </div>
                     <div class="cardText">
                         <a href="https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b" target="_blank"><h3>How to share scripts</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="develop/scripting-fundamentals.md" target="_blank"><img src="images/index-landing-page/i_code-blocks.svg" alt="Script fundamentals" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Script fundamentals</h3>
+                        <p><a href="develop/scripting-fundamentals.md">Learn the basics of making Office Scripts in Excel.</a></p>
                     </div>
                 </div>
             </div>
