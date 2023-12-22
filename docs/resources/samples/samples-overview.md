@@ -1,13 +1,13 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 12/05/2023
+ms.date: 12/22/2023
 ms.localizationpriority: medium
 ---
 
 # Office Scripts samples and scenarios
 
-This section contains [Office Scripts](../../overview/excel.md) based solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
+This section contains Office Scripts based solutions that help end users achieve automation of daily tasks. It contains realistic scenarios that users face and provides detailed solutions.
 
 - [Basics](#basics) showcase common examples that make up larger scripts. They're categorized based on a common Excel feature.
 - [Quick scenarios](#quick-scenarios) are samples that are more involved or solve a particular problem.
@@ -16,7 +16,7 @@ This section contains [Office Scripts](../../overview/excel.md) based solutions 
 - [Contributions from the community](#community-contributions-and-fun-samples) are samples from members of the Office Scripts community, often light-hearted in nature.
 
 > [!IMPORTANT]
-> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under the [Office Scripts for Excel overview "Requirements" section](../../overview/excel.md#requirements).
+> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under [Platform support](../testing/platform-limits.md#platform-support).
 
 ## Basics
 

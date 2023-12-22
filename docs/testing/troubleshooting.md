@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
 ms.topic: troubleshooting-general
-ms.date: 09/08/2023
+ms.date: 12/22/2023
 ms.localizationpriority: medium
 ---
 
@@ -74,7 +74,7 @@ Logs do not affect the workbook.
 
 The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel.
 
-1. [Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).
+1. [Make sure your Microsoft 365 license includes Office Scripts](../testing/platform-limits.md#platform-support).
 1. [Ensure third-party cookies are enabled (when using Excel on the web)](platform-limits.md#third-party-cookies-for-excel-on-the-web).
 1. [Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. [Ensure that your admin has not configured a group policy to block Office Scripts (Windows only)](/deployoffice/configure-update-settings-microsoft-365-apps#use-group-policy-to-configure-update-settings-for-microsoft-365-apps).
