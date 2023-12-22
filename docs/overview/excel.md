@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 12/19/2023
+ms.date: 12/22/2023
 ms.localizationpriority: high
 ---
 
@@ -16,9 +16,8 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
-## Requirements
-
-[!INCLUDE [Platform requirements](../includes/platform-requirements.md)]
+> [!NOTE]
+> Office Scripts requires a commercial or educational Microsoft 365 license. The complete requirement list is described under [Platform support](../testing/platform-limits.md#platform-support).
 
 ## When to use Office Scripts
 
@@ -70,6 +69,6 @@ Complete the [Office Scripts in Excel tutorial](../tutorials/excel-tutorial.md) 
 
 - [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
-- [Troubleshooting Office Scripts](../testing/troubleshooting.md)
+- [Platform limits and requirements with Office Scripts](../testing/platform-limits.md)
 - [Office Scripts settings in M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
