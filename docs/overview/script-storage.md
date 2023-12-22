@@ -11,7 +11,7 @@ The details of how scripts are stored and shared depend on your Microsoft 365 su
 
 ## File storage
 
-# [For business](#tab/business)
+# [For business/education](#tab/business)
 
 Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
@@ -37,7 +37,7 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 > [!NOTE]
 > Power Automate supports running scripts stored on SharePoint with the **Run script from SharePoint library (Preview)** action. This action is currently in preview and is subject to change based on feedback. If you encounter any issues with this action, please report them through the **Help** > **Give Feedback** option in Power Automate.
 
-# [For home](#tab/home)
+# [For personal/family](#tab/home)
 
 Scripts are stored in your local Office cache. The cache is in the following folder.
 
@@ -47,20 +47,20 @@ Scripts are stored in your local Office cache. The cache is in the following fol
 
 ## Share scripts
 
-# [For business](#tab/business)
+# [For business/education](#tab/business)
 
 To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
 > [!NOTE]
 > Admin settings for Conditional Access in OneDrive and SharePoint affect Office Scripts. For more information, see the [Conditional Access section of Platform limits and requirements with Office Scripts](../testing/platform-limits.md#conditional-access).
 
-# [For home](#tab/home)
+# [For personal/family](#tab/home)
 
 Scripts can't be shared through workbooks with a home or family account. You can manually share the script files, but there are no in-client support options or change notifications.
 
 ## Restore deleted scripts
 
-# [For business](#tab/business)
+# [For business/education](#tab/business)
 
 When you delete a script in Excel, it goes to your OneDrive or SharePoint recycle bin. To restore a deleted script, follow the steps listed in [How to recover missing, deleted or corrupted items in SharePoint and OneDrive for work or school](https://support.microsoft.com/office/3d748edf-c072-46c9-81a4-4989056ebc87). Restoring an **.osts** file returns it to the **All scripts** list.
 
@@ -68,19 +68,19 @@ A deleted script is unshared with the workbook. When you restore a script, it do
 
 Restored scripts still work as expected with Power Automate flows. You don't need to recreate the flow connector.
 
-# [For home](#tab/home)
+# [For personal/family](#tab/home)
 
 When you delete a script in Excel, it goes to your recycle bin. Restoring an **.osts** file returns it to the **All scripts** list.
 
 ## File ownership and retention
 
-# [For business](#tab/business)
+# [For business/education](#tab/business)
 
 Office Scripts follow the retention and deletion policies specified by Microsoft OneDrive and Microsoft SharePoint. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [Learn about retention for SharePoint and OneDrive](/microsoft-365/compliance/retention-policies-sharepoint?view=o365-worldwide&preserve-view=true).
 
 During editing, files are temporarily stored in the browser. You must save the script before closing the Excel window to save it to the OneDrive location. Don't forget to save the file after edits, or else those edits will only be in the browser's version of the file.
 
-# [For home](#tab/home)
+# [For personal/family](#tab/home)
 
 Clearing the Office cache will remove all your scripts. Be sure to manually save your scripts elsewhere if the cache needs to be cleared.
 

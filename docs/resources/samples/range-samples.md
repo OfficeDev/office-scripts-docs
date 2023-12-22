@@ -1,11 +1,11 @@
 ---
-title: Ranges in Office Scripts
-description: A collection of code samples showing how to work with Excel ranges in Office Scripts.
-ms.date: 09/08/2023
+title: 'Ranges: Work with the grid in Office Scripts'
+description: A collection of code samples showing how to work with Excel ranges, collections of cells, in Office Scripts.
+ms.date: 12/05/2023
 ms.localizationpriority: medium
 ---
 
-# Ranges in Office Scripts
+# Ranges: Work with the grid in Office Scripts
 
 The following samples are simple scripts for you to try on your own workbooks. They form the building blocks to larger solutions. Expand these scripts to extend your solution and solve common problems.
 

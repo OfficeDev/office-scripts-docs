@@ -66,33 +66,43 @@ items:
       href: resources/samples/samples-overview.md
     - name: Basics
       items:
-      - name: Ranges
+      - name: 'Ranges: Work with the grid'
         href: resources/samples/range-samples.md
-      - name: Tables
-        href: resources/samples/table-samples.md
+      - name: 'Data validation: Dropdown lists, prompts, and warning pop-ups'
+        href: resources/samples/data-validation-samples.md
       - name: Dates
         href: resources/samples/javascript-dates.md
-      - name: Add comments
-        href: resources/samples/add-excel-comments.md
-      - name: Add images to a workbook
+      - name: Images
         href: resources/samples/add-image-to-workbook.md
-      - name: Copy multiple tables into single table
-        href: resources/samples/copy-tables-combine.md
-      - name: "Data validation: dropdown lists, prompts, and warning pop-ups"
-        href: resources/samples/data-validation-samples.md
-      - name: Create a workbook table of contents
-        href: resources/samples/table-of-contents.md
-      - name: Remove table column filters
-        href: resources/samples/clear-table-filter-for-active-cell.md
-      - name: Report day-to-day changes in Power Automate
-        href: resources/samples/report-day-to-day-changes.md
       - name: Row and column visibility
         href: resources/samples/row-and-column-visibility.md
-      - name: Run a script on all Excel files in a folder
-        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
+      - name: Tables
+        href: resources/samples/table-samples.md
+    - name: Quick scenarios
+      items:
+      - name: Copy multiple tables into single table
+        href: resources/samples/copy-tables-combine.md
+      - name: Create a workbook table of contents
+        href: resources/samples/table-of-contents.md
+      - name: Count blank rows in worksheets
+        href: resources/samples/count-blank-rows.md
+      - name: Manage calculation mode
+        href: resources/samples/excel-calculation.md
+      - name: Move selected rows across tables
+        href: resources/samples/move-rows-across-tables.md
+      - name: Notify people with comments
+        href: resources/samples/add-excel-comments.md
+      - name: Output table data as JSON
+        href: resources/samples/get-table-data.md
+      - name: Remove hyperlinks from Excel cells
+        href: resources/samples/remove-hyperlinks-from-cells.md
+      - name: Remove table column filters
+        href: resources/samples/clear-table-filter-for-active-cell.md
       - name: Set conditional formatting for cross-column comparisons
         href: resources/samples/conditional-formatting-parameters.md
-    - name: Beyond the basics
+      - name: Use external fetch calls in Office Scripts
+        href: resources/samples/external-fetch-calls.md
+    - name: Cross-application scenarios
       items:
       - name: Combine worksheets into a single workbook
         href: resources/samples/combine-worksheets-into-single-workbook.md
@@ -100,23 +110,15 @@ items:
         href: resources/samples/convert-csv.md
       - name: Cross-reference worksheets
         href: resources/samples/excel-cross-reference.md
-      - name: Count blank rows in worksheets
-        href: resources/samples/count-blank-rows.md
       - name: Email images of chart and table
         href: resources/samples/email-images-chart-table.md
-      - name: Manage calculation mode
-        href: resources/samples/excel-calculation.md
-      - name: Move selected rows across tables
-        href: resources/samples/move-rows-across-tables.md
-      - name: Output table data as JSON
-        href: resources/samples/get-table-data.md
-      - name: Remove hyperlinks from Excel cells
-        href: resources/samples/remove-hyperlinks-from-cells.md
-      - name: Use external fetch calls in Office Scripts
-        href: resources/samples/external-fetch-calls.md
+      - name: Report day-to-day changes in Power Automate
+        href: resources/samples/report-day-to-day-changes.md
+      - name: Run a script on all Excel files in a folder
+        href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
       - name: Write a large dataset
         href: resources/samples/write-large-dataset.md
-    - name: Scenarios
+    - name: Real-world scenarios
       items:
       - name: Analyze web downloads
         href: resources/scenarios/analyze-web-downloads.md

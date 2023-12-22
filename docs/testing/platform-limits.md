@@ -2,7 +2,7 @@
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 09/19/2023
+ms.date: 12/22/2023
 ms.localizationpriority: medium
 ---
 
@@ -66,6 +66,10 @@ The **Excel Business (Online)** connector's **Run script** action doesn't suppor
 ## Teams support
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
+
+## Government cloud support
+
+Office Scripts aren't supported on [GCC High or above](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod). [External calls](../develop/external-calls.md) from scripts may be affected by firewall settings in other government clouds.
 
 ## Third-party cookies for Excel on the web
 
