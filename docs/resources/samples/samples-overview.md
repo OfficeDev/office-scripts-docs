@@ -16,7 +16,7 @@ This section contains Office Scripts based solutions that help end users achieve
 - [Contributions from the community](#community-contributions-and-fun-samples) are samples from members of the Office Scripts community, often light-hearted in nature.
 
 > [!IMPORTANT]
-> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under [Platform support](../testing/platform-limits.md#platform-support).
+> Be sure you meet the prerequisites for Office Scripts before trying the samples. The requirements for your Microsoft 365 subscription and account are found under [Platform support](../../testing/platform-limits.md#platform-support).
 
 ## Basics
 
