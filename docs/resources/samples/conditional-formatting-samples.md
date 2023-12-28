@@ -18,7 +18,7 @@ This sample workbook contains worksheets ready to test with the sample scripts.
 
 [Cell value conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.cellvalueconditionalformat) applies a format to every cell that contains a value meeting a given criteria. This helps quickly spot important data points.
 
-The following sample applies cell value conditional formatting to a range. Any value less than 60 will have the cell fill color changed and the font made italic.
+The following sample applies cell value conditional formatting to a range. Any value less than 60 will have the cell's fill color changed and the font made italic.
 
 :::image type="content" source="../../images/conditional-formatting-sample-cell-value.png" alt-text="A list of scores with every cell that contains a value under 60 formatted to have a yellow fill and italic text.":::
 
@@ -121,7 +121,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Icon set
 
-[Icon set conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.iconsetconditionalformat) adds icons to each cell in a range. The icons come from a specified set. Icons get an array of criteria for their application, with each object in the value mapping to a single icon.
+[Icon set conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.iconsetconditionalformat) adds icons to each cell in a range. The icons come from a specified set. Icons are applied based on an ordered array of criteria, with each criterion mapping to a single icon.
 
 The following sample applies the "three traffic light" icon set conditional formatting to a range.
 
@@ -158,7 +158,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Preset
 
-[Preset conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.presetcriteriaconditionalformat) applies a specified format to a range based on common scenarios. The full list of preset criteria is provided by the [ConditionalFormatPresetCriterion](/javascript/api/office-scripts/excelscript/excelscript.conditionalformatpresetcriterion) enum.
+[Preset conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.presetcriteriaconditionalformat) applies a specified format to a range based on common scenarios, such as blank cells and duplicate values. The full list of preset criteria is provided by the [ConditionalFormatPresetCriterion](/javascript/api/office-scripts/excelscript/excelscript.conditionalformatpresetcriterion) enum.
 
 The following sample gives a yellow fill to any blank cell in the range.
 
@@ -189,7 +189,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Text comparison
 
-[Text comparison conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.textconditionalformat) applies formatting based on strings. The formatting is applied when the text begins with, contains, ends with, or doesn't contain the given substring.
+[Text comparison conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.textconditionalformat) formats cells based on their text content. The formatting is applied when the text begins with, contains, ends with, or doesn't contain the given substring.
 
 The following sample marks any cell in the range that contains the text "review".
 
@@ -220,9 +220,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Top/bottom
 
-[Top/bottom conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.topbottomconditionalformat) marks the highest or lowest values in a range. The highs and lows can be based on either raw values or percentages.
+[Top/bottom conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.topbottomconditionalformat) marks the highest or lowest values in a range. The highs and lows are based on either raw values or percentages.
 
 The following sample applies conditional formatting to show the two highest numbers in the range.
+
+:::image type="content" source="../../images/conditional-formatting-sample-top-bottom.png" alt-text="A sales table that has the top two values highlighted with a green fill.":::
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -241,15 +243,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-:::image type="content" source="../../images/conditional-formatting-sample-custom.png" alt-text="A row of a sales table. Values that are higher than the one to the left have a green fill.":::
-
 ## Custom conditions
 
 [Custom conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.customconditionalformat) allows for complex formulas to define when formatting is applied. Use this when the other options aren't enough.
 
-The following sample applies a custom conditional formatting to the selected range. A light-green fill is applied to a cell if the value is larger than the value in the row's previous column.
+The following sample sets a custom conditional formatting on the selected range. A light-green fill is applied to a cell if the value is larger than the value in the row's previous column.
 
-:::image type="content" source="../../images/conditional-formatting-sample-custom.png" alt-text="A sales table that has the top two values highlighted with a green fill.":::
+:::image type="content" source="../../images/conditional-formatting-sample-custom.png" alt-text="A row of a sales table. Values that are higher than the one to the left have a green fill.":::
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
