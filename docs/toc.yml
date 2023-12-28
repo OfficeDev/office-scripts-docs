@@ -68,6 +68,8 @@ items:
       items:
       - name: 'Ranges: Work with the grid'
         href: resources/samples/range-samples.md
+      - name: Conditional formatting
+        href: resources/samples/conditional-formatting-samples.md
       - name: 'Data validation: Dropdown lists, prompts, and warning pop-ups'
         href: resources/samples/data-validation-samples.md
       - name: Dates
