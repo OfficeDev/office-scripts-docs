@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
   const dataRange = sheet.getRange("B2:D5");
   sheet.activate();
 
-    // Set the fill color to green for the top 2 values in the range.
+    // Set the fill color to green and the font to bold for the top 2 values in the range.
     const topBottomFormat = dataRange.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom).getTopBottom();
     topBottomFormat.getFormat().getFill().setColor("green");
     topBottomFormat.getFormat().getFont().setBold(true);
