@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Conditional formatting samples
 
-Conditional formatting in Excel applies formatting to cells based on specific conditions or rules. This feature helps you visually highlight important data, identify trends, and analyze patterns in your spreadsheet. With conditional formatting, you'll quickly use color scales, data bars, and icon sets, to dynamically format your data. This page contains a collection of Office Scripts that demonstrate various conditional formatting options.
+Conditional formatting in Excel applies formatting to cells based on specific conditions or rules. These formats automatically adjust when the data changes, so your script doesn't need to be run multiple times. This page contains a collection of Office Scripts that demonstrate various conditional formatting options.
 
 This sample workbook contains worksheets ready to test with the sample scripts.
 
@@ -193,7 +193,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 The following sample marks any cell in the range that contains the text "review".
 
-:::image type="content" source="../../images/conditional-formatting-sample-text-comparison.png" alt-text="A table with status entries where any cell containing the word 'review' has a red fill.":::
+:::image type="content" source="../../images/conditional-formatting-sample-text-comparison.png" alt-text="A table with status entries where any cell containing the word 'review' has a red fill and bold font.":::
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -206,8 +206,9 @@ function main(workbook: ExcelScript.Workbook) {
     const textConditionFormat = dataRange.addConditionalFormat(
         ExcelScript.ConditionalFormatType.containsText).getTextComparison();
 
-    // Set the conditional format to provide a light red fill.
+    // Set the conditional format to provide a light red fill and make the font bold.
     textConditionFormat.getFormat().getFill().setColor("#F8696B");
+    textConditionFormat.getFormat().getFont().setBold(true);
 
     // Apply the condition rule that the text contains with "review".
     const textRule: ExcelScript.ConditionalTextComparisonRule = {
@@ -224,7 +225,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 The following sample applies conditional formatting to show the two highest numbers in the range.
 
-:::image type="content" source="../../images/conditional-formatting-sample-top-bottom.png" alt-text="A sales table that has the top two values highlighted with a green fill.":::
+:::image type="content" source="../../images/conditional-formatting-sample-top-bottom.png" alt-text="A sales table that has the top two values highlighted with a green fill and a bold font.":::
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -236,6 +237,7 @@ function main(workbook: ExcelScript.Workbook) {
     // Set the fill color to green for the top 2 values in the range.
     const topBottomFormat = dataRange.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom).getTopBottom();
     topBottomFormat.getFormat().getFill().setColor("green");
+    topBottomFormat.getFormat().getFont().setBold(true);
     topBottomFormat.setRule({
       rank: 2, /* The numeric threshold. */
       type: ExcelScript.ConditionalTopBottomCriterionType.topItems /* The type of the top/bottom condition. */
@@ -247,9 +249,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 [Custom conditional formatting](/javascript/api/office-scripts/excelscript/excelscript.customconditionalformat) allows for complex formulas to define when formatting is applied. Use this when the other options aren't enough.
 
-The following sample sets a custom conditional formatting on the selected range. A light-green fill is applied to a cell if the value is larger than the value in the row's previous column.
+The following sample sets a custom conditional formatting on the selected range. A light-green fill and bold font are applied to a cell if the value is larger than the value in the row's previous column.
 
-:::image type="content" source="../../images/conditional-formatting-sample-custom.png" alt-text="A row of a sales table. Values that are higher than the one to the left have a green fill.":::
+:::image type="content" source="../../images/conditional-formatting-sample-custom.png" alt-text="A row of a sales table. Values that are higher than the one to the left have a green fill and a bold font.":::
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -259,9 +261,10 @@ function main(workbook: ExcelScript.Workbook) {
     sheet.activate();
     
     // Apply a rule for positive change from the previous column.
-    let positiveChange = dataRange.addConditionalFormat(ExcelScript.ConditionalFormatType.custom);
-    positiveChange.getCustom().getFormat().getFill().setColor("lightgreen");
-    positiveChange.getCustom().getRule().setFormula(
+    const positiveChange = dataRange.addConditionalFormat(ExcelScript.ConditionalFormatType.custom).getCustom();
+    positiveChange.getFormat().getFill().setColor("lightgreen");
+    positiveChange.getFormat().getFont().setBold(true);
+    positiveChange.getRule().setFormula(
         `=${dataRange.getCell(0, 0).getAddress()}>${dataRange.getOffsetRange(0, -1).getCell(0, 0).getAddress()}`
     );
 }
