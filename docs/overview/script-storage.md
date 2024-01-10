@@ -45,6 +45,8 @@ Scripts are stored in your local Office cache. The cache is in the following fol
 %LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
 ```
 
+---
+
 ## Share scripts
 
 # [For business/education](#tab/business)
@@ -57,6 +59,8 @@ To give users who are outside of the SharePoint site access to the script, [shar
 # [For personal/family](#tab/home)
 
 Scripts can't be shared through workbooks with a home or family account. You can manually share the script files, but there are no in-client support options or change notifications.
+
+---
 
 ## Restore deleted scripts
 
@@ -72,6 +76,8 @@ Restored scripts still work as expected with Power Automate flows. You don't nee
 
 When you delete a script in Excel, it goes to your recycle bin. Restoring an **.osts** file returns it to the **All scripts** list.
 
+---
+
 ## File ownership and retention
 
 # [For business/education](#tab/business)
@@ -83,6 +89,8 @@ During editing, files are temporarily stored in the browser. You must save the s
 # [For personal/family](#tab/home)
 
 Clearing the Office cache will remove all your scripts. Be sure to manually save your scripts elsewhere if the cache needs to be cleared.
+
+---
 
 ## Audit Office Scripts usage at the admin level
 
