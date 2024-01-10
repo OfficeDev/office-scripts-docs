@@ -1,7 +1,7 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.date: 11/30/2023
+ms.date: 01/04/2024
 ms.localizationpriority: medium
 ---
 
@@ -180,3 +180,9 @@ If your file has hundreds of thousands of cells, you could reach the [Excel data
 
 > [!WARNING]
 > If your CSV file is very large, you may have problems [timing out in Power Automate](../../testing/platform-limits.md#power-automate). You'll need to divide the CSV data into multiple files before converting them into Excel workbooks.
+
+### Accents and other unicode characters
+
+Files with unicode-specific characters, such as accented vowels like `é`, need to be saved with the correct encoding. Power Automate's OneDrive connector file creation defaults to ANSI for .csv files. If you're creating the .csv files in Power Automate, you'll need to add the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) before the comma-separated values. For UTF-8, replace the file contents for the write .csv file operation with the expression `concat(uriComponentToString('%EF%BB%BF'), <CSV Input>)` (where `<CSV Input>` is your original CSV data).
+
+Note that this sample doesn't create the .csv files in the flow, so this change needs to happen in your custom part of the flow. You could also read and rewrite the .csv files with the BOM, if you don't control how those files are created.
