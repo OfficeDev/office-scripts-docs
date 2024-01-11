@@ -77,7 +77,7 @@ Restored scripts still work as expected with Power Automate flows. You don't nee
 
 # [For personal/family](#tab/home)
 
-Office Scripts are deleted permanently when when removed in Excel. This behavior will change before the feature leaves the preview phase.
+Office Scripts are deleted permanently when removed in Excel. This behavior will change before the feature leaves the preview phase.
 
 ---
 
