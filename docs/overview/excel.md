@@ -16,9 +16,6 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
-> [!NOTE]
-> Office Scripts requires a commercial or educational Microsoft 365 license. The complete requirement list is described under [Platform support](../testing/platform-limits.md#platform-support).
-
 ## When to use Office Scripts
 
 Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, you can turn all that work into an easy-to-run Office Script. Run your script with a button in Excel or combine it with Power Automate to streamline your entire workflow.
@@ -48,7 +45,7 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 ## Share Office Scripts
 
-Office Scripts can be shared with other users of an Excel workbook. When you share a script in a shared workbook, everyone with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+Office Scripts can be shared with other users in your organization. When you share a script in a shared workbook, team members with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 Add buttons that run scripts to help your colleagues discover your valuable solutions and let them run scripts straight from the workbook. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
