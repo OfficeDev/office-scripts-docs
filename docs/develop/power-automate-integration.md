@@ -10,6 +10,8 @@ ms.localizationpriority: medium
 
 [Power Automate](https://make.powerautomate.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate to do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
 
+[!INCLUDE [Power Automate needs a business license](../includes/power-automate-needs-business.md)]
+
 ## Get started
 
 If you are new to Power Automate, we recommend visiting [Get started with Power Automate](/power-automate/getting-started). There, you can learn more about all the automation possibilities available to you. The documents here focus on how Office Scripts work with Power Automate and how that can help improve your Excel experience.

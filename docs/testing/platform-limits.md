@@ -14,6 +14,11 @@ There are some platform limitations of which you should be aware when developing
 
 [!INCLUDE [Platform requirements](../includes/platform-requirements.md)]
 
+> [!NOTE]
+> If you meet these requirements and are still not seeing the **Automate** tab, it's possible that your admin has disabled the feature or there's some other problem with your environment. Please follow the steps under [Automate tab not appearing or Office Scripts unavailable](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable) to start using Office Scripts.
+
+To use Office Scripts in [Power Automate](https://make.powerautomate.com), you must have a business license of Microsoft 365.
+
 ## Data limits
 
 There are limits on how much Excel data can be transferred at once and how many individual Power Automate transactions can be conducted.

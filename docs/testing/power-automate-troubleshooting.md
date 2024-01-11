@@ -13,6 +13,8 @@ Power Automate runs scripts on your behalf in independent Excel sessions. This c
 > [!TIP]
 > If you're just starting to use Office Scripts with Power Automate, please start with [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn about the platforms.
 
+[!INCLUDE [Power Automate needs a business license](../includes/power-automate-needs-business.md)]
+
 ## Avoid relative references
 
 Power Automate runs your script in the chosen Excel workbook on your behalf. The workbook might be closed when this happens. Any API that relies on the user's current state, such as `Workbook.getActiveWorksheet`, may behave differently in Power Automate. This is because the APIs are based on a relative position of the user's view or cursor and that reference doesn't exist in a Power Automate flow.
