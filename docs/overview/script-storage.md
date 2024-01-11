@@ -14,7 +14,7 @@ The details of how scripts are stored and shared depend on your Microsoft 365 su
 
 ## File storage
 
-# [For [For business and education]](#tab/business)
+# [For business and education](#tab/business)
 
 Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
@@ -52,7 +52,7 @@ Scripts are stored in your local Office cache. The cache is in the following fol
 
 ## Share scripts
 
-# [For [For business and education]](#tab/business)
+# [For business and education](#tab/business)
 
 To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
@@ -67,7 +67,7 @@ Scripts can't be shared through workbooks with a home or family account. You can
 
 ## Restore deleted scripts
 
-# [For [For business and education]](#tab/business)
+# [For business and education](#tab/business)
 
 When you delete a script in Excel, it goes to your OneDrive or SharePoint recycle bin. To restore a deleted script, follow the steps listed in [How to recover missing, deleted or corrupted items in SharePoint and OneDrive for work or school](https://support.microsoft.com/office/3d748edf-c072-46c9-81a4-4989056ebc87). Restoring an **.osts** file returns it to the **All scripts** list.
 
@@ -83,7 +83,7 @@ Office Scripts are deleted permanently when removed in Excel. This behavior will
 
 ## File ownership and retention
 
-# [For [For business and education]](#tab/business)
+# [For business and education](#tab/business)
 
 Office Scripts follow the retention and deletion policies specified by Microsoft OneDrive and Microsoft SharePoint. To learn how to handle scripts that were created and shared by a user being removed from your organization, see [Learn about retention for SharePoint and OneDrive](/microsoft-365/compliance/retention-policies-sharepoint?view=o365-worldwide&preserve-view=true).
 

@@ -1,6 +1,6 @@
 To use Office Scripts, you'll need the following.
 
-# [For [For business and education]](#tab/business)
+# [For business and education](#tab/business)
 
 1. Excel for Windows (version 2210 or higher), Excel for Mac, or Excel on the web.
     - *The [Action Recorder](../overview/excel.md#action-recorder) is not yet available in the [Semi-Annual Enterprise Channel](/deployoffice/updates/overview-update-channels#semi-annual-enterprise-channel-overview).*
