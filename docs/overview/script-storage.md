@@ -1,13 +1,16 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 10/20/2023
+ms.date: 01/10/2024
 ms.localizationpriority: medium
 ---
 
 # Office Scripts file storage and ownership
 
 The details of how scripts are stored and shared depend on your Microsoft 365 subscription. Select the relevant tab to learn more.
+
+> [!IMPORTANT]
+> Office Scripts is in preview for personal and family Microsoft 365 subscription. If you encounter any issues, please report them through the Feedback button in Excel.
 
 ## File storage
 
@@ -58,7 +61,7 @@ To give users who are outside of the SharePoint site access to the script, [shar
 
 # [For personal/family](#tab/home)
 
-Scripts can't be shared through workbooks with a home or family account. You can manually share the script files, but there are no in-client support options or change notifications.
+Scripts can't be shared through workbooks with a home or family account. You can manually share the code, but it's not possible to share a script in Excel or receive notifications when it has been changed or updated.
 
 ---
 
@@ -74,7 +77,7 @@ Restored scripts still work as expected with Power Automate flows. You don't nee
 
 # [For personal/family](#tab/home)
 
-When you delete a script in Excel, it goes to your recycle bin. Restoring an **.osts** file returns it to the **All scripts** list.
+Office Scripts are deleted permanently when when removed in Excel. This behavior will change before the feature leaves the preview phase.
 
 ---
 
