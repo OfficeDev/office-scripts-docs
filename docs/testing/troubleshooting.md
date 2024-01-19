@@ -88,7 +88,9 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 ## Problems scheduling a script
 
-Scheduling a script requires a business license of Microsoft 365. This is needed for the Power Automate flow that powers the scheduled script. Errors from this flow are shown when there are problems scheduling. The following list shows common errors you might encounter.
+Scheduling a script requires a business license of Microsoft 365. This is needed for the Power Automate flow that powers the scheduled script. Errors from this flow are shown when there are problems scheduling. You may need to manually update your flow in [Power Automate](https://make.powerautomate.com), where it will be listed under **My flows**.
+
+The following list shows common errors you might encounter.
 
 - **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the Code Editor and try to schedule again.
 
