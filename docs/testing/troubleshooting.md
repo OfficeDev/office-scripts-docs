@@ -88,7 +88,7 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 ## Problems scheduling a script
 
-Scheduling a script requires a business license of Microsoft 365. This is needed for the Power Automate flow that powers the scheduled script. Errors from this flow are shown when there are problems scheduling. You may need to manually update your flow in [Power Automate](https://make.powerautomate.com), where it will be listed under **My flows**.
+Scheduling a script requires a business license for Microsoft 365. This is needed for the Power Automate flow that powers the scheduled script. Errors from this flow are shown when there are problems scheduling. You may need to manually update your flow in [Power Automate](https://make.powerautomate.com), where it will be listed under **My flows**.
 
 The following list shows common errors you might encounter.
 
