@@ -190,7 +190,7 @@ Note that this sample doesn't create the .csv files in the flow, so this change 
 
 ### Surrounding quotation marks
 
-This sample removes any quotation marks ("") that surround values. These are typically added to comma-separated values to prevent commas in the data from being treated as separation tokens. A .csv file that is opened in Excel, then saved as a .xslx file, will never have the those quotation marks shown to the reader. If you wish to keep the quotation marks and have them be displayed in the final spreadsheets, replace lines 27-30 of the script with the following code.
+This sample removes any quotation marks ("") that surround values. These are typically added to comma-separated values to prevent commas in the data from being treated as separation tokens. A .csv file that is opened in Excel, then saved as a .xlsx file, will never have the those quotation marks shown to the reader. If you wish to keep the quotation marks and have them be displayed in the final spreadsheets, replace lines 27-30 of the script with the following code.
 
 ```typescript
 // Remove the preceding comma.
