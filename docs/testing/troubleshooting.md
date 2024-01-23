@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
 ms.topic: troubleshooting-general
-ms.date: 01/19/2024
+ms.date: 01/23/2024
 ms.localizationpriority: medium
 ---
 
@@ -92,7 +92,7 @@ Scheduling a script requires a business license for Microsoft 365. This is neede
 
 The following list shows common errors you might encounter.
 
-- **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the Code Editor and try to schedule again.
+- **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the Code Editor or reload the workbook and try to schedule again.
 
 ## Help resources
 
