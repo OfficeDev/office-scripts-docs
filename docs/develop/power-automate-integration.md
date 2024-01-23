@@ -2,7 +2,7 @@
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
 ms.topic: integration
-ms.date: 11/29/2023
+ms.date: 01/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 [Power Automate](https://make.powerautomate.com) lets you add Office Scripts to a larger, automated workflow. You can use Power Automate to do things like add the contents of an email to a worksheet's table or create actions in your project management tools based on workbook comments.
 
 [!INCLUDE [Power Automate needs a business license](../includes/power-automate-needs-business.md)]
+
+> [!TIP]
+> Looking to automatically run a script without connecting to other apps? Use the [Script scheduling](../overview/excel.md#schedule-scripts-to-run-automatically) feature.
 
 ## Get started
 
