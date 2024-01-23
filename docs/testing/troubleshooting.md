@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
 ms.topic: troubleshooting-general
-ms.date: 12/22/2023
+ms.date: 01/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -85,6 +85,14 @@ The following steps should help troubleshoot any problems related to the **Autom
 
 > [!NOTE]
 > There is a known issue that prevents scripts stored in SharePoint from always appearing in the recently used list. This occurs when your admin turns off Exchange Web Services (EWS). Your SharePoint-based scripts are still accessible and usable through the file dialog.
+
+## Problems scheduling a script
+
+Scheduling a script requires a business license for Microsoft 365. This is needed for the Power Automate flow that powers the scheduled script. Errors from this flow are shown when there are problems scheduling. You may need to manually update your flow in [Power Automate](https://make.powerautomate.com), where it will be listed under **My flows**.
+
+The following list shows common errors you might encounter.
+
+- **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the Code Editor and try to schedule again.
 
 ## Help resources
 

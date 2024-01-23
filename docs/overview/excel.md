@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 12/22/2023
+ms.date: 01/19/2024
 ms.localizationpriority: high
 ---
 
@@ -53,6 +53,14 @@ Add buttons that run scripts to help your colleagues discover your valuable solu
 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).
+
+## Schedule scripts to run automatically
+
+Set your scripts to run every day and keep your workbook up-to-date. Once you have your script, you can set it to automatically run on the workbook at regular intervals. A behind-the-scenes Power Automate flow ensures everything happens, even when the workbook is closed.
+
+To schedule a script, open the script in the Code Editor. Open the **Script scheduling** section and complete the sign in process to Excel through Power Automate. Set how often you want the script to run and select **Create flow** to begin.
+
+:::image type="content" source="../images/schedule-a-script.png" alt-text="The Code Editor task pane that shows the recurrence interval options for scheduling a script.":::
 
 ## Connect Office Scripts to Power Automate
 
