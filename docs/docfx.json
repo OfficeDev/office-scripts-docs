@@ -50,7 +50,7 @@
       "ms.service": "excel",
       "open_source_feedback_contributorGuideUrl": "https://github.com/OfficeDev/office-scripts-docs/blob/main/Contributing.md",
       "open_source_feedback_issueTitle": "",
-      "open_source_feedback_issueUrl": "https://github.com/OfficeDev/office-scripts-docs/blob/main/Issue_Template.md",
+      "open_source_feedback_issueUrl": "https://github.com/OfficeDev/office-scripts-docs/issues/new?template=-customer-feedback.yml",
       "open_source_feedback_productName": "Office Scripts",
       "titleSuffix": "Office Scripts"
     },
