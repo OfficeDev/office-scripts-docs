@@ -1,7 +1,7 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.date: 01/04/2024
+ms.date: 01/17/2024
 ms.localizationpriority: medium
 ---
 
@@ -43,25 +43,26 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
   const csvMatchRegex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g
   rows.forEach((value, index) => {
     if (value.length > 0) {
-        let row = value.match(csvMatchRegex);
+      let row = value.match(csvMatchRegex);
     
-        // Check for blanks at the start of the row.
-        if (row[0].charAt(0) === ',') {
-          row.unshift("");
-        }
+      // Check for blanks at the start of the row.
+      if (row[0].charAt(0) === ',') {
+        row.unshift("");
+      }
+  
+      // Remove the preceding comma and surrounding quotation marks.
+      row.forEach((cell, index) => {
+        cell = cell.indexOf(",") === 0 ? cell.substring(1) : cell;
+        row[index] = cell.indexOf("\"") === 0 && cell.lastIndexOf("\"") === cell.length - 1 ? cell.substring(1, cell.length - 1) : cell;
+      });
     
-        // Remove the preceding comma.
-        row.forEach((cell, index) => {
-          row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-        });
-    
-        // Create a 2D array with one row.
-        let data: string[][] = [];
-        data.push(row);
-    
-        // Put the data in the worksheet.
-        let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
-        range.setValues(data);
+      // Create a 2D array with one row.
+      let data: string[][] = [];
+      data.push(row);
+  
+      // Put the data in the worksheet.
+      let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+      range.setValues(data);
     }
   });
 
@@ -186,3 +187,14 @@ If your file has hundreds of thousands of cells, you could reach the [Excel data
 Files with unicode-specific characters, such as accented vowels like `é`, need to be saved with the correct encoding. Power Automate's OneDrive connector file creation defaults to ANSI for .csv files. If you're creating the .csv files in Power Automate, you'll need to add the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) before the comma-separated values. For UTF-8, replace the file contents for the write .csv file operation with the expression `concat(uriComponentToString('%EF%BB%BF'), <CSV Input>)` (where `<CSV Input>` is your original CSV data).
 
 Note that this sample doesn't create the .csv files in the flow, so this change needs to happen in your custom part of the flow. You could also read and rewrite the .csv files with the BOM, if you don't control how those files are created.
+
+### Surrounding quotation marks
+
+This sample removes any quotation marks ("") that surround values. These are typically added to comma-separated values to prevent commas in the data from being treated as separation tokens. A .csv file that is opened in Excel, then saved as a .xlsx file, will never have the those quotation marks shown to the reader. If you wish to keep the quotation marks and have them be displayed in the final spreadsheets, replace lines 27-30 of the script with the following code.
+
+```typescript
+// Remove the preceding comma.
+row.forEach((cell, index) => {
+  row[index] = cell.indexOf(",") === 0 ? cell.substring(1) : cell;
+});
+```

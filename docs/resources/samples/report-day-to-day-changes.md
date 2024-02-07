@@ -38,7 +38,7 @@ function main(workbook: ExcelScript.Workbook, newData: string): string {
   // Return the difference between the newData and the previous entry.
   const difference = Number.parseFloat(newData) - previousValue;
   console.log(difference);
-  return difference;
+  return difference.toString();
 }
 ```
 
