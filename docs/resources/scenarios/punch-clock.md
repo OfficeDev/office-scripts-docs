@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Punch clock button'
 description: This sample adds a punch clock button and allows a user to clock in and clock out using the current time.
-ms.date: 10/01/2022
+ms.date: 02/07/2024
 ms.localizationpriority: medium
 ---
 
@@ -122,9 +122,7 @@ In this scenario, you'll create a time sheet for an employee that allows them to
 
 1. In the workbook, select cell **E2**.
 
-1. Add a script button. Go to the **More options (…)** menu in the **Script details** page and select **Add button**.
-
-    :::image type="content" source="../../images/punch-clock-sample-2.png" alt-text="The 'More options' menu and the 'Add button' button.":::
+1. Add a script button. Go to the **More options (…)** menu in the **Script details** page and select **Add in workbook**.
 
 1. Save the workbook.
 
@@ -132,7 +130,7 @@ In this scenario, you'll create a time sheet for an employee that allows them to
 
 Select the **Punch clock** button to run the script. It either logs the current time under "Clock In" or "Clock Out", depending on what was previously entered.
 
-:::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="The table and the 'Punch clock' button in the workbook.":::
+:::image type="content" source="../../images/punch-clock-sample-2.png" alt-text="The table and the 'Punch clock' button in the workbook.":::
 
 > [!NOTE]
 > The duration is only recorded if it's longer than a minute. Manually edit the "Clock In" time to test larger durations.
