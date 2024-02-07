@@ -33,7 +33,7 @@ function main(workbook: ExcelScript.Workbook, newData: string): string {
   // Add a row with the date, new value, and a formula calculating the difference.
   const currentDate = new Date(Date.now()).toLocaleDateString();
   const newRow = [currentDate, newData, "=[@Reading]-OFFSET([@Reading],-1,0)"];
-  table.addRow(-1, newRow,);
+  table.addRow(-1, newRow);
 
   // Return the difference between the newData and the previous entry.
   const difference = Number.parseFloat(newData) - previousValue;
