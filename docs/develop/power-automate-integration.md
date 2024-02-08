@@ -2,7 +2,7 @@
 title: Run Office Scripts with Power Automate
 description: How to get Office Scripts for Excel working with a Power Automate workflow.
 ms.topic: integration
-ms.date: 01/19/2024
+ms.date: 02/08/2024
 ms.localizationpriority: medium
 ---
 
