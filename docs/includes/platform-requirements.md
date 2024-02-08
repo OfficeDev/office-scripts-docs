@@ -9,10 +9,12 @@ To use Office Scripts, you'll need the following.
     - Office 365 Business Premium
     - Office 365 ProPlus
     - Office 365 ProPlus for Devices
-    - Office 365 Enterprise E3
-    - Office 365 Enterprise E5
     - Office 365 A3
     - Office 365 A5
+    - Office 365 Enterprise E1
+    - Office 365 Enterprise E3
+    - Office 365 Enterprise E5
+    - Office 365 F3
 1. Internet connectivity with [connected experiences](/deployoffice/privacy/connected-experiences) enabled.
 
 # [For personal and family](#tab/home)
