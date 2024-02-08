@@ -2,7 +2,7 @@
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 12/22/2023
+ms.date: 02/08/2024
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ There are some platform limitations of which you should be aware when developing
 > [!NOTE]
 > If you meet these requirements and are still not seeing the **Automate** tab, it's possible that your admin has disabled the feature or there's some other problem with your environment. Please follow the steps under [Automate tab not appearing or Office Scripts unavailable](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable) to start using Office Scripts.
 
-To use Office Scripts in [Power Automate](https://make.powerautomate.com), you must have a business license of Microsoft 365.
+[!INCLUDE [Power Automate license support](../includes/power-automate-needs-business.md)]
 
 ## Data limits
 
