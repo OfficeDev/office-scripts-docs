@@ -34,10 +34,15 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
   csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
+  // NOTE: This will split values that contain new line characters.
   let rows = csv.split("\n");
 
-  // For each row, match the comma-separated sections using a regular expression.
-  const csvMatchRegex = /^(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*)$/g
+  /*
+   * For each row, match the comma-separated sections.
+   * For more information on how to use regular expressions to parse CSV files,
+   * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+   */
+  const csvMatchRegex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g
   rows.forEach((value, index) => {
     if (value.length > 0) {
       let row = value.match(csvMatchRegex);
