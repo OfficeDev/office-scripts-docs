@@ -1,7 +1,7 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.date: 01/17/2024
+ms.date: 02/07/2024
 ms.localizationpriority: medium
 ---
 
@@ -34,7 +34,9 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
   csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
+  // NOTE: This will split values that contain new line characters.
   let rows = csv.split("\n");
+
   /*
    * For each row, match the comma-separated sections.
    * For more information on how to use regular expressions to parse CSV files,
