@@ -21,7 +21,7 @@ You'll create a Power Automate flow to message people with missing status fields
 
 ## Prerequisites
 
-This scenario uses [Power Automate](https://make.powerautomate.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-teams/group-chat-software). You will need both associated with the account that you use for developing Office Scripts. For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+This scenario uses [Power Automate](https://make.powerautomate.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-teams/group-chat-software).
 
 ## Setup instructions
 
