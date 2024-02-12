@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 11/30/2023
+ms.date: 02/08/2024
 ms.localizationpriority: medium
 ---
 
@@ -158,7 +158,7 @@ For this sample, you'll need to complete the following steps.
 1. Create and save both of the following scripts.
 1. Follow the steps under [Power Automate flow: Read and write data in a loop](#power-automate-flow-read-and-write-data-in-a-loop) to create the flow.
 
-### Sample code: Read part of a workbook
+### Sample code: Read selected rows
 
 ```TypeScript
 function main(
@@ -166,7 +166,7 @@ function main(
   startRow: number, 
   batchSize: number
 ): string[][] {
-  // This sample only reads the first worksheet in the workbook.
+  // This script only reads the first worksheet in the workbook.
   const sheet = workbook.getWorksheets()[0];
 
   // Get the boundaries of the range.
@@ -188,7 +188,7 @@ function main(
 
 ```
 
-### Sample code: Read selected rows
+### Sample code: Write data at row location
 
 ```TypeScript
 function main(
