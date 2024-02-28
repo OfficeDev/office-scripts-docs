@@ -6,7 +6,7 @@ ms.date: 02/27/2024
 ms.localizationpriority: high
 ---
 
-# Office Scripts documentation -- test test
+# Office Scripts documentation
 
 Use Office Scripts in Excel to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
 
