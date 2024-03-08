@@ -23,6 +23,7 @@ To use Office Scripts, you'll need the following.
 > Office Scripts is in preview for personal and family Microsoft 365 subscriptions. If you encounter any issues, please report them through the Feedback button in Excel.
 
 1. Excel for Microsoft 365 or Excel on the web.
+1. Join the [Microsoft 365 Insider program](https://insider.microsoft365.com/join/windows).
 1. Internet connectivity with [connected experiences](/deployoffice/privacy/connected-experiences) enabled.
 
 ---
