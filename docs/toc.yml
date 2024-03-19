@@ -1,6 +1,6 @@
 items:
 - name: Office Scripts documentation
-  href: index.md
+  href: index.yml
 
 - name: Office Scripts in Excel
   items:

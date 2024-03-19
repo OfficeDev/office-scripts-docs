@@ -1,0 +1,66 @@
+### YamlMime:Landing
+
+title: Office Scripts documentation
+summary: Use Office Scripts in Excel to automate your common tasks. Explore the following articles to learn how to create and edit Office Scripts and get started automating today.
+
+metadata:
+  title: Office Scripts documentation
+  description: Resources for learning Office Scripts in Excel, including tutorials, conceptual articles, and code samples.
+  ms.service: excel
+  ms.subservice: scripts
+  ms.topic: landing-page
+  ms.date: 03/19/2024
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card 
+  - title: About Office Scripts
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Code Editor and Action Recorder
+            url: overview/excel.md
+          - text: Integrate with Power Automate
+            url: develop/power-automate-integration.md
+          - text: Script fundamentals
+            url: develop/power-automate-integration.md
+      - linkListType: reference
+        links:
+          - text: Office Scripts API reference
+            url: /javascript/api/office-scripts/overview
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Create and format a table with Office Scripts
+            url: tutorials/excel-tutorial.md
+          - text: Update a spreadsheet from a Power Automate flow
+            url: tutorials/excel-power-automate-manual.md
+      - linkListType: sample
+        links:
+          - text: Convert CSV files to Excel workbooks
+            url: resources/samples/convert-csv.md
+          - text: Set conditional formatting for cross-column comparisons
+            url: resources/samples/conditional-formatting-parameters.md
+          - text: Email images of a chart and table
+            url: resources/samples/email-images-chart-table.md
+          - text: More samples
+            url: resources/samples/samples-overview.md
+
+  # Card
+  - title: Share scripts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sharing Office Scripts in Excel
+            url: https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b
+          - text: Run Scripts from buttons
+            url: develop/script-buttons.md
+          - text: Manage Office Scripts admin settings
+            url: /microsoft-365/admin/manage/manage-office-scripts-settings
