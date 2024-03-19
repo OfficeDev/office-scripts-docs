@@ -31,14 +31,14 @@ landingContent:
       - linkListType: reference
         links:
           - text: Office Scripts API reference
-            url: /javascript/api/office-scripts/overview?view=office-scripts
+            url: /javascript/api/office-scripts/overview
 
   # Card 
   - title: Get started
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Create and format a table with Office Scripts.
+          - text: Create and format a table with Office Scripts
             url: tutorials/excel-tutorial.md
           - text: Update a spreadsheet from a Power Automate flow
             url: tutorials/excel-power-automate-manual.md
@@ -59,7 +59,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Sharing Office Scripts in Excel
-            url: https://support.microsoft.com/office/sharing-office-scripts-in-excel-226eddbc-3a44-4540-acfe-fccda3d1122b
+            url: https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b
           - text: Run Scripts from buttons
             url: develop/script-buttons.md
           - text: Manage Office Scripts admin settings
