@@ -15,7 +15,7 @@ This sample shows how to pull data from multiple workbooks into a single, centra
 ## Solution
 
 1. Create a new Excel file in your OneDrive. The file name "Combination.xlsx" is used in this sample.
-1. Create and save the two scripts from this sample.
+1. Create and save the two scripts from this sample as '.osts' files in your OneDrive folder under **Documents\Office Scripts**.
 1. Create a folder in your OneDrive and add one or more workbooks with data to it. The folder name "output" is used in this sample.
 1. Build a flow (as described in the [Power Automate flow](#power-automate-flow-combine-worksheets-into-a-single-workbook) section of this article) to perform these steps:
     1. List all the files the "output" folder.
