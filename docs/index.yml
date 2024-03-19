@@ -51,7 +51,7 @@ landingContent:
           - text: Email images of a chart and table
             url: resources/samples/email-images-chart-table.md
           - text: More samples
-            url: samples/samples-overview.md
+            url: resources/samples/samples-overview.md
 
   # Card
   - title: Share scripts
