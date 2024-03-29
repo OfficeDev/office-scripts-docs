@@ -45,7 +45,6 @@
       "ms.topic": "conceptual",
       "ms.subservice": "scripts",
       "ms.service": "excel",
-      "product": ["office", "office-excel"],
       "feedback_system": "OpenSource",
       "feedback_product_url": "/answers/tags/321/office-development",
       "open_source_feedback_contributorGuideUrl": "https://github.com/OfficeDev/office-scripts-docs/blob/main/Contributing.md",
