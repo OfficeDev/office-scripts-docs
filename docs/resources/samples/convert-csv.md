@@ -19,7 +19,7 @@ Many services export data as comma-separated value (CSV) files. This solution au
 
 Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/convert-csv-example.zip?raw=true">convert-csv-example.zip</a> to get the Template.xlsx file and two sample .csv files. Extract the files into a folder in your OneDrive. This sample assumes the folder is named "output".
 
-Add the following script to the sample workbook. Save it as **Convert CSV** and try the sample yourself!
+Add the following script to the sample workbook. Use **Automate** > **New Script** to paste the code and save the script. Save it as **Convert CSV** and try the sample yourself!
 
 ## Sample code: Insert comma-separated values into a workbook
 

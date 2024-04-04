@@ -16,7 +16,7 @@ Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/d
 
 ## Sample code: Add formatting and insert comment
 
-This is the script that runs on each individual workbook. Add it to the sample workbook. Save it as **Review script** and try the sample yourself!
+This is the script that runs on each individual workbook. Use **Automate** > **New Script** to paste the code and save the script. Save it as **Review script** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
