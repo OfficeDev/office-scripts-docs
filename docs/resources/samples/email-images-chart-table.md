@@ -44,7 +44,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Calculate and extract Excel chart and table
 
-Add the following script to the sample workbook. Save it as **Get chart image** and try the sample yourself!
+Add the following script to the sample workbook. In Excel, use **Automate** > **New Script** to paste the code and save the script. Save it as **Get chart image** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
