@@ -1,7 +1,7 @@
 ---
 title: Improve the performance of your Office Scripts
 description: Create faster scripts by understanding the communication between the Excel workbook and your script.
-ms.date: 04/09/2024
+ms.date: 04/10/2024
 ms.localizationpriority: medium
 ---
 
@@ -89,9 +89,9 @@ Console logging is a vital tool for [debugging your scripts](../testing/troubles
 
 ## Pause calculations while the scripts runs
 
-If your script changes a lot of values, it may be triggering excessive recalculations. Control the Excel calculation engine by setting the calculation mode to manual while your script runs. Use [`Application.setCalculation`](/javascript/api/office-scripts/excelscript/excelscript.application#excelscript-excelscript-application-setcalculationmode-member(1)) to switch Excel to manually recalculate formulas. Be sure to return the workbook to the original calculation mode when finished.
+If your script changes a lot of values, it may trigger excessive recalculations. Control the Excel calculation engine by setting the calculation mode to "manual" while your script runs. Use [`Application.setCalculation`](/javascript/api/office-scripts/excelscript/excelscript.application#excelscript-excelscript-application-setcalculationmode-member(1)) to switch Excel to manually recalculate formulas. Be sure to return the workbook to the original calculation mode when finished.
 
-The following sample shows how to change the calculation mode. It also demonstrates how to manually recalculate the workbook with [`Application.calculate`](/javascript/api/office-scripts/excelscript/excelscript.application?view=office-scripts#excelscript-excelscript-application-calculate-member(1)).
+The following sample shows how to change the calculation mode. It also demonstrates how to manually recalculate the workbook with [`Application.calculate`](/javascript/api/office-scripts/excelscript/excelscript.application#excelscript-excelscript-application-calculate-member(1)).
 
 ```typescript
 /**
