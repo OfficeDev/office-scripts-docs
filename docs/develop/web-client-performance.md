@@ -95,7 +95,7 @@ The following sample shows how to change the calculation mode. It also demonstra
 
 ```typescript
 /**
- * This script adjust the calculation mode of the workbook and makes a manual recalculation.
+ * This script adjusts the calculation mode of the workbook and makes a manual recalculation.
  * Wrap the CalculationMode changes around code that repeatedly updates values.
  */
 function main(workbook: ExcelScript.Workbook) {
