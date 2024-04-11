@@ -1,13 +1,15 @@
 ---
 title: Improve the performance of your Office Scripts
 description: Create faster scripts by understanding the communication between the Excel workbook and your script.
-ms.date: 10/01/2022
+ms.date: 04/10/2024
 ms.localizationpriority: medium
 ---
 
 # Improve the performance of your Office Scripts
 
 The purpose of Office Scripts is to automate commonly performed series of tasks to save you time. A slow script can feel like it doesn't speed up your workflow. Most of the time, your script will be perfectly fine and run as expected. However, there are a few, avoidable scenarios that can affect performance.
+
+## Reduce the number of read or write calls
 
 The most common reason for a slow script is excessive communication with the workbook. This is particularly noticeable when using Excel on the web. At certain times, your script synchronizes its local data with that of the workbook. This means that any write operations (such as `workbook.addWorksheet()`) are only applied to the workbook when this behind-the-scenes synchronization happens. Likewise, any read operations (such as `myRange.getValues()`) only get data from the workbook for the script at those times. In either case, the script fetches information before it acts on the data. For example, the following code will accurately log the number of rows in the used range.
 
@@ -21,15 +23,7 @@ console.log(rowCount);
 
 Office Scripts APIs ensure any data in the workbook or script is accurate and up-to-date when necessary. You don't need to worry about these synchronizations for your script to run correctly. However, an awareness of this script-to-cloud communication can help you avoid unneeded network calls.
 
-## Performance optimizations
-
-You can apply simple techniques to help reduce the communication to the cloud. The following patterns help speed up your scripts.
-
-- Read workbook data once instead of repeatedly in a loop.
-- Remove unnecessary `console.log` statements.
-- Avoid using try/catch blocks.
-
-### Read workbook data outside of a loop
+## Read workbook data outside of a loop
 
 Any method that gets data from the workbook can trigger a network call. Rather than repeatedly making the same call, you should save data locally whenever possible. This is especially true when dealing with loops.
 
@@ -67,7 +61,7 @@ function main(workbook: ExcelScript.Workbook) {
 > [!NOTE]
 > As an experiment, try replacing `usedRangeValues` in the loop with `usedRange.getValues()`. You may notice the script takes considerably longer to run when dealing with large ranges.
 
-### Avoid using `try...catch` blocks in or surrounding loops
+## Avoid using `try...catch` blocks in or surrounding loops
 
 We don't recommend using [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) statements either in loops or surrounding loops. This is for the same reason you should avoid reading data in a loop: each iteration forces the script to synchronize with the workbook to make sure no error has been thrown. Most errors can be avoided by checking objects returned from the workbook. For example, the following script checks that the table returned by the workbook exists before trying to add a row.
 
@@ -89,9 +83,38 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Remove unnecessary `console.log` statements
+## Remove unnecessary `console.log` statements
 
 Console logging is a vital tool for [debugging your scripts](../testing/troubleshooting.md). However, it does force the script to synchronize with the workbook to ensure the logged information is up-to-date. Consider removing unnecessary logging statements (such as those used for testing) before sharing your script. This typically won't cause a noticeable performance issue, unless the `console.log()` statement is in a loop.
+
+## Pause calculations while the scripts runs
+
+If your script changes a lot of values, it may trigger excessive recalculations. Control the Excel calculation engine by setting the calculation mode to "manual" while your script runs. Use [`Application.setCalculation`](/javascript/api/office-scripts/excelscript/excelscript.application#excelscript-excelscript-application-setcalculationmode-member(1)) to switch Excel to manually recalculate formulas. Be sure to return the workbook to the original calculation mode when finished.
+
+The following sample shows how to change the calculation mode. It also demonstrates how to manually recalculate the workbook with [`Application.calculate`](/javascript/api/office-scripts/excelscript/excelscript.application#excelscript-excelscript-application-calculate-member(1)).
+
+```typescript
+/**
+ * This script adjusts the calculation mode of the workbook and makes a manual recalculation.
+ * Wrap the CalculationMode changes around code that repeatedly updates values.
+ */
+function main(workbook: ExcelScript.Workbook) {
+  const application = workbook.getApplication();
+
+  // Turn off automatic calculations during the script.
+  application.setCalculationMode(ExcelScript.CalculationMode.manual);
+
+  // ... 
+
+  // Perform a manual recalculation of the workbook.
+  application.calculate(ExcelScript.CalculationType.fullRebuild);
+
+  // ...
+
+  // Resume automatic calculations after the script finishes.
+  application.setCalculationMode(ExcelScript.CalculationMode.automatic);
+}
+```
 
 ## Case-by-case help
 
