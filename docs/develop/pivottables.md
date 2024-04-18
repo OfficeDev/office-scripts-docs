@@ -215,8 +215,8 @@ Some `ShowAsRule`s need another field or item in that field as a comparison. The
   const typeField = farmPivot.getRowHierarchy("Type").getFields()[0];
   farmSales.setShowAs({
     calculation: ExcelScript.ShowAsCalculation.differenceFrom,
-    baseField: typeField,
-    baseItem: typeField.getPivotItem("Lemon")
+    baseField: typeField, /* The field to use for the difference. */
+    baseItem: typeField.getPivotItem("Lemon") /* The item within that field that is the basis of comparison for the difference. */
   });
   farmSales.setName("Difference from Lemons of Crates Sold at Farm");
 ```
