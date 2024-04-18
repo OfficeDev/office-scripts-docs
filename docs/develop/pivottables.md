@@ -185,9 +185,9 @@ Change how the PivotTable summarizes and displays data with these settings. The 
 
 #### Summarize by
 
-The default summarization of a data hierarchy field is as a sum. `DataPivotHierarchy.setSummarizeBy` lets you combine the data for each row or column in a different way. [`AggregationFunction`] lists the all the available options.
+The default summarization of a data hierarchy field is as a sum. `DataPivotHierarchy.setSummarizeBy` lets you combine the data for each row or column in a different way. [`AggregationFunction`](/javascript/api/office-scripts/excelscript/excelscript.aggregationfunction) lists the all the available options.
 
-The following code snippet changes the "Crates Sold Wholesale" to show each item's standard deviation, instead of the sum.
+The following code snippet changes "Crates Sold Wholesale" to show each item's standard deviation, instead of the sum.
 
 ```typescript
   const wholesaleSales = farmPivot.getDataHierarchy("Sum of Crates Sold Wholesale");
@@ -198,7 +198,7 @@ The following code snippet changes the "Crates Sold Wholesale" to show each item
 
 `DataPivotHierarchy.setShowAs` applies a calculation to the values of a data hierarchy. Instead of the default sum, you can show values or percentages relative to other parts of the PivotTable.
 
-The following code snippet changes the display for the "Crates Sold at Farm". The values will be shown as the percentage of the grand total for the field.
+The following code snippet changes the display for "Crates Sold at Farm". The values will be shown as a percentage of the grand total for the field.
 
 ```typescript
   const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
@@ -207,7 +207,7 @@ The following code snippet changes the display for the "Crates Sold at Farm". Th
   });
 ```
 
-Some `ShowAsRule`s need another field or item in that field as a comparison. The following code snippet again changes the display for the "Crates Sold at Farm". This time, the field will show each value's difference from the value of the "Lemons" in that farm row.
+Some `ShowAsRule`s need another field or item in that field as a comparison. The following code snippet again changes the display for "Crates Sold at Farm". This time, the field will show each value's difference from the value of the "Lemons" in that farm row. If a farm has not sold any lemons, the field shows "#N/A".
 
 ```typescript
   const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
