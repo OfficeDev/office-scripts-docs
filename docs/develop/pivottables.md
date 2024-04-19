@@ -196,28 +196,31 @@ The following code snippet changes "Crates Sold Wholesale" to show each item's s
 
 #### Show values as
 
-`DataPivotHierarchy.setShowAs` applies a calculation to the values of a data hierarchy. Instead of the default sum, you can show values or percentages relative to other parts of the PivotTable.
+`DataPivotHierarchy.setShowAs` applies a calculation to the values of a data hierarchy. Instead of the default sum, you can show values or percentages relative to other parts of the PivotTable. Use a [`ShowAsRule`](/javascript/api/office-scripts/excelscript/excelscript.showasrule) to set how data hierarchy values are shown.
 
 The following code snippet changes the display for "Crates Sold at Farm". The values will be shown as a percentage of the grand total for the field.
 
 ```typescript
   const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
-  farmSales.setShowAs({
+
+  const rule : ExcelScript.ShowAsRule = {
     calculation: ExcelScript.ShowAsCalculation.percentOfGrandTotal
-  });
+  };
+  farmSales.setShowAs(rule);
 ```
 
 Some `ShowAsRule`s need another field or item in that field as a comparison. The following code snippet again changes the display for "Crates Sold at Farm". This time, the field will show each value's difference from the value of the "Lemons" in that farm row. If a farm has not sold any lemons, the field shows "#N/A".
 
 ```typescript
+  const typeField = farmPivot.getRowHierarchy("Type").getFields()[0];
   const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
 
-  const typeField = farmPivot.getRowHierarchy("Type").getFields()[0];
-  farmSales.setShowAs({
+  const rule: ExcelScript.ShowAsRule = {
     calculation: ExcelScript.ShowAsCalculation.differenceFrom,
     baseField: typeField, /* The field to use for the difference. */
     baseItem: typeField.getPivotItem("Lemon") /* The item within that field that is the basis of comparison for the difference. */
-  });
+  };
+  farmSales.setShowAs(rule);
   farmSales.setName("Difference from Lemons of Crates Sold at Farm");
 ```
 
