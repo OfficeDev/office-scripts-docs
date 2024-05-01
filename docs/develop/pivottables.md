@@ -1,7 +1,7 @@
 ---
 title: Work with PivotTables in Office Scripts
 description: Learn about the object model for PivotTables in the Office Scripts JavaScript API.
-ms.date: 10/19/2023
+ms.date: 04/18/2024
 ms.localizationpriority: medium
 ---
 
@@ -178,6 +178,51 @@ The following code snippet adds a slicer for the "Type" field. It sets the selec
 ```
 
 :::image type="content" source="../images/slicer.png" alt-text="A slicer filtering data on a PivotTable.":::
+
+### Value field settings for summaries
+
+Change how the PivotTable summarizes and displays data with these settings. The field in each data hierarchy can display the data in different ways, such as percentages, standard deviations, and relative comparisons.
+
+#### Summarize by
+
+The default summarization of a data hierarchy field is as a sum. `DataPivotHierarchy.setSummarizeBy` lets you combine the data for each row or column in a different way. [`AggregationFunction`](/javascript/api/office-scripts/excelscript/excelscript.aggregationfunction) lists the all the available options.
+
+The following code snippet changes "Crates Sold Wholesale" to show each item's standard deviation, instead of the sum.
+
+```typescript
+  const wholesaleSales = farmPivot.getDataHierarchy("Sum of Crates Sold Wholesale");
+  wholesaleSales.setSummarizeBy(ExcelScript.AggregationFunction.standardDeviation);
+```
+
+#### Show values as
+
+`DataPivotHierarchy.setShowAs` applies a calculation to the values of a data hierarchy. Instead of the default sum, you can show values or percentages relative to other parts of the PivotTable. Use a [`ShowAsRule`](/javascript/api/office-scripts/excelscript/excelscript.showasrule) to set how data hierarchy values are shown.
+
+The following code snippet changes the display for "Crates Sold at Farm". The values will be shown as a percentage of the grand total for the field.
+
+```typescript
+  const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
+
+  const rule : ExcelScript.ShowAsRule = {
+    calculation: ExcelScript.ShowAsCalculation.percentOfGrandTotal
+  };
+  farmSales.setShowAs(rule);
+```
+
+Some `ShowAsRule`s need another field or item in that field as a comparison. The following code snippet again changes the display for "Crates Sold at Farm". This time, the field will show each value's difference from the value of the "Lemons" in that farm row. If a farm has not sold any lemons, the field shows "#N/A".
+
+```typescript
+  const typeField = farmPivot.getRowHierarchy("Type").getFields()[0];
+  const farmSales = farmPivot.getDataHierarchy("Sum of Crates Sold at Farm");
+
+  const rule: ExcelScript.ShowAsRule = {
+    calculation: ExcelScript.ShowAsCalculation.differenceFrom,
+    baseField: typeField, /* The field to use for the difference. */
+    baseItem: typeField.getPivotItem("Lemon") /* The item within that field that is the basis of comparison for the difference. */
+  };
+  farmSales.setShowAs(rule);
+  farmSales.setName("Difference from Lemons of Crates Sold at Farm");
+```
 
 ## See also
 
