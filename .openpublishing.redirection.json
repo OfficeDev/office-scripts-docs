@@ -1,6 +1,10 @@
 { 
     "redirections": [
       {
+        "source_path": "docs/develop/macro-power-automate.md",
+        "redirect_url": "/office/dev/power-automate-integration"
+      },    
+      {
         "source_path": "docs/develop/vscode-for-scripts.md",
         "redirect_url": "/office/dev/scripts"
       },    
