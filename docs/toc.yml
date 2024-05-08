@@ -42,8 +42,6 @@ items:
       href: develop/script-buttons.md
     - name: Use JSON to pass data
       href: develop/use-json.md
-    - name: Use .xlsm files in Power Automate flows
-      href: develop/macros-power-automate.md
     - name: Work with PivotTables
       href: develop/pivottables.md
   - name: Troubleshooting
