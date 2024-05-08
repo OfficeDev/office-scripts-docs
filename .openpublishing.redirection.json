@@ -1,7 +1,7 @@
 { 
     "redirections": [
       {
-        "source_path": "docs/develop/macro-power-automate.md",
+        "source_path": "docs/develop/macros-power-automate.md",
         "redirect_url": "/office/dev/power-automate-integration"
       },    
       {
