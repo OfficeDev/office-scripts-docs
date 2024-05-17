@@ -1,7 +1,7 @@
 ---
 title: Email the images of an Excel chart and table
 description: Learn how to use Office Scripts and Power Automate to extract and email the images of an Excel chart and table.
-ms.date: 11/30/2023
+ms.date: 05/21/2024
 ms.localizationpriority: medium
 ---
 
@@ -94,9 +94,8 @@ interface ReportImages {
 This flow runs the script and emails the returned images.
 
 1. Create a new **Instant cloud flow**.
+
 1. Choose **Manually trigger a flow** and select **Create**.
-1. This sample requires Power Automate features that aren't supported in the [new flow designer](/power-automate/flows-designer) (adding HTML to an email). Switch to the old designer with the toggle in the upper-right corner of the screen.
-    :::image type="content" source="../../images/new-designer-off.png" alt-text="The toggle to use the new flow designer in the off state.":::
 
 1. Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action. Use the following values for the action.
     * **Location**: OneDrive for Business
@@ -109,7 +108,7 @@ This flow runs the script and emails the returned images.
 1. This sample uses Outlook as the email client. You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook. Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action. Use the following values for the action.
     * **To**: Your test email account (or personal email)
     * **Subject**: Please Review Report Data
-    * For the **Body** field, select "Code View" (`</>`) and enter the following:
+    * For the **Body** field, select "Code View" (`<>`) and enter the following:
 
     ```HTML
     <p>Please review the following report data:<br>
