@@ -4,4 +4,4 @@
 | **Office Scripts Action Recorder** | Yes | Yes | Yes | No | No | No |
 | **VBA macros** | No | Yes | Yes | No | Yes | No |
 | **Office Add-ins** | Yes | Yes | Yes | Yes | Yes | No |
-| **COM Add-ins** | No | Yes | Yes | No | Yes | No |
+| **COM Add-ins** | No | Yes | No | No | Yes | No |
