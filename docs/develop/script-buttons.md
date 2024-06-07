@@ -12,6 +12,9 @@ Help your colleagues find and run your scripts by adding script buttons to a wor
 
 :::image type="content" source="../images/run-from-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
+> [!NOTE]
+> Script buttons aren't available during the Office Scripts preview for personal and family Microsoft 365 subscriptions.
+
 ## Create script buttons
 
 When viewing a script, select **Add in workbook**. This creates a button in the workbook that runs the associated script. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
