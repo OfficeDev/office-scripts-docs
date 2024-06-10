@@ -2,7 +2,7 @@
 title: Run Office Scripts in Excel from buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 12/19/2023
+ms.date: 06/06/2024
 ms.localizationpriority: medium
 ---
 
@@ -12,11 +12,17 @@ Help your colleagues find and run your scripts by adding script buttons to a wor
 
 :::image type="content" source="../images/run-from-button.png" alt-text="A button in the worksheet that runs a script when clicked.":::
 
+> [!NOTE]
+> Script buttons aren't available during the Office Scripts preview for personal and family Microsoft 365 subscriptions.
+
 ## Create script buttons
 
 When viewing a script, select **Add in workbook**. This creates a button in the workbook that runs the associated script. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
 
 :::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the 'Create Report' script details page with a button named 'Create Report' shown in the Excel grid.":::
+
+> [!IMPORTANT]
+> If OneDrive sharing is restricted by organizational policies, you can't create a script button.
 
 ## Remove script buttons
 
