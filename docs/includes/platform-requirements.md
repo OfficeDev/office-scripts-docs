@@ -4,7 +4,7 @@ To use Office Scripts, you'll need the following.
 
 1. Excel on the web, Excel for Windows (Version 2210 or higher), or Excel for Mac.
 1. OneDrive for Business.
-1. Any commercial or educational Microsoft 365 license with access to the Microsoft 365 Office desktop apps, such as:
+1. Any of the following Microsoft 365 subscription licenses:
     - Office 365 Business
     - Office 365 Business Premium
     - Office 365 ProPlus
