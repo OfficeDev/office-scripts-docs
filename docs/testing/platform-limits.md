@@ -32,7 +32,7 @@ Excel on the web has the following limitations when making calls to the workbook
 
 If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. For an example, see the [Write a large dataset](../resources/samples/write-large-dataset.md) sample. You can also use APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) to target specific cells instead of large ranges.
 
-Excel limits that aren't specific to Office Scripts can be found in the article [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).
+Excel limits that aren't specific to Office Scripts can be found in the article [Excel specifications and limits](https://support.microsoft.com/office/1672b34d-7043-467e-8e27-269d656771c3).
 
 ### Power Automate
 
@@ -105,7 +105,7 @@ Using an older version of Excel to open workbooks with scripts shared in them ha
 
 ## See also
 
-- [Excel specifications and limits](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
+- [Excel specifications and limits](https://support.microsoft.com/office/1672b34d-7043-467e-8e27-269d656771c3)
 - [Troubleshoot Office Scripts](troubleshooting.md)
 - [Undo the effects of Office Scripts](undo.md)
 - [Improve the performance of your Office Scripts](../develop/web-client-performance.md)
