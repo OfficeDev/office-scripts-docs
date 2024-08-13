@@ -91,7 +91,7 @@ To make the contribution process as seamless as possible, follow these steps.
 3. Submit a pull request to the main repository.
 4. Delete the branch.
 
-**Important** Limit each branch to a single concept/article to streamline the work flow and reduce the chance of merge conflicts. Content appropriate for a new branch includes:
+**Important** Limit each branch to a single concept or article to streamline the workflow and reduce the chance of merge conflicts. Content appropriate for a new branch includes:
 
 * A new article.
 * Spelling and grammar edits.
