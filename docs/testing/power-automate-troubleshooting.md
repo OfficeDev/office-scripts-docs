@@ -99,7 +99,7 @@ The signature of a script is stored with the **Excel Business (Online)** connect
 
 Some web APIs, such as TextEncoder and Crypto, may not be available when running Office Scripts in Power Automate flows. See [MDN Web APIs](https://developer.mozilla.org/docs/Web/API) for a full list of web APIs.
 
-Power Automate returns the error `*API* is not defined` , where *API* indicates a library such as TextEncoder, when running a script that uses an unsupported API.
+Power Automate returns the error `*API* is not defined` , where `*API*` specifies a library such as TextEncoder, when running a script that uses an unsupported API.
 
 ## See also
 
