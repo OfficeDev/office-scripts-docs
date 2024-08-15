@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 02/08/2024
+ms.date: 08/13/2024
 ms.localizationpriority: medium
 ---
 
@@ -94,6 +94,12 @@ There are two reasons that the parameters or returned data of a script are not a
 - The script signature uses unsupported types. Verify your types against the [restrictions for Office Scripts parameter and return types](../develop/power-automate-parameters-returns.md).
 
 The signature of a script is stored with the **Excel Business (Online)** connector when it is created. Remove the old connector and create a new one to get the latest parameters and return values for the **Run script** action.
+
+## Some web APIs not available with Power Automate flows
+
+Some web APIs, such as `TextEncoder` and `Crypto`, may not be available when running Office Scripts in Power Automate flows. See [MDN Web APIs](https://developer.mozilla.org/docs/Web/API) for a full list of web APIs.
+
+Power Automate returns the error `*API* is not defined`, where `*API*` specifies a library such as `TextEncoder`, when running a script that uses an unsupported API.
 
 ## See also
 
