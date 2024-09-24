@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create and format an Excel table"
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
-ms.date: 11/14/2023
+ms.date: 09/20/2024
 ms.localizationpriority: high
 ---
 
@@ -78,7 +78,7 @@ Next, convert this fruit sales data into a table. You'll keep modifying the firs
     let table = selectedSheet.addTable("A1:C5", true);
     ```
 
-1. That call returns a `Table` object. Use that table to sort the data.Sort the data in ascending order based on the values in the "Fruit" column. Add the following line after the table creation:
+1. That call returns a `Table` object. Use that table to sort the data. Sort the data in ascending order based on the values in the "Fruit" column. Add the following line after the table creation:
 
     ```TypeScript
     table.getSort().apply([{ key: 0, ascending: true }]);
@@ -97,14 +97,14 @@ Next, convert this fruit sales data into a table. You'll keep modifying the firs
     }
     ```
 
-    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, you only have one sorting criteria, so you only use one `SortField`. `key: 0` sets the column with the sort-defining values to "0" (which is the first column on the table, **A** in this case). `ascending: true` sorts the data in ascending order (instead of descending order).
+    Tables have a `TableSort` object, accessed through the `Table.getSort` method. You can apply sorting criteria to that object. The `apply` method takes in an array of `SortField` objects. In this case, you only have one sorting criteria, so you only use one `SortField`. The `key: 0` value sets the column with the sort-defining values to "0" (which is the first column on the table, column **A** in this case). The `ascending: true` value sorts the data in ascending order (instead of descending order).
 
 1. Run the script. You should see a table like this:
 
     :::image type="content" source="../images/tutorial-3.png" alt-text="A worksheet showing the sorted fruit sales table.":::
 
     > [!NOTE]
-    > If you re-run the script, you'll get an error. This is because you cannot create a table on top of another table. However, you can run the script on a different worksheet or workbook.
+    > If you re-run the script, you'll get an error. This is because you can't create a table on top of another table. However, you can run the script in a different worksheet or workbook.
 
 ### Re-run the script
 
