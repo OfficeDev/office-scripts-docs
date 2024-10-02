@@ -1,7 +1,7 @@
 ---
 title: Table samples
 description: A collection of samples showing how to interact with Excel tables.
-ms.date: 10/30/2023
+ms.date: 09/25/2024
 ms.localizationpriority: medium
 ---
 
@@ -44,13 +44,6 @@ function main(workbook: ExcelScript.Workbook) {
   stationColumn.getFilter().applyValuesFilter(["Station-1"]);
 }
 ```
-
-> [!TIP]
-> Copy the filtered information across the workbook by using `Range.copyFrom`. Add the following line to the end of the script to create a new worksheet with the filtered data.
->
-> ```TypeScript
->   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
-> ```
 
 ### Filter out one value
 
