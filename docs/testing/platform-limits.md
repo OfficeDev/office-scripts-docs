@@ -2,7 +2,7 @@
 title: Platform limits and requirements with Office Scripts
 description: Resource limits and browser support for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 02/08/2024
+ms.date: 10/03/2024
 ms.localizationpriority: medium
 ---
 
@@ -30,13 +30,15 @@ Excel on the web has the following limitations when making calls to the workbook
 - Requests and responses are limited to **5MB**.
 - A range is limited to **five million cells**.
 
+When you exceed one of the Excel data limits, you receive this error message: "The response payload size has exceeded the limit."
+
 If you're encountering errors when dealing with large datasets, try using multiple smaller ranges instead of larger ranges. For an example, see the [Write a large dataset](../resources/samples/write-large-dataset.md) sample. You can also use APIs like [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) to target specific cells instead of large ranges.
 
 Excel limits that aren't specific to Office Scripts can be found in the article [Excel specifications and limits](https://support.microsoft.com/office/1672b34d-7043-467e-8e27-269d656771c3).
 
 ### Power Automate
 
-The following limitations with the Power Automate platform are the ones you'll most likely encounter.
+The following limitations with the Power Automate platform are the ones you're most likely to encounter.
 
 - Each user is limited to **1,600 calls** to the Run script action per day. This limit resets at 12:00 AM UTC.
 - There's a **120-second timeout** for [synchronous Power Automate operations](/power-automate/limits-and-config#timeout). For long-running scripts, you must either [optimize your script](../develop/web-client-performance.md) or [split your Excel automation into multiple script calls](../resources/samples/write-large-dataset.md#sample-2-write-data-in-batches-from-a-power-automate-flow).
@@ -89,7 +91,7 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 
 [Conditional Access](/azure/active-directory/conditional-access/overview) policies restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
 
-If you script is blocked by Conditional Access policies, you'll receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
+If you script is blocked by Conditional Access policies, you receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
 
 - "Due to organizational policies, you can’t access this resource from this untrusted device."
 - "We can't find this script. It may have been deleted by another user." (If your version of Excel is older.)
