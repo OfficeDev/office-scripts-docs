@@ -112,7 +112,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script creates the following data in the current worksheet:
 
-:::image type="content" source="../images/range-sample.png" alt-text="A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers.":::
+![A worksheet containing a sales record consisting of value rows, a formula column, and formatted headers.](../images/range-sample.png)
 
 ### The types of Range values
 
@@ -162,7 +162,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script on the worksheet with the previous data creates the following table:
 
-:::image type="content" source="../images/table-sample.png" alt-text="A worksheet containing a table made from the previous sales record.":::
+![A worksheet containing a table made from the previous sales record.](../images/table-sample.PNG)
 
 ### Create a chart
 
@@ -188,7 +188,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Running this script on the worksheet with the previous table creates the following chart:
 
-:::image type="content" source="../images/chart-sample.png" alt-text="A column chart showing quantities of three items from the previous sales record.":::
+![A column chart showing quantities of three items from the previous sales record.](../images/chart-sample.png)
 
 ## Collections
 
