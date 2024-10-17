@@ -82,6 +82,7 @@ We welcome [contributions](https://github.com/OfficeDev/office-scripts-docs/blob
 | [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | The "Ready Player Zero" blog by Yutao Huang on the Excel Tech Community includes a script to model John Conway's [*The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). |
 | [Punch clock button](../scenarios/punch-clock.md) | This script was contributed by [Brian Gonzalez](https://github.com/b-gonzalez). The scenario features a script and a script button that records the current time. |
 | [Seasons greetings animation](community-seasons-greetings.md) | This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season! It's a fun script that shows a singing Christmas tree in Excel using Office Scripts. |
+| [Excel Automation](https://www.kalmstrom.com/Tips/Excel-Automation/) | A series of scripts contributed by [Peter Kalmström](https://se.linkedin.com/in/kalmstrom), including a recurring tasks management solution which involves Office Scripts, Power Automate, and Power Apps. The series includes videos and articles describing the solution. |
 
 ## Leave a comment
 
