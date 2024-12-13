@@ -2,7 +2,6 @@ name: auto-publish
 run-name: Automatically publish documentation
 on:
   schedule:
-    - cron: '25 21 * * FRI'
     - cron: '15 22 * * TUE'
     - cron: '15 22 * * THU'
 jobs:
