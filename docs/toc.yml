@@ -48,6 +48,7 @@ items:
     - name: Work with PivotTables
       href: develop/pivottables.md
   - name: Samples
+    expanded: true
     items:
     - name: Overview
       href: resources/samples/samples-overview.md
