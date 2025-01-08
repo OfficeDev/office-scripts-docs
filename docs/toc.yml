@@ -3,6 +3,7 @@ items:
   href: index.yml
 
 - name: Office Scripts in Excel
+  expanded: true
   items:
   - name: Overview
     href: overview/excel.md
