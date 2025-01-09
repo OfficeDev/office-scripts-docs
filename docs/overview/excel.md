@@ -76,6 +76,7 @@ Complete the [Office Scripts in Excel tutorial](../tutorials/excel-tutorial.md) 
 ## See also
 
 - [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md)
+- [Office Scripts samples and scenarios](../resources/samples/samples-overview.md)
 - [Office Scripts API reference](/javascript/api/office-scripts/overview)
 - [Platform limits and requirements with Office Scripts](../testing/platform-limits.md)
 - [Office Scripts settings in M365](/microsoft-365/admin/manage/manage-office-scripts-settings)

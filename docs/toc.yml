@@ -3,6 +3,7 @@ items:
   href: index.yml
 
 - name: Office Scripts in Excel
+  expanded: true
   items:
   - name: Overview
     href: overview/excel.md
@@ -46,21 +47,8 @@ items:
       href: develop/macros-power-automate.md
     - name: Work with PivotTables
       href: develop/pivottables.md
-  - name: Troubleshooting
-    items:
-    - name: Troubleshooting basics
-      href: testing/troubleshooting.md
-    - name: Troubleshooting with Power Automate
-      href: testing/power-automate-troubleshooting.md
-    - name: Improve script performance
-      href: develop/web-client-performance.md
-    - name: Platform limits
-      href: testing/platform-limits.md
-    - name: TypeScript restrictions
-      href: develop/typescript-restrictions.md
-    - name: Undo the effects of Office Scripts
-      href: testing/undo.md
   - name: Samples
+    expanded: true
     items:
     - name: Overview
       href: resources/samples/samples-overview.md
@@ -138,6 +126,20 @@ items:
         href: resources/scenarios/punch-clock.md
       - name: Seasons greetings
         href: resources/samples/community-seasons-greetings.md
+  - name: Troubleshooting
+    items:
+    - name: Troubleshooting basics
+      href: testing/troubleshooting.md
+    - name: Troubleshooting with Power Automate
+      href: testing/power-automate-troubleshooting.md
+    - name: Improve script performance
+      href: develop/web-client-performance.md
+    - name: Platform limits
+      href: testing/platform-limits.md
+    - name: TypeScript restrictions
+      href: develop/typescript-restrictions.md
+    - name: Undo the effects of Office Scripts
+      href: testing/undo.md
   - name: Office Scripts and other platforms
     items:
     - name: Differences between Office Scripts and VBA Macros
