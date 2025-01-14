@@ -14,7 +14,7 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=10b32a7b-2e05-4de2-9bd6-019932407052]
 
 ## When to use Office Scripts
 
