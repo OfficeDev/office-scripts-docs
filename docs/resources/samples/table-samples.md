@@ -106,11 +106,10 @@ function main(workbook: ExcelScript.Workbook) {
 
     // Create a new worksheet for the filtered data. 
     let newWorksheet = workbook.addWorksheet();
-    newWorksheet.getRange("A1").copyFrom(headerRow);
 
     // Loop through the filtered data and copy to new worksheet.
     visibleRange.getAreas().forEach(areaRange => { 
-      newWorksheet.getRange("A2").copyFrom(areaRange);
+      newWorksheet.getRange("A1").copyFrom(areaRange);
     })
 }
 ```
