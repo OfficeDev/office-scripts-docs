@@ -85,7 +85,7 @@ function columnToSet(column: ExcelScript.TableColumn): string[] {
 
 ### Copy filtered contents to a new worksheet
 
-This sample filters the data in a table and then copies the filtered data to a new worksheet. It uses [`SpecialCellType`](/javascript/api/office-scripts/excelscript/excelscript.specialcelltype?view=office-scripts) to get the filtered cells in the original table and then uses `Range.copyFrom` to copy the data to the new worksheet.
+This sample filters the data in a table and then copies the filtered data to a new worksheet. It uses [`SpecialCellType`](/javascript/api/office-scripts/excelscript/excelscript.specialcelltype) to get the filtered cells in the original table and then uses `Range.copyFrom` to copy the data to the new worksheet.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
