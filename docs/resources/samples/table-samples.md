@@ -111,6 +111,7 @@ function main(workbook: ExcelScript.Workbook) {
       newWorksheet.getRange("A1").copyFrom(areaRange);
     })
 }
+```
 
 ## Remove table column filters
 
