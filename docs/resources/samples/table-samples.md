@@ -1,7 +1,7 @@
 ---
 title: Table samples
 description: A collection of samples showing how to interact with Excel tables.
-ms.date: 09/25/2024
+ms.date: 01/29/2025
 ms.localizationpriority: medium
 ---
 
@@ -82,6 +82,36 @@ function columnToSet(column: ExcelScript.TableColumn): string[] {
     return columnSet;
 }
 ```
+
+### Copy filtered contents to a new worksheet
+
+This sample filters the data in a table and then copies the filtered data to a new worksheet. It uses [`SpecialCellType`](/javascript/api/office-scripts/excelscript/excelscript.specialcelltype?view=office-scripts) to get the filtered cells in the original table and then uses `Range.copyFrom` to copy the data to the new worksheet.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the table in the workbook named "StationTable".
+    const table = workbook.getTable("StationTable");
+
+    // Get the "Station" table column for the filter.
+    const stationColumn = table.getColumnByName("Station");
+
+    // Apply a filter to the table that will only show rows 
+    // with a value of "Station-1" in the "Station" column.
+    stationColumn.getFilter().applyValuesFilter(["Station-1"]);
+
+    // Get the filtered table data, as visible cells.
+    let filteredTable = worksheet.getUsedRange();
+    let visibleRange = filteredTable.getSpecialCells(ExcelScript.SpecialCellType.visible); 
+
+    // Create a new worksheet for the filtered data. 
+    let newWorksheet = workbook.addWorksheet();
+
+    // Loop through the filtered data and copy to new worksheet.
+    visibleRange.getAreas().forEach(areaRange => { 
+      newWorksheet.getRange("A1").copyFrom(areaRange);
+    })
+}
+
 
 ## Remove table column filters
 
