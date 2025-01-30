@@ -100,12 +100,11 @@ function main(workbook: ExcelScript.Workbook) {
     stationColumn.getFilter().applyValuesFilter(["Station-1"]);
 
     // Get the filtered table data, as visible cells.
-    let headerRow = table.getHeaderRowRange();
     let filteredTable = worksheet.getUsedRange();
     let visibleRange = filteredTable.getSpecialCells(ExcelScript.SpecialCellType.visible); 
 
     // Create a new worksheet for the filtered data. 
-    let newWorksheet = workbook.addWorksheet();
+    const newWorksheet = workbook.addWorksheet();
 
     // Loop through the filtered data and copy to new worksheet.
     visibleRange.getAreas().forEach(areaRange => { 
