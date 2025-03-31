@@ -43,10 +43,18 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 
 ## Share scripts
 
+# [For business and education](#tab/business)
+
 To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
 
 > [!NOTE]
 > Admin settings for Conditional Access in OneDrive and SharePoint affect Office Scripts. For more information, see the [Conditional Access section of Platform limits and requirements with Office Scripts](../testing/platform-limits.md#conditional-access).
+
+# [For personal and family](#tab/home)
+
+Scripts can't be shared through workbooks with a home or family account. You can manually share the code, but it's not possible to share a script in Excel or receive notifications when it has been changed or updated.
+
+---
 
 ## Restore deleted scripts
 
