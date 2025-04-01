@@ -17,7 +17,9 @@ This article describes where Office Scripts are stored, how to share and restore
 Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
 > [!NOTE]
-> For customers with personal and family subscriptions, the Office Scripts storage location is moving from local storage to OneDrive. The legacy script storage location for personal and family subscriptions is the following folder in your local Office cache: `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`. New scripts are saved in your OneDrive.
+> For customers with personal and family subscriptions, the Office Scripts storage location is moving from local storage to OneDrive. The legacy script storage location for personal and family subscriptions is the following folder in your local Office cache: `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
+>
+> New scripts are saved in your OneDrive, and any existing locally stored scripts will be moved to your OneDrive automatically.
 
 ### OneDrive
 
