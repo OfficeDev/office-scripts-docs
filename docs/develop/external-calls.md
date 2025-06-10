@@ -47,7 +47,7 @@ Any JSON data retrieved by `fetch` must match an interface defined in the script
 
 The following script uses `fetch` to retrieve JSON data from the test server in the given URL. Note the `JSONData` interface to store the data as a matching type.
 
-```TypeScript
+```typescript
 async function main(workbook: ExcelScript.Workbook) {
   // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
