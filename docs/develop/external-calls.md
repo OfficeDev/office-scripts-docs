@@ -1,7 +1,7 @@
 ---
 title: External API call support in Office Scripts
 description: Support and guidance for making external API calls in an Office Script.
-ms.date: 04/27/2023
+ms.date: 06/09/2025
 ms.localizationpriority: medium
 ---
 
@@ -42,9 +42,12 @@ The [fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) retrieves 
 
 Any JSON data retrieved by `fetch` must match an interface defined in the script. The returned value must be assigned to a specific type because [Office Scripts do not support the `any` type](typescript-restrictions.md#no-any-type-in-office-scripts). You should refer to the documentation for your service to see what the names and types of the returned properties are. Then, add the matching interface or interfaces to your script.
 
+> [!NOTE]
+> If you use `fetch` to call an external resource with a [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS) policy, make sure that the [`Access-Control-Allow-Origin`](https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header of that external resource uses the `*` directive. If the `Access-Control-Allow-Origin` header uses a specific `<origin>` directive, then your `fetch` call from Office Scripts may fail. The origin of the Office Scripts runtime may change without notice.
+
 The following script uses `fetch` to retrieve JSON data from the test server in the given URL. Note the `JSONData` interface to store the data as a matching type.
 
-```TypeScript
+```typescript
 async function main(workbook: ExcelScript.Workbook) {
   // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
