@@ -96,6 +96,8 @@ items:
       items:
       - name: Combine worksheets into a single workbook
         href: resources/samples/combine-worksheets-into-single-workbook.md
+      - name: Combine workbooks into a single worksheet
+        href: resources/samples/combine-workbooks-into-single-worksheet.md
       - name: Convert CSV files
         href: resources/samples/convert-csv.md
       - name: Cross-reference worksheets
@@ -106,6 +108,8 @@ items:
         href: resources/samples/report-day-to-day-changes.md
       - name: Run a script on all Excel files in a folder
         href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
+      - name: Save and email as a PDF
+        href: resources/samples/save-and-email-as-pdf.md
       - name: Write a large dataset
         href: resources/samples/write-large-dataset.md
     - name: Real-world scenarios
