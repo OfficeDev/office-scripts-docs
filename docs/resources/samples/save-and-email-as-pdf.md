@@ -15,6 +15,7 @@ Use Office Scripts to save a worksheet as a PDF and email it to yourself or your
 1. Add data to your workbook.
 1. Create the script from this sample.
 1. Replace `name@email.com` in this sample with your desired recipient email address.
+1. Run the script.
 
 ## Sample code: Save as a PDF and send via email
 
