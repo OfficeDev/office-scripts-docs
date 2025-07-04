@@ -5,9 +5,12 @@ ms.date: 07/03/2025
 ms.localizationpriority: medium
 ---
 
-# Save a worksheet and email it as a PDF
+# Save a worksheet and email it as a PDF (preview)
 
 Use Office Scripts to save a worksheet as a PDF and email it to yourself or your team.
+
+> [!NOTE]
+> The script in this sample is provided as a preview for developers and may change based on feedback that we receive. Do not use this script in a production environment.
 
 ## Solution
 
