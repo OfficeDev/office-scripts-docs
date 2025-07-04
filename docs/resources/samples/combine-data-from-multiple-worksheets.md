@@ -61,4 +61,4 @@ interface WorksheetData {
 
 ## Next steps
 
-Learn how to [save your report as a PDF and email it](save-and-email-as-a-pdf.md) to yourself or your team.
+Learn how to [save your report as a PDF and email it](save-and-email-as-pdf.md) to yourself or your team.
