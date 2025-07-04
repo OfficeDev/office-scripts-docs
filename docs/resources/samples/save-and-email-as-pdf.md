@@ -21,9 +21,6 @@ Use Office Scripts to save a worksheet as a PDF and email it to yourself or your
 1. Adjust the `subject` and `content` values.
 1. Run the script.
 
-> [!TIP]
-> Use the properties of the [MailProperties](/javascript/api/office-scripts/excelscript/global.officescript.mailproperties) interface to add more details to your email, such as `cc`, `bcc`, and `importance` values.
-
 ## Sample code: Save as a PDF and send via email
 
 ```TypeScript
@@ -47,6 +44,9 @@ function main(workbook: ExcelScript.Workbook) {
     })    
 }
 ```
+
+> [!TIP]
+> Use the properties of the [MailProperties](/javascript/api/office-scripts/excelscript/global.officescript.mailproperties) interface to add more details to your email, such as `cc`, `bcc`, and `importance` values.
 
 ## Troubleshooting
 
