@@ -29,8 +29,8 @@ Use Office Scripts to save a worksheet as a PDF and email it to yourself or your
  */
 function main(workbook: ExcelScript.Workbook) {    
     // Create the PDF.
-    const pdf = OfficeScript.convertToPdf();
-    const pdfFile = { name: "report.pdf", content: pdf }; // Enter your desired PDF name here.
+    const pdfObject = OfficeScript.convertToPdf();
+    const pdfFile = { name: "report.pdf", content: pdfObject }; // Enter your desired PDF name here.
     
     // Download the PDF.
     OfficeScript.downloadFile(pdfFile);
