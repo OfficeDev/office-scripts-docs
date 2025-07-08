@@ -52,4 +52,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Error: Protected document
 
-The [sensitivity label](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) for your workbook is preventing the script from sending an email. To resolve this error, change the sensitivity label of your workbook to General, Public, or Non-Business. Reload the workbook, and then run the script again.
+The [sensitivity label](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) for your workbook is preventing the script from sending an email. To resolve this error, change the sensitivity label of your workbook to General, Public, or Non-Business. Reload the workbook, and then run the script again.
