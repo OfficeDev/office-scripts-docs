@@ -1,11 +1,11 @@
 ---
-title: Combine worksheets with Power Automate
+title: Combine workbooks into a single workbook
 description: Learn how to use Office Scripts and Power Automate to merge worksheets from other workbooks into a single workbook.
 ms.date: 11/29/2023
 ms.localizationpriority: medium
 ---
 
-# Combine worksheets into a single workbook with Power Automate
+# Combine worksheets into a single workbook
 
 This sample shows how to pull data from multiple workbooks into a single, centralized workbook. It uses two scripts: one to retrieve information from a workbook and another to create new worksheets with that information. It combines the scripts in a Power Automate flow that acts on an entire OneDrive folder.
 
