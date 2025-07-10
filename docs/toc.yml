@@ -81,7 +81,7 @@ items:
       - name: Move selected rows across tables
         href: resources/samples/move-rows-across-tables.md
       - name: Save and email as a PDF
-        href: resources/samples/save-and-email-as-pdf.md
+        href: resources/samples/save-as-pdf-email-as-pdf.md
       - name: Notify people with comments
         href: resources/samples/add-excel-comments.md
       - name: Output table data as JSON
