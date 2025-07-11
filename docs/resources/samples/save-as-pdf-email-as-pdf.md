@@ -1,7 +1,7 @@
 ---
 title: Save and email as a PDF
 description: Use Office Scripts to save a worksheet as a PDF and then email that PDF.
-ms.date: 07/03/2025
+ms.date: 07/11/2025
 ms.localizationpriority: medium
 ---
 
@@ -46,7 +46,7 @@ function main(workbook: ExcelScript.Workbook) {
 ```
 
 > [!TIP]
-> Use the properties of the [MailProperties](/javascript/api/office-scripts/excelscript/global.officescript.mailproperties) interface to add more details to your email, such as `cc`, `bcc`, and `importance` values.
+> Use the properties of the [MailProperties](/javascript/api/office-scripts/officescript/officescript.mailproperties) interface to add more details to your email, such as `cc`, `bcc`, and `importance` values.
 
 ## Troubleshooting
 

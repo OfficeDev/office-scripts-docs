@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 12/28/2023
+ms.date: 07/10/2025
 ms.localizationpriority: medium
 ---
 
@@ -44,6 +44,7 @@ Be sure to download the sample workbooks included with each sample. That lets yo
 | [Notify people with comments](add-excel-comments.md) | This sample adds comments to a cell including @mentioning a colleague. |
 | [Output Excel data as JSON](get-table-data.md) | This solution shows how to output Excel table data as JSON to use in Power Automate. |
 | [Remove hyperlinks from each cell in an Excel worksheet](remove-hyperlinks-from-cells.md) | This sample clears all of the hyperlinks from the current worksheet. |
+| [Save and email as a PDF (preview)](save-as-pdf-email-as-pdf.md) | This sample saves a worksheet as a PDF and emails it to a recipient. |
 | [Set conditional formatting for cross-column comparisons](conditional-formatting-parameters.md) | This sample applies formatting based on values in adjacent columns. It also gets user input through script parameters. |
 | [Use external fetch calls](external-fetch-calls.md) | This sample uses `fetch` to get information from GitHub for the script. |
 
