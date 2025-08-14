@@ -1,13 +1,13 @@
 ---
 title: Combine data from multiple Excel tables into a single table
 description: Learn how to use Office Scripts to combine data from multiple Excel tables into a single table.
-ms.date: 06/29/2021
+ms.date: 08/14/2025
 ms.localizationpriority: medium
 ---
 
 # Combine data from multiple Excel tables into a single table
 
-This sample combines data from multiple Excel tables into a single table that includes all the rows. It assumes that all tables being used have the same structure.
+This sample shows how to combine data from multiple Excel tables into a single table that includes all the rows. It assumes that all the tables being used have the same structure.
 
 There are two variations of this script:
 
@@ -49,7 +49,7 @@ function main(workbook: ExcelScript.Workbook) {
     let dataValues = table.getRangeBetweenHeaderAndTotal().getTexts();
     let rowCount = table.getRowCount();
 
-    // If the table is not empty, add its rows to the combined table.
+    // If the table isn't empty, add its rows to the combined table.
     if (rowCount > 0) {
       combinedTable.addRows(-1, dataValues);
     }
