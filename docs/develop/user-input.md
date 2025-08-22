@@ -50,10 +50,10 @@ To allow users to import a workbook with a parameterized script, use a two-dimen
 
 ```TypeScript
 /**​
-* This script generates a monthly sales report.​
-* @param productData The product data for this month.
-* @param salesData The sales data for this month.​
-**/
+ * This script generates a monthly sales report.​
+ * @param productData The product data for this month.
+ * @param salesData The sales data for this month.​
+ */
 function main(workbook: ExcelScript.Workbook, productData: string[][], salesData: string[][]) {
     // Code to process data goes here.
     // Both the `productData` and `salesData` parameters accept workbook imports.
