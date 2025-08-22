@@ -1,20 +1,20 @@
 ---
 title: Get user input for scripts
 description: Add parameters to Office Scripts so users can control their experience. 
-ms.date: 09/14/2023
+ms.date: 08/22/2025
 ms.localizationpriority: medium
 ---
 
 # Get user input for scripts
 
-Adding parameters to your script lets other users provide data for the script, without needing to edit code. When your script is run through the ribbon or a button, a prompt pops up that asks for input.
+Adding parameters to your script lets other users provide data for the script, without needing to edit code. When your script is run through the ribbon or a button, a prompt pops up that asks the user for input, such as an array or a workbook.
 
 :::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
 > [!IMPORTANT]
-> Currently, only Excel on the web users will be prompted to enter data for parameterized scripts. Power Automate flows also support giving data to scripts through parameters.
+> Entering an array for parameterized scripts is supported across platforms, but importing a workbook with a parameterized script is only supported in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
-## Example - Highlight large values
+## Example scenario: Highlight large values
 
 The following example shows a script that takes a number and string from the user. To test it, open an empty workbook and enter some numbers into several cells.
 
@@ -48,6 +48,20 @@ function main(
 ## `main` parameters: Pass data to a script
 
 All script input is specified as additional parameters for the `main` function. New parameters are added after the mandatory `workbook: ExcelScript.Workbook` parameter. For example, if you wanted a script to accept a `string` that represents a name as input, you would change the `main` signature to `function main(workbook: ExcelScript.Workbook, name: string)`.
+
+To allow users to import a workbook with a parameterized script, use a two-dimensional array for each parameter that accepts a workbook. The parameter can be of type `string` or `number`. The following example shows how to create a script that accepts workbook imports for both parameters.
+
+```TypeScript
+/**​
+* This script generates a monthly sales report.​
+* @param productData The product data for this month.
+* @param salesData The sales data for this month.​
+**/
+function main(workbook: ExcelScript.Workbook, productData: string[][], salesData: string[][]) {
+    // Code to process data goes here.
+    // Both the `productData` and `salesData` parameters accept workbook imports.
+}​
+```
 
 ### Optional parameters
 
