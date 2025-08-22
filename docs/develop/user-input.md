@@ -11,9 +11,6 @@ Adding parameters to your script lets other users provide data for the script, w
 
 :::image type="content" source="../images/user-input-example.png" alt-text="The dialog box shown to users when a script with parameters is run.":::
 
-> [!IMPORTANT]
-> Entering an array for parameterized scripts is supported across platforms, but importing a workbook with a parameterized script is only supported in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
-
 ## Example scenario: Highlight large values
 
 The following example shows a script that takes a number and string from the user. To test it, open an empty workbook and enter some numbers into several cells.
@@ -62,6 +59,9 @@ function main(workbook: ExcelScript.Workbook, productData: string[][], salesData
     // Both the `productData` and `salesData` parameters accept workbook imports.
 }​
 ```
+
+> [!IMPORTANT]
+> Entering an array for parameterized scripts is supported across platforms, but importing a workbook with a parameterized script is only supported in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
 
 ### Optional parameters
 
