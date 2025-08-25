@@ -60,9 +60,6 @@ function main(workbook: ExcelScript.Workbook, productData: string[][], salesData
 }​
 ```
 
-> [!IMPORTANT]
-> Entering an array for parameterized scripts is supported across platforms, but importing a workbook with a parameterized script is only supported in Excel on the web. Power Automate flows also support giving data to scripts through parameters.
-
 ### Optional parameters
 
 Optional parameters don't need the user to provide a value. This implies your script either has default behavior or this parameter is only needed in a corner case. They're denoted in your script with the [optional modifier](https://www.typescriptlang.org/docs/handbook/2/functions.html#optional-parameters) `?`. For example, in `function main(workbook: ExcelScript.Workbook, Name?: string)` the parameter `Name` is optional.
