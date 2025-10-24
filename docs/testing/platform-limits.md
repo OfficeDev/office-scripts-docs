@@ -91,7 +91,7 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 
 [Conditional Access](/azure/active-directory/conditional-access/overview) policies restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
 
-Tenants that have added [authentication context](/entra/identity/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) settings with Conditional Access do not support Office Scripts in Excel on the web. If your tenant has an authentication context setting and you encounter an error when trying to create, record, or run an Office Script in Excel on the web, use Excel for Windows or Excel for Mac instead.
+Tenants that have added [authentication context](/entra/identity/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) settings with Conditional Access don't support Office Scripts in Excel on the web. If your tenant has an authentication context setting and you encounter an error when trying to create, record, or run an Office Script in Excel on the web, use Excel for Windows or Excel for Mac instead.
 
 If your script is blocked by Conditional Access policies, you receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
 
