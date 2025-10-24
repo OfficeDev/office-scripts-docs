@@ -1,14 +1,14 @@
 ---
-title: Platform limits and requirements with Office Scripts
-description: Resource limits and browser support for Office Scripts when used with Excel.
+title: Platform limits, requirements, and error messages for Office Scripts
+description: Resource limits, browser support, and error messages for Office Scripts when used with Excel.
 ms.topic: limits-and-quotas
-ms.date: 10/03/2024
+ms.date: 10/24/2024
 ms.localizationpriority: medium
 ---
 
 # Platform limits and requirements with Office Scripts
 
-There are some platform limitations of which you should be aware when developing Office Scripts. This article details the browser support and data limits for Office Scripts for Excel.
+There are some platform limitations of which you should be aware when developing Office Scripts. This article details the browser support, data limits, and error messages you might encounter when using Office Scripts.
 
 ## Platform support
 
@@ -90,6 +90,8 @@ Your browser needs third-party cookies enabled to show the **Automate** tab in E
 ## Conditional Access
 
 [Conditional Access](/azure/active-directory/conditional-access/overview) policies restrict access to SharePoint and OneDrive for [unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). If your device isn't managed by the tenant, you may not have access to specific scripts, or may only be able to access them through the browser.
+
+Tenants that have added [authentication context](/entra/identity/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) settings with Conditional Access do not support Office Scripts in Excel on the web. If your tenant has an authentication context setting and you encounter an error when trying to create, record, or run an Office Script in Excel on the web, use Excel for Windows or Excel for Mac instead.
 
 If you script is blocked by Conditional Access policies, you receive one of two error messages. These messages also surface in Power Automate if your flow is run from an unmanaged device.
 

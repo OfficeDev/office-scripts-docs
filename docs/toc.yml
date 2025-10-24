@@ -136,7 +136,7 @@ items:
       href: testing/power-automate-troubleshooting.md
     - name: Improve script performance
       href: develop/web-client-performance.md
-    - name: Platform limits
+    - name: Errors and platform limits
       href: testing/platform-limits.md
     - name: TypeScript restrictions
       href: develop/typescript-restrictions.md
