@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Automatically save content from emails in a workbook'
 description: A tutorial about running Office Scripts for Excel through Power Automate when mail is received and passing flow data to the script.
-ms.date: 11/29/2023
+ms.date: 11/14/2025
 ms.localizationpriority: high
 ---
 
 # Tutorial: Automatically save content from emails in a workbook
 
-This tutorial teaches you how to use an Office Script for Excel with an automated [Power Automate](https://make.powerautomate.com) workflow. Your script will automatically run each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
+This tutorial teaches you how to use an Office Script for Excel with an automated [Power Automate](https://make.powerautomate.com) workflow. Your script automatically runs each time you receive an email, recording information from the email in an Excel workbook. Being able to pass data from other applications into an Office Script gives you a great deal of flexibility and freedom in your automated processes.
 
 > [!TIP]
-> If you're new to Office Scripts, we recommend starting with [Tutorial: Create and format an Excel table](excel-tutorial.md). If you're new to Power Automate, we recommend starting with [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md). [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
+> If you're new to Office Scripts, start with [Tutorial: Create and format an Excel table](excel-tutorial.md). If you're new to Power Automate, start with [Tutorial: Update a spreadsheet from a Power Automate flow](excel-power-automate-manual.md). [Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript. If you're new to JavaScript, start with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 1. Go to the **Automate** tab and select **New Script**.
 
-1. Replace the existing code with the following script and select **Run**. This will setup the workbook with consistent worksheet, table, and PivotTable names.
+1. Replace the existing code with the following script and select **Run**. This step sets up the workbook with consistent worksheet, table, and PivotTable names.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -51,11 +51,11 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 ## Create an Office Script
 
-Create a script that logs information from an email. You'll want to track which days of the week you receive the most mail and how many unique senders are sending that mail. Your workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Your worksheet also has a PivotTable that is pivoting on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). The script will refresh that PivotTable after it updates the email table.
+Create a script that logs information from an email. You want to track which days of the week you receive the most mail and how many unique senders send that mail. Your workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Your worksheet also has a PivotTable that pivots on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). The script refreshes that PivotTable after it updates the email table.
 
 1. From within the Code Editor task pane, select **New Script**.
 
-1. The flow that you'll create later in the tutorial sends the script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
+1. The flow that you create later in the tutorial sends the script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
 
     ```TypeScript
     function main(
@@ -79,7 +79,7 @@ Create a script that logs information from an email. You'll want to track which 
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
-1. The `dateReceived` parameter is of type `string`. Convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you'll need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
+1. The `dateReceived` parameter is of type `string`. Convert that to a [`Date` object](../develop/javascript-objects.md#date) so you can easily get the day of the week. After doing that, you need to map the day's number value to a more readable version. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
       // Parse the received date string to determine the day of the week.
@@ -87,7 +87,7 @@ Create a script that logs information from an email. You'll want to track which 
       let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
     ```
 
-1. The `subject` string may include the "RE:" reply tag. Remove that from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`.
+1. The `subject` string might include the "RE:" reply tag. Remove that tag from the string so that emails in the same thread have the same subject for the table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Remove the reply tag from the email subject to group emails on the same thread.
@@ -95,7 +95,7 @@ Create a script that logs information from an email. You'll want to track which 
     subjectText = subjectText.replace("RE: ", "");
     ```
 
-1. Now that the email data has been formatted, add a row to the email table. Add the following code to the end of your script, before the closing `}`.
+1. Now that the email data is formatted, add a row to the email table. Add the following code to the end of your script, before the closing `}`.
 
     ```TypeScript
     // Add the parsed text to the table.
@@ -147,30 +147,30 @@ function main(
 
 1. Sign in to the [Power Automate site](https://make.powerautomate.com).
 
-1. In the menu that's displayed on the left side of the screen, select **Create**. This brings you to list of ways to create new workflows.
+1. In the menu on the left side of the screen, select **Create**. This selection brings you to a list of ways to create new workflows.
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="The Power Automate Create button.":::
 
-1. In the **Start from blank** section, select **Automated flow**. This creates a workflow triggered by an event, such as receiving an email.
+1. In the **Start from blank** section, select **Automated flow**. This selection creates a workflow triggered by an event, such as receiving an email.
 
     :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text="The Automated flow option in Power Automate.":::
 
-1. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Under **Choose your flow's trigger**, select **When a new email arrives** from the list of options. You may need to search for the option using the search box. Finally, select **Create**.
+1. In the dialog window that appears, enter a name for your flow in the **Flow name** text box. Under **Choose your flow's trigger**, select **When a new email arrives** from the list of options. You might need to search for the option by using the search box. Finally, select **Create**.
 
     :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="Part of the Power Automate flow showing the 'flow name' and the 'choose your flow's trigger' options. The flow name is 'Record Email Flow' and the trigger is the 'When a new email arrives in Outlook' option.":::
 
     > [!NOTE]
-    > This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.
+    > This tutorial uses Outlook. You can use your preferred email service instead, but some options might be different.
 
 1. In the flow builder, select the **+** button and **Add an action**.
 
-1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, you should use the **Run script from a SharePoint library** action.
+1. In the **Add an action** task pane, search for "Excel run script". Choose the **Excel Online (Business)** connector's **Run script** action. This action runs a script from your OneDrive on a workbook. If you want to use a script stored in your team's SharePoint library, use the **Run script from a SharePoint library** action.
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="The action selection task pane showing actions for the Excel Online (Business) connector. The Run script action is highlighted.":::
 
-1. You may be asked to sign in to your Microsoft 365 account. Do so to continue the tutorial.
+1. You might be asked to sign in to your Microsoft 365 account. Sign in to continue the tutorial.
 
-1. Next, you'll select the workbook and script to use in the flow step. For the tutorial, you'll use the workbook you created in your OneDrive, but you could use any workbook in a OneDrive or SharePoint site. Specify the following parameters for the **Run script** action:
+1. Next, select the workbook and script to use in the flow step. For the tutorial, use the workbook you created in your OneDrive, but you can use any workbook in a OneDrive or SharePoint site. Specify the following parameters for the **Run script** action:
 
     - **Location**: OneDrive for Business
     - **Document Library**: OneDrive
@@ -180,7 +180,7 @@ function main(
     - **ScriptParameters/dateReceived**: Received Time *(dynamic content from Outlook)*
     - **ScriptParameters/subject**: Subject *(dynamic content from Outlook)*
 
-    *Note that the parameters for the script will only appear once the script is selected.*
+    *Note that the parameters for the script appear only after you select the script.*
 
     :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="The Power Automate run script action showing the options that appear once the script is selected.":::
 
@@ -188,7 +188,7 @@ function main(
 
     :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="The Save button in Power Automate.":::
 
-Your flow is now enabled. It will automatically run your script each time you receive an email through Outlook.
+Your flow is now enabled. It automatically runs your script each time you receive an email through Outlook.
 
 ## Manage the script in Power Automate
 
@@ -196,9 +196,9 @@ Your flow is now enabled. It will automatically run your script each time you re
 
     :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="The My flows button in Power Automate.":::
 
-1. Select your flow. Here you can see the run history. You can refresh the page or select the refresh **All runs** button to update the history. The flow will trigger shortly after an email is received. Test the flow by sending yourself mail.
+1. Select your flow. Here you can see the run history. You can refresh the page or select the refresh **All runs** button to update the history. The flow triggers shortly after an email is received. Test the flow by sending yourself mail.
 
-When the flow is triggered and successfully runs your script, you should see the workbook's table and PivotTable update.
+When the flow triggers and successfully runs your script, you see the workbook's table and PivotTable update.
 
 :::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="A worksheet showing the email table after the flow has run three times.":::
 
@@ -206,9 +206,9 @@ When the flow is triggered and successfully runs your script, you should see the
 
 ## Troubleshooting
 
-Receiving multiple emails at the same time can cause merge conflicts in Excel. This risk is mitigated by setting the email connector to only act on one email at a time. To do this:
+Receiving multiple emails at the same time can cause merge conflicts in Excel. This risk is mitigated by setting the email connector to only act on one email at a time. To do this step:
 
-1. Select the "email arrives" action, and then select **Settings**.
+1. Select the "email arrives" action, then select **Settings**.
 
 1. In the **Settings** options that pop up, set **Concurrency Control** to **On**. Then, set the **Degree of Parallelism** to **1**.
 
