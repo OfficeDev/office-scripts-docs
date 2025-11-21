@@ -307,6 +307,108 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Line stacked 100% chart
+
+This sample creates a 100% stacked line chart showing percentage distribution over time.
+
+:::image type="content" source="../../images/line-stacked-100-chart.png" alt-text="A 100% stacked line chart showing traffic source distribution as percentages over time.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Month", "Email", "Social", "Direct"],
+    ["Jan", 450, 320, 230],
+    ["Feb", 480, 350, 270],
+    ["Mar", 520, 380, 300],
+    ["Apr", 560, 420, 320],
+    ["May", 590, 450, 360],
+    ["Jun", 630, 490, 380]
+  ];
+  const dataRange = sheet.getRange("A1:D7");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked line chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.lineStacked100,
+    dataRange
+  );
+  chart.setPosition("A9");
+  chart.getTitle().setText("Traffic Source Distribution Over Time");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+### Line with markers stacked chart
+
+This sample creates a stacked line chart with markers.
+
+:::image type="content" source="../../images/line-markers-stacked-chart.png" alt-text="A stacked line chart with markers showing cumulative quarterly sales across product categories.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Week", "Team A", "Team B", "Team C"],
+    ["Week 1", 12, 8, 10],
+    ["Week 2", 15, 10, 12],
+    ["Week 3", 18, 13, 15],
+    ["Week 4", 22, 16, 18],
+    ["Week 5", 25, 19, 21]
+  ];
+  const dataRange = sheet.getRange("A1:D6");
+  dataRange.setValues(data);
+  
+  // Create stacked line chart with markers.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.lineMarkersStacked,
+    dataRange
+  );
+  chart.setPosition("A8");
+  chart.getTitle().setText("Cumulative Team Performance");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.right);
+}
+```
+
+### Line with markers stacked 100% chart
+
+This sample creates a 100% stacked line chart with markers.
+
+:::image type="content" source="../../images/line-markers-stacked-100-chart.png" alt-text="A 100% stacked line chart with markers showing traffic source distribution as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Product Line A", "Product Line B", "Product Line C"],
+    ["Q1", 35, 40, 25],
+    ["Q2", 38, 37, 25],
+    ["Q3", 40, 35, 25],
+    ["Q4", 42, 33, 25]
+  ];
+  const dataRange = sheet.getRange("A1:D5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked line chart with markers.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.lineMarkersStacked100,
+    dataRange
+  );
+  chart.setPosition("A7");
+  chart.getTitle().setText("Product Line Market Share Trends");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
 ## Pie charts
 
 Pie charts show proportional relationships in a dataset. Each value appears as a slice of the whole.
@@ -654,6 +756,78 @@ function main(workbook: ExcelScript.Workbook) {
   chart.getTitle().setText("Growth Comparison");
   
   chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+### Scatter with lines (no markers) chart
+
+This sample creates a scatter chart with connecting lines but no data point markers.
+
+:::image type="content" source="../../images/scatter-lines-no-markers-chart.png" alt-text="A scatter chart with connecting lines showing distance over time without data point markers.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Time (hours)", "Distance (miles)"],
+    [0, 0],
+    [1, 55],
+    [2, 105],
+    [3, 160],
+    [4, 210],
+    [5, 265],
+    [6, 315]
+  ];
+  const dataRange = sheet.getRange("A1:B8");
+  dataRange.setValues(data);
+  
+  // Create scatter chart with lines but no markers.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.xyscatterLinesNoMarkers,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Travel Distance Over Time");
+  
+  chart.getLegend().setVisible(false);
+}
+```
+
+### Scatter with smooth lines (no markers) chart
+
+This sample creates a scatter chart with smooth connecting lines but no data point markers.
+
+:::image type="content" source="../../images/scatter-smooth-no-markers-chart.png" alt-text="A scatter chart with smooth curved lines showing distance over time without data point markers.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Input", "Output"],
+    [1, 5],
+    [2, 12],
+    [3, 22],
+    [4, 35],
+    [5, 51],
+    [6, 70],
+    [7, 92]
+  ];
+  const dataRange = sheet.getRange("A1:B8");
+  dataRange.setValues(data);
+  
+  // Create scatter chart with smooth lines but no markers.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.xyscatterSmoothNoMarkers,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Response Curve Analysis");
+  
+  chart.getLegend().setVisible(false);
 }
 ```
 
@@ -1402,6 +1576,40 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### Contour chart wireframe (Surface top view wireframe)
+
+This sample creates a wireframe version of a contour chart.
+
+:::image type="content" source="../../images/contour-wireframe-chart.png" alt-text="A wireframe contour chart showing signal strength as a top-down view with grid lines and no fill.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["", "0°", "45°", "90°", "135°", "180°"],
+    ["0m", 100, 95, 85, 92, 98],
+    ["10m", 95, 88, 75, 85, 93],
+    ["20m", 85, 78, 62, 75, 83],
+    ["30m", 92, 85, 75, 82, 90],
+    ["40m", 98, 93, 83, 90, 96]
+  ];
+  const dataRange = sheet.getRange("A1:F6");
+  dataRange.setValues(data);
+  
+  // Create contour wireframe chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.surfaceTopViewWireframe,
+    dataRange
+  );
+  chart.setPosition("A8");
+  chart.getTitle().setText("Signal Strength Map (Contour Wireframe)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.right);
+}
+```
+
 ## Region map chart
 
 Region map charts, also called filled map charts, display values across geographical regions.
@@ -1547,6 +1755,99 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+#### Clustered cone column chart
+
+:::image type="content" source="../../images/cone-column-clustered-chart.png" alt-text="A clustered 3D cone column chart comparing target and achieved values side by side.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Target", "Achieved"],
+    ["Q1", 100000, 95000],
+    ["Q2", 120000, 125000],
+    ["Q3", 130000, 128000],
+    ["Q4", 150000, 158000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered cone column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneColClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Quarterly Performance (Clustered 3D Cone)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked cone column chart
+
+:::image type="content" source="../../images/cone-column-stacked-chart.png" alt-text="A stacked 3D cone column chart showing quarterly performance with stacked cone-shaped columns.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Target", "Achieved"],
+    ["Q1", 100000, 95000],
+    ["Q2", 120000, 125000],
+    ["Q3", 130000, 128000],
+    ["Q4", 150000, 158000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked cone column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneColStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Quarterly Performance (Stacked 3D Cone)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked cone column chart
+
+:::image type="content" source="../../images/cone-column-stacked-100-chart.png" alt-text="A 100% stacked 3D cone column chart showing quarterly performance as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Target", "Achieved"],
+    ["Q1", 100000, 95000],
+    ["Q2", 120000, 125000],
+    ["Q3", 130000, 128000],
+    ["Q4", 150000, 158000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked cone column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneColStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Quarterly Performance (100% Stacked 3D Cone)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
 ### Cylinder column chart
 
 :::image type="content" source="../../images/cylinder-column-chart.png" alt-text="A 3D cylinder column chart displaying product sales with cylindrical columns.":::
@@ -1578,6 +1879,99 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+#### Clustered cylinder column chart
+
+:::image type="content" source="../../images/cylinder-column-clustered-chart.png" alt-text="A clustered 3D cylinder column chart comparing product sales across multiple years.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered cylinder column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderColClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (Clustered 3D Cylinder)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked cylinder column chart
+
+:::image type="content" source="../../images/cylinder-column-stacked-chart.png" alt-text="A stacked 3D cylinder column chart showing product sales with stacked cylindrical columns.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked cylinder column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderColStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (Stacked 3D Cylinder)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked cylinder column chart
+
+:::image type="content" source="../../images/cylinder-column-stacked-100-chart.png" alt-text="A 100% stacked 3D cylinder column chart showing product sales as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked cylinder column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderColStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (100% Stacked 3D Cylinder)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
 ### Pyramid column chart
 
 :::image type="content" source="../../images/pyramid-colum-chart.png" alt-text="A 3D pyramid column chart showing organizational hierarchy with pyramid-shaped columns.":::
@@ -1606,6 +2000,424 @@ function main(workbook: ExcelScript.Workbook) {
   chart.getTitle().setText("Organizational Hierarchy (3D Pyramid)");
   
   chart.getLegend().setVisible(false);
+}
+```
+
+#### Clustered pyramid column chart
+
+:::image type="content" source="../../images/pyramid-column-clustered-chart.png" alt-text="A clustered 3D pyramid column chart comparing organizational hierarchy across multiple years.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered pyramid column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidColClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (Clustered 3D Pyramid)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked pyramid column chart
+
+:::image type="content" source="../../images/pyramid-column-stacked-chart.png" alt-text="A stacked 3D pyramid column chart showing organizational hierarchy with stacked pyramid-shaped columns.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked pyramid column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidColStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (Stacked 3D Pyramid)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked pyramid column chart
+
+:::image type="content" source="../../images/pyramid-column-stacked-100-chart.png" alt-text="A 100% stacked 3D pyramid column chart showing organizational hierarchy as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked pyramid column chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidColStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (100% Stacked 3D Pyramid)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+### Cone bar charts
+
+#### Clustered cone bar chart
+
+:::image type="content" source="../../images/cone-bar-clustered-chart.png" alt-text="A clustered 3D cone bar chart comparing target and achieved values side by side.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Target", "Achieved"],
+    ["Q1", 100000, 95000],
+    ["Q2", 120000, 125000],
+    ["Q3", 130000, 128000],
+    ["Q4", 150000, 158000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered cone bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneBarClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Quarterly Performance (Clustered 3D Cone Bar)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked cone bar chart
+
+:::image type="content" source="../../images/cone-bar-stacked-chart.png" alt-text="A stacked 3D cone bar chart showing quarterly revenue by source with stacked cone-shaped bars.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Product Sales", "Services"],
+    ["Q1", 65000, 35000],
+    ["Q2", 70000, 55000],
+    ["Q3", 68000, 60000],
+    ["Q4", 72000, 86000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked cone bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneBarStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Quarterly Revenue by Source (Stacked 3D Cone Bar)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked cone bar chart
+
+:::image type="content" source="../../images/cone-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D cone bar chart showing revenue mix by quarter as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Product Sales", "Services"],
+    ["Q1", 65000, 35000],
+    ["Q2", 70000, 55000],
+    ["Q3", 68000, 60000],
+    ["Q4", 72000, 86000]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked cone bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.coneBarStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Revenue Mix by Quarter (100% Stacked 3D Cone Bar)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+### Cylinder bar charts
+
+#### Clustered cylinder bar chart
+
+:::image type="content" source="../../images/cylinder-bar-clustered-chart.png" alt-text="A clustered 3D cylinder bar chart comparing product sales across multiple years.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered cylinder bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderBarClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (Clustered 3D Cylinder Bar)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked cylinder bar chart
+
+:::image type="content" source="../../images/cylinder-bar-stacked-chart.png" alt-text="A stacked 3D cylinder bar chart showing product sales with stacked cylindrical bars.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked cylinder bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderBarStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (Stacked 3D Cylinder Bar)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked cylinder bar chart
+
+:::image type="content" source="../../images/cylinder-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D cylinder bar chart showing product sales as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Product", "2023", "2024"],
+    ["Laptops", 850, 920],
+    ["Tablets", 720, 780],
+    ["Phones", 640, 710],
+    ["Monitors", 580, 650]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked cylinder bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.cylinderBarStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Product Sales by Year (100% Stacked 3D Cylinder Bar)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+### Pyramid bar charts
+
+#### Clustered pyramid bar chart
+
+:::image type="content" source="../../images/pyramid-bar-clustered-chart.png" alt-text="A clustered 3D pyramid bar chart comparing organizational hierarchy across multiple years.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create clustered pyramid bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidBarClustered,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (Clustered 3D Pyramid Bar)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### Stacked pyramid bar chart
+
+:::image type="content" source="../../images/pyramid-bar-stacked-chart.png" alt-text="A stacked 3D pyramid bar chart showing organizational hierarchy with stacked pyramid-shaped bars.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create stacked pyramid bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidBarStacked,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (Stacked 3D Pyramid Bar)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
+#### 100% stacked pyramid bar chart
+
+:::image type="content" source="../../images/pyramid-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D pyramid bar chart showing organizational hierarchy as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Level", "2023", "2024"],
+    ["Executive", 5, 6],
+    ["Senior Management", 25, 28],
+    ["Middle Management", 120, 135],
+    ["Staff", 450, 480]
+  ];
+  const dataRange = sheet.getRange("A1:C5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked pyramid bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.pyramidBarStacked100,
+    dataRange
+  );
+  chart.setPosition("D1");
+  chart.getTitle().setText("Organizational Hierarchy by Year (100% Stacked 3D Pyramid Bar)");
+  
+  // Label the series with year names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("2023");
+  seriesCollection[1].setName("2024");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
 }
 ```
 
