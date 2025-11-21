@@ -686,13 +686,13 @@ function main(workbook: ExcelScript.Workbook) {
   const sheet = workbook.getActiveWorksheet();
   
   // Add sample data.
-  const data = [
-    ["Year", "Solar", "Wind", "Hydro", "Geothermal"],
-    [2019, 120, 150, 180, 40],
-    [2020, 145, 175, 185, 45],
-    [2021, 175, 205, 190, 50],
-    [2022, 210, 240, 195, 55],
-    [2023, 250, 280, 200, 60]
+    const data = [
+    ["", "Solar", "Wind", "Hydro", "Geothermal"],
+    ["2020", 150, 120, 200, 30],
+    ["2021", 180, 145, 205, 35],
+    ["2022", 220, 175, 210, 40],
+    ["2023", 270, 210, 215, 48],
+    ["2024", 330, 250, 220, 55]
   ];
   const dataRange = sheet.getRange("A1:E6");
   dataRange.setValues(data);
@@ -704,6 +704,13 @@ function main(workbook: ExcelScript.Workbook) {
   );
   chart.setPosition("A8");
   chart.getTitle().setText("Renewable Energy Mix (% Distribution)");
+  
+  // Label the series with energy source names.
+  const seriesCollection = chart.getSeries();
+  seriesCollection[0].setName("Solar");
+  seriesCollection[1].setName("Wind");
+  seriesCollection[2].setName("Hydro");
+  seriesCollection[3].setName("Geothermal");
   
   chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.top);
 }
@@ -1258,7 +1265,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Treemap chart
+## Treemap charts
 
 Treemap charts display hierarchical data as nested rectangles, with size representing values.
 
@@ -1297,7 +1304,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Sunburst chart
+## Sunburst charts
 
 Sunburst charts display hierarchical data in concentric circles, with each level represented by a ring.
 
@@ -1335,7 +1342,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Waterfall chart
+## Waterfall charts
 
 Waterfall charts show how an initial value is affected by positive and negative values, displaying the cumulative effect.
 
@@ -1372,7 +1379,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Funnel chart
+## Funnel charts
 
 Funnel charts show progressive reduction of data through stages. Use them for sales and conversion analysis.
 
@@ -1404,7 +1411,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Box and whisker chart
+## Box and whisker charts
 
 Box and whisker charts show the distribution of data through quartiles. They highlight the median and outliers.
 
@@ -1453,7 +1460,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Histogram chart
+## Histogram charts
 
 Histogram charts display the distribution of numerical data by grouping values into bins.
 
@@ -1506,7 +1513,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Pareto chart
+## Pareto charts
 
 Pareto charts combine column and line charts to show both individual values and cumulative totals. They follow the 80/20 principle.
 
@@ -1677,7 +1684,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Region map chart
+## Region map charts
 
 Region map charts, also called filled map charts, display values across geographical regions.
 
@@ -1791,7 +1798,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## 3D chart variations
 
-### Cone column chart
+These chart types display data with three-dimensional visual effects using cone, cylinder, and pyramid shapes.
+
+### Cone column charts
+
+#### Cone column chart
 
 :::image type="content" source="../../images/cone-column-chart.png" alt-text="A 3D cone column chart showing quarterly performance with cone-shaped columns.":::
 
@@ -1915,7 +1926,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Cylinder column chart
+### Cylinder column charts
+
+#### Cylinder column chart
 
 :::image type="content" source="../../images/cylinder-column-chart.png" alt-text="A 3D cylinder column chart displaying product sales with cylindrical columns.":::
 
@@ -2039,7 +2052,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### Pyramid column chart
+### Pyramid column charts
+
+#### Pyramid column chart
 
 :::image type="content" source="../../images/pyramid-column-chart.png" alt-text="A 3D pyramid column chart showing organizational hierarchy with pyramid-shaped columns.":::
 
