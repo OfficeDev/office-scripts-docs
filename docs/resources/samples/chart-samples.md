@@ -7,10 +7,10 @@ ms.localizationpriority: medium
 
 # Charts: Create and customize Excel charts with Office Scripts
 
-This article demonstrates how to create every type of Excel chart supported by Office Scripts. Each sample includes data and showcases APIs specific to that chart type. Use these samples as starting points for your own charting solutions.
+This article demonstrates how to create every type of Excel chart that Office Scripts supports. Each sample includes data and showcases APIs specific to that chart type. Use these samples as starting points for your own charting solutions.
 
 > [!TIP]
-> Run each sample on an empty worksheet for the best results.
+> For the best results, run each sample on an empty worksheet.
 
 ## Column charts
 
@@ -18,7 +18,7 @@ Column charts display data as vertical bars, making them ideal for comparing val
 
 ### Column clustered chart
 
-This sample creates a clustered column chart comparing quarterly sales across different products.
+This sample creates a clustered column chart that compares quarterly sales across different products.
 
 :::image type="content" source="../../images/column-clustered-chart.png" alt-text="A clustered column chart showing quarterly sales data for laptops, tablets, and phones across four quarters.":::
 
@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Column stacked chart
 
-This sample creates a stacked column chart showing composition of sales by region.
+This sample creates a stacked column chart that shows the composition of sales by region.
 
 :::image type="content" source="../../images/column-stacked-chart.png" alt-text="A stacked column chart displaying regional sales contributions from North, South, East, and West regions across four months.":::
 
@@ -87,7 +87,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Column stacked 100% chart
 
-This sample creates a 100% stacked column chart showing percentage distribution.
+This sample creates a 100% stacked column chart that shows the percentage distribution.
 
 :::image type="content" source="../../images/column-stacked-100-chart.png" alt-text="A 100% stacked column chart showing the percentage distribution of desktop, mobile, and tablet usage across four quarters.":::
 
@@ -118,11 +118,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Bar charts
 
-Bar charts display data as horizontal bars, useful when category names are long or you have many categories.
+Bar charts display data as horizontal bars. They're useful when category names are long or you have many categories.
 
 ### Bar clustered chart
 
-This sample creates a clustered bar chart comparing employee performance ratings.
+This sample creates a clustered bar chart that compares employee performance ratings.
 
 :::image type="content" source="../../images/bar-clustered-chart.png" alt-text="A clustered bar chart comparing technical, communication, and leadership ratings for five employees.":::
 
@@ -189,11 +189,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Line charts
 
-Line charts show trends over time, perfect for displaying continuous data.
+Line charts show trends over time. They're perfect for displaying continuous data.
 
 ### Line chart
 
-This sample creates a basic line chart showing temperature trends.
+This sample creates a basic line chart that shows temperature trends.
 
 :::image type="content" source="../../images/line-chart.png" alt-text="A line chart displaying average monthly temperature trends throughout the year.":::
 
@@ -309,11 +309,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Pie charts
 
-Pie charts show proportional relationships in a dataset, displaying each value as a slice of the whole.
+Pie charts show proportional relationships in a dataset. Each value appears as a slice of the whole.
 
 ### Pie chart
 
-This sample creates a pie chart showing market share distribution.
+This sample creates a pie chart that shows market share distribution.
 
 :::image type="content" source="../../images/pie-chart.png" alt-text="A pie chart displaying market share distribution with percentage labels for five companies.":::
 
@@ -542,7 +542,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Scatter (XY) charts
 
-Scatter charts show relationships between two numerical variables, ideal for correlation analysis.
+Scatter charts show relationships between two numerical variables. Use them for correlation analysis.
 
 ### Scatter chart
 
@@ -762,7 +762,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Stock charts
 
-Stock charts display financial data with high, low, close (and optionally open and volume) values.
+Stock charts display financial data with high, low, and close values. They can also include open and volume values.
 
 ### Stock HLC chart
 
@@ -917,7 +917,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Radar charts
 
-Radar charts display multivariate data on axes starting from the same point, useful for comparing multiple variables.
+Radar charts display multivariate data on axes that start from the same point. They're useful for comparing multiple variables.
 
 ### Radar chart
 
@@ -1133,7 +1133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Funnel chart
 
-Funnel charts show progressive reduction of data through stages, commonly used in sales and conversion analysis.
+Funnel charts show progressive reduction of data through stages. Use them for sales and conversion analysis.
 
 :::image type="content" source="../../images/funnel-chart.png" alt-text="A funnel chart displaying sales conversion stages from website visitors to completed purchases.":::
 
@@ -1165,7 +1165,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Box and whisker chart
 
-Box and whisker charts show distribution of data through quartiles, highlighting median and outliers.
+Box and whisker charts show distribution of data through quartiles. They highlight the median and outliers.
 
 :::image type="content" source="../../images/box-whisker-chart.png" alt-text="A box and whisker chart showing response time distribution by region with quartiles and outliers.":::
 
@@ -1267,7 +1267,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Pareto chart
 
-Pareto charts combine column and line charts to show both individual values and cumulative totals, following the 80/20 principle.
+Pareto charts combine column and line charts to show both individual values and cumulative totals. They follow the 80/20 principle.
 
 :::image type="content" source="../../images/pareto-chart.png" alt-text="A pareto chart analyzing defect types with columns showing frequency and a line showing cumulative percentage.":::
 
@@ -1304,7 +1304,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Surface charts
 
-Surface charts display trends in values across two dimensions in a continuous curve, useful for finding optimal combinations.
+Surface charts display trends in values across two dimensions in a continuous curve. They're useful for finding optimal combinations.
 
 ### Surface chart
 
@@ -1404,7 +1404,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Region map chart
 
-Region map charts (also called filled map charts) display values across geographical regions.
+Region map charts, also called filled map charts, display values across geographical regions.
 
 :::image type="content" source="../../images/region-map-chart.png" alt-text="A region map chart showing sales by state with color-coded geographical regions.":::
 
@@ -1481,7 +1481,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Pie of pie chart
 
-Pie of pie charts display a secondary pie chart showing details of smaller slices.
+Pie of pie charts display a secondary pie chart that shows details of smaller slices.
 
 :::image type="content" source="../../images/pie-pie-chart.png" alt-text="A pie of pie chart showing market segment analysis with a secondary pie expanding smaller segments.":::
 
@@ -1670,7 +1670,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## See also
 
-- [Chart object (Office Scripts API)](https://learn.microsoft.com/javascript/api/office-scripts/excelscript/excelscript.chart)
-- [ChartType enum (Office Scripts API)](https://learn.microsoft.com/javascript/api/office-scripts/excelscript/excelscript.charttype)
+- [Chart object (Office Scripts API)](/javascript/api/office-scripts/excelscript/excelscript.chart)
+- [ChartType enum (Office Scripts API)](/javascript/api/office-scripts/excelscript/excelscript.charttype)
 - [Office Scripts samples and scenarios](samples-overview.md)
 - [Tutorial: Create and format an Excel table](../../tutorials/excel-tutorial.md)
