@@ -2041,7 +2041,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### Pyramid column chart
 
-:::image type="content" source="../../images/pyramid-colum-chart.png" alt-text="A 3D pyramid column chart showing organizational hierarchy with pyramid-shaped columns.":::
+:::image type="content" source="../../images/pyramid-column-chart.png" alt-text="A 3D pyramid column chart showing organizational hierarchy with pyramid-shaped columns.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
