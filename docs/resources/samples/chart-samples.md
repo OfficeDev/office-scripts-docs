@@ -799,7 +799,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 This sample creates a scatter chart with smooth connecting lines but no data point markers.
 
-:::image type="content" source="../../images/scatter-smooth-no-markers-chart.png" alt-text="A scatter chart with smooth curved lines showing distance over time without data point markers.":::
+:::image type="content" source="../../images/scatter-smooth-lines-no-markers-chart.png" alt-text="A scatter chart with smooth curved lines showing distance over time without data point markers.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1757,7 +1757,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered cone column chart
 
-:::image type="content" source="../../images/cone-column-clustered-chart.png" alt-text="A clustered 3D cone column chart comparing target and achieved values side by side.":::
+:::image type="content" source="../../images/clustered-cone-column-chart.png" alt-text="A clustered 3D cone column chart comparing target and achieved values side by side.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1788,7 +1788,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked cone column chart
 
-:::image type="content" source="../../images/cone-column-stacked-chart.png" alt-text="A stacked 3D cone column chart showing quarterly performance with stacked cone-shaped columns.":::
+:::image type="content" source="../../images/stacked-cone-column-chart.png" alt-text="A stacked 3D cone column chart showing quarterly performance with stacked cone-shaped columns.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1819,7 +1819,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked cone column chart
 
-:::image type="content" source="../../images/cone-column-stacked-100-chart.png" alt-text="A 100% stacked 3D cone column chart showing quarterly performance as percentages.":::
+:::image type="content" source="../../images/100-stacked-cone-column-chart.png" alt-text="A 100% stacked 3D cone column chart showing quarterly performance as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1881,7 +1881,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered cylinder column chart
 
-:::image type="content" source="../../images/cylinder-column-clustered-chart.png" alt-text="A clustered 3D cylinder column chart comparing product sales across multiple years.":::
+:::image type="content" source="../../images/clustered-cylinder-column-chart.png" alt-text="A clustered 3D cylinder column chart comparing product sales across multiple years.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1912,7 +1912,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked cylinder column chart
 
-:::image type="content" source="../../images/cylinder-column-stacked-chart.png" alt-text="A stacked 3D cylinder column chart showing product sales with stacked cylindrical columns.":::
+:::image type="content" source="../../images/stacked-cylinder-column-chart.png" alt-text="A stacked 3D cylinder column chart showing product sales with stacked cylindrical columns.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -1943,7 +1943,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked cylinder column chart
 
-:::image type="content" source="../../images/cylinder-column-stacked-100-chart.png" alt-text="A 100% stacked 3D cylinder column chart showing product sales as percentages.":::
+:::image type="content" source="../../images/100-stacked-cylinder-column-chart.png" alt-text="A 100% stacked 3D cylinder column chart showing product sales as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2005,7 +2005,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered pyramid column chart
 
-:::image type="content" source="../../images/pyramid-column-clustered-chart.png" alt-text="A clustered 3D pyramid column chart comparing organizational hierarchy across multiple years.":::
+:::image type="content" source="../../images/clustered-pyramid-column-chart.png" alt-text="A clustered 3D pyramid column chart comparing organizational hierarchy across multiple years.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2041,7 +2041,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked pyramid column chart
 
-:::image type="content" source="../../images/pyramid-column-stacked-chart.png" alt-text="A stacked 3D pyramid column chart showing organizational hierarchy with stacked pyramid-shaped columns.":::
+:::image type="content" source="../../images/stacked-pyramid-column-chart.png" alt-text="A stacked 3D pyramid column chart showing organizational hierarchy with stacked pyramid-shaped columns.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2077,7 +2077,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked pyramid column chart
 
-:::image type="content" source="../../images/pyramid-column-stacked-100-chart.png" alt-text="A 100% stacked 3D pyramid column chart showing organizational hierarchy as percentages.":::
+:::image type="content" source="../../images/100-stacked-pyramid-column-chart.png" alt-text="A 100% stacked 3D pyramid column chart showing organizational hierarchy as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2115,7 +2115,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered cone bar chart
 
-:::image type="content" source="../../images/cone-bar-clustered-chart.png" alt-text="A clustered 3D cone bar chart comparing target and achieved values side by side.":::
+:::image type="content" source="../../images/clustered-cone-bar-chart.png" alt-text="A clustered 3D cone bar chart comparing target and achieved values side by side.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2146,7 +2146,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked cone bar chart
 
-:::image type="content" source="../../images/cone-bar-stacked-chart.png" alt-text="A stacked 3D cone bar chart showing quarterly revenue by source with stacked cone-shaped bars.":::
+:::image type="content" source="../../images/stacked-cone-bar-chart.png" alt-text="A stacked 3D cone bar chart showing quarterly revenue by source with stacked cone-shaped bars.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2177,7 +2177,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked cone bar chart
 
-:::image type="content" source="../../images/cone-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D cone bar chart showing revenue mix by quarter as percentages.":::
+:::image type="content" source="../../images/100-stacked-cone-bar-chart.png" alt-text="A 100% stacked 3D cone bar chart showing revenue mix by quarter as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2210,7 +2210,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered cylinder bar chart
 
-:::image type="content" source="../../images/cylinder-bar-clustered-chart.png" alt-text="A clustered 3D cylinder bar chart comparing product sales across multiple years.":::
+:::image type="content" source="../../images/clustered-cylinder-bar-chart.png" alt-text="A clustered 3D cylinder bar chart comparing product sales across multiple years.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2241,7 +2241,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked cylinder bar chart
 
-:::image type="content" source="../../images/cylinder-bar-stacked-chart.png" alt-text="A stacked 3D cylinder bar chart showing product sales with stacked cylindrical bars.":::
+:::image type="content" source="../../images/stacked-cylinder-bar-chart.png" alt-text="A stacked 3D cylinder bar chart showing product sales with stacked cylindrical bars.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2277,7 +2277,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked cylinder bar chart
 
-:::image type="content" source="../../images/cylinder-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D cylinder bar chart showing product sales as percentages.":::
+:::image type="content" source="../../images/100-stacked-cylinder-bar-chart.png" alt-text="A 100% stacked 3D cylinder bar chart showing product sales as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2315,7 +2315,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Clustered pyramid bar chart
 
-:::image type="content" source="../../images/pyramid-bar-clustered-chart.png" alt-text="A clustered 3D pyramid bar chart comparing organizational hierarchy across multiple years.":::
+:::image type="content" source="../../images/clustered-pyramid-bar-chart.png" alt-text="A clustered 3D pyramid bar chart comparing organizational hierarchy across multiple years.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2351,7 +2351,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### Stacked pyramid bar chart
 
-:::image type="content" source="../../images/pyramid-bar-stacked-chart.png" alt-text="A stacked 3D pyramid bar chart showing organizational hierarchy with stacked pyramid-shaped bars.":::
+:::image type="content" source="../../images/stacked-pyramid-bar-chart.png" alt-text="A stacked 3D pyramid bar chart showing organizational hierarchy with stacked pyramid-shaped bars.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -2387,7 +2387,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### 100% stacked pyramid bar chart
 
-:::image type="content" source="../../images/pyramid-bar-stacked-100-chart.png" alt-text="A 100% stacked 3D pyramid bar chart showing organizational hierarchy as percentages.":::
+:::image type="content" source="../../images/100-stacked-pyramid-bar-chart.png" alt-text="A 100% stacked 3D pyramid bar chart showing organizational hierarchy as percentages.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
