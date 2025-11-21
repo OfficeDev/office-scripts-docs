@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 Office Scripts use the TypeScript language. For the most part, any TypeScript or JavaScript code will work in Office Scripts. However, there are a few restrictions enforced by the Code Editor to ensure your script works consistently and as intended with your Excel workbook.
 
 > [!NOTE]
-> Office Scripts uses TypeScript version 4.0.3. TypeScript features added in subsequent versions are not supposed in Office Scripts.
+> Office Scripts uses TypeScript version 4.0.3. TypeScript features added in subsequent versions are not supported in Office Scripts.
 
 ## No 'any' type in Office Scripts
 
