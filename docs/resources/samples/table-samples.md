@@ -194,3 +194,9 @@ function main(workbook: ExcelScript.Workbook) {
 | Jan | 45 | 5 | 225 |
 | Feb | 45 | 3 | 135 |
 | Mar | 45 | 6 | 270 |
+
+## See also
+
+* [Chart samples](chart-samples.md)
+* [Office Scripts samples and scenarios](samples-overview.md)
+* [Tutorial: Create and format an Excel table](../../tutorials/excel-tutorial.md)
