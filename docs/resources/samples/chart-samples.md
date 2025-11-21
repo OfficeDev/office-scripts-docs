@@ -189,7 +189,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### 100% stacked bar chart
 
-This sample creates a 100% stacked bar chart showing percentage distribution across categories.
+This sample creates a 100% stacked bar chart that shows the percentage distribution across categories.
 
 :::image type="content" source="../../images/100-stacked-bar-chart.png" alt-text="A 100% stacked bar chart showing quarterly sales mix by product as percentages.":::
 
@@ -1406,7 +1406,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Box and whisker chart
 
-Box and whisker charts show distribution of data through quartiles. They highlight the median and outliers.
+Box and whisker charts show the distribution of data through quartiles. They highlight the median and outliers.
 
 :::image type="content" source="../../images/box-whisker-chart.png" alt-text="A box and whisker chart showing response time distribution by region with quartiles and outliers.":::
 
