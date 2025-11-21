@@ -187,6 +187,39 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### 100% stacked bar chart
+
+This sample creates a 100% stacked bar chart showing percentage distribution across categories.
+
+:::image type="content" source="../../images/100-stacked-bar-chart.png" alt-text="A 100% stacked bar chart showing quarterly sales mix by product as percentages.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Quarter", "Product A", "Product B", "Product C", "Product D"],
+    ["Q1", 45000, 32000, 28000, 15000],
+    ["Q2", 52000, 35000, 31000, 18000],
+    ["Q3", 48000, 38000, 35000, 22000],
+    ["Q4", 56000, 42000, 38000, 24000]
+  ];
+  const dataRange = sheet.getRange("A1:E5");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked bar chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.barStacked100,
+    dataRange
+  );
+  chart.setPosition("A7");
+  chart.getTitle().setText("Quarterly Sales Mix by Product (%)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.bottom);
+}
+```
+
 ## Line charts
 
 Line charts show trends over time. They're perfect for displaying continuous data.
@@ -637,6 +670,40 @@ function main(workbook: ExcelScript.Workbook) {
   );
   chart.setPosition("A8");
   chart.getTitle().setText("Renewable Energy Production (TWh)");
+  
+  chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.top);
+}
+```
+
+### 100% stacked area chart
+
+This sample creates a 100% stacked area chart showing percentage distribution over time.
+
+:::image type="content" source="../../images/100-stacked-area-chart.png" alt-text="A 100% stacked area chart showing renewable energy mix as percentage distribution over time.":::
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const sheet = workbook.getActiveWorksheet();
+  
+  // Add sample data.
+  const data = [
+    ["Year", "Solar", "Wind", "Hydro", "Geothermal"],
+    [2019, 120, 150, 180, 40],
+    [2020, 145, 175, 185, 45],
+    [2021, 175, 205, 190, 50],
+    [2022, 210, 240, 195, 55],
+    [2023, 250, 280, 200, 60]
+  ];
+  const dataRange = sheet.getRange("A1:E6");
+  dataRange.setValues(data);
+  
+  // Create 100% stacked area chart.
+  const chart = sheet.addChart(
+    ExcelScript.ChartType.areaStacked100,
+    dataRange
+  );
+  chart.setPosition("A8");
+  chart.getTitle().setText("Renewable Energy Mix (% Distribution)");
   
   chart.getLegend().setPosition(ExcelScript.ChartLegendPosition.top);
 }
