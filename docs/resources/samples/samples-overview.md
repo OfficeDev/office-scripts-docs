@@ -1,7 +1,7 @@
 ---
 title: Office Scripts samples
 description: Available Office Scripts samples and scenarios.
-ms.date: 07/10/2025
+ms.date: 11/20/2025
 ms.localizationpriority: medium
 ---
 
@@ -23,6 +23,7 @@ This section contains Office Scripts based solutions that help end users achieve
 | Project | Details |
 |---------|---------|
 | [Ranges: Work with the grid](range-samples.md) | These samples show how to work the `Range` object, which is central to most scripts. |
+| [Chart samples](chart-samples.md) | A comprehensive collection of samples showing how to create and customize every type of Excel chart supported by Office Scripts. |
 | [Conditional formatting samples](conditional-formatting-samples.md) | These samples show how to apply different styles of conditional formatting to a range. |
 | [Data validation samples: Dropdown lists, prompts, and warning pop-ups](data-validation-samples.md) | These samples show how to use data validation to mandate specific conditions for cell data and how the user is alerted to these rules. |
 | [Date samples](javascript-dates.md) | A collection of samples that show how to translate between JavaScript and Excel date formats. |

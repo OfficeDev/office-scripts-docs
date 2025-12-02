@@ -316,5 +316,6 @@ We welcome suggestions for new samples. If there's a common scenario that would 
 ## See also
 
 * [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
+* [Chart samples](chart-samples.md)
 * [Office Scripts samples and scenarios](samples-overview.md)
 * [Tutorial: Create and format an Excel table](../../tutorials/excel-tutorial.md)
