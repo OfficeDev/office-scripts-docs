@@ -14,7 +14,7 @@ If you would prefer to get started with an interactive experience, try [Tutorial
 
 ## TypeScript: The language of Office Scripts
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
 [!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
