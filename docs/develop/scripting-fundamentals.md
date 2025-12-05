@@ -2,7 +2,7 @@
 title: Fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
 ms.topic: get-started
-ms.date: 10/24/2023
+ms.date: 12/04/2025
 ms.localizationpriority: high
 ---
 
@@ -43,7 +43,9 @@ To write a script, you need to understand how the Office Scripts APIs fit togeth
 - A **Worksheet** contains collections of those data objects that are present in the individual sheet.
 - **Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.
 
-The complete list of Office Scripts API objects is detailed in the [ExcelScript package](/javascript/api/office-scripts/excelscript).
+Office Scripts APIs use two namespaces: `OfficeScript` for APIs that are not connected to an Excel workbook, and `ExcelScript` for APIs that work with Excel workbooks.
+
+The complete list of Office Scripts API objects is detailed in the [ExcelScript](/javascript/api/office-scripts/excelscript) and [OfficeScript](/javascript/api/office-scripts/officescript) packages.
 
 ## Workbook
 
