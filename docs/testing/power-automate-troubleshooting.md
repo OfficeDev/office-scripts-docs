@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts running in Power Automate
 description: Tips, platform information, and known issues with the integration between Office Scripts and Power Automate.
 ms.topic: troubleshooting-general
-ms.date: 08/13/2024
+ms.date: 12/07/2025
 ms.localizationpriority: medium
 ---
 
@@ -72,7 +72,7 @@ When building the **Run script** step of a Power Automate flow, you need to sele
 
 :::image type="content" source="../images/power-automate-file-browser.png" alt-text="The Power Automate Run script action showing the Show Picker file browser option.":::
 
-For more context on the Power Automate limitation and a discussion of potential workarounds for the dynamic selection of workbooks, see [this thread in the Microsoft Power Automate Community](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#).
+For more context on the Power Automate limitation and a discussion of potential workarounds for the dynamic selection of workbooks, see [this thread in the Microsoft Power Automate Community](https://ideas.powerautomate.com/d365community/idea/08e46966-4458-424a-ba53-7158080134dd).
 
 ## Pass entire arrays as script parameters
 
