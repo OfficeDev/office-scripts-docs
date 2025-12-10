@@ -2,7 +2,7 @@
 title: Fundamentals for Office Scripts in Excel
 description: Object model information and other basics to learn before writing Office Scripts.
 ms.topic: get-started
-ms.date: 10/24/2023
+ms.date: 12/04/2025
 ms.localizationpriority: high
 ---
 
@@ -14,7 +14,7 @@ If you would prefer to get started with an interactive experience, try [Tutorial
 
 ## TypeScript: The language of Office Scripts
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs/home.html), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). If you're familiar with JavaScript, your knowledge will carry over because much of the code is the same in both languages. We recommend you have some beginner-level programming knowledge before starting your Office Scripts coding journey. The following resources can help you understand the coding side of Office Scripts.
 
 [!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
@@ -43,7 +43,9 @@ To write a script, you need to understand how the Office Scripts APIs fit togeth
 - A **Worksheet** contains collections of those data objects that are present in the individual sheet.
 - **Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.
 
-The complete list of Office Scripts API objects is detailed in the [ExcelScript package](/javascript/api/office-scripts/excelscript).
+Office Scripts APIs use two namespaces: `OfficeScript` for APIs that are not connected to an Excel workbook, and `ExcelScript` for APIs that work with Excel workbooks.
+
+The complete list of Office Scripts API objects is detailed in the [ExcelScript](/javascript/api/office-scripts/excelscript) and [OfficeScript](/javascript/api/office-scripts/officescript) packages.
 
 ## Workbook
 

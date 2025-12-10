@@ -14,7 +14,7 @@ Office Scripts use the TypeScript language. For the most part, any TypeScript or
 
 ## No 'any' type in Office Scripts
 
-Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) is optional in TypeScript, because the types can be inferred. However, Office Scripts requires that a variable can't be of [type any](https://www.typescriptlang.org/docs/handbook/basic-types.html#any). Both explicit and implicit `any` are not allowed in Office Scripts. These cases are reported as errors.
+Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) is optional in TypeScript, because the types can be inferred. However, Office Scripts requires that a variable can't be of [type any](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any). Both explicit and implicit `any` are not allowed in Office Scripts. These cases are reported as errors.
 
 ### Explicit `any`
 
@@ -26,7 +26,7 @@ You cannot explicitly declare a variable to be of type `any` in Office Scripts (
 
 In the previous screenshot, `[2, 14] Explicit Any is not allowed` indicates that line #2, column #14 defines `any` type. This helps you locate the error.
 
-To get around this issue, always define the type of the variable. If you are uncertain about the type of a variable, you can use a [union type](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html). This can be useful for variables that hold `Range` values, which can be of type `string`, `number`, or `boolean` (the type for `Range` values is a union of those: `string | number | boolean`).
+To get around this issue, always define the type of the variable. If you are uncertain about the type of a variable, you can use a [union type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types). This can be useful for variables that hold `Range` values, which can be of type `string`, `number`, or `boolean` (the type for `Range` values is a union of those: `string | number | boolean`).
 
 ### Implicit `any`
 
@@ -41,7 +41,7 @@ The most common case on any implicit `any` is in a variable declaration, such as
 
 ## No inheriting Office Script classes or interfaces
 
-Classes and interfaces that are created in your Office Script cannot [extend or implement](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) Office Scripts classes or interfaces. In other words, nothing in the `ExcelScript` namespace can have subclasses or subinterfaces.
+Classes and interfaces that are created in your Office Script cannot [extend or implement](https://www.typescriptlang.org/docs/handbook/2/classes.html#class-heritage) Office Scripts classes or interfaces. In other words, nothing in the `ExcelScript` namespace can have subclasses or subinterfaces.
 
 ## Incompatible TypeScript functions
 
