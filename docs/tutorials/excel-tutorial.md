@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create and format an Excel table"
 description: A tutorial about the basics of Office Scripts, including recording scripts with the Action Recorder and writing data to a workbook.
-ms.date: 09/20/2024
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -31,7 +31,7 @@ First, you'll need some data and a small starting script.
     |Grapefruits |900 |700 |
 
 1. Open the **Automate** tab. If you don't see the **Automate** tab, check the ribbon overflow by selecting the drop-down arrow. If it's still not there, follow the advice in the article [Troubleshoot Office Scripts](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
-1. Select the **Record Actions** button.
+1. Select **New Script** > **Create from Recording** button.
 1. Select cells **A2:C2** (the "Oranges" row) and set the fill color to orange.
 1. Stop the recording by selecting the **Stop** button.
 

@@ -1,13 +1,15 @@
 ---
 title: JavaScript Date samples
 description: A collection of samples on how to use JavaScript Date objects with Excel.
-ms.date: 09/08/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # JavaScript `Date` samples
 
 These samples show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Write the current date and time
 

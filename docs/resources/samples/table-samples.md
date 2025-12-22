@@ -1,13 +1,15 @@
 ---
 title: Table samples
 description: A collection of samples showing how to interact with Excel tables.
-ms.date: 01/29/2025
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Table samples
 
 These samples showcase common interactions with Excel tables.
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Create a sorted table
 

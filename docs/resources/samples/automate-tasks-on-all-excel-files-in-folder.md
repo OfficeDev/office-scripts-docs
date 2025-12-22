@@ -1,7 +1,7 @@
 ---
 title: Run a script on all Excel files in a folder
 description: Learn how to run a script on all the Excel files in a folder on OneDrive for Business.
-ms.date: 11/30/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ Download <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/d
 
 ## Sample code: Add formatting and insert comment
 
-This is the script that runs on each individual workbook. In Excel, use **Automate** > **New Script** to paste the code and save the script. Save it as **Review script** and try the sample yourself!
+This is the script that runs on each individual workbook. In Excel, use **Automate** > **New Script** > **Create in Code Editor** to paste the code and save the script. Save it as **Review script** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

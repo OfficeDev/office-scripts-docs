@@ -1,7 +1,7 @@
 ---
 title: Save and email as a PDF
 description: Use Office Scripts to save a worksheet as a PDF and then email that PDF.
-ms.date: 12/04/2025
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -19,6 +19,8 @@ Use Office Scripts to save a worksheet as a PDF and email it to yourself or your
 1. Run the script.
 
 ## Sample code: Save as a PDF and send via email
+
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 /**

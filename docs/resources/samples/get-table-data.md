@@ -1,7 +1,7 @@
 ---
 title: Output Excel data as JSON
 description: Learn how to output Excel table data as JSON to use in Power Automate.
-ms.date: 11/04/2022
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ A variation of this sample also includes the hyperlinks in one of the table colu
 
 ## Sample code: Return table data as JSON
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 > [!NOTE]
 > You can change the `interface TableData` structure to match your table columns. Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample. For more information about working with JSON, read [Use JSON to pass data to and from Office Scripts](../../develop/use-json.md).

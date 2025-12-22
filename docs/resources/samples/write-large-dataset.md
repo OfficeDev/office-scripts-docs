@@ -1,7 +1,7 @@
 ---
 title: Write a large dataset
 description: Learn how to split a large dataset into smaller write operations in Office Scripts.
-ms.date: 02/08/2024
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -12,6 +12,8 @@ The `Range.setValues()` API puts data in a range. This API has limitations depen
 The first part of the sample shows how to write a large dataset in Excel. The second part expands the example to be part of a Power Automate flow. This is necessary if your script takes longer to run than the [Power Automate action timeout](../../testing/platform-limits.md#power-automate).
 
 For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Sample 1: Write a large dataset in batches
 
@@ -155,7 +157,7 @@ For this sample, you'll need to complete the following steps.
 1. Create a second workbook in OneDrive named **TargetWorkbook.xlsx**.
 1. Open **SampleData.xlsx** with Excel.
 1. Add sample data. You can use the script from the [Write a large dataset in batches](#sample-1-write-a-large-dataset-in-batches) section to generate this data.
-1. Create and save both of the following scripts. Use **Automate** > **New Script** to paste the code and save the scripts with the suggested names.
+1. Create and save both of the following scripts. Use **Automate** > **New Script** > **Create in Code Editor** to paste the code and save the scripts with the suggested names.
 1. Follow the steps under [Power Automate flow: Read and write data in a loop](#power-automate-flow-read-and-write-data-in-a-loop) to create the flow.
 
 ### Sample code: Read selected rows

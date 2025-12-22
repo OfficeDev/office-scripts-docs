@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Analyze web downloads'
 description: A sample that takes raw internet traffic data in an Excel workbook and determines the origin location, before organizing that information into a table.
-ms.date: 08/08/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -28,7 +28,7 @@ You'll develop a script that analyzes weekly downloads data in the active worksh
 
 1. Open the workbook in Excel.
 
-1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
