@@ -1,7 +1,7 @@
 ---
 title: Add images to a workbook
 description: Learn how to use Office Scripts to add an image to a workbook and copy it across sheets.
-ms.date: 04/27/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +26,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Copy an image across worksheets
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 /**

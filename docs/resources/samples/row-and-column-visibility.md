@@ -1,13 +1,15 @@
 ---
 title: Row and column visibility samples
 description: A collection of samples that show the basics of visibility in Excel.
-ms.date: 09/08/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Row and column visibility samples
 
 These samples demonstrate how to show, hide, and freeze rows and columns.
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Hide columns
 

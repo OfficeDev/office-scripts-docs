@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Update a spreadsheet from a Power Automate flow'
 description: A tutorial about how to use an Office Script in Power Automate through a manual trigger.
-ms.date: 11/29/2023
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -26,7 +26,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 ## Create an Office Script
 
-1. Go to the **Automate** tab and select **New Script**.
+1. Go to the **Automate** tab and select **New Script** > **Create in Code Editor**.
 
 1. Replace the default script with the following script. This script adds the current date and time to the first two cells of the **TutorialWorksheet** worksheet.
 

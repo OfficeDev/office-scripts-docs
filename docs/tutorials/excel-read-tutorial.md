@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Clean and normalize Excel workbook data'
 description: An Office Scripts tutorial about reading data from workbooks and evaluating that data in the script.
-ms.date: 11/29/2023
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -37,7 +37,7 @@ Over the rest of the tutorial, you'll normalize this data using a script. First,
     |10/25/2019 |Checking |Best For You Organics Company | -85.64 | |
     |11/01/2019 |Checking |External Deposit | |1000 |
 
-1. Go to the **Automate** tab and select **New Script**.
+1. Go to the **Automate** tab and select **New Script** > **Create in Code Editor**.
 1. Clean up the formatting. This is a financial document, so have your script change the number formatting in the **Debit** and **Credit** columns to show values as dollar amounts. Also have your script fit the column width to the data.
 
     Replace the script contents with the following code:

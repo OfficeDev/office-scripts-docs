@@ -1,7 +1,7 @@
 ---
 title: Set conditional formatting for cross-column comparisons
 description: Learn how to apply conditional formatting and get input from the user.
-ms.date: 09/07/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -10,6 +10,8 @@ ms.localizationpriority: medium
 This sample shows how to apply conditional formatting to a range. The conditions used are comparing values to those in an adjacent column.  Additionally, this sample uses [parameters to get user input](../../develop/user-input.md). This lets the person running the script select the range, the type of comparison, and the colors.
 
 ## Sample code: Set conditional formatting
+
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 /**

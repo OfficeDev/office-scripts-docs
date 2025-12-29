@@ -1,7 +1,7 @@
 ---
 title: Remove hyperlinks from each cell in an Excel worksheet
 description: Learn how to use Office Scripts to remove hyperlinks from each cell in an Excel worksheet.
-ms.date: 06/29/2021
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Remove hyperlinks
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

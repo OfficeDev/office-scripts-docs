@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Automated task reminders'
 description: A sample that uses Power Automate and Adaptive Cards automate task reminders in a project management spreadsheet.
-ms.date: 11/30/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -35,7 +35,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 ### Create the scripts
 
-1. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
+1. First, we need a script to get all the employees with status reports that are missing from the spreadsheet. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```TypeScript
     /**
@@ -88,7 +88,7 @@ This scenario uses [Power Automate](https://make.powerautomate.com) and [Microso
 
 1. Save the script with the name **Get People**.
 
-1. Next, we need a second script to process the status report cards and put the new information in the spreadsheet. In the Code Editor task pane, select **New Script** and paste the following script into the editor.
+1. Next, we need a second script to process the status report cards and put the new information in the spreadsheet. In the Code Editor task pane, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```TypeScript
     /**

@@ -1,0 +1,1 @@
+Run the following script in the sample workbook and try the sample yourself! Open the Code Editor by going to **Automate** > **New Script** > **Create in Code Editor**, replace the default code with the sample code you want to run, and then select **Run**.

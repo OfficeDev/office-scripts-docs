@@ -1,7 +1,7 @@
 ---
 title: Count blank rows on sheets
 description: Learn how to use Office Scripts to detect if there are any blank rows instead of data in worksheets and then report the blank row count to be used in a Power Automate flow.
-ms.date: 06/29/2021
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,6 +22,8 @@ _This sheet returns count of 4 blank rows_
 _This sheet returns count of 0 blank rows (all rows have some data)_
 
 :::image type="content" source="../../images/no-blank-rows.png" alt-text="A worksheet showing data without blank rows.":::
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Sample code: Count blank rows on a given sheet
 

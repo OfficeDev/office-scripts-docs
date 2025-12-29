@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Punch clock button'
 description: This sample adds a punch clock button and allows a user to clock in and clock out using the current time.
-ms.date: 02/07/2024
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ In this scenario, you'll create a time sheet for an employee that allows them to
 
 1. Open the workbook in Excel.
 
-1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```typescript
     /**

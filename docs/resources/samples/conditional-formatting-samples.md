@@ -1,7 +1,7 @@
 ---
 title: Conditional formatting samples
 description: A collection of Office Scripts that use different Excel conditional formatting options.
-ms.date: 12/28/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -13,6 +13,9 @@ This sample workbook contains worksheets ready to test with the sample scripts.
 
 > [!div class="nextstepaction"]
 > [Download the sample workbook](conditional-formatting-samples.xlsx)
+
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Cell value
 
