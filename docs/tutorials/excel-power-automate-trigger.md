@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Automatically save content from emails in a workbook'
 description: A tutorial about running Office Scripts for Excel through Power Automate when mail is received and passing flow data to the script.
-ms.date: 11/14/2025
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -22,7 +22,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 1. Create a new workbook named **MyWorkbook**.
 
-1. Go to the **Automate** tab and select **New Script**.
+1. Go to the **Automate** tab and select **New Script** > **Create in Code Editor**.
 
 1. Replace the existing code with the following script and select **Run**. This step sets up the workbook with consistent worksheet, table, and PivotTable names.
 
@@ -53,7 +53,7 @@ Power Automate shouldn't use [relative references](../testing/power-automate-tro
 
 Create a script that logs information from an email. You want to track which days of the week you receive the most mail and how many unique senders send that mail. Your workbook has a table with **Date**, **Day of the week**, **Email address**, and **Subject** columns. Your worksheet also has a PivotTable that pivots on the **Day of the week** and **Email address** (those are the row hierarchies). The count of unique **Subjects** is the aggregated information being displayed (the data hierarchy). The script refreshes that PivotTable after it updates the email table.
 
-1. From within the Code Editor task pane, select **New Script**.
+1. From within the Code Editor task pane, select **New Script** > **Create in Code Editor**.
 
 1. The flow that you create later in the tutorial sends the script information about each email that's received. The script needs to accept that input through parameters in the `main` function. Replace the default script with the following script.
 

@@ -1,7 +1,7 @@
 ---
 title: Record day-to-day changes in Excel and report them with a Power Automate flow
 description: Learn how to use Office Scripts and Power Automate to track value changes in a workbook
-ms.date: 11/29/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Record and report daily readings
 
-Add the following script to the sample workbook. In Excel, use **Automate** > **New Script** to paste the code and save the script. Save it as **Record daily value** and try the sample yourself!
+Add the following script to the sample workbook. In Excel, use **Automate** > **New Script** > **Create in Code Editor** to paste the code and save the script. Save it as **Record daily value** and try the sample yourself!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, newData: string): string {

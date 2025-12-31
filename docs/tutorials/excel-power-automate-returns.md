@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Send weekly email reminders based on spreadsheet data'
 description: A tutorial that shows how to send reminder emails by running Office Scripts for Excel through Power Automate.
-ms.date: 11/29/2023
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -35,7 +35,7 @@ This tutorial teaches you how to return information from an Office Script for Ex
 
 ## Create an Office Script
 
-1. Go to the **Automate** tab and select **New Script**.
+1. Go to the **Automate** tab and select **New Script** > **Create in Code Editor**.
 
 1. Name the script **Get On-Call Person**.
 

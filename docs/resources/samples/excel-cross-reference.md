@@ -1,7 +1,7 @@
 ---
 title: Cross-reference Excel files with Power Automate
 description: Learn how to use Office Scripts and Power Automate to cross-reference and format an Excel file.
-ms.date: 11/30/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ Download the following files to get ready-to-use workbooks for the sample.
 1. [event-data.xlsx](event-data.xlsx)
 1. [speaker-registrations.xlsx](speaker-registrations.xlsx)
 
-Add the following scripts to try the sample yourself! In Excel, use **Automate** > **New Script** to paste the code and save the scripts with the suggested names.
+Add the following scripts to try the sample yourself! In Excel, use **Automate** > **New Script** > **Create in Code Editor** to paste the code and save the scripts with the suggested names.
 
 ## Sample code: Get event data
 

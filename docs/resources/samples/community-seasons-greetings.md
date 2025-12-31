@@ -1,7 +1,7 @@
 ---
 title: Seasons greetings
 description: Learn how to use Office Scripts to show a singing tree in Excel.
-ms.date: 06/29/2021
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Happy tree
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 /* Original version by Leslie Black.  */

@@ -1,13 +1,15 @@
 ---
 title: 'Charts: Create and customize Excel charts with Office Scripts'
 description: A collection of code samples showing how to create and customize different types of Excel charts in Office Scripts.
-ms.date: 11/20/2025
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Charts: Create and customize Excel charts with Office Scripts
 
 This article demonstrates how to create every type of Excel chart that Office Scripts supports. Each sample includes data and showcases APIs specific to that chart type. Use these samples as starting points for your own charting solutions.
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 > [!TIP]
 > For the best results, run each sample on an empty worksheet.

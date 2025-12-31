@@ -1,13 +1,15 @@
 ---
 title: 'Ranges: Work with the grid in Office Scripts'
 description: A collection of code samples showing how to work with Excel ranges, collections of cells, in Office Scripts.
-ms.date: 12/05/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Ranges: Work with the grid in Office Scripts
 
 The following samples are simple scripts for you to try on your own workbooks. They form the building blocks to larger solutions. Expand these scripts to extend your solution and solve common problems.
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Read and log one cell
 

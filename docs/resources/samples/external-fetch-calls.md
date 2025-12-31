@@ -1,7 +1,7 @@
 ---
 title: Use external fetch calls in Office Scripts
 description: Learn how to make external API calls in Office Scripts.
-ms.date: 06/10/2022
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -14,6 +14,8 @@ Learn more about the GitHub APIs being used in the [GitHub API reference](https:
 ![Get repositories info example](../../images/git.png)
 
 ## Sample code: Get basic information about user's GitHub repositories
+
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {

@@ -1,7 +1,7 @@
 ---
 title: Create a workbook table of contents
 description: Learn how to create a table of contents with links to each worksheet.
-ms.date: 08/08/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -20,7 +20,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Create a workbook table of contents
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

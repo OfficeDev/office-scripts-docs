@@ -1,7 +1,7 @@
 ---
 title: Move rows across tables using Office Scripts
 description: Learn how to move rows across tables by saving filters, then processing and reapplying the filters.
-ms.date: 06/29/2021
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ This workbook contains the data, objects, and formatting expected by the script.
 
 ## Sample code: Move rows using range values
 
-Add the following script to the sample workbook and try the sample yourself!
+[!INCLUDE [open-code-editor-single-script](../../includes/open-code-editor-single-script.md)]
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

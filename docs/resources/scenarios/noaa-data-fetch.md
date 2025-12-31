@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Graph water-level data from NOAA'
 description: A sample that fetches JSON data from a NOAA database and uses it to create a chart.
-ms.date: 03/08/2022
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ For more information about working with JSON, read [Use JSON to pass data to and
 
 1. Open the workbook in Excel.
 
-1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```TypeScript
     /**

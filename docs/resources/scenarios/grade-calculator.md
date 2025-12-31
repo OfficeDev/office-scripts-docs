@@ -1,7 +1,7 @@
 ---
 title: 'Office Scripts sample scenario: Grade calculator'
 description: A sample that determines the percentage and letter grades for a class of students.
-ms.date: 10/01/2022
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +26,7 @@ You'll develop a script that totals the grades for each point category. It will 
 
 1. Open the workbook in Excel.
 
-1. Under the **Automate** tab, select **New Script** and paste the following script into the editor.
+1. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {

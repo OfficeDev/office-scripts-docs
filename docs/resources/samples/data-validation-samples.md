@@ -1,13 +1,15 @@
 ---
 title: "Data validation: dropdown lists, prompts, and warning pop-ups"
 description: Learn how to add data validation to a cell and give the user a selection of values to enter.
-ms.date: 09/20/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Data validation: dropdown lists, prompts, and warning pop-ups
 
 Data validation helps the user ensure consistency in a worksheet. Use these features to limit what can be entered into a cell and provide warnings or errors to users when those conditions aren't met. To learn more about data validation in Excel, see [Apply data validation to cells](https://support.microsoft.com/office/29fecbcc-d1b9-42c1-9d76-eff3ce5f7249).
+
+[!INCLUDE [open-code-editor](../../includes/open-code-editor.md)]
 
 ## Create a dropdown list using data validation
 

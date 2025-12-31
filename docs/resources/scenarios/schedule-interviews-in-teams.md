@@ -1,7 +1,7 @@
 ---
 title: Schedule interviews in Teams
 description: Learn how to use Office Scripts to send a Teams meeting from Excel data.
-ms.date: 11/30/2023
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
@@ -37,7 +37,7 @@ For more information about working with JSON, read [Use JSON to pass data to and
 
 ### Create the scripts
 
-1. Under the **Automate** tab, select **New Script** and paste the following script into the editor. This will extract table data to schedule invites.
+1. Under the **Automate** tab, select **New Script** > **Create in Code Editor**. Paste the following script into the editor. This will extract table data to schedule invites.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
