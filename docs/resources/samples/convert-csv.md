@@ -1,16 +1,13 @@
 ---
 title: Convert CSV files to Excel workbooks
 description: Learn how to use Office Scripts and Power Automate to create .xlsx files from .csv files.
-ms.date: 01/05/2026
+ms.date: 12/22/2025
 ms.localizationpriority: medium
 ---
 
 # Convert CSV files to Excel workbooks
 
 Many services export data as comma-separated value (CSV) files. This solution automates the process of converting those CSV files to Excel workbooks in the .xlsx file format. It uses a [Power Automate](https://make.powerautomate.com) flow to find files with the .csv extension in a OneDrive folder and an Office Script to copy the data from the .csv file into a new Excel workbook.
-
-> [!NOTE]
-> This article describes how to use Power Automate to programmatically save CSV files as Excel workbooks. If you want to save one CSV file as an Excel workbook in the .xlsx file format, open the CSV file in Excel and follow the steps to [save it as another file format](https://support.microsoft.com/office/6a16c862-4a36-48f9-a300-c2ca0065286e).
 
 ## Solution
 
