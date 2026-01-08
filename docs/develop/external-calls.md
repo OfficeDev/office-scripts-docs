@@ -35,7 +35,7 @@ You'll need to learn the external service's interfaces to make calls to that ser
 * Document cookies, `localStorage`, and `sessionStorage` objects are not supported.
 * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
 * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
-* When using `fetch` for local network access in Chromium-based web browsers, users will need to allow the script when prompted. If the script still fails, contact your IT administrator.
+* When using `fetch` for local network access in Chromium-based web browsers, users need to allow the script when prompted. If the script still fails, contact your IT administrator.
 
 ## Retrieve information with `fetch`
 
