@@ -36,7 +36,7 @@ You'll need to learn the external service's interfaces to make calls to that ser
 * External calls may result in sensitive data being exposed to undesirable endpoints, or external data to be brought into internal workbooks. Your admin can establish firewall protection against such calls. Be sure to check with local policies prior to relying on external calls.
 * Be sure to check the amount of data throughput prior to taking a dependency. For instance, pulling down the entire external dataset may not be the best option and instead pagination should be used to get data in chunks.
 * When using Excel on the web in Chromium-based browsers, `fetch` calls for local network access require users to allow the script when prompted. If the script still fails, contact your IT administrator.
-  * If a local network access request was denied, this can be adjusted in Chrome by going to Privacy > Site settings > Additional permissions > Local network access.
+  * If a local network access request was denied, this can be adjusted in Chrome by going to **Privacy** > **Site settings** > **Additional permissions** > **Local network access**.
   * For more information, see [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access) in the Chrome blog.
 
 ## Retrieve information with `fetch`
