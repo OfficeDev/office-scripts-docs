@@ -1,13 +1,13 @@
 ---
 title: TypeScript restrictions in Office Scripts
-description: The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.
+description: The specifics of the TypeScript compiler and linter used by the Office Scripts code editor.
 ms.date: 02/26/2026
 ms.localizationpriority: medium
 ---
 
 # TypeScript restrictions in Office Scripts
 
-Office Scripts use the TypeScript language. For the most part, any TypeScript or JavaScript code will work in Office Scripts. However, there are a few restrictions enforced by the Code Editor to ensure your script works consistently and as intended with your Excel workbook.
+Office Scripts use the TypeScript language. For the most part, any TypeScript or JavaScript code will work in Office Scripts. However, there are a few restrictions enforced by the code editor to ensure your script works consistently and as intended with your Excel workbook.
 
 > [!NOTE]
 > Office Scripts uses TypeScript version 4.0.3. TypeScript features added in subsequent versions are not supported in Office Scripts.
@@ -20,7 +20,7 @@ Writing [types](https://www.typescriptlang.org/docs/handbook/typescript-in-5-min
 
 You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is, `let value: any;`). The `any` type causes issues when processed by Excel. For example, a `Range` needs to know that a value is a `string`, `number`, or `boolean`. You will receive a compile-time error (an error prior to running the script) if any variable is explicitly defined as the `any` type in the script.
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit `any` message in the Code Editor's hover text.":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="The explicit `any` message in the code editor's hover text.":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit `any` error in the console window.":::
 
@@ -32,7 +32,7 @@ To get around this issue, always define the type of the variable. If you are unc
 
 TypeScript variable types can be [implicitly](https://www.typescriptlang.org/docs/handbook/type-inference.html) defined. If the TypeScript compiler is unable to determine the type of a variable (either because type is not defined explicitly or type inference isn't possible), then it's an implicit `any` and you will receive a compilation-time error.
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="The implicit `any` message in the Code Editor's hover text.":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="The implicit `any` message in the code editor's hover text.":::
 
 The most common case on any implicit `any` is in a variable declaration, such as `let value;`. There are two ways to avoid this:
 
@@ -72,7 +72,7 @@ let filteredArray = myArray.filter((x) => {
   return x % 2 === 0;
 });
 /*
-  The following code generates a compiler error in the Office Scripts Code Editor.
+  The following code generates a compiler error in the Office Scripts code editor.
   filteredArray = myArray.filter(function (x) {
     return x % 2 === 0;
   });
@@ -125,7 +125,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## Performance warnings
 
-The Code Editor's [linter](https://wikipedia.org/wiki/Lint_(software)) gives warnings if the script might have performance issues. The cases and how to work around them are documented in [Improve the performance of your Office Scripts](web-client-performance.md).
+The code editor [linter](https://wikipedia.org/wiki/Lint_(software)) gives warnings if the script might have performance issues. The cases and how to work around them are documented in [Improve the performance of your Office Scripts](web-client-performance.md).
 
 ## External API calls
 

@@ -1,6 +1,6 @@
 ---
 title: Office Scripts in Excel
-description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
+description: A brief introduction to the action recorder and code editor for Office Scripts.
 ms.topic: overview
 ms.date: 02/26/2026
 ms.localizationpriority: high
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 
 # Office Scripts in Excel
 
-Office Scripts in Excel let you automate your day-to-day tasks. Use the Action Recorder to turn manual steps into reusable scripts. Edit those scripts or create new ones with the Code Editor. Let others in the workbook run these scripts with a single button. Then, share them with coworkers so everyone can improve their workflow.
+Office Scripts in Excel let you automate your day-to-day tasks. Use the action recorder to turn manual steps into reusable scripts. Edit those scripts or create new ones with the code editor. Let others in the workbook run these scripts with a single button. Then, share them with coworkers so everyone can improve their workflow.
 
-This series of documents teaches you how to use these tools. You'll find a wealth of samples covering different Excel scenarios. Use the tutorials to introduce yourself to the Action Recorder and Code Editor. These provide step-by-step guidance on how to record your frequent Excel actions, edit those scripts, and create new scripts from scratch.
+This series of documents teaches you how to use these tools. You'll find a wealth of samples covering different Excel scenarios. Use the tutorials to introduce yourself to the action recorder and code editor. These provide step-by-step guidance on how to record your frequent Excel actions, edit those scripts, and create new scripts from scratch.
 
 <br>
 
@@ -20,28 +20,28 @@ This series of documents teaches you how to use these tools. You'll find a wealt
 
 Scripts allow you to record and replay your Excel actions on different workbooks and worksheets. If you find yourself doing the same things over and over again, you can turn all that work into an easy-to-run Office Script. Run your script with a button in Excel or combine it with Power Automate to streamline your entire workflow.
 
-As an example, imagine at the start of each work day you open a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formatting a table, adding formulas, and creating a PivotTable in a new worksheet. Those actions you repeat daily can be recorded once with the Action Recorder. From then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts allows you to automate your common tasks so you and your workplace can be more efficient and productive.
+As an example, imagine at the start of each work day you open a .csv file from an accounting site in Excel. You then spend several minutes deleting unnecessary columns, formatting a table, adding formulas, and creating a PivotTable in a new worksheet. Those actions you repeat daily can be recorded once with the action recorder. From then on, running the script will take care of your entire .csv conversion. You'll not only remove the risk of forgetting steps, but be able to share your process with others without having to teach them anything. Office Scripts allows you to automate your common tasks so you and your workplace can be more efficient and productive.
 
-## Action Recorder
+## Action recorder
 
-:::image type="content" source="../images/action-recorder-intro.png" alt-text="A list of actions recorded by Action Recorder.":::
+:::image type="content" source="../images/action-recorder-intro.png" alt-text="A list of actions recorded by the action recorder.":::
 
-The Action Recorder records actions you take in Excel and saves them as a script. With the Action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
+The action recorder tracks steps you take in Excel and saves them as a script. With the action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
-More information about the Action Recorder can be found in the article [Record your actions as Office Script](https://support.microsoft.com/office/453ab58d-708f-40a9-ab87-99a743bfa69a).
+More information about the action recorder can be found in the article [Record your actions as Office Script](https://support.microsoft.com/office/453ab58d-708f-40a9-ab87-99a743bfa69a).
 
-## Code Editor
+## Code editor
 
-:::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code used in this tutorial.":::
+:::image type="content" source="../images/code-editor-intro.png" alt-text="The code editor showing the script code used in this tutorial.":::
 
-Use the code editor to edit scripts recorded with the Action Recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
+Use the code editor to edit scripts recorded with the action recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
 > [!TIP]
-> The Action Recorder has a **Copy as code** button to record actions into script code without saving the entire script.
+> The action recorder has a **Copy as code** button to record actions into script code without saving the entire script.
 >
-> :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The Action Recorder task pane with the 'Copy as code' button highlighted.":::
+> :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The action recorder task pane with the 'Copy as code' button highlighted.":::
 
-Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the Code Editor and how to write and edit your own scripts. For additional information about the Code Editor and how your script code is interpreted, read [Office Scripts Code Editor environment](code-editor-environment.md).
+Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the code editor and how to write and edit your own scripts. For additional information about the code editor and how your script code is interpreted, read [Office Scripts code editor environment](code-editor-environment.md).
 
 ## Share Office Scripts
 
@@ -61,9 +61,9 @@ Add buttons that run scripts to help your colleagues discover your valuable solu
 
 Set your scripts to run every day and keep your workbook up-to-date. Once you have your script, you can set it to automatically run on the workbook at regular intervals. A behind-the-scenes Power Automate flow ensures everything happens, even when the workbook is closed.
 
-To schedule a script, open the script in the Code Editor. Open the **Script scheduling** section and complete the sign in process to Excel through Power Automate. Set how often you want the script to run and select **Create flow** to begin.
+To schedule a script, open the script in the code editor. Open the **Script scheduling** section and complete the sign in process to Excel through Power Automate. Set how often you want the script to run and select **Create flow** to begin.
 
-:::image type="content" source="../images/schedule-a-script.png" alt-text="The Code Editor task pane that shows the recurrence interval options for scheduling a script.":::
+:::image type="content" source="../images/schedule-a-script.png" alt-text="The code editor task pane that shows the recurrence interval options for scheduling a script.":::
 
 ## Connect Office Scripts to Power Automate
 

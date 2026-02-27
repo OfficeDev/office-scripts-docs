@@ -5,13 +5,13 @@ ms.date: 02/06/2026
 ms.localizationpriority: medium
 ---
 
-# Office Scripts Code Editor environment
+# Office Scripts code editor environment
 
 Office Scripts are written in either TypeScript or JavaScript and use the Office Scripts JavaScript APIs to interact with an Excel workbook. The Office Scripts code editor is based on Visual Studio Code, so if you've used that environment before, you'll feel right at home.
 
 ## Scripting language: TypeScript or JavaScript
 
-Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). The Action Recorder generates code in TypeScript and the Office Scripts documentation uses TypeScript. Since TypeScript is a superset of JavaScript, any scripting code that you write in JavaScript will work just fine.
+Office Scripts are written in [TypeScript](https://www.typescriptlang.org/docs), which is a superset of [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). The action recorder generates code in TypeScript and the Office Scripts documentation uses TypeScript. Since TypeScript is a superset of JavaScript, any scripting code that you write in JavaScript will work just fine.
 
 Office Scripts are largely self-contained pieces of code. Only a small part of TypeScript's functionality is used. Therefore, you can edit scripts without having to learn the intricacies of TypeScript. The code editor also handles the installation, compilation, and execution of code, so you don't need to worry about anything but the script itself. It's possible to learn the language and create scripts without previous programming knowledge. However, if you're new to programming, we recommend learning some fundamentals before proceeding with Office Scripts.
 
@@ -29,11 +29,11 @@ Office Scripts does not support the usage of external, third-party JavaScript li
 
 IntelliSense is a set of code editor features that help you write code. It provides auto-complete, syntax error highlighting, and inline API documentation.
 
-IntelliSense gives suggestions as you type, similar to the suggested text in Excel. Pressing the <kbd>Tab</kbd> or <kbd>Enter</kbd> key inserts the suggested member. Trigger IntelliSense at the current cursor location by pressing the <kbd>Ctrl</kbd>+<kbd>Space</kbd> keys. These suggestions are especially useful when completing a method. The method signature displayed by IntelliSense contains a list of arguments it needs, each argument's type, whether a given argument is required or optional, and the return type of the method.
+IntelliSense gives suggestions as you type, similar to the suggested text in Excel. Using the <kbd>Tab</kbd> or <kbd>Enter</kbd> key inserts the suggested member. Trigger IntelliSense at the current cursor location with the <kbd>Ctrl</kbd>+<kbd>Space</kbd> keys. These suggestions are especially useful when completing a method. The method signature displayed by IntelliSense contains a list of arguments it needs, each argument's type, whether a given argument is required or optional, and the return type of the method.
 
 Hover the cursor over a method, class, or other code object to see more information. Hover over a syntax error or code suggestion, represented by a red or yellow squiggly line, to see suggestions on how to fix the problem. Often, IntelliSense provides a "Quick Fix" option to automatically change the code.
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="An error message in the Code Editor's hover text with a 'Quick Fix' button.":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="An error message in the code editor's hover text with a 'Quick Fix' button.":::
 
 The Office Scripts code editor uses the same IntelliSense engine as Visual Studio Code. To learn more about the feature, visit [Visual Studio Code's IntelliSense Features](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
 
