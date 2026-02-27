@@ -1,11 +1,11 @@
 ---
-title: Office Scripts code editor environment
+title: Office Scripts code editor
 description: The prerequisites and environment information for Office Scripts in Excel.
 ms.date: 02/06/2026
 ms.localizationpriority: medium
 ---
 
-# Office Scripts code editor environment
+# Office Scripts code editor
 
 Office Scripts are written in either TypeScript or JavaScript and use the Office Scripts JavaScript APIs to interact with an Excel workbook. The Office Scripts code editor is based on Visual Studio Code, so if you've used that environment before, you'll feel right at home.
 
