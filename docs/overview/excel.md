@@ -28,13 +28,13 @@ As an example, imagine at the start of each work day you open a .csv file from a
 
 The action recorder tracks steps you take in Excel and saves them as a script. With the action recorder running, you can capture the Excel actions as you edit cells, change formatting, and create tables. The resulting script can be run on other worksheets and workbooks to recreate your original actions.
 
-More information about the action recorder can be found in the article [Record your actions as Office Script](https://support.microsoft.com/office/453ab58d-708f-40a9-ab87-99a743bfa69a).
+More information about the action recorder can be found in the article [Record your actions as Office Scripts](https://support.microsoft.com/office/453ab58d-708f-40a9-ab87-99a743bfa69a).
 
 ## Code editor
 
 :::image type="content" source="../images/code-editor-intro.png" alt-text="The code editor showing the script code used in this tutorial.":::
 
-Use the code editor to edit scripts recorded with the action recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
+Use the code editor to edit scripts created with the action recorder, or make a brand new script. This tool lets you tweak and customize scripts to suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
 > [!TIP]
 > The action recorder has a **Copy as code** button to record actions into script code without saving the entire script.
