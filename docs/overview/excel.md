@@ -2,7 +2,7 @@
 title: Office Scripts in Excel
 description: A brief introduction to the Action Recorder and Code Editor for Office Scripts.
 ms.topic: overview
-ms.date: 08/08/2024
+ms.date: 02/26/2026
 ms.localizationpriority: high
 ---
 
@@ -34,7 +34,7 @@ More information about the Action Recorder can be found in the article [Record y
 
 :::image type="content" source="../images/code-editor-intro.png" alt-text="The Code Editor showing the script code used in this tutorial.":::
 
-Use the Code Editor to edit scripts recorded with the Action Recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
+Use the code editor to edit scripts recorded with the Action Recorder or make a brand new script. This tool lets you tweak and customize scripts to better suit your exact needs. You can also add logic and functionality that is not directly accessible through the Excel UI, such as conditional statements (if/else) and loops.
 
 > [!TIP]
 > The Action Recorder has a **Copy as code** button to record actions into script code without saving the entire script.
@@ -45,11 +45,11 @@ Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured 
 
 ## Share Office Scripts
 
-Office Scripts can be shared with other users in your organization. When you share a script in a shared workbook, team members with access to the workbook can also view and run your script. For more details about sharing and unsharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
+Office Scripts can be shared with other users in your organization. When you associate a script with a workbook, team members with access to the workbook can also view and run your script. For more details about sharing scripts, see [Sharing Office Scripts in Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 Add buttons that run scripts to help your colleagues discover your valuable solutions and let them run scripts straight from the workbook. Learn more about script buttons in [Run Office Scripts with buttons](../develop/script-buttons.md).
 
-:::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the 'Create Report' script details page with a button named 'Create Report' shown in the Excel grid.":::
+:::image type="content" source="../images/share-this-script.png" alt-text="The 'Share this script' section of the script details page, with the 'Associate with workbook' toggle enabled.":::
 
 > [!NOTE]
 > Learn more about how scripts are stored in your OneDrive in [Office Scripts file storage and ownership](script-storage.md).

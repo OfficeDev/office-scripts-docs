@@ -1,7 +1,7 @@
 ---
 title: TypeScript restrictions in Office Scripts
 description: The specifics of the TypeScript compiler and linter used by the Office Scripts Code Editor.
-ms.date: 11/21/2025
+ms.date: 02/26/2026
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ You cannot explicitly declare a variable to be of type `any` in Office Scripts (
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The explicit `any` error in the console window.":::
 
-In the previous screenshot, `[2, 14] Explicit Any is not allowed` indicates that line #2, column #14 defines `any` type. This helps you locate the error.
+In the previous screenshot, `[6, 14] Explicit Any is not allowed` indicates that line #6, column #14 defines `any` type. This helps you locate the error.
 
 To get around this issue, always define the type of the variable. If you are uncertain about the type of a variable, you can use a [union type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types). This can be useful for variables that hold `Range` values, which can be of type `string`, `number`, or `boolean` (the type for `Range` values is a union of those: `string | number | boolean`).
 
