@@ -55,7 +55,7 @@ The following image shows the console output for the [explicit `any`](../develop
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="The code editor console displaying an explicit `any` error message.":::
 
-The follow image shows the console output for a runtime error. Here, the script tries to add a worksheet with a the name of an existing worksheet. Again, note the "Line 3" preceding the error to show which line to investigate.
+The following image shows the console output for a runtime error. Here, the script tries to add a worksheet with the name of an existing worksheet. Again, note the "Line 3" preceding the error to show which line to investigate.
 
 :::image type="content" source="../images/runtime-error-console.png" alt-text="The code editor console displaying an error from the `addWorksheet` call.":::
 

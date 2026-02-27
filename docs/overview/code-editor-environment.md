@@ -1,6 +1,6 @@
 ---
 title: Office Scripts code editor
-description: The prerequisites and environment information for Office Scripts in Excel.
+description: Learn about the Office Scripts code editor and scripting environment in Excel, including prerequisites and supported APIs.
 ms.date: 02/06/2026
 ms.localizationpriority: medium
 ---

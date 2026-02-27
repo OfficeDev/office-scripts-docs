@@ -41,7 +41,7 @@ Use the code editor to edit scripts created with the action recorder, or make a 
 >
 > :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="The action recorder task pane with the 'Copy as code' button highlighted.":::
 
-Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way learn the capabilities of Office Scripts. After completing the tutorials, read [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the code editor and how to write and edit your own scripts. For additional information about the code editor and how your script code is interpreted, read [Office Scripts code editor environment](code-editor-environment.md).
+Our [tutorials](../tutorials/excel-tutorial.md) provide a guided and structured way to learn the capabilities of Office Scripts. After completing the tutorials, read [Fundamentals for Office Scripts in Excel](../develop/scripting-fundamentals.md) to learn more about the code editor and how to write and edit your own scripts. For additional information about the code editor and how your script code is interpreted, read [Office Scripts code editor environment](code-editor-environment.md).
 
 ## Share Office Scripts
 
