@@ -29,7 +29,7 @@ items:
       href: develop/best-practices.md
     - name: Built-in JavaScript objects
       href: develop/javascript-objects.md
-    - name: Code Editor environment
+    - name: Code editor environment
       href: overview/code-editor-environment.md 
     - name: External API call support in Office Scripts
       href: develop/external-calls.md

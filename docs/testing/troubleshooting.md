@@ -2,7 +2,7 @@
 title: Troubleshoot Office Scripts
 description: Debugging tips and techniques for Office Scripts, as well as help resources.
 ms.topic: troubleshooting-general
-ms.date: 01/23/2024
+ms.date: 02/26/2026
 ms.localizationpriority: medium
 ---
 
@@ -26,9 +26,9 @@ Office Scripts errors fall into one of two categories:
 
 ### Compile-time errors
 
-Compile-time errors and warnings are initially shown in the Code Editor. These are shown by the wavy red underlines in the editor. They're also displayed under the **Problems** tab at the bottom of the Code Editor task pane. Selecting the error gives more details about the problem and suggests solutions. Compile-time errors should be addressed before running the script.
+Compile-time errors and warnings are initially shown in the code editor. These are shown by the wavy red underlines in the editor. They're also displayed under the **Problems** tab at the bottom of the code editor task pane. Selecting the error gives more details about the problem and suggests solutions. Compile-time errors should be addressed before running the script.
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the Code Editor's hover text.":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="A compiler error shown in the code editor's hover text.":::
 
 You may also see orange warning underlines and grey informational messages. These indicate performance suggestions or other possibilities where the script may have unintentional effects. Such warnings should be examined closely before dismissing them.
 
@@ -51,11 +51,13 @@ Some runtime errors are caused by exceeding the limits of the platform, such as 
 
 Both compile-time and runtime errors display error messages in the console when a script runs. They give a line number where the problem was encountered. Keep in mind that the root cause of any issue may be a different line of code than what is indicated in the console.
 
-The following image shows the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[5, 16]` at the beginning of the error string. This indicates the error is on line 5, starting at character 16.
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The Code Editor console displaying an explicit `any` error message.":::
+The following image shows the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error. Note the text `[6, 14]` at the beginning of the error string. This indicates the error is on line 6, starting at character 14.
 
-The follow image shows the console output for a runtime error. Here, the script tries to add a worksheet with a the name of an existing worksheet. Again, note the "Line 2" preceding the error to show which line to investigate.
-:::image type="content" source="../images/runtime-error-console.png" alt-text="The Code Editor console displaying an error from the `addWorksheet` call.":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="The code editor console displaying an explicit `any` error message.":::
+
+The following image shows the console output for a runtime error. Here, the script tries to add a worksheet with the name of an existing worksheet. Again, note the "Line 3" preceding the error to show which line to investigate.
+
+:::image type="content" source="../images/runtime-error-console.png" alt-text="The code editor console displaying an error from the `addWorksheet` call.":::
 
 ## Console logs
 
@@ -66,7 +68,7 @@ console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-Strings passed to `console.log` are displayed in the Code Editor's logging console, at the bottom of the task pane. Logs are found on the **Output** tab, though the tab automatically gains focus when a log is written.
+Strings passed to `console.log` are displayed in the code editor's logging console, at the bottom of the task pane. Logs are found on the **Output** tab, though the tab automatically gains focus when a log is written.
 
 Logs do not affect the workbook.
 
@@ -92,7 +94,7 @@ Scheduling a script requires a business license for Microsoft 365. This is neede
 
 The following list shows common errors you might encounter.
 
-- **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the Code Editor or reload the workbook and try to schedule again.
+- **The access token expiry UTC time is earlier than current UTC time.**: Too much time has passed between signing into the service and scheduling the script. Reopen the script in the code editor or reload the workbook and try to schedule again.
 
 ## Help resources
 
