@@ -2,7 +2,7 @@
 title: Run Office Scripts in Excel from buttons
 description: Add buttons to workbooks that control Office Scripts in Excel.
 ms.topic: overview
-ms.date: 06/06/2024
+ms.date: 02/26/2026
 ms.localizationpriority: medium
 ---
 
@@ -17,18 +17,21 @@ Help your colleagues find and run your scripts by adding script buttons to a wor
 
 ## Create script buttons
 
-When viewing a script, select **Add in workbook**. This creates a button in the workbook that runs the associated script. It also shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation.
+When viewing a script, scroll to the **Share this script** section and enable the **Associate with workbook** toggle. This shares the script with the workbook, so everyone with write permissions to the workbook can use your helpful automation. Select **Add button to worksheet** to create a button in the worksheet that runs the associated script.
 
-:::image type="content" source="../images/add-button.png" alt-text="The 'Add in workbook' button on the 'Create Report' script details page with a button named 'Create Report' shown in the Excel grid.":::
+:::image type="content" source="../images/add-button.png" alt-text="The 'Associate with workbook' and 'Add button to worksheet' controls in the Share this script section.":::
 
 > [!IMPORTANT]
-> If OneDrive sharing is restricted by organizational policies, you can't create a script button.
+> If OneDrive sharing is restricted by organizational policies, you can't associate a script or create a script button.
 
 ## Remove script buttons
 
-To stop sharing a script through a button, select the arrow next to **Add in workbook** and choose the option **Remove from workbook**. This removes all the buttons that run the script. Deleting a single button removes the script from that one button, even if the operation is undone or the button is cut and pasted.
+To stop sharing a script, disable the **Associate with workbook** toggle in the **Share this script** section of the script details page. This removes all the buttons that run the script from the workbook.
 
-:::image type="content" source="../images/remove-button.png" alt-text="The 'Remove from workbook' option on the script details page.":::
+:::image type="content" source="../images/associate-with-workbook.png" alt-text="The 'Share this script' section of the script details page, with the 'Associate with workbook' toggle enabled.":::
+
+> [!IMPORTANT]
+> Deleting a script button from the Excel grid removes that button, but the script still remains associated with the workbook.
 
 ## Older versions of Excel
 
