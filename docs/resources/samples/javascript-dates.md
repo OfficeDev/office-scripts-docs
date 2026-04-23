@@ -1,7 +1,7 @@
 ---
 title: JavaScript Date samples
 description: A collection of samples on how to use JavaScript Date objects with Excel.
-ms.date: 12/22/2025
+ms.date: 04/23/2026
 ms.localizationpriority: medium
 ---
 
@@ -45,6 +45,41 @@ function main(workbook: ExcelScript.Workbook) {
   let excelDateValue = dateRange.getValue() as number;
   let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
   console.log(javaScriptDate);
+}
+```
+
+## Use a date in a PivotFilter
+
+This sample applies a date filter to a PivotTable to show only items from the last 30 days. It uses JavaScript `Date` objects to calculate the date range for the filter.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the PivotTable named "Pivot" from the workbook.
+  const pivot = workbook.getPivotTable("Pivot");
+
+  // Create Date objects for the current date and the date 30 days ago.
+  const today = new Date();
+  const thirtyDaysAgo = new Date(today);
+  thirtyDaysAgo.setDate(today.getDate() - 30);
+
+  // Get the "Last Updated" field from the PivotTable.
+  const rowHierarchy = pivot.getRowHierarchy("Last Updated");
+  const rowField = rowHierarchy.getFields()[0];
+
+  // Apply a date filter to show only items from the last 30 days.
+  rowField.applyFilter({
+    dateFilter: {
+      condition: ExcelScript.DateFilterCondition.between,
+      lowerBound: {
+        date: thirtyDaysAgo.toISOString(),
+        specificity: ExcelScript.FilterDatetimeSpecificity.day
+      },
+      upperBound: {
+        date: today.toISOString(),
+        specificity: ExcelScript.FilterDatetimeSpecificity.day
+      },
+    }
+  });
 }
 ```
 
