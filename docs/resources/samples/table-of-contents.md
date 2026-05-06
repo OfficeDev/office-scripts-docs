@@ -55,3 +55,6 @@ function main(workbook: ExcelScript.Workbook) {
   tocSheet.activate();
 }
 ```
+
+## Training video: How to create a workbook table of contents
+[Watch Marc Diaz walk through this sample on YouTube](https://youtu.be/zJJKLd29ERE)
