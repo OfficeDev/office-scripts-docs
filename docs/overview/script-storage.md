@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 03/25/2025
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ---
 
@@ -14,18 +14,17 @@ This article describes where Office Scripts are stored, how to share and restore
 
 ## File storage
 
-Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the Code Editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
-
-> [!NOTE]
-> For customers with personal and family subscriptions, your Office Scripts are moving from local storage to OneDrive. The legacy script storage location for personal and family subscriptions is the following folder in your local Office cache: `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
->
-> New scripts are saved in your OneDrive, and any existing locally stored scripts will be moved to your OneDrive automatically.
+Office Scripts are stored in your OneDrive by default. The **.osts** files are found in the **/Documents/Office Scripts/** folder. Any edits made to these **.osts** files, such as renaming or deleting files, will be reflected in the code editor and Script Gallery. Excel only recognizes and runs a script if it's in your OneDrive folder, a Sharepoint folder, or shared with the workbook. This means Excel needs internet connectivity to access Office Scripts.
 
 ### OneDrive
 
-Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **Move** button shown when renaming a script moves the script to a new location. The **Make a Copy** button of the Code Editor saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
+Scripts that are shared with one of your workbooks remain in the script creator's OneDrive. They are not copied to any of your local or OneDrive folders when you run the shared script in Excel. The **More options (…)** menu of the script card include the menu items **Move script** and **Make a copy**.
 
-Unless you share your personal scripts, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations.
+:::image type="content" source="../images/move-script.png" alt-text="The 'More options (...)' menu on the script details page, with the 'Move script' menu item highlighted.":::
+
+**Move script** allows you to move the script to a new location, in either your OneDrive or to a SharePoint site. **Make a copy** saves a separate copy of the script in your OneDrive. Changes to the copy don't affect the original script.
+
+Unless you associate your personal scripts with workbooks, no one else can access them. Your OneDrive settings control the shared access and permissions for all script **.osts** files, independent of any Excel settings. Scripts can't be linked from a local disk or custom cloud locations.
 
 ### SharePoint
 
@@ -33,9 +32,13 @@ Office Scripts that are saved to a SharePoint site are owned by your team. You a
 
 To load a script from SharePoint, go to **All scripts** and select **View more scripts** at the bottom of the list. This brings up a file picker where you can choose **.osts** files from any SharePoint site to which you have access. Note that scripts from SharePoint that you've already opened will be displayed in the list of recent scripts.
 
-To move a script to SharePoint, open a script in the **Code Editor** and click on the script name, as if you're renaming it. In the callout, click the **Move** button. This opens a file picker. Select the destination folder in your SharePoint site. Moving the script to the new location can take up to a minute.
+To move a script to SharePoint, open a script in the code editor task pane, select the **More options (…)** menu, and choose **Move script**.
 
-To save a copy of a script to SharePoint, go to the **More options (…)** menu and select **Save as**. This opens a file picker where you can select folders in your SharePoint site. Saving to a new location creates a copy of the script at that location. The original version is still on your OneDrive or other SharePoint location.
+:::image type="content" source="../images/move-script.png" alt-text="The 'More options (...)' menu on the script details page, with the 'Move script' menu item highlighted.":::
+
+This opens a file picker. Select the destination folder in your SharePoint site. Moving the script to the new location can take up to a minute.
+
+To save a copy of a script to SharePoint, go to the **More options (…)** menu and select **Make a copy**. This opens a file picker where you can select folders in your SharePoint site. Saving to a new location creates a copy of the script at that location. The original version is still on your OneDrive or other SharePoint location.
 
 > [!IMPORTANT]
 > Scripts with [external calls](../develop/external-calls.md) can't be run from SharePoint. You'll receive an error saying "Network access calls are not supported at this time for scripts saved to a SharePoint site".
@@ -47,7 +50,7 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 
 # [For business and education](#tab/business)
 
-To give users who are outside of the SharePoint site access to the script, [share the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking the script with the file, not attaching it. Whoever has access to the Excel file will also be able to view, run, or make a copy of the script.
+To give users who are outside of the SharePoint site access to the script, [associate the script with an Excel workbook](excel.md#share-office-scripts). This means you're linking a script with a file, not attaching it. Whoever has access to the Excel file is also able to view, run, or make a copy of the script.
 
 > [!NOTE]
 > Admin settings for Conditional Access in OneDrive and SharePoint affect Office Scripts. For more information, see the [Conditional Access section of Platform limits and requirements with Office Scripts](../testing/platform-limits.md#conditional-access).
@@ -62,7 +65,7 @@ Scripts can't be shared through workbooks with a home or family account. You can
 
 When you delete a script in Excel, it goes to your OneDrive or SharePoint recycle bin. To restore a deleted script, follow the steps listed in [How to recover missing, deleted or corrupted items in SharePoint and OneDrive for work or school](https://support.microsoft.com/office/3d748edf-c072-46c9-81a4-4989056ebc87). Restoring an **.osts** file returns it to the **All scripts** list.
 
-A deleted script is unshared with the workbook. When you restore a script, it does **not** retain its script access. You will need to share the script again.
+A deleted script is no longer associated with workbooks. When you restore a script, it does **not** retain its workbook access. You need to associate the script with workbooks again.
 
 Restored scripts still work as expected with Power Automate flows. You don't need to recreate the flow connector.
 
