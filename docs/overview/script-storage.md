@@ -1,7 +1,7 @@
 ---
 title: Office Scripts file storage and ownership
 description: Information about how Office Scripts are stored in Microsoft OneDrive and transferred between owners.
-ms.date: 03/25/2025
+ms.date: 07/24/2026
 ms.localizationpriority: medium
 ---
 
@@ -39,9 +39,6 @@ To save a copy of a script to SharePoint, go to the **More options (…)** menu 
 
 > [!IMPORTANT]
 > Scripts with [external calls](../develop/external-calls.md) can't be run from SharePoint. You'll receive an error saying "Network access calls are not supported at this time for scripts saved to a SharePoint site".
-
-> [!NOTE]
-> Power Automate supports running scripts stored on SharePoint with the **Run script from SharePoint library (Preview)** action. This action is currently in preview and is subject to change based on feedback. If you encounter any issues with this action, please report them through the **Help** > **Give Feedback** option in Power Automate.
 
 ## Share scripts
 
